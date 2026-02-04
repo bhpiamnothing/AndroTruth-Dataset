@@ -1,0 +1,952 @@
+{
+    "apk_info": {
+        "id": "9VJl1D4V06q15QNW",
+        "url": "https://developer.koodous.com/apks/8b05684a73f44ed82c0faf424b2d41a0c7b00c2fef4d7dc232c5433739a59f6c/",
+        "sha256": "8b05684a73f44ed82c0faf424b2d41a0c7b00c2fef4d7dc232c5433739a59f6c",
+        "md5": "7e7edf3b1f5f0f4bdc77af7a3a5e34c5",
+        "sha1": "222c048d7c746a4d1d56e9fab8e30d6a87492eac",
+        "app": "Nexi Token",
+        "package_name": "com.nexipaytoken.app",
+        "company": "Android",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2024/07/17/generic_image_eTecGP0.png",
+        "size": 4686006,
+        "tags": [
+            "trojan",
+            "hqwar",
+            "smsagent",
+            "dropper",
+            "banker",
+            "detect-debug-environment",
+            "obfuscated",
+            "checks-gps",
+            "runtime-modules",
+            "reflection",
+            "telephony",
+            "sends-sms",
+            "multiverze",
+            "copybara",
+            "basbanke",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-07-17T19:37:48.382446+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.3.1/27339/Wed Jul 17 08:36:14 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "17.07.2024 12:18:54 (Build: 107251)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-07-17T19:37:46.332151+02:00",
+        "updated_at": "2025-07-08T18:03:44.773491+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "7e7edf3b1f5f0f4bdc77af7a3a5e34c5",
+                "name": "",
+                "path": "",
+                "sha1": "222c048d7c746a4d1d56e9fab8e30d6a87492eac",
+                "size": 4686006,
+                "type": "Android package (APK), with AndroidManifest.xml, with APK Signing Block",
+                "yara": [],
+                "crc32": "AEF9C20D",
+                "sha256": "8b05684a73f44ed82c0faf424b2d41a0c7b00c2fef4d7dc232c5433739a59f6c",
+                "sha512": "f7c92063e65c635e37fc21d6418a230ea3023e20a663c75345a99d76428f3e9c84f728010a52d25376484ae28f1525741e316f8be609996c26510961054f988e",
+                "ssdeep": "98304:X2tqnPP3c6no//hAKQfD0eSD0yD0PD0EQD0nAcD00D0fD0uAl:iMVno/OdfDMDTDqDiDCxD9DGDLAl"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://ns.adobe.com/illustrator/1.0/",
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "http://ns.adobe.com/exif/1.0/",
+                "http://ns.adobe.com/pdf/1.3/",
+                "http://ns.adobe.com/xap/1.0/sType/ResourceRef#",
+                "http://schemas.android.com/apk/res/android",
+                "https://www.google.com",
+                "http://ns.adobe.com/xap/1.0/g/",
+                "http://ns.adobe.com/xap/1.0/mm/",
+                "https://freeipapi.com/api/json",
+                "http://ns.adobe.com/xap/1.0/",
+                "http://ns.adobe.com/tiff/1.0/",
+                "http://ns.adobe.com/xap/1.0/sType/Dimensions#",
+                "http://schemas.android.com/apk/res-auto",
+                "http://www.eclipse.org/legal/epl-v10.html",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://mozilla.org/MPL/2.0/",
+                "http://purl.org/dc/elements/1.1/",
+                "http://ns.adobe.com/photoshop/1.0/",
+                "http://ns.adobe.com/xap/1.0/t/pg/",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "ef07785128ec077ee9b1c58b8a461c72dd281bd9c788bb55dd589a67fbb7d217"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.SENDTO",
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.intent.action.SEND",
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED"
+            ],
+            "app_name": "Nexi Token",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.nexipaytoken.app.backgroundservice",
+                "com.nexipaytoken.app.dtrsbnotisuntilactv",
+                "com.nexipaytoken.app.inj_dnlader",
+                "com.nexipaytoken.app.inj_dnlader2",
+                "com.nexipaytoken.app.managerservice",
+                "com.nexipaytoken.app.mediaprojectionbackservice",
+                "com.nexipaytoken.app.notificationservice",
+                "com.nexipaytoken.app.openmics_srv",
+                "com.nexipaytoken.app.s1",
+                "com.nexipaytoken.app.service1",
+                "com.nexipaytoken.app.service2",
+                "com.nexipaytoken.app.service3",
+                "com.nexipaytoken.app.service4",
+                "com.nexipaytoken.app.srvnewphonecall",
+                "com.nexipaytoken.app.starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.nexipaytoken.app.backgroundservice$backgroundservice_BR",
+                "com.nexipaytoken.app.dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.nexipaytoken.app.inj_dnlader$inj_dnlader_BR",
+                "com.nexipaytoken.app.inj_dnlader2$inj_dnlader2_BR",
+                "com.nexipaytoken.app.managerservice$managerservice_BR",
+                "com.nexipaytoken.app.mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.nexipaytoken.app.myreceiver",
+                "com.nexipaytoken.app.notificationservice$notificationservice_BR",
+                "com.nexipaytoken.app.openmics_srv$openmics_srv_BR",
+                "com.nexipaytoken.app.s1$s1_BR",
+                "com.nexipaytoken.app.service1$service1_BR",
+                "com.nexipaytoken.app.service2$service2_BR",
+                "com.nexipaytoken.app.service3$service3_BR",
+                "com.nexipaytoken.app.service4$service4_BR",
+                "com.nexipaytoken.app.srvnewphonecall$srvnewphonecall_BR",
+                "com.nexipaytoken.app.starter$starter_BR",
+                "com.nexipaytoken.app.httputils2service"
+            ],
+            "activities": [
+                "com.nexipaytoken.app.main",
+                "com.nexipaytoken.app.act_perm_dvadmn",
+                "com.nexipaytoken.app.faknotiactivity",
+                "com.nexipaytoken.app.forc_activateacc",
+                "com.nexipaytoken.app.opencamd",
+                "com.nexipaytoken.app.openmics",
+                "com.nexipaytoken.app.perm_activatemediaproject",
+                "com.nexipaytoken.app.perm_activateoverlay",
+                "com.nexipaytoken.app.perm_ignorebatperm",
+                "com.nexipaytoken.app.perm_notiacc",
+                "com.nexipaytoken.app.perm_phonecal",
+                "com.nexipaytoken.app.perm_smsperm",
+                "com.nexipaytoken.app.perm_startactdevmang",
+                "com.nexipaytoken.app.perm_startactwritesy",
+                "com.nexipaytoken.app.perm_unknownapps",
+                "com.nexipaytoken.app.perm_writesys",
+                "com.nexipaytoken.app.req_all_perms",
+                "com.nexipaytoken.app.wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "27196E386B875E76ADF700E7EA84E4C6EEE33DFA",
+                "serial": "B3998086D056CFFA",
+                "sha256": "C8A2E9BCCF597C2FB6DC66BEE293FC13F2FC47EC77BC6B2B0D52C11F51192AB8",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Sep 01 22:40:50 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Apr 15 22:40:50 2008 GMT",
+                "hash_algorithm": "md5",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.RECEIVE_SMS",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.READ_CONTACTS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.VIBRATE",
+                "android.permission.CALL_PHONE",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.WAKE_LOCK",
+                "android.permission.FOREGROUND_SERVICE",
+                "oppo.permission.OPPO_COMPONENT_SAFE",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.DISABLE_KEYGUARD",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.android.alarm.permission.SET_ALARM",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.READ_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECORD_AUDIO",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.CAMERA",
+                "android.permission.WRITE_SMS",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.READ_PHONE_STATE",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.KILL_BACKGROUND_PROCESSES"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": true,
+            "is_signed_v3": true,
+            "package_name": "com.nexipaytoken.app",
+            "version_code": "200",
+            "main_activity": "com.nexipaytoken.app.main",
+            "signature_name": "META-INF/APKEASYT.RSA",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 33,
+                "png": 18,
+                "txt": 23,
+                "xml": 2,
+                "html": 8,
+                "json": 2,
+                "sqlite": 1,
+                "unknown": 7
+            },
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, \"https\"",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, \"https://\"",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "TakePicture"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, \"MessageDigest.getInstance(algorithm).digest(data)\"",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/nexipaytoken/app/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, \"android.intent.action.CALL\"",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "db": 1,
+                "gz": 1,
+                "RSA": 1,
+                "bal": 1,
+                "dex": 1,
+                "gif": 1,
+                "png": 17,
+                "txt": 2,
+                "xml": 28,
+                "arsc": 1,
+                "html": 12
+            },
+            "target_sdk_version": 33
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3098230361938477,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/base.apk.x86_64.flock",
+                    "time": 1.334280014038086,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/oat/x86_64/base.vdex",
+                    "time": 1.3379778861999512,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/base.apk",
+                    "time": 1.339357852935791,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3480839729309082,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.349707841873169,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/oat/x86_64/base.art",
+                    "time": 1.354327917098999,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/base.apk",
+                    "time": 1.4581398963928223,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4338,
+                    "name": "/data/user_de/0/com.nexipaytoken.app/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.6523609161376953,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4338,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.7792229652404785,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4338,
+                    "name": "/dev/fb0",
+                    "time": 1.7804210186004639,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.8651740550994873,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.8667590618133545,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/txtscreensize.txt",
+                    "time": 1.8689229488372803,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.8695838451385498,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-journal",
+                    "time": 1.8776218891143799,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files",
+                    "time": 1.891808032989502,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-wal",
+                    "time": 1.895354986190796,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-shm",
+                    "time": 1.8956069946289062,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.2699170112609863,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.2801668643951416,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.282768964767456,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 2.2845840454101562,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.2916018962860107,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.292480945587158,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.2930538654327393,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 2.293765068054199,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 2.714992046356201,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.71921706199646,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.8077309131622314,
+                    "processname": "com.nexipaytoken.app"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "636f6d2e6e657869706179746f6b656e2e61707000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3100979328155518,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.310135841369629,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "504b0304",
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/base.apk",
+                    "time": 1.3396048545837402,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.349452018737793,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.3536310195922852,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "6172740a3035360000803d78280f01003c56801100903e7800a03e7800a03f780090927800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000019780000",
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/oat/x86_64/base.art",
+                    "time": 1.3543729782104492,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.2916579246520996,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.293009042739868,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.2937228679656982,
+                    "processname": "com.nexipaytoken.app"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 2.7232868671417236,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.807762861251831,
+                    "processname": "com.nexipaytoken.app"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/app/com.nexipaytoken.app-8uIbeGRRMIK91ONTxumYOA==/base.apk.x86_64.flock",
+                    "time": 1.3344669342041016,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.8624069690704346,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.8665499687194824,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-journal",
+                    "time": 1.892806053161621,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-shm",
+                    "time": 1.895643949508667,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-wal",
+                    "time": 2.252027988433838,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.2837228775024414,
+                    "processname": "com.nexipaytoken.app"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "89504e470d0a1a0a0000000d49484452000002c40000014f08060000004acad805000000097048597300002e2300002e230178a53f7600000a4f6943435050686f746f73686f70204943432070726f66696c65000078da9d53675453e9163df7def4424b8880944b6f5215082052428b801491262a2109104a8821a1d91551c1114545041bc8a088038e8e808c15512c0c8a0ad807e421a28e83a3888acafbe17ba36bd6bcf7e6cdfeb5d73ee7acf39db3cf07c0080c9648335135800ca9421e11e083c7c4c6e1e42e40810a2470001008b3642173fd230100f87e3c3c2b22c007be000178d30b0800c04d9bc0301c87ff0fea42995c01808401c07491384b08801400407a8e42a600404601809d98265300a0040060cb6362e300502d0060277fe6d300809df8997b01005b94211501a09100201365884400683b00accf568a450058300014664bc43900d82d00304957664800b0b700c0ce100bb200080c00305188852900047b0060c8232378008499001446f2573cf12bae10e72a00007899b23cb9243945815b082d710757572e1e28ce49172b14366102619a402ec27999193281340fe0f3cc0000a0911511e083f3fd78ce0eaecece368eb60e5f2deabf06ff226262e3fee5cfab70400000e1747ed1fe2c2fb31a803b06806dfea225ee04685e0ba075f78b66b20f40b500a0e9da57f370f87e3c3c45a190b9d9d9e5e4e4d84ac4425b61ca577dfe67c25fc057fd6cf97e3cfcf7f5e0bee22481325d814704f8e0c2ccf44ca51ccf92098462dce68f47fcb70bfffc1dd322c44962b9582a14e35112718e449a8cf332a52289429229c525d2ff64e2df2cfb033edf3500b06a3e017b912da85d6303f64b27105874c0e2f70000f2bb6fc1d4280803806883e1cf77ffef3ffd47a02500806649927100005e44242e54cab33fc708000044a0812ab0411bf4c1182cc0061cc105dcc10bfc6036844224c4c24210420a64801c726029ac82422886cdb01d2a602fd4401d34c051688693700e2ec255b80e3d700ffa61089ec128bc81090441c808136121da8801628a58238e08179985f821c14804128b2420c9881451224b91354831528a542055481df23d720239875c46ba913bc8003282fc86bc47319481b2513dd40cb543b9a8371a8446a20bd06474319a8f16a09bd072b41a3d8c36a1e7d0ab680fda8f3e43c730c0e8180733c46c302ec6c342b1382c099363cbb122ac0cabc61ab056ac03bb89f563cfb17704128145c0093604774220611e4148584c584ed848a8201c243411da093709038451c2272293a84bb426ba11f9c4186232318758482c23d6128f132f107b8843c437241289433227b9900249b1a454d212d246d26e5223e92ca99b34481a2393c9da646bb20739942c202bc885e49de4c3e433e41be421f25b0a9d624071a4f853",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.8652520179748535,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "3e0a2020202020202020203c786d705450673a506c6174654e616d65733e0a2020202020202020202020203c7264663a5365713e0a2020202020202020202020202020203c7264663a6c693e4379616e3c2f7264663a6c693e0a2020202020202020202020202020203c7264663a6c693e4d6167656e74613c2f7264663a6c693e0a2020202020202020202020203c2f7264663a5365713e0a2020202020202020203c2f786d705450673a506c6174654e616d65733e0a2020202020202020203c786d705450673a53776174636847726f7570733e0a2020202020202020202020203c7264663a5365713e0a2020202020202020202020202020203c7264663a6c69207264663a7061727365547970653d225265736f75726365223e0a2020202020202020202020202020202020203c786d70473a67726f75704e616d653e47727570706f2063616d70696f6e6920707265646566696e69746f3c2f786d70473a67726f75704e616d653e0a2020202020202020202020202020202020203c786d70473a67726f7570547970653e303c2f786d70473a67726f7570547970653e0a2020202020202020202020202020202020203c786d70473a436f6c6f72616e74733e0a2020202020202020202020202020202020202020203c7264663a5365713e0a2020202020202020202020202020202020202020202020203c7264663a6c69207264663a7061727365547970653d225265736f75726365223e0a2020202020202020202020202020202020202020202020202020203c786d70473a7377617463684e616d653e433d313030204d3d383820593d30204b3d3020313c2f786d70473a7377617463684e616d653e0a2020202020202020202020202020202020202020202020202020203c786d70473a6d6f64653e434d594b3c2f786d70473a6d6f64653e0a2020202020202020202020202020202020202020202020202020203c786d70473a747970653e50524f434553533c2f786d70473a747970653e0a2020202020202020202020202020202020202020202020202020203c786d70473a6379616e3e3130302e3030303030303c2f786d70473a6379616e3e0a2020202020202020202020202020202020202020202020202020203c786d70473a6d6167656e74613e38382e3030303030303c2f786d70473a6d6167656e74613e0a2020202020202020202020202020202020202020202020202020203c786d70473a79656c6c6f773e302e3030303030303c2f786d70473a79656c6c6f773e0a2020202020202020202020202020202020202020202020202020203c786d70473a626c61636b3e302e3030303030303c2f786d70473a626c61636b3e0a2020202020202020202020202020202020202020202020203c2f7264663a6c693e0a2020",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.8654680252075195,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020200a20202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.8656730651855469,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "7b75b52851c85c9a926ba9030e01de0aac0f8660a9f1b2caba584ab91078052b7624248885c8147bba571e39034b042f44a91c87e58c4d03b3b020bbe981f5c1de64336f784fac3852bb00fae84b603760aea60c096221b2c83fb08a5d79627fe01c75ad4890b353b4c0fa00dbb90e2d95d545642bf6a116abc0d73f80be598895dffe54538504b11059a517f94a10bf01e6f72944d25c0d6c9a926b7990f08a1db400c6909d20bb4b81cd02e99be380ff698a90201622eb1c0bac918376f4c03203d4aa4b4519a8c58ebf574ac9f59c07dc1d581f2c0bdc49fa5d108e20dfc5451a72b95b2c0a096221324f4be02f3968c32dc072ea4e5146ba3b11da3e05d752071c8455030b8975812b537c7d1b92ff80e57a9e228c52db12c44204c4b6c04f327cfde7124e6e65515d8660194cd2c04c2cc86e46607d7020f08b145e573fec14218453aa4fb06a820b352548100b91374ecfe8756f0d9caaee1315647fcc6f320dbc071c10601ffc05d83c45d7d3d689e15e01d87e2eb00bf0b5a602096221f2c8e6c01619bbe62ec0f5ea3a512541b6764aaee53e2c134648b4026ec37665d3c015c0f0406c7f28f0baa600096221f24cd622d7ff99a20762d69881e50efd1898e2fe3d4766894d6b2ceb415aaaa89d8d55750b899e58905d9b2a5fc7498493f7fc02e056ddfed95b3d0a210a630b601de0b50c5cebbec03eeab226990ebc018cc7f2d67e80e508fdc2bdb720e2775b62d1fc3d813e405f6035f75ad5fda9f9d5580ddb293e2a05d75287b94ebce4ae2b14d6c782d80eafd2f76f0d5c1c88adef27bbae7512c422132c00bec176a9be767f9f8a058ccc6af027d82e565309e93b03cbb8d7b2ee41de0b18002caff150102760476269a63bf03775d5f77c013c023c093c87f99516cb626ce7f84b27a81bd30e8bf4df10cbfbbc15f92bee52084702f73ab1506dbec382ec5e727361281ce6da5ce9ec130330b78d9601d87802e63bbf44d3ad04b1289e255844ea07c0bbc044f7efc9eecf2f2b3016560486bad7faee41de4d5dd324fb00a700dfa6f81affcf2d7c42e67df730be0b7895ca552e9beb44f773eedf2ddd3db58313634302ec8babb05cded353702def623bc5f704d6077f07c601cf57e8fb3a381b87f01c998105d1cd4048108bd8cc742bf5d7b0dda5f1589ecc7955bca645fc706c7ca7fbbf1a604d2cddd8f698ab80c68cd1163b7ebc28a5d7b739e9dfc12e17f3b07ccbd7909eca508b9d08791e38d32d3a0fc07693fa06d22f7d81bfa6685cde8b15ee08e978bbd6cdefeb60a78de5a406181dc8e26f09562a7c821e8dd9a5a6aeae72a5de870efbe793a42b054ca51e84e39c007ed1bdde259b472addb05aec07039be8f6e16dd259bdae3516dd3c38b0fef8c609ae2b49f7ce7de34d89ddb080a38d02e9a7ad802752722d2d9c30",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.8659260272979736,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "62214436598205868cc076284793ef1ca269e0132c6bc472c091a46797fecfc09601d87f8a5b04ced3504c0dd3812bb152d0fd80638187c8d6ce714737977651774a100b21b2cdcb58f5b3e5b03c9b0ac04b8ec558a0dc4f311fca0b806f53747d87002704d00f0b9c18fe5c4332b57c0efc13d801e80a6c039c8f0507a75d20af82a5baac5137164f2b9940089112a6027f75aff580fdb124f4bd659a827905cbe57b0bf0554aaf7103e08a40fae318e0050dcbcc300778d4bd006ab12a8deb016b03ab62f1102ba64847ed049c85553d141910c4a38127336eb3491a3665e7ee1cd8798abab16441f70a700ab03596a26a2789e3485e05eec002e52664e07a87021706d02f93b1602e915d1662d929c635a1a1fa62bec8cbba57376ca7b6631534561d56ddf1bb003459e2ae47357575952b903374d83f755b09218a9eafb0d4603b63050d42afd634cf3dcc1e04fe037ca4212284088d71638f49e473e4322184c80a755894fe4bc019d86ef1160d5e792ff5bb04180b3cee84f05328105108212488851041330518e35e6051e21b01c3b0cc15c3b0e3c3acf20d1670f83fb7087881f847a14208212488851001f21996cff676f7ef1a6020b00e1610b31a30c8fd99a60210df01ef63d935de02de70afcfd4a5420821412c8410a550e784e6fb8dfebf064bf1d61f58defdbd9ffbb30f96cfb3ab7bb52be1fb17639933bec1323d7c057c89e5039e0c7c8cf9fd2a0053082124888510a2e24279b27bf968dd481877e287fced9d81594ef8d67fee0c60a6fbfff932b5104248100b2144d65980edea0a2184c831aa5427841042082124888510420821849020164208218410428258082184104208096221841042082124888510420821849020164208218410428258082184104208096221841042082124888510420821849020164208218410428258082184104208096221841042082124888510420821849020164208218410428258082184104208096221841042082124888510420821849020164208218410428258082184104208096221841042082124888510420821849020164208218410428258082184104208096221841042082124888510420821849020164208218410428258082184104288ead04a261022389603f68c78ff6be026994908218404b11022af0c04fe1af1fe1b12c442082142422e1342082184104282580821841042080962218410420821248885104208218490201642082184104282580821841042080962218410420821248885104208218490201642082184104282580821841042080962218410420821248885104208218490201642082184104282580821841042080962218410420821248885104208218490201642082184102253b4cac035ae086c076c04ac06f406bab8f7a6035f011f002f038f02",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.866128921508789,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "ed7a43cada702116ec353785f67dd75ddb928c8d89c9058e896283b3968bf150ac34d3303796a732d25f8f135dd2b6314b30f7baa41fec9b101d9429fcd94c1af34881f3735e78d4dd8385964f3e097fa19d342e680be106a2eb08042188ebb05c983b62c79ae5e23dfc29ade2ee40c4a55c2965e66391bbc797592cbd90e1896749817d752ffee0856a70039627f6d9145edb1d583ac319391d1377bb5d8b42e985df97f0f52ad9603a16e17d2ee5adbaf74242fd55c82ee2c3052e78e232012b8d5bceca598bb163f4acf252818bbc3ce71e6e6e71fd3bcce5727a11bf3f074b0e706786da7c2bd179aa5335265aa4cc780f62c11917105d5da950a600a760c10c49a47779b38089abd46867df42e23267b31b137eb8bde304f70e199f840a393e4d73b4f33b98dfd7ee58d05c9af80f56f2f806b2b15b3caa80eb2c7682f6f972cfa3babbb48bb0ea5943b17cba49f222e65b7e74429f379af82998ca790f4fc73208fc84e4abaadde304f7e5649bab62fedc54a28be5e489c5d8a6d860e04f253ea767037bb8719885130b5f9eea86bc829dc6481037e03b2c25c772c0af4a5831d7e70ddd0b7322ff33b6ab9ae443352d226b32e6ecbf12e6935dac6fe267ee7ab77602e756d25501a758db3c10e3e73ec5a25bd34c1d1664b42e161cf537e2a52e8cc37cec38eeaf145725f233cc7d62652cd2f98d04c6ce1c77ff5f8655624c724c3c14f3e71e29f23b7c95a91e251d6e306f6339ad5777e3a9d8ddd5895830cffaaeed49de4b1fc7ec87afdde2acdc3c869dd86ce11ef6d38bfc9cd7dcbd32103b651947f6b9c12df67cdc94f0f3b89c147b9d6f60aea02b62856492ac72790b16f0babb7b4e4f4fe03327bb45ca6958f071a5b5d235d5eee89ababacae99da1c3fe59ecaff6c11cb3d77583ab2f96c6a6d6adb6a6b9c9701276b4f50ab6a3b6987059c589a6b5b1f4483db088fe16d8d1cd342c75cc44cc17f415aa53aab812ec8abf7ced79c4cb3b9a46fabb7b63281669bc1c5680a6bebcf2222cfdd362cc25e45bf7fad409ea0f315fbea4ef972e5859e495dd6b392ce0a3ad7b6fa6fbceefdc78fcc28dc949eeba2657794c9c8beda216c3d344578d3c90d20a4794ed99e016c323b0c0bb15b0fca65ddcfbf31af4d54427a85fc25f7934cfd43658a40e72cfa8fa348760bb64531bdc6ff5996ca6e6d41e37105d521bf75c7a2325d7fb07a26398cec6d2a68e70d7dddf3d4f3b37e8df59ae7f3f710b9dfab47b95bc6f577322b97ebeede8aeb11d96e66c3696dd67bad34b9f63a7e7efbb573953b58d75f74873ccc5922b14957967dcd864f64bb2228885288556d88941544aa095135ec18b6c8f893a37268a3996ecea847d7379d0bf720b9705ea06914376227aa7fe556c873d2dc411c47f50b796c46fb100f1a845d441c57e785282b8",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/loading.gif",
+                    "time": 1.8663079738616943,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "53514c69746520666f726d617420330010000101004020200000000b0000000b0000000000000000000000080000000400000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000b002de21a0d000000040dbf000f5e0f0c0e710dbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.8669848442077637,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.8671929836273193,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "05000000050fe2000000000b0ffa0ff40fee0fe80fe20f250f120eff0ef10ed00eb50e920e840e6b0e450e350e1b0df90dd50db90d970d840d650d470d230d050cea0cd30cb40c990c830c630c3c0c1c0bfa0be00bc60ba10b870b6f0b590b3f0b220b080af40adc0ac00aa80a910a780a600a3a0a2209fd09dd09cd09b10995097909560930091c090508f008d308cb08af08960888086a08540830081107ef07dc07c607ad07980776075f07440733071b06f006d606b7069e0689065d063f0620060a05ee05d205b80591056c054f0522050c04f204d504bc049f047f0464044f0437041703f003c703a7038b037403580340031c02f102db02c602ad0288026602410226020801eb01c201b00192017d015c0139012201850169014d012d000014874f03002f636f6d2e62616e6b69612e77616c6c657420874e030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e874d030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212874c03002b636f6d2e42616e6b416c42696c61641b874b03003d636f6d2e42616e6b416c42696c61642e456e6a617a4170700f874a030025636f6d2e62616e696e746572268749030053636f6d2e62616e6573636f2e73616d6662616e63616d6f76696c756e696669636164611a874803003b636f6d2e62616e637361626164656c6c2e77616c6c65741b874703003d636f6d2e62616e636f7270736f7574682e616e64726f6964188746030037636f6d2e62616e636f6d65722e6d62616e6b696e6722874503004b636f6d2e62616e636f646576656e657a75656c612e6264766469676974616c1f8744030045636f6d2e62616e636f6465626f676f74612e62616e63616d6f76696c22874303004b636f6d2e62616e636f63616a61736f6369616c2e67656f6c6f636174696f6e168742030033636f6d2e617a696d6f2e73656e646d6f6e657912874103002b636f6d2e617869732e6d6f62696c6513874003002d636f6d2e61786162616e7175652e667228873f030057636f6d2e6176656e7472692e6669727374686f72697a6f6e62616e6b33303030303537343221873e030049636f6d2e6175622e6d6f62696c6562616e6b696e672e6b772e70686f6e6515873d030031636f6d2e6174742e6d79576972656c65737319873c030039636f6d2e6174622e627573696e6573736d6f62696c6514873b03002f636f6d2e6174622e4154424d6f62696c6519873a030039636f6d2e61737761742e6361727265666f75727561651d8739030041636f6d2e61737365636f2e6879627269642e626f732e70726f64268738030053636f6d2e61726b65612e616e64726f69642e6170706c69636174696f6e2e636d736f3224873703004f636f6d2e61726b65612e",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.867276906967163,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "0d000000880125000fe30fcf0fb90f8b0f700f550f3a0f210f000ee10ec40e8f0e7b0e610e440e2e0e160df70ddb0dbb0d9d0d7c0d5b0d320d1c0cf90ce60cca0cad0c830c650c4d0c360c1d0bf90be10bc80bac0b920b6e0b4c0b270b050ae30aba0a960a760a550a340a1909f909e209c009a409940972095a093c091b08fc08dd08c608b00895087d086108430828080f07e807c307a1078d076f074f0743072e071706fd06ea06d706c206aa069d0681066b065606380627061005f205d905c105b2058a0575055b054a0535051f050604ec04d304be04a9048404720461044e042a041303f903d203b403a1036f03580346032c030402ea02c802ae029c02840259023b021b020b01f301dd01be0196015f014a0125030037636f6d2e6f70656e736f228b7a03004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e67128b7903002b6e65742e6f6e6539372e706179746d348b7803006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f6964258b770300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c8b7603003f6e65742e626e70706172696261732e6d6573636f6d70746573138b7503002d6e65742e6269747374616d702e617070158b740300316e65742e6269746261792e626974636f696e0d8b730300216e65742e6172616d65781d8b720300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b8b7103003d6d792e636f6d2e687362632e687362636d616c6179736961288b700300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e656374158b6f0300316d782e687362632e687362636d657869636f0f8b6e0300256d782e636f6d2e62622e6232178b6d0300356d782e62616e637361626164656c6c2e706172741f8b6c0300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c178b6b0300356d6f62696c6974792e67652e7465726162616e6b258b6a0300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c69178b690300356d652e63727970746f7061792e616e64726f69640f8b680300256d62616e6b696e672e4e4247148b6703002f6d612e6762702e706f636b657462616e6b2f8b660300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c6574108b650300276b746263732e6e657462616e6b1b8b6403003d6a702e6e652e7061797061792e616e64726f69642e617070248b6303004f6a702e6a6170616e706f73742e706f73742e706f7374626f782e616e64726f6964178b620300356a",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.8675940036773682,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "0d000000900133000fe70fcc0fb50f9a0f850f680f540f3d0f2d0f130ef10edb0ebf0eaa0e900e7f0e610e480e300e1a0e070df90ddb0dce0db20d880d710d4d0d2d0d110cf80cd50cb80c9d0c880c6b0c5e0c510c300c140bef0bdd0bc40bad0b8b0b710b500b340b200b0d0af60ada0ab80a9e0a8d0a790a660a4c0a350a1e0a0109ea09bb099b0980096f0955093d08ff08f308e308d608b808a408960878085d08390823080507e907d207b8079a0781076b075507390723071206fa06dd06ca069e067f0667064f062d060f05f205d505bb05a00587057505520533051104f804de04cc04b8049f048b046604410422040703ef03cf03b50397036b034e03380326030302ef02db02b1029c02870272025a023c022001fb01d901ca01a5018b0163014901330000000000000000000000138a7203002d64652e636f6d6469726563742e617070178a7103003564652e636f6d6469726563742e616e64726f6964258a7003005164652e61646573736f5f6d6f62696c652e7365637572656170702e6e657462616e6b178a6f030035637a2e63736f622e736d61727462616e6b696e67228a6e03004b636f6f702e62616e636f6372656469636f6f702e62616e63616d6f62696c650c8a6d03001f636f6d2e7a7a6b6b6f1f8a6c030045636f6d2e7a6f6c7578696f6e65732e6f666669636562616e6b696e67228a6b03004b636f6d2e7a69726161746b6174696c696d2e6d6f62696c6562616e6b696e67198a6a030039636f6d2e7a69726161742e7a69726161746d6f62696c1b8a6903003d636f6d2e7a656e69746842616e6b2e65617a796d6f6e6579158a68030031636f6d2e7a656c6c657061792e7a656c6c65128a6703002b636f6d2e7a61696e6b772e7a61696e128a6603002b636f6d2e796b622e616e64726f6964128a6503002b636f6d2e7961702e62616e6b696e67278a64030055636f6d2e7961686f6f2e6d6f62696c652e636c69656e742e616e64726f69642e6d61696c118a63030029636f6d2e7772782e77617a697278118a62030029636f6d2e776f6f64666f72657374208a61030047636f6d2e77696c6c6d6f62696c652e6d6f62696c6562616e6b2e6663620f8a60030025636f6d2e7768617473617070138a5f03002d636f6d2e77686174736170702e7734621a8a5e03003b636f6d2e77662e77656c6c73666172676f6d6f62696c65298a5d030059636f6d2e7765737465726e756e696f6e2e6d6f6e65797472616e7366657272336170702e65731b8a5c03003d636f6d2e7761766573706c6174666f726d2e77616c6c6574178a5b030035636f6d2e776172626162616e6b2e77616c6c65741d8a5a030041636f6d2e77616c6c65742e63727970746f2e7472757374617070158a59030031636f6d2e7674622e6d6f62",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.867861032485962,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "0d0000005b05e4000fe70fcc0fb90f940f6f0f4a0f350f230ee40ea50e660e4f0e330e240e0e0df90ded0dd70db30d880d730d390d1c0d060cf60cea0ccd0cad0c970c7f0c710c520c350c230c0f0bf00bd30bbf0bb10b960b7c0b630b4d0b330b210b080af10acd0aa50a960a6e0a490a340a180a0209e109be09a6098a09750950092a090008e508ce08ba08a6088708740861084608350824080807e907c607b4079d07790754071f06fe06df06c206a7069a06830659062f060305e4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db",
+                    "time": 1.8682000637054443,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4304,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/txtscreensize.txt",
+                    "time": 1.8693058490753174,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4364,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-shm",
+                    "time": 2.7202210426330566,
+                    "processname": "com.nexipaytoken.app"
+                },
+                {
+                    "pid": 4304,
+                    "tid": 4364,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.nexipaytoken.app/files/db.db-shm",
+                    "time": 2.7209339141845703,
+                    "processname": "com.nexipaytoken.app"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

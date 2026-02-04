@@ -1,0 +1,500 @@
+{
+    "apk_info": {
+        "id": "KByDd20kQl5GY8mn",
+        "url": "https://developer.koodous.com/apks/3cd62210ef53bca2b2aef1bd8ced308adfa7187ff3f1837248b22bf9fd81bcda/",
+        "sha256": "3cd62210ef53bca2b2aef1bd8ced308adfa7187ff3f1837248b22bf9fd81bcda",
+        "md5": "64521ed9196a13f20f46245d8bb5404f",
+        "sha1": "1bd8465f5020f75f0a84dfaf6e1e935954533368",
+        "app": "Steganos Online Shield",
+        "package_name": "com.steganos.onlineshield",
+        "company": "TestDesign",
+        "version": "1.0.3",
+        "image": "https://developer.koodous.com/media/apk_images/2017/01/02/9a53dd5b7eb6a04a6162e575210c29b7c45ff90ab3799f9c954a88390b10a6d3",
+        "size": 6073913,
+        "tags": [
+            "trojan",
+            "reflection",
+            "spyagent",
+            "monokle",
+            "contains-elf",
+            "monocle"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -5,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 4,
+        "comments_count": 0,
+        "votes_count": 5,
+        "created_at": "2017-01-01T13:34:00+01:00",
+        "updated_at": "2025-05-29T11:09:07.160105+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "64521ed9196a13f20f46245d8bb5404f",
+                    "sha1": "1bd8465f5020f75f0a84dfaf6e1e935954533368",
+                    "size": 6073913,
+                    "crc32": "06DEF729",
+                    "sha256": "3cd62210ef53bca2b2aef1bd8ced308adfa7187ff3f1837248b22bf9fd81bcda",
+                    "sha512": "86c66f01d03acb84352b78bfee4d673385621308db494fa41007cfd5c720a76bfc5bcad410a0ba9f40f70838292242e6d979103fe6b658b37b6527b2c530a5c3",
+                    "ssdeep": "98304:rz08KOO3Lur8NA3GdjhJ9WWyNhhSmHGyjjWGycRIw8AuWb/qkWTwTGeUywt08wHW:MPur8NA2zbxyNjGUu4TjUH60g7BMI3c"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "www.vpn.steganos.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "37.208.111.94",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "www.vpn.steganos.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "37.208.111.94"
+                ],
+                "domains": [
+                    {
+                        "ip": "37.208.111.94",
+                        "domain": "www.vpn.steganos.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "https://www.steganos.com/scripts/products/sos/",
+                "https://apm.crittercism.com",
+                "https://www.vpn.steganos.com/scripts/products/sos/",
+                "https://%s:%s",
+                "http://www.steganos.com/os_servers.xml",
+                "https://www.steganos.com/scripts/",
+                "http://www.google.com",
+                "https://api.crittercism.com",
+                "https://www.steganos.com/scripts/products/sos/getcert/",
+                "https://www.steganos.com/scripts/products/sos/createcert/",
+                "http://www.amazon.com/gp/mas/dl/android?p="
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "49a05c2f96462ff84762e41e5f4854f7f671db4f99af5021a710ec6b05a5e6f6",
+                    "ssdeep": "49152:dkFSzmeRbbf+I8NH1k7uyVf6bzI4SVkn7t46g7BwipZPPz1eZcY/QRB4C6TJWefk:d6SzmwQ8RybEko"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.ACTION_TIME_CHANGED",
+                "android.net.wifi.supplicant.CONNECTION_CHANGE",
+                "android.intent.action.ACTION_TIMEZONE_CHANGED",
+                "android.intent.action.MAIN",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.net.wifi.STATE_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.USER_PRESENT"
+            ],
+            "app_name": "Steganos Online Shield",
+            "services": [
+                "com.steganos.onlineshield.communication.CommunicationService",
+                "syst.BackgroundService",
+                "de.blinkt.openvpn.core.OpenVpnService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "syst.receivers.StartBroadcastReceiver",
+                "de.blinkt.openvpn.OnBootReceiver",
+                "com.steganos.onlineshield.WifiStateReceiver",
+                "syst.receivers.TimeChangedReceiver",
+                "syst.receivers.NewOutCallListener",
+                "syst.receivers.WiFiChangeReceiver"
+            ],
+            "activities": [
+                "com.steganos.onlineshield.main.MainActivity2",
+                "de.blinkt.openvpn.LogWindow"
+            ],
+            "certificate": {
+                "sha1": "A50AFBE3D1733E67D5CE783F5B32E1CAAB068A45",
+                "serial": "BCD156E663B36D3A",
+                "issuerDN": "/C=ru/ST=Some-State/O=TestDesign/CN=Dart",
+                "not_after": "Jul 27 12:02:56 2040 GMT",
+                "subjectDN": "/C=ru/ST=Some-State/O=TestDesign/CN=Dart",
+                "not_before": "Mar 12 12:02:56 2013 GMT"
+            },
+            "permissions": [
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.READ_CALENDAR",
+                "android.permission.READ_LOGS",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.BLUETOOTH",
+                "android.permission.CAMERA",
+                "android.permission.INTERNET",
+                "com.android.vending.BILLING",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.SEND_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_TASKS",
+                "android.permission.READ_CALL_LOG",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.CALL_PHONE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_CONTACTS",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "com.steganos.onlineshield",
+            "version_code": "33",
+            "main_activity": "com.steganos.onlineshield.main.MainActivity2",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V",
+                        "class": "Lsyst/f/e;",
+                        "method": "a"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lsyst/e/a;",
+                        "method": "e"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v26, 'https'",
+                        "class": "Lcom/foxykeep/datadroid/internal/network/NetworkConnectionImpl;",
+                        "method": "execute"
+                    },
+                    {
+                        "code": "const-string v2, 'https://www.vpn.steganos.com/scripts/products/sos/'",
+                        "class": "Lcom/steganos/onlineshield/communication/api/BaseApi;",
+                        "method": "getRequestUrl"
+                    },
+                    {
+                        "code": "const-string v2, 'https://www.steganos.com/scripts/'",
+                        "class": "Lcom/steganos/onlineshield/communication/api/GetMyIp;",
+                        "method": "getRequestUrl"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcrittercism/android/dh;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lsyst/f/e;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lsyst/f/e;",
+                        "method": "d"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lsyst/f/e;",
+                        "method": "c"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v1, v2, Landroid/media/MediaRecorder;->setPreviewDisplay(Landroid/view/Surface;)V",
+                        "class": "Lsyst/c/a;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/steganos/onlineshield/Utils;",
+                        "method": "md5"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/sun/mail/pop3/Protocol;",
+                        "method": "getDigest"
+                    },
+                    {
+                        "code": "invoke-virtual v9, v10, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/sun/mail/smtp/DigestMD5;",
+                        "method": "authClient"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual/range v24, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/foxykeep/datadroid/internal/network/NetworkConnectionImpl;",
+                        "method": "execute"
+                    },
+                    {
+                        "code": "invoke-virtual/range v24, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/foxykeep/datadroid/internal/network/NetworkConnectionImpl;",
+                        "method": "execute"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v6, v5, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Lcom/foxykeep/datadroid/service/RequestService;",
+                        "method": "sendResult"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v9, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/steganos/onlineshield/ui/dialogs/GetWindowsVersionDialog;",
+                        "method": "onCreateDialog"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lsyst/d/a;",
+                        "method": "a"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lsyst/f/e;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static v3, Lcom/crittercism/app/CrittercismNDK;->loadLibraryFromAssets(Landroid/content/Context;)Z",
+                        "class": "Lcom/crittercism/app/CrittercismNDK;",
+                        "method": "installNdkLib"
+                    },
+                    {
+                        "code": "invoke-static v2, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lcom/crittercism/app/CrittercismNDK;",
+                        "method": "installNdkLib"
+                    },
+                    {
+                        "code": "invoke-static v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lde/blinkt/openvpn/core/NativeUtils;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lsyst/f/e;",
+                        "method": "c"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v4, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lsyst/d/c;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Lcom/steganos/onlineshield/main/MainActivity2;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/steganos/onlineshield/ui/RadarFragment;",
+                        "method": "onPause"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v4, v2, Lcom/steganos/onlineshield/main/MainActivity2;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/steganos/onlineshield/ui/RadarFragment;",
+                        "method": "onResume"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v6, v3, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcrittercism/android/bq$e;",
+                        "method": "<init>"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "1.0.3",
+            "target_sdk_version": 18
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "37.208.111.94",
+                    "hostname": "www.vpn.steganos.com"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.steganos.onlineshield-1.apk",
+                    "time": 0.060296,
+                    "processname": "com.steganos.onlineshield"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/849/net/if_inet6",
+                    "time": 5.777011,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "504b050600000000fd00fd00205a000003545c000000504b010214001400080808009635d8485cc68975aa1a00006f6000001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b010214001400080808009635d8482a951ef3361d0000a46000001000000000000000000000000000f01a00004d4554412d494e462f434552542e5346504b010214001400080808009635d848eff1a4189e010000740200001100000000000000000000000000643800004d4554412d494e462f434552542e525341504b010214001400080808009635d848a7d3e591e50100004d0300003e00000000000000000000000000413a00006f72672f6170616368652f636f6d6d6f6e732f636f6465632f6c616e67756167652f626d2f67656e5f617070726f785f677265656b6c6174696e2e747874504b010214001400080808009635d848ee0f76574d0300004b0700003800000000000000000000000000923c00006f72672f6170616368652f636f6d6d6f6e732f636f6465632f6c616e67756167652f626d2f67656e5f72756c65735f64757463682e747874504b010214001400080808009635d84876495b0c3c030000620600001400000000000000000000000000454000006173736574732f61626f75745f64652e68746d6c504b010214001400080808009635d8485f81a7",
+                    "name": "/data/app/com.steganos.onlineshield-1.apk",
+                    "time": 0.087345,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "1\n",
+                    "name": "/sys/devices/virtual/net/lo/ifindex",
+                    "time": 5.727182,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "3\n",
+                    "name": "/sys/devices/virtual/net/sit0/ifindex",
+                    "time": 5.787155,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "2\n",
+                    "name": "/sys/devices/platform/smc91x.0/net/eth0/ifindex",
+                    "time": 5.761963,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/849/net/if_inet6",
+                    "time": 5.793913,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/849/net/if_inet6",
+                    "time": 5.746033,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "eth0: ip 10.0.2.15 mask 255.255.255.0 flags [up broadcast running multicast]\n",
+                    "name": "pipe:[2827]",
+                    "time": 5.857011,
+                    "processname": "com.steganos.onlineshield"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"connection_state\" value=\"1\" />\n</map>\n",
+                    "name": "/data/data/com.steganos.onlineshield/shared_prefs/preferences.conf.xml",
+                    "time": 6.24774,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"com.sos.preferences.guide.shown\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.steganos.onlineshield/shared_prefs/com.sos.preferences.app.xml",
+                    "time": 6.595288,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"JP\">Japan</string>\n<string name=\"FR\">France</string>\n<string name=\"US\">USA</string>\n<string name=\"CH\">Switzerland</string>\n<string name=\"SG\">Singapore</string>\n<string name=\"ES\">Spain</string>\n<string name=\"DE\">Germany</string>\n<string name=\"EG\">Egypt</string>\n<string name=\"RO\">Romania</string>\n<string name=\"UK\">Great Britain</string>\n<string name=\"TR\">Turkey</string>\n</map>\n",
+                    "name": "/data/data/com.steganos.onlineshield/shared_prefs/com.sos.preferences.countries.xml",
+                    "time": 6.547562,
+                    "processname": "com.steganos.onlineshield"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "name": "com.steganos.onlineshield.communication.CommunicationService",
+                    "time": 6.347678,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "name": "com.steganos.onlineshield.communication.CommunicationService",
+                    "time": 6.563326,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705537448,
+                    "name": "com.steganos.onlineshield.communication.CommunicationService",
+                    "time": 6.737074,
+                    "processname": "com.steganos.onlineshield"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "name": "com.steganos.onlineshield.communication.CommunicationService",
+                    "time": 6.746927,
+                    "processname": "com.steganos.onlineshield"
+                }
+            ]
+        }
+    }
+}

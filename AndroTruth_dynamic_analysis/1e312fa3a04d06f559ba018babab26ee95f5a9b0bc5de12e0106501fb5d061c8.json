@@ -1,0 +1,470 @@
+{
+    "apk_info": {
+        "id": "vgaWG7B09JR1plXP",
+        "url": "https://developer.koodous.com/apks/1e312fa3a04d06f559ba018babab26ee95f5a9b0bc5de12e0106501fb5d061c8/",
+        "sha256": "1e312fa3a04d06f559ba018babab26ee95f5a9b0bc5de12e0106501fb5d061c8",
+        "md5": "d368d20fc93060fa2775e78025c4fe4a",
+        "sha1": "1b1b9b26a9c7d047864a02c1753955a96a2f2f27",
+        "app": "佐川急便",
+        "package_name": "qq.pello",
+        "company": "s",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/cc/60/cc60b9d09f342bfed4ff672cf6a288723d8b9602702f299ff6458cfe15471c4c",
+        "size": 1648287,
+        "tags": [
+            "banker",
+            "bankbot",
+            "trojan",
+            "fakespy",
+            "reflection",
+            "telephony",
+            "bajaspy"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -7,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 11,
+        "comments_count": 1,
+        "votes_count": 7,
+        "created_at": "2018-06-04T14:27:17+02:00",
+        "updated_at": "2025-05-29T11:00:22.247840+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "d368d20fc93060fa2775e78025c4fe4a",
+                    "sha1": "1b1b9b26a9c7d047864a02c1753955a96a2f2f27",
+                    "size": 1648287,
+                    "crc32": "D88E30A5",
+                    "sha256": "1e312fa3a04d06f559ba018babab26ee95f5a9b0bc5de12e0106501fb5d061c8",
+                    "sha512": "9bf55407267708bed5337da82eefe9bb0faf58ebe071e3083a20eda1fcfe55e02f1233a6ef1f54ab7d319b20a970b2a9ab16da2a3343afc7abfbd2ce6933ee56",
+                    "ssdeep": "49152:XIpcRMnmsyvT5PwBiY13Gb+5eLRi2LUURFmx:4pcRv5OiKM+sRi2L4x"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "www.sagawa-exp.co.jp"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "42.124.125.51",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "www.sagawa-exp.co.jp"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "twitter.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "104.244.42.193",
+                                "type": "A"
+                            },
+                            {
+                                "data": "104.244.42.129",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "twitter.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "42.124.125.51",
+                    "104.244.42.193"
+                ],
+                "domains": [
+                    {
+                        "ip": "42.124.125.51",
+                        "domain": "www.sagawa-exp.co.jp"
+                    },
+                    {
+                        "ip": "104.244.42.65",
+                        "domain": "twitter.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://36.225.187.95/",
+                "http://schemas.android.com/apk/res/android",
+                "http://www.sagawa-exp.co.jp/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "8fc9b53b425a2e7adba31166e84022bdf2daae624c73be82a3ea81f85d8fc6f9",
+                    "ssdeep": "24576:z9uBD4S+aZHBW6yHnUCVS4G6WsRABcDHkIabYcaGbABZK4LG7oUdGbVMaO:z9uIUeccgzaGF7o0WVG"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MEDIA_EJECT",
+                "android.intent.action.MEDIA_REMOVED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.intent.action.TIMEZONE_CHANGED",
+                "android.net.wifi.STATE_CHANGE",
+                "android.intent.action.DATE_CHANGED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.PHONE_STATE",
+                "android.bluetooth.adapter.action.STATE_CHANGED",
+                "android.intent.action.SCREEN_OFF",
+                "android.intent.action.ANY_DATA_STATE",
+                "android.intent.action.MEDIA_UNMOUNTED",
+                "android.intent.action.SCREEN_ON",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.TIME_CHANGED",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.ACTION_PACKAGE_ADDED",
+                "android.net.wifi.WIFI_STATE_CHANGED",
+                "android.intent.action.MEDIA_CHECKING",
+                "android.intent.action.ACTION_POWER_DISCONNECTED",
+                "android.intent.action.ACTION_MEDIA_EJECT",
+                "android.intent.action.ACTION_POWER_CONNECTED",
+                "android.intent.action.SIM_STATE_CHANGED"
+            ],
+            "app_name": "佐川急便",
+            "services": [
+                "kk.service.ShC",
+                "kk.service.HUOLU",
+                "kk.service.FUK"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "kk.receiver.LJ"
+            ],
+            "activities": [
+                "kk.chunyu.MainActivity",
+                "kk.chunyu.PermissionsActivity"
+            ],
+            "certificate": {
+                "sha1": "D3963355382F207449BD5B2E1D7CB91517785AF9",
+                "serial": "3A051552",
+                "issuerDN": "/CN=s",
+                "not_after": "May 29 02:23:44 2043 GMT",
+                "subjectDN": "/CN=s",
+                "not_before": "Jun 4 02:23:44 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "qq.pello",
+            "version_code": "1",
+            "main_activity": "kk.chunyu.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/gsm/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lkk/util/SmsUtil;",
+                        "method": "sendSMSTO"
+                    },
+                    {
+                        "code": "invoke-virtual/range v5 ... v10, Landroid/telephony/gsm/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lkk/util/SmsUtil;",
+                        "method": "sendSMSTO"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lkk/util/StUtil;",
+                        "method": "getMachine"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v11, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV7;",
+                        "method": "preparePanel"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lkk/util/NetUtil;",
+                        "method": "getProvidersName"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lkk/util/StUtil;",
+                        "method": "getMachine"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lkk/util/StringUtil;",
+                        "method": "getMachine"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/sun/crypto/provider/DESedeWrapCipher;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/sun/crypto/provider/HmacCore;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/sun/crypto/provider/HmacCore;",
+                        "method": "b"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;",
+                        "method": "sendRequest"
+                    },
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lkk/util/JRunCheck;",
+                        "method": "executeCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v6, v7, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lkk/util/JRunCheck;",
+                        "method": "executeCommand"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lkk/util/StUtil;",
+                        "method": "getMachine"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lkk/util/StringUtil;",
+                        "method": "getMachine"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v2, v0, v3, v4, Lkk/chunyu/MyApplication;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Lkk/chunyu/MyApplication;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 23
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "path": "/data/app/qq.pello-1.apk",
+                    "time": 0.017622,
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "path": "/data/app/qq.pello-1.apk",
+                    "time": 2.240553,
+                    "processname": "qq.pello:ServiceProcess"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          337596 kB\nBuffers:               0 kB\nCached:           138080 kB\nSwapCached:            0 kB\nActive:           144984 kB\nInactive:         103120 kB\nActive(anon):     113692 kB\nInactive(anon):        0 kB\nActive(file):      31292 kB\nInactive(file):   103120 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                20 kB\nWriteback:             0 kB\nAnonPages:        110056 kB\nMapped:            50284 kB\nSlab:               6240 kB\nSReclaimable:       1668 kB\nSUnreclaim:         4572 kB\nPageTables:         5584 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2680128 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       29744 kB\nVmallocChunk:     321540 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 5.699315,
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          339348 kB\nBuffers:               0 kB\nCached:           137036 kB\nSwapCached:            0 kB\nActive:           143888 kB\nInactive:         102268 kB\nActive(anon):     112788 kB\nInactive(anon):        0 kB\nActive(file):      31100 kB\nInactive(file):   102268 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        109144 kB\nMapped:            49620 kB\nSlab:               6204 kB\nSReclaimable:       1656 kB\nSUnreclaim:         4548 kB\nPageTables:         5576 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2675424 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       29744 kB\nVmallocChunk:     321540 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 3.019939,
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "data": "504b05060000000078017801738f0000169718000000504b01021400140008080800fd52c44c2699a096950900009c270000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01021400140008080800fd52c44ce686e085310100006c0200002d00000000000000000000000000da0900007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f696e2e786d6c504b01021400140008080800fd52c44c4e7f10362f0100006c0200002e00000000000000000000000000660b00007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f6f75742e786d6c504b01021400140008080800fd52c44c6b16942fdb0000008c0100001800000000000000000000000000f10c00007265732f616e696d2f6162635f666164655f696e2e786d6c504b01021400140008080800fd52c44c137a6f39dc0000008c0100001900000000000000000000000000120e00007265732f616e696d2f6162635f666164655f6f75742e786d6c504b01021400140008080800fd52c44cb83a0b23810100005c0300002900000000000000000000000000350f00007265732f616e696d2f6162635f67726f775f666164655f696e5f66726f6d5f626f74746f6d2e786d6c504b0102140014000808",
+                    "name": "/data/app/qq.pello-1.apk",
+                    "time": 2.279542,
+                    "processname": "qq.pello:ServiceProcess"
+                },
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          338216 kB\nBuffers:               0 kB\nCached:           137624 kB\nSwapCached:            0 kB\nActive:           144720 kB\nInactive:         102744 kB\nActive(anon):     113532 kB\nInactive(anon):        0 kB\nActive(file):      31188 kB\nInactive(file):   102744 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                16 kB\nWriteback:             0 kB\nAnonPages:        109896 kB\nMapped:            50256 kB\nSlab:               6220 kB\nSReclaimable:       1660 kB\nSUnreclaim:         4560 kB\nPageTables:         5588 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2679972 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       29744 kB\nVmallocChunk:     321540 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 4.759268,
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "504b05060000000078017801738f0000169718000000504b01021400140008080800fd52c44c2699a096950900009c270000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01021400140008080800fd52c44ce686e085310100006c0200002d00000000000000000000000000da0900007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f696e2e786d6c504b01021400140008080800fd52c44c4e7f10362f0100006c0200002e00000000000000000000000000660b00007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f6f75742e786d6c504b01021400140008080800fd52c44c6b16942fdb0000008c0100001800000000000000000000000000f10c00007265732f616e696d2f6162635f666164655f696e2e786d6c504b01021400140008080800fd52c44c137a6f39dc0000008c0100001900000000000000000000000000120e00007265732f616e696d2f6162635f666164655f6f75742e786d6c504b01021400140008080800fd52c44cb83a0b23810100005c0300002900000000000000000000000000350f00007265732f616e696d2f6162635f67726f775f666164655f696e5f66726f6d5f626f74746f6d2e786d6c504b0102140014000808",
+                    "name": "/data/app/qq.pello-1.apk",
+                    "time": 0.081838,
+                    "processname": "qq.pello"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "84, 69, 83, 84, 0, 0, 0, 0",
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "time": 1.897361,
+                    "algorithm": "DES",
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "http://36.225.187.95/",
+                    "time": 2.034691,
+                    "algorithm": "DES",
+                    "processname": "qq.pello"
+                },
+                {
+                    "key": "84, 69, 83, 84, 0, 0, 0, 0",
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "time": 4.667423,
+                    "algorithm": "DES",
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "https://twitter.com/sekadeta",
+                    "time": 4.747547,
+                    "algorithm": "DES",
+                    "processname": "qq.pello"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"URL\">http://36.225.187.95/</string>\n<string name=\"tt\">2015-03-13 18:15</string>\n</map>\n",
+                    "name": "/data/data/qq.pello/shared_prefs/mybank.xml",
+                    "time": 4.629609,
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"URL\">http://36.225.187.95/</string>\n</map>\n",
+                    "name": "/data/data/qq.pello/shared_prefs/mybank.xml",
+                    "time": 2.049928,
+                    "processname": "qq.pello"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 839,
+                    "tid": 1073870640,
+                    "name": "kk.service.FUK",
+                    "time": 2.063891,
+                    "processname": "qq.pello"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "kk.service.HUOLU",
+                    "time": 4.566742,
+                    "processname": "qq.pello:ServiceProcess"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "kk.service.HUOLU",
+                    "time": 5.570878,
+                    "processname": "qq.pello:ServiceProcess"
+                }
+            ]
+        }
+    }
+}

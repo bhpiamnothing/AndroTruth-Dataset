@@ -1,0 +1,698 @@
+{
+    "apk_info": {
+        "id": "m3xWdoERJERGRoZ5",
+        "url": "https://developer.koodous.com/apks/c38ea8d6dd56b4d4e304a0c230d6982e41464bc4288b03e5bf4e80cd326b6d8a/",
+        "sha256": "c38ea8d6dd56b4d4e304a0c230d6982e41464bc4288b03e5bf4e80cd326b6d8a",
+        "md5": "ce848982185e42699bac418b41aac24f",
+        "sha1": "4ff2fe39a8cd5df9832dccdd70b8187bd58d8fb9",
+        "app": "Jio Offers",
+        "package_name": "india.jiooffers",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/d6/fe/d6fedd182a1ce41e3fe5c313b429b07b70bc8bf37dded3821f5809bdd7ba5f2c",
+        "size": 3708389,
+        "tags": [
+            "fake-installer"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 9,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2019-04-21T18:39:25+02:00",
+        "updated_at": "2023-03-30T17:53:32.481632+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "ce848982185e42699bac418b41aac24f",
+                    "sha1": "4ff2fe39a8cd5df9832dccdd70b8187bd58d8fb9",
+                    "size": 3708389,
+                    "crc32": "15FAE0A5",
+                    "sha256": "c38ea8d6dd56b4d4e304a0c230d6982e41464bc4288b03e5bf4e80cd326b6d8a",
+                    "sha512": "e7188277252766f8b2fad30f40e87474b3d4b2c49f96e1fc3fa042b2ee0e65c31c93f2432592384356b4858309b565a8e8407eea086773bb39c2e4e2ad7e5fe9",
+                    "ssdeep": "98304:uQOnMa76+qwfSkpyDFbVd2+gG+fWmDnZhJdDX2JJz2g5Dbu:uTYpKSXgqm7w6"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "https://www.jio.com/JioWebService/rest/JioRechargeService/submitNumber",
+                "www.jio.com",
+                "http://schemas.android.com/apk/res/android",
+                "http://instagram.com/_u/myindianews",
+                "https://www.jio.com/JioWebApp/",
+                "http://deloplen.com/afu.php?zoneid=2551326",
+                "www.inkscape.org"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "83bf8e6ca45150da8df45e41231578ff7707441bc0d4d85f573e16d12c7715a2",
+                    "ssdeep": "24576:Fb9aL7bj/YMcCSwgxaEcXxW82V0DfCeXynABsz21liKK8zIYQrq7z:Nobjw59gJfDfCiyna1k2IPE"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Jio Offers",
+            "services": [
+                "india.jiooffers.senderservice"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "india.jiooffers.MainActivity",
+                "india.jiooffers.reg",
+                "india.jiooffers.last",
+                "india.jiooffers.swa"
+            ],
+            "certificate": {
+                "sha1": "541D28F8B59D3868A28A0B8204D31F1896186D1A",
+                "serial": "01",
+                "issuerDN": "CN = Android Debug, O = Android, C = US",
+                "not_after": "Jan 31 04:53:21 2048 GMT",
+                "subjectDN": "CN = Android Debug, O = Android, C = US",
+                "not_before": "Feb 7 04:53:21 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.VIBRATE",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SEND_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.BLUETOOTH",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "india.jiooffers",
+            "version_code": "1",
+            "main_activity": "india.jiooffers.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lindia/jiooffers/senderservice;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lindia/jiooffers/senderservice;",
+                        "method": "a"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Lcom/bumptech/glide/c/c/a/b;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Lcom/bumptech/glide/c/c/w;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v2, 'https://www.jio.com/JioWebService/rest/JioRechargeService/submitNumber'",
+                        "class": "Lindia/jiooffers/senderservice;",
+                        "method": "c"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV9;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/l;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/o;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v1, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/bumptech/glide/c/b/b/j;",
+                        "method": "b"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v1, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserCompat$l;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserServiceCompat$f;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/bumptech/glide/c/b/c/a;",
+                        "method": "d"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/g$b;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/g$b;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/bumptech/glide/manager/e;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 21,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "path": "/system/framework/org.apache.http.legacy.boot.jar:/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk",
+                    "time": 7.188374042510986,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "path": "/system/app/Chrome/Chrome.apk",
+                    "time": 13.632036924362183,
+                    "processname": "india.jiooffers"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/proc/self/cmdline",
+                    "time": 7.024094104766846,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 7.214383125305176,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 7.216838121414185,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 7.222464084625244,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 7.242455959320068,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 7.243389129638672,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 7.294227123260498,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 7.302918910980225,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 7.303524017333984,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 7.304129123687744,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 7.3044960498809814,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 7.305157899856567,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 7.306275129318237,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 7.3066370487213135,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 7.306889057159424,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 7.3069751262664795,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 7.308044910430908,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 7.309004068374634,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 7.369956970214844,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 7.38230299949646,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk.x86_64.flock",
+                    "time": 7.383613109588623,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk",
+                    "time": 7.396243095397949,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/data@app@india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==@base.apk@classes.vdex",
+                    "time": 7.39867901802063,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk",
+                    "time": 7.399456977844238,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk",
+                    "time": 7.41723108291626,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6305,
+                    "name": "/data/user/0/india.jiooffers/cache/image_manager_disk_cache/journal.tmp",
+                    "time": 10.61694598197937,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6310,
+                    "name": "/data/user_de/0/india.jiooffers/code_cache/com.android.skia.shaders_cache",
+                    "time": 10.657265901565552,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6305,
+                    "name": "/data/user/0/india.jiooffers/cache/image_manager_disk_cache/journal",
+                    "time": 10.86125111579895,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6310,
+                    "name": "/dev/graphics/fb0",
+                    "time": 11.5174720287323,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6310,
+                    "name": "/dev/fb0",
+                    "time": 11.517581939697266,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 13.439346075057983,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 13.570007085800171,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 13.632874011993408,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 13.636828899383545,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 13.648548126220703,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 13.664091110229492,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 13.67015790939331,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 14.344665050506592,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 14.375131130218506,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 14.486517906188965,
+                    "processname": "india.jiooffers"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "696e6469612e6a696f6f6666657273000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 7.024413108825684,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 7.024449110031128,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 7.358964920043945,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 7.381331920623779,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 7.383534908294678,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "504b0304",
+                    "name": "/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk",
+                    "time": 7.39674711227417,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "504b0304",
+                    "name": "/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk",
+                    "time": 7.400114059448242,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 13.648925065994263,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 13.669275999069214,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 13.670383930206299,
+                    "processname": "india.jiooffers"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 14.403650999069214,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 14.486566066741943,
+                    "processname": "india.jiooffers"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 7.214498996734619,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/app/india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==/base.apk.x86_64.flock",
+                    "time": 7.386106967926025,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/data/dalvik-cache/x86_64/data@app@india.jiooffers-8Hr_WxurHRpc8C4flN9e1A==@base.apk@classes.vdex",
+                    "time": 7.397702932357788,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6305,
+                    "name": "/data/user/0/india.jiooffers/cache/image_manager_disk_cache/journal.bkp",
+                    "time": 10.781573057174683,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6058,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 13.636703968048096,
+                    "processname": "india.jiooffers"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 6058,
+                    "tid": 6305,
+                    "data": "6c6962636f72652e696f2e4469736b4c727543616368650a310a310a310a0a",
+                    "name": "/data/user/0/india.jiooffers/cache/image_manager_disk_cache/journal.tmp",
+                    "time": 10.774679899215698,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6408,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 14.36851692199707,
+                    "processname": "india.jiooffers"
+                },
+                {
+                    "pid": 6058,
+                    "tid": 6408,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 14.369794130325317,
+                    "processname": "india.jiooffers"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

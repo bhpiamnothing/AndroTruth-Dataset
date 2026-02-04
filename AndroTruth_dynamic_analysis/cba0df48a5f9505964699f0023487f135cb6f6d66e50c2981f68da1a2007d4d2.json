@@ -1,0 +1,4549 @@
+{
+    "apk_info": {
+        "id": "MQ8nd9qmoDXdXWrL",
+        "url": "https://developer.koodous.com/apks/cba0df48a5f9505964699f0023487f135cb6f6d66e50c2981f68da1a2007d4d2/",
+        "sha256": "cba0df48a5f9505964699f0023487f135cb6f6d66e50c2981f68da1a2007d4d2",
+        "md5": "74535b49714420fc470340f483e10339",
+        "sha1": "72881676401a4aa29bd8a256ff642e168f3ba789",
+        "app": "Security",
+        "package_name": "com.tew3t.udjsv",
+        "company": "Android",
+        "version": "3.48",
+        "image": null,
+        "size": 1814737,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2020-09-11T18:16:00+02:00",
+        "updated_at": "2023-03-30T20:20:42.952340+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "74535b49714420fc470340f483e10339",
+                "name": "",
+                "path": "",
+                "sha1": "72881676401a4aa29bd8a256ff642e168f3ba789",
+                "size": 1814737,
+                "type": "Android package (APK), with AndroidManifest.xml, with APK Signing Block",
+                "yara": [],
+                "crc32": "BD44175F",
+                "sha256": "cba0df48a5f9505964699f0023487f135cb6f6d66e50c2981f68da1a2007d4d2",
+                "sha512": "e332392811371c7ee8657e23c26842c97067d99f9e9139dbdf4631c0ddf49157dfc188a2478bbe255b096a606309e26f8cce6ed084d183f5bf2aada539b20c15",
+                "ssdeep": "49152:mOSROXKFqEegvRnuU3Dg9N71xLL1zEZLvvFE9:mxOHgvRnuUE9N5R1gk"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://schemas.android.com/apk/res-auto"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "64b6ab7f209627639ed039d8d92a4caf2e4ec6c9278dbea8f63138f04b2c809f"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MY_PACKAGE_UNSUSPENDED",
+                "android.intent.action.PACKAGE_CHANGED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.DOCK_EVENT",
+                "aaaac",
+                "service_destroy",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.intent.action.HEADSET_PLUG",
+                "android.intent.action.BATTERY_CHANGED",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.MY_PACKAGE_SUSPENDED",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "Security",
+            "services": [
+                "com.test.uploadcontact.Alarm.PollingService",
+                "com.test.uploadcontact.SMSService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.test.uploadcontact.SMSReceiver"
+            ],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "sha256": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT",
+                "hash_algorithm": "sha1",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_CONTACTS",
+                "android.permission.INTERNET"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": true,
+            "is_signed_v3": false,
+            "package_name": "com.tew3t.udjsv",
+            "version_code": "3004",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "files_by_format": {
+                "bin": 169,
+                "png": 245,
+                "txt": 29
+            },
+            "functionalities": {
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lˆ/ʿ/ʿ/ˋ/ˊ$ˈ;",
+                        "method": "ʿ"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v4, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lˆ/ʿ/ʿ/ˋ/ˑ;",
+                        "method": "ˋ"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lˆ/ʿ/ʿ/ˋ/ᴵ;",
+                        "method": "ʿ"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lcn/beingyi/sub/utils/Native;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lˆ/ʿ/ʿ/ˋ/ˊ$ʿ;",
+                        "method": "ʿ"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v3, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lˆ/ʿ/ʿ/ˋ/ˊ$ʿ;",
+                        "method": "ʿ"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lˆ/ʿ/ʿ/ˋ/ˊ$ˉ;",
+                        "method": "ʿ"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "3.48",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "RSA": 1,
+                "aac": 245,
+                "dex": 1,
+                "pro": 1,
+                "xml": 100,
+                "arsc": 1
+            },
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "",
+                    "domain": "redvios.com",
+                    "hostname": "redvios.com"
+                }
+            ],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.367281913757324,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk.x86_64.flock",
+                    "time": 2.403597831726074,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/oat/x86_64/base.vdex",
+                    "time": 2.441356897354126,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 2.461237907409668,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.4713308811187744,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.4894168376922607,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/oat/x86_64/base.art",
+                    "time": 2.5008339881896973,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 2.6747210025787354,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 3.082021951675415,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 3.0842409133911133,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 3.0851938724517822,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex",
+                    "time": 3.3355519771575928,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex.x86_64.flock",
+                    "time": 3.385571002960205,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex",
+                    "time": 3.3889389038085938,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.vdex",
+                    "time": 3.3894670009613037,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.odex",
+                    "time": 3.389708995819092,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.vdex",
+                    "time": 4.993098974227905,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 4.996037006378174,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 4.996703863143921,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.art",
+                    "time": 5.008435964584351,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4904,
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.1628899574279785,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "name": "/data/user_de/0/com.tew3t.udjsv/code_cache/com.android.skia.shaders_cache",
+                    "time": 5.319850921630859,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "name": "/dev/graphics/fb0",
+                    "time": 5.498446941375732,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "name": "/dev/fb0",
+                    "time": 5.498487949371338,
+                    "processname": "com.tew3t.udjsv"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "636f6d2e74657733742e75646a7376000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.3684959411621094,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.368543863296509,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "504b0304",
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 2.471108913421631,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.4881978034973145,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.491071939468384,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "6172740a3035360000803d7850940000c502b8c700203e7800303e78e4423e780070407800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e0030000e0700000c0740000c80f000088840000c80f000000a0000000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000a11d0000",
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/oat/x86_64/base.art",
+                    "time": 2.5019400119781494,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "6465780a",
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex",
+                    "time": 3.389119863510132,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 4.996606826782227,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.007933855056763,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4904,
+                    "data": "0100000000000000",
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 5.184124946594238,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.3202269077301025,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.330678939819336,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.336175918579102,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.336778879165649,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.408030986785889,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.4181809425354,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.4183759689331055,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.418767929077148,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.419203996658325,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.4659528732299805,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.494585990905762,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.619683027267456,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.635939836502075,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.636346817016602,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.637013912200928,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.683667898178101,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.705821990966797,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.711983919143677,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.154784917831421,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.176663875579834,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.193980932235718,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.225162029266357,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.259883880615234,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.277074813842773,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.414320945739746,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.5356738567352295,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.536965847015381,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.559178829193115,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.574335813522339,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.632514953613281,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.694058895111084,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.696826934814453,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.733626842498779,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.736950874328613,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.751507997512817,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.8073649406433105,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.8074729442596436,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.807538032531738,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.834470987319946,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.862555980682373,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.895385026931763,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.923691034317017,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.96602988243103,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.966140985488892,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.966235876083374,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.980525970458984,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.980597972869873,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.003870964050293,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.032909870147705,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.056977987289429,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.074030876159668,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.087633848190308,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.134418964385986,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.1485419273376465,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.148921012878418,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.149158954620361,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.149443864822388,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.149658918380737,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.181869029998779,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.214679956436157,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.217191934585571,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.2172980308532715,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.217371940612793,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.217444896697998,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.218240022659302,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.2183778285980225,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0200000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.239900827407837,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.256042003631592,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.2563698291778564,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.26899790763855,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.284714937210083,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.319068908691406,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.369078874588013,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.385445833206177,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.385846853256226,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.386452913284302,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.387830972671509,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.388347864151001,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.388649940490723,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.3891730308532715,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.389569997787476,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.389955997467041,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.407843828201294,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.423590898513794,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.423769950866699,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.439719915390015,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.47075080871582,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.499504804611206,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.499905824661255,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.501125812530518,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.513818979263306,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.552003860473633,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.5803468227386475,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.612860918045044,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.65348482131958,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.667200803756714,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.667805910110474,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.668510913848877,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.697751998901367,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.69788384437561,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.698551893234253,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.698696851730347,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.712880849838257,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.728147983551025,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.74334192276001,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.759202003479004,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.776005983352661,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.790073871612549,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.80780291557312,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.843114852905273,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.844570875167847,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.84555196762085,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.846505880355835,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.847292900085449,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.84791898727417,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.8899149894714355,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.891121864318848,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.8911919593811035,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.891719818115234,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.9269490242004395,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.957734823226929,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.958359003067017,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.958788871765137,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.01390290260315,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.014640808105469,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.015126943588257,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.015655994415283,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.016207933425903,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.016714811325073,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.054860830307007,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.09697699546814,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.112079858779907,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.112537860870361,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.112854957580566,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.11306095123291,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.157150983810425,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.171136856079102,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.17186188697815,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.1732759475708,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.1873140335083,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.187893867492676,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.201522827148438,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.222543954849243,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.248926877975464,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.253999948501587,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.254359006881714,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.254710912704468,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0200000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.284000873565674,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0200000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.314273834228516,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.314949035644531,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0200000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.348932981491089,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0200000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.385344982147217,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.38572382926941,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.416806936264038,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.417203903198242,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.417456865310669,
+                    "processname": "com.tew3t.udjsv"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 2.8721330165863037,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": "",
+                    "tid": 4667,
+                    "data": [
+                        -28,
+                        58,
+                        -34,
+                        66,
+                        127,
+                        -59,
+                        103,
+                        -30,
+                        -76,
+                        73,
+                        -18,
+                        116,
+                        97,
+                        35,
+                        -112,
+                        50
+                    ],
+                    "time": 3.0197010040283203,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.0266478061676025,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": "",
+                    "tid": 4667,
+                    "data": [
+                        101,
+                        58,
+                        -18,
+                        -101,
+                        46,
+                        -84,
+                        119,
+                        92,
+                        -76,
+                        -16,
+                        -75,
+                        77,
+                        -39,
+                        -51,
+                        107,
+                        -60
+                    ],
+                    "time": 3.037256956100464,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.039789915084839,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": "",
+                    "tid": 4667,
+                    "data": [
+                        -107,
+                        -13,
+                        -58,
+                        109,
+                        100,
+                        43,
+                        -122,
+                        -42,
+                        87,
+                        -3,
+                        -17,
+                        -92,
+                        -98,
+                        -57,
+                        50,
+                        -101
+                    ],
+                    "time": 3.04087495803833,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.0409188270568848,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": "",
+                    "tid": 4667,
+                    "data": [
+                        12,
+                        -54,
+                        -16,
+                        -1,
+                        -107,
+                        -68,
+                        -1,
+                        -24,
+                        121,
+                        74,
+                        -4,
+                        71,
+                        103,
+                        -88,
+                        -11,
+                        57
+                    ],
+                    "time": 3.0569050312042236,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        48,
+                        99,
+                        97,
+                        100,
+                        53,
+                        52,
+                        55,
+                        101,
+                        98,
+                        97,
+                        53,
+                        50,
+                        51,
+                        101,
+                        100,
+                        56
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.0858278274536133,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": "",
+                    "tid": 4667,
+                    "data": [
+                        86,
+                        -108,
+                        6,
+                        -17,
+                        56,
+                        23,
+                        50,
+                        103,
+                        -14,
+                        119,
+                        -24,
+                        11,
+                        0,
+                        -2,
+                        25,
+                        121
+                    ],
+                    "time": 3.0864388942718506,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        52,
+                        99,
+                        50,
+                        50,
+                        49,
+                        54,
+                        51,
+                        48,
+                        53,
+                        102,
+                        50,
+                        56,
+                        55,
+                        100,
+                        51
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.0866219997406006,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": "",
+                    "tid": 4667,
+                    "data": [
+                        -117,
+                        101,
+                        2,
+                        87,
+                        -71,
+                        -40,
+                        69,
+                        -78,
+                        27,
+                        59,
+                        97,
+                        111,
+                        62,
+                        100,
+                        -113,
+                        52
+                    ],
+                    "time": 3.0986809730529785,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        52,
+                        99,
+                        50,
+                        50,
+                        49,
+                        54,
+                        51,
+                        48,
+                        53,
+                        102,
+                        50,
+                        56,
+                        55,
+                        100,
+                        51
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.150279998779297,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        52,
+                        99,
+                        50,
+                        50,
+                        49,
+                        54,
+                        51,
+                        48,
+                        53,
+                        102,
+                        50,
+                        56,
+                        55,
+                        100,
+                        51
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.157712936401367,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        56,
+                        100,
+                        100,
+                        49,
+                        55,
+                        99,
+                        55,
+                        48,
+                        48,
+                        54,
+                        51,
+                        49,
+                        55,
+                        53,
+                        56
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.1580779552459717,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        50,
+                        54,
+                        56,
+                        57,
+                        98,
+                        54,
+                        48,
+                        48,
+                        57,
+                        57,
+                        54,
+                        57,
+                        50,
+                        97,
+                        49,
+                        53
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.15851092338562,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        56,
+                        100,
+                        100,
+                        49,
+                        55,
+                        99,
+                        55,
+                        48,
+                        48,
+                        54,
+                        51,
+                        49,
+                        55,
+                        53,
+                        56
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.158568859100342,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": "",
+                    "tid": 4667,
+                    "data": [
+                        -114,
+                        -110,
+                        107,
+                        125,
+                        108,
+                        40,
+                        25,
+                        119,
+                        40,
+                        14,
+                        114,
+                        -111,
+                        -114,
+                        36,
+                        -109,
+                        -29,
+                        -12,
+                        -89,
+                        94,
+                        -79,
+                        -50,
+                        -111,
+                        -74,
+                        68,
+                        93,
+                        35,
+                        38,
+                        -51,
+                        -80,
+                        -15,
+                        -104,
+                        -40,
+                        38,
+                        -37,
+                        -46,
+                        63,
+                        -18,
+                        69,
+                        -95,
+                        -85,
+                        -47,
+                        -80,
+                        -55,
+                        -79,
+                        110,
+                        84,
+                        10,
+                        -61,
+                        21,
+                        3,
+                        -98,
+                        112,
+                        -18,
+                        -43,
+                        -80,
+                        99,
+                        -113,
+                        37,
+                        31,
+                        -46,
+                        -45,
+                        -121,
+                        -105,
+                        97,
+                        -35,
+                        122,
+                        46,
+                        -90,
+                        40,
+                        70,
+                        96,
+                        -47,
+                        -79,
+                        32,
+                        -79,
+                        -49,
+                        -74,
+                        -45,
+                        -38,
+                        107,
+                        19,
+                        17,
+                        75,
+                        98,
+                        106,
+                        -15,
+                        85,
+                        12,
+                        47,
+                        77,
+                        -25,
+                        105,
+                        6,
+                        23,
+                        76,
+                        21,
+                        -36,
+                        -57,
+                        -80,
+                        46,
+                        -113,
+                        -121,
+                        47,
+                        54,
+                        69,
+                        126,
+                        -13,
+                        114,
+                        118,
+                        -90,
+                        119,
+                        77,
+                        -41,
+                        -36,
+                        74,
+                        -62,
+                        -124,
+                        -121,
+                        -71,
+                        -51,
+                        -6,
+                        -36,
+                        -46,
+                        -33,
+                        20,
+                        -68,
+                        1,
+                        81,
+                        87,
+                        92,
+                        8,
+                        -92,
+                        -119,
+                        -1,
+                        106,
+                        16,
+                        17,
+                        67,
+                        -55,
+                        42,
+                        -123,
+                        32,
+                        108,
+                        103,
+                        14,
+                        43,
+                        67,
+                        -27,
+                        29,
+                        120,
+                        -123,
+                        -116,
+                        -27,
+                        -41,
+                        53,
+                        -61,
+                        -53,
+                        29,
+                        -16,
+                        -78,
+                        103,
+                        74,
+                        18,
+                        39,
+                        79,
+                        117,
+                        -82,
+                        -72,
+                        84,
+                        76,
+                        110,
+                        -16,
+                        83,
+                        -45,
+                        97,
+                        -40,
+                        11,
+                        -75,
+                        -1,
+                        78,
+                        -76,
+                        -69,
+                        97,
+                        119,
+                        -45,
+                        -3,
+                        -8,
+                        -86,
+                        23,
+                        -5,
+                        88,
+                        -78,
+                        11,
+                        56,
+                        27,
+                        -117,
+                        3,
+                        89,
+                        -116,
+                        -1,
+                        122,
+                        -9,
+                        -73,
+                        6,
+                        -104,
+                        28,
+                        -28,
+                        -75,
+                        -23,
+                        -107,
+                        -76,
+                        1,
+                        26,
+                        -36,
+                        -33,
+                        83,
+                        -81,
+                        -59,
+                        112,
+                        -125,
+                        -2,
+                        -107,
+                        -40,
+                        58
+                    ],
+                    "time": 3.168893814086914,
+                    "algorithm": "AES/ECB/PKCS5Padding",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.202162027359009,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.203033924102783,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.2033138275146484,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.203403949737549,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.203472852706909,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.2037899494171143,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        48,
+                        100,
+                        56,
+                        54,
+                        50,
+                        98,
+                        52,
+                        48,
+                        48,
+                        101,
+                        97,
+                        102,
+                        51,
+                        102,
+                        52,
+                        53
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.2040889263153076,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.2045528888702393,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.204617977142334,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        54,
+                        99,
+                        101,
+                        49,
+                        50,
+                        48,
+                        99,
+                        50,
+                        52,
+                        50,
+                        50,
+                        97,
+                        98,
+                        49,
+                        99
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.347795009613037,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        54,
+                        99,
+                        101,
+                        49,
+                        50,
+                        48,
+                        99,
+                        50,
+                        52,
+                        50,
+                        50,
+                        97,
+                        98,
+                        49,
+                        99
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.358616828918457,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        48,
+                        99,
+                        97,
+                        100,
+                        53,
+                        52,
+                        55,
+                        101,
+                        98,
+                        97,
+                        53,
+                        50,
+                        51,
+                        101,
+                        100,
+                        56
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.36177396774292,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        98,
+                        52,
+                        99,
+                        50,
+                        50,
+                        49,
+                        54,
+                        51,
+                        48,
+                        53,
+                        102,
+                        50,
+                        56,
+                        55,
+                        100,
+                        51
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.372222900390625,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.3740599155426025,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.3754730224609375,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 3.3766679763793945,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        102,
+                        101,
+                        52,
+                        56,
+                        57,
+                        57,
+                        51,
+                        57,
+                        99,
+                        51,
+                        102,
+                        48,
+                        51,
+                        55,
+                        53,
+                        97
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.009521961212158,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        102,
+                        101,
+                        52,
+                        56,
+                        57,
+                        57,
+                        51,
+                        57,
+                        99,
+                        51,
+                        102,
+                        48,
+                        51,
+                        55,
+                        53,
+                        97
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.009583950042725,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        55,
+                        53,
+                        99,
+                        57,
+                        55,
+                        56,
+                        57,
+                        56,
+                        97,
+                        54,
+                        51,
+                        98,
+                        54,
+                        49,
+                        100,
+                        99
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.011889934539795,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.012053966522217,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.012281894683838,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.012516975402832,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.0128819942474365,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.013073921203613,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.013444900512695,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.013646841049194,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.013741970062256,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.014262914657593,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.016211986541748,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        49,
+                        55,
+                        57,
+                        100,
+                        102,
+                        56,
+                        97,
+                        51,
+                        52,
+                        52,
+                        52,
+                        51,
+                        48,
+                        54,
+                        99,
+                        98
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.01694393157959,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "key": [
+                        55,
+                        53,
+                        99,
+                        57,
+                        55,
+                        56,
+                        57,
+                        56,
+                        97,
+                        54,
+                        51,
+                        98,
+                        54,
+                        49,
+                        100,
+                        99
+                    ],
+                    "tid": 4667,
+                    "data": "",
+                    "time": 5.017287969589233,
+                    "algorithm": "AES",
+                    "processname": "com.tew3t.udjsv"
+                }
+            ],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk.x86_64.flock",
+                    "time": 2.414918899536133,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded",
+                    "time": 3.071413993835449,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.vdex",
+                    "time": 3.389394998550415,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.odex",
+                    "time": 3.3896429538726807,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex.x86_64.flock",
+                    "time": 5.008594989776611,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex",
+                    "time": 5.009271860122681,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.vdex",
+                    "time": 5.009809970855713,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.odex",
+                    "time": 5.010049819946289,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat/x86_64",
+                    "time": 5.010922908782959,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/oat",
+                    "time": 5.011162996292114,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded",
+                    "time": 5.011437892913818,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex",
+                    "time": 5.011657953262329,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4904,
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml.bak",
+                    "time": 5.181417942047119,
+                    "processname": "com.tew3t.udjsv"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "6465780a303335006a47860b273e396328de946d81ecac6275637efa032604acb4941b0070000000785634120000000000000000d8931b006c3f0000700000005a08000020fe0000d00c0000881f01004128000048b901002c3c000050fb02005d050000b0dc0400640c160050880500508805005288050085880500c4880500c7880500d5880500d8880500dc880500e1880500e7880500ec88050003890500138905002d8905004a8905006b89050073890500908905009f890500ad890500bb890500ca890500d8890500e2890500fa890500158a0500218a0500378a05003b8a05003f8a0500438a05008d8a0500978a0500b38a0500b88a0500be8a0500d28a0500d98a0500e98a0500f68a05000e8b0500268b05002f8b0500748b0500788b05007c8b0500958b05009e8b0500e98b0500fa8b0500088c05001c8c05003a8c0500468c0500588c0500808c05008c8c0500928c0500a68c0500c58c0500f18c05000b8d0500158d0500318d0500698d05009d8d0500c88d0500f38d05001f8e05004f8e05007a8e0500a48e0500cf8e0500f98e0500228f0500588f0500718f05008e8f0500c08f050000900500209005003d9005006090050067900500739005008090050089900500939005009c900500a3900500c5900500ce900500fb90050011910500389105003e910500469105004c9105005891050073910500859105009c910500b0910500c2910500f6910500149205001f9205002b9205003d9205005792050087920500a8920500d2920500e1920500e8920500f192050006930500239305003b930500499305005a9305006d9305007b9305008893050096930500a5930500b1930500be930500c8930500e1930500ee930500fe9305000f94050024940500319405003b94050047940500559405006494050070940500789405008e940500a3940500b7940500bf940500c7940500cc940500d394050012950500249505003b9505004e950500939505009e950500c8950500e3950500009605001a9605003996050050960500579605005d9605006a96050071960500839605008a9605009e960500ad960500b4960500c4960500d096050008970500179705002c970500369705004c9705005b97050065970500779705007f9705009b970500a7970500d7970500e0970500e8970500ee9705000098050012980500319805004d980500549805008a980500919805009c980500a7980500af980500cc980500d8980500e4980500029905000e99050012990500159905001a9905004d99050080990500bb990500c4990500d9990500dc990500079a0500319a05005c9a0500869a0500979a0500c69a0500f49a05000d9b0500119b0500189b05001f9b0500259b05002b9b0500339b05003b9b05003e9b05006c9b05007b9b0500",
+                    "name": "/data/user/0/com.tew3t.udjsv/app_ded/RNwPckGneTi8uaSUqmeCKrvOWLFExAfI.dex",
+                    "time": 3.345414876937866,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4904,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2275756964223e37333132316135372d656266352d343464632d386537362d6665666261646339353061643c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.163463830947876,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/app/com.tew3t.udjsv-2D5MN1Mf4b7f_8Fl_5xXdQ==/base.apk",
+                    "time": 5.183166980743408,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.305431842803955,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.330070972442627,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.33568000793457,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.336387872695923,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.4078168869018555,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.408068895339966,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.418311834335327,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.4186859130859375,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.419090986251831,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.465730905532837,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.494130849838257,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.513865947723389,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.635206937789917,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.635984897613525,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.636566877365112,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.6834938526153564,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.705451965332031,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.711941957473755,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 5.7120208740234375,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.15571403503418,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.180558919906616,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.196709871292114,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.243218898773193,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.266574859619141,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.29606294631958,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.535009860992432,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.536345958709717,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.537743806838989,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.573288917541504,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.632349967956543,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.632676839828491,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.694840908050537,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.722008943557739,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.7352659702301025,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.751065015792847,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.783591985702515,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.807420969009399,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.807513952255249,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.833918809890747,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.862234830856323,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.893838882446289,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.923329830169678,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.963918924331665,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.966094017028809,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.966200828552246,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.980479001998901,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 6.980571031570435,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.003407001495361,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.03256893157959,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.056484937667847,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.072556972503662,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.087321996688843,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.134369850158691,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.1478400230407715,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.148741960525513,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.149075031280518,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.149372816085815,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.14955997467041,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.1661388874053955,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.19865083694458,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.214795827865601,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.217260837554932,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.217334985733032,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.217412948608398,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.21747899055481,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.218279838562012,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.239661931991577,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.23971700668335,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.255985975265503,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.25623893737793,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.268641948699951,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.284660816192627,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.304924964904785,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.335558891296387,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.385185956954956,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.38564395904541,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.3860578536987305,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.387065887451172,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.388089895248413,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.388445854187012,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.388890027999878,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.389382839202881,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.389758825302124,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.407377004623413,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.423527956008911,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.423635005950928,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.439530849456787,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.4563188552856445,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.486362934112549,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.499842882156372,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.500891923904419,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.513347864151001,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.551756858825684,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.580176830291748,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.612594842910767,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.652807950973511,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.653609991073608,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.667593002319336,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.668040990829468,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.684585809707642,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.697815895080566,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.698390007019043,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.698616027832031,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.712822914123535,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.728103876113892,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.743285894393921,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.75898003578186,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.7756898403167725,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.789793968200684,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.791770935058594,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.824434995651245,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.84427285194397,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.844996929168701,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.846062898635864,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.846791982650757,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.847632884979248,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.883913993835449,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.8910698890686035,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.891158819198608,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.891227960586548,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.926586866378784,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.9461510181427,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.958288908004761,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.9586780071258545,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 7.975318908691406,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.014410018920898,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.014925956726074,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.015487909317017,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.015919923782349,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.016535997390747,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.054483890533447,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.081851959228516,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.111761808395386,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.112215995788574,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.112699031829834,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.112929821014404,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.14422082901001,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.157919883728027,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.171795845031738,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.172314882278442,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.186652898788452,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.1875159740448,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.201361894607544,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.222091913223267,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.248287916183472,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.253808975219727,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.25417685508728,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.254536867141724,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.283811807632446,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.28395700454712,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.313403844833374,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.313520908355713,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.314790964126587,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.348630905151367,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.348874807357788,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4932,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.372143983840942,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.384775876998901,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.385586977005005,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.40238881111145,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.417119979858398,
+                    "processname": "com.tew3t.udjsv"
+                },
+                {
+                    "pid": 4667,
+                    "tid": 4667,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tew3t.udjsv/shared_prefs/config.xml",
+                    "time": 8.417405843734741,
+                    "processname": "com.tew3t.udjsv"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

@@ -1,0 +1,686 @@
+{
+    "apk_info": {
+        "id": "DNZw1NjB8b71JlKm",
+        "url": "https://developer.koodous.com/apks/58e70e498397acae9b5e84a153e27578ee25e0ee0aca16bcf8a1746423f210f6/",
+        "sha256": "58e70e498397acae9b5e84a153e27578ee25e0ee0aca16bcf8a1746423f210f6",
+        "md5": "ad6ede2e93230802568b59b5bab52bd8",
+        "sha1": "4a56b4968f2559459d98ab35a01a6b7b946d6ab8",
+        "app": "Facebook Update",
+        "package_name": "com.dev.update",
+        "company": "Android",
+        "version": "2.2.3(r)",
+        "image": "https://developer.koodous.com/media/apk_images/2016/11/24/68292de5bc1bd30ef1f0c95104b7f3a39e81992372d2d24d0c8ab7cb98607c19",
+        "size": 1743056,
+        "tags": [
+            "sms-thief",
+            "spyware",
+            "clipboard",
+            "trojan",
+            "reflection",
+            "crypto",
+            "micropsia",
+            "telephony",
+            "fakeapp",
+            "checks-gps"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -5,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 4,
+        "comments_count": 1,
+        "votes_count": 5,
+        "created_at": "2016-11-24T15:42:07+01:00",
+        "updated_at": "2025-06-20T00:05:28.791814+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "ad6ede2e93230802568b59b5bab52bd8",
+                    "sha1": "4a56b4968f2559459d98ab35a01a6b7b946d6ab8",
+                    "size": 1743056,
+                    "crc32": "046931AB",
+                    "sha256": "58e70e498397acae9b5e84a153e27578ee25e0ee0aca16bcf8a1746423f210f6",
+                    "sha512": "dcb29f45a429b9880355b0962f6f4f0db5371c35f06a354e12928e549902226a31bbd4de99fea09c8dba9a8bdc79d8aa2fa209301e441f65b10d203db4d166c6",
+                    "ssdeep": "24576:HtF3HaDzA7kLXGXVZcyC47VzYC1Sq2Fi5wc1+DcDvjQprNBJgIdgNrd:NYzmkDGFZnYCwqeuN+D67UrvWIdgN5"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://opencellid.org/cell/get?key=18717b9f-4c47-42c7-9317-d40c236ac911&mcc=",
+                "http://upload999.info",
+                "http://upload101.net/android/domains"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "ea2e006f923c96eec454349158a6092b2d8502c91a7eab60e967dcbdceac25f4",
+                    "ssdeep": "24576:aAEBlnEh5j+/JC2WZ+K1P4I1/fQpjCIVN08bx4UA25mBj0AvJGtmh+t/pTZw3:aBBHY/6OUz+j0AxhwRTZw3"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.PACKAGE_REPLACED",
+                "android.intent.action.MAIN",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "Facebook Update",
+            "services": [
+                "com.dev.update.services.ContactsService",
+                "com.dev.update.services.CellService",
+                "com.dev.update.services.RecordingService",
+                "net.gotev.uploadservice.UploadService",
+                "com.dev.update.services.MessagesService",
+                "com.dev.update.services.UpdateService",
+                "com.dev.update.services.RecordsService",
+                "com.dev.update.services.DocumentsService",
+                "com.dev.update.services.ImagesService",
+                "com.dev.update.services.InfoService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.dev.update.receivers.OnlineReceiver",
+                "com.dev.update.receivers.LogReceiver",
+                "com.dev.update.receivers.SmsReceiver",
+                "com.dev.update.receivers.CallReceiver",
+                "com.dev.update.receivers.PackageReceiver",
+                "com.dev.update.receivers.PowerReceiver",
+                "com.dev.update.receivers.NetworkStateReceiver",
+                "com.dev.update.receivers.AlarmReceiver"
+            ],
+            "activities": [
+                "com.dev.update.activities.MainActivity",
+                "com.dev.update.activities.UpdateDialogActivity"
+            ],
+            "certificate": {
+                "sha1": "3CBE20E1C63DB90DEF4CCDC0D542344EB1F9C7F1",
+                "serial": "59CB4EB3",
+                "issuerDN": "/C=US/O=Android/CN=Android Debug",
+                "not_after": "Mar 26 10:50:40 2046 GMT",
+                "subjectDN": "/C=US/O=Android/CN=Android Debug",
+                "not_before": "Apr 2 10:50:40 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.INTERNET",
+                "android.permission.READ_LOGS",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.RECEIVE_SMS"
+            ],
+            "package_name": "com.dev.update",
+            "version_code": "9",
+            "main_activity": "com.dev.update.activities.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/dev/update/services/CellService;",
+                        "method": "getCellInfo"
+                    },
+                    {
+                        "code": "invoke-virtual/range v24, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/dev/update/services/CellService$1;",
+                        "method": "onResponse"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v2, 'https'",
+                        "class": "Lcom/android/volley/toolbox/HurlStack;",
+                        "method": "openConnection"
+                    },
+                    {
+                        "code": "const-string v1, 'https://'",
+                        "class": "Lnet/gotev/uploadservice/HttpUploadRequest;",
+                        "method": "validate"
+                    },
+                    {
+                        "code": "const-string v1, 'Specify either http:// or https:// as protocol'",
+                        "class": "Lnet/gotev/uploadservice/HttpUploadRequest;",
+                        "method": "validate"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual/range v24, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/dev/update/services/CellService$1;",
+                        "method": "onResponse"
+                    },
+                    {
+                        "code": "invoke-virtual v11, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV7;",
+                        "method": "preparePanel"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual/range v24, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/dev/update/services/CellService$1;",
+                        "method": "onResponse"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/dev/update/utils/EncryptUtils;",
+                        "method": "md5"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;",
+                        "method": "sendRequest"
+                    },
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/dev/update/utils/Utility;",
+                        "method": "getDeviceAccount"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/dev/update/handlers/DefaultExceptionHandler;",
+                        "method": "extractLogFile"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v3, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/dev/update/handlers/DefaultExceptionHandler;",
+                        "method": "extractLogFile"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lnet/gotev/uploadservice/UploadService;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual/range v24, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/dev/update/services/CellService$1;",
+                        "method": "onResponse"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/dev/update/listeners/HomeWatcher;",
+                        "method": "startWatch"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "2.2.3(r)",
+            "target_sdk_version": 23
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "path": "/system/framework/org.apache.http.legacy.boot.jar:/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk",
+                    "time": 1.188136100769043,
+                    "processname": "com.dev.update"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1583271026611328,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.2093501091003418,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.2102580070495605,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2103400230407715,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.2104079723358154,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.2104911804199219,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.2105741500854492,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.2106401920318604,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.2107131481170654,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.2107861042022705,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.2108690738677979,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.2109780311584473,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.2110521793365479,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.211137056350708,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.2112021446228027,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.2112720012664795,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.2113361358642578,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.21140718460083,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2114901542663574,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2570440769195557,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk.x86_64.flock",
+                    "time": 1.2641451358795166,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk",
+                    "time": 1.2695300579071045,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==@base.apk@classes.vdex",
+                    "time": 1.270766019821167,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk",
+                    "time": 1.2709519863128662,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk",
+                    "time": 1.385085105895996,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5554,
+                    "name": "/data/user_de/0/com.dev.update/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.824388027191162,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5554,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.9325981140136719,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5554,
+                    "name": "/dev/fb0",
+                    "time": 1.932631015777588,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 43.740655183792114,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 43.740984201431274,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 83.72671008110046,
+                    "processname": "com.dev.update"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "data": "636f6d2e6465762e75706461746500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1586451530456543,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.174626111984253,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.2114460468292236,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2499361038208008,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2617030143737793,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "data": "504b0304",
+                    "name": "/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk",
+                    "time": 1.2704641819000244,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "data": "504b0304",
+                    "name": "/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk",
+                    "time": 1.271069049835205,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "70726f00",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 83.72862720489502,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "70726f003031300001fb210000d6060000",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 83.7302839756012,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "7801ed595d8854551c3ff7ce9ddd3b3a3bcdee6a8e617657475d252513b6350a4f629081b690e5432fab5408f620da8350e059e8432c6cad8744a3160d137b08427b88a80d417bc8d0977a89582a7c08242d1f0457a7dfefdefb9f3973bd332b4efbb0ea59fee7fffd713eee3977eefaea796720a7d4e10b85af0f6c546af3a61d2f2ddbb46deba50ea5f62ba51c4036c6a4338036c049800be804503633c6b49906101f0f346562475a807eb4254f3b892d7ae6610e5bde0e7e7a2c133b1bd3be196feb4827ed937ae167c196632224ebee868c769413ef88b1f84e065e1fe760fd32864531cd3a28c3b286f5701e1f836020962d002d35157ca59e8cede6023f1bd3a24fc3b361c37593bca4659d178066fe2e80d8d00edb29941781d36252c6185c5fd9138dec28678ed7015203b1d0b20e1253e45cbbc380667145c7b9133f9135c2ac9bb5a4e96740fe2a80351138be00405bc6c7f487380fccfa646f8b3df79dcc2df55c4b6203e03a505788319f31c6614cea16021887737f2f80f9ee03d08771ba211803213158136962fa91b6e780b5cf07b046ca69435bca5993ac3169ea59c79698a6dd3d314d1d81f5521ea023a68c39b7c63c653668f01c87d8328f3d3f9453263e3216e19398f573af71ce3806590bd2d4710f13b32e62ca198373474c5ec6425fd9b79425734dc44b0eda89bf60caecb13017eb611db4119dd85327f992329b173fc11c0f69b1911876fe25d0739d933ad624f32273c63804ca25aee4e21e620cc925be94c9fccbf8684319d7d69e63ca97a2b36b9198d4a5cdc3cb90f3d996fc17e090f46fc65f826f9afe170825276b151bd6bc28cec7b1b326cac4863e04da0b2d732572ea2893b3d31ed7e7b19ff8dbbeb6bf9c0bb45b0e107b627beec933063141d692f4c700ea642d4853ff230664db9396dcc47c66ff0261cbecd8b21e5c5bdafc0be05d441b9e11ccb7189de4f806fc3a006da9630d7226b1263eb7944b7de2678f650ff494cb7d7712c156c43e624f4c1fe1394f4701bd968cbabe042ff6363ee6acc3be9b8f9a5cc4735577d83be81dc823dcb8cf84162eaaf1718a3242ed6f634867f164d4640ee66319e2fad8335dea43f501745e55df8615670db6bd4d77238fcd0b3dcb8ac1faa3b188d6c68d63d3aa4d95716771d4cc93c59dd48533f871bc434655e5c3fa6af1e6a912f4b4ad1f63cdc2a69ae58e74ec6b56a43a319636647043b9f439dc2e62e9413b3de43ac2be1d757b6a31e8e82f7dc6a239f7ab56115fa8f20ef6df8a70648c9243c4c8e2379cb151c48c9a074d3ba06879b152c9cc6ab92fa4d25c682dda1bf157b0aced0507b3cf75c85a11b19defb6293b033c1513edad6e1e85696d24bc0d67eb5246fd991b2cf7f77eafd53faf55aee3f85cfd145ff678265aad52a9f0540bdb28df25556f",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 83.73188304901123,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 83.73344111442566,
+                    "processname": "com.dev.update"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.2094430923461914,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/app/com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==/base.apk.x86_64.flock",
+                    "time": 1.2666192054748535,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5516,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.dev.update-sEPD4i3zL_cX-UQolq-7-Q==@base.apk@classes.vdex",
+                    "time": 1.2706220149993896,
+                    "processname": "com.dev.update"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "70726f00",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 43.74108600616455,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "30313000",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 43.74112820625305,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "01fb210000",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 43.74126315116882,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "d6060000",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 43.74134707450867,
+                    "processname": "com.dev.update"
+                },
+                {
+                    "pid": 5516,
+                    "tid": 5548,
+                    "data": "7801ed595d8854551c3ff7ce9ddd3b3a3bcdee6a8e617657475d252513b6350a4f629081b690e5432fab5408f620da8350e059e8432c6cad8744a3160d137b08427b88a80d417bc8d0977a89582a7c08242d1f0457a7dfefdefb9f3973bd332b4efbb0ea59fee7fffd713eee3977eefaea796720a7d4e10b85af0f6c546af3a61d2f2ddbb46deba50ea5f62ba51c4036c6a4338036c049800be804503633c6b49906101f0f346562475a807eb4254f3b892d7ae6610e5bde0e7e7a2c133b1bd3be196feb4827ed937ae167c196632224ebee868c769413ef88b1f84e065e1fe760fd32864531cd3a28c3b286f5701e1f836020962d002d35157ca59e8cede6023f1bd3a24fc3b361c37593bca4659d178066fe2e80d8d00edb29941781d36252c6185c5fd9138dec28678ed7015203b1d0b20e1253e45cbbc380667145c7b9133f9135c2ac9bb5a4e96740fe2a80351138be00405bc6c7f487380fccfa646f8b3df79dcc2df55c4b6203e03a505788319f31c6614cea16021887737f2f80f9ee03d08771ba211803213158136962fa91b6e780b5cf07b046ca69435bca5993ac3169ea59c79698a6dd3d314d1d81f5521ea023a68c39b7c63c653668f01c87d8328f3d3f9453263e3216e19398f573af71ce3806590bd2d4710f13b32e62ca198373474c5ec6425fd9b79425734dc44b0eda89bf60caecb13017eb611db4119dd85327f992329b173fc11c0f69b1911876fe25d0739d933ad624f32273c63804ca25aee4e21e620cc925be94c9fccbf8684319d7d69e63ca97a2b36b9198d4a5cdc3cb90f3d996fc17e090f46fc65f826f9afe170825276b151bd6bc28cec7b1b326cac4863e04da0b2d732572ea2893b3d31ed7e7b19ff8dbbeb6bf9c0bb45b0e107b627beec933063141d692f4c700ea642d4853ff230664db9396dcc47c66ff0261cbecd8b21e5c5bdafc0be05d441b9e11ccb7189de4f806fc3a006da9630d7226b1263eb7944b7de2678f650ff494cb7d7712c156c43e624f4c1fe1394f4701bd968cbabe042ff6363ee6acc3be9b8f9a5cc4735577d83be81dc823dcb8cf84162eaaf1718a3242ed6f634867f164d4640ee66319e2fad8335dea43f501745e55df8615670db6bd4d77238fcd0b3dcb8ac1faa3b188d6c68d63d3aa4d95716771d4cc93c59dd48533f871bc434655e5c3fa6af1e6a912f4b4ad1f63cdc2a69ae58e74ec6b56a43a319636647043b9f439dc2e62e9413b3de43ac2be1d757b6a31e8e82f7dc6a239f7ab56115fa8f20ef6df8a70648c9243c4c8e2379cb151c48c9a074d3ba06879b152c9cc6ab92fa4d25c682dda1bf157b0aced0507b3cf75c85a11b19defb6293b033c1513edad6e1e85696d24bc0d67eb5246fd991b2cf7f77eafd53faf55aee3f85cfd145ff678265aad52a9f0540bdb28df25556f",
+                    "name": "/data/misc/profiles/cur/0/com.dev.update/primary.prof",
+                    "time": 43.74144101142883,
+                    "processname": "com.dev.update"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

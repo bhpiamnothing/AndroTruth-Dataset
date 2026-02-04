@@ -1,0 +1,904 @@
+{
+    "apk_info": {
+        "id": "J50l1mpnb0Yd3XrY",
+        "url": "https://developer.koodous.com/apks/616b13d0a668fd904a60f7e6e18b19476614991c27ef5ed7b86066b28952befc/",
+        "sha256": "616b13d0a668fd904a60f7e6e18b19476614991c27ef5ed7b86066b28952befc",
+        "md5": "9877d0ad41b5589be300495c6acdd499",
+        "sha1": "717fd014a6b572c6b10f18fd67674cf422fef194",
+        "app": "Installer",
+        "package_name": "org.b4d40ad47bf8a7c91a86e",
+        "company": "IBM",
+        "version": "",
+        "image": "https://developer.koodous.com/media/apk_images/2015/12/18/9f767504c47f221b5b6ff6f83f60ac8ff0406178f68b96f30c535c5dd2881c66",
+        "size": 59386,
+        "tags": [
+            "sms-fraud",
+            "Xbot",
+            "banker",
+            "ransomware",
+            "xbot",
+            "haynu",
+            "runtime-modules",
+            "trojan",
+            "reflection",
+            "smsforward"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -7,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 3,
+        "comments_count": 3,
+        "votes_count": 7,
+        "created_at": "2016-02-13T05:34:05+01:00",
+        "updated_at": "2024-08-06T16:51:43.419315+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "9877d0ad41b5589be300495c6acdd499",
+                    "sha1": "717fd014a6b572c6b10f18fd67674cf422fef194",
+                    "size": 59386,
+                    "crc32": "09E38B0D",
+                    "sha256": "616b13d0a668fd904a60f7e6e18b19476614991c27ef5ed7b86066b28952befc",
+                    "sha512": "f1fb8c10d380473fd22a916935149c11be58dfa1f8f2f4d0c372181b6387ad795ffdbb7bb27dbf15f4804a17e9094190b64360742553fad056a4207c5f50e598",
+                    "ssdeep": "1536:GurFcqSYhSqbqP0UW4tYkJZ2X85zGU+tq:BxXSvP0UZtY1q84"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://melon25.ru/gp/gp_ru.html",
+                "http://192.227.137.154/request.php"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "48e2a0a1a9f90c3c205402631049195b1a737583a69448cf7d5982d5675340a4",
+                    "ssdeep": "1536:7O7ZHYyfkkNDxoPCvuQaiu7gmARBHxoX4g1ckbqEV9Qny:NyfBNFsJQPmIBu1bVD"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [],
+            "app_name": "Installer",
+            "services": [],
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [],
+            "certificate": {
+                "sha1": "5A1BB5CF48A6F095C6BEE9AF59080477EBBA6F8D",
+                "serial": "3C62679F",
+                "issuerDN": "/C=GB/ST=111/L=222/O=IBM/OU=ID/CN=96f2d29c-3286-403e-bed2-872fdb12cbec",
+                "not_after": "Jun 29 12:25:51 2043 GMT",
+                "subjectDN": "/C=GB/ST=111/L=222/O=IBM/OU=ID/CN=96f2d29c-3286-403e-bed2-872fdb12cbec",
+                "not_before": "Feb 11 12:25:51 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.UPDATE_DEVICE_STATS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.WAKE_LOCK",
+                "android.permission.SEND_SMS",
+                "android.permission.DEVICE_POWER",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.BIND_DEVICE_ADMIN",
+                "android.permission.GET_TASKS",
+                "android.permission.CALL_PHONE",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.INTERNET",
+                "android.permission.MODIFY_AUDIO_SETTINGS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "org.b4d40ad47bf8a7c91a86e",
+            "version_code": "1",
+            "main_activity": "",
+            "signature_name": "META-INF/KEYSTORE.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lo/Į;",
+                        "method": "sendSMS"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lo/Į;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lo/Į;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, v3, v1, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V",
+                        "class": "Lo/Į;",
+                        "method": "callForward"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v0, 'android.intent.action.CALL'",
+                        "class": "Lo/Į;",
+                        "method": "callForward"
+                    },
+                    {
+                        "code": "const-string v0, 'android.intent.action.CALL'",
+                        "class": "Lo/Į;",
+                        "method": "disableCallForward"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lo/Į;",
+                        "method": "getTelephonyInfo"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": "",
+            "new_permissions": [],
+            "displayed_version": "",
+            "target_sdk_version": ""
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 7.256626844406128,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "",
+                    "time": 9.781754970550537,
+                    "class": "o/廑$ŝ",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 10.34795594215393,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "",
+                    "time": 13.123025894165039,
+                    "class": "o/廑$뛒",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "",
+                    "time": 13.15548586845398,
+                    "class": "o/Ƞ",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "",
+                    "time": 14.053295850753784,
+                    "class": "o/Ħ",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "",
+                    "time": 14.86072301864624,
+                    "class": "o/ġ",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "path": "",
+                    "time": 14.883744955062866,
+                    "class": "o/㱽",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/proc/self/cmdline",
+                    "time": 6.181323051452637,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 6.302819013595581,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 6.354167938232422,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.3773040771484375,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 6.377363920211792,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 6.378671884536743,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 6.37903904914856,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 6.379361867904663,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 6.379392862319946,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 6.379982948303223,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 6.380089044570923,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 6.380187034606934,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 6.380934000015259,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 6.38204288482666,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 6.382138967514038,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 6.382169961929321,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 6.382761001586914,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 6.383350849151611,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 6.385922908782959,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.389596939086914,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 6.3901190757751465,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/base.apk.x86_64.flock",
+                    "time": 6.398371934890747,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/oat/x86_64/base.vdex",
+                    "time": 6.402768850326538,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/base.apk",
+                    "time": 6.40280294418335,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 6.403867959976196,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.4048590660095215,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/oat/x86_64/base.art",
+                    "time": 6.408315896987915,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/base.apk",
+                    "time": 6.600158929824829,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 7.24106502532959,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻.x86_64.flock",
+                    "time": 7.2570390701293945,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 7.257175922393799,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.vdex",
+                    "time": 7.2576470375061035,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.odex",
+                    "time": 7.257878065109253,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.vdex",
+                    "time": 9.592820882797241,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 9.616785049438477,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 9.65601396560669,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 9.657481908798218,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 10.005071878433228,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻.x86_64.flock",
+                    "time": 10.348757982254028,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.vdex",
+                    "time": 10.348991870880127,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 10.34996485710144,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.vdex",
+                    "time": 10.351125001907349,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.odex",
+                    "time": 10.352558851242065,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.vdex",
+                    "time": 13.1113920211792,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 13.111598014831543,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 13.112892866134644,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 13.113860845565796,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/user/0/org.b4d40ad47bf8a7c91a86e/shared_prefs/cmmn.xml",
+                    "time": 14.291774034500122,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6f72672e6234643430616434376266386137633931613836650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 6.181603908538818,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 6.181648015975952,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 6.383492946624756,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 6.38907790184021,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.390038013458252,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b0304",
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/base.apk",
+                    "time": 6.402919054031372,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 6.4044508934021,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.4056220054626465,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a3035360000803d78e06a00001c1551e800f03d7800003e7800103e7800b03f7800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000880400008804000000000000880400000000000088040000000000008804000000000000880400000000000090040000c0460000504b0000c80f0000185b0000c80f00000070000000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000081c0000",
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/oat/x86_64/base.art",
+                    "time": 6.408513069152832,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b0304",
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 7.257268905639648,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 9.655981063842773,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 9.657343864440918,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b0304",
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 9.658204078674316,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b0304",
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 10.350198984146118,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 13.111772060394287,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 13.113671064376831,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b0304",
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 13.114161014556885,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": [
+                        16,
+                        61,
+                        120,
+                        57,
+                        28,
+                        16,
+                        13,
+                        -107,
+                        100,
+                        -10,
+                        115,
+                        17,
+                        33,
+                        -77,
+                        -107,
+                        122
+                    ],
+                    "tid": 4848,
+                    "data": "",
+                    "time": 7.21747088432312,
+                    "algorithm": "AES",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "key": [
+                        -105,
+                        -16,
+                        106,
+                        -121,
+                        -88,
+                        -30,
+                        -59,
+                        -108,
+                        -79,
+                        -15,
+                        97,
+                        114,
+                        -36,
+                        -77,
+                        120,
+                        87
+                    ],
+                    "tid": 4848,
+                    "data": "",
+                    "time": 9.89879584312439,
+                    "algorithm": "AES",
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                }
+            ],
+            "fingerprint": [
+                "is_admin_active"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 6.302933931350708,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/app/org.b4d40ad47bf8a7c91a86e-_rGZirq4kYwsHplZZYbQkQ==/base.apk.x86_64.flock",
+                    "time": 6.398712873458862,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.vdex",
+                    "time": 7.2574639320373535,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.odex",
+                    "time": 7.257752895355225,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻.x86_64.flock",
+                    "time": 9.678165912628174,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 9.781949996948242,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.ঝ뷺캩",
+                    "time": 9.782149076461792,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.vdex",
+                    "time": 10.35027289390564,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/oat/x86_64/.odex",
+                    "time": 10.35177993774414,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻.x86_64.flock",
+                    "time": 13.114362955093384,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 13.123244047164917,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.ঝ뷺캩",
+                    "time": 13.123512029647827,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "name": "/data/user/0/org.b4d40ad47bf8a7c91a86e/shared_prefs/cmmn.xml.bak",
+                    "time": 14.859354019165039,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b03040a00000008003d7b4b486b5e4d5f9e070000f40d00000b000000636c61737365732e646578a5575d6c1cd5153ef7ce9d9f5d8fd7bbb3fe092949365ec7980462c74e5b5a47488e9db2465e538ae514a752b3bb1effb11d3beb7562c911b5a0943e84002d52245424d497466a1f52215569a152d5428528ad48c5c3828251518a54354269e550cb84b8dfbd331b8fedb42fddd5b7e7cc997b7ee79eb37746ddf96847d71729b6fbc5eb1ffe7dec4f15f399b57ccf371e1ef9defbee446b25b35c4b344344f3c3071d0a3ec7213b40be5c0a0f329f9e0615a0439ca801b40c0a11dda9115d8c121dd27c7c0d18041e068680a3c0b7803c30063c06cc004f023f065e01de042e03d700134eee05068129e024701af82ef024f0347006780ef811700ef819f05be08fc0bbc012f00960e84477002dc07ee04b400ff020f04d6014f08079e029e02c80b408611052a21ac00650128a0175401c4804b54902f54023f005590b6007b033b0c1829a9ae4db7d17f623017f59f7eba9056b246f04bc15f06febbeaee4057ef4c0d6cbba2f93fc85c08e15f22563bfa1fb3299c315dd8fb13658d314f0e721df16f0af85f8d7c16f0ff8abb28601bfaccb18b87afe3622d8ab681ded5394d13d2a37462945356a56344a69456ba825a07b54de31551f1d967d4ad4aae24fa86b13df769557847693ac5b9c3a546e06ed5779e97497f26bab9c641c2c886397a29cda82ebbb151501b5e8dee0b952a8fe6bf8487a5f5024eb50a138e94d96ef27e3904f592fb17e6203a40df4f69218e8efef273e202ffd9f114a0c4ce54ee6da8b396fbcbdb7989b9deda6a6cda281e9dca85beaa686d08d23f30577a63c39ed75533224eef7caeeb85ceb84840fe5a7dc4279a3ec917269d21bdf687368a2347d2a972fbaddd4121297dcb122f4db7b0a0577767612f7ab0677dd6655efb4375b2ecd15cad38862fb6d1664ddf2c4f468379903d3ed7f7bf5f996375eea2631f4e8d78f101b263e8c020da336c3039219213642fcd861728e6dad53f2d86d728c8c4d7aa36a019963d3a5c1dc775cb2c6dd726f6e6ed6a598e4d64b4a8db8ee730bc55cc91d0d054e8990dc8f97221005ac35e9958773c539978c49efe4f4632e458ab017782dcee5be0dcf642b66ce2bc8a74451795572cb73258f2cc99727dc2a5782a51acf3dd58f00725ec125b3e4ce1473606a67ddf27ad929980314cc09766b66b04dd77eaf7345abbde15f9be8219fc6953c16c8eb021bf1403f119a45f2f3949a5d1fa32febd073725a4c422f4967685cf525690c77898a177fda2eac9b3133f16193b176adb9e54abda159d60d210c6bf5aff7ac3468abdb3ed9feabfb9ce8aa79f377195a617f6e6b60cea7cefb3b9a3e48ad308ad57eaaff2113f95c2cd7bc7e474be3a556e3465863dbddd1cf28",
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 7.251669883728027,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "504b03040a00000008003d7b4b48430a2542b6100000702400000b000000636c61737365732e646578cd5a6b701bd7753ebb00f1e003041f4b91904442a42851144d4014455122658ba45e34a9474489b229dbd20258922b81bbe06249824a54cbae1f6a2c27b61bab4e94b671623972edbab1aba66e3de9a871ea4927eeb46eab493a71d324ada7699b6934d34cc64dfca3dfbd7b012e2952fd1b60be3de79e73eeb967ef3df7ec034869b9e2f8d66de47f73b04f1f8acb6f7df6f8fbb93317f6efb9baafacf3f2377e99594f9421a2dc68672589cfb526a23f2247be0568f310b583de028d80d6fa8854d09f80fa983c4874a38ee86bc50ede04be0ebc0b7c07b809fc33f0efc02f012a210a00254018a807d601cd402bd00e6c05ba815ee018600257801bc04de0a700951235009dc0496006b804fc297013f815b0b68ca807380ecc0097801781b781bf077e0e0442446b80edc071c0041e053e0fbc08bc02bc01fc19f097c05f03ef03ff04fc08f84fe07f808f81c672a2cd40277037d00fec0506814f00c78131e014a0013a300d9c03ce038f008f035f00de04de06fe16f82ef021f033e017801c262a062a80554003d0027400bb80016010b81f508134700e7814b8083c0dbc04bc0ebc0dbc0f7c00fc374015581ba01a68009a8036a003d809ec06ee054680d3c0249005ce034f00cf015f04be02bc01fc39f04de03de0fbc087c0cf80ff058a90756120026c003a807dc010700a30802780cbc09f00df016e02ff01f8aad00f6803b60377037b80c3c02940074c60167818f834f034f03c7005f832700df863e006c052b31a50801a6015cb7500a9cdf37e35b006580bd4030d401458073402d83684ed44cdc0066023d0026c025a81cd6c2f017791b39f62405cecb10e602bd0096c03ba80ed4037b003d809f400bdc02ee06ee01e600f700838027c829c73c87f4a04bd0f2785342759b419ef117ca5e0990d9683bccc1778960601e0a79817a435618bd37be0cb05ff6f558e9f5297cf0a17af08be4af09f123ed95c1e10f144844d58f04c5e29f87c3c8cbf24faae76f5ad77f565ebf098906f70c5d026f83d62ced967afe0d9b9ec13fc3f82bf57f03f07bf3f6f5fbdc007c00f0a3eec92d7baf8a88b6f71f17157dfdd2e393b9703823fe2b261e79e8fe7b4cb3eede26df0438267737b48e414fb1c167cb79893986b4ee2828f2263c73855e8b4a07382bec87339422738ade4b59eb5cf0bfa28cf6d859ee0b91da19cc8f1794e153a27da1784fe11d17e4cb41f17f465415f13fa3f14f475be5f9cf15bc5f8adc8664dc8cf0bfa28a7adf4bba012766b11a7abe9a268ff16a7ebe8059efb6564f25c6fa50739f5d2259eef1e4a701a2683d8f5ac8292a07ef4fc2adf033e9ae43440337c4ff9699ce77d3dfd369fd33a3e6e08556184d3",
+                    "name": "/data/data/org.b4d40ad47bf8a7c91a86e/.麟䧳墻",
+                    "time": 10.005828857421875,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                },
+                {
+                    "pid": 4848,
+                    "tid": 4848,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d22737276223e687474703a2f2f3139322e3232372e3133372e3135342f726571756573742e7068703c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/org.b4d40ad47bf8a7c91a86e/shared_prefs/cmmn.xml",
+                    "time": 14.334779977798462,
+                    "processname": "org.b4d40ad47bf8a7c91a86e"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

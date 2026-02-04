@@ -1,0 +1,956 @@
+{
+    "apk_info": {
+        "id": "AE5b1pQDp0jGyxJQ",
+        "url": "https://developer.koodous.com/apks/990e50ce20706be80b4d62367ff6ed615d6dd04551b42cfd80b1a8950065b646/",
+        "sha256": "990e50ce20706be80b4d62367ff6ed615d6dd04551b42cfd80b1a8950065b646",
+        "md5": "369ca8fd7af4865752c2241884e3b2cf",
+        "sha1": "ef4ea8f1ed83abbac62ed75b74cbf9c815887b3b",
+        "app": "android photo",
+        "package_name": "com.photo.android.p",
+        "company": "e",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2017/01/12/00257b9f663462a8e091cfde2a5a3343900cbf7f926e7037315fda7149fc04bd",
+        "size": 416274,
+        "tags": [
+            "sms-thief",
+            "ext-prg",
+            "checks-gps",
+            "dyn-calls",
+            "genericfca",
+            "runtime-modules",
+            "trojan",
+            "spyagent",
+            "reflection",
+            "flla",
+            "telephony",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 1,
+        "comments_count": 1,
+        "votes_count": 2,
+        "created_at": "2017-01-12T15:29:05+01:00",
+        "updated_at": "2025-03-10T03:20:26.829909+01:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "369ca8fd7af4865752c2241884e3b2cf",
+                    "sha1": "ef4ea8f1ed83abbac62ed75b74cbf9c815887b3b",
+                    "size": 416274,
+                    "crc32": "8F71C732",
+                    "sha256": "990e50ce20706be80b4d62367ff6ed615d6dd04551b42cfd80b1a8950065b646",
+                    "sha512": "1dfd768f803959f8e79331459fabb5fe5b7fed6550b952ac734f41b694ec2a72811ec34b5ae88fc2d444221ba77df4b384c95f58442b0eb138a9a497a800914c",
+                    "ssdeep": "12288:9oIrRitNNC4ZulrkFAIlniM2XtQHKvZIcaEWI:9oCo922bWXKHKvHdX"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "blog.sina.com.cn"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "blogx.sina.com.cn",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "218.30.115.123",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "blog.sina.com.cn"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "apiinit.amap.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "apiinit.amap.com.gds.alibabadns.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "apilocate.amap.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "apilocate.amap.com.gds.alibabadns.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "205.204.101.237",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "apiinit.amap.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "restapi.amap.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "restapi.amap.com.gds.alibabadns.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "198.11.190.4",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "restapi.amap.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "218.30.115.123",
+                    "205.204.101.237",
+                    "198.11.190.4"
+                ],
+                "domains": [
+                    {
+                        "ip": "218.30.115.123",
+                        "domain": "blog.sina.com.cn"
+                    },
+                    {
+                        "ip": "205.204.101.237",
+                        "domain": "apiinit.amap.com"
+                    },
+                    {
+                        "ip": "198.11.190.4",
+                        "domain": "restapi.amap.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://abroad.apilocate.amap.com/mobile/binary",
+                "http://cgicol.amap.com/collection/writedata?ver=v1.0_ali&",
+                "https://offline.aps.amap.com/LoadOfflineData/getData",
+                "http://apilocate.amap.com/mobile/binary",
+                "http://apiinit.amap.com/v3/log/init",
+                "https://restapi.amap.com/v3/config/resource?",
+                "http://restapi.amap.com"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "b9925bf5619b76d57e644cedf63308ea73f3b4467801ab24bec4da5ab5506db8",
+                    "ssdeep": "3072:yBwAIhNZkqZFR7IrxArdUbco0xP7gGKRxAR1ll4xZOeQbh4eG3mzDpPKHRS3cM3l:y6N64bDfYxAtq9QXGWXJ+SlHwKYKn"
+                }
+            },
+            "api_key": {
+                "com::amap::api::v2::apikey": "a396ea08ac33f4ce9e0e202c73c2658d"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.POWER_USAGE_SUMMARY",
+                "android.intent.action.PACKAGE_RESTARTED",
+                "com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_UNREGISTER",
+                "android.media.SCO_AUDIO_STATE_CHANGED",
+                "android.intent.action.MEDIA_EJECT",
+                "android.intent.action.MEDIA_SCANNER_FINISHED",
+                "com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_REGISTER",
+                "android.intent.action.MEDIA_REMOVED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.intent.action.MEDIA_SHARED",
+                "android.intent.action.DATE_CHANGED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MEDIA_UNMOUNTED",
+                "android.intent.action.MAIN",
+                "android.intent.action.ACTION_SHUTDOWN",
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.intent.action.PACKAGE_INSTALL",
+                "android.intent.action.SCREEN_OFF",
+                "android.intent.action.MEDIA_BAD_REMOVAL",
+                "android.media.ACTION_SCO_AUDIO_STATE_UPDATED",
+                "android.intent.action.MEDIA_MOUNTED",
+                "android.intent.action.SCREEN_ON",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.MEDIA_SCANNER_STARTED",
+                "MMBakchatServiceStop",
+                "a",
+                "android.intent.action.PACKAGE_REPLACED",
+                "android.intent.action.DATA_STATE",
+                "android.intent.action.ACTION_POWER_DISCONNECTED",
+                "android.intent.action.PACKAGE_CHANGED",
+                "android.intent.action.PACKAGE_DATA_CLEARED",
+                "MMBakchatServiceStart",
+                "android.intent.action.SERVICE_STATE",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.ACTION_POWER_CONNECTED",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "android photo",
+            "services": [
+                "com.android.core.core",
+                "com.amap.api.location.APSService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.android.core.R",
+                "com.android.core.P",
+                "com.android.core.O",
+                "com.android.core.D"
+            ],
+            "activities": [
+                "com.photo.androida.MainActivity",
+                "com.android.core.C"
+            ],
+            "certificate": {
+                "sha1": "0ED9423B53901A93466A05887D1A8BAC41DE5903",
+                "serial": "482186E3",
+                "issuerDN": "/O=e/OU=d/CN=x",
+                "not_after": "Feb 29 10:03:43 2036 GMT",
+                "subjectDN": "/O=e/OU=d/CN=x",
+                "not_before": "Mar 5 10:03:43 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.READ_LOGS",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.INTERNET",
+                "android.permission.CHANGE_CONFIGURATION",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.SEND_SMS",
+                "android.permission.INTERACT_ACROSS_USERS_FULL",
+                "android.permission.WRITE_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.READ_CALL_LOG",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.CALL_PHONE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.CAMERA",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.READ_CONTACTS",
+                "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "com.photo.android.p",
+            "version_code": "1",
+            "main_activity": "com.photo.androida.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/core/n;",
+                        "method": "d"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v8, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/b/ca;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/b/cq;",
+                        "method": "b"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v7, 'https://offline.aps.amap.com/LoadOfflineData/getData'",
+                        "class": "Lcom/b/bb;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Lcom/b/br;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, 'https://restapi.amap.com/v3/config/resource?'",
+                        "class": "Lcom/b/ej;",
+                        "method": "c"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "g"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "h"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/b/cq;",
+                        "method": "<init>"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "h"
+                    },
+                    {
+                        "code": "invoke-virtual/range v21, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/b/ah;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual/range v21, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/b/ah;",
+                        "method": "a"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "h"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v2, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lcom/android/core/C;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/android/core/C;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lcom/android/core/C;",
+                        "method": "d"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v3, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/android/core/a;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/b/eb;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v4, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/b/en;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/android/core/v;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/net/URL;->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection;",
+                        "class": "Lcom/b/ac;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/b/ac;",
+                        "method": "a"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "e"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/android/core/n;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/android/core/n;",
+                        "method": "c"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/core/core;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v3, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/android/core/core;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "b"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/core/i;",
+                        "method": "h"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v5, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/b/cq;",
+                        "method": "b"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/b/ah;",
+                        "method": "i"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/b/ah;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/b/cg;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 22
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "218.30.115.123",
+                    "hostname": "blog.sina.com.cn"
+                },
+                {
+                    "ip": "205.204.101.237",
+                    "hostname": "apiinit.amap.com"
+                },
+                {
+                    "ip": "198.11.190.4",
+                    "hostname": "restapi.amap.com"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.photo.android.p-1.apk",
+                    "time": 0.000319,
+                    "processname": "com.photo.android.p"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 847,
+                    "tid": 705966232,
+                    "data": "fab2ffc60cf07d2f1137aed2d59906a76fe026b25f84d98837b7008f73ce11e0e8a32cd62fdea1e1",
+                    "name": "/dev/urandom",
+                    "time": 2.068237,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000f000f0012040000ea5506000000504b01021400140008080800d6484a49d4d96769830c0000dc3a0000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a000008000000989f01d05ae26577180000771800001b00000000000000000000000000c80c00007265732f6472617761626c652d686470692d76342f61302e706e67504b01020a000a000008000000989f0117da6128b60c0300b60c03001b000000000000000000000000007b2500007265732f6472617761626c652d686470692d76342f61312e6a7067504b01020a000a000008000000989f01d9df846a280c0000280c000024000000000000000000000000006a3203007265732f6472617761626c652d6d6470692d76342f69635f6c61756e636865722e706e67504b01020a000a000008000000989f018afc27a28b2400008b2400002500000000000000000000000000d43e03007265732f6472617761626c652d78686470692d76342f69635f6c61756e636865722e706e67504b01020a000a000008000000989f01d1994a2ae1450000e14500002600000000000000000000000000a36303007265732f6472617761626c652d7878686470692d76342f69635f6c61756e636865722e706e67504b01021400140008080800d6484a49432f2d2b060100000802",
+                    "name": "/data/app/com.photo.android.p-1.apk",
+                    "time": 0.006794,
+                    "processname": "com.photo.android.p"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "exit\n",
+                    "name": "pipe:[2763]",
+                    "time": 0.748595,
+                    "processname": "com.photo.android.p"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "name": "com.android.core.core",
+                    "time": 0.380774,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 0.919639,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 1.940796,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 2.977305,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 4.008065,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 5.036333,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 6.059086,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 7.174385,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 8.193162,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 9.216257,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 10.257466,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 11.30464,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 12.329884,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 13.358323,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 14.388143,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 15.69468,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 16.436015,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 17.459887,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 18.487909,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 19.517785,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 20.547924,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 21.585774,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 22.608787,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 23.636947,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 24.667692,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 25.69769,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 26.726172,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 27.745728,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 28.766297,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 29.800337,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 30.828672,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 31.858687,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 32.892456,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 33.901797,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 34.925737,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 35.947839,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 36.970387,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 37.994626,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 39.020015,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 40.050206,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 41.0753,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 42.095714,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 43.11864,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 44.150732,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 45.166551,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 46.194099,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 47.218372,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 48.234944,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 49.255154,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 50.287297,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 51.841202,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 52.945798,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 53.368488,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 54.388725,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 55.409949,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 56.44846,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 57.460068,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 58.480449,
+                    "processname": "com.photo.android.p"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705964544,
+                    "name": "com.android.core.core",
+                    "time": 59.502044,
+                    "processname": "com.photo.android.p"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,777 @@
+{
+    "apk_info": {
+        "id": "jg6vOWalrxa1nPAe",
+        "url": "https://developer.koodous.com/apks/c17d5c8b8b68e6e574688e93b9c80e4cdcb15162614f465be0baecec0f261974/",
+        "sha256": "c17d5c8b8b68e6e574688e93b9c80e4cdcb15162614f465be0baecec0f261974",
+        "md5": "00aa9900205771b8c9e7927153b77cf2",
+        "sha1": "b43094c27584f5e0fc5feaa5c621e56d7c2f3ccb",
+        "app": "민원APP",
+        "package_name": "wgkx.wuar.jbkl",
+        "company": "fedml",
+        "version": "5.0.1",
+        "image": "https://developer.koodous.com/media/apk_images/2024/03/14/icon_onrWbdE.png",
+        "size": 4449441,
+        "tags": [
+            "soumnibot",
+            "contains-elf",
+            "trojan",
+            "banker",
+            "checks-cpu-name",
+            "telephony",
+            "detect-debug-environment",
+            "sends-sms",
+            "checks-gps",
+            "obfuscated",
+            "reflection"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-05-01T14:26:09.009931+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "",
+                    "result": "timeout",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "01.05.2024 07:45:11 (Build: 107020)",
+                    "result": "malicious",
+                    "signature": "Trojan-Dropper.AndroidOS.Agent"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-05-01T14:32:58.915252+02:00",
+        "matches_count": 7,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-03-14T10:39:03.056120+01:00",
+        "updated_at": "2025-06-22T00:30:24.184726+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "00aa9900205771b8c9e7927153b77cf2",
+                "name": "",
+                "path": "",
+                "sha1": "b43094c27584f5e0fc5feaa5c621e56d7c2f3ccb",
+                "size": 4449441,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "8600A8AC",
+                "sha256": "c17d5c8b8b68e6e574688e93b9c80e4cdcb15162614f465be0baecec0f261974",
+                "sha512": "a19d2e339b25bea61b158bbd13f632793aeb4c3f20776793dd0bee15c4bd9283644d7915d55b46b6adf5803ca30651392dc6ccb40f843bdf0c72208fb70890d1",
+                "ssdeep": "98304:FZxlRoI9e3PxUjrBbuF1voH30PITIgN/S6zYx/EmZMRye0vLOYrlQEjLE:Huke3Px0u/QH70OYdEmGye0jLc"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://cultured-design.surge.sh",
+                "https://dbdb.addea.workers.dev",
+                "https://i.imgur.com/D9wSCDs.png",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "ub.ub/SW",
+                "https://google.kt9.site",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "d86da1fb63583487302954345bc5b0fecc2670f80052b36906377ae6e5dac98d"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.BATTERY_OKAY",
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.TIME_SET",
+                "android.intent.action.BATTERY_LOW",
+                "androidx.work.impl.background.systemalarm.UpdateProxies",
+                "com.google.android.c2dm.intent.RECEIVE",
+                "android.intent.action.ACTION_POWER_DISCONNECTED",
+                "android.intent.action.TIMEZONE_CHANGED",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.DEVICE_STORAGE_LOW",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.DEVICE_STORAGE_OK",
+                "androidx.work.diagnostics.REQUEST_DIAGNOSTICS",
+                "android.intent.action.MAIN",
+                "android.intent.action.ACTION_POWER_CONNECTED"
+            ],
+            "app_name": "민원APP",
+            "services": [
+                "androidx.room.MultiInstanceInvalidationService",
+                "androidx.work.impl.background.systemalarm.SystemAlarmService",
+                "androidx.work.impl.background.systemjob.SystemJobService",
+                "androidx.work.impl.foreground.SystemForegroundService",
+                "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+                "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+                "com.google.firebase.components.ComponentDiscoveryService",
+                "com.google.firebase.messaging.FirebaseMessagingService",
+                "org.eclipse.paho.android.service.MqttService",
+                "wgkx.wuar.jbkl.board.MainService",
+                "wgkx.wuar.jbkl.main.LocalService",
+                "wgkx.wuar.jbkl.main.Music",
+                "wgkx.wuar.jbkl.main.Service"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider",
+                "androidx.work.impl.WorkManagerInitializer",
+                "com.google.firebase.provider.FirebaseInitProvider"
+            ],
+            "receivers": [
+                "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+                "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+                "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+                "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+                "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+                "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+                "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+                "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+                "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+                "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+                "wgkx.wuar.jbkl.main.BootCompletedReceiver"
+            ],
+            "activities": [
+                "wgkx.wuar.jbkl.main.Activity",
+                "wgkx.wuar.jbkl.main.MainActivity",
+                "wgkx.wuar.jbkl.main.MapsActivity",
+                "com.google.android.gms.common.api.GoogleApiActivity"
+            ],
+            "certificate": {
+                "sha1": "C65A999FB108FAF07A9F0E99AA0114E649578BC6",
+                "serial": "1EF6A0D0",
+                "issuerDN": "C = 1, ST = ca, L = La, O = fedml, OU = edge, CN = changyang.he",
+                "not_after": "Mar 30 06:17:49 2121 GMT",
+                "subjectDN": "C = 1, ST = ca, L = La, O = fedml, OU = edge, CN = changyang.he",
+                "not_before": "Apr 23 06:17:49 2022 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.AUTHENTICATE_ACCOUNTS",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.SEND_SMS",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "com.google.android.c2dm.permission.RECEIVE",
+                "com.google.android.providers.gsf.permission.READ_GSERVICES",
+                "com.google.android.providers.gsf.permission.WRITE_GSERVICES"
+            ],
+            "package_name": "wgkx.wuar.jbkl",
+            "version_code": "2",
+            "main_activity": "wgkx.wuar.jbkl.main.Activity",
+            "signature_name": "META-INF/FEDML.RSA",
+            "functionalities": {},
+            "max_sdk_version": "",
+            "min_sdk_version": 24,
+            "new_permissions": [],
+            "displayed_version": "5.0.1",
+            "target_sdk_version": 29
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "path": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk",
+                    "time": 1.276304006576538,
+                    "processname": "wgkx.wuar.jbkl"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2591679096221924,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk.x86.flock",
+                    "time": 1.2763779163360596,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk",
+                    "time": 1.277864933013916,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/dalvik-cache/x86/data@app@wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==@base.apk@classes.vdex",
+                    "time": 1.2880399227142334,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk",
+                    "time": 1.2881388664245605,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk",
+                    "time": 1.3567049503326416,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/classes.dex",
+                    "time": 2.584927797317505,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/classes.dex.x86.flock",
+                    "time": 2.5896568298339844,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/classes.dex",
+                    "time": 2.5900537967681885,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/oat/x86/classes.vdex",
+                    "time": 2.591295003890991,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/oat/x86/classes.odex",
+                    "time": 2.592085838317871,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/oat/x86/classes.vdex",
+                    "time": 4.41704797744751,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/system/framework/x86/boot.art",
+                    "time": 4.41727089881897,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/dalvik-cache/x86/system@framework@boot.art",
+                    "time": 4.417507886886597,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/oat/x86/classes.art",
+                    "time": 4.41779899597168,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5115,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/no_backup/com.google.android.gms.appid-no-backup",
+                    "time": 4.550295829772949,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/lib/arm/libmmkv.so",
+                    "time": 4.550601005554199,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5114,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/databases/com.google.android.datatransport.events",
+                    "time": 4.575262784957886,
+                    "processname": "wgkx.wuar.jbkl"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "77676b782e777561722e6a626b6c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2595858573913574,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2596290111541748,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "504b0304",
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk",
+                    "time": 1.2779788970947266,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "504b0304",
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk",
+                    "time": 1.288254976272583,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "6465780a",
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/classes.dex",
+                    "time": 2.590524911880493,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "6172740a303536000000007044a423004d7dcf7d0010e3700020e370e5532a710070727100000000000000000000000000000000000000005854007004000000010000000000000000000000e01e1200e01e1200e0060200c0251400503f0a00f0fe20008ca8000010651e00f0fb010000612000f09d000080a7210000a00000005022006800010068502300dc53000000b0230000500000f0fe2070000000000cff20700000000028ff20700000000044ff20700000000060ff2070000000007cff20700000000098ff207000000000b4ff207000000000d0ff207000000000000000005ca32300",
+                    "name": "/system/framework/x86/boot.art",
+                    "time": 4.4173548221588135,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "6172740a3035360000c0767044a423004d7dcf7d00d0597100e05971e513a1710030e9710000000000000000000000000000000000c076005814777004000000010000000000000000000000e01e1200e01e1200e0060200c0251400503f0a00f0fe20008ca8000010651e00f0fb010000612000f09d000080a7210000a00000005022006800010068502300dc53000000b0230000500000f0be9770000000000cbf97700000000028bf97700000000044bf97700000000060bf9770000000007cbf97700000000098bf977000000000b4bf977000000000d0bf977000000000000000005ca32300",
+                    "name": "/data/dalvik-cache/x86/system@framework@boot.art",
+                    "time": 4.417710781097412,
+                    "processname": "wgkx.wuar.jbkl"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/lib/arm/libmmkv.so",
+                    "time": 4.554040908813477,
+                    "processname": "wgkx.wuar.jbkl"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "tid": 5037,
+                    "data": [
+                        91,
+                        68,
+                        69,
+                        70,
+                        65,
+                        85,
+                        76,
+                        84,
+                        93
+                    ],
+                    "time": 4.509187936782837,
+                    "result": [
+                        87,
+                        48,
+                        82,
+                        70,
+                        82,
+                        107,
+                        70,
+                        86,
+                        84,
+                        70,
+                        82,
+                        100
+                    ],
+                    "algorithm": "base64_encode",
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "tid": 5037,
+                    "data": [
+                        49,
+                        58,
+                        56,
+                        57,
+                        54,
+                        48,
+                        56,
+                        54,
+                        52,
+                        51,
+                        52,
+                        51,
+                        49,
+                        54,
+                        58,
+                        97,
+                        110,
+                        100,
+                        114,
+                        111,
+                        105,
+                        100,
+                        58,
+                        51,
+                        50,
+                        56,
+                        101,
+                        53,
+                        55,
+                        99,
+                        51,
+                        55,
+                        101,
+                        50,
+                        99,
+                        97,
+                        53,
+                        57,
+                        49,
+                        57,
+                        52,
+                        48,
+                        52,
+                        50,
+                        57
+                    ],
+                    "time": 4.51802396774292,
+                    "result": [
+                        77,
+                        84,
+                        111,
+                        52,
+                        79,
+                        84,
+                        89,
+                        119,
+                        79,
+                        68,
+                        89,
+                        48,
+                        77,
+                        122,
+                        81,
+                        122,
+                        77,
+                        84,
+                        89,
+                        54,
+                        89,
+                        87,
+                        53,
+                        107,
+                        99,
+                        109,
+                        57,
+                        112,
+                        90,
+                        68,
+                        111,
+                        122,
+                        77,
+                        106,
+                        104,
+                        108,
+                        78,
+                        84,
+                        100,
+                        106,
+                        77,
+                        122,
+                        100,
+                        108,
+                        77,
+                        109,
+                        78,
+                        104,
+                        78,
+                        84,
+                        107,
+                        120,
+                        79,
+                        84,
+                        81,
+                        119,
+                        78,
+                        68,
+                        73,
+                        53
+                    ],
+                    "algorithm": "base64_encode",
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "tid": 5115,
+                    "data": [
+                        91,
+                        68,
+                        69,
+                        70,
+                        65,
+                        85,
+                        76,
+                        84,
+                        93
+                    ],
+                    "time": 4.530097961425781,
+                    "result": [
+                        87,
+                        48,
+                        82,
+                        70,
+                        82,
+                        107,
+                        70,
+                        86,
+                        84,
+                        70,
+                        82,
+                        100
+                    ],
+                    "algorithm": "base64_encode",
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "tid": 5115,
+                    "data": [
+                        49,
+                        58,
+                        56,
+                        57,
+                        54,
+                        48,
+                        56,
+                        54,
+                        52,
+                        51,
+                        52,
+                        51,
+                        49,
+                        54,
+                        58,
+                        97,
+                        110,
+                        100,
+                        114,
+                        111,
+                        105,
+                        100,
+                        58,
+                        51,
+                        50,
+                        56,
+                        101,
+                        53,
+                        55,
+                        99,
+                        51,
+                        55,
+                        101,
+                        50,
+                        99,
+                        97,
+                        53,
+                        57,
+                        49,
+                        57,
+                        52,
+                        48,
+                        52,
+                        50,
+                        57
+                    ],
+                    "time": 4.53019380569458,
+                    "result": [
+                        77,
+                        84,
+                        111,
+                        52,
+                        79,
+                        84,
+                        89,
+                        119,
+                        79,
+                        68,
+                        89,
+                        48,
+                        77,
+                        122,
+                        81,
+                        122,
+                        77,
+                        84,
+                        89,
+                        54,
+                        89,
+                        87,
+                        53,
+                        107,
+                        99,
+                        109,
+                        57,
+                        112,
+                        90,
+                        68,
+                        111,
+                        122,
+                        77,
+                        106,
+                        104,
+                        108,
+                        78,
+                        84,
+                        100,
+                        106,
+                        77,
+                        122,
+                        100,
+                        108,
+                        77,
+                        109,
+                        78,
+                        104,
+                        78,
+                        84,
+                        107,
+                        120,
+                        79,
+                        84,
+                        81,
+                        119,
+                        78,
+                        68,
+                        73,
+                        53
+                    ],
+                    "algorithm": "base64_encode",
+                    "processname": "wgkx.wuar.jbkl"
+                }
+            ],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/base.apk.x86.flock",
+                    "time": 1.2774548530578613,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/dalvik-cache/x86/data@app@wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==@base.apk@classes.vdex",
+                    "time": 1.287916898727417,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/oat/x86/classes.vdex",
+                    "time": 2.5909459590911865,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/oat/x86/classes.odex",
+                    "time": 2.591744899749756,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/classes.dex.x86.flock",
+                    "time": 4.417923927307129,
+                    "processname": "wgkx.wuar.jbkl"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5037,
+                    "tid": 5037,
+                    "data": "6465780a30333500c802c0686d2187d36b01e0e8bef25bb5ac95604d0ca83d5f94056a0070000000785634120000000000000000c4046a008c75000070000000b0140000a0d60100451d000060290200ed2f00009c880300b0750000040805004c10000084b5080090465f0004bf0a0004bf0a0006bf0a0009bf0a0010bf0a0016bf0a0024bf0a002abf0a002dbf0a0034bf0a003fbf0a0051bf0a0069bf0a0071bf0a008dbf0a00aabf0a00b5bf0a00e7bf0a0024c00a003ec00a004ac00a0064c00a0072c00a0075c00a0079c00a007cc00a008fc00a0093c00a0098c00a009ec00a00abc00a00b8c00a00bdc00a00d3c00a00e3c00a00fdc00a001ac10a003bc10a0043c10a004fc10a005dc10a006bc10a0075c10a0084c10a0092c10a009cc10a00b4c10a00c0c10a00ddc10a00e3c10a00e7c10a00f4c10a000ac20a0027c20a002fc20a0039c20a0048c20a0056c20a005ac20a0066c20a006bc20a006fc20a0075c20a007cc20a0087c20a00a0c20a00abc20a00b5c20a00c1c20a00d6c20a00e5c20a00eec20a00ffc20a0021c30a0025c30a004ac30a005dc30a006bc30a007ac30a0089c30a0094c30a00a4c30a00a9c30a00c5c30a00cbc30a00d0c30a00d5c30a00dac30a00eac30a00f9c30a0003c40a0008c40a000ec40a0013c40a0019c40a001fc40a0029c40a002ec40a0049c40a0052c40a0059c40a00f8c40a000cc50a0013c50a0031c50a003cc50a005bc50a0062c50a006ec50a0079c50a0086c50a0094c50a00a3c50a00b2c50a00cac50a00e0c50a00e7c50a00f0c50a003fc60a00bfc60a0028c70a00bcc70a0001c80a000ac80a001ac80a0040c80a0044c80a0048c80a00abc80a00cdc80a0018c90a002ac90a003bc90a0042c90a004fc90a0060c90a0075c90a0084c90a00acc90a00c5c90a00e3c90a00efc90a00fac90a0005ca0a0014ca0a0022ca0a0034ca0a005cca0a007fca0a00a2ca0a00c4ca0a00d2ca0a00d9ca0a00e6ca0a0010cb0a0023cb0a0030cb0a003ccb0a0047cb0a004dcb0a005bcb0a0063cb0a0079cb0a0087cb0a00c0cb0a00fdcb0a004acc0a0075cc0a0084cc0a0090cc0a009acc0a00accc0a00b7cc0a00facc0a0014cd0a004bcd0a0055cd0a006ecd0a008ecd0a0099cd0a00b5cd0a00ddcd0a00e7cd0a00efcd0a00f9cd0a0004ce0a0038ce0a0063ce0a008ece0a00bace0a00eace0a0015cf0a003fcf0a006acf0a0094cf0a00bdcf0a00f3cf0a000cd00a0062d00a008dd00a009ed00a00c4d00a00e1d00a0021d10a0038d10a006cd10a00a3d10a00dbd10a0010d20a004dd20a0087d20a00c0d20a00cad20a00ead20a000ad30a0011d30a001ed30a002fd30a003ad30a0041d30a0048d30a0051d30a0059d30a006bd30a0079d30a0087d30a0097d30a00a0d30a00b8d30a00",
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/classes.dex",
+                    "time": 2.585392951965332,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5120,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/wgkx.wuar.jbkl/app_dex/classes.dex.x86.flock",
+                    "time": 4.545513868331909,
+                    "processname": "wgkx.wuar.jbkl"
+                },
+                {
+                    "pid": 5037,
+                    "tid": 5121,
+                    "data": "3530303030",
+                    "name": "/data/app/wgkx.wuar.jbkl-waNlsE0I1ufYPs2XAGdhjQ==/lib/arm/libmmkv.so",
+                    "time": 4.555481910705566,
+                    "processname": "wgkx.wuar.jbkl"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

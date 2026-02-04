@@ -1,0 +1,244 @@
+{
+    "apk_info": {
+        "id": "A5XNdZxKw2VGyw0j",
+        "url": "https://developer.koodous.com/apks/617e24bde5b3a830304b978c49b1dc5f79ef7c021c46b2aaa36250ceaeafe601/",
+        "sha256": "617e24bde5b3a830304b978c49b1dc5f79ef7c021c46b2aaa36250ceaeafe601",
+        "md5": "c038a2439e10b04935144018765be166",
+        "sha1": "b41eb2a6e13795af412a4c1af34fd17e9d4f39f4",
+        "app": "写メボックス",
+        "package_name": "com.test.uploadcontact",
+        "company": "contact",
+        "version": "1.6",
+        "image": "https://developer.koodous.com/media/apk_images/b1/ba/b1baaf0a3f9fa3c066f2c1a723807a7f31a6a108718bee013ae8de8f5198e603",
+        "size": 137903,
+        "tags": [
+            "sms-thief",
+            "goontact",
+            "spyagent",
+            "spyware",
+            "trojan",
+            "telephony",
+            "srgi"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2018-12-10T12:27:23+01:00",
+        "updated_at": "2024-08-03T04:16:13.116052+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "c038a2439e10b04935144018765be166",
+                    "name": "",
+                    "path": "",
+                    "sha1": "b41eb2a6e13795af412a4c1af34fd17e9d4f39f4",
+                    "size": 137903,
+                    "type": "Zip archive data",
+                    "yara": [],
+                    "crc32": "625CE383",
+                    "sha256": "617e24bde5b3a830304b978c49b1dc5f79ef7c021c46b2aaa36250ceaeafe601",
+                    "sha512": "67087bbf415a2c6dce5125f11b5d59c04a2c0413888fae6ee9f3cf3f79a322a2f15733064ca40a991ffc70f7c2e733467707c830b1d4bf97b0893fd634239f73",
+                    "ssdeep": "3072:e2YVdV/oj+I7Y5FUJqDUfkX6SZwowXFZPsUQJ3AdQe7:IdV/oy+MUiUfQmowUULdQY"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://27.126.180.77:8080/JYSystem/restInt/collect/postData"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "e6c6ba2cd03a561afacdc9f89c1ea6244ba3237c7ed1b190e6c6aaf423048e42"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "写メボックス",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "4BE1BBF7B4A1F288E6A55B6A2DCEC4A4DB1C5311",
+                "serial": "444C2B89",
+                "issuerDN": "CN = contact",
+                "not_after": "Nov 11 06:44:53 2043 GMT",
+                "subjectDN": "CN = contact",
+                "not_before": "Nov 17 06:44:53 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.INTERNET",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE"
+            ],
+            "package_name": "com.test.uploadcontact",
+            "version_code": "6",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/test/uploadcontact/HttpUtil;",
+                        "method": "httpPostJSON"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.6",
+            "target_sdk_version": 8
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "name": "/sys/devices/system/cpu",
+                    "time": 25.024415016174316,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.test.uploadcontact-1@base.apk@classes.dex.flock",
+                    "time": 25.048322200775146,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "name": "/data/app/com.test.uploadcontact-1/base.apk",
+                    "time": 25.049612045288086,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "name": "/data/app/com.test.uploadcontact-1/oat/x86_64/base.art",
+                    "time": 25.05091619491577,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "name": "/proc/self/cmdline",
+                    "time": 25.255783081054688,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "name": "/data/app/com.test.uploadcontact-1/base.apk",
+                    "time": 25.25752902030945,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "data": "504b0304",
+                    "name": "/data/app/com.test.uploadcontact-1/base.apk",
+                    "time": 25.050230979919434,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "data": "eeaf3ffbf5a7ad6b26b3f2fc9df3eb9bdb8b8bebe3a3d31ffee0471f7dffe3f97421852af289ed6d4a22f8189cebfbae6d9bb6ae9b7e531c955a1121f8beb36d2b42883e6cd6eb665d7ff8c187278b63ae3c773ef57ddf343158675b1b3a9da14f2eca90977924b16dabd6f7f79bfbfbedaa984f844146404312d9b90e44f8c1cb0f3e7afffd41f9345a010092225243912ac798af614e894888802071270d8e3f1e7cbf721c1a8f9652380873e70174c0bc1b40c34031188b949438a6a1dde3dd49534a698f8c1ac5953123034618b956599e51ddb4cebaae4129a665def6ae9c14466b43f9f3a7cf5d176502a38c4cb234f9cdfd35b33b3e398ec9a5280a5d0aa22eb4ecba3ccba30e91429ee50070797bbdadebf9d1f1b3e7efbdf7e2e5ac580806952b049a9433221252c6e084646b7b002111fee9b34f1f96abd3b3b3a3a363d7b9af5fbd7eefc5bbfdb679b87ff8d1bffc93fa61a33bb66d159d53203dca2c5379d4beefa2882ef94d57570f0d6865830dc05ea63eb92eda72325399daaeb79cd2e278717a7c4c1252082ad34424240f75caf8ae13f230c7660c847d4b941f13008648a9fd83b32f4076e0ec3141f0b03091b0bbd676f796488ff720ed7a69b9870b0e001a90c0c3b613a2d24a29a418abf56a76f284329d98bdb3b372c121f6bdeb6a3b2d63b45e52f2ce251feacd9639aaa7e7595606e195c6289c0bd17b2bb2f4ec7bcfa2f39bfb879be5ddbc987ff4d10f9f9e3dcff3090029d2002ac55496c5b0731d82440d404c4a36d6fee1b7bffbf69b6ff272727a726a947efdea9b1f7cf8fdc564bab95d1dcf8f722051d98ded23678c2ed49d168a02441b98d8d9d8f5de4bce0b1d1b1b20e5b3b28f4ee7a69c9631b8c469312ddf7bf6ec64b11029d238e792498824050c695cf290d0bda7fa1cb664fb8e1847d6f1ce32053b0991c59091cd4208180e921f8b79b13f4e4e22c9c10628a46416f49875bcb7e50bb96308ed5cf7444a918969b35ece8e8f50b242583f3c9c9f3cf59c066e565bb78265312d4088c56c1e927d7858cee6e56c3e6fda3e3023e9a4a3f336615c9ccf5d6bbdb7e57c727a72feceb3e7d37c814209211169b87e95a2948418167848146596a25fde2f7d1f80e1cbfff3c5f674bb98ce5dd75f5d5c6292cfcedf09bdcd941639fb792e74f4d04a2f9021c850fb3612f7c9b7ae2fe6937c3e8102bb9b2e53543d341f3e7b0fb5baf86609529c9f9ebe383f9fe4b964d65af388d3112c441ae210763bcb42bead230d8b92200eb4defdb2d741032024cb9daec6bc6fd74630d6e18131a794c663de7d3f68c71d97075463c97b3553cae102d45ac71837db4d5b6d496944eaea2ac5a855363d9b435ad655c5ccd3f974969568a60c69f587bbd56a399dcf034bd75559516246a465bdee454ca8f0ece9d9627a5cd2",
+                    "name": "/data/app/com.test.uploadcontact-1/base.apk",
+                    "time": 25.050451040267944,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "data": "636f6d2e746573742e75706c6f6164636f6e746163740000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 25.256251096725464,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 25.256646156311035,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "data": "eeaf3ffbf5a7ad6b26b3f2fc9df3eb9bdb8b8bebe3a3d31ffee0471f7dffe3f97421852af289ed6d4a22f8189cebfbae6d9bb6ae9b7e531c955a1121f8beb36d2b42883e6cd6eb665d7ff8c187278b63ae3c773ef57ddf343158675b1b3a9da14f2eca90977924b16dabd6f7f79bfbfbedaa984f844146404312d9b90e44f8c1cb0f3e7afffd41f9345a010092225243912ac798af614e894888802071270d8e3f1e7cbf721c1a8f9652380873e70174c0bc1b40c34031188b949438a6a1dde3dd49534a698f8c1ac5953123034618b956599e51ddb4cebaae4129a665def6ae9c14466b43f9f3a7cf5d176502a38c4cb234f9cdfd35b33b3e398ec9a5280a5d0aa22eb4ecba3ccba30e91429ee50070797bbdadebf9d1f1b3e7efbdf7e2e5ac580806952b049a9433221252c6e084646b7b002111fee9b34f1f96abd3b3b3a3a363d7b9af5fbd7eefc5bbfdb679b87ff8d1bffc93fa61a33bb66d159d53203dca2c5379d4beefa2882ef94d57570f0d6865830dc05ea63eb92eda72325399daaeb79cd2e278717a7c4c1252082ad34424240f75caf8ae13f230c7660c847d4b941f13008648a9fd83b32f4076e0ec3141f0b03091b0bbd676f796488ff720ed7a69b9870b0e001a90c0c3b613a2d24a29a418abf56a76f284329d98bdb3b372c121f6bdeb6a3b2d63b45e52f2ce251feacd9639aaa7e7595606e195c6289c0bd17b2bb2f4ec7bcfa2f39bfb879be5ddbc987ff4d10f9f9e3dcff3090029d2002ac55496c5b0731d82440d404c4a36d6fee1b7bffbf69b6ff272727a726a947efdea9b1f7cf8fdc564bab95d1dcf8f722051d98ded23678c2ed49d168a02441b98d8d9d8f5de4bce0b1d1b1b20e5b3b28f4ee7a69c9631b8c469312ddf7bf6ec64b11029d238e792498824050c695cf290d0bda7fa1cb664fb8e1847d6f1ce32053b0991c59091cd4208180e921f8b79b13f4e4e22c9c10628a46416f49875bcb7e50bb96308ed5cf7444a918969b35ece8e8f50b242583f3c9c9f3cf59c066e565bb78265312d4088c56c1e927d7858cee6e56c3e6fda3e3023e9a4a3f336615c9ccf5d6bbdb7e57c727a72feceb3e7d37c814209211169b87e95a2948418167848146596a25fde2f7d1f80e1cbfff3c5f674bb98ce5dd75f5d5c6292cfcedf09bdcd941639fb792e74f4d04a2f9021c850fb3612f7c9b7ae2fe6937c3e8102bb9b2e53543d341f3e7b0fb5baf86609529c9f9ebe383f9fe4b964d65af388d3112c441ae210763bcb42bead230d8b92200eb4defdb2d741032024cb9daec6bc6fd74630d6e18131a794c663de7d3f68c71d97075463c97b3553cae102d45ac71837db4d5b6d496944eaea2ac5a855363d9b435ad655c5ccd3f974969568a60c69f587bbd56a399dcf034bd75559516246a465bdee454ca8f0ece9d9627a5cd2",
+                    "name": "/data/app/com.test.uploadcontact-1/base.apk",
+                    "time": 25.25796604156494,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 4060,
+                    "tid": 4060,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.test.uploadcontact-1@base.apk@classes.dex.flock",
+                    "time": 25.048859119415283,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

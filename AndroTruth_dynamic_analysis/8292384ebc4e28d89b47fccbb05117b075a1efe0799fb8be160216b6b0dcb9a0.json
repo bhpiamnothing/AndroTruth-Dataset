@@ -1,0 +1,584 @@
+{
+    "apk_info": {
+        "id": "7QqMdLv0xB4GAm4e",
+        "url": "https://developer.koodous.com/apks/8292384ebc4e28d89b47fccbb05117b075a1efe0799fb8be160216b6b0dcb9a0/",
+        "sha256": "8292384ebc4e28d89b47fccbb05117b075a1efe0799fb8be160216b6b0dcb9a0",
+        "md5": "1f13ba11ceba8ddb6e0faf61e6d8da23",
+        "sha1": "1e1b69304e701d2a1a84777410ad2ff467ca7b64",
+        "app": "Pingpong",
+        "package_name": "com.ipro.pluebfck",
+        "company": "com.ipro.pluebfck",
+        "version": "4.549",
+        "image": "https://developer.koodous.com/media/apk_images/01/e6/01e687606fb07f5aec77bda8cd2f703b46a1c52ea19951723a93972299149b5e",
+        "size": 221525,
+        "tags": [
+            "dropper",
+            "shopper",
+            "hiddenads",
+            "trojan",
+            "reflection",
+            "ffss",
+            "telephony",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 10,
+        "comments_count": 0,
+        "votes_count": 3,
+        "created_at": "2019-08-29T04:06:31+02:00",
+        "updated_at": "2025-05-27T05:39:49.046654+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "1f13ba11ceba8ddb6e0faf61e6d8da23",
+                    "sha1": "1e1b69304e701d2a1a84777410ad2ff467ca7b64",
+                    "size": 221525,
+                    "crc32": "A917B7B5",
+                    "sha256": "8292384ebc4e28d89b47fccbb05117b075a1efe0799fb8be160216b6b0dcb9a0",
+                    "sha512": "6d749f8eb48b7d08710b0eae644d98384e02080ddbec0eca225daa60e8d88b47f72d83e06b24a62109153c1c914547b1aec2ad9a4c8b114f68ac1478dc0f316b",
+                    "ssdeep": "6144:aU9Lju2rFyvvrjFnnpA+51MzuSzvMt5jFeoh3:3hjxrSXFnnpAq1Mz5zk58K"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://06.natgame.com"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "c342878d3d368c5149cd2ad1e17bc35e15e756845ae14d7b89287c986b0e539f",
+                    "ssdeep": "384:TOetfzznd2Nsla5y9mEYEuyxOLSfFnoPHFPNDer9bjom0EvbPXg:TOet752NWa5ysEYE5xO0FnADelj06LQ"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PACKAGE_ADDED",
+                "android.intent.action.MAIN",
+                "com.action.icon",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "Pingpong",
+            "services": [
+                "com.h5game.service.RemoteService",
+                "com.h5game.service.MJobService",
+                "com.h5game.service.Localservice"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.h5game.receiver.MReceiver"
+            ],
+            "activities": [
+                "com.h5game.MainActivity",
+                "com.h5game.TransActivity",
+                "com.h5game.AdTransActivity",
+                "com.h5game.GamePlayActivity"
+            ],
+            "certificate": {
+                "sha1": "1757C2C9D10A0C8E4C341FE5BDCEF88C5A63D970",
+                "serial": "0377E134",
+                "issuerDN": "/CN=com.ipro.pluebfck",
+                "not_after": "Jan 12 14:38:54 2047 GMT",
+                "subjectDN": "/CN=com.ipro.pluebfck",
+                "not_before": "Aug 27 14:38:54 2019 GMT"
+            },
+            "permissions": [
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "com.android.launcher.permission.INSTALL_SHORTCUT",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_TASKS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "com.ipro.pluebfck",
+            "version_code": "4549",
+            "main_activity": "com.h5game.MainActivity",
+            "signature_name": "META-INF/ANDROID.RSA",
+            "functionalities": {
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/h5game/e;",
+                        "method": "b"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 9,
+            "new_permissions": [],
+            "displayed_version": "4.549",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.0545070171356201,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.05948805809021,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.0613319873809814,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.0617461204528809,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.0618231296539307,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.0631661415100098,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.0632860660552979,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.063378095626831,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.0634031295776367,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.063499927520752,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.0635261535644531,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.0635499954223633,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.063647985458374,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.0636770725250244,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.0637359619140625,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.0638179779052734,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.0638959407806396,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.063948154449463,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.0640809535980225,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.0642459392547607,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 1.0644340515136719,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/base.apk.x86_64.flock",
+                    "time": 1.0645229816436768,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/oat/x86_64/base.vdex",
+                    "time": 1.064850091934204,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/base.apk",
+                    "time": 1.0650150775909424,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.0652079582214355,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.0653939247131348,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/oat/x86_64/base.art",
+                    "time": 1.0656640529632568,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/base.apk",
+                    "time": 1.0918800830841064,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.2378380298614502,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/base.apk",
+                    "time": 1.2380290031433105,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.2518589496612549,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.252924919128418,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 1.2533631324768066,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 1.2544739246368408,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.2561240196228027,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.25895094871521,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.259019136428833,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 1.2593629360198975,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 1.4098200798034668,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.4546339511871338,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 1.464622974395752,
+                    "processname": "com.ipro.pluebfck"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "636f6d2e6970726f2e706c75656266636b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.0583069324493408,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.0592989921569824,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.0640220642089844,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.0641460418701172,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.0643689632415771,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "504b0304",
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/base.apk",
+                    "time": 1.065108060836792,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.065303087234497,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.065490961074829,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "6172740a3035360000803d78405100003217824900e03d7800f03d7800003e7800a03e7800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000880400008804000000000000880400000000000088040000000000008804000000000000880400000000000090040000202d0000b0310000c80f000078410000c80f00000060000000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000090120000",
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/oat/x86_64/base.art",
+                    "time": 1.0657899379730225,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.2561590671539307,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.258993148803711,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2591071128845215,
+                    "processname": "com.ipro.pluebfck"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 1.4550800323486328,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 1.4678809642791748,
+                    "processname": "com.ipro.pluebfck"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.0595979690551758,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/data/app/com.ipro.pluebfck-_keC0VS-Id_89bht8ZEjww==/base.apk.x86_64.flock",
+                    "time": 1.0647001266479492,
+                    "processname": "com.ipro.pluebfck"
+                },
+                {
+                    "pid": 5123,
+                    "tid": 5123,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 1.253864049911499,
+                    "processname": "com.ipro.pluebfck"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

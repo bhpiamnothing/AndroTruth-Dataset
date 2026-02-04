@@ -1,0 +1,452 @@
+{
+    "apk_info": {
+        "id": "9VJl1DyY8ZQG5QNW",
+        "url": "https://developer.koodous.com/apks/f6d55d7559e2226b8356c094b5361132b608603f773cf94921315d8a28b57704/",
+        "sha256": "f6d55d7559e2226b8356c094b5361132b608603f773cf94921315d8a28b57704",
+        "md5": "6b11a483824b64ac8d1bb1a063c6eb7c",
+        "sha1": "a3a7b44d2cd165578392959b71eba5341b3b7835",
+        "app": "设置",
+        "package_name": "com.android.googleapi.ttzzgg",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2017/08/09/3b774bafad10b8b11ee260dfd4b7e24de091a3f9139d22e98c71fc18e8aedec1",
+        "size": 1378471,
+        "tags": [
+            "spyware",
+            "contains-elf",
+            "mlasdl",
+            "fhuk",
+            "trojan",
+            "spyagent",
+            "telephony"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 10,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2017-08-09T03:59:24+02:00",
+        "updated_at": "2023-03-30T15:37:00.819737+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "6b11a483824b64ac8d1bb1a063c6eb7c",
+                    "sha1": "a3a7b44d2cd165578392959b71eba5341b3b7835",
+                    "size": 1378471,
+                    "crc32": "CAAB6D0D",
+                    "sha256": "f6d55d7559e2226b8356c094b5361132b608603f773cf94921315d8a28b57704",
+                    "sha512": "68151b593830c78860408804092f56e728aa8b79f8f59fe1f6a3214d72e99d584be447d5093c010a6eb1918736b1b0e63b102c5cd7f973b345e63521e9abca88",
+                    "ssdeep": "24576:uEL2agMSyilWVx/7FIhyp46QuBo37jiKn2Rm/ww9kqb:usoU/7eyatL3/wwBb"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [
+                    {
+                        "type": "client",
+                        "params": "(  845): nick add in apiservice oncreate\\xef\\xbc\\x81",
+                        "command": "NICK"
+                    }
+                ],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://lba.baidu.com/",
+                "http://loc.map.baidu.com/iofd.php",
+                "http://loc.map.baidu.com/user_err.php",
+                "http://loc.map.baidu.com/cc.php",
+                "https://sapi.skyhookwireless.com/wps2/location",
+                "http://loc.map.baidu.com/sdk_ep.php",
+                "https://sapi.skyhookwireless.com/wps2/reverse-geo",
+                "http://loc.map.baidu.com/statloc",
+                "http://cmyip.com/",
+                "http://loc.map.baidu.com/sdk.php",
+                "http://loc.map.baidu.com/offline_loc",
+                "http://loc.map.baidu.com/tcu.php",
+                "http://%s/%s",
+                "http://loc.map.baidu.com/wloc",
+                "http://180.149.144.31:8091/offline_loc",
+                "http://loc.map.baidu.com/oqur.php",
+                "http://itsdata.map.baidu.com/long-conn-gps/sdk.php",
+                "http://1212.ip138.com/ic.asp"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "2af5aec71475d776210c595513ccdaa6b94a03b8b8f8e28e4fba728e70a4cd49",
+                    "ssdeep": "24576:tLwZ7J78nhfi+Y8wyMkJKG4lXJqW/eWy:Z+J7gI8"
+                }
+            },
+            "api_key": {
+                "com::baidu::lbsapi::API_KEY": "kWhRpzRyOXKY1hu2DvBdpACc"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.ACTION_SHUTDOWN",
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.CAL",
+                "android.net.wifi.WIFI_STATE_CHANGED",
+                "android.net.wifi.RSSI_CHANGED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.net.wifi.STATE_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "设置",
+            "services": [
+                "com.android.googleapi.tzg.ApiServices",
+                "com.android.googleapi.tzg.KeepAliveService",
+                "com.baidu.location.f"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [
+                "android.test.runner"
+            ],
+            "providers": [],
+            "receivers": [
+                "com.android.googleapi.tzg.KeepAliveBroadCastReceiver",
+                "com.android.googleapi.tzg.TelReceiver",
+                "com.android.googleapi.tzg.GoogleReceiver",
+                "com.android.googleapi.tzg.ShutDownRecevier",
+                "com.android.googleapi.tzg.SMSReceiver"
+            ],
+            "activities": [
+                "com.android.googleapi.tzg.MainActivity",
+                "com.android.googleapi.tzg.CActivity"
+            ],
+            "certificate": {
+                "sha1": "2A0D96454D7794BC4D4FDAD0D76216D340C71CAB",
+                "serial": "0C3174EE",
+                "issuerDN": "/C=US/O=Android/CN=Android Debug",
+                "not_after": "Dec 27 03:34:17 2045 GMT",
+                "subjectDN": "/C=US/O=Android/CN=Android Debug",
+                "not_before": "Jan 4 03:34:17 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.READ_LOGS",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.CAMERA",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.SEND_SMS",
+                "android.permission.WRITE_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_CALL_LOG",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.PERMISSION_NAME",
+                "android.permission.CALL_PHONE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "com.android.email.permission.ACCESS_PROVIDER",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_CONTACTS"
+            ],
+            "package_name": "com.android.googleapi.ttzzgg",
+            "version_code": "1",
+            "main_activity": "com.android.googleapi.tzg.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/googleapi/tzg/ApiServices$5;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/googleapi/tzg/SMSReceiver;",
+                        "method": "sendSMS"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/googleapi/tzg/SMSReceiver;",
+                        "method": "sendSMS"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v6, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "GetGsmLocation"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "GetGsmLocation"
+                    },
+                    {
+                        "code": "invoke-virtual v11, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "GetGsmLocationSms"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https://sapi.skyhookwireless.com/wps2/location'",
+                        "class": "Lcom/baidu/location/b/k;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Lcom/baidu/location/b/m;",
+                        "method": "if"
+                    },
+                    {
+                        "code": "const-string v0, 'https://sapi.skyhookwireless.com/wps2/reverse-geo'",
+                        "class": "Lcom/baidu/location/g/b$a;",
+                        "method": "au"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-static Lcom/android/tool/DataModel/BaseInfo;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/googleapi/tzg/ApiServices;",
+                        "method": "getIMEI"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "getDeviceId"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/baidu/location/h/b;",
+                        "method": "cR"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v2, v3, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lcom/android/googleapi/tzg/CActivity$1;",
+                        "method": "surfaceCreated"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/android/googleapi/tzg/CActivity$1;",
+                        "method": "surfaceCreated"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v3, v4, v5, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lcom/android/googleapi/tzg/CActivity$1;",
+                        "method": "surfaceCreated"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v5, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/android/util/CompressTool;",
+                        "method": "MD5"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/baidu/location/b/j;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/baidu/location/f/a/c;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual/range v23, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/android/googleapi/tzg/ApiServices$3;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/android/googleapi/tzg/util/HttpTool;",
+                        "method": "getHtml"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/googleapi/tzg/ApiServices;",
+                        "method": "getExtSDCardPath"
+                    },
+                    {
+                        "code": "invoke-virtual v9, v10, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/android/googleapi/tzg/ApiServices;",
+                        "method": "getExtSDCardPath"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/googleapi/tzg/ApiServices;",
+                        "method": "getWifiAccount"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/DataModel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/android/googleapi/tzg/ApiServices;",
+                        "method": "queryAllRunningAppInfo"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v1, v0, Lcom/android/googleapi/tzg/KeepAliveService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/android/googleapi/tzg/KeepAliveService;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 19
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "path": "/system/framework/android.test.runner.jar:/data/app/com.android.googleapi.ttzzgg-1.apk",
+                    "time": 0.000241,
+                    "processname": "com.android.googleapi.ttzzgg"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "path": "/system/framework/android.test.runner.jar:/data/app/com.android.googleapi.ttzzgg-1.apk",
+                    "time": 0.564402,
+                    "processname": "com.android.googleapi.ttzzgg:remote"
+                },
+                {
+                    "pid": 872,
+                    "tid": 1073870640,
+                    "path": "/system/app/PackageInstaller.apk",
+                    "time": 2.324157,
+                    "processname": "com.android.packageinstaller"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000f000f00140400007d0415000000504b010214001400080808008790714a7ad6b2a3a6090000a8280000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a000008000000402100a8fd611684d4070084d407001100000000000000000000000000eb0900006173736574732f676f6f676c652e6a7067504b01020a000a0000080000004021007195ee1c69b1000069b1000011000000000000000000000000009ede07006173736574732f706c7567696e2e61706b504b01020a000a000008000000402100d718d06ac31e0000c31e00002400000000000000000000000000369008007265732f6472617761626c652d686470692d76342f69635f6c61756e636865722e706e67504b01020a000a00000800000040210099267a219d1100009d11000024000000000000000000000000003baf08007265732f6472617761626c652d6d6470692d76342f69635f6c61756e636865722e706e67504b01020a000a0000080000004021009cdc2acb712f0000712f000025000000000000000000000000001ac108007265732f6472617761626c652d78686470692d76342f69635f6c61756e636865722e706e67504b010214001400080808008790714a0d0832ddbf0000004c0100001c00000000000000000000000000cef008007265",
+                    "name": "/data/app/com.android.googleapi.ttzzgg-1.apk",
+                    "time": 0.608468,
+                    "processname": "com.android.googleapi.ttzzgg:remote"
+                },
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000f000f00140400007d0415000000504b010214001400080808008790714a7ad6b2a3a6090000a8280000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a000008000000402100a8fd611684d4070084d407001100000000000000000000000000eb0900006173736574732f676f6f676c652e6a7067504b01020a000a0000080000004021007195ee1c69b1000069b1000011000000000000000000000000009ede07006173736574732f706c7567696e2e61706b504b01020a000a000008000000402100d718d06ac31e0000c31e00002400000000000000000000000000369008007265732f6472617761626c652d686470692d76342f69635f6c61756e636865722e706e67504b01020a000a00000800000040210099267a219d1100009d11000024000000000000000000000000003baf08007265732f6472617761626c652d6d6470692d76342f69635f6c61756e636865722e706e67504b01020a000a0000080000004021009cdc2acb712f0000712f000025000000000000000000000000001ac108007265732f6472617761626c652d78686470692d76342f69635f6c61756e636865722e706e67504b010214001400080808008790714a0d0832ddbf0000004c0100001c00000000000000000000000000cef008007265",
+                    "name": "/data/app/com.android.googleapi.ttzzgg-1.apk",
+                    "time": 0.011471,
+                    "processname": "com.android.googleapi.ttzzgg"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "data": "7f454c46010101000000000000000000030028000100000000000000340000004cd007000002000534002000090028001b001a00060000003400000034000000340000002001000020010000040000000400000003000000540100005401000054010000130000001300000004000000010000000100000000000000000000000000000000a7070000a7070005000000001000000100000040ab070040bb070040bb07004c2300005027000006000000001000000200000044b8070044c8070044c8070020010000200100000600000004000000040000006801000068010000680100002400000024000000040000000400000051e574640000000000000000000000000000000000000000060000000000000001000070701607007016070070160700f0130000f0130000040000000400000052e5746440ab070040bb070040bb0700c0140000c014000006000000080000002f73797374656d2f62696e2f6c696e6b65720000040000001400000003000000474e5500f1315771849a18fd6a293362734e1a51fdcb929e00000000000000000000000000000000010000000000000000000000120000002d0000000000000000000000120000003a0000008d8c00007c00000012000c0055000000098d00006000000012000c00660000000000000000000000120000006d0000002cf206000800000012000c0084000000",
+                    "name": "/data/data/com.android.googleapi.ttzzgg/files/libgoogleapi.so",
+                    "time": 0.258292,
+                    "processname": "com.android.googleapi.ttzzgg"
+                },
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "data": "006c6962632e736f006c6962676f6f676c656170692e736f005f5f6378615f6174657869740073716c697465335f636f6d70696c656f7074696f6e5f757365640073716c697465335f7374726e69636d70007374726c656e005f5f61656162695f756e77696e645f6370705f7072300073716c697465335f636f6d70696c656f7074696f6e5f6765740073716c697465335f73746174757336340073716c697465335f6c6f670073716c697465335f6d757465785f656e7465720073716c697465335f6d757465785f6c656176650073716c697465335f737461747573005f5f737461636b5f63686b5f6661696c005f5f737461636b5f63686b5f6775617264005f5f61656162695f756e77696e645f6370705f7072310073716c697465335f64625f7374617475730073716c697465335f667265650073716c697465335f7666735f66696e640073716c697465335f696e697469616c697a6500737472636d700073716c697465335f636f6e666967005f5f61656162695f6d656d636c7238005f5f61656162695f6d656d636c72340073716c697465335f7666735f7265676973746572005f5f61656162695f696469760073716c697465335f7666735f756e72656769737465720073716c697465335f6d757465785f616c6c6f630073716c697465335f6d757465785f667265650073716c697465335f6d757465785f74",
+                    "name": "/data/data/com.android.googleapi.ttzzgg/files/libgoogleapi.so",
+                    "time": 1.800217,
+                    "processname": "com.android.googleapi.ttzzgg"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "name": "com.android.googleapi.tzg.ApiServices",
+                    "time": 0.113846,
+                    "processname": "com.android.googleapi.ttzzgg"
+                },
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "name": "com.android.googleapi.tzg.KeepAliveService",
+                    "time": 0.129078,
+                    "processname": "com.android.googleapi.ttzzgg"
+                }
+            ]
+        }
+    }
+}

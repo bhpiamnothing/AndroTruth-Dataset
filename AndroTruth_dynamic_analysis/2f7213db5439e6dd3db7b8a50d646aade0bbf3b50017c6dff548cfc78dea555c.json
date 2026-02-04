@@ -1,0 +1,907 @@
+{
+    "apk_info": {
+        "id": "KByDd23BN8z1Y8mn",
+        "url": "https://developer.koodous.com/apks/2f7213db5439e6dd3db7b8a50d646aade0bbf3b50017c6dff548cfc78dea555c/",
+        "sha256": "2f7213db5439e6dd3db7b8a50d646aade0bbf3b50017c6dff548cfc78dea555c",
+        "md5": "93605f21ce3583c0e013696919de81c4",
+        "sha1": "8de0e7c3593470e58bb86f496f99c3d2a66cffd9",
+        "app": "android.system",
+        "package_name": "com.android.system.manager",
+        "company": "Android",
+        "version": "1.5.4",
+        "image": "https://developer.koodous.com/media/apk_images/3b/67/3b670812014c9a949078ec0642c5dbbd196e1c6bdaa75cbeebcc2c431dc09f5e",
+        "size": 2106970,
+        "tags": [
+            "sms-thief",
+            "reflection",
+            "fakesys",
+            "telephony",
+            "trojan",
+            "svpeng"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2018-06-12T09:15:37+02:00",
+        "updated_at": "2023-03-30T16:18:05.686290+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "93605f21ce3583c0e013696919de81c4",
+                "name": "",
+                "path": "",
+                "sha1": "8de0e7c3593470e58bb86f496f99c3d2a66cffd9",
+                "size": 2106970,
+                "type": "Android package (APK), with MANIFEST.MF and drawables",
+                "yara": [],
+                "crc32": "D081193F",
+                "sha256": "2f7213db5439e6dd3db7b8a50d646aade0bbf3b50017c6dff548cfc78dea555c",
+                "sha512": "1df7be8045db1c6ca78c2a33096e28e6a5cd987ca92ccfa279fa87d892c66792bf222f044c3348f742f9377d29878c812add3951ca1a3eb3f5edf37257c950f0",
+                "ssdeep": "49152:zoU7c+KtjXna6T71q1BJhKwGuWMmfTF7ixAzG1FYhL6TisgV01Xb:zoUY+6XnrRqDJ4uqViaz2EuTvXb"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://xml.org/sax/handlers/LexicalHandler",
+                "http://103.66.217.15:8008/Dendroid",
+                "http://xml.org/sax/features/namespaces",
+                "http://xmlpull.org/v1/doc/features.html#process-namespaces",
+                "http://schemas.android.com/apk/res/android",
+                "http://www.w3.org/2001/XMLSchema-instance",
+                "http://www.w3.org/XML/1998/namespace",
+                "http://xml.org/sax/properties/declaration-handler",
+                "http://org.dom4j.io.DoucmentSource/feature",
+                "http://loc.map.baidu.com/sdk.php",
+                "https://github.com/Tencent/tinker/issues",
+                "http://www.w3.org/2001/XMLSchema",
+                "http://xml.org/sax/properties/lexical-handler",
+                "http://xml.org/sax/features/namespace-prefixes",
+                "http://schemas.android.com/apk/res-auto",
+                "http://xml.org/sax/features/use-locator2",
+                "http://xml.org/sax/features/validation",
+                "http://xml.org/sax/features/string-interning"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "e9b15157becb505934dfbf8dc57029b8ba2965877458424cf1e411e5adcbe455"
+                }
+            },
+            "api_key": {
+                "com.baidu.lbsapi.API_KEY": "PCPUrNuqjnFXoRBYGoU1Dp6MOvSqVSnG"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PHONE_STATE",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "android.system",
+            "services": [
+                "com.tencent.tinker.lib.service.DefaultTinkerResultService",
+                "com.baidu.location.f",
+                "com.android.system.manager.RobMoneyService",
+                "com.tencent.tinker.lib.service.TinkerPatchService$InnerService",
+                "com.android.system.manager.service.UpdateService",
+                "com.android.system.manager.service.SampleResultService",
+                "com.android.system.manager.service.AliveJobService",
+                "com.android.system.manager.service.UpdateService1",
+                "com.tencent.tinker.lib.service.TinkerPatchService",
+                "com.android.system.manager.BaseNotificationListener"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.android.system.manager.receiver.PhoneListener",
+                "com.android.system.manager.BootBroadcastReceiver",
+                "com.android.system.manager.receiver.MyDeviceAdminReceiver"
+            ],
+            "activities": [
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_05",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_09",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_07",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_03",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_04",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_05",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_06",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00",
+                "com.android.system.manager.TsetActivity",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_07",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_08",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_03",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_09",
+                "com.android.system.manager.activity.PermissionsActivity",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_03",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_04",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_05",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01_T",
+                "com.android.system.manager.activity.Camera2Activity",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_08",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_06",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_07",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_08",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_09",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00_T",
+                "com.android.system.manager.MyCameraActivity",
+                "com.android.system.manager.MainActivity",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_06",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_03",
+                "com.android.system.manager.activity.MyCameraActivity",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_04",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_05",
+                "com.android.system.manager.activity.UpdateActivity",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_06",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_07",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_08",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_09",
+                "com.android.system.manager.activity.UpdateActivity1",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01_T",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01",
+                "com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_04"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "sha256": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT",
+                "hash_algorithm": "sha1",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.CAMERA",
+                "android.permission.WRITE_SMS",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.INTERNET",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.WAKE_LOCK",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SEND_SMS",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.RECEIVE_SMS"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": false,
+            "is_signed_v3": false,
+            "package_name": "com.android.system.manager",
+            "version_code": "1",
+            "main_activity": "com.android.system.manager.TsetActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 147,
+                "png": 249,
+                "txt": 2,
+                "unknown": 28
+            },
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "sendSMS"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/system/manager/commands/SendSmsResponse;",
+                        "method": "mainfunction"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/interfcimpl/BaseInfo;",
+                        "method": "GetGsmLocation"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/interfcimpl/BaseInfo;",
+                        "method": "GetGsmLocation"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/interfcimpl/BaseInfo;",
+                        "method": "GetGsmLocation"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string/jumbo v1, https://",
+                        "class": "Landroid/support/v4/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string/jumbo v1, (((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)?(?:",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string/jumbo v1, ((?:\\b|$|^)(?:(?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)(?:",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v11, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV9;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual/range v19, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "onStartCommand"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/interfcimpl/BaseInfo;",
+                        "method": "getImsi"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v1, v2, v3, v4, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lcom/android/system/manager/MyCameraActivity;",
+                        "method": "autoFocus"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v6, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lcom/android/system/manager/MyCameraActivity;",
+                        "method": "openFacingFrontCamera"
+                    },
+                    {
+                        "code": "invoke-virtual v4, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/android/system/manager/MyCameraActivity;",
+                        "method": "openFacingFrontCamera"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v3, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/android/system/manager/commands/UploadDbResponse;",
+                        "method": "md5"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/android/system/manager/commands/WeiXinConcentResponse;",
+                        "method": "md5"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/android/system/manager/commands/WeiXinContactsResponse;",
+                        "method": "md5"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;",
+                        "method": "sendRequest"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "getScreenshot"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v5, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "getScreenshot"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/system/manager/MainActivity;",
+                        "method": "requestRootPermission"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/interfcimpl/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/interfcimpl/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/interfcimpl/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV14$AutoNightModeManager;",
+                        "method": "cleanup"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.5.4",
+            "androguard_version": "4.1.3",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "gz": 1,
+                "RSA": 1,
+                "dex": 1,
+                "png": 249,
+                "xml": 172,
+                "arsc": 1
+            },
+            "target_sdk_version": 22
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.8888018131256104,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.9281837940216064,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.99210786819458,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.0332298278808594,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 2.033352851867676,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 2.033463954925537,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 2.0335609912872314,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 2.0441579818725586,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 2.044536828994751,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 2.0445609092712402,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 2.0459678173065186,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 2.0461509227752686,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 2.0462639331817627,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 2.0463647842407227,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 2.0470948219299316,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 2.047294855117798,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 2.0475449562072754,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 2.0478978157043457,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.103421926498413,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.1083788871765137,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 2.124743938446045,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/base.apk.x86_64.flock",
+                    "time": 2.160160779953003,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/oat/x86_64/base.vdex",
+                    "time": 2.160461902618408,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/base.apk",
+                    "time": 2.166149854660034,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.166754961013794,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.1672399044036865,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/oat/x86_64/base.art",
+                    "time": 2.167703866958618,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/base.apk",
+                    "time": 2.232719898223877,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/isFirst.xml",
+                    "time": 2.34700083732605,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5886,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/wifi_sleep_policy.xml",
+                    "time": 2.7890098094940186,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db",
+                    "time": 3.1722347736358643,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db-journal",
+                    "time": 3.206127882003784,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases",
+                    "time": 3.5642149448394775,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db-wal",
+                    "time": 3.8008179664611816,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db-shm",
+                    "time": 3.8010098934173584,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases",
+                    "time": 3.8030948638916016,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db",
+                    "time": 3.8363678455352783,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db-wal",
+                    "time": 3.8381099700927734,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db",
+                    "time": 3.839289903640747,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db-wal",
+                    "time": 3.8397719860076904,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/version.xml",
+                    "time": 4.517070770263672,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/version.xml",
+                    "time": 4.532026767730713,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "636f6d2e616e64726f69642e73797374656d2e6d616e6167657200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.8890628814697266,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.889098882675171,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 2.0546069145202637,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.108252763748169,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.1087069511413574,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "504b0304",
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/base.apk",
+                    "time": 2.166454792022705,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.1669998168945312,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.167437791824341,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "6172740a3035360000803d78181001002746b15300a03e7800b03e78899a3f7800b07a7800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000d0040000d004000000000000d004000000000000d004000000000000d004000000000000d004000000000000d004000000e00000d0e40000c80f000098f40000801b00000020010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000001c730000",
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/oat/x86_64/base.art",
+                    "time": 2.167933940887451,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [
+                "get_device_id",
+                "is_admin_active"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.957920789718628,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/app/com.android.system.manager-CpQMK0nUm2b1QHPECY245A==/base.apk.x86_64.flock",
+                    "time": 2.1602728366851807,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/isFirst.xml.bak",
+                    "time": 2.3684589862823486,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5886,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/wifi_sleep_policy.xml.bak",
+                    "time": 2.818173885345459,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/databases/database.db-journal",
+                    "time": 3.7739369869232178,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/version.xml.bak",
+                    "time": 4.531993865966797,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/version.xml.bak",
+                    "time": 4.53353476524353,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5794,
+                    "tid": 5854,
+                    "data": "3530303030",
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 2.0009567737579346,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c626f6f6c65616e206e616d653d2269734669727374222076616c75653d227472756522202f3e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/isFirst.xml",
+                    "time": 2.348798990249634,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5882,
+                    "data": "3530303030",
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/isFirst.xml",
+                    "time": 2.645901918411255,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5886,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c696e74206e616d653d22776966695f736c6565705f706f6c696379222076616c75653d223222202f3e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/wifi_sleep_policy.xml",
+                    "time": 2.789052963256836,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d226d6435223e3c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/version.xml",
+                    "time": 4.519519805908203,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 5794,
+                    "tid": 5794,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2276657273696f6e223e332e30313c2f737472696e673e0a202020203c737472696e67206e616d653d226d6435223e3c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.android.system.manager/shared_prefs/version.xml",
+                    "time": 4.532448768615723,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

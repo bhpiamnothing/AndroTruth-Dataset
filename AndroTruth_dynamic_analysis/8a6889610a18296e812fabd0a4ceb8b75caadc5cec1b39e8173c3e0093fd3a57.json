@@ -1,0 +1,595 @@
+{
+    "apk_info": {
+        "id": "WeaVGYNYZ4nO7pAx",
+        "url": "https://developer.koodous.com/apks/8a6889610a18296e812fabd0a4ceb8b75caadc5cec1b39e8173c3e0093fd3a57/",
+        "sha256": "8a6889610a18296e812fabd0a4ceb8b75caadc5cec1b39e8173c3e0093fd3a57",
+        "md5": "01b6f0220794476fe19a54c049600ab3",
+        "sha1": "eb9dfde47a393bca666e947f285f16c20baf6c32",
+        "app": "Flash Player",
+        "package_name": "com.adobe.flashplayer",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/b7/0c/b70cc898ec2b591993f42b5731442f15a16f4806c761219a2cb7d03d1901e02c",
+        "size": 582835,
+        "tags": [
+            "sova",
+            "trojan",
+            "bankbot",
+            "banker"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-04-15T16:35:14.357736+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.2.2/27246/Mon Apr 15 08:24:36 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "15.04.2024 12:15:43 (Build: 106972)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.Anubis"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-04-15T12:43:50.041220+02:00",
+        "matches_count": 4,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2021-07-14T18:05:40+02:00",
+        "updated_at": "2024-08-18T07:04:03.746194+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "01b6f0220794476fe19a54c049600ab3",
+                    "name": "",
+                    "path": "",
+                    "sha1": "eb9dfde47a393bca666e947f285f16c20baf6c32",
+                    "size": 582835,
+                    "type": "Zip archive data",
+                    "yara": [],
+                    "crc32": "212CBBD7",
+                    "sha256": "8a6889610a18296e812fabd0a4ceb8b75caadc5cec1b39e8173c3e0093fd3a57",
+                    "sha512": "ac3031a6dbc5bb0d1e609979336487f14efe58f8e87480e5ef7f79c2abae56977ca444bbb5bbc7970d9c416f9c754b9fedf2bdef3b7b311c2e95e07350f9c892",
+                    "ssdeep": "12288:C89uYjYV1jiNQ7l5DFQo2d8GmEFDipRdWp8+iZiZ5t:9jYniCF6d8iiXg825t"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://google.com/",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://api.ipify.org",
+                "https://api.telegram.org",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "77e9fc91cb3206a1441dedfc417f87b1fb3d7d452a9f7d1956932b87af65db06"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.provider.Telephony.SMS_DELIVER",
+                "com.htc.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.SENDTO",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "Flash Player",
+            "services": [
+                "com.adobe.flashplayer.service.AccessibilityServiceImpl",
+                "com.adobe.flashplayer.service.CBWatcherService",
+                "com.adobe.flashplayer.service.GlobalManagingService",
+                "com.adobe.flashplayer.service.NotificationListener",
+                "com.adobe.flashplayer.service.RequestService",
+                "com.adobe.flashplayer.service.SmsSendService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "com.squareup.picasso.PicassoProvider"
+            ],
+            "receivers": [
+                "com.adobe.flashplayer.receivers.AlarmBroadcastReceiver",
+                "com.adobe.flashplayer.receivers.BootReceiver",
+                "com.adobe.flashplayer.receivers.MmsReceiver",
+                "com.adobe.flashplayer.receivers.SmsReceiver"
+            ],
+            "activities": [
+                "com.adobe.flashplayer.ui.LauncherActivity",
+                "com.adobe.flashplayer.ui.GrantAccessibilityActivity",
+                "com.adobe.flashplayer.ui.GrantIgnoreBatteryOptimizationsActivity",
+                "com.adobe.flashplayer.ui.GrantPermissionsActivity",
+                "com.adobe.flashplayer.ui.GrantAdminActivity",
+                "com.adobe.flashplayer.ui.WebViewActivity",
+                "com.adobe.flashplayer.ui.SmsActivity"
+            ],
+            "certificate": {
+                "sha1": "54675A89255D7F192D8E4132179590F2F6FBF9A8",
+                "serial": "1",
+                "issuerDN": "CN = Android Debug, O = Android, C = US",
+                "not_after": "Oct 3 14:41:18 2048 GMT",
+                "subjectDN": "CN = Android Debug, O = Android, C = US",
+                "not_before": "Oct 11 14:41:18 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.CALL_PHONE",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.INTERNET",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_MMS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SMS"
+            ],
+            "package_name": "com.adobe.flashplayer",
+            "version_code": "1",
+            "main_activity": "com.adobe.flashplayer.ui.LauncherActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v3 ... v8, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/adobe/flashplayer/service/RequestService$b;",
+                        "method": "k"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v2, 'https://api.telegram.org'",
+                        "class": "Lg/a/a/i/b/c;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v2, 'https'",
+                        "class": "Li/a0$a;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v5, 'https:'",
+                        "class": "Li/a0$a;",
+                        "method": "d"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lj/j;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v1, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lj/j;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lj/x;",
+                        "method": "b"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Ld/a/a/p;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lj/w;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Ld/a/n;",
+                        "method": "T"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lg/a/a/o/d;",
+                        "method": "c"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v10, v2, v1, Landroid/app/Service;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/adobe/flashplayer/service/GlobalManagingService;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v10, v2, v1, Landroid/app/Service;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/adobe/flashplayer/service/GlobalManagingService;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v0, Landroid/app/Service;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/adobe/flashplayer/service/GlobalManagingService;",
+                        "method": "onDestroy"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 21,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 30
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "172.67.74.152",
+                    "domain": "api.ipify.org",
+                    "hostname": "api.ipify.org"
+                }
+            ],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.2112598419189453,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/base.apk.x86_64.flock",
+                    "time": 2.2601170539855957,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/oat/x86_64/base.vdex",
+                    "time": 2.3255438804626465,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/base.apk",
+                    "time": 2.334641933441162,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.3564748764038086,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.388960838317871,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/oat/x86_64/base.art",
+                    "time": 2.393249034881592,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/base.apk",
+                    "time": 2.4226248264312744,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/granted_accesses.xml",
+                    "time": 2.9161429405212402,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/granted_accesses.xml",
+                    "time": 2.925060987472534,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml",
+                    "time": 2.9439890384674072,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml",
+                    "time": 2.991848945617676,
+                    "processname": "com.adobe.flashplayer"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "data": "636f6d2e61646f62652e666c617368706c61796572000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.2131898403167725,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.213251829147339,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "data": "504b0304",
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/base.apk",
+                    "time": 2.3349618911743164,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.3637640476226807,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.3928639888763428,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "data": "6172740a3035360000803d78700301009f8a369800903e7800a03e7800f03e7800d04b7800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000f24d0000",
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/oat/x86_64/base.art",
+                    "time": 2.3949170112609863,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5744,
+                    "data": "3232320000000001000004000000000200000001000000060000001002000000681a0dcd00000000000000000000000000000001000004000000000200000001000000060000001002000000681a0ccd00000000000000000000000000000001000004000000000200000001000000060000001002000000ac434a9800000000000000000000000000000000",
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml",
+                    "time": 3.3369288444519043,
+                    "processname": "com.adobe.flashplayer"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "tid": 5672,
+                    "data": "YTA1NDUxOTMueHNwaC5ydQ==",
+                    "time": 2.795322895050049,
+                    "result": [
+                        97,
+                        48,
+                        53,
+                        52,
+                        53,
+                        49,
+                        57,
+                        51,
+                        46,
+                        120,
+                        115,
+                        112,
+                        104,
+                        46,
+                        114,
+                        117
+                    ],
+                    "algorithm": "base64_decode",
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "tid": 5744,
+                    "data": "a29kZXI=",
+                    "time": 2.9838180541992188,
+                    "result": [
+                        107,
+                        111,
+                        100,
+                        101,
+                        114
+                    ],
+                    "algorithm": "base64_decode",
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "tid": 5749,
+                    "data": "a29kZXI=",
+                    "time": 3.228153944015503,
+                    "result": [
+                        107,
+                        111,
+                        100,
+                        101,
+                        114
+                    ],
+                    "algorithm": "base64_decode",
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "tid": 5748,
+                    "data": "a29kZXI=",
+                    "time": 3.2282638549804688,
+                    "result": [
+                        107,
+                        111,
+                        100,
+                        101,
+                        114
+                    ],
+                    "algorithm": "base64_decode",
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "tid": 5749,
+                    "data": "a29kZXI=",
+                    "time": 3.40333890914917,
+                    "result": [
+                        107,
+                        111,
+                        100,
+                        101,
+                        114
+                    ],
+                    "algorithm": "base64_decode",
+                    "processname": "com.adobe.flashplayer"
+                }
+            ],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/app/com.adobe.flashplayer-w1W_FeKtIPGkyHh8a1iK-A==/base.apk.x86_64.flock",
+                    "time": 2.260993003845215,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/granted_accesses.xml.bak",
+                    "time": 2.9182779788970947,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/granted_accesses.xml.bak",
+                    "time": 2.941087007522583,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml.bak",
+                    "time": 2.9454238414764404,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml.bak",
+                    "time": 3.0085809230804443,
+                    "processname": "com.adobe.flashplayer"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c6c6f6e67206e616d653d226163636573736962696c6974795f726571756573745f74696d65222076616c75653d223137353236323637373132363522202f3e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/granted_accesses.xml",
+                    "time": 2.9163339138031006,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c6c6f6e67206e616d653d226163636573736962696c6974795f726571756573745f74696d65222076616c75653d223137353236323637373132363522202f3e0a202020203c6c6f6e67206e616d653d227065726d697373696f6e735f726571756573745f74696d65222076616c75653d223137353236323637373132363722202f3e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/granted_accesses.xml",
+                    "time": 2.9367518424987793,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5738,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c626f6f6c65616e206e616d653d2266697273745f6c61756e6368222076616c75653d2266616c736522202f3e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml",
+                    "time": 2.9446659088134766,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5672,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c626f6f6c65616e206e616d653d2266697273745f6c61756e6368222076616c75653d2266616c736522202f3e0a202020203c737472696e67206e616d653d22626f745f6964223e6237306164393739643538393c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml",
+                    "time": 2.993072986602783,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5744,
+                    "data": "67657461646472696e666f206170692e69706966792e6f7267205e2031303234203020312030203000",
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml",
+                    "time": 3.194685935974121,
+                    "processname": "com.adobe.flashplayer"
+                },
+                {
+                    "pid": 5672,
+                    "tid": 5744,
+                    "data": "16030100ae010000aa030354cff3656b28a49bc98169143a45aead24069f5a5f210fe48226f0c723fe11f000001cc02bc02ccca9c02fc030cca8c009c00ac013c014009c009d002f003501000065ff0100010000000012001000000d6170692e69706966792e6f72670017000000230000000d001400120403080404010503080505010806060102010005000501000000000010000b000908687474702f312e31000b00020100000a00080006001d00170018",
+                    "name": "/data/user/0/com.adobe.flashplayer/shared_prefs/device_info.xml",
+                    "time": 3.4412758350372314,
+                    "processname": "com.adobe.flashplayer"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

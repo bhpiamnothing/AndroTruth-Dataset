@@ -1,0 +1,229 @@
+{
+    "apk_info": {
+        "id": "Dx5ydB8YAPvGnQ63",
+        "url": "https://developer.koodous.com/apks/3938213719e2430af2082409f3e34f01f76e0c57fdb58342cbb2d7dadd37777f/",
+        "sha256": "3938213719e2430af2082409f3e34f01f76e0c57fdb58342cbb2d7dadd37777f",
+        "md5": "57d2db70ceeaed381f88113ddba16f85",
+        "sha1": "2cf9bbb75daebb7bf45f3ff4eb2e070d06df7811",
+        "app": "zipunzip",
+        "package_name": "com.example.zipunzip",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2017/09/13/11cf7be3879cf4cebc6396ba7bac96d8117a28bfe45b159a6aedae9187a594c5",
+        "size": 1747527,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 3,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2017-09-13T22:35:56+02:00",
+        "updated_at": "2023-03-30T15:39:43.424931+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "57d2db70ceeaed381f88113ddba16f85",
+                    "sha1": "2cf9bbb75daebb7bf45f3ff4eb2e070d06df7811",
+                    "size": 1747527,
+                    "crc32": "1E54CB47",
+                    "sha256": "3938213719e2430af2082409f3e34f01f76e0c57fdb58342cbb2d7dadd37777f",
+                    "sha512": "a6980798fde64c5e81bdb32aa7b20d5cf4536ee08aa7c56f21426cbbd76f3b224a1cdcb2b432584ba3343668616f0153e5b84dc4608df0d59e626650c44d3887",
+                    "ssdeep": "49152:AASTxhA5Eitg5kHGY7V5gciR33ktiDBswT+MVGW+q9v4K3MTUcLoviKq:XSTxhA5htg5kHGY7VsR33/DBsS+rq9vM"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "Cipher.RSA/OAEP",
+                "Cipher.RSA/RAW",
+                "Alg.Alias.Cipher.RSA//PKCS1PADDING",
+                "Alg.Alias.Cipher.RSA//NOPADDING",
+                "Alg.Alias.Cipher.RSA//RAW",
+                "www.bouncycastle.org",
+                "Cipher.RSA/2",
+                "X509Store.CRL/COLLECTION",
+                "X509Store.CRL/LDAP",
+                "Alg.Alias.Mac.DES/CFB8",
+                "Alg.Alias.Cipher.RSA//ISO9796-1PADDING",
+                "Cipher.RSA/PKCS1",
+                "Cipher.RSA/ISO9796-1",
+                "Alg.Alias.Signature.SHA/DSA",
+                "Cipher.RSA/1",
+                "Alg.Alias.Cipher.RSA//OAEPPADDING"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "9a5dbdc7e5853bc8629d927b87ec00619d4bc5e8d23274a2e63b3013dfb1638f",
+                    "ssdeep": "49152:1FnOUCXcUMNns7DJlkudzxso4kb+CuXucA83Q/ptlvIh:1KMNn4J5P1b+CuXuoQhv+"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "zipunzip",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.example.zipunzip.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "C88DCC00DA2B66A1AE9BDB4E070CCE7B06337CB5",
+                "serial": "58C78CC9",
+                "issuerDN": "/C=US/O=Android/CN=Android Debug",
+                "not_after": "Mar 7 06:25:13 2047 GMT",
+                "subjectDN": "/C=US/O=Android/CN=Android Debug",
+                "not_before": "Mar 14 06:25:13 2017 GMT"
+            },
+            "permissions": [
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.example.zipunzip",
+            "version_code": "1",
+            "main_activity": "com.example.zipunzip.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Lorg/bouncycastle/x509/PKIXCertPathReviewer;",
+                        "method": "getCRL"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lorg/bouncycastle/ocsp/CertificateID;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lorg/bouncycastle/ocsp/CertificateID;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lorg/bouncycastle/ocsp/RespID;",
+                        "method": "<init>"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lorg/apache/commons/io/FileUtils;",
+                        "method": "copyURLToFile"
+                    },
+                    {
+                        "code": "invoke-interface v4, v0, Lorg/apache/commons/io/filefilter/IOFileFilter;->accept(Ljava/io/File;)Z",
+                        "class": "Lorg/apache/commons/io/filefilter/FileFilterUtils;",
+                        "method": "filter"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lorg/apache/commons/io/FileSystemUtils;",
+                        "method": "openProcess"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lorg/apache/commons/io/FileSystemUtils;",
+                        "method": "openProcess"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lorg/bouncycastle/jce/provider/ProviderUtil;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 8,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.example.zipunzip-1.apk",
+                    "time": 0.532162,
+                    "processname": "com.example.zipunzip"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "504b0506000000005e015e01e48800004d211a000000504b01021400140008080800cc49a84a32856f7201030000f4070000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a0000080000004021009d0500240a0000000a0000000d00000000000000000000000000460300006173736574732f616d2e747874504b01020a000a000008000000402100fb38db6210000000100000000f000000000000000000000000007b0300006173736574732f616d2f312e747874504b01020a000a0000080000004021000000000000000000000000000f00000000000000000000000000b80300006173736574732f616d2f322e747874504b01020a000a000008000000402100b5e53bfd849e0400849e04000e00000000000000000000000000e50300006173736574732f646c6c2e7a6970504b01021400140008080800cc49a84a6b16942fdb0000008c010000180000000000000000000000000095a204007265732f616e696d2f6162635f666164655f696e2e786d6c504b01021400140008080800cc49a84a137a6f39dc0000008c0100001900000000000000000000000000b6a304007265732f616e696d2f6162635f666164655f6f75742e786d6c504b01021400140008080800cc49a84abe3f6673e2000000900100002000000000000000000000",
+                    "name": "/data/app/com.example.zipunzip-1.apk",
+                    "time": 0.571983,
+                    "processname": "com.example.zipunzip"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "504b03041400080808004860984a00000000000000000000000013000000646c6c2f64796e616d69635f6465782e6a617274b665581ccf13358a2feeaec1dddd1d020487e0b07880e0eeee0102c10916dc21b8b301820782cb028bfb4270e7eeef7fef87fb7e78f7e9e9ed997aa6bba6ead439a5a586884408878a8a0ae71499ae0af7fffb11c221c1a92beac972aa682871abcb6aa82829eaea71a92bbd8ec3c15da94f4e7c50e3e4fa8ba5c6c9f66772ba5987679e1fb2e7a152377333a6a9c1018fc178c0404c52417c5256faf1c24394a48c29b3b4fc504cdf98b5540f2e830261e1ca031e4e4b0d80aac57e45a2043b4d057669fd5f7dc1805dd69f2d3d3d6d3db96c6cfd767b7d83f4f45fdfdefa6c5599726cf854e094c76de4c870d3d9e275e4ce834ba3c9c53e7da0a34aa58ba3333c9c8a484808a31b8ea83cb4320b5cb13debf55d6acb0cb238f7dce0effc86e4b3b419f2fa183df2edaef35c177a745610687f99fed097e9bcaafd37c9604a2dc7c277eecc5a2af43cf1203434182a9ab728c9eb034d79e1e6ab4c8fdbc771a56078e8ee00179571e93c2acb3a70fe885d9e7250e096d788c3edb5c67fa164740c3f291427a072b49cc9a4569094a63bc67a0c970592926297872b02053bd0c0006a389c70659009c4ec02ef9e3008e34b4afcacacf50cd935dccb002e0ffe17c46f20011e1c53b4b6484908aa",
+                    "name": "/data/data/com.example.zipunzip/app_release/dll.zip",
+                    "time": 5.155292,
+                    "processname": "com.example.zipunzip"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

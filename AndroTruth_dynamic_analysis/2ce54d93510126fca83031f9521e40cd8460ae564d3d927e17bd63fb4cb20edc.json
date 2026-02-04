@@ -1,0 +1,741 @@
+{
+    "apk_info": {
+        "id": "Lv8ydazDBgN1EQ3q",
+        "url": "https://developer.koodous.com/apks/2ce54d93510126fca83031f9521e40cd8460ae564d3d927e17bd63fb4cb20edc/",
+        "sha256": "2ce54d93510126fca83031f9521e40cd8460ae564d3d927e17bd63fb4cb20edc",
+        "md5": "f6ffa064a492e91854d35e7f225b1313",
+        "sha1": "963a8ad06b8644ccb5921586b00d723e2b627161",
+        "app": "WinkChat",
+        "package_name": "com.winkchat",
+        "company": "winkchat",
+        "version": "1.1",
+        "image": "https://developer.koodous.com/media/apk_images/2018/03/15/e83a12e3fd5c3eecaf2d8668662b8be9c541abf4b410b13b85318b11cb6d53f0",
+        "size": 10811657,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -4,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 16,
+        "comments_count": 0,
+        "votes_count": 4,
+        "created_at": "2018-03-15T02:07:13+01:00",
+        "updated_at": "2023-03-30T15:56:33.204514+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "f6ffa064a492e91854d35e7f225b1313",
+                    "sha1": "963a8ad06b8644ccb5921586b00d723e2b627161",
+                    "size": 10811657,
+                    "crc32": "4CFF2944",
+                    "sha256": "2ce54d93510126fca83031f9521e40cd8460ae564d3d927e17bd63fb4cb20edc",
+                    "sha512": "7aab1b1264f074061333bc4c9235be8a87ed3be282afbc2245fc715787bd384bb8d1d49961f853a6364809c26a2dadb5d1ccbdad0e51e04eac570f888f63674f",
+                    "ssdeep": "196608:dbjGjQgrJRWaksJGJ5Zwxiq9qyJV5PTQmnYPe3dh65eaRV:dfGjZRWDsG58JBFnYPeNo5eYV"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "app-measurement.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "216.58.205.238",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "app-measurement.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "192.64.114.147",
+                    "216.58.205.238"
+                ],
+                "domains": [
+                    {
+                        "ip": "172.217.16.206",
+                        "domain": "app-measurement.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://localhost",
+                "https://plus.google.com/",
+                "google.com/iid",
+                "gcm.googleapis.com/refresh",
+                "https://github.com/vinc3m1",
+                "https://app-measurement.com/a",
+                "https://www.google.com",
+                "www.example.com",
+                "http://schemas.android.com/apk/res/android",
+                "https://www.googleapis.com/auth/games",
+                "https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "96364abe188f7b911d052b6ab3c64d7ebbde570869d2736206e89e5679748828",
+                    "ssdeep": "24576:/YQiwf6mcL/ZzcI7/1HeoOBw1olVowRjo1izXzqF6ovOT6ApyaMj:/dzML/j7woOu+o1KMTrhbj"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "com.winkchat.message_arrived_action",
+                "android.intent.action.PACKAGE_ADDED",
+                "com.google.android.c2dm.intent.RECEIVE",
+                "com.android.vending.INSTALL_REFERRER",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.MAIN",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "WinkChat",
+            "services": [
+                "com.winkchat.services.MyFirebaseMessagingService",
+                "com.winkchat.services.DeviceInfoService",
+                "com.winkchat.services.FileDownloader",
+                "com.winkchat.services.FileUploader",
+                "org.eclipse.paho.android.service.MqttService",
+                "com.winkchat.services.InternetConnection",
+                "com.winkchat.services.MqttConnectionService",
+                "com.winkchat.services.MyFirebaseInstanceIdService",
+                "com.google.firebase.iid.FirebaseInstanceIdService",
+                "com.winkchat.services.MqttMsgHandlerService",
+                "com.winkchat.services.LaunchApp",
+                "com.winkchat.services.ScreenService",
+                "com.winkchat.services.MsgSenderService",
+                "com.google.android.gms.measurement.AppMeasurementJobService",
+                "com.google.firebase.messaging.FirebaseMessagingService",
+                "com.google.android.gms.auth.api.signin.RevocationBoundService",
+                "com.google.android.gms.measurement.AppMeasurementService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "com.google.firebase.provider.FirebaseInitProvider"
+            ],
+            "receivers": [
+                "com.winkchat.receivers.PackageAddedRemovedReceiver",
+                "com.google.android.gms.measurement.AppMeasurementReceiver",
+                "com.google.firebase.iid.FirebaseInstanceIdInternalReceiver",
+                "com.winkchat.receivers.ConnectivityChangedReceiver",
+                "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+                "com.winkchat.receivers.ScreenReceiver",
+                "com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            ],
+            "activities": [
+                "com.winkchat.activities.MsgReceiverActivity",
+                "com.winkchat.activities.SplashActivity",
+                "com.winkchat.activities.SignInActivity",
+                "com.winkchat.activities.SignUpActivity",
+                "com.winkchat.activities.MainActivity",
+                "com.google.android.gms.common.api.GoogleApiActivity",
+                "com.winkchat.activities.MsgSenderActivity",
+                "com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            ],
+            "certificate": {
+                "sha1": "EC8615AEABE2A7A015355618A4542AE03E7C8379",
+                "serial": "26D74FA4",
+                "issuerDN": "/CN=winkchat",
+                "not_after": "Mar 2 09:41:06 2043 GMT",
+                "subjectDN": "/CN=winkchat",
+                "not_before": "Mar 8 09:41:06 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "com.google.android.c2dm.permission.RECEIVE",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.INTERNET",
+                "com.winkchat.permission.C2D_MESSAGE"
+            ],
+            "package_name": "com.winkchat",
+            "version_code": "2",
+            "main_activity": "com.winkchat.activities.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v2, 'https'",
+                        "class": "Lcom/bumptech/glide/d/c/q;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, 'https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps'",
+                        "class": "Lcom/google/android/gms/a/a/f;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Lcom/google/android/gms/auth/api/credentials/Credential;",
+                        "method": "<init>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV9;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/l;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/o;",
+                        "method": "a"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/winkchat/e/a;",
+                        "method": "b"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v1, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/bumptech/glide/d/b/b/j;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/google/android/gms/internal/bt;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/google/android/gms/internal/da;",
+                        "method": "b"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserCompat$l;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserServiceCompat$f;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/bumptech/glide/d/a/f$a;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/bumptech/glide/f;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/google/android/gms/internal/wk;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/winkchat/e/a;",
+                        "method": "a"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v2, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/winkchat/e/a;",
+                        "method": "g"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/g$b;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/g$b;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/bumptech/glide/manager/e;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [
+                "com.winkchat.permission.C2D_MESSAGE"
+            ],
+            "displayed_version": "1.1",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "192.64.114.147",
+                    "hostname": "192.64.114.147"
+                },
+                {
+                    "ip": "216.58.205.238",
+                    "hostname": "app-measurement.com"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.winkchat-1.apk",
+                    "time": 0.07528,
+                    "processname": "com.winkchat"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/852/net/if_inet6",
+                    "time": 6.658858,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "3\n",
+                    "name": "/sys/devices/virtual/net/sit0/ifindex",
+                    "time": 6.789892,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705432904,
+                    "data": "286aa76079c8f81f67ef9b79444071bea92a48ae",
+                    "name": "/dev/urandom",
+                    "time": 18.07421,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/852/net/if_inet6",
+                    "time": 6.819609,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705880128,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/852/net/if_inet6",
+                    "time": 6.829694,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705880128,
+                    "data": "1\n",
+                    "name": "/sys/devices/virtual/net/lo/ifindex",
+                    "time": 6.638879,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "2\n",
+                    "name": "/sys/devices/platform/smc91x.0/net/eth0/ifindex",
+                    "time": 6.708797,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705880128,
+                    "data": "2\n",
+                    "name": "/sys/devices/platform/smc91x.0/net/eth0/ifindex",
+                    "time": 6.709156,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/852/net/if_inet6",
+                    "time": 6.74966,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "data": "b0f2bc8184d53070604b447dff9120b7bbfed6aa",
+                    "name": "/dev/urandom",
+                    "time": 5.268135,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "1\n",
+                    "name": "/sys/devices/virtual/net/lo/ifindex",
+                    "time": 6.631489,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705880128,
+                    "data": "3\n",
+                    "name": "/sys/devices/virtual/net/sit0/ifindex",
+                    "time": 6.799319,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705880128,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/852/net/if_inet6",
+                    "time": 6.750097,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "data": "com.winkchat",
+                    "name": "/proc/852/cmdline",
+                    "time": 5.24336,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "data": "504b050600000000f702f702ac15010047e3a3000000504b01021703140000000800000000006b6111e0040c000094350000130000000000000000002000b68100000000416e64726f69644d616e69666573742e786d6c504b010218001400000008000000000082de56d906040000470400001100000000000000000000000000350c00004d4554412d494e462f434552542e525341504b01021800140000000800000000000101dd5f83580000f32a010010000000000000000000000000006a1000004d4554412d494e462f434552542e5346504b0102180014000000080000000000f388bc1f65580000c82a010014000000000000000000000000001b6900004d4554412d494e462f4d414e49464553542e4d46504b0102140014000008080000000000c641f33c810000009f0000001500000000000000000000000000b2c100006275696c642d646174612e70726f70657274696573504b01021400140000080800000000007f6e65281f010000a1020000110000000000000000000000000066c2000062756e646c652e70726f70657274696573504b0102180014000000080000000000ced63e3cfeb114006c3031000b00000000000000000000000000b4c30000636c61737365732e646578504b01021400140000080800000000005b532cda68000000850000002d00000000000000000000000000db7515006a",
+                    "name": "/data/app/com.winkchat-1.apk",
+                    "time": 0.093996,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "504b030414000808080001926d4600000000000000000000000012000000313432363236363936323036312e6a736f6e95584d6fdb4610fd2b0b9d5ac06645598991dca88fd86c444b1029bb6915182b72256db5dc65b8a46c35f0b1a7f656f4dc538f050ae4d04bd17f5323fd179d2529d9262952d6412038ef3deececcce0cf9b1613bc3b171d66fbc6e7c9c362676bf776d8f8c6e7fda78dd3c9a368c4bc31c189d41ffe1ee5de3a801d76f1f93c660f80e2e01da1fc0f5b47145f9aabbc4d1b4012a193c31b8c2d76ec0e826c6bbf760b6dfd94edf2a4818dc0b05f590bd9111f10b42383583c6d1139a7a4066d366d85dc5812bf89c867ee952f620739a1d169348886889ec250e49b5d2165b5409c58d2461357b8bc971bb98b931c391a8a6bb3b58ab4c82700fd70a64a03c9b84119d53174704995c4698b19aadb88af180cceb091e613792d5123b508e3d8270e1054186eb1229d1396141cd6a3c324fd4282f5b0c13eeaa862e576e8aca717b648d1c2198ace1af0913814f785450e8fb98b24a36491179de2d1c220e5eb049b8a6e0886a8d0c5d92dce04c742e58755e2f30c3b79b76817e96c47753c7559893e2693d77ac01baa4e4a6267ccbc867eb0c96933079104708c250eb02aa90de169893d9969b15d9cc040e3df48531b4475fd60bfa245a0a4f8353477941f5f39f7fddfff1f3fd4f7ffff7dba7cfff",
+                    "name": "/data/data/com.winkchat/files/U/1426266962697_3233589092.zip",
+                    "time": 9.387078,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705880128,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/852/net/if_inet6",
+                    "time": 6.659104,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "{\"STORAGE\":\"{\\\"USED_SPACE\\\":0,\\\"AVAILABLE_SPACE\\\":0}\",\"PACKAGE\":\"{\\\"USER\\\":[{\\\"LABEL\\\":\\\"WinkChat\\\",\\\"PACKAGE\\\":\\\"com.winkchat\\\"}],\\\"SYSTEM\\\":[{\\\"LABEL\\\":\\\"Android System\\\",\\\"PACKAGE\\\":\\\"android\\\"},{\\\"LABEL\\\":\\\"com.android.backupconfirm\\\",\\\"PACKAGE\\\":\\\"com.android.backupconfirm\\\"},{\\\"LABEL\\\":\\\"Bluetooth Share\\\",\\\"PACKAGE\\\":\\\"com.android.bluetooth\\\"},{\\\"LABEL\\\":\\\"Browser\\\",\\\"PACKAGE\\\":\\\"com.android.browser\\\"},{\\\"LABEL\\\":\\\"Calculator\\\",\\\"PACKAGE\\\":\\\"com.android.calculator2\\\"},{\\\"LABEL\\\":\\\"Calendar\\\",\\\"PACKAGE\\\":\\\"com.android.calendar\\\"},{\\\"LABEL\\\":\\\"Certificate Installer\\\",\\\"PACKAGE\\\":\\\"com.android.certinstaller\\\"},{\\\"LABEL\\\":\\\"Contacts\\\",\\\"PACKAGE\\\":\\\"com.android.contacts\\\"},{\\\"LABEL\\\":\\\"Package Access Helper\\\",\\\"PACKAGE\\\":\\\"com.android.defcontainer\\\"},{\\\"LABEL\\\":\\\"Clock\\\",\\\"PACKAGE\\\":\\\"com.android.deskclock\\\"},{\\\"LABEL\\\":\\\"Dev Tools\\\",\\\"PACKAGE\\\":\\\"com.android.development\\\"},{\\\"LABEL\\\":\\\"Email\\\",\\\"PACKAGE\\\":\\\"com.android.email\\\"},{\\\"LABEL\\\":\\\"Exchange Services\\\",\\\"PACKAGE\\\":\\\"com.android.exchange\\\"},{\\\"LABEL\\",
+                    "name": "/data/data/com.winkchat/files/C/1426266962061.json",
+                    "time": 8.829847,
+                    "processname": "com.winkchat"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "32, -107, -51, 71, 103, -127, -30, 64, -114, -14, -99, -8, -93, 29, 23, -35, -126, 52, 68, -91, -61, -125, 89, 2, 30, -1, -108, 15, 97, -63, -85, -114",
+                    "pid": 852,
+                    "tid": 705946024,
+                    "time": 9.569462,
+                    "algorithm": "AES",
+                    "processname": "com.winkchat"
+                },
+                {
+                    "key": "32, -107, -51, 71, 103, -127, -30, 64, -114, -14, -99, -8, -93, 29, 23, -35, -126, 52, 68, -91, -61, -125, 89, 2, 30, -1, -108, 15, 97, -63, -85, -114",
+                    "pid": 852,
+                    "tid": 705946024,
+                    "time": 9.578693,
+                    "algorithm": "AES",
+                    "processname": "com.winkchat"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 852,
+                    "tid": 705432904,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"|S||P|\">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoJb4ohbf5a9w6CyXelDfLvZCMnDfGWE0rL20_RYmtgcxNWy61Brf2AyN5jTaHjx6BHf5UO9huW1DXTUJwFKF5bZiSZnnZRzlq2kn4_5hMWRINhOEzsciiFreKnseN2tRiBlPWzff3hjrlIp2yBVWqHpNMIC5eunQOLtnHXL3KgfcECrMqVz9yGiQkn30exaiXQP4HUa-MVz4UIHKvCO7xhEF3gNTsUIMxf7qHVF2bXI3rGjHRU0BhUWFIQbj0WyeYxql7Sq7QWqGALKHLntjTqjMfe0LWqMZXmB0bVgktRbN6oFe6lkJZ16y8AS5J0ZF6HIh3QkZcXTrj7__ab-0YwIDAQAB</string>\n<string name=\"|S||K|\">MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCglviiFt_lr3DoLJd6UN8u9kIycN8ZYTSsvbT9Fia2BzE1bLrUGt_YDI3mNNoePHoEd_lQ72G5bUNdNQnAUoXltmJJmedlHOWraSfj_mExZEg2E4TOxyKIWt4qex43a1GIGU9bN9_eGOuUinbIFVaoek0wgLl66dA4u2cdcvcqB9wQKsypXP3IaJCSffR7FqJdA_gdRr4xXPhQgcq8I7vGEQXeA1OxQgzF_uodUXZtcjesaMdFTQGFRYUhBuPRbJ5jGqXtKrtBaoYAsocue2NOqMx97QtaoxleYHRtWCS1Fs3qgV7qWQlnXrLwBLknRkXociHdCRlxdOuPv_9pv7RjAgMBAAECggEAcIX4h5LhpY4N3hFIvqMmD0DsV22xVZZAE34F8IRx8YAOofGi43ZFPJxnXVPRNfiIQtNR9b0WS5hc6FV-lKz-N1xZeFsHwVjDMR1Inz-iGLq8wm9",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.appid.xml",
+                    "time": 17.618592,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"health_monitor:count\" value=\"2\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"start_new_session\" value=\"false\" />\n<long name=\"time_active\" value=\"3019\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_pause_time\" value=\"1426266972409\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 25.528731,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "909205c6cd0dd34775e8b422115cd6e609b3efa11eeb2e30fd2e29a5c2e5914108df98d8a4c728f737b29405310d40efc2cc33ad760c571ebaf2664c3daaac05c5c7892f8b93319cba90eaeb063f1f4ff3be94342c3662ddb3ce839ee2cb9b72baa7bbde4950b97094862a2d595e1acc7750695bdcd9f8b761f7f446784526f6e40b598d4d8b6a7392304dc3b4c2be79f11acd69a5d6ff83b17ec0c942135450c1a0dacfd989f49e42d48342b88e275a028da7a1b74cbe1a8855ffe02279c0f973ffa62ebd012e9a4084f0056a241dfd5afaf213e1e4a8c1f39494e176e8be8ac1b12b6b82f104926956e7c06df61456ada244adcacb25d47f166cdff3abe09da854533c6eba5e0aefc5fa2f9dc7787d42fabe4054e98eedd306f6c8f03aa8df849787e7dbbb6f273bf531e5b2deb76861532c99a3d3ddc2f49e222e4b863b6ea2f009deddc7f021319c2a7e7803d8f371e34206e3512095cd476781e2408ef29df8a31d17dd823444a5c38359021eff940f61c1ab8e8cfa93b29394c3309173798a6ed5e8512086fd0f482e0245231b427b5e7aab69434fba5d22fefd1619e941c8d87e630df6679a1d8c8befae6f1a8281b9e41fc911daddfc165cb4422026718cd7650682bd6b19d22cb096d40d352e93a565b9c72642123c478403c5afae89c1e6cd4f7a2f58340e0377df0e04eed766b3872c373aaf447b6a177b5b2104",
+                    "name": "/data/data/com.winkchat/files/U/1426266963536_3233589092.zip",
+                    "time": 9.648648,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"has_been_opened\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.313737,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<long name=\"health_monitor:count\" value=\"1\" />\n<boolean name=\"use_service\" value=\"false\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"start_new_session\" value=\"true\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.588847,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<long name=\"health_monitor:count\" value=\"1\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_upload\" value=\"1426266959345\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.179542,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"last_upload\" value=\"1426266959345\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.449031,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<long name=\"last_upload\" value=\"1426266959345\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.537015,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"previous_os_version\">4.1.1</string>\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<long name=\"last_upload\" value=\"1426266959345\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"use_service\" value=\"false\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.668675,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<long name=\"health_monitor:count\" value=\"1\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.489014,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"health_monitor:count\" value=\"1\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"start_new_session\" value=\"true\" />\n<long name=\"time_active\" value=\"0\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.656786,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"health_monitor:count\" value=\"1\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"start_new_session\" value=\"true\" />\n<long name=\"time_active\" value=\"11697\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_pause_time\" value=\"1426266972409\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.89348,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "504b030414000808080001926d4600000000000000000000000012000000313432363236363936323036312e6a736f6e95584d6fdb4610fd2b0b9d5ac06645598991dca88fd86c444b1029bb6915182b72256db5dc65b8a46c35f0b1a7f656f4dc538f050ae4d04bd17f5323fd179d2529d9262952d6412038ef3deececcce0cf9b1613bc3b171d66fbc6e7c9c362676bf776d8f8c6e7fda78dd3c9a368c4bc31c189d41ffe1ee5de3a801d76f1f93c660f80e2e01da1fc0f5b47145f9aabbc4d1b4012a193c31b8c2d76ec0e826c6bbf760b6dfd94edf2a4818dc0b05f590bd9111f10b42383583c6d1139a7a4066d366d85dc5812bf89c867ee952f620739a1d169348886889ec250e49b5d2165b5409c58d2461357b8bc971bb98b931c391a8a6bb3b58ab4c82700fd70a64a03c9b84119d53174704995c4698b19aadb88af180cceb091e613792d5123b508e3d8270e1054186eb1229d1396141cd6a3c324fd4282f5b0c13eeaa862e576e8aca717b648d1c2198ace1af0913814f785450e8fb98b24a36491179de2d1c220e5eb049b8a6e0886a8d0c5d92dce04c742e58755e2f30c3b79b76817e96c47753c7559893e2693d77ac01baa4e4a6267ccbc867eb0c96933079104708c250eb02aa90de169893d9969b15d9cc040e3df48531b4475fd60bfa245a0a4f8353477941f5f39f7fddfff1f3fd4f7ffff7dba7cfff",
+                    "name": "/data/data/com.winkchat/files/U/1426266962697",
+                    "time": 9.255191,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"health_monitor:count\" value=\"2\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"start_new_session\" value=\"true\" />\n<long name=\"time_active\" value=\"3019\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_pause_time\" value=\"1426266972409\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 19.019442,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"health_monitor:count\" value=\"2\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"start_new_session\" value=\"false\" />\n<long name=\"time_active\" value=\"3019\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"last_pause_time\" value=\"1426266979395\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 25.628953,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<long name=\"health_monitor:count\" value=\"1\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.27925,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"last_upload\" value=\"1426266959345\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.47907,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<long name=\"health_monitor:count\" value=\"1\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_upload\" value=\"1426266959345\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.840041,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_upload\" value=\"1426266959345\" />\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.603346,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<long name=\"last_upload\" value=\"1426266959345\" />\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 5.776732,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"is_collected\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.winkchat.xml",
+                    "time": 6.293205,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"health_monitor:count\" value=\"1\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"start_new_session\" value=\"true\" />\n<long name=\"time_active\" value=\"0\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"last_pause_time\" value=\"1426266972409\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.75959,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705433224,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"health_monitor:count\" value=\"1\" />\n<boolean name=\"has_been_opened\" value=\"true\" />\n<long name=\"midnight_offset\" value=\"79391885\" />\n<boolean name=\"start_new_session\" value=\"true\" />\n<long name=\"time_active\" value=\"3019\" />\n<long name=\"last_upload\" value=\"1426266972169\" />\n<string name=\"health_monitor:value\">2WC11200:Service invalid</string>\n<string name=\"previous_os_version\">4.1.1</string>\n<string name=\"gmp_app_id\">1:119384256569:android:7024801b6edf6875</string>\n<boolean name=\"use_service\" value=\"false\" />\n<long name=\"last_pause_time\" value=\"1426266972409\" />\n<long name=\"first_open_time\" value=\"1426266959116\" />\n<string name=\"app_instance_id\">363898b950a3e579013a94183cbda168</string>\n<long name=\"health_monitor:start\" value=\"1426266959497\" />\n</map>\n",
+                    "name": "/data/data/com.winkchat/shared_prefs/com.google.android.gms.measurement.prefs.xml",
+                    "time": 18.976435,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "data": "{\"STORAGE\":\"{\\\"USED_SPACE\\\":0,\\\"AVAILABLE_SPACE\\\":0}\",\"PACKAGE\":\"{\\\"USER\\\":[{\\\"LABEL\\\":\\\"WinkChat\\\",\\\"PACKAGE\\\":\\\"com.winkchat\\\"}],\\\"SYSTEM\\\":[{\\\"LABEL\\\":\\\"Android System\\\",\\\"PACKAGE\\\":\\\"android\\\"},{\\\"LABEL\\\":\\\"com.android.backupconfirm\\\",\\\"PACKAGE\\\":\\\"com.android.backupconfirm\\\"},{\\\"LABEL\\\":\\\"Bluetooth Share\\\",\\\"PACKAGE\\\":\\\"com.android.bluetooth\\\"},{\\\"LABEL\\\":\\\"Browser\\\",\\\"PACKAGE\\\":\\\"com.android.browser\\\"},{\\\"LABEL\\\":\\\"Calculator\\\",\\\"PACKAGE\\\":\\\"com.android.calculator2\\\"},{\\\"LABEL\\\":\\\"Calendar\\\",\\\"PACKAGE\\\":\\\"com.android.calendar\\\"},{\\\"LABEL\\\":\\\"Certificate Installer\\\",\\\"PACKAGE\\\":\\\"com.android.certinstaller\\\"},{\\\"LABEL\\\":\\\"Contacts\\\",\\\"PACKAGE\\\":\\\"com.android.contacts\\\"},{\\\"LABEL\\\":\\\"Package Access Helper\\\",\\\"PACKAGE\\\":\\\"com.android.defcontainer\\\"},{\\\"LABEL\\\":\\\"Clock\\\",\\\"PACKAGE\\\":\\\"com.android.deskclock\\\"},{\\\"LABEL\\\":\\\"Dev Tools\\\",\\\"PACKAGE\\\":\\\"com.android.development\\\"},{\\\"LABEL\\\":\\\"Email\\\",\\\"PACKAGE\\\":\\\"com.android.email\\\"},{\\\"LABEL\\\":\\\"Exchange Services\\\",\\\"PACKAGE\\\":\\\"com.android.exchange\\\"},{\\\"LABEL\\",
+                    "name": "/data/data/com.winkchat/files/C/1426266962061.json",
+                    "time": 8.298908,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER",
+                        "TAINT_PACKAGE",
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "processname": "com.winkchat"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "com.winkchat.services.DeviceInfoService",
+                    "time": 6.26942,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "com.winkchat.services.InternetConnection",
+                    "time": 6.299211,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "com.winkchat.services.InternetConnection",
+                    "time": 6.791393,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705946024,
+                    "name": "com.winkchat.services.InternetConnection",
+                    "time": 9.781916,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "com.google.android.gms.measurement.AppMeasurementService",
+                    "time": 28.30139,
+                    "processname": "com.winkchat"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "com.google.android.gms.measurement.AppMeasurementService",
+                    "time": 28.306203,
+                    "processname": "com.winkchat"
+                }
+            ]
+        }
+    }
+}

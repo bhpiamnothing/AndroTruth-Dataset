@@ -1,0 +1,506 @@
+{
+    "apk_info": {
+        "id": "J50l1m67mxeG3XrY",
+        "url": "https://developer.koodous.com/apks/c6df87fdb9f6c509f9ae1ee7cac331414774c7a0bda15b8c92d1a90a3f342256/",
+        "sha256": "c6df87fdb9f6c509f9ae1ee7cac331414774c7a0bda15b8c92d1a90a3f342256",
+        "md5": "de58d48c7c8af7fa683089dcd3cc472b",
+        "sha1": "405d6b4b2bba38701d61a7cca37100f2953de1c3",
+        "app": "xhelper",
+        "package_name": "com.mufc.umbtts",
+        "company": "Android",
+        "version": "5.0",
+        "image": "https://developer.koodous.com/media/apk_images/3b/77/3b774bafad10b8b11ee260dfd4b7e24de091a3f9139d22e98c71fc18e8aedec1",
+        "size": 158282,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 13,
+        "comments_count": 0,
+        "votes_count": 3,
+        "created_at": "2019-06-25T11:57:09+02:00",
+        "updated_at": "2023-03-30T18:06:10.107806+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "de58d48c7c8af7fa683089dcd3cc472b",
+                    "sha1": "405d6b4b2bba38701d61a7cca37100f2953de1c3",
+                    "size": 158282,
+                    "crc32": "2C3458DF",
+                    "sha256": "c6df87fdb9f6c509f9ae1ee7cac331414774c7a0bda15b8c92d1a90a3f342256",
+                    "sha512": "75adf9a7643b58549a5944b12ee62c91be45bbd5db743c7da76496a8fd02ee20dc4a673d102c8e7809e8d63bd0d45c42abac7de47c5d1af47db3fb86d667f72e",
+                    "ssdeep": "3072:t/ddeyHnkS3cRLx1KknLZzmQAWyDm6vluwFTbKx3MXry4w5H2D0P:jjHnkKMPTnLZPAWyDm6tXpbu4ry15H2O"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "lp.cooktracking.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "api-a1d9e3683a5a9cd284f.us-east-1.elasticbeanstalk.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "35.171.0.110",
+                                "type": "A"
+                            },
+                            {
+                                "data": "52.86.111.134",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "lp.cooktracking.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "dc.g1ee.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "104.20.202.134",
+                                "type": "A"
+                            },
+                            {
+                                "data": "104.20.201.134",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "dc.g1ee.com"
+                    }
+                ],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://dc.g1ee.com/loadable/r/5cd3b7b8daaae.l",
+                        "body": "",
+                        "data": "GET /loadable/r/5cd3b7b8daaae.l HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: dc.g1ee.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                        "host": "dc.g1ee.com",
+                        "path": "/loadable/r/5cd3b7b8daaae.l",
+                        "port": 80,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "35.171.0.110",
+                    "104.20.202.134"
+                ],
+                "domains": [
+                    {
+                        "ip": "52.86.111.134",
+                        "domain": "lp.cooktracking.com"
+                    },
+                    {
+                        "ip": "104.20.202.134",
+                        "domain": "dc.g1ee.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://v2_event.countevt.com/index/index/count_api"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "69e13ae7ea4e5cc0681b4479ac12ea18694bb6096159db176d08f76a29cbc442",
+                    "ssdeep": "768:G4Z8fSi+vlkBt6YorbmHYxGm7DfAYWchnvVwD843gyw1Kk93A:zvi+NkyYoPoAAYzRuDT4Z93A"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "xhelper",
+            "services": [
+                "com.mufc.umbtts.SubService",
+                "com.mufc.umbtts.UmService",
+                "com.mufc.umbtts.LightUp",
+                "com.mufc.umbtts.MainService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.mufc.umbtts.JioActivity",
+                "com.mufc.umbtts.InfoActivity",
+                "com.mufc.umbtts.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "81D808352AD1385A937360EDFB32767B65A3ADBC",
+                "serial": "01",
+                "issuerDN": "/CN=Android Debug/O=Android/C=US",
+                "not_after": "Jun 12 18:33:18 2048 GMT",
+                "subjectDN": "/CN=Android Debug/O=Android/C=US",
+                "not_before": "Jun 20 18:33:18 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.INTERNET",
+                "android.permission.FOREGROUND_SERVICE",
+                "com.android.launcher.permission.INSTALL_SHORTCUT",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.mufc.umbtts",
+            "version_code": "5",
+            "main_activity": "",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/bw/as/b/f;",
+                        "method": "a"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/bw/as/b/f;",
+                        "method": "b"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/bw/as/b/b;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/net/URL;->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection;",
+                        "class": "Lcom/bw/as/a/f;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/bw/as/a/f;",
+                        "method": "b"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 16,
+            "new_permissions": [],
+            "displayed_version": "5.0",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "35.171.0.110",
+                    "hostname": "lp.cooktracking.com"
+                },
+                {
+                    "ip": "104.20.202.134",
+                    "hostname": "dc.g1ee.com"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "ba4a40ea85ff562617f9a16ac25a25b136a29d71fc03ec29cc27ce626e193fa7d384490dac9b249ded767e60dac8b2a974646b2114fe9d6f0b11d80f932f1ae18325807247eddd4bc5aa195580033273e4fe7f0705c8f16c086abe6011344862a589bf3e3a8063d47e27169da215d8a9ec41521d2b1bbd11331b84999f64e19ff8492f6f7b75cda634ec65bdbb6d77b8a14ca1965d5e7f6519634c1a1535175652a29638545968a4b8eb7b22f5c5961b38ce1e115b3f548007f1ed36212bae9d923fc31b8cb716e0d30dfd27611c6114c0843c527f9701c0b6fe886685072c90f1e76dd8836e0b4d5e2204b71076532cd9668a5c2c263cee60570a5d572e792816f5a4cfee6af2ead1f6b95f9d818a4b236357c6f3549f081ef5a168b09d8ee234e6e24241777d1598dcd95c2bc60395a6bb9d8e12ccd43497b4ba59a27800c38bd2a374b954a0083f41991d0eb61a020415170c04e1bcedc651f6b1bb94e7b59ad198dbf17908a48e1f2fc813ee8cf548ce848976d7385363db61c185f3c9785865df0d229600a4eaa6c12bf2236195ae071122df9ad1f54e749a902943766dbaa05e580f53facee11b1f9c90c3fbb2519e9b47b158853761d24edeef8d5fc851b5d2b046e313ae69f5a5460120a3140c266e720e5d1ff3fbcf8ad7647cdfe7f939b770b14ef179defe9ea051519ce5c9d72d3bf6299ba76272d26adc3820e7",
+                    "time": 15.872374,
+                    "srchost": "dc.g1ee.com",
+                    "srcport": 80,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "d3f2ba363dc2c3ca6eb5e7ad39ba24becdffe7d1b40068fad5bdf33b5a29836427341d8ccdaea1938638c431d1dd6d4c2b3c689f3590c65207caccaa9d3385d056a11f025dab711fe36b5498e4257c7494ff272d882ac16fafdafdb9df1c4f1a0010799b920708f59d96f0728660586087139e633d484117d9e17332f10384abbe0fa083d81a349a6aba36cc56b7c488ee4f072afe52cfc8e633162e3cb42b716383adbcd17119c0894df1069d7bd4eca572fb742dfe94777eb2d67da00cddf2573b0ad340d24e864f204516a579cf57c0b8923b3bef72cf9bdf3ce36da1b6d0fe84cae263228adb6793e6f643a829859576d50d9238a7b2d4f4adb2c0ef2446e3a1049004ca4aeb25bc767517a8b5f29eb7ac2eb47a2a15dce0a5b214bd88700cd85f039cee0bfcef75bb561ebb7e44d8d8ad613c9c1d9ab7f92fb39c017db7db39ebb8128f828bcb3bc6dda782ec5eca674eb8790b5d38365f5bb8f9ba5cb322ad2049f9041efa178a1a67ed536726e56073301e3b93ee50b5792d0a90c482ecc9a7a7148f33cd0408b7c4defc906890de9507ddc4496972b650f887e60eec7bc7627f7dbda527a57ecc7517c620465cc91d65e053f875d9dab56b91c803eeb26ce98de9794074ea2880457ca7ec9f29f76ad90c4c575c5b9b99bb7ec0fc7e791846dd65ead90acf71cffc6b2ceea150ee325f4fcf4eeec70fd559ec8605df",
+                    "time": 16.483142,
+                    "srchost": "dc.g1ee.com",
+                    "srcport": 80,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "HTTP/1.1 200 OK\r\nDate: Tue, 25 Jun 2019 21:05:48 GMT\r\nContent-Type: application/octet-stream\r\nContent-Length: 288388\r\nConnection: keep-alive\r\nSet-Cookie: __cfduid=deeec2ebb9e1b9816ec0e9500bf214f4c1561496748; expires=Wed, 24-Jun-20 21:05:48 GMT; path=/; domain=.g1ee.com; HttpOnly\r\nx-amz-id-2: NZc8KqC/DtASSDPHLIyFI2ID4X94o6itrhhSXsNJ30eDkl9ScslqZoaL9UtnaMM8100a/4WTZVw=\r\nx-amz-request-id: 2F7E51EB6A48B4C7\r\nLast-Modified: Tue, 14 May 2019 04:50:47 GMT\r\nETag: \"23a7c5f95cdc6263812db771325bae87\"\r\nCF-Cache-Status: HIT\r\nExpires: Tue, 25 Jun 2019 23:05:48 GMT\r\nCache-Control: public, max-age=7200\r\nAccept-Ranges: bytes\r\nVary: Accept-Encoding\r\nS\r\n\r\n65727665723a20636c6f7564666c6172650d0a43462d5241593a20346563396536643435386633626561622d4652410d0a0d0af9fd314228702714d2f1e0992ac8e3c1f1d560b22f3ef1311fbf31bcae6d7aa2d95f86514aa2ae7aff661a752170dfe970c50ba4a1a8eb4c4973755821b968ac6ec3ffdf89bf3eb48063d42e6c1599b615d0a1e441c6748255bd11331b84999f64e19ff849246f7b75aeca559f16d8c84313ddd9c1a9b632463c702f1cdaf174f08386e3c1f1d560b22f3e",
+                    "time": 15.788077,
+                    "srchost": "dc.g1ee.com",
+                    "srcport": 80,
+                    "processname": "com.mufc.umbtts"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "GET /loadable/r/5cd3b7b8daaae.l HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: dc.g1ee.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 15.763544,
+                    "desthost": "dc.g1ee.com",
+                    "destport": 80,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "POST /v1/ls/get HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: lp.cooktracking.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 234\r\n\r\n{\"app\":{\"is_system\":false,\"pkg\":\"com.mufc.umbtts\",\"ver\":5},\"d\":{\"f\":\"unknown\",\"o\":\"4.1.1\",\"m\":\"SAMSUNG GT-I9100\",\"b\":\"Android\",\"a\":\"61ede92b4f070c66\"},\"cp\":\"p.umobi98717c1\",\"iso\":\"us\",\"at\":\"UMBTTS_5\",\"lt\":0,\"ver\":8,\"ct\":\"umobid5388d\"}",
+                    "time": 15.358194,
+                    "desthost": "lp.cooktracking.com",
+                    "destport": 443,
+                    "processname": "com.mufc.umbtts"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.mufc.umbtts-1.apk",
+                    "time": 0.000351,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "path": "/data/data/com.mufc.umbtts/files/firehelper.jar",
+                    "time": 4.263336,
+                    "processname": "com.mufc.umbtts"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000e000e00bd030000776602000000504b010214001400080808002859d94eb175150f0b0600006c180000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a00000800000684cc4e03c9f8bafc2f0100fc2f01000d00000000000000000000000000500600006173736574732f656e67696e65504b01020a000a0000080000317dd84e6887ec2090560000905600001500000000000000000000000000783601006173736574732f6669726568656c7065722e6a6172504b01020a000a00000800000684cc4e60c849d578040000780400000e000000000000000000000000003c8d01006173736574732f6d797374657279504b01020a000a00000800002859d94eb41e8a5fe9230000e92300002400000000000000000000000000e09101007265732f6472617761626c652d686470692d76342f69635f6c61756e636865722e706e67504b01020a000a00000800002859d94e2ccc2c97620a0000620a000024000000000000000000000000000db601007265732f6472617761626c652d6c6470692d76342f69635f6c61756e636865722e706e67504b01020a000a00000800002859d94ecaa0bfa5c1130000c11300002400000000000000000000000000b2c001007265732f6472617761626c652d6d6470692d76342f69635f6c",
+                    "name": "/data/app/com.mufc.umbtts-1.apk",
+                    "time": 0.0071,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "bf6f672cad3598a1706d89446e114bf1b83f2388299474811b3401c5d55010b3",
+                    "name": "/data/data/com.mufc.umbtts/files/e82658cd13eb013dd8c5aa386ef8f7ac.d",
+                    "time": 14.535174,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "504b03041400080808009469a94e000000000000000000000000140004004d4554412d494e462f4d414e49464553542e4d46feca00004d8cbb0a02311045fb81fcc3948a24644054ec76d772c5ce56c664c48525599214f1eff751d99e7bcfb973183e928b7e4aca430c5724631534e18f3413bbafe0c29691ac392ab849d57d745cb6831b3967c9c64b55d025e1225eb7bfb57531f64567d26f22dc3d12bb51b08b698a6973f778405fd7ec49818219504b0708bd5a8b9d7a0000008e000000504b03041400080808009469a94e0000000000000000000000000b000000636c61737365732e6465788d586b6c1c57153e779eebf5ac3d9eb16367ed34eb479a49da649dc4793876426cc74edd6e1e22a98b12503b5e8fed4dd6b3de8713b7483841b454144440ada82852918048887f884a08055129408568517808228a4a8b2aa0510a014548a840f9eebdb3de75ca0f2c7ff39d7be63ece3de7dc33b333132cc7fb77eda69e99d283ceec3bb75ef9cb9513478e6cbffd8bd75eec2c0ddfccc75a88168968796ac0a1e8af62133d4452bf1ef80a934c8af8a7fb55003c0c66fcbe4694b188ae8267c1396011780af816f012f07de065e027c0abc075e097c06f80d7813781f780e604d116600ff0107006b8007c0ef83a7015f819f067e03dc06e22ea03f601278139e013c025e049e019e032f01cf03cf002f022f035e0bb",
+                    "name": "/data/data/com.mufc.umbtts/files/4332a119f610795b7d6bb4673d9fcd3cf8bd.jar",
+                    "time": 58.263273,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "504b050600000000020002007f000000fb5500000000504b01021400140008080800047fcd4ebd5a8b9d7a0000008e0000001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b01021400140008080800047fcd4e0a6aff7b0255000008b300000b00000000000000000000000000c0000000636c61737365732e646578504b050600000000020002007f000000fb5500000000",
+                    "name": "/data/data/com.mufc.umbtts/files/firehelper.jar",
+                    "time": 4.271656,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "bf6f672cad3598a1706d89446e114bf1b83f2388299474811b3401c5d55010b3",
+                    "name": "/data/data/com.mufc.umbtts/files/e82658cd13eb013dd8c5aa386ef8f7ac.d",
+                    "time": 15.543145,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "8ca5ea940381b7a9c975943e333064b91b8bc5c986dc8af6946a418cb6ae8ae958d1a0e78f0277a33a5659d315c10e94c98b2642d9a6b51d87e0dbd6153d026a27dc8f4cd9c989d170dd70df0a11c847f5f2aa281e1214e5965ebf5301feb19a296318bb405e5dacde848fb0702c43d8bbcc8b165c3d77b8d18f3e2b452131279a5e3c5294bb9791fa29cc467409fc8c",
+                    "name": "/data/data/com.mufc.umbtts/files/6eabbecf801202edcd34800398d0a84a.d",
+                    "time": 15.630303,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "51aa55cd246823a09f7bbce9dad513c4c37754cf",
+                    "name": "/dev/urandom",
+                    "time": 14.973812,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "8378c3ec955200cf562893ecec6876ef3cdff5ef",
+                    "name": "/dev/urandom",
+                    "time": 15.691993,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "677c343323373f3f3f373348fa79373737373737373737373737233733377a7263761a7e7971187a76797e71726463197a71c9fd37377abb8c3d35062772ccb6cbf4a3bd13537763db41e045f2f961f153f3b2126ea523c6d8c066eea94cf88e442f09a5bc497dfd743b6013542203d6b803248c98d7f5a1a69b0e1d8f7ee24a436b81b42c0e50fef17c62e712d615698088824206c17250e55815eb0a258c6687bc5ebd5e44c04f7768e0db7eb6b52e677c303f8a6dbcaa4d373737b9373737677c343323373f3f3f373348fa793737373737373737373737373c373737545b56444452441953524fe38a40576372e00809448093b0fa597f755fac355b35162a252517b2733536753f0283a71b273fac7a941f65231e1d7fa2158a3e387f60277677662667d66623879697b515b5c3ade80e044440d859216888d8cce018c78e50fdae4191aa1ec059be4e8b507b4b15deebc9e948f598b87e8fc7f4b5b8b531b01abb4cebc1bbcdd4a9888dd811f37d3f2ee8107678f368906ab32364d9c91bd7a6b1a7b477188e26e52cdf562a16ccf74893b6a7715700b22705433916acf53e2e893feb3652b746b76eb700371c36dc37ac374c37d83409314b3dcf3b472dc73ad70bd710f712f758b7e836483599345936d9362934639824d539c732cf3635373a37ba3616b7d1b77f77031726a73d7f30533445360a368a3654367c36",
+                    "name": "/data/data/com.mufc.umbtts/files/firehelper.jar",
+                    "time": 1.597137,
+                    "processname": "com.mufc.umbtts"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "-98, -77, -89, -67, -78, 95, -25, -30, 114, -125, 55, 124, 45, -53, -109, 72",
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "time": 14.496899,
+                    "algorithm": "AES",
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "key": "-98, -77, -89, -67, -78, 95, -25, -30, 114, -125, 55, 124, 45, -53, -109, 72",
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "time": 14.543256,
+                    "algorithm": "AES",
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "key": "-98, -77, -89, -67, -78, 95, -25, -30, 114, -125, 55, 124, 45, -53, -109, 72",
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "time": 15.54807,
+                    "algorithm": "AES",
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "key": "-98, -77, -89, -67, -78, 95, -25, -30, 114, -125, 55, 124, 45, -53, -109, 72",
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "time": 15.562829,
+                    "algorithm": "AES",
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "key": "-98, -77, -89, -67, -78, 95, -25, -30, 114, -125, 55, 124, 45, -53, -109, 72",
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "time": 15.579886,
+                    "algorithm": "AES",
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "key": "-98, -77, -89, -67, -78, 95, -25, -30, 114, -125, 55, 124, 45, -53, -109, 72",
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "time": 15.653904,
+                    "algorithm": "AES",
+                    "processname": "com.mufc.umbtts"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "0508179934a1dc806672295a35878fc3ea4afe69ad5e347ba7ac68870028eb13004db2a3127a1b6a94996ecc600b1ec677d669581dafa7715284d7a369cc2a0c8b43baf3268dc06d892910059214fd92e36e6ab57e43d9df2e92fcfa4a7767cdd2f571586fea883464380ebca2f0fc3abfd0b5d139b546df37dbbbca780c838790b920cff7f12f313a23806e04faa4ff36669da5712063d8797268b532df8c8870661ef538ddb94273bc4d19327e9c88e9b6f2960ca89eec6aa217298def29a8a827f25717c5d9c01d2cfc384dec53e47f256743f069447e3301ce5a279e55d171883afa01590b884209721d764fc92968c944d8d6b728bf31fc8fd72020fccbe3ce78d39d8669c92c7fff9f7e14216c8a180733d005c34f9b4fb5d4f8f4cc18225904ea3025cea645088712e7f1b3915a58a9ed452bd881115eeac3655d8b4fa13fd451afb7a853f95c215c452eabb48a5b99145c1bcf61c3b4e6cf253e6f44d2bcd1e2372bf607a47f5245e49ff749f6fb0efa555f8f07a1936bcc59097afda3d6116d8af1a9e471d996ae6aa908a6dd12228d345ac5848d1b3f6e4705322232d560f62a6a4b30647e6c184a5a891c5f444f9877dae2ca00c5b47c517fc0e7d85bb9a6a0a29c97bdb73ab92ed248e0a82caf9e83ce566fa8663c19d893be69d01bb8e89b607d7e2bd32d9ac0f750b7254e8e0a56e15ee6c0ac1008a61d8e99",
+                    "name": "/data/data/com.mufc.umbtts/files/4332a119f610795b7d6bb4673d9fcd3cf8bd.jar",
+                    "time": 58.123904,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "cfa2afa180c9cd257487442c3a93dbe3d0c65aebecd94957e418ff4722cc69cbf5d68160df39f93804f2c353f5c1a710e26707bcfd4f9faae2a29c50b94df0c75c8c919109a4ab82dd35e35c8d298639",
+                    "name": "/data/data/com.mufc.umbtts/files/e82658cd13eb013dd8c5aa386ef8f7ac.d",
+                    "time": 15.573417,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705557256,
+                    "data": "504b03041400080808009469a94e000000000000000000000000140004004d4554412d494e462f4d414e49464553542e4d46feca00004d8cbb0a02311045fb81fcc3948a24644054ec76d772c5ce56c664c48525599214f1eff751d99e7bcfb973183e928b7e4aca430c5724631534e18f3413bbafe0c29691ac392ab849d57d745cb6831b3967c9c64b55d025e1225eb7bfb57531f64567d26f22dc3d12bb51b08b698a6973f778405fd7ec49818219504b0708bd5a8b9d7a0000008e000000504b03041400080808009469a94e0000000000000000000000000b000000636c61737365732e6465788d586b6c1c57153e779eebf5ac3d9eb16367ed34eb479a49da649dc4793876426cc74edd6e1e22a98b12503b5e8fed4dd6b3de8713b7483841b454144440ada82852918048887f884a08055129408568517808228a4a8b2aa0510a014548a840f9eebdb3de75ca0f2c7ff39d7be63ece3de7dc33b333132cc7fb77eda69e99d283ceec3bb75ef9cb9513478e6cbffd8bd75eec2c0ddfccc75a88168968796ac0a1e8af62133d4452bf1ef80a934c8af8a7fb55003c0c66fcbe4694b188ae8267c1396011780af816f012f07de065e027c0abc075e097c06f80d7813781f780e604d116600ff0107006b8007c0ef83a7015f819f067e03dc06e22ea03f601278139e013c025e049e019e032f01cf03cf002f022f035e0bb",
+                    "name": "/data/data/com.mufc.umbtts/files/4332a119f610795b7d6bb4673d9fcd3cf8bd.jar",
+                    "time": 16.123469,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "677c343323373f3f3f373348fa79373737373737373737373737233733377a7263761a7e7971187a76797e71726463197a71c9fd37377abb8c3d35062772ccb6cbf4a3bd13537763db41e045f2f961f153f3b2126ea523c6d8c066eea94cf88e442f09a5bc497dfd743b6013542203d6b803248c98d7f5a1a69b0e1d8f7ee24a436b81b42c0e50fef17c62e712d615698088824206c17250e55815eb0a258c6687bc5ebd5e44c04f7768e0db7eb6b52e677c303f8a6dbcaa4d373737b9373737677c343323373f3f3f373348fa793737373737373737373737373c373737545b56444452441953524fe38a40576372e00809448093b0fa597f755fac355b35162a252517b2733536753f0283a71b273fac7a941f65231e1d7fa2158a3e387f60277677662667d66623879697b515b5c3ade80e044440d859216888d8cce018c78e50fdae4191aa1ec059be4e8b507b4b15deebc9e948f598b87e8fc7f4b5b8b531b01abb4cebc1bbcdd4a9888dd811f37d3f2ee8107678f368906ab32364d9c91bd7a6b1a7b477188e26e52cdf562a16ccf74893b6a7715700b22705433916acf53e2e893feb3652b746b76eb700371c36dc37ac374c37d83409314b3dcf3b472dc73ad70bd710f712f758b7e836483599345936d9362934639824d539c732cf3635373a37ba3616b7d1b77f77031726a73d7f30533445360a368a3654367c36",
+                    "name": "/data/data/com.mufc.umbtts/files/firehelper.jar",
+                    "time": 0.16367,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "8ca5ea940381b7a9c975943e333064b91b8bc5c986dc8af6946a418cb6ae8ae958d1a0e78f0277a33a5659d315c10e94c98b2642d9a6b51d87e0dbd6153d026a27dc8f4cd9c989d170dd70df0a11c847f5f2aa281e1214e5965ebf5301feb19a296318bb405e5dacde848fb0702c43d8bbcc8b165c3d77b8d18f3e2b452131279a5e3c5294bb9791fa29cc467409fc8c",
+                    "name": "/data/data/com.mufc.umbtts/files/6eabbecf801202edcd34800398d0a84a.d",
+                    "time": 15.595921,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "bf6f672cad3598a1706d89446e114bf1b83f2388299474811b3401c5d55010b3",
+                    "name": "/data/data/com.mufc.umbtts/files/e82658cd13eb013dd8c5aa386ef8f7ac.d",
+                    "time": 14.523268,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "504b0304140008080800047fcd4e000000000000000000000000140004004d4554412d494e462f4d414e49464553542e4d46feca00004d8cbb0a02311045fb81fcc3948a24644054ec76d772c5ce56c664c48525599214f1eff751d99e7bcfb973183e928b7e4aca430c5724631534e18f3413bbafe0c29691ac392ab849d57d745cb6831b3967c9c64b55d025e1225eb7bfb57531f64567d26f22dc3d12bb51b08b698a6973f778405fd7ec49818219504b0708bd5a8b9d7a0000008e000000504b0304140008080800047fcd4e0000000000000000000000000b000000636c61737365732e646578d4bd77605445d73f3e73b7a487cd6e4842689b026c02211d12122085440201420835b4902c10089b4da3285214292a489522bd090f4857104140511150e15114b0a1a0822282f49adf39337377ef6e165fbfeffbd72ff0b967ca9976a69d29f76e8979bc674c7c22e9dcfede7fc2af8f49b8f0c3828f8206872d8c7bdcf68cfae39ebfbaef26c44a0819df27414fc45fa75d841453eefe2ce091869083402fb911d21be8611d21fbc07fa48190466037851032740e219bc20919be08dc0165807180598037002b01eb009b007b00ef033e067c0af80c701af00de03ce027c025c06f80df017f02ae036e01ee011e0354af13e20ef005f80102000d008d012180e6804840342011900a4807640372013d01bd0163014b01",
+                    "name": "/data/data/com.mufc.umbtts/files/firehelper.jar",
+                    "time": 2.893472,
+                    "processname": "com.mufc.umbtts"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "name": "com.mufc.umbtts.MainService",
+                    "time": 0.063554,
+                    "processname": "com.mufc.umbtts"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "name": "com.mufc.umbtts.UmService",
+                    "time": 0.078858,
+                    "processname": "com.mufc.umbtts"
+                }
+            ]
+        }
+    }
+}

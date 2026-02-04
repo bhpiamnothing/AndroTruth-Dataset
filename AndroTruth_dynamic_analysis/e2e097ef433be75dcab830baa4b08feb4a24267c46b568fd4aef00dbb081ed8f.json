@@ -1,0 +1,508 @@
+{
+    "apk_info": {
+        "id": "4Dr7OK3mRxWOgKv8",
+        "url": "https://developer.koodous.com/apks/e2e097ef433be75dcab830baa4b08feb4a24267c46b568fd4aef00dbb081ed8f/",
+        "sha256": "e2e097ef433be75dcab830baa4b08feb4a24267c46b568fd4aef00dbb081ed8f",
+        "md5": "a09feaa2b41d176798489dc80238bdb4",
+        "sha1": "f199226e9d1a185f9c3a24c1374db6d5c4ee6246",
+        "app": "SBI",
+        "package_name": "hello.uwer.hello.hello.google.is.the.best",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2023/12/09/ic_launcher_uHsalxQ.png",
+        "size": 2070265,
+        "tags": [
+            "banker",
+            "trojan",
+            "rewardsteal",
+            "telephony",
+            "obfuscated",
+            "clipboard",
+            "checks-gps",
+            "spyware",
+            "reflection",
+            "runtime-modules",
+            "fshj"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2023-12-09T15:32:40.120381+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27118/Sat Dec  9 09:38:20 2023",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "09.12.2023 08:46:04 (Build: 106585)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.SBISpy"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2023-12-10T04:06:16.844772+01:00",
+        "matches_count": 5,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2023-12-09T15:32:15.674592+01:00",
+        "updated_at": "2023-12-09T15:32:21.998768+01:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "a09feaa2b41d176798489dc80238bdb4",
+                "name": "",
+                "path": "",
+                "sha1": "f199226e9d1a185f9c3a24c1374db6d5c4ee6246",
+                "size": 2070265,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "7471B1CB",
+                "sha256": "e2e097ef433be75dcab830baa4b08feb4a24267c46b568fd4aef00dbb081ed8f",
+                "sha512": "673dc9b8702c125f8d4ad2932b25018e90d82d143b373ec88225bd9eb99718a731f1831bf069b4ab43b8bc123da3829b10dc9eaf50393dbb4d66033ccf443123",
+                "ssdeep": "49152:Cl8fttOeQ73RhITYVYuXDn/6lbxpvnGFnN8o9j2qekmD:1tMX73rAQYUDn/6l7G/N+D"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://plus.google.com/",
+                "https://ssl.gstatic.com/accessibility/javascript/android/",
+                "https://*/*",
+                "http://*/*",
+                "http://schemas.android.com/apk/res/android",
+                "http://www.w3.org/ns/widgets",
+                "http://ns.adobe.com/xap/1.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "ff3c1d24a82f79b078db37e96e03682d45176e5fa0fbf448114c2ec992fb158e"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_RECEIVED"
+            ],
+            "app_name": "SBI",
+            "services": [
+                "com.google.firebase.components.ComponentDiscoveryService",
+                "hello.uwer.hello.hello.google.is.the.best.SaveMessageService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider",
+                "androidx.startup.InitializationProvider",
+                "com.google.firebase.provider.FirebaseInitProvider"
+            ],
+            "receivers": [
+                "hello.uwer.hello.hello.google.is.the.best.MyReceiver"
+            ],
+            "activities": [
+                "hello.uwer.hello.hello.google.is.the.best.MainActivity",
+                "com.google.android.gms.common.api.GoogleApiActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.INTERNET",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.REQUEST_INSTALL_PACKAGES"
+            ],
+            "package_name": "hello.uwer.hello.hello.google.is.the.best",
+            "version_code": "1",
+            "main_activity": "hello.uwer.hello.hello.google.is.the.best.MainActivity",
+            "signature_name": "META-INF/APKEASYT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'Firebase Database encountered an OutOfMemoryError. You may need to reduce the amount of data you are syncing to the client (e.g. by using queries or syncing a deeper path). See https://firebase.google.com/docs/database/ios/structure-data#best_practices_for_data_structure and https://firebase.google.com/docs/database/android/retrieve-data#filtering_data'",
+                        "class": "La2/e;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, 'A symbol that the Firebase Database SDK depends on failed to load. This usually indicates that your project includes an incompatible version of another Firebase dependency. If updating your dependencies to the latest version does not resolve this issue, please file a report at https://github.com/firebase/firebase-android-sdk'",
+                        "class": "La2/e;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, 'Uncaught exception in Firebase Database runloop (20.2.2). If you are not already on the latest version of the Firebase SDKs, try updating your dependencies. Should this problem persist, please file a report at https://github.com/firebase/firebase-android-sdk'",
+                        "class": "La2/e;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Ld/j$d;",
+                        "method": "dispatchKeyShortcutEvent"
+                    },
+                    {
+                        "code": "invoke-virtual v14, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Ld/j;",
+                        "method": "N"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lh2/k;",
+                        "method": "e"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v5, v2, v4, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Le0/e;",
+                        "method": "performPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v2, v4, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Le0/e;",
+                        "method": "performPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Le3/u;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "const-string v0, 'Bridge access attempt with wrong secret token, possibly from malicious code. Disabling exec() bridge!'",
+                        "class": "Le3/f;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lx1/f;",
+                        "method": "get"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, v3, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; I)Landroid/content/Intent;",
+                        "class": "La0/c;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Ld/j$f;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Ld/j$f;",
+                        "method": "e"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 22,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 32
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.123629093170166,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/base.apk.x86_64.flock",
+                    "time": 2.2119970321655273,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/oat/x86_64/base.vdex",
+                    "time": 2.2177839279174805,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/base.apk",
+                    "time": 2.2217800617218018,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.2653470039367676,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.269508123397827,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/oat/x86_64/base.art",
+                    "time": 2.2720260620117188,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/base.apk",
+                    "time": 2.3839731216430664,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.063627004623413,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.0906879901885986,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 3.109890937805176,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 3.1132419109344482,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.1154370307922363,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.1191039085388184,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.1193079948425293,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 3.119357109069824,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 3.840045928955078,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.849062919616699,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 3.975687026977539,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "68656c6c6f2e757765722e68656c6c6f2e68656c6c6f2e676f6f676c652e69732e7468652e6265737400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.124099016189575,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.1241469383239746,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "504b0304",
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/base.apk",
+                    "time": 2.222151041030884,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.2662971019744873,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.2698190212249756,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "6172740a3035360000803d7870030100b8f6698f00903e7800a03e7800203f780010607800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000005d640000",
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/oat/x86_64/base.art",
+                    "time": 2.272094964981079,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.1154770851135254,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.119277000427246,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.1193349361419678,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 3.8901190757751465,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 3.9778709411621094,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/data/app/hello.uwer.hello.hello.google.is.the.best-3KCl1_2arAn7Vp2P77DCqA==/base.apk.x86_64.flock",
+                    "time": 2.2120471000671387,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5090,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 3.1106250286102295,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5090,
+                    "tid": 5138,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.8471670150756836,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                },
+                {
+                    "pid": 5090,
+                    "tid": 5138,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.847717046737671,
+                    "processname": "hello.uwer.hello.hello.google.is.the.best"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

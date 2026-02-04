@@ -1,0 +1,877 @@
+{
+    "apk_info": {
+        "id": "krRVdjQMrBZOXBEw",
+        "url": "https://developer.koodous.com/apks/878bb68727daf025c0c9619d1d12337c289489f1190410ca4025c47f39357aa5/",
+        "sha256": "878bb68727daf025c0c9619d1d12337c289489f1190410ca4025c47f39357aa5",
+        "md5": "6eb2123c58bb283790a43b5fdaef1c25",
+        "sha1": "67deca3fe3025a3b384240aa76c8c986818b21ea",
+        "app": "IBL Token",
+        "package_name": "com.ibl.apk",
+        "company": "Anywhere Software",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2024/03/22/icon_plvpkbI.png",
+        "size": 4653238,
+        "tags": [
+            "dropper",
+            "trojan",
+            "hqwar",
+            "smsagent",
+            "banker",
+            "sends-sms",
+            "telephony",
+            "detect-debug-environment",
+            "checks-gps",
+            "obfuscated",
+            "reflection",
+            "clipboard",
+            "runtime-modules",
+            "copybara",
+            "multiverze",
+            "basbanke",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-04-29T16:46:00.712670+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.3.1/27260/Mon Apr 29 08:23:47 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "29.04.2024 12:15:14 (Build: 107015)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-04-29T16:52:24.068205+02:00",
+        "matches_count": 9,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-03-22T17:08:41.089001+01:00",
+        "updated_at": "2025-04-07T15:29:37.185929+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "6eb2123c58bb283790a43b5fdaef1c25",
+                "name": "",
+                "path": "",
+                "sha1": "67deca3fe3025a3b384240aa76c8c986818b21ea",
+                "size": 4653238,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "1B9FD1C3",
+                "sha256": "878bb68727daf025c0c9619d1d12337c289489f1190410ca4025c47f39357aa5",
+                "sha512": "d6362dbffb762fba634159a7f390595fcd77574e47a6b338a65b4080a379d3a983fe00c0bf8a7f2f513ba0397538d52c712376246d02385300a70ee6a7f0676a",
+                "ssdeep": "98304:Lhinlhin6Vhinahinx1hin6hinshinUhinh3vkBcgOjq6lJC1Em770k:lCzC6DC8CxjCcCyCKChf0OjjGkk"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "vnd.android.cursor.item/note",
+                "vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://freeipapi.com/api/json",
+                "3vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://invalid-url/",
+                "http://schemas.android.com/apk/res/android",
+                "2vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "6b5c70f27546ffaa018e10f35d19aba76529f55545d5ddc7ee8070d5aa62ef88"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.SENDTO",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "IBL Token",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.ibl.apk..backgroundservice",
+                "com.ibl.apk..dtrsbnotisuntilactv",
+                "com.ibl.apk..inj_dnlader",
+                "com.ibl.apk..inj_dnlader2",
+                "com.ibl.apk..managerservice",
+                "com.ibl.apk..mediaprojectionbackservice",
+                "com.ibl.apk..notificationservice",
+                "com.ibl.apk..openmics_srv",
+                "com.ibl.apk..s1",
+                "com.ibl.apk..service1",
+                "com.ibl.apk..service2",
+                "com.ibl.apk..service3",
+                "com.ibl.apk..service4",
+                "com.ibl.apk..srvnewphonecall",
+                "com.ibl.apk..starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.ibl.apk..backgroundservice$backgroundservice_BR",
+                "com.ibl.apk..dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.ibl.apk..httputils2service",
+                "com.ibl.apk..inj_dnlader$inj_dnlader_BR",
+                "com.ibl.apk..inj_dnlader2$inj_dnlader2_BR",
+                "com.ibl.apk..managerservice$managerservice_BR",
+                "com.ibl.apk..mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.ibl.apk..myreceiver",
+                "com.ibl.apk..notificationservice$notificationservice_BR",
+                "com.ibl.apk..openmics_srv$openmics_srv_BR",
+                "com.ibl.apk..s1$s1_BR",
+                "com.ibl.apk..service1$service1_BR",
+                "com.ibl.apk..service2$service2_BR",
+                "com.ibl.apk..service3$service3_BR",
+                "com.ibl.apk..service4$service4_BR",
+                "com.ibl.apk..srvnewphonecall$srvnewphonecall_BR",
+                "com.ibl.apk..starter$starter_BR"
+            ],
+            "activities": [
+                "com.ibl.apk..main",
+                "com.ibl.apk..act_perm_dvadmn",
+                "com.ibl.apk..faknotiactivity",
+                "com.ibl.apk..forc_activateacc",
+                "com.ibl.apk..opencamd",
+                "com.ibl.apk..openmics",
+                "com.ibl.apk..perm_activatemediaproject",
+                "com.ibl.apk..perm_activateoverlay",
+                "com.ibl.apk..perm_ignorebatperm",
+                "com.ibl.apk..perm_notiacc",
+                "com.ibl.apk..perm_phonecal",
+                "com.ibl.apk..perm_smsperm",
+                "com.ibl.apk..perm_startactdevmang",
+                "com.ibl.apk..perm_startactwritesy",
+                "com.ibl.apk..perm_unknownapps",
+                "com.ibl.apk..perm_writesys",
+                "com.ibl.apk..req_all_perms",
+                "com.ibl.apk..wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "DD2B8FAB67577CE55712D9881DEBA7E76D7B8DF5",
+                "serial": "58118218",
+                "issuerDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_after": "Dec 23 08:23:07 2054 GMT",
+                "subjectDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_before": "Aug 24 08:23:07 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.CALL_PHONE",
+                "android.permission.CAMERA",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.VIBRATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.WRITE_SMS",
+                "com.android.alarm.permission.SET_ALARM",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "oppo.permission.OPPO_COMPONENT_SAFE"
+            ],
+            "package_name": "com.ibl.apk",
+            "version_code": "200",
+            "main_activity": "com.ibl.apk..main",
+            "signature_name": "META-INF/ANDROIDD.DSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "TakePicture"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/ibl/apk/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.3507540225982666,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/base.apk.x86_64.flock",
+                    "time": 2.35663104057312,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/oat/x86_64/base.vdex",
+                    "time": 2.3610119819641113,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/base.apk",
+                    "time": 2.3621809482574463,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.365687847137451,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.3669378757476807,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/oat/x86_64/base.art",
+                    "time": 2.3672358989715576,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/base.apk",
+                    "time": 2.4095048904418945,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6917,
+                    "name": "/data/user_de/0/com.ibl.apk/code_cache/com.android.skia.shaders_cache",
+                    "time": 2.492818832397461,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6917,
+                    "name": "/dev/graphics/fb0",
+                    "time": 2.5555739402770996,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6917,
+                    "name": "/dev/fb0",
+                    "time": 2.566288948059082,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/loading.gif",
+                    "time": 2.599104881286621,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.614804983139038,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/txtscreensize.txt",
+                    "time": 2.616142988204956,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.6238820552825928,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-journal",
+                    "time": 2.6352460384368896,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files",
+                    "time": 2.7070059776306152,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-wal",
+                    "time": 2.7107808589935303,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-shm",
+                    "time": 2.7108688354492188,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.737920045852661,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.74530291557312,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.7457919120788574,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 2.74873685836792,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.7504148483276367,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.7531399726867676,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.753309965133667,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 2.75356388092041,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 2.9334750175476074,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.936310052871704,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.944908857345581,
+                    "processname": "com.ibl.apk"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "636f6d2e69626c2e61706b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.3510689735412598,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.351101875305176,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "504b0304",
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/base.apk",
+                    "time": 2.362489938735962,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.366631031036377,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.3672099113464355,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "6172740a3035360000803d78280f0100fa72a9bd00903e7800a03e7800a03f780070927800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000001e780000",
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/oat/x86_64/base.art",
+                    "time": 2.3674089908599854,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.750452995300293,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.753274917602539,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.7534399032592773,
+                    "processname": "com.ibl.apk"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 2.9393808841705322,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.9452309608459473,
+                    "processname": "com.ibl.apk"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/app/com.ibl.apk-ta3O15rmcEyAkOHa9k3UKQ==/base.apk.x86_64.flock",
+                    "time": 2.3568429946899414,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/loading.gif",
+                    "time": 2.596768856048584,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.6057560443878174,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-journal",
+                    "time": 2.708516836166382,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-shm",
+                    "time": 2.7109718322753906,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-wal",
+                    "time": 2.726848840713501,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.747370958328247,
+                    "processname": "com.ibl.apk"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 6868,
+                    "tid": 6913,
+                    "data": "3530303030",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.3590869903564453,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "89504e470d0a1a0a0000000d49484452000000ee000000780806000000f5d1ce7c0000000467414d410000b18f0bfc6105000000206348524d00007a25000080830000f9ff000080e9000075300000ea6000003a980000176f925fc54600000006624b474400ff00ff00ffa0bda793000000097048597300000b1300000b1301009a9c180000000774494d4507e207190f2c280fb1504500002e0c4944415478daed9d777c5455dac77fcfb9772633c9a4f732a44280d0b21445404404a488d85177055dc506b6655ddb8bd8d7b5ad1d5d7b412c888b52a449477a4928210949181292905ea7dc7b9ef78f1b5854da5a18b2deef1f90f9ccb977ce79eefddde79ce73ce75c6266989898b42f84bf2b606262f2df630ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7c4a41d620ad7e4a714fcf352d9b43dccdfd530393ea6704d7e0097bc3fc4b3e9ee7fea5baf7fdfdf7531393ea6704d8ec00ddbc2bc3b27bf2a42e01435db7bfa76df7f9bbfeb64726c4ce1fe8fb27afb6e67efd1f7cf7963cea291a77a8cdc7cdd4c456beac20131d0ecb66491f7f47db2ecb3b3fcdd16939f620af77f942f166fbe62cb96ba71b73eb1e08dc7def964e2c9cafbf6fedf24bd36b71bdb6221340d44c1d01576f2cea92ff8bb2d263fc514eeff284bb7955d409da281b030e7b4e7d73f7afb63efde77bcb2b27e7b18173e732f055a9ccc0c820240425823205b5c49de6d373ce2eff698fc1053b8ff83acd996ebcc753574239b1514a08292629caf7db4f5b6c94fbc71efb1cacbfc079f22b72f9d955008f8a09306a13398142020c4a994cebc16755b23fcdd2e93ff600af77f90ef36140e41abd7090b839901450352629daf7eb467f24dd35f9ef683c255eb12513a6fb40c7480a003005808b0ea0533839500b0cf9b2ef7fcf5397fb7cbe43f98c2fd1f6473fe81de20024b016202584058249016e97cebc3bd37be3173ce918095b7f8997b89e014c201960091809002420f0020412c410136e855cb87a07a8dd3df6d33313085db4ed875a03670c494b7fef5d01b0b269daceccabd358361550130a4000404a4948014a07015ce84c8fd00c0b51b6394835f5dc2b62048768388c092000052e8102c402ca1ab0ee81a27eba56f9df4b74d4e0fa670db09bbf6bab2962cd87ae393af2c7e2876dc139b1e9cb1f0966395dbb0657b4c53b3db21ac56102b1020e8ac43850ad47ad0b953e89e51e79dbb1300b8f4e33f6acc4e7000881430244012800433830483058199a15801bd62de687fdbc1c4c0146e3bc1edf6da647c383821dc79a8c6ddfbc937be7d20eec227373df3e1d2f147973bd4e489d57d325d1240240129",
+                    "name": "/data/user/0/com.ibl.apk/files/loading.gif",
+                    "time": 2.599350929260254,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "27842a9cf5f58d61c72a77cdb4599f35d53677a1e468d7f967755c7aac32ab76ed1b8c262f384483a20969b508cfd1df6f2a2aed8bcc04ec2fabc1d03b3f44feecbb901819066a9b1227065a7d5ee3737418b69754666fce3b18d53bf3f4e7a61f8b76ef7181b6d5416008a1c2e3d56cc72af3e4cd17bef9e7cbfabf8daac662b211647c18447cb873d7eed211a36e7b63c1b6bd6561fe6ec7cf6abbaaa2a5c51d78bcef5fbf6be4df5f78f0b2bb2926a498a2239df9255543c64f79f3f357176e197bacf203d23aac1207ea4a64ab07420114218e08962041008410902c0df15a54a7d7e73b6e54db0af23001f0e9909a86c76f1d7effc91b45801010e2a749388fbcbbf886829c7d194a701022e382ab0674711e7321ca3393c7fc252e236e239a9a5d136f18face4da3fa7e7bf4f759f1b13954e002b7ba01ab0a55b102dc965b0361f43088a013031605d2ab2557d55447fbe932ff8433d6e3fe37b4a55e401220491cf761f4d6bd173ffec5cadd573436b740041a4d5712a35077e050f7f18fcef962cf47b75fe0efb6fc1c98e8840fe03b2f1bf0d5fc8df923172dda398912c3c1354dcec94fcc7e6548a7c4255dd3627f908431e7c9f1778e133e5151d31073ff55439fec961cb31dc6b00f4c467aa5c36a339257a4801002aaaa1e377043ac18874b092524085d12c3f61cb71d3f5aa946443f11ee5bf3b6de88a060a7eed11117e6283fdeb9ae1d9ab5eadaa159fd72f7573bba75886cfaf1f7affef5a25ba7da84bbd1e3733c7ce390e9b16181f97c386f8f8d9c79bb6a03e9c6a21256088aa29c3101aa762f5c9246fa1f00b094c7bcd84733302b7ef5bcd57b7a08bb0a2205923d10d1a1c8cb7775fa7c79ce59579cd77dfd29fdf0cf6063ae2b66fe9abd631ebe79e8af3887ca463ef549987841f6fb8b97e64e624d07453880c20ae7bbf336ddf8cc94d12ffdb8ec578fff69cae1bf730a0f86e49654a0a0bc0115352dd0dd1a56eede0f8a0a03c37bd2fc704942800d9debd0d1e291c7ed1d1cbe8ec763f9a682d403958d4908b2809a7da05348193b966801a06b4a4ccbfce7aebff9f0e72dbbcb22f69494a3b0ba01a5d56e08af074b761581e3c3406da90127abdfe9a4fd0b9708906c785d22309f38e33e2321321f3e1f40c1d021416c01590078bcce459b8a47fc96c29db771cf98475ff866fae523bb7f96d521a6e9979fd1404aeda4439e7e5d133638e242739beabddd84c3063ddc8115bb5c8301fc44b8fb4a0f894fbfdb7dcdbfe66e9e545c549e92981489b0081ba40e589950ded202a112242b00499c784db77624975ae80cf0cf775a6b0bca0750a3dbc9712160c5079d7fd9502fa7b822e48b65b957be3177d32d15ae8a98f8e4784485d9a181213c12cdee56a8aa0aedf0aab533e895b4ed5eb83f80e8a41ed761b33441",
+                    "name": "/data/user/0/com.ibl.apk/files/loading.gif",
+                    "time": 2.5995779037475586,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "53514c69746520666f726d61742033001000010100402020000000090000000a00000007000000050000000800000004000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000009002e4f7d0d000000040dbf000f5e0f0c0e710dbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.6151199340820312,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.6152989864349365,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "0d000000390a26000fe60fd20fba0f9e0f870f6e0f560f300f140efa0ee30ec70eb20e960e7f0e6a0e530e380e170dfd0de30dc80dac0d8f0d780d5c0d360d170d010cec0cd00cb60c9b0c820c670c500c3c0c1a0bfe0be40bc80baf0b930b820b6b0b500b440b260b090aee0ad00abc0a9f0a830a700a3e0a26021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d02bf02a50287026a0241022f021101fc01db01b801a101850169014d012d000000000000000000000000001d810c030041636f6d2e62616e6b696e7465722e706f72747567616c2e626d6219810b030039636f6d2e62616e6b696e7465722e6c61756e6368657219810a030039636f6d2e62616e6b696e7465722e656d707265736173198109030039636f6d2e62616e6b696e7465722e626b77616c6c657414810803002f636f6d2e62616e6b69612e77616c6c6574208107030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e8106030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212810503002b636f6d2e42616e6b416c42696c61641b810403003d636f6d2e426100000de3003f7777772e696e676469726563742e6e61746976656672616d6500000dc400597769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d504c00000d9800557769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d00000d6e00557769742e616e64726f69642e62637042616e6b696e674170702e61637469766f42616e6b00000d44002f75792e636f6d2e62726f752e746f6b656e00000d2d001b75792e62726f7500000d20003775732e7a6f6f6d2e766964656f6d656574696e677300000d05003b756b2e636f2e7473622e6e65776d6f62696c6562616e6b00000ce8003f756b2e636f2e746573636f6d6f62696c652e616e64726f696400000cc90043756b2e636f2e73616e74616e6465722e73616e74616e646572554b00000ca8006b756b2e636f2e6d6574726f62616e6b6f6e6c696e652e6d6f62696c652e616e64726f69642e70726f64756374696f6e00000c73004b756b2e636f2e6d626e612e6361726473657276696365732e616e64726f696400000c4e0049756b2e636f2e687362632e68736263756b6d6f62696c6562616e6b696e6700000c2a002f7473622e6d6f62696c6562616e6b696e6700000c1300257472656e64796f6c2e636f6d00",
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.6154799461364746,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "000000000000000400000008000000090000000a000000060000000609a309880963093d0917090208f108e108ce08b7089a0880085d08470831081c080607eb07d107ad078f0774075a0745072e071206f306d706b5069d0681066a0650062e061205ec05d805c405ae0592057805540532051304f804d504bf049f0484046a0449041b03f603e303ca03ae0385036e0354032f0316030002e702cf02b2029b028a027302560238022101fd01e801d101a4017b016201470130011500000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c03003300000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c030033636f6d2e6f6673732e67626b70726f6472657426831b030053636f6d2e6f6369746f2e63646e2e61637469766974792e63726564697464756e6f72642a831a03005b636f6d2e6f6369746f2e63646e2e61637469766974792e62616e7175656c61796465726e69657214831903002f636f6d2e6f6362632e6d6f62696c656d7912831803002b636f6d2e6f6362632e6d6f62696c65218317030049636f6d2e6e75616e63652e6e6d632e7369686f6d652e6d6574726f70637314831603002f636f6d2e6e6f6f6e2e62757965726170701b831503003d636f6d2e6e657476617269616e742e616c6b68616c696a691a831403003b636f6d2e6e6574666c69782e6d65646961636c69656e7414831303002f636f6d2e6e656172666f726d2e707473620e8312030023636f6d2e4e425142616e6b14831103002f636f6d2e6e626b2e4942476d6f62696c651a831003003b636f6d2e6e6176796665646572616c2e616e64726f696415830f030031636f6d2e6e616d7368692e616e64726f696416830e030033636f6d2e6d7963656c69756d2e77616c6c657413830d03002d636f6d2e6d796333636172642e61707016830c030033636f6d2e6d74656c2e616e64726f696462656122830b03004b636f6d2e6d74622e6d62616e6b696e672e73632e72657461696c2e70726f6417830a030035636f6d2e6d73662e6b62616e6b2e6d6f62696c6514830903002f636f6d2e6d6f766f636173682e6d6f766f268308030053636f6d2e6d6f7267616e7374616e6c65792e636c69656e746d6f62696c652e70726f64198307030039636f6d2e6d6f726162616e632e6d6f62696c65617070168306030033636f6d2e6d6f6f7477696e2e6e617469786973108305030027636f6d2e6d6f6e65796c696f6e22830403004b636f6d2e",
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.6156680583953857,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "0d000000880125000fd20fb70f9c0f810f680f470f280f0b0ed60ec20ea80e8b0e750e5d0e3e0e220e020de40dc30da20d790d630d400d2d0d110cf40cca0cac0c940c7d0c640c400c280c0f0bf30bd90bb50b930b6e0b4c0b2a0b010add0abd0a9c0a7b0a600a400a290a0709eb09db09b909a10983096209430924090d08f708dc08c408a8088a086f0856082f080a07e807d407b60796078a0775075e07440731071e070906f106e406c806b2069d067f066e065706390620060805f905d105bc05a20591057c0566054d0533051a050504f004cb04b904a804950471045a0440041903fb03e803b6039f038d0373034b0331030f02f502e302cb02a0028202620252023a0224020501dd01a60191016c015301380125000000000000000000000000001085360300276e7a2e636f2e776573747061631885350300376e7a2e636f2e6b69776962616e6b2e6d6f62696c651685340300336e7a2e636f2e6173622e6173626d6f62696c6522853303004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e6712853203002b6e65742e6f6e6539372e706179746d34853103006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f69642585300300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c852f03003f6e65742e626e70706172696261732e6d6573636f6d7074657313852e03002d6e65742e6269747374616d702e61707015852d0300316e65742e6269746261792e626974636f696e0d852c0300216e65742e6172616d65781d852b0300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b852a03003d6d792e636f6d2e687362632e687362636d616c61797369612885290300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e6563741585280300316d782e687362632e687362636d657869636f0f85270300256d782e636f6d2e62622e62321785260300356d782e62616e637361626164656c6c2e706172741f85250300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c1785240300356d6f62696c6974792e67652e7465726162616e6b2585230300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c691785220300356d652e63727970746f7061792e616e64726f69640f85210300256d62616e6b696e672e4e424714852003002f6d612e6762702e706f636b657462616e6b2f851f0300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c657410851e0300276b746263732e6e657462616e6b1b851d0300",
+                    "name": "/data/user/0/com.ibl.apk/files/db.db",
+                    "time": 2.6159870624542236,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6868,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.ibl.apk/files/txtscreensize.txt",
+                    "time": 2.616318941116333,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6921,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-shm",
+                    "time": 2.9367878437042236,
+                    "processname": "com.ibl.apk"
+                },
+                {
+                    "pid": 6868,
+                    "tid": 6921,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.ibl.apk/files/db.db-shm",
+                    "time": 2.9398229122161865,
+                    "processname": "com.ibl.apk"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

@@ -1,0 +1,444 @@
+{
+    "apk_info": {
+        "id": "y2LkOQWQvNr1wjZJ",
+        "url": "https://developer.koodous.com/apks/b42bdfceb8e7733db22645fee95482dccf5260dcd3ff15ede0de77d2120c3845/",
+        "sha256": "b42bdfceb8e7733db22645fee95482dccf5260dcd3ff15ede0de77d2120c3845",
+        "md5": "924a8b1d7396a7e21e026b4424fcd080",
+        "sha1": "1a6193b9c349913c13d4a2aeae208c027394f9c3",
+        "app": "NTTセキュリティ",
+        "package_name": "com.nttdocomo.cookie",
+        "company": "",
+        "version": "1.0",
+        "image": null,
+        "size": 2012953,
+        "tags": [
+            "fakeapp",
+            "trojan",
+            "fkcx"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 1,
+        "comments_count": 0,
+        "votes_count": 3,
+        "created_at": "2021-09-30T15:34:49+02:00",
+        "updated_at": "2023-03-30T21:48:53.010844+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "924a8b1d7396a7e21e026b4424fcd080",
+                    "name": "",
+                    "path": "",
+                    "sha1": "1a6193b9c349913c13d4a2aeae208c027394f9c3",
+                    "size": 2012953,
+                    "type": "Zip archive data, at least v1.0 to extract",
+                    "yara": [],
+                    "crc32": "7CFA52EC",
+                    "sha256": "b42bdfceb8e7733db22645fee95482dccf5260dcd3ff15ede0de77d2120c3845",
+                    "sha512": "85f75ff6075c9fac8cf91acdfc9a428667697aada2048a6b44b668478f7dfa27cc7daef368cb502700ee2b2168819540655991bdd9488ae2a8b8fdfddcc81023",
+                    "ssdeep": "49152:BjgmCcSRi97ERKeVrl6rMa+wTBHpEUBtgen:BcmB2ixERDVr4Ma+Ad"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "vnd.android.cursor.dir/contact",
+                "https://docomo.ne.jp"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "e061f11722c90d8618973a5e42362741fc1d551e6b8a07ba8117bc749387df2a"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "NTTセキュリティ",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.nttdocomo.cookie.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "",
+                "serial": "",
+                "issuerDN": "",
+                "not_after": "",
+                "subjectDN": "",
+                "not_before": ""
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.INTERNET"
+            ],
+            "package_name": "com.nttdocomo.cookie",
+            "version_code": "1",
+            "main_activity": "com.nttdocomo.cookie.MainActivity",
+            "signature_name": "",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v4, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v2, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v4, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/sun/mail/pop3/Protocol;",
+                        "method": "getDigest"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v12, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/sun/mail/smtp/DigestMD5;",
+                        "method": "authClient"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v0, v1, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/provider/RequestExecutor$ReplyRunnable$1;",
+                        "method": "run"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 23,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 29
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.0288701057434082,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/base.apk.x86_64.flock",
+                    "time": 1.030954122543335,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/oat/x86_64/base.vdex",
+                    "time": 1.031304121017456,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/base.apk",
+                    "time": 1.0496490001678467,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.0499579906463623,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.053144931793213,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/oat/x86_64/base.art",
+                    "time": 1.0534961223602295,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/base.apk",
+                    "time": 1.0660099983215332,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.219235897064209,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.2466120719909668,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 1.2479441165924072,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 1.2527430057525635,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.2562029361724854,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2615768909454346,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.261704921722412,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 1.2619380950927734,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 2.0013980865478516,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.015533924102783,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.1054749488830566,
+                    "processname": "com.nttdocomo.cookie"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "636f6d2e6e7474646f636f6d6f2e636f6f6b696500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.0299251079559326,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.030724048614502,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "504b0304",
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/base.apk",
+                    "time": 1.0498239994049072,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.0525219440460205,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.0532970428466797,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "6172740a3035360000803d78280f010022326dff00903e7800a03e7800703f7800d0757800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000ee700000",
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/oat/x86_64/base.art",
+                    "time": 1.0535941123962402,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.2563490867614746,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2616569995880127,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.261828899383545,
+                    "processname": "com.nttdocomo.cookie"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 2.020956039428711,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.108962059020996,
+                    "processname": "com.nttdocomo.cookie"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/data/app/com.nttdocomo.cookie-VbyfCZcam6hVPGA7Vhhgrw==/base.apk.x86_64.flock",
+                    "time": 1.0311830043792725,
+                    "processname": "com.nttdocomo.cookie"
+                },
+                {
+                    "pid": 5000,
+                    "tid": 5000,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 1.250443935394287,
+                    "processname": "com.nttdocomo.cookie"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

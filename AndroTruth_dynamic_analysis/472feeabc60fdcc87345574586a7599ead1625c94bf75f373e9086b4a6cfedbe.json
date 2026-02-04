@@ -1,0 +1,933 @@
+{
+    "apk_info": {
+        "id": "m3xWdoMVlBBGRoZ5",
+        "url": "https://developer.koodous.com/apks/472feeabc60fdcc87345574586a7599ead1625c94bf75f373e9086b4a6cfedbe/",
+        "sha256": "472feeabc60fdcc87345574586a7599ead1625c94bf75f373e9086b4a6cfedbe",
+        "md5": "4637f70bb727b40f3d7e8be88da1f244",
+        "sha1": "4baaf217d259f90e9edf23e345551e6e875869a5",
+        "app": "BNL Sicuro",
+        "package_name": "com.bnlsicurabnlapp.apk",
+        "company": "Anywhere Software",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2024/03/19/icon_MngUcM1.png",
+        "size": 4714678,
+        "tags": [
+            "banker",
+            "dropper",
+            "trojan",
+            "hqwar",
+            "smsagent",
+            "sends-sms",
+            "telephony",
+            "detect-debug-environment",
+            "bankbot",
+            "checks-gps",
+            "obfuscated",
+            "reflection",
+            "clipboard",
+            "runtime-modules",
+            "copybara",
+            "basbanke",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-04-19T14:52:13.313077+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.2.2/27250/Fri Apr 19 08:25:30 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "19.04.2024 07:47:02 (Build: 106984)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-04-19T08:21:39.061814+02:00",
+        "matches_count": 9,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-03-19T17:39:59.681139+01:00",
+        "updated_at": "2025-04-20T04:32:28.402039+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "4637f70bb727b40f3d7e8be88da1f244",
+                "name": "",
+                "path": "",
+                "sha1": "4baaf217d259f90e9edf23e345551e6e875869a5",
+                "size": 4714678,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "71615BF2",
+                "sha256": "472feeabc60fdcc87345574586a7599ead1625c94bf75f373e9086b4a6cfedbe",
+                "sha512": "971ae9b858ec5f14dec5538e1cb62d1987c534aae48e5b6d19a07bb68d1dfa1ac16963f7017d2f0ffd0f3ad45bd9a3ec2d85dd26aeef41032941733c35dd3a18",
+                "ssdeep": "98304:vEr5hinlhin6Vhinahinx1hin6hinshinUhinycfpNT4IWzDYCPw93Z0i:WCzC6DC8CxjCcCyCKCycj45ICPw9Oi"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "vnd.android.cursor.item/note",
+                "vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://freeipapi.com/api/json",
+                "3vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://invalid-url/",
+                "http://schemas.android.com/apk/res/android",
+                "2vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "db0c4a5e11fa82c1e1fd824d0a8ddabd3dc4b265d2ac23d76ec7d881ddeaa0f8"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.SENDTO",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "BNL Sicuro",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.bnlsicurabnlapp.apk..backgroundservice",
+                "com.bnlsicurabnlapp.apk..dtrsbnotisuntilactv",
+                "com.bnlsicurabnlapp.apk..inj_dnlader",
+                "com.bnlsicurabnlapp.apk..inj_dnlader2",
+                "com.bnlsicurabnlapp.apk..managerservice",
+                "com.bnlsicurabnlapp.apk..mediaprojectionbackservice",
+                "com.bnlsicurabnlapp.apk..notificationservice",
+                "com.bnlsicurabnlapp.apk..openmics_srv",
+                "com.bnlsicurabnlapp.apk..s1",
+                "com.bnlsicurabnlapp.apk..service1",
+                "com.bnlsicurabnlapp.apk..service2",
+                "com.bnlsicurabnlapp.apk..service3",
+                "com.bnlsicurabnlapp.apk..service4",
+                "com.bnlsicurabnlapp.apk..srvnewphonecall",
+                "com.bnlsicurabnlapp.apk..starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.bnlsicurabnlapp.apk..backgroundservice$backgroundservice_BR",
+                "com.bnlsicurabnlapp.apk..dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.bnlsicurabnlapp.apk..httputils2service",
+                "com.bnlsicurabnlapp.apk..inj_dnlader$inj_dnlader_BR",
+                "com.bnlsicurabnlapp.apk..inj_dnlader2$inj_dnlader2_BR",
+                "com.bnlsicurabnlapp.apk..managerservice$managerservice_BR",
+                "com.bnlsicurabnlapp.apk..mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.bnlsicurabnlapp.apk..myreceiver",
+                "com.bnlsicurabnlapp.apk..notificationservice$notificationservice_BR",
+                "com.bnlsicurabnlapp.apk..openmics_srv$openmics_srv_BR",
+                "com.bnlsicurabnlapp.apk..s1$s1_BR",
+                "com.bnlsicurabnlapp.apk..service1$service1_BR",
+                "com.bnlsicurabnlapp.apk..service2$service2_BR",
+                "com.bnlsicurabnlapp.apk..service3$service3_BR",
+                "com.bnlsicurabnlapp.apk..service4$service4_BR",
+                "com.bnlsicurabnlapp.apk..srvnewphonecall$srvnewphonecall_BR",
+                "com.bnlsicurabnlapp.apk..starter$starter_BR"
+            ],
+            "activities": [
+                "com.bnlsicurabnlapp.apk..main",
+                "com.bnlsicurabnlapp.apk..act_perm_dvadmn",
+                "com.bnlsicurabnlapp.apk..faknotiactivity",
+                "com.bnlsicurabnlapp.apk..forc_activateacc",
+                "com.bnlsicurabnlapp.apk..opencamd",
+                "com.bnlsicurabnlapp.apk..openmics",
+                "com.bnlsicurabnlapp.apk..perm_activatemediaproject",
+                "com.bnlsicurabnlapp.apk..perm_activateoverlay",
+                "com.bnlsicurabnlapp.apk..perm_ignorebatperm",
+                "com.bnlsicurabnlapp.apk..perm_notiacc",
+                "com.bnlsicurabnlapp.apk..perm_phonecal",
+                "com.bnlsicurabnlapp.apk..perm_smsperm",
+                "com.bnlsicurabnlapp.apk..perm_startactdevmang",
+                "com.bnlsicurabnlapp.apk..perm_startactwritesy",
+                "com.bnlsicurabnlapp.apk..perm_unknownapps",
+                "com.bnlsicurabnlapp.apk..perm_writesys",
+                "com.bnlsicurabnlapp.apk..req_all_perms",
+                "com.bnlsicurabnlapp.apk..wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "DD2B8FAB67577CE55712D9881DEBA7E76D7B8DF5",
+                "serial": "58118218",
+                "issuerDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_after": "Dec 23 08:23:07 2054 GMT",
+                "subjectDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_before": "Aug 24 08:23:07 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.CALL_PHONE",
+                "android.permission.CAMERA",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.VIBRATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.WRITE_SMS",
+                "com.android.alarm.permission.SET_ALARM",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "oppo.permission.OPPO_COMPONENT_SAFE"
+            ],
+            "package_name": "com.bnlsicurabnlapp.apk",
+            "version_code": "200",
+            "main_activity": "com.bnlsicurabnlapp.apk..main",
+            "signature_name": "META-INF/ANDROIDD.DSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "TakePicture"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/bnlsicurabnlapp/apk/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.406214952468872,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/base.apk.x86_64.flock",
+                    "time": 1.421597957611084,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/oat/x86_64/base.vdex",
+                    "time": 1.4398441314697266,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/base.apk",
+                    "time": 1.4402740001678467,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.453279972076416,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.4576940536499023,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/oat/x86_64/base.art",
+                    "time": 1.4588470458984375,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/base.apk",
+                    "time": 1.4680380821228027,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4108,
+                    "name": "/data/user_de/0/com.bnlsicurabnlapp.apk/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.588426113128662,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4108,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.8595900535583496,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4108,
+                    "name": "/dev/fb0",
+                    "time": 1.8599951267242432,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.952549934387207,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 1.9582240581512451,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/txtscreensize.txt",
+                    "time": 2.012157917022705,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 2.0124258995056152,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db-journal",
+                    "time": 2.0126659870147705,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files",
+                    "time": 2.0337910652160645,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db-wal",
+                    "time": 2.0697970390319824,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db-shm",
+                    "time": 2.0698530673980713,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.106426954269409,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.1153950691223145,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.1158080101013184,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 2.117553949356079,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.1191139221191406,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.122169017791748,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.122967004776001,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 2.123090982437134,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 2.3806259632110596,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.385719060897827,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.398055076599121,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "636f6d2e626e6c736963757261626e6c6170702e61706b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4068009853363037,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4068350791931152,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "504b0304",
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/base.apk",
+                    "time": 1.4408490657806396,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.4558770656585693,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.458400011062622,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "6172740a3035360000803d78280f0100e07dfd5700903e7800a03e7800a03f780080927800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000020780000",
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/oat/x86_64/base.art",
+                    "time": 1.4591948986053467,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.119234085083008,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.122270107269287,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.123029947280884,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 2.390522003173828,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.399890899658203,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/app/com.bnlsicurabnlapp.apk-OdnHw6b1bmY7qGiMWYRzNA==/base.apk.x86_64.flock",
+                    "time": 1.4218719005584717,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9524450302124023,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 1.9580779075622559,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db-journal",
+                    "time": 2.069744110107422,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db-shm",
+                    "time": 2.069930076599121,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db-wal",
+                    "time": 2.095628023147583,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.1165759563446045,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "89504e470d0a1a0a0000000d4948445200000a00000002e80806000000b4acac500000000467414d410000b18f0bfc6105000000206348524d00007a26000080840000fa00000080e8000075300000ea6000003a98000017709cba513c00000006624b474400ff00ff00ffa0bda793000080004944415478daecdd779ce4757d3ff0d77766fbf5ce711c4747409a208ad808c6165bac891a356a4cfb999e684c5393184d5363a28925c69298668b5d2ca808222220bddf01c7f55ef77667e6f7c72cc71d5cd9dddbdb9befccf3c963b863cbcc673edfcff7fb99dd79f17e27000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9548580646514893,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "05f78f937c36c94d47e8f15ba902601942ae028000000000004c0a0140c6acbbabaa0220502abdd5ae3c71de7179f4cc05f9eecabb73d7d6757b7dfe27ebeecf533effce3c77c93979df135f9125d3e694fe39cfeb9f9ee79c705e9e79dc39b96ecdd25c76ff4d7960eb7a8ba1c5d425ea191d2d805be4657092df6af1317e21c92dd6f7b83c7841be3dc97f2679792bbea449f2af499e90a476041ebf952a000e5adb13460b600000000080921300ec508752b6a4a7bb5bfc0f28a519ddfd79eee23372dfb68db96cd55d5937b86dafcf7f61d975f9e6f29bf307e73c2b6f3af7d9e9ab76977fa3af5473fe821373fe821373df9675f9def29bf3e3d5f7a4a6f5ec11d768248d7a7d4c7bb2fa7f1d4b05c0d6f0b224c7b6f26525c9db4b38afad56013049fe28c90b93f4b5e07c5d90e47792fccd1178ec1dd64ddb5dbbcb329700000000001c800060471b5f0cb0a7da1d3d8081325b3c3023af38eedc5cbff1815cb9e6deecaa3fd4456efbf0aebcf5479fcf27efb832ef7ec2cfe7394bce6e9fe73d6d4e5efea827e5d9c73f26972fbf25df7fe0d6ec1cf69eef91d268d4d3da9d446921bb8cf1889b93e45d2d3ec6cf27b9c6fa9e104bd36c05fcfb2d3a677f9ee48b99fc6a8fad1200ace7c854401cabdac8adea1c0400000000e0701200ec504525194f19bf2245babaaa2a0002e5bf0e1645ce99b528274f9b9fcbd7dc935b37addeebc278e7a6d579ee57de9b671f7b56de73d1cfe7e4190bdae6b9cfec9d92e79c707e9e76ec59b9fc815bf3ddfb6fcee65d3b2c8a49365cafa7186bfecf06dca9868cf1887b7f92a35b787c3b92fcaef53da1de91e4b569863f5b4d6f928f247952263708d72a2d8077956c7d579d8300000000001c4e02808c49775773c9342410803631d0d595a72f3c3967cf3c2adf59757756eedcb2d7e7bf7cef4f72e9fd37e577ce7e46de76fe0bd25b6d9fadb3afab274f3bf6ac5c7ccca3f3e33577e7ebcbaecfeaed9b2c8a49a20d33635086b04bad8de7ff9792bcb4c5c7f8f624775bdf87e4e191ec8d23f3fade169db70b93fc5a9a950a274babfcdf0243255bdf7dce4100000000000e270140c6a4a7bb3b0ded7f813634bf6f6a5ebce4acdcb679752e5fb3343b6a0fbdb73cd4a8e55dd77d395f5c767d3ef89457e7090b4e6aabe75ead54f2d80527e5bcf927e6dad577e72b4baf15049c04b55acd24305a6508bbb4eb827e5e9ad5ff5ad9d549feaec4733cdcc263fbc7242f4bf284161ddf3b937c39c95d93f478ad12002c5360ad0c6355011000000000a0e404003b5425451ac5d8bfafa7ab4bed3fa0ad9d3a7d7e8e9b32273f5c776f6ed8b422f53d2e7a376d78204ffafc3bf32ba73f35efb8e04599d1d3df5e7b4351e4bc0527e6dcf927e4ea5577e62bf75c9b750fab8878a4552b954cedee7be8d6",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9552929401397705,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "3b543186ea548d229d5ba1094ae0ceadebf383f5cb0f72ce270395ee4cedead95dd96f60a465efbe331b0d853fc7e839c79f9ba72d7e744b8ce58e4dabf3473ffa6cfee7ee6b767f6c41ef941cd73f3d3d95e6fbd0f37bfab37ad7f624c9bbaeff6a5effa827a6a732b92f0b36ecdcd6b1fb4b31c6bd78f799e9c4f49abd75553bfc18fd61929726995682b13e2fc98c249bac9dbdf4b4f031db9466a5c94b23435eb6eb4dd518010000000038dc040039a84651a8f8052d6a7b6d286b77edd8eb63458af457ab99dad593a9d59e913fbbf7d996d6b93d318e9f3e2f6f3ceb99477c1ceb766ecb5f5ef7a5fcd34d9765577d384932adab27270cccccb4ae9ebd8ef9710333b37e6867861bf5dcbb757dfee3ce1fe635a73c6152c7bb69d78ece5d83827c8c4d19c219dd1d7e8cd624f9c7348380adae2fc9f3937cdccfa47be969f1e3f6cd241f48f26b2e8902806d7a0e0200000000304e7ed1dbc1c6523aa22126042de9fe9d5b33a5da9329d5ee4cedeeced46a77a6ec37ece73c3e1c7aab5df9d30b5e98feae23977dd93ebc2bff70e3b7f2aeebbf968d2355fdfa2add396e607ae6f4f4edf3f877578a2cea9b96653b362749de75fdd7f2aa932fdce7da395c360c6eede875399e99d6a3af63099094c3fb92fc6e5a3f489624cf4ceb0400b5001ebddf4ff2d3494e764d3456d76f00000000001ee417bd1c543d0a1541ab3aa17fc6bec37eced949f3c6b39e9993662c3832d7e746239fbee7c7f9831f7e3a4bb7ac4b92548b22c7f44dcbc2de29a914c501d7c251bd0359be736b861bf5dcba7165bef9c0adf9e945a74ddaf8576fdfd2b96bd539cad8a800580e2b927c3ec94b4a30d6275bdf8f5086e0e6f624af4ef2bd7476db5601c089e5f742000000000025e717bd1daa5249d2185deda146a17218b4aac2f979443d6df1a3f38213ce3b228ffdb9a5d7e52d577f2eb76c5cb1fb63f37afab3a47f7aba2bcd3a71075b1b95a2c8517d03b97fc7d624c9876fbd7c5203806b766eeed8f55b1449319e6a8b153500bd6637c616f7bf2947007051921393dcd5026311001c9b2b93bc3bc9ef75f07956a6006019366ed76f000000008092f38b5e0eaa5114e245000f73ecb4b9f9fdc73c67d21ff707abefce9b7ef8997c77c51dbb3f36abbb2fc7f64f4b7fb5b9ad8fe59a7d54ef943cb0635bea69e4734bafcb9a9d5b32af6fda617f1ef546236b766c890280302a2a0096c757920c97e4e7ac27a43502805dd6f098fd719a6d9c1fed9a68ac6d740e0200000000304e7ed1dba1c65273a8918676a2007be8efeac93b2e7c69a675f74dda635eb7eebefcd9355fc8ff2dbb7ef7c7a655bbb378607aa6559b9985c6382ed6d51499d7db9f5583dbb3ab3e9cffb8f387f9cd475f72d89fcffac1ad19aed73a771f6e34328efa7f82839d4b80a43c",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.956402063369751,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "9cc539fbc2c5f98bc7bd38df5c7e533e7edbf7f3e565d767a85e33394caa75636801fc835577da47f675bd2fcc09a3a60260790d27b93ecdd0df37925c36f2311ed2aa012915000fae555a01ab000800000000001100ec5c95ca41ab0fd5a3d2d091d748b59154534b7723691449bd5149ad521cb042e08a1d9bf277377e237f7fe337f353479f92ff77da53f3dc63cf5415b01d2eda954a9eb1f8cc3c63f19959b57d733e71fbf7f36fb75e9e7bb6ac31391ceecb515249d60e8eae05f05d9b5767c5f64de66d1f8a14236d80c7b17d2ba9d86954002c8f0d497e3872bb2ac977926c352d07a40260b9b5422be079d6370000000000080072008d34d2103468b583924a6aa9d492ee8cb40dae14a915d5d4f711266924f9e603b7e79b0fdc9e53672cc81f9dfdccbcfcc4f30501dbc48281e9f9bd739e95df39fb99f9f6f25bf2afb77e375f5c7a9daa801c4645d68db205f0152befb4871c601e619404485ad39a24b726b936cdc0dfd549ee88ff7766ac54002cb7075b015f7f04e74c0540000000000088002007506f7817b3d51569a45a6fa49a7a1a45917a8ad42afb0e03deb669555ef5dd8fe52faeff4afeee8217e5398b1f6d02db44a52872c931a7e792634ecfcaed9bf2c19b2fcb876ff94ed6ecd8627298706b47d902f8ca9577da43f67bce9a1946ed285370c4ac4bb222c95d496e1bb9dd3a725b6f7a26840a80e5f7602be0771fc163d59f6487f50d0000000040271300ec50c528aa0f3546fea1241a8d5492546ab5348a6610b056541ff165b76f5a9de75efa81fccce247e71f2f7c698e9baabb603b396a6046fef4fce7e74de7fe4cfee7ae1fe69f6efc66ae5dbbccc430111799a4d118750be02b56de610fd9ef5416a3da87f74d05d70e73aa2938648349b627194ab271e4b669e4cf0d237fae4d33ec77efc89ff7a7350345ede6e8161d9700e0d8fc4392572539f7083dfea22477b6e0bcccb5340000000000982c02809d6a14b9837a33eb4119351aa9d68753cd706ad56aea45358d875505fcd27d37e6f25577e5fd17be2c2f3ff1b1e6accdf456bbf2ca539e90579ef2847c7fe51d79cff55fcf17975d97ba939a43d93a8a64ebd060066bc3e9adeeff25c4ba9d5b73eb8695e27ffb51298ac8ff314aa7998271d99664976968796f4ef2a72d38ae9d0ecd98d4933cc6343cc209a6a0a36d370500000000c0641200ec50a3c91d348a4634012ebf6a6d240858a9a65ee9da2b08b869d78ebce23bff96cb57dd95f75df8d2540bc9927674d15127e7a2a34ececd1b1ec8df5ef7e5fcf79d3fcc50bd666218bb4623298a6c1eda9979d5a9fbfdb266fbdfbaf9dadf1e7c08f93fbb72c7d9600a6863db466ee0fa0d000000000087400090fdaa37346f6c27957a2d957a2db56a57ea95bd4ffd0fdcfabdacdcb1399fbee4970ea1",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.956589937210083,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "c9d738dcf8e0acaa131111111111111111111111111191551400e8a9580691070905008a8888e46d1c6e4c5c39004544444444444444444444444444a40105004a93e2c4b4d7a08888488e69681511111111111111111111111111915c5100a0a7e2b41c80a00c80222222ed2068fd0ec022222222222229cc36f300008000494441542222222222222222220d2900d057b195ff6b5222a100401111915c0b6240acb521801a9b454444444444444444444444444464153d4596262903a08888483b08b409b08888888888888888888888888888e48632007aaca5dc43c9b80200454444da63006e6dfe3f850e8a8888888888888888888888888848430a00f456cbc17dc95842598a44444472cdec01ac7a101111111111111111111111111191365300a0a7622bffd74ce348245451222222391610106b65fc5f5c71f92222222222222222222222222222d280f678952625626a1e222222222222222222222222222222222222b6528497a762191c0571358f35752ee9ac4a101191360a321a871b3b4444444444444444444444444444441a528497b75a0e3348c4b505f0ea574b9c0337dd49f52022226d1204998dc30a01141111111111111111111111111191962800d0d7131f8758acf9a3400180abebdc859fadb715f19802304444a46d5a1a839b3ad0d02c22222222222222222222222222220d245505d29444220681ea01305117a59dd9b8c70046f519c6d7f3a6ab4e4444a455d21a5c454444444444444444444444444424479401d05b196c011c539aa195924948c41954d28ded876ea8fa101191560b8280d66f01acb1594444444444444444444444444444565106405fc54c1841f37f25462206a940998a48c4e9942ca45b6131db0f1ec9fd1fbea83a11119156098280d6ee26af37374444444444444444444444444444a4213d47966625e2ca34642a22c1a0d26e006c3f607dd5878888b49a02eb454444444444444444444444444424579401d053b106ff6fb681c413d4a6ea556189e4ca00c00dbbf7a3477167965497ab5e4444a495e3704c9520222222222222222222222222b2b618d007e80bf40f8fbec040a04b78248112a01828003aaff1352a80daf0e755c0726069782c0b7f5c04cc07e601b3c37f23e22405004af30d241607252a824492816100608c183f19ba212f4ffa50f5222222594b07695582888888888888888888888888f8ae17b061786c006c048c0286909f78a672e047602e301d9816feb8e29809e8419f584901809e8a6598782819d72ed10024e22b030001765400a08888b4523a48673c0eaf357e2b285f444444444444444444444444dc530afc04d809d811d81ae86d59193b6302113700766de4cfab8049c0b7c037e18fdf86bf57a3532cf9a400406f6516d89750006078a514d0bfb8cbca5f",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9568331241607666,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "7d862ae645870e1d3a744000a9742ae33178cdc3ec4a269ed1164bf6a8c3046bb9c29537a7ab3dbfc6f702ce70a09cca00e857b9a31c001860b6a1fbccb1721fab2991ae538fe65d0b806370633be615b6c26cefe4b2cd30db53f9e242f46c24ca7399aa889f872f716fcbc763d59ebdbaf7d15a963deec49d05656500ccceeed819f0d59e9f770b9df6266d8f9d2f187fa353b39600780d381a18025c86c9f2dc18650094ace926575ae4f516c0e90088b5290030168bf18b1d0f55431211917068512e3fc98a322cd8e55987ca3a446dc7197f01d6b3bc8cca00981bae3c08ab8bf835578dc9fc54ef50997703faabbbd4dccba3b1f3434c7604971ce9789dfb965565047090babcc8ce657cc950ffb443e53d0428d1981fe972ba780dfaf042e26ce00347ca3a58c36c56cef7f0332b0b60d3b6b5b45c73746a9a350fb80e581f381c7895d53703530640c99a02003d1564f19fd902d8536106c065b56d5bdbf8f9e85d19d4b5971a9e8888845b00b7ee3fe5fff3921eb0d8652230df91b26a0b60777402eec5eead8053d895154e1900db57ad07d7dd44e00e87ca9bc06c11239a7bf934efba1a98e55079f771b8aefb623250f8460f91a33b97a9f6a80d573874cfb3a3da8937ed592fb3dae56547ca3908c9d43a98c06adf1c8302459b626b3672bdf89d997ae09f989d6236026e0196a10040690505007a2a9bdd0afdce00680200e75597b7e9cb1426928cdbfe60353c1111211da45bbd83b078498ba6965dc2c05b8e94b5b3dab8537607ceb3bc8c956a375e943b20fa190057f83d50ee50791500a8398d6f636739261b822b7e027475b4aecf078a3dbcde770dcf9b44affff1a59f9c85d9ded3157ba89d78d39eb5966597371c296767245363f1736bd002e01c9dfe468db2b45cdd746ab2f62d300613147d81aa43b2a500405fa5c938dac0eb00c0200d319853bdbccd5feaec6df6a3576917b53d1111cfa5d26914012859d0a2a97d263952ce12b571e75c87d98ece560a006c3b17328bd57934eb5808dcef5079f740749d1ab51e9d8ffb81058e943509ece4601d1701677a7ccd5fa86e2f727da46ff7a77f76685c5000a03ff73eaa5bbb7ceb48394b904c74014ef6f8f39f83c92a2bab5bd7d2720dd0a969b50ae0afaa06c99602003d96d516c0ad0d5470fd48990c8073aacada5cdf9d0a8b396bebfdfcad4b1d3a74e8d00101a4d341abb700162f69bb48fb4c71a49c69b571e794027fc3deb7b81500d8762e3c8caef7ecbabbcba1b20e037aabab54ff823f593ac1041b3de25079b774b08e4f00fa797ccd1f050c51d717a9b98c6ff7187381171c29eb68cbee7514a4a632fbd257ccc56c2569bb34928933f03bab5a0fe0443583d574c7de6cde1b605e3812910ea200404f65910090a4cf1900eb5300ccae5c9e932f77d10e87d0",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9570391178131104,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "8788c7623c72cc250ce8d2932555e5796b23db0d1dc583c75ccc063dfa73dff71f72d607ff24bd7021cc9963ee93d574c5973bad74da64aecd564c01de1edf9cfb54c69389fe88300fb803b3f5c252b56fe75d8fd94a64670bcb1603eec13c40acc8c1d7b36141575b00b7f3ad83a3f5ba33668bb93d22d2373e835ddb8a6a5cb28b8b19003b6102fe2e05fa45a09d9403675956a671e43720ed434cb0522eccc46487b4398beb70cc76873ef6d5ca00d8be4ac2bef257b89df1f512e04707caa90c80fe96399765dc2d1c17a2ac1a7804b3fe3145b70c39f18b3c7fffff01b9ca94b318934dd0f60cc96331ebcebedfef9e82d9d5e4545d8659db0a930df02a4c86e67b8025aa16b18932007a2a4d2b3200261dbcdf0c0258b000be9d0c8b16ad9553e57ff3a6b2d54bb772c6fbffe0c7cae5ce9fd7694b1730bf7c991ab8ace5777b1fcf5eeb6f0e4097a2920efffe5d8b4ab9f990739870f6f56cd0a33f774e798f33dfff27e9050b61f61cb4b3a978370e07adcb00285edf98fb52c638705284cfe5e7c069c030e07728f86fc5ad49143ec3c9d8fbe6fbbac09539fa5a3604002a0360fb72299b514f600cf00526eb5f5482ff1601e76978d0b8d40c9732006e837930321bf80bd108fe03b81c986e51797a583087be3ec75fef4e07da81af5bc9d93e97713503600cf839f06d38777739f86f3cf66fe5edd2bd858bf73fbe65008cf2b6f0f3c23e691870060afecb95c1c011792ec38d39fe7ab73a50efc78575efbb54783ddfa1aa68b57531db03ff80c9a4b99eaa446ca100408f651b745090743861642a65828cbeff1e2a564f7c910ad2dcf7fd870c7fee3acefae09f2ca8a970f663aedfa31faf9df1477a957651039795f65c6f332edbedc895bf4ec61394161475d8f73f68c39ff0c5457772e176079088c5b9f7bb0f38efc367095666fe13f1f00eab955b002bff9fb77c5a38dd03b3a818254b316f03ee8cd96ae201b4a5e36a5da225e5686bd6c9a9982c1db61a87794bb5ad2ad52746a6cd37c5f675a29ec009c0d398ac3237019b44a84f0c3001c5b3353ce81a6d86ed01809b0357009f011f6032ff758d501b7906b8ddb2329d0d74cee3f79f1ed64b2e8d072659de167604b6533f19d97bd38e92c404247c8ac9ae35d4f1f63133fc3c81dab3d7f73f2ed46baefa8aaec0e111ebe76b801780a38021981758e7eb3621a7c692df40ef29e139cea54f81f72daff78270de2c666c390fb810775f9eb04117cc8ba993817f615e8013c92b05007a2bfbb003273300aea9aa0aa64e831f7e80babad5fea8369de29eef3e6083e7ffc4755fbf4155aacec98fb8fdd051bc79d6750cedde47cd5c18d4b5178f1f7b2989d8eadd7dd7e2d276ffdeebf4e8c70b275fc573275ec1d0aebd00b875f23b9cf5c1bf14fc27de4ba55b938b5739003d",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9572460651397705,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "436686bf5eae36e375f9f3d937cf07e6611e0ccd057e0c7f9cc5aac0bf725595e81acd9b8af05a9cd7e0c799e1b53b13b3fde48faaa6ac8ccdf3f7afc76497b6d99dd81f00d80593dde82f116997b63f53eac87efc07cc8b322e9cdb6b8197c3f992b8d39e6db8578dea7c2a6a0f3dbe00f6058e016e04fa3bf819ee00bec2643774b53fb9d082b9db030e9ce7f31cb806c7a100409b7c0c9c055c0a1c058c013652b5500afc0d93415f8118e2cce4562c539050b3c94a79b9d93eb5d404a49ffff1734cdcef82366fa55cb12208339582b232738009002c2d859252e8540ac9a6cf5740c0e4b2854c2e5bc89333be58f9fbdd0a8ad9b47b7f36e8da9b119d7b31a24b6fd6efd28b115d7a519228c8b88cdbf55b97270fbd90197b9fc0035fbcc5fdefff87594be6ab4d346350d79eecb9ee68aed9ebe7742beab897186e9ef40e177ffa22f5e9342c5ab4daf6d522d23ed26905f349a4e6ec518c16af027e83d9dae9316053c7ca3f345c003818bbb746530060382c00a7009f611e12dba40493b5e6d4f0d7cbd466225dfe19984c45dd31c1c49dc3a30b66cbdcce98ade43a85bf5788d9a6b304286ef0752a31dbeeaeb09c558b91e9b01d5563b2812dc764965cdee068f8fbf3c2a30e115da30057031f34b8361b5eaf5dc21fbb0345e1b5da39fc79b7065f23c5ea01ddd5acbe1d7d3950dbc2b5b92cfcf5124cc09f0270736b5f60f33c97e19fd81fb4f96cd8fe065b5ece0b815b300fe6d54f46ab7c37631e446f6779bd94020fa207c46b4aaa8cde9639aa590f9e005ec264813bdab1b217007f0fe73f8b1dacfba330bb2868eed6bc6f80d7813d2c2fe79e615b9ca8a1d22a4b817b302f2aef85c9c67c007e67f2df3ebcd7b851cd435c9d384a0e046613e056fddbc202359baccd9b07ebac0b31f87ad97c6e9efc0e178fdab94d5fb2a2aebaf13fa8ab8365cbcc015058082525e6282a86a2a2164ffdb2ba6a262c98ce8405d3d7b8238a31a8b42bc33a75677049370695766568697706977665604957fa1777a17751295d0a8a56fb77433bf5e0aaed0ee6ffb63d9097667ec37d9fbcca0b5f4ca03ea5b586ce85c56c3778247b0d1fcd5ec347b3e580e1c43a30e35e75aa9e733e7ac66c139d4ec39c3926685544da5d7d2b32002a1fa7b75c78101de59bec2fc31be9bb819f3b56f603316fd5dea6f6ed441b9e065c86d9dac2362785ede8131400d856b6df505763b64317f1950b8b5e5f01cfe95445de2f2c28c31d2edc5a63b60bbccaf2720e037e063ca97e327273c5342623cd4798e0159b6d0f5c84d92a54dcb9b748a85e23bb06d05e966232014ec064282d70a8ec4330813d876beed62a773a5257b7637f0020982c73a768a8b4528059bb7a05188ed91ef80ca0a7a7f5f15be0514cf67df19c22b97ced15db9074a8501900b3575b",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9574899673461914,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "72ed60609425657954a703807b712300104c16409b0200b50570fbba0cf8196b673eb255292668716756cf38a4715fed592fb2ba6163607f87cadb51eb58276347e6668047d44c0113007805660b62db9d075c0754e4e9fbd7b7308f3b03381d13c07f63f8a37254b4de5696966b824e8dbf140028ad168fc748c4e3a4b47fa138ae4b9a02cb9f0000251e4944415461317fdaeb04ced87007628da4e72babafe1e539dff1ec8fdff0ef39935952db48a6ec2080aa2a13f857d5f0cf15ad23224d4bab0a24337a73da7e05c0250e957726304dedbbd1f3183573800b80c7d42faadc1ed4af482e281390e4da2f2c29471df0a44e0760b6915b803d0ff79b7308b01ef0bdfa1f2ffac9f9c0d598cc7aaed81e93e5f4cf0ed6771c379e912a00b07d2800107e853bdb8e03fcaf83fa850b2df9bcf5c0dfd54c019805bc041ce040597b023f277f991b3309c88f01fb86c7d7c04d9860d32a35b5ac24b133007009f0814e8fdf0d533c958b4d070b1349aa0265381377edb5ee68eedbe7148675eab1daef4f2a5bc84b73a6f0d2dc29bc3e6f1a35e9fac62e22a8a932017fd595b0221856317f2292a17490ce6a3c4eab83f195164eed773eb08e43e5fdb7dab7b3d75a6b3c0e1c0a1c15a1cfe46ab0a61e9a8ba8fdeb1af5cb36c04e9694e53fc0429d12006a310f39c73950d615810863d4ff78315704b32ddfe9c04887ca7c35f032f0a5c67c8dfb0e95d9f775acad706bfbdfc9744c30fca1d893b9f91560aea66d2bdd8b1b0180001701f7919ffc0fd97ecf8d30c18a7f0cebf85eec7969dc767b62b221db663ccd678294885300a0a77235e214249354d5ab0f11f794260bb962d723b964f49ec463312aea6b7977d14c5e983d89677ffc86e9154b1bff874100353561b6bf2a081a5e4d0acc1191eca48240f9d5a525858e0c303e2f9c6e8079e0e192172d6be32a4bfb3b0fd815e81791cfe36ad6513d6414b15f91ca2839f44b8bcaa2ed7f57770f266b990bf75aa701bf0516abff89fc5c114c80ea2f80e71d1b3b1f0076c0ad07ce6acf7ed7adcfeb584598edbb130e95b9a3d6b17e61d167d6dc6d75ff066603031d28eb06c07ed8b5feda92dec0e5c0a5c06be15cf9194c167169dcf99696eb699d1abf2900d057398a3628482414f324ced979d8c6dcbec7f12cafafe5866f27307edef7bcb5e087c6b3fc01a4d326e8afa67af54c7fa0f62f226d1b8e832cc764ed19ec2357167a7d5d382d041e74ecf3cfc76c9b610b9bde942c88705b5d089c013ca7be517da5e7d7824814ae535da36e581738cc92b22c075ed02959cdb7c03bc08e0e94b51326239c0ddbc2ba32972976bc7dbe80c9daf95387cabc0d7019f00787ca5caaf6ec75997d0e00bc1ad8d8b1323fdc01dfe3279840661b5400cf6abab69a7acc1aecaf1c29ef38dc0a005c210e",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9576399326324463,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "4100a88bb91b00000000000080dd0800ec2c458001a036e2ff00000000000000d89d12c0000000000000000000502119003b4af63f00a84f5f1700000000000000b01b01801dd52449230c1000aad2570418000000000000805d9400060000000000000000800ac900d8597d658001a0323d458001000000000000d88d00c08e123e0000e66f00000000000000ea2600b0aba4ff030000000000000000a89a00c08e6a4400020000000000000000544d00604709ff0380faf4740100000000000000bb1100d851d75f7ae47149e6f4040054e4a4572fe639ba010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/loading.gif",
+                    "time": 1.9578649997711182,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "53514c69746520666f726d61742033001000010100402020000000090000000a00000007000000050000000800000004000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000009002e4f7d0d000000040dbf000f5e0f0c0e710dbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 1.958333969116211,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 1.9587860107421875,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "0d000000390a26000fe60fd20fba0f9e0f870f6e0f560f300f140efa0ee30ec70eb20e960e7f0e6a0e530e380e170dfd0de30dc80dac0d8f0d780d5c0d360d170d010cec0cd00cb60c9b0c820c670c500c3c0c1a0bfe0be40bc80baf0b930b820b6b0b500b440b260b090aee0ad00abc0a9f0a830a700a3e0a26021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d02bf02a50287026a0241022f021101fc01db01b801a101850169014d012d000000000000000000000000001d810c030041636f6d2e62616e6b696e7465722e706f72747567616c2e626d6219810b030039636f6d2e62616e6b696e7465722e6c61756e6368657219810a030039636f6d2e62616e6b696e7465722e656d707265736173198109030039636f6d2e62616e6b696e7465722e626b77616c6c657414810803002f636f6d2e62616e6b69612e77616c6c6574208107030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e8106030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212810503002b636f6d2e42616e6b416c42696c61641b810403003d636f6d2e426100000de3003f7777772e696e676469726563742e6e61746976656672616d6500000dc400597769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d504c00000d9800557769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d00000d6e00557769742e616e64726f69642e62637042616e6b696e674170702e61637469766f42616e6b00000d44002f75792e636f6d2e62726f752e746f6b656e00000d2d001b75792e62726f7500000d20003775732e7a6f6f6d2e766964656f6d656574696e677300000d05003b756b2e636f2e7473622e6e65776d6f62696c6562616e6b00000ce8003f756b2e636f2e746573636f6d6f62696c652e616e64726f696400000cc90043756b2e636f2e73616e74616e6465722e73616e74616e646572554b00000ca8006b756b2e636f2e6d6574726f62616e6b6f6e6c696e652e6d6f62696c652e616e64726f69642e70726f64756374696f6e00000c73004b756b2e636f2e6d626e612e6361726473657276696365732e616e64726f696400000c4e0049756b2e636f2e687362632e68736263756b6d6f62696c6562616e6b696e6700000c2a002f7473622e6d6f62696c6562616e6b696e6700000c1300257472656e64796f6c2e636f6d00",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 1.9746179580688477,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "000000000000000400000008000000090000000a000000060000000609a309880963093d0917090208f108e108ce08b7089a0880085d08470831081c080607eb07d107ad078f0774075a0745072e071206f306d706b5069d0681066a0650062e061205ec05d805c405ae0592057805540532051304f804d504bf049f0484046a0449041b03f603e303ca03ae0385036e0354032f0316030002e702cf02b2029b028a027302560238022101fd01e801d101a4017b016201470130011500000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c03003300000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c030033636f6d2e6f6673732e67626b70726f6472657426831b030053636f6d2e6f6369746f2e63646e2e61637469766974792e63726564697464756e6f72642a831a03005b636f6d2e6f6369746f2e63646e2e61637469766974792e62616e7175656c61796465726e69657214831903002f636f6d2e6f6362632e6d6f62696c656d7912831803002b636f6d2e6f6362632e6d6f62696c65218317030049636f6d2e6e75616e63652e6e6d632e7369686f6d652e6d6574726f70637314831603002f636f6d2e6e6f6f6e2e62757965726170701b831503003d636f6d2e6e657476617269616e742e616c6b68616c696a691a831403003b636f6d2e6e6574666c69782e6d65646961636c69656e7414831303002f636f6d2e6e656172666f726d2e707473620e8312030023636f6d2e4e425142616e6b14831103002f636f6d2e6e626b2e4942476d6f62696c651a831003003b636f6d2e6e6176796665646572616c2e616e64726f696415830f030031636f6d2e6e616d7368692e616e64726f696416830e030033636f6d2e6d7963656c69756d2e77616c6c657413830d03002d636f6d2e6d796333636172642e61707016830c030033636f6d2e6d74656c2e616e64726f696462656122830b03004b636f6d2e6d74622e6d62616e6b696e672e73632e72657461696c2e70726f6417830a030035636f6d2e6d73662e6b62616e6b2e6d6f62696c6514830903002f636f6d2e6d6f766f636173682e6d6f766f268308030053636f6d2e6d6f7267616e7374616e6c65792e636c69656e746d6f62696c652e70726f64198307030039636f6d2e6d6f726162616e632e6d6f62696c65617070168306030033636f6d2e6d6f6f7477696e2e6e617469786973108305030027636f6d2e6d6f6e65796c696f6e22830403004b636f6d2e",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 2.0117850303649902,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "0d000000880125000fd20fb70f9c0f810f680f470f280f0b0ed60ec20ea80e8b0e750e5d0e3e0e220e020de40dc30da20d790d630d400d2d0d110cf40cca0cac0c940c7d0c640c400c280c0f0bf30bd90bb50b930b6e0b4c0b2a0b010add0abd0a9c0a7b0a600a400a290a0709eb09db09b909a10983096209430924090d08f708dc08c408a8088a086f0856082f080a07e807d407b60796078a0775075e07440731071e070906f106e406c806b2069d067f066e065706390620060805f905d105bc05a20591057c0566054d0533051a050504f004cb04b904a804950471045a0440041903fb03e803b6039f038d0373034b0331030f02f502e302cb02a0028202620252023a0224020501dd01a60191016c015301380125000000000000000000000000001085360300276e7a2e636f2e776573747061631885350300376e7a2e636f2e6b69776962616e6b2e6d6f62696c651685340300336e7a2e636f2e6173622e6173626d6f62696c6522853303004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e6712853203002b6e65742e6f6e6539372e706179746d34853103006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f69642585300300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c852f03003f6e65742e626e70706172696261732e6d6573636f6d7074657313852e03002d6e65742e6269747374616d702e61707015852d0300316e65742e6269746261792e626974636f696e0d852c0300216e65742e6172616d65781d852b0300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b852a03003d6d792e636f6d2e687362632e687362636d616c61797369612885290300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e6563741585280300316d782e687362632e687362636d657869636f0f85270300256d782e636f6d2e62622e62321785260300356d782e62616e637361626164656c6c2e706172741f85250300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c1785240300356d6f62696c6974792e67652e7465726162616e6b2585230300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c691785220300356d652e63727970746f7061792e616e64726f69640f85210300256d62616e6b696e672e4e424714852003002f6d612e6762702e706f636b657462616e6b2f851f0300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c657410851e0300276b746263732e6e657462616e6b1b851d0300",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/db.db",
+                    "time": 2.01186203956604,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4054,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.bnlsicurabnlapp.apk/files/txtscreensize.txt",
+                    "time": 2.0123579502105713,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4111,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.3843069076538086,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                },
+                {
+                    "pid": 4054,
+                    "tid": 4111,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.384791135787964,
+                    "processname": "com.bnlsicurabnlapp.apk"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

@@ -1,0 +1,1180 @@
+{
+    "apk_info": {
+        "id": "E2eV1R7JemxGRoYv",
+        "url": "https://developer.koodous.com/apks/c595530b37a4872d571a81995dfb0fc108ab23476b6e3fa337bc5566aea778dd/",
+        "sha256": "c595530b37a4872d571a81995dfb0fc108ab23476b6e3fa337bc5566aea778dd",
+        "md5": "2078e2f179c15b6a878180524be43c5b",
+        "sha1": "f897c880715f072e265f834ef60755985028dec1",
+        "app": "레드벨벳",
+        "package_name": "com.tccpt.idyusui",
+        "company": "Android",
+        "version": "3.28",
+        "image": null,
+        "size": 1259021,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2020-09-07T06:00:10+02:00",
+        "updated_at": "2023-03-30T20:19:42.307906+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "2078e2f179c15b6a878180524be43c5b",
+                    "name": "",
+                    "path": "",
+                    "sha1": "f897c880715f072e265f834ef60755985028dec1",
+                    "size": 1259021,
+                    "type": "Zip archive data, at least v1.0 to extract",
+                    "yara": [],
+                    "crc32": "84E4D34F",
+                    "sha256": "c595530b37a4872d571a81995dfb0fc108ab23476b6e3fa337bc5566aea778dd",
+                    "sha512": "f460ead6af2ce1afa989bc4ce03f91152536805b6e85e5a71d79a216c061cb453772fe357b9dbd70b468f494989d09987b0184a344703a8937c3b6eeb9d70b9d",
+                    "ssdeep": "24576:yzjmmCNUiqZ/Z/OjGhFMVzt+OphfyLvFqvmBi0sQ2HtH/Cu64aTFqVH:Gjm/5qZ/ZoqFMVtHpF4H2HtH/Cu64aT4"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "e106c0e949b4cf7395dcebbfc5bb7d59933764691a0e3201fb0ddfa44a30369e"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MY_PACKAGE_UNSUSPENDED",
+                "android.intent.action.BATTERY_CHANGED",
+                "service_destroy",
+                "android.intent.action.MY_PACKAGE_SUSPENDED",
+                "android.intent.action.PACKAGE_CHANGED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.HEADSET_PLUG",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.DOCK_EVENT",
+                "aaaac",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT"
+            ],
+            "app_name": "레드벨벳",
+            "services": [
+                "com.test.uploadcontact.Alarm.PollingService",
+                "com.test.uploadcontact.SMSService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.test.uploadcontact.SMSReceiver"
+            ],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.INTERNET",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_SMS"
+            ],
+            "package_name": "com.tccpt.idyusui",
+            "version_code": "3002",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v8, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lmph/dexprotect/a/a;",
+                        "method": "x"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "3.28",
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "",
+                    "domain": "redvios.com",
+                    "hostname": "redvios.com"
+                }
+            ],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "path": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex",
+                    "time": 2.125318765640259,
+                    "processname": "com.tccpt.idyusui"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4807798862457275,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/base.apk.x86_64.flock",
+                    "time": 1.6177468299865723,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/oat/x86_64/base.vdex",
+                    "time": 1.63608980178833,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/base.apk",
+                    "time": 1.6375417709350586,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.65230393409729,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.6575517654418945,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/oat/x86_64/base.art",
+                    "time": 1.6587378978729248,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/base.apk",
+                    "time": 1.7605788707733154,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex",
+                    "time": 1.792125940322876,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex.x86_64.flock",
+                    "time": 2.1283068656921387,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex",
+                    "time": 2.1286537647247314,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat/x86_64/classes.vdex",
+                    "time": 2.128905773162842,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat/x86_64/classes.odex",
+                    "time": 2.129072904586792,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat/x86_64/classes.vdex",
+                    "time": 3.2503299713134766,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.250415802001953,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.2505970001220703,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat/x86_64/classes.art",
+                    "time": 3.250647783279419,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat/classes.dex.cur.prof",
+                    "time": 3.250703811645508,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.439295768737793,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "name": "/data/user_de/0/com.tccpt.idyusui/code_cache/com.android.skia.shaders_cache",
+                    "time": 3.549717903137207,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "name": "/dev/graphics/fb0",
+                    "time": 4.312119960784912,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "name": "/dev/fb0",
+                    "time": 4.312253952026367,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.48367977142334,
+                    "processname": "com.tccpt.idyusui"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "636f6d2e74636370742e6964797573756900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4938409328460693,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.493879795074463,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "504b0304",
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/base.apk",
+                    "time": 1.6377689838409424,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.6545579433441162,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.6585757732391357,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "6172740a3035360000803d78c03e00001cb44df200c03d7800d03d7800e03d780090407800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e0030000501b0000301f0000c80f0000f82e0000c80f00000040000000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000040d0000",
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/oat/x86_64/base.art",
+                    "time": 1.658965826034546,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "6465780a",
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex",
+                    "time": 2.1287169456481934,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.250560998916626,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.250621795654297,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "data": "0100000000000000",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.4739608764648438,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.550046920776367,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.550543785095215,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.6187429428100586,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.6188058853149414,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.8204469680786133,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.8244848251342773,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.842514991760254,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.856003999710083,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.859639883041382,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.244747877120972,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.312013864517212,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.335869789123535,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "data": "0100000000000000",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 4.339936971664429,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.343791961669922,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.359200954437256,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.377696990966797,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.378807783126831,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.387273788452148,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.388006925582886,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.393868923187256,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.3950889110565186,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.395829916000366,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.396957874298096,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.427983999252319,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483453989028931,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483508825302124,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483561992645264,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483613967895508,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483659982681274,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.517861843109131,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.521796941757202,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.62889289855957,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.629114866256714,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.631163835525513,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.632683992385864,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.6633758544921875,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.6635777950286865,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.66392183303833,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.663977861404419,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.664222002029419,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4425,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.664277791976929,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4442,
+                    "data": "343031000000000407000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.947662830352783,
+                    "processname": "com.tccpt.idyusui"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/app/com.tccpt.idyusui-oAe5rBl2TX25jjWeC9OfQw==/base.apk.x86_64.flock",
+                    "time": 1.6240549087524414,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat/x86_64/classes.vdex",
+                    "time": 2.128861904144287,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat/x86_64/classes.odex",
+                    "time": 2.1290318965911865,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex.x86_64.flock",
+                    "time": 3.250670909881592,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_odex",
+                    "time": 3.250732898712158,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex",
+                    "time": 3.2507569789886475,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/oat",
+                    "time": 3.2507898807525635,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex",
+                    "time": 3.251725912094116,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml.bak",
+                    "time": 3.4394378662109375,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml.bak",
+                    "time": 4.574890851974487,
+                    "processname": "com.tccpt.idyusui"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "6465780a30333500ea64bf715a9bb415d02bd1fb12e1ad941c99a474a728c5a10c651b007000000078563412000000000000000030641b00183f0000700000004e080000d0fc0000c10c0000081e01000128000014b70100e73b00001cf702005105000054d6040098e41500748005007480050076800500a9800500e8800500eb800500f9800500fc80050000810500058105000b810500108105002781050037810500518105006e8105008f81050097810500b4810500c3810500d1810500df810500ee810500fc810500068205001e82050039820500458205005b8205005f8205006382050067820500b1820500bb820500d7820500dc820500e2820500f6820500fd8205000d8305001a830500328305004a83050053830500988305009c830500a0830500b9830500c28305000d8405001e8405002c840500408405005e8405006a8405007c840500a4840500b0840500b6840500ca840500e9840500158505002f85050039850500558505008d850500c1850500ec8505001786050043860500738605009e860500c8860500f38605001d870500468705007c87050095870500b2870500e4870500248805004488050061880500848805008b88050097880500a4880500ad880500b7880500c0880500c7880500e9880500f28805001f890500358905005c890500628905006a890500708905007c89050097890500a9890500c0890500d4890500e68905001a8a0500388a0500438a05004f8a0500618a05007b8a0500ab8a0500cc8a0500f68a0500058b05000c8b0500158b05002a8b0500478b05005f8b05006d8b05007e8b0500918b05009f8b0500ac8b0500ba8b0500c98b0500d58b0500e28b0500ec8b0500058c0500128c0500228c0500338c0500488c0500558c05005f8c05006b8c0500798c0500888c0500948c05009c8c0500b28c0500c78c0500db8c0500e38c0500eb8c0500f08c0500f78c0500368d0500488d05005f8d0500728d0500b78d0500c28d0500ec8d0500078e0500248e05003e8e05005d8e0500748e05007b8e0500818e05008e8e0500958e0500a78e0500ae8e0500c28e0500d18e0500d88e0500e88e0500f48e05002c8f05003b8f0500508f05005a8f0500708f05007f8f0500898f05009b8f0500a38f0500bf8f0500cb8f0500fb8f0500049005000c900500129005002490050036900500559005007190050078900500ae900500b5900500c0900500cb900500d3900500f0900500fc90050008910500269105003291050036910500399105003e91050071910500a4910500df910500e8910500fd91050028920500529205007d920500a7920500b8920500e7920500159305002e930500329305003993050040930500469305004c930500549305005c9305005f9305008d9305009c9305009f930500",
+                    "name": "/data/user/0/com.tccpt.idyusui/app_mph_dex/classes.dex",
+                    "time": 2.0899457931518555,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2275756964223e35366263626664652d353238352d346263342d383361652d3239626239373231363664323c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.439335823059082,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.4732108116149902,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.5479228496551514,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.5503158569335938,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.6186349391937256,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.618778944015503,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.8202879428863525,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.8209469318389893,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.826002836227417,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.8559727668762207,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 3.8587708473205566,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.244309902191162,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.310547828674316,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.314825773239136,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4439,
+                    "data": "0100000000000000",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 4.339751958847046,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.34335994720459,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.344984769821167,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.37720799446106,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.378426790237427,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.387011766433716,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.387737989425659,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.3936309814453125,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.394380807876587,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.395587921142578,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.396613836288452,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.424830913543701,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.428358793258667,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483483791351318,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483536958694458,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483583927154541,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.483636856079102,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4411,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c696e74206e616d653d226c6173746964222076616c75653d223022202f3e0a202020203c737472696e67206e616d653d2275756964223e35366263626664652d353238352d346263342d383361652d3239626239373231363664323c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.48370099067688,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.5173938274383545,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.521646976470947,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.628623962402344,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.6289448738098145,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.629968881607056,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.632425785064697,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.663343906402588,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.663527965545654,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.663664817810059,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.66395378112793,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.664011001586914,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4363,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.6642539501190186,
+                    "processname": "com.tccpt.idyusui"
+                },
+                {
+                    "pid": 4363,
+                    "tid": 4442,
+                    "data": "67657461646472696e666f2072656476696f732e636f6d205e2031303234203020312030203000",
+                    "name": "/data/user/0/com.tccpt.idyusui/shared_prefs/config.xml",
+                    "time": 4.7271668910980225,
+                    "processname": "com.tccpt.idyusui"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

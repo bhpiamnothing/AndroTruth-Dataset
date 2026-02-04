@@ -1,0 +1,868 @@
+{
+    "apk_info": {
+        "id": "J2m7Ol0eoePOvRPa",
+        "url": "https://developer.koodous.com/apks/e57565bd3f398508321470f857dfb07c195ed9b7b494ba00dc7c407ac8b8f3e1/",
+        "sha256": "e57565bd3f398508321470f857dfb07c195ed9b7b494ba00dc7c407ac8b8f3e1",
+        "md5": "ba1c2891d626401c5e1eb5b677ef2804",
+        "sha1": "4a541fdc55f63fbd24474587920d161af0adcf8f",
+        "app": "EURO IPTV",
+        "package_name": "com.iptvpro",
+        "company": "Anywhere Software",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2023/11/29/icon_xMrRiNh.png",
+        "size": 4063156,
+        "tags": [
+            "smsagent",
+            "hqwar",
+            "trojan",
+            "dropper",
+            "banker",
+            "detect-debug-environment",
+            "obfuscated",
+            "checks-gps",
+            "runtime-modules",
+            "infostealer",
+            "reflection",
+            "telephony",
+            "clipboard",
+            "sends-sms",
+            "copybara",
+            "basbanke",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2023-11-29T08:13:49.313203+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27107/Tue Nov 28 08:40:10 2023",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "28.11.2023 19:16:11 (Build: 106553)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-02-07T10:53:28.394570+01:00",
+        "matches_count": 9,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2023-11-29T08:13:47.077983+01:00",
+        "updated_at": "2025-04-07T15:31:03.152036+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "ba1c2891d626401c5e1eb5b677ef2804",
+                "name": "",
+                "path": "",
+                "sha1": "4a541fdc55f63fbd24474587920d161af0adcf8f",
+                "size": 4063156,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "8ADA85A4",
+                "sha256": "e57565bd3f398508321470f857dfb07c195ed9b7b494ba00dc7c407ac8b8f3e1",
+                "sha512": "1cd3b9e99d6008e3a88da594cb1899ad0462b8fb77c490fbdd26cd96f5abe43365c0b841e4aa9b3057f91378595e82d5402ffd8446e3e89ec8aaf4419899063c",
+                "ssdeep": "98304:Ehindhin69hinmhinyhin0hin1Ob4JiQZUR0szTZBUUk2ai52SzZzE5:aC7C6bCICECqC1Oaviq+TZBUUk5i52aW"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "https://freeipapi.com/api/json",
+                "vnd.android.cursor.item/note",
+                "vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://google.com",
+                "3vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://invalid-url/",
+                "http://schemas.android.com/apk/res/android",
+                "2vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "a407aca5ca1785b60c856be7548723808b1a37b85db8c0a44f331ff36c6bd7e9"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.SENDTO",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "EURO IPTV",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.iptvpro..backgroundservice",
+                "com.iptvpro..dtrsbnotisuntilactv",
+                "com.iptvpro..inj_dnlader",
+                "com.iptvpro..inj_dnlader2",
+                "com.iptvpro..mediaprojectionbackservice",
+                "com.iptvpro..notificationservice",
+                "com.iptvpro..s1",
+                "com.iptvpro..service1",
+                "com.iptvpro..service2",
+                "com.iptvpro..service3",
+                "com.iptvpro..service4",
+                "com.iptvpro..srvnewphonecall",
+                "com.iptvpro..starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.iptvpro..backgroundservice$backgroundservice_BR",
+                "com.iptvpro..dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.iptvpro..httputils2service",
+                "com.iptvpro..inj_dnlader$inj_dnlader_BR",
+                "com.iptvpro..inj_dnlader2$inj_dnlader2_BR",
+                "com.iptvpro..mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.iptvpro..myreceiver",
+                "com.iptvpro..notificationservice$notificationservice_BR",
+                "com.iptvpro..s1$s1_BR",
+                "com.iptvpro..service1$service1_BR",
+                "com.iptvpro..service2$service2_BR",
+                "com.iptvpro..service3$service3_BR",
+                "com.iptvpro..service4$service4_BR",
+                "com.iptvpro..srvnewphonecall$srvnewphonecall_BR",
+                "com.iptvpro..starter$starter_BR"
+            ],
+            "activities": [
+                "com.iptvpro..main",
+                "com.iptvpro..faknotiactivity",
+                "com.iptvpro..forc_activateacc",
+                "com.iptvpro..perm_activatemediaproject",
+                "com.iptvpro..perm_activateoverlay",
+                "com.iptvpro..perm_ignorebatperm",
+                "com.iptvpro..perm_notiacc",
+                "com.iptvpro..perm_phonecal",
+                "com.iptvpro..perm_smsperm",
+                "com.iptvpro..perm_startactdevmang",
+                "com.iptvpro..perm_startactwritesy",
+                "com.iptvpro..perm_unknownapps",
+                "com.iptvpro..perm_writesys",
+                "com.iptvpro..req_all_perms",
+                "com.iptvpro..wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "DD2B8FAB67577CE55712D9881DEBA7E76D7B8DF5",
+                "serial": "58118218",
+                "issuerDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_after": "Dec 23 08:23:07 2054 GMT",
+                "subjectDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_before": "Aug 24 08:23:07 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.CALL_PHONE",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.VIBRATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.WRITE_SMS",
+                "com.android.alarm.permission.SET_ALARM",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "oppo.permission.OPPO_COMPONENT_SAFE"
+            ],
+            "package_name": "com.iptvpro",
+            "version_code": "200",
+            "main_activity": "com.iptvpro..main",
+            "signature_name": "META-INF/ANDROIDD.DSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/iptvpro/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.5135719776153564,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/base.apk.x86_64.flock",
+                    "time": 1.515233039855957,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/oat/x86_64/base.vdex",
+                    "time": 1.5159850120544434,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/base.apk",
+                    "time": 1.516906976699829,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.5170810222625732,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.5173790454864502,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/oat/x86_64/base.art",
+                    "time": 1.5175409317016602,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/base.apk",
+                    "time": 1.554244041442871,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5602,
+                    "name": "/data/user_de/0/com.iptvpro/code_cache/com.android.skia.shaders_cache",
+                    "time": 3.247689962387085,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5602,
+                    "name": "/dev/graphics/fb0",
+                    "time": 4.752156019210815,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5602,
+                    "name": "/dev/fb0",
+                    "time": 4.753359079360962,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/loading.gif",
+                    "time": 5.214529037475586,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.217784881591797,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/txtscreensize.txt",
+                    "time": 5.223114013671875,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.228238105773926,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db-journal",
+                    "time": 5.245773077011108,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files",
+                    "time": 5.272698879241943,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db-wal",
+                    "time": 5.280344009399414,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db-shm",
+                    "time": 5.280513048171997,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.4341840744018555,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.458667039871216,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 5.462517023086548,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 5.465764999389648,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.467798948287964,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.47440505027771,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.4756739139556885,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 5.476396083831787,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 5.700350046157837,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.708904981613159,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 5.7400829792022705,
+                    "processname": "com.iptvpro"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "636f6d2e6970747670726f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.5146489143371582,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.5150010585784912,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "504b0304",
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/base.apk",
+                    "time": 1.5170209407806396,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.517307996749878,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.5174739360809326,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "6172740a3035360000803d78280f01003bc8ca3c00903e7800a03e7800a03f7800e0907800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000b9760000",
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/oat/x86_64/base.art",
+                    "time": 1.5176379680633545,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.467834949493408,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.475080966949463,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.47632098197937,
+                    "processname": "com.iptvpro"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 5.714000940322876,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 5.740355968475342,
+                    "processname": "com.iptvpro"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/app/com.iptvpro-w6YS5cD766G5Kop26B_0zg==/base.apk.x86_64.flock",
+                    "time": 1.5156269073486328,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/loading.gif",
+                    "time": 5.213294982910156,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.217597007751465,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db-journal",
+                    "time": 5.280184984207153,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db-shm",
+                    "time": 5.280623912811279,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/data/user/0/com.iptvpro/files/db.db-wal",
+                    "time": 5.363027095794678,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 5.463608980178833,
+                    "processname": "com.iptvpro"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "89504e470d0a1a0a0000000d49484452000001000000010008060000005c72a8660000000467414d410000b18f0bfc6105000000206348524d00007a26000080840000fa00000080e8000075300000ea6000003a98000017709cba513c00000006624b4744000000000000f943bb7f0000000774494d4507e2010b130535489d93d7000080004944415478daedbd799c1c55b937fe3de75475cff4cc64321382d7572411b804df97105c5084abf282028aca3a4bf685041264937d2710880102843564816c934c668208489445237215d9ae4a0c4ad068825ef59265b2ccd65d75cef9fdd1a77aaaababbbabaa4f4d20efeff97cfcc84c7aeae93acff37cebd439cff77c09f68375777713e7bf6b6b6b65dcfef6eedd4b00404a89fafafad8fdb9ef7130ee0f00bababa7263dad0d010bbcfc18ee1ae5dbb72fe1a1b1b0fb818baef4f4a8961c3860dca3d92ca2f11ceb66eddca0821b91b05804c26238e3cf2c8586ef8cf7ffe33a5943a00400080732e8e3cf24811d3fd11420875ee4df993871f7e782cfede7bef3dca18a300e08cab10421e71c4113c0e7f9b376f268944823abe943f1c76d861b1f803802d5bb630e27608c0b22c3e6ad4a8d8728631e6f5175b8ebef7de7bd4300ceafe5d9c31745bde4df6f7f71329258410a8a9a9d17eb36fbffdb6e9049231c639e7547d07c939b73ff399cf68f5f9f6db6f1b8410a73884102237c89c73fed9cf7e56eb00ffee77bfa3945243f993c000e84829c59831636c9dfe7ef39bdf30c618737ea6940a35a6104288cf7ef6b35afdfdf6b7bf258c31032a6f28a55c08c1d4fdc93163c6583afd299f2621844829611806e79c33075c6ddbb68e3beeb8d8728652caa594d489a110c23ef6d863b502f97ffdd77fe56298bd4d999733ba630864ebbcaaaa4a023e33807dfbf611ce3938e7daa621bff8c52f08632ce10c2c632c73fcf1c7f3d75f7f9dd8b69dc4000864bef295af6819e05ffce21709428801009452fb3ffee33f32afbefa2a75f983102273d249276919e0fffccfff3428a52690059b134e38210d00afbefa6a524a49812ce87ce52b5fc9e8f0f7f2cb2f1b94d284fa511a86913ee18413c42f7ff9cb8410c2000029a5fdd5af7e558bbf575e798532c692eaba300c2373fcf1c7f3d75e7b8da9318594525896953ef9e4932bce9b0d1b3610c658d29533e9134f3c917b622839e7e9fffb7fffaf969c79e59557120e80534aed134e3821f3c61b6f10cbb292cec38373ae2d67dc31248408c330d20060db762e6700d8ba7206c8be0e33c6c01843555595f47d05d8b16307b56d9b70cee5273ef1898a06f7b9e79e238661543bd3624a69ffa9a79e9a1bc0175e78810a21aa5d28dbfbad6f7dab229febd7afaf728a9f10627fe31bdfe82fe64f4a993ee38c332a7a72ad5fbfde748a8310",
+                    "name": "/data/user/0/com.iptvpro/files/loading.gif",
+                    "time": 5.21630597114563,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "d9ddddcdfafbfbedf3ce3baf2fe8a9a37e76f88891c700781bf0df12628c6d1af3b9cf3a84072da7bb3ae6972400aaa1b1f83dfe0a9244fd93d613818bf803b209dc07cd945e973fdfdd81384e0476f92cb8761c2702bbfcf9e50c83c6e2f7f83337bdbdf16d48f9693f16a1faefe37fff87775e2f768d30f5b97efd7a924c2693b5b5b5a8abab13b5b5b51605805dbb76d1cd9b37339730a875de79e7f5e9b849c70a66025986963315d11a48c017d53f86988a5ff92b980920a6e2f7f107756f1f430cc5affcf9cd043e8e988a5ff9f4ce040e464cc5affc15cc041053f12b7f9695c9d87e2c42205b33bd3d3ddaeaf08c33ce908661a429a5598960c672e2a050df019452fb8c33cee8d7e5d46d79203030e5d11e48d700bb03eabc7b680fa4cb9f17046229fe22fedcf718973f2f0838feb417bfcba71b049ca696c1ca19133115bf63524ae9651102f131334f3ae924f9852f7c214d291579d260eacb00ea3d212ef3b9a94c1c812c613cee7bf4de32b2873c1c10f7a36215e7fdf899f7549bb873268301500506798cdd1261b1f9704b83b9172038e7c91ffff8c7b150a6bcedb6ca2a169228663e0b7e8006218912febcefe55a84244af8f3be976b111f29e3d3fd5eeef81bec18c6e9cfbb9603c498338410e26582c6c93c7df9e597c9ebafbf9ec80300c6981c356a940d40aab3c4ab7ef0831f684dd8823eed4c065cf0d802eab7da0f8d6a323efefc16e5b4a9c9f8f82b58ed47051d83017de62dca01f82734291015f1e75d94fb27342a10f9f8f35bc88d3567cc44c2f063823a20609aa636aae4faf5eb891206755efdb3ffd1d0d020d52f2c29a550ff5dddd6d616fa082f3f2b46d2b02d9b23868016dbead32d29e5f2e7bbd5a75b52cae5cf77ab4fb70c99c767c18abc6e19328f3fdfd57edd32642e7fbe5b7d71e74c29262801503f746863737373c539f3e4934f12ce79352184a97662f1c94f7e325f1bf08b5ffca2b46d3b2da5e46a26900a73b8809f956368c5a02b574eab4fb7ae5c39ad3eddba7225f7f9e30081525b7d71804000ad3edd39534eab2fd69c29c50425945042c8c1adadad9173a6adad8d08216aa4944c5d9f1f7df4d1d91661ef87bffef5af4bce791fd4a247d81346dc96aaa9a90e7218a3465db9a05a7dba74e5826af5e9d2950bd4e4a3130482ecf3eb0481105a7dba7226a8565f2c3963db36f75bedcf81809002d9c9c0f071e3c685ce99254b9610ce79ad33ed1742d8c71f7f7ceefe7c6fe0acb3ce929cf35e5400022d2d2d3535b5b5f5cecd94eb28d4cc080bc2d0d2c90803c2b1faa2b008c3b2fa2a0681304d3e9a588461597d95e64c58569ff69ce19c17bd3f2925f6ecd9bd4b7d374a08193e61c28450202084a8c5c0d981d6d7bffef5bc1d95a25fbeb5b555dab6dd1de5ac312565dce0dc44d076",
+                    "name": "/data/user/0/com.iptvpro/files/loading.gif",
+                    "time": 5.216569900512695,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "9a9b9bcdfaa1431b4b15bf6b802b0681304d3eba4020cce9bddd071fb1d7f7c8f170fec2b0fa2a060122382957fc2e7f158340f1aed0c253820280c0bf38126f97f117b8c94717087873a69436a06ddbc8a433ce0a686adcb871a1fd2d59b2240120a51ee2c2b6edfe134f3c31b7fc5634219a9b9b2da5120c02c04c240283406b6bab4908194ed41f942a7ed700470681281d7e958240c8a3bb01f81f391ec25f14565f6410c8526cf71a418adfe52f3208946a092f764a50191078e9cfcd1f9725fc85eef0ab1404a2e48c6a04cad62121a98913273694fb1bc718631042d4284970c139ef3dfdf4d3f3c6a464324c9d3a35933b5c0080993041ca80c0b871e34c00c39d6b07297ed7008706814ada7bfd4020c8f65294403a1605042a64f5850681816214818bdfe52f340804e483f84ee74b8040d1e97f25edbd5141a0929ce9e8e8d8850110a89932654a5910f09ce0c585103de79c734e0120967d1ae49d300282442251744d60e2c48926212457fc3ddddd7bc2b20843eaca55dcdbef0d68b995e54a02991bd310205049f1bbee313008e417230d55fc2e7f61b4088392c18a9e12e40302b2e1fddffdaa88bf8a7bfbc382808e9c5164a0dc4c60faf4e9438b7dd65bfc9cf3ee71e3c6f98e5da0e9603e0800099fd7812953a6e4153f802e256d1cda02eaca6923f604050155a815053237a61e1030fabb0b367d7514bfeb1ecb828097d863550fb1c316bfcb5f102dc2c04cd0cdcd23fe8912a704b9418008bee993afb7f1003913398641414047f13bb67af5ea5d007a14412f75e185170ef57e2657fc24db512884d877fef9e7177d150abc28e43d6bcc34cd1c084c9f3edd24841ce45c8f10d2d5d1d15129abaf94ae9c76569f135027e1bd20e0777a6f25fe002f08f4530f8b505bf1bbeeb12808f86af551a6531b300f0422d2c04baeea3b2040edf4cbea57a572a6e2189603019dc5efd8ca952bbb08210ebf3fe56e16ca7bf20b89743a8d8b2ebaa8640c43ad0afb81c0ac59b352849061ae6b752929e38aad0808c4c6ea5bb76e9d704f799da28fa3f87363ea73da701cc5efba473f10482246561f0a41a006d168e065b7f52465b053f5cfa074ce688b61311088a3f81d5bb66c5917d4eb8053f4de53bbd3e974a06b85de1bf6d11eab2784e402a9248cb5990f080c459cac3ecfa297f718af3848215910a872ee2fb6e277cc0f041023abcf07041a1181064e247e8981f6ea62b6cf4ed4bc82e239a39dd5578445184bf13bb664c992dd007a4100ea2a7e11a2f88188d2609cf302b6122164af922ed66e2a81bc6a3171b1faa403025e6d409e485532252ef9b77655ad85426d40edc5ef981a3b2f457987a7f8cbdd6fe0f128a20db8374c0cdf6d199106f072998f6dd8dc3cc22a9233e9b8587d2e1018346dc0c71e7b6cb7701dd2eb",
+                    "name": "/data/user/0/com.iptvpro/files/loading.gif",
+                    "time": 5.216909885406494,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "d2e974ffb9e79eeb07028b01cc087ba37e020c414520a2989f00032124900844a5fe00e4eec5ad6daf5bf2d9dbdecb390f245412d5fce2e5fe0eba65c90ff49c0150307e52ca4a62f8d8966d5b6795fac0860d1b92a9548ad4d5d589a14387da14001a1b1b250070ce2de7fc712144755b5b5b410fb194f42200ebc3dc6431f595b874e58aa9afc4a52b574cb1272e2d42c0bfb73f2e1d3ba0b8624f5c5a84077ace00f005cf0a62b81e049794fac08f7ef4a32a2184a1ee4b7ce2139fc817073dfef8e325e73c2da5e4002084482d59b2240f04fef2fe5f6c403603782ec8b72a27bda43ba0e5a4977407b49c5c571c20508ad8130708947beaea0681033d6700949c39796368968fe14fa414cd5bb66e2d3a1deaececac1642381d857cf4e8d136e0d308f4b5af7d4d72cefba4948210022144cd430f3d94747f66cbb66dbd52d2b3012c2cf5ad82eaaee90a6850ad3e5d010daad5a7130482b0fa748240d029b72e1038d0730640a0d7a6023dc9e2317c0c9067fee5fdf77b8bf95bb972654a4ae914bf7dc20927e406b56856b4b7b7934c2653dbdfdf6fa4d369625956cf95575e59b0da7bf888912d001e4296b090b3a081745b25ef77410359e977f4f307047bffcdf317f03bba2d28a5b79231715b947854b22670a0e74c94f1f1e6990b687702b878cbb6ad6b4bfdfde2c58b53c9643251555525aaaaaa32679e7966de167f51981e3b76ace49c773b070f0a21eaeebcf3ce2aefe7b22b8ef228008f426dd7441da4a8a81e35d1a3a27a94e22ff087704fe6b0c5ef8c7dd49940d4c28a3a1338d0730688068e793381ec211f36a574318051e58affa1871eaa9152e67a27bcc5af2e59da1e7df4516259d6904c2663aa99c0bedb6ebbaddfefb3878f187988611adfa3944d809407475d350d937c953ee58070c917b5f88bfa0bf09da3147f2563a463a53d4cb257fa540dfb9d073b67c28e4791effccfeaeaea670e3af8e0e5233e35f27dc6d88ec71f7fbca8d3f9f3e7d726128944329994c964323d65ca14df5784408f83fbefbf9f5896559fc964cc4c26436cdbde3b77eedc0210983469528a73de984ea7e95fffbc65f49eddbb3f23a5fc1c802301fc2f0075503a02e52c48407504d2b12001d551fcbefe4a7cf74a8b3fec58e9dc660b92f43a8a3fcc771fec9c093a0e2ee3c83672fd03c07b00de02b04150f2fa89279ec828a5c319638431c619633b172d5a54e074eedcb975894422994824442291e89f397366d1f581c02b4377dd7517b12c6ba81b04e6cf9fdfe7fcfbd4a953539cf346ceb9b39db8bda3a3a3a24de1524413dd0c2d75cda24493b0ac3e3f4525b76dd9b695f811889c7b8843abafdc98e926f6142310f98df7ef7ffbbbf74b157f39859b20f7b01f72a6e4fd47b1c993279b94d283140808c6d8ce471f7d34770fb3",
+                    "name": "/data/user/0/com.iptvpro/files/loading.gif",
+                    "time": 5.217278957366943,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "59d697bef425ed9c8537de7883388ad56e1342d8c71d779cf69cf9d5af7e451289446e4c9d3c9552f2b87266b063e8b678f49c4ad8bbefbe4b5dd32c4829c5a851a36213b37befbdf708f20f3e91471e79647ce279599f0606c6561e79e491b18ae7bdf7de7bcce50f94527ec41147c496389b376f668410ea9294e3a3468d8a4d7071f3e6cdc40daa52164cb5c400000084494441544a71e49147c627f098f59917c351a346c51ac33ffde94f79add0fffeefff1eafe0a2b2f844f28ad8b061c3a410225780ea04a1d86cf8f0e11042f038b5e4dcb67dfb7622f29524e5ce9d3bc9b061c362bbcfe1c387e715038949a7cfb186860681ec998f83e2ef631ffb18a494ee9c89d51f001c74d041b13e24f6b73fc7fe3fc1512ef2e1f700ba0000002e7a545874646174653a637265617465000078da333230b4d03530d435340c31b4b43230b53235d23630b032300000419a050c8c1b2ca20000002e7a545874646174653a6d6f64696679000078da333230b4d03530d435340c31b4b43230b53235d23630b032300000419a050ca524842a0000000049454e44ae426082",
+                    "name": "/data/user/0/com.iptvpro/files/loading.gif",
+                    "time": 5.217395067214966,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "53514c69746520666f726d61742033001000010100402020000000080000000a00000007000000060000000700000004000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000008002de21a0d000000030e71000f5e0f0c0e710dbe0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.217963933944702,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.218348026275635,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "0d000000390a26000fe60fd20fba0f9e0f870f6e0f560f300f140efa0ee30ec70eb20e960e7f0e6a0e530e380e170dfd0de30dc80dac0d8f0d780d5c0d360d170d010cec0cd00cb60c9b0c820c670c500c3c0c1a0bfe0be40bc80baf0b930b820b6b0b500b440b260b090aee0ad00abc0a9f0a830a700a3e0a26021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d02bf02a50287026a0241022f021101fc01db01b801a101850169014d012d000000000000000000000000001d810c030041636f6d2e62616e6b696e7465722e706f72747567616c2e626d6219810b030039636f6d2e62616e6b696e7465722e6c61756e6368657219810a030039636f6d2e62616e6b696e7465722e656d707265736173198109030039636f6d2e62616e6b696e7465722e626b77616c6c657414810803002f636f6d2e62616e6b69612e77616c6c6574208107030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e8106030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212810503002b636f6d2e42616e6b416c42696c61641b810403003d636f6d2e426100000de3003f7777772e696e676469726563742e6e61746976656672616d6500000dc400597769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d504c00000d9800557769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d00000d6e00557769742e616e64726f69642e62637042616e6b696e674170702e61637469766f42616e6b00000d44002f75792e636f6d2e62726f752e746f6b656e00000d2d001b75792e62726f7500000d20003775732e7a6f6f6d2e766964656f6d656574696e677300000d05003b756b2e636f2e7473622e6e65776d6f62696c6562616e6b00000ce8003f756b2e636f2e746573636f6d6f62696c652e616e64726f696400000cc90043756b2e636f2e73616e74616e6465722e73616e74616e646572554b00000ca8006b756b2e636f2e6d6574726f62616e6b6f6e6c696e652e6d6f62696c652e616e64726f69642e70726f64756374696f6e00000c73004b756b2e636f2e6d626e612e6361726473657276696365732e616e64726f696400000c4e0049756b2e636f2e687362632e68736263756b6d6f62696c6562616e6b696e6700000c2a002f7473622e6d6f62696c6562616e6b696e6700000c1300257472656e64796f6c2e636f6d00",
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.218429088592529,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "000000000000000500000008000000090000000a000000040000000609a309880963093d0917090208f108e108ce08b7089a0880085d08470831081c080607eb07d107ad078f0774075a0745072e071206f306d706b5069d0681066a0650062e061205ec05d805c405ae0592057805540532051304f804d504bf049f0484046a0449041b03f603e303ca03ae0385036e0354032f0316030002e702cf02b2029b028a027302560238022101fd01e801d101a4017b016201470130011500000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c03003300000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c030033636f6d2e6f6673732e67626b70726f6472657426831b030053636f6d2e6f6369746f2e63646e2e61637469766974792e63726564697464756e6f72642a831a03005b636f6d2e6f6369746f2e63646e2e61637469766974792e62616e7175656c61796465726e69657214831903002f636f6d2e6f6362632e6d6f62696c656d7912831803002b636f6d2e6f6362632e6d6f62696c65218317030049636f6d2e6e75616e63652e6e6d632e7369686f6d652e6d6574726f70637314831603002f636f6d2e6e6f6f6e2e62757965726170701b831503003d636f6d2e6e657476617269616e742e616c6b68616c696a691a831403003b636f6d2e6e6574666c69782e6d65646961636c69656e7414831303002f636f6d2e6e656172666f726d2e707473620e8312030023636f6d2e4e425142616e6b14831103002f636f6d2e6e626b2e4942476d6f62696c651a831003003b636f6d2e6e6176796665646572616c2e616e64726f696415830f030031636f6d2e6e616d7368692e616e64726f696416830e030033636f6d2e6d7963656c69756d2e77616c6c657413830d03002d636f6d2e6d796333636172642e61707016830c030033636f6d2e6d74656c2e616e64726f696462656122830b03004b636f6d2e6d74622e6d62616e6b696e672e73632e72657461696c2e70726f6417830a030035636f6d2e6d73662e6b62616e6b2e6d6f62696c6514830903002f636f6d2e6d6f766f636173682e6d6f766f268308030053636f6d2e6d6f7267616e7374616e6c65792e636c69656e746d6f62696c652e70726f64198307030039636f6d2e6d6f726162616e632e6d6f62696c65617070168306030033636f6d2e6d6f6f7477696e2e6e617469786973108305030027636f6d2e6d6f6e65796c696f6e22830403004b636f6d2e",
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.21846604347229,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "0d000000880125000fd20fb70f9c0f810f680f470f280f0b0ed60ec20ea80e8b0e750e5d0e3e0e220e020de40dc30da20d790d630d400d2d0d110cf40cca0cac0c940c7d0c640c400c280c0f0bf30bd90bb50b930b6e0b4c0b2a0b010add0abd0a9c0a7b0a600a400a290a0709eb09db09b909a10983096209430924090d08f708dc08c408a8088a086f0856082f080a07e807d407b60796078a0775075e07440731071e070906f106e406c806b2069d067f066e065706390620060805f905d105bc05a20591057c0566054d0533051a050504f004cb04b904a804950471045a0440041903fb03e803b6039f038d0373034b0331030f02f502e302cb02a0028202620252023a0224020501dd01a60191016c015301380125000000000000000000000000001085360300276e7a2e636f2e776573747061631885350300376e7a2e636f2e6b69776962616e6b2e6d6f62696c651685340300336e7a2e636f2e6173622e6173626d6f62696c6522853303004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e6712853203002b6e65742e6f6e6539372e706179746d34853103006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f69642585300300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c852f03003f6e65742e626e70706172696261732e6d6573636f6d7074657313852e03002d6e65742e6269747374616d702e61707015852d0300316e65742e6269746261792e626974636f696e0d852c0300216e65742e6172616d65781d852b0300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b852a03003d6d792e636f6d2e687362632e687362636d616c61797369612885290300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e6563741585280300316d782e687362632e687362636d657869636f0f85270300256d782e636f6d2e62622e62321785260300356d782e62616e637361626164656c6c2e706172741f85250300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c1785240300356d6f62696c6974792e67652e7465726162616e6b2585230300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c691785220300356d652e63727970746f7061792e616e64726f69640f85210300256d62616e6b696e672e4e424714852003002f6d612e6762702e706f636b657462616e6b2f851f0300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c657410851e0300276b746263732e6e657462616e6b1b851d0300",
+                    "name": "/data/user/0/com.iptvpro/files/db.db",
+                    "time": 5.21856689453125,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5502,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.iptvpro/files/txtscreensize.txt",
+                    "time": 5.225343942642212,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5630,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.iptvpro/files/db.db-shm",
+                    "time": 5.71658992767334,
+                    "processname": "com.iptvpro"
+                },
+                {
+                    "pid": 5502,
+                    "tid": 5630,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.iptvpro/files/db.db-shm",
+                    "time": 5.717350959777832,
+                    "processname": "com.iptvpro"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

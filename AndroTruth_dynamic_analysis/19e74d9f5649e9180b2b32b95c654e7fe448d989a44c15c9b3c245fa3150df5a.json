@@ -1,0 +1,980 @@
+{
+    "apk_info": {
+        "id": "Kyqm1knvvXpdrPa9",
+        "url": "https://developer.koodous.com/apks/19e74d9f5649e9180b2b32b95c654e7fe448d989a44c15c9b3c245fa3150df5a/",
+        "sha256": "19e74d9f5649e9180b2b32b95c654e7fe448d989a44c15c9b3c245fa3150df5a",
+        "md5": "f0fffd3459637546cf65cff79da1bde7",
+        "sha1": "49aae3372d8d63be7b2adf057739429cbebf861b",
+        "app": "SicurezzaBanca",
+        "package_name": "com.snbaco.newapp",
+        "company": "Android",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2024/03/12/icon_gkduS7I.png",
+        "size": 4743350,
+        "tags": [
+            "trojan",
+            "banker",
+            "dropper",
+            "svpeng",
+            "hqwar",
+            "detect-debug-environment",
+            "obfuscated",
+            "checks-gps",
+            "reflection",
+            "telephony",
+            "sends-sms",
+            "runtime-modules",
+            "basbanke",
+            "copybara",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-03-12T10:06:45.290519+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27212/Tue Mar 12 08:27:22 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "11.03.2024 19:15:40 (Build: 106867)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-03-12T10:08:53.141468+01:00",
+        "matches_count": 10,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-03-12T10:06:43.227075+01:00",
+        "updated_at": "2025-04-07T15:21:10.811374+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "f0fffd3459637546cf65cff79da1bde7",
+                "name": "",
+                "path": "",
+                "sha1": "49aae3372d8d63be7b2adf057739429cbebf861b",
+                "size": 4743350,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "C7CA45FD",
+                "sha256": "19e74d9f5649e9180b2b32b95c654e7fe448d989a44c15c9b3c245fa3150df5a",
+                "sha512": "8a182ca9c9e780a9e0df6c80ca1ab36f89d84312196e7985ae7ac2fc624ba80163514042e610e50548d8c861239633efe20ebe0bf60daffc45430f9e8b855425",
+                "ssdeep": "98304:u9hinlhin6Vhinahinx1hin6hinshinUhinxIeZ9o2mH9krEXw:ubCzC6DC8CxjCcCyCKCxN9pmH9kIXw"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "https://freeipapi.com/api/json",
+                "vnd.android.cursor.item/note",
+                "vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://google.com",
+                "3vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://invalid-url/",
+                "http://schemas.android.com/apk/res/android",
+                "2vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "45afd963f3b29fd5eddc4134a9ea276f2bb3457db9f26830d8a54010549c1141"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.SENDTO",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "SicurezzaBanca",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.snbaco.newapp..backgroundservice",
+                "com.snbaco.newapp..dtrsbnotisuntilactv",
+                "com.snbaco.newapp..inj_dnlader",
+                "com.snbaco.newapp..inj_dnlader2",
+                "com.snbaco.newapp..managerservice",
+                "com.snbaco.newapp..mediaprojectionbackservice",
+                "com.snbaco.newapp..notificationservice",
+                "com.snbaco.newapp..openmics_srv",
+                "com.snbaco.newapp..s1",
+                "com.snbaco.newapp..service1",
+                "com.snbaco.newapp..service2",
+                "com.snbaco.newapp..service3",
+                "com.snbaco.newapp..service4",
+                "com.snbaco.newapp..srvnewphonecall",
+                "com.snbaco.newapp..starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.snbaco.newapp..backgroundservice$backgroundservice_BR",
+                "com.snbaco.newapp..dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.snbaco.newapp..httputils2service",
+                "com.snbaco.newapp..inj_dnlader$inj_dnlader_BR",
+                "com.snbaco.newapp..inj_dnlader2$inj_dnlader2_BR",
+                "com.snbaco.newapp..managerservice$managerservice_BR",
+                "com.snbaco.newapp..mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.snbaco.newapp..myreceiver",
+                "com.snbaco.newapp..notificationservice$notificationservice_BR",
+                "com.snbaco.newapp..openmics_srv$openmics_srv_BR",
+                "com.snbaco.newapp..s1$s1_BR",
+                "com.snbaco.newapp..service1$service1_BR",
+                "com.snbaco.newapp..service2$service2_BR",
+                "com.snbaco.newapp..service3$service3_BR",
+                "com.snbaco.newapp..service4$service4_BR",
+                "com.snbaco.newapp..srvnewphonecall$srvnewphonecall_BR",
+                "com.snbaco.newapp..starter$starter_BR"
+            ],
+            "activities": [
+                "com.snbaco.newapp..main",
+                "com.snbaco.newapp..act_perm_dvadmn",
+                "com.snbaco.newapp..faknotiactivity",
+                "com.snbaco.newapp..forc_activateacc",
+                "com.snbaco.newapp..opencamd",
+                "com.snbaco.newapp..openmics",
+                "com.snbaco.newapp..perm_activatemediaproject",
+                "com.snbaco.newapp..perm_activateoverlay",
+                "com.snbaco.newapp..perm_ignorebatperm",
+                "com.snbaco.newapp..perm_notiacc",
+                "com.snbaco.newapp..perm_phonecal",
+                "com.snbaco.newapp..perm_smsperm",
+                "com.snbaco.newapp..perm_startactdevmang",
+                "com.snbaco.newapp..perm_startactwritesy",
+                "com.snbaco.newapp..perm_unknownapps",
+                "com.snbaco.newapp..perm_writesys",
+                "com.snbaco.newapp..req_all_perms",
+                "com.snbaco.newapp..wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.CALL_PHONE",
+                "android.permission.CAMERA",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.VIBRATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.WRITE_SMS",
+                "com.android.alarm.permission.SET_ALARM",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "oppo.permission.OPPO_COMPONENT_SAFE"
+            ],
+            "package_name": "com.snbaco.newapp",
+            "version_code": "200",
+            "main_activity": "com.snbaco.newapp..main",
+            "signature_name": "META-INF/APKEASYT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "TakePicture"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/snbaco/newapp/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.4929089546203613,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/base.apk.x86_64.flock",
+                    "time": 2.567335844039917,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/oat/x86_64/base.vdex",
+                    "time": 2.569762945175171,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/base.apk",
+                    "time": 2.57991886138916,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.580950975418091,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.5823450088500977,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/oat/x86_64/base.art",
+                    "time": 2.582808017730713,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/base.apk",
+                    "time": 2.709946870803833,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5539,
+                    "name": "/data/user_de/0/com.snbaco.newapp/code_cache/com.android.skia.shaders_cache",
+                    "time": 3.2771718502044678,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5539,
+                    "name": "/dev/graphics/fb0",
+                    "time": 3.859470844268799,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5539,
+                    "name": "/dev/fb0",
+                    "time": 3.859630823135376,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.193328857421875,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.211938858032227,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/txtscreensize.txt",
+                    "time": 4.2191479206085205,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.219977855682373,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db-journal",
+                    "time": 4.341394901275635,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files",
+                    "time": 4.56465482711792,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db-wal",
+                    "time": 4.5891149044036865,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db-shm",
+                    "time": 4.589271783828735,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.241678953170776,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.2425148487091064,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 5.242563962936401,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 5.245626926422119,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.245823860168457,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.248036861419678,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.248389005661011,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 5.250489950180054,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 6.122948884963989,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 6.137940883636475,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 6.173133850097656,
+                    "processname": "com.snbaco.newapp"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "636f6d2e736e6261636f2e6e657761707000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.493285894393921,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.493330955505371,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "504b0304",
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/base.apk",
+                    "time": 2.580457925796509,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.582105875015259,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.5825657844543457,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "6172740a3035360000803d78280f01009a7baaa600903e7800a03e7800a03f780060927800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000d1770000",
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/oat/x86_64/base.art",
+                    "time": 2.5832319259643555,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.24783992767334,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.248227834701538,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.2485740184783936,
+                    "processname": "com.snbaco.newapp"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 6.147401809692383,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 6.184422969818115,
+                    "processname": "com.snbaco.newapp"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/app/com.snbaco.newapp-5qwSqbbpE2MjfEj1cSikZw==/base.apk.x86_64.flock",
+                    "time": 2.5695388317108154,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.189790964126587,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.211681842803955,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db-journal",
+                    "time": 4.57225489616394,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db-shm",
+                    "time": 4.589417934417725,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db-wal",
+                    "time": 4.9155519008636475,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 5.245288848876953,
+                    "processname": "com.snbaco.newapp"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "47494638396120035802f7000062aaefd5daddb4cadfe4f0fb83bcf2c4d9edb1c9e0449becaad1f6cdd6deaac6e04196e6529ee5c2def899bee1f9fcfedee4e93591e7a2cdf5e1effb9bc9f593c4f3a1c2e03592ea4a9eec8cb8e2dfdfdf3995eaedf5fdc2d1df2489e8b9ccdfbdcedfb0d4f7dbdcdd94bce19dc0e12e8eead9eafb2087e8d1e6fa318fe75aa4eb88b6e22d8de78cc1f3c5d2de68a8e472b3f185b5e2c9e2fa65a6e4499ae57cb9f1c9d4de268ae759a1e575ade36daae3d8dbddfcfefff6fafe5ca2e461a5e4b8d3ec3992e6a7c4e0d3dae0f2f8feb9daf82388e84598e67cb1e391bae1f0f7fdd5e8fbdeeefc51a1ed1e86e8d2d8decde4faeaf4fd72ace33d94e6adcdeb298be7a4c3e01c85e87bb3e85da8eedae6f2eaeef3d0d7de68aeeff8fbfee9f1f9fbfdff9cc5ec6eb1f15fa3e4e1e6ead3e3f381b3e2c5e0f9f4f9fe4f9ce568adede4e9ede7f2fc82b4e2bedcf94c9be5aec7e0cde0f3f1f5f856a1e92a8ce757a4eef3f4f5bfd9f27eb2e27ab0e3dbe9f5dcecfbd9dfe4f6f7f978b6f1b7d8f8e1eaf3cfdeec71b1ef288be82a8dea78afe384bbefb7cee497c2eb56a0e58bbceaedf4fab4d6f7f6f9fbeff0f17ab2e6a5caedf3f7fcb2cee93e97ec52a0e982b6e581b7ea94bee46eb0ed67a9e74e9feda6d0f6e2e5e670afe9f6fafdedf2f897c7f42187e853a3eebcd6ef73afe7f2f3f460a7e9fefefee8ebeee1e3e5dcdedf74afe6cbe3fa91bfea92bde583b6e5e5e6e6fdfdfd7eb3e59fc5e977b0e6e8eaebfcfcfcfbfbfbe1e1e1f7f7f7f8f8f8e8e8e8fafafaf9f9f9ebebebf0f1f2f4f4f4e3e3e3f2f2f2efefefe6e6e6f1f1f1eeeeeea3c5e5e5e5e589b9e6f5f5f5f3f3f3edededdee2e4f6f6f6eaeaea96bfe5ececece4e4e4e2e2e2e9e9e94096e8f0f0f0feffffdcddddfdfeffe7e7e71d85e81e85e86fabe3c8d3de3c93e6f5fafe6ba9e4bfd0e0f5f9fdbbdbf8eeeeefdbebfbe3e5e6f4f5f5eaeceef8f8f9f8f9f9fcfdfdeaebebebf3faf6f7f8c8dff64a9ce8f3f5f6fafafbf4f6f99fc8ef268beaf2f2f3f0f2f4c5d4e1a0c3e3a2c4e3a5c6e3fbfcfdddddddffffff21f904040400000021ff0b4e45545343415045322e3003010000002c00000000200358020008fe00ff091c48b0a0c18308132a5cc8b0a1c38710234a9c48b1a2c58b18336adcc8b1a3c78f20438a1c49b2a4c9932853aa5cc9b2a5cb973063ca9c49b3a6cd9b3873eadcc9b3a7cf9f40830a1d4ab4a8d1a348932a5dcab4a9d3a750a34a9d4ab5aad5ab58b36addcab5abd7af60c38a1d4bb6acd9b368d3aa5dcbb6addbb770e3ca9d4bb7aeddbb78f3eaddcbb7afdfbf80030b1e4cb8b0e1c388132b5eccb8b1e3c790234b9e4cb9b2e5cb98336bdeccb9b3e7cfa0438b1e4dbab4e9d3a853ab5ecdbab5ebd7b063cb9e4dbb",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.200716018676758,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "b0402264db1c895b09f3f04070789742bc370173f140dda0c7e14d9e7e2cd011e881b792ba269be69d5b2a39633241f2a5d691c7330f5497773f74b44cce04a5809e71115903344169a0374244be1c4d9019e85d478cd30475e0dd02fee0d2afd30057e78006f4522d903f20ecfcda0222e822364111e1b19b111fc0baf640c676e7991324ec323738db11893083654690a0f5de747794c44c7e2d1018a684ffb3520285f027d60223c86674e363dfb4031c6dbc80c318dd24d16d44d2603e50400021f90404040000002c1b01ae00590058000008fe00ff091c48b0a0c18308132a5cc870e0a95ec634f89be8afa1c58b18333acc458da2c78a1a438abca844a0ae671f538e5cc992e0b8101b8c9049491364cb9b184fa10070a5e7b60c3555e21cbad00b82123d935ea111f423d1a706d910504af58a8ba614a16a6592a56a553358276a256a429357afdfc2da1cbb72c981b3703f8465bb928959b87073cca5ab310a4fbc785388c0ca17a3971a80135f8143b830c353218c284efca2b1e38426264d567c6347d3cb08bdc0d8bc99c467d005cf7820bd19c769d4ffd0fc653d391497a0b0ffb939419b7512dca01f88e94dfb0d70c7e60811a7bdcd5b4dc7a72a2c271ee339df1ea2a613af669ded9e41da97fe83a0491741f8e985c8b35d727e790af56375cd684f9cb1d3b1c2fced58b08d3eeb704241150d45deb0e01f69550ce6cf33bd8cb5cb4706f07620607474f30131b9b0758a34346530215c0c90a08a35b1d075ca3441cdf761521ee8204e3019f2150b2e4ded70c48a2cc4f0c42ebc38168b4458d960a07f1164b0c333b65cf6a35afe44d85e042388404d924a02c96412e1d1b1c20ebb505925931ebdb09c117904104c8fa89d42239814ed40436f38b8a08132b99dc8e64709a440da370af8c3cc29b9fdc3e19d1f09108a624ee4b1c334b704facf8384a6344262478c578ca3fff812694d3ac075421b2204e3656ec56c5ad30e6f7815845cc660fa4f2efea6069527553a04a0418398de126b530248768507a6110328a6a758b92b4d0e5c318538fe0ce3aa40c81c8b950301f813a3abcc481b162e253e0babb64d2133acabb180dbd433cf0e148cb935399bee3fc6b04b9330effea38bbc2901536fb1f87a4467bd1df53bd1b5e93a23f044ced4fb0fbf02ebab70c0fd2ea3b0bd075b33f13fc6b2ebcbc5c3084cccc5e5f68bcbb8f542ea4f00164891c81134249283159e11aa41b70af732910d3aace6d50d392470a72e17ff4363123ae3558503605e7a31302288b99914d884b54bd0a760a3226952603572d0c278d81bd241a139f129def84a5b153ed36471d0c55cdd9b5e294913b4405c1cba5c6729d17cf1a9a4da59f191c473ffe336715953144ce002dda85d221e8d1a7404e11d41d1da8843ae9de4fe6880f8408a4fc7c0",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.200905799865723,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "6032c0daa59859490023aae1c3fee4d7ed35196b48c343ae1a5a6f8ac7fa33ae9b2fa6e82fc0ff50c0eccf1572db738a47204d752829866b6db708c34b02cb00d32ca20b41538dab88833c7420c0568bc86a2f5453aaa1fea2c91aba418ae4f13c348ca7d50a70d922d6062dc09a7a2c37d57ba4b880d700b352f3cd38878d2cd5618ad89de0dd2e2be2ce54ff83a2882ba30a70ca22165efa2429ba2634c00a8a48e6e200c30872e9303e2473b7a7a4b8cde30007efb83f73039fe20d0f196cabf11ad2d13cd5d04bc8bc3fce1b7acdf2c4e72ea213dd77dbbb3f2177bba58878956feb0529921531c04c8a08029ba5eb2da1a598524d408aa9970e0a7ddb60c114d2f0831cc4c035a0131969e8f08d348c410a6d1881103e6003c18ce4696e924116089009084a500036280e57fad6ad672c2622782bdd3f8c7142885c4885cb68e143fc543aa1b4707654bb850cfdf12f159e6287fe4e53e13f80d8aed2f544864903183576a8be6e1d458686ab211085180b209eac7440cc5eb782b1431c028c195354a133aca8425b003179540362a15438951d62d05031dce1974aa7c31d524388400c62e9b401c424da0a1840bc63e9cc08c437bac9213b7c21d558b8c3fc51ad1779bc22c0f2883b80f9228f866c0c248128a93496051b5ca89044546749a4ec80043f88c0d53c708442ac897200db244c4490011690260d6b7224c0104912171c41374e4082085208b0978ce403b65c8e0f5251ba2a8ec405c9a4ce0c88d92d646c4404bf540f094a978b8d64803f5590031625b283dad1a712a56324442cb0a014d8816ace84c80c24f4816c506d8910b9f9868456a0b56ed5f121b95990758a682b6bfa63071a2a59146d25146c688853d8a3da11e920a13c4084848de9a63fde20a1c0d10f60d3f0071e16b48dda40c444dd4a49071694068d60b4305cc4c180da13913532d41f2008a8785aba91df19ca9a31504f15d836128bb94987d89827758c00079568209367b9a408bab19c2a3415263675d30f1f428268768601c2f209ba6cf5447f04a00d11808c131840d3a168b130477c08364090841c84a31b78b00099ca424d8b04040021f90404040000002c0901cb004100bc000008fe00ff091c48b0a0c183081312dce5afa1c38710154a9c48f1df2969103346acc8b1e3a9691a4336ec4872622c5c2245965c79309686942a59cafce71266cc99256bda0c8933e7cb9d3c7b723c85126850a1133f1abd895421c6a5479b22640835aad482beaa32bd3ab098d6ad5c737d052b94879f1eb7c692ed49e00a1d7d6aad0afd73a5ee1524d8e26e6c3ac1ae5d1f01f43a94ea85905fbb0bbc09f62735cb61bf2c04086e8ae0f161230ef4221d60d9729ebc638582b9d0d9328ec05f85fa29dd79810badca7aa2605d3a32d45c3d1f0ca25d3a5466a0ce84c2e0",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.201316833496094,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "4280ab4202020021f90404040000002c09012201800095000008fe00ff09fc57cc9fc18308132a54286ca0c38710234a9c48b1a2c58b15a32ddcc8f1602e8c20438a1c497257c7930a6f915cc9b2a5c86028631a8ce5b2a6cd9bff34c88c89b3a7cf903b79fe1c4af4e1a9a02735145d4af428528ec8984aed19eb29c76753b3d6b465752333ad605772edaa7058d8b3216f9155580cad5b8bbcd6266cf8b66ec4b8720fd2b5cb57a0aebc0781f51dfc17b03fc183f9f6327c38315fbc80f73a760b39afe4c967c7260cc0c545870f02e058b13022c90a3348a4e89831c6a059cc674155c07464418408378c5cd9cdbbb7efde4ffcbd860df6c2efe3c87f7bf3e78b78580cc9a323ffe06f9773b059a46bef0dc75fb0eb5a61fe6c1f6fc19f52f0535b8cdf9ec420faa99bd66b4762f0d47ba6e4e44b9f31f3fe5214fa45978641bdf857d4000126178141ca184814110922170a36fe58e3e0506044889c0bfe6075e14f2768f89b15fee0f2e14f4d88e85b0cf59dd813012af6f68341b6b8881302dbc4b8db02067d64a34d00ea7845282208f7a34d1c08b91b75511de952864a66e09e932e1927646bfea844254b3528998241886d4912234a5eb19c87628ec444990e4c99a6480f94c95f966f8e64a58e2c5078599d1611e08492d449c36748679489478b835ea444994718a44ba21879a0a41336f8430da417f951a694fed8872945852ad9a83f3e7e2a111a655ec1e1a5a64e74a78efe6d20da2a44a094390583b346b466990678972b44a784a8e49c5afe3a50974a86c2853f5f193b50904aae20abb1502a190485cb383b90786592789eb64ba44a438fdafe938da46576f75db9ea29b90d0304968b60aa8196fbcf24a9e210afb67fa47a45afeb3aeb85bf6f385a2eb2ddfa334db96cf85b4d91611a0b5daaed69e0a9b1acf85b4502fe18a3ed2925f8fb028dfcfabb8d00fe34496d28fe2e00b1b6f1f96b467fd472e36f28d459e72c05fe5eb1c00efe38e32c182cfb9b07cdbfc69caa13280b4aad3d3da7b06c5bc616d1f3158950c88bb1a76c70358b161b0bedd2bd3afd6b763db3506934c626d9f3360b04d0d8af2dfcd9f3181416982bfe18845c7d452124e70a85df57547c71ab00f8ed0409de1dfee938c2f61c8a0229ff9a9fdf46a04cccd984df80b2ceada251f4d59e57976ba87edfd02be8a60a42f81546504e8ce38982f16acf27302e0ded83ce4bb81352e24293a908bcbe5b0e2268502ca65d187f050e40970a29185ebf8eb7415463ca41e43d1f21f741bbf0fee6e057a7506942b8d488a9043d67ce5183986a9a6a9b1d5123fe96d98852267d2869b075a20fa85e8c7c402199782c5168e89b8ae286145ce88d4f51e05e8058b01cabf8e27e47da5582dc47160d088d4f268810fde4128cff8d2f404763cc33869726f28d0707",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.20162296295166,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "93409d3c406a0de4155e20f8166ce06f4afaf38753863281ec65d05108e4e05b8233252960e3199b83c93542d0bc13cac95b2aece00a8c30a22a38601afe67824a0f6060c3296d23878a71413878389d84716184581980288a48a21b20b1324f70403718b0802330400a160840b0cab204c751713c2cb82204772138b25ca3012538e37422a0c6f4b1912fa770c305e4689a29d4b178dad0d7614e7106339e71017ffccb2e28e5996b400103727c4322d1c28c36b6660018b4210326c9140d14238692f1c2260671421c709226c8400f9678b0842e34f007a7f48806ce352c2f14c184cf7b412c0fb28b86a56b215190c01e5397b25d0a441b47fb254438108203e8ad10bbdc05cd94b9283774817de242c22471318c20521323a76043089a40afe25c5103cf5046dbbe2912300ce00f6220a5a398c5415c182317eb5a64a74b7a60824d60224e421a41fa90310c67dc0294fa74493694b00404f84114009d0e09ec220d5f14c319bcc86742b1f2000e98a30121a8470b04618a0218c317bed8c52e88818c96aaf4192835863094a10b5ed842737c09080021f90404040000002c30017c01be003e000008fe00fd091c48b0a0417fc4fe295cc8b0a1c38710234a9c48b1a2c58b18332e2c76b0a3478fbb348a1c49b2a4c9930f977d5cc9526048943063ca9c895165cb9b2069eadcc9f3a4309c403b123bd5b3a8d1a30dad055d6a501a51a450a3c634c6b42a415cb1a46add9af199d5af0235dce24ab66cc353c8c0aaf597cbacdbadb170ad5d5becaddda3bd340c0cf0010e9c0f01e606ddf5f4ae61993ffd258871c4c995c7579c2c689340f04a1b2b44e0b275b8b3c953d4fcedc8e301b269c8460a05b66c70078d2b692a2bf34c3ba32db91da69cde0df99b38d605a54066a1c01fb5c2b5933f4c0c8205efe757e87c002e90c4e96ddd7668e0a5bcfbc253c404fe2648011d3a0b1bc0c595de1d44803f63de95e7d22b90c1b6f2d0d3b00ef00dba931c01e0d24b7c9dc5b20b4116e0871f09fe70b4d6180a4620843fbe20476059c018b4c07d0a3eb7803fff500556061d3e36860d1a38736159b7486310082596f78142d17c25c009315e61041e0104c3dd8a519de24b4731e4f89c190bd5c8d478463e968203d83c9315904625d611844d9e8603435e0525421a5942b68005ef5948654cc0d0e7d111619ab64043430295479ba61d31e130669e4992326a7eb4009d8f7de390922d5901e8690b9020c23053ea39923272ddc426a06f3a24e24a2e5471287b4904e0cb588e5e744a317db684c3a18940a4d4473b6cb8296ffe5548d10131ba843ad12dcc5465c6a179446453472fbc5ade360c286a4da3b6fe738a32c1d878a80112e5d2d108c2763848380220e34c9e17f612a75a41d019013613f152ea0746545be236294861c02eb9705b1b2fb9",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.208707809448242,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "bb6853899c34821ca660050160062617e4240ba070010e5045311e191d2719807e4698810190e1be22390904e09b420686308c303a134909281e0b7460805dac0d4d4e2263ea6e300321c02217c464d1946e103916ccc002e770463a7334a509b96d01796bf84039fa18a9292d0075a809c20b1c00016058d35253fa49664eb0001de8830cb938a8a9a6a49fb318e1080e0d043d6e314f464d49074031c23712f1084814600bbc9068b56c710b5d386319d660862f7cb18b5d10031938ade933665a0048dc410b5f680407dfa59080000021f90404040000002c9a012801810092000008fe00ff091c48b0a0c18308132a5cc8b021c362fe224a94180084810fde266a8ce8b0a3c78f2043125cb6d1459e05dbaea8bc52050709111bfd899c49b3e6c75c1313bc70b2b2e7ca082436da1c4ab4e8bf5e12e1b0f0c974e58f00138d4a9dea9157440b279a6abd42032a47aa60c31abce54f40a8ad5b19c09429b66d585b0152a0451be3abdbbb466d159a8bd6880db67803dbf4e2812f5a2980052b0e29c3305a1622164b0669c8315a0193333b3c60796b06cda01576de2a25b4e982a7466b0d77bab540d54dbbb96e2d1776cf18b34f03b0dd53416ed3f552f23612e077682d3c79ff486c5cb2af31bcb77d60de5c31316f856187b35b7db1067f0e60fe07f1da7db2443ca353b890587e71ac891992f39db29e7d7bc164270a5830f7440eaff6dd87174e1a8960010359f994420ef56924606010c5e44f00068cb0420624882321770f8ab5cb8620c6d4e15ddf85682287234e75ca892ca62896552c9ae86258c0c428e38c543d6363883852b5238f3d1af5de8f1b06691481448a682451d12429e1924495e8e444bb4069932d536eb48c95359194e544b7704913325f4e748a9822ad586644c1a0291292655ae366481faee94f2f737ea4a69d67e6d9913376fa838c9f1e1113e896843634a49db624da9030816ae068435296c9cca40b2115289e982654a79d9d26b4e89ad1848a103381de69aa417bae29e9aafe05411ae8a5b012546999bcd43a909776e2a2ab40a7dcfa25a2baca1a689fb5b6bae633bffe334caaaaea3aea9abefefaa99dc0fcaa69aacd4e036d31bf1a7bacb4d0fa53aaae8642db68adca94cb6cadd3da19cbaa7d9209ad2faba291020a11423b6fa8a734a1521a7fa54a6ba8a0f4544550e386ba4453333cb126b8a112911d531118f0e5ab9d82c1d9564ee4b15692b9982a8661477490e4a0a14a60990749101966a76ea8864302369e8be9c3b0b120048b1a20eb281b09daa6c30e263ad3a91284f0b6d237d36d5825a64434edf44aa1c430b24642138ac6055733f546461a2983e9d7613735880354520d76da5a3de54fd093726035dc4d1d81b4fe2e930e7031de3e0db2dec1849a5034e03e05d5a6a37f20ae950e11fd4b68",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.20907998085022,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "14234a81c63021d1b193e4800c5261952e61f2473e8cece2002b5f9186cbfb2911f302349be745cc9755ca43cc74e43cdd29311b21f474315f71746484c4fc44b017c4cc05d452077b40d5956a12730254af3c75a5517bddb5c901049bf4d2889d5d6936317b80b65d0fc49cc2db6d8d13f3147493c541fecc34e4add51e31d356a90c318fe1375421c49cc3e1455510f30a8c130540cc0e448e933d31c361b94a60242d20a236afec844388aabc3268882210f3cc9ba72448cce1088468d32bc720bb8b3bc76c853fb2ee674ed2def8f3a7799bc47c839cfb6511b363e4b9c876cc85f903e95f30c7cc71eb17a91e3308fe78bb5f13c6abb88c8b71072ed09ee64191b4c8d2bbe847d213373b5d36dcc47c4200fe58e3e2ef7c0ba4aa7935589f40a6d716fa25cd00fe18ca7e5090340f88cf455d485acbfc41adc8d82d66db1841495c840006692c5ffe509379529034e6fd2f322648da156c87bd8a282f692e10de7ef696b4bef9e3848821800a33b041f3804385fe4e484008f7e3b8a4d1a679d3c95dd2b2d3bbc87c2c6973f1c7f8a6d303155e410a03348f0e55c8bddf44267435f49f792298b46d54ae897fe15fd252a0a2c3186812566cc3ed22f3072b1ae143da424c0f4e60c5d8b52f325df020c84e10c3e1d98581569c81402ad896071042901f149017fff23a2b1a6e2d91219c159dc0bd5e21067c891448adfe728a1a4072374688a1081153a32464cc6458fc6364762110712cc0643710621e11f32c7fec200720831cb0a6a3a882288084b2098243a6d41a9d242011b29998025989ae8264e0957a49c4f9a653a8fc80a01a833182800cd9166a80680752d08b1ca583186ead48083da94a35547428c46c8a470989688e529c701cefd9a59737c2460622e6936e64f12fef8a1208d4039220e02f577649a89576d00d90f0b37b8811469eacd01391b1d32e79124802a4a022639125a40459254851ea0ff9fd85a5989c0e4b99191994ba6a3f21cd9479f2541327e5899132b516a2d0240c727de9a695fa1235ccf50f2de934a95192065325b3a46910d04555bdaa8b02020021f90404040000002cda01c8004200b9000008fe00fd091c385004080b234608f126d0d8bf8710234a9c48b1a2c58704070a9851e58ac78f1172b8d875b1a4c993195d24fac892e509297c4e9d9c4913e3402b835aeafc18249fad9a402f0e74e064a7d12b74c4dd0aca54a24003278e1e4d91a057d3abfe0244902a1587bf5c5799fa43c2952b1c7fcec2020d70a3acd4340295a9a5e9609bdba3db6cc49d7b72c65da9230682e57b71c1dfa3dd08ea226c91ce61a35e09f2624cb1ed639d8932fa5b4a39228bcb3a7d68d610ab33c423a05b4ad1ec0f974cd3e152b374c0da1f32d3ff2cc8f6e824416d7fbe4ceff82c3bf2ef629dfdc5d82de0f7c0c58cfd",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.209168910980225,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "22090ab921b4ea1527198e6a1588ab182fa860c33a1d68e584d5b32bb6aaf547cd5945b170e3721408c2c8d9bb56d6ae0db6ecaddcbf62fd895870f72e0b2e7af54a03e617b0e39dfe46142e2c25b1de0f7088e97acc19a7bf6f93ef7a0860592d8e2bdf56701966abb3eb8e1f421776505a6b82942a43cdf8802cd7ebdf1757c8be3ba3f651e1426990d0b08c29f0ce33869f5d60dce894b34192ec18d6f8b95c06d2adfea6a81e3376e1142b02f8eaee3dec9bf055e9902fd94d368bf4d1d8b7777a1a7ed008f339b44315d2a5908408cc38b7df5352f817541a011244827f4158e0cf300a2eb893030eb25448840325d2210d1f68a08c863c71114a872a1505a20db839b8cd0b0904f3158a9e8dc1e214200a14038b2b0d928108d46488a347fe8010237c24f4f819902c1df1813fcb1c0992403938c88093024019941339ec104c6b56cee5cf0e34c01741433d86e3a5504114554c991b0dc4c5110576e0e40e54bdf9659863d289114101e8181a0d3638e90f877e56550d08fe0823a8450f5900da592c0ca9a83f40355ad5091960438c9138962482103344b0cd4a29f8e0c00efe9bfae3cdaa9e5a9508171a6c56e643b820b3cb2ebeac0101046bf842cd2ec404b3291eb5de954251c39499cb2db1900ad229b1d8a20b30c6eca2416dd8a8daec59a0fa33eaa4609d624b2ed610b39601e34e36c30e1adc842e5cb63813cdb73245176f610b78e3cf89f7ca158b33d43c148007ff4ec64251c614ec182fd6f03b02ad0ddf654493bb48fcd82dc3749af1646df8138cb51e8375cd0123cbd68d08b89099b25c6cb4b064cb55f940afbd33cb05c61f17e07c561aa4f5d23360d7a08081d055d1f0843fbe1d0d181375301dd4110d3923b563545b3d1462046ffd97092c7b7dc4d3618b2dd7198498fd74d46afb4c81d73490a66bdc72299105fed3db3000eb8d78cb25c3204c8f818d3f3c070ed70330305d9906fa290e150af6089d152e284bee94175de0ec8485c868fe1723381b31a52fa2d3bcc1c8dba4d0d09ca9c30546e7231f01ebddb1872541cbe1081479ee3ca16056c623f8330df070455142c6a6fbf30cf26279b174c3113c0d0cf4613db077c33f082433f64e65d378c3c51f0f3e54d710d0b0077a46733e582d347c044cb8bfcf53fcff9ae18f0699db2f92faf10ac5949ee73fa7d4205edb5800fd0ad8946b88e15f31d85fff18e811306caf5946681f057902864960cc5310f207e036889371b46d5c4d321f0973c28678a58034d75b614e6410af1c08648232d40828c6150a17f88319fe39c4c9352ee8291f782f882379c0f29a6500732171241318d7110462b4278644021ff493858261c5905ca36ab5aac602bbf811340ccf53b45121193bd280667d0326705b234700d02cdae0428e1e19c719fdb480c3c5118f192942b3f2c2",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.209455966949463,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "9fc9932883f912a62b56c897ff464aa481b2a64d7fc19829bb0593a1cc88386e0ab589ac58af8f2f7f5e7931b4a94d5cc57885545ac8a9559bd49cb9f4f933c3d5a136ac24593102ce9393c1966d45a8d4c1d79a5cda04f9e984c6881d27a50173a954c15b932256dc503a3282959ac4947ef8fb840161a55244a0546ae3ed93058f09ffc0765229deab221c67269ca7b3cc2a6f578c7ebccd80c99f25af7219bc9af091d732695e35533bb3df9f41afceed4d7886bf9f4cadba20fe38c5719955ad5a60fe98cbcf1557336ca3aef8a75babaab99cff14f053c8d524e27f7e507f55417a994f7e56b6ca65fbfb2b257f7eb67ae4fe1529cf4974c35be8ddb7984cb15db5430aef0527d36d6f4d279e071d9894463c410c72c5187ff9a38378dff9e3d029b1d8a20b30c6eca2c14d228c415d0c28f584d029b6e4620d31278950486f468468928c0dd9e24c341ac0815966895458139020c5e20c103fb0205304dd2c76139330f1b2c621707c70565301010021f90404040000002c9201a800460028000008fe00e54c1838c01d1a4f604efd5bc8b0a1c38710234a9ce810c9958b182f3a6111e48d29596180005a674b21c593284f5accc8b2a5147f30fd05f3254c57ac943853ae6cc9f34a869840630663a6ec56cea3157bf6b410b4295064c57a99448a72a7d28c1f9c6a058aab182faa14ad5ebdf864ab59a0d49cdd049b742cc62a67e3020db66c2d5bb15717c8dd1b531a30bb47f12ac5c1b7304c62ba900aeef9d2b0610dc36ce15cccf3a7e3cbc87255758b91e9e5cf1a964d8548b965d6cfa8fd0d03dcb034cbb2a9cfeeb02225cd94200bc6ace8e0cf17eb7faedfc636fb044915a56fe0f88b0638f845bdc39d0a49c17946007fcc4c3abf42387ad00c4e38fe3f4f0073d8a9ed8dbdc34c223ee314d81ab65b562fe044fb8cddfd6df7ec5dc494fb2c9100d376a7793702802c0521827ee2c1e6dd1108b22404836ec1a59e3711b2f402856341e79d03196614048757e5175d1e2162e48408cea5175d372962c48573f3bd18e3455c50618a0a2a5012cf062cb4c4df8937ae2851360f70b0c41d1ce8028c31bb68101b88317ee30f58a7d8928b35c43866c38de15cc95643b638138d94721db14d8a0a8839e643b13843cd595466f8cd826f52c48b35680625c202217a96274ab70cd3274c1f8412e118310d8ad32dbe0035c29af72de0a0a3399da24c30308d109e784790d728a647ddf28c3f0644e0d6363aec1014a92154c5624c006d50c7d3368908e014ac580a238202852472c4026fcc90840d5b05040021f90404040000002c9801a800510032000008fe0089786177ea9fc18308132a5cc8b0a1c3870faf48dcc622c81b53b2c20029f3c956418820438a8c28b1a4c99246a6e0904545cbbb582363ca6c78b2a6cd2b27aacd8016a8d4",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.210083961486816,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "4a845b2caef8440e12438adaa0622eae9845b845b189bd032233a438a722de428aeba3e2199128b2da19438a5d64df1b9ba8303936510354fc872fa45847d18db189d143de049b08242aa61089fd2b6231a41848173631908b446220ff71c4216ef28e9a0ce4213d19485b5c7293a70c642771b84941863290182465255f494553ca928a9964652b6949c569dc928ad4f86511d758bc1d28c00c2fc0c118ba9184a85daf95ff98a4ec6c20852abccf0159db1d3463e90f6c64c0035f3902036507cd43eec0076cf18015c8d94a178a20117839811052074d5ef8230784aa811ac8a0790b01dc6c30343817346df186cc7c079a5fd0cc1bfc01cd108c2601d054c36848004dd765260fd0244d385a790dd2bc009aa1184d0ea02926cd24019a2d180d08a0098fcc6c23020c6de52facf498ba41731823784ce462ba495f60a3a084f90e4f03f9451bd0f42e39a0672bcfd88108dca51bfa1b2a156597000680c50819d0e626b7283b6c3820084271c2e98ad7ca3dee4e0470e8c611e8e0040f4420112b405ff102020021f90404040000002c9601a8008500ad000008fe00ddb98be425d6a97f08132a5cc8b0a1c38710234a9c48b162c32b18319ea013244d264b6180949163eba0c5932853aa5ca930a3cb97193d4cc1f18a8a165db158eadcc9d322cc9f404f547b012d909d5b3d932add09b469532334901cdad2cbe4d2ab581d3addda34d41b24201cf1ca4a362bd7b34d59cc2041c659ceb27075a29d0b345422077c96bd8dcbb722ddbf3fed3a68066c6fdfc317012b7e79e3850162ba104b6eb9b8b2cb202b860cb33519b1e5cf198dbcf8802c5767bea05363a46141c332aba7afaa9e1d24c98e618663f79ccd3bc58a00be72eb66c9bb388b153ba2091f8eb2b8f31449443083cdfca4f3eb41acf81b46bdfac4ebe0dffe08d0a0ccbb4ff0d7b7bd48106cac7989e8d157894eadfb7bcaf1c11ff9e06fd97dadf9a1e744213b04c3d97ff80508de3702f8530c820929989f13391478e07f1206b80008fe08836086011a910136c4d8a71b880a26c28506919937c70141d081227a1134380c84d9781185094554a04635dbccf8592819f85322840df5c00423309420a4623feca00152483ef400130834f1e45c47d8e04f79554694cd049b4cb2e5562934684c9814817306006702650409feecc266450fc800679c2e6db3823fc1987867435e143149907c5ed18d08b85c38e844511090e8153e4849e5a3148151c4057c3210803fbd606ad135506010e71b4ff8639aa8163151c799fe4724e08f33ac9ee4ea96d5a40a66ad159970c09347e8caeba80d102264b0aa0e6b110f141cfb698bca52a444163332b0833fee454b910cf6a0f80336fe5caaad440fc080a214fe68b0dcb80ea1d06d867fe22228bb0b79b1a7824e68870cbd153192a107fc",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.210184812545776,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "77e056848e90d40be62d4a9565e28026d436247c17ea58963170550a0154670c69fe08605612d411439b3f3a98750472b8fc6a943f1198b50d17c7e549da1373897b1bb9c47d3017c5a809b39d0173c976dac3dbb9dc16ccfe50935e0273596199c5e9f933ad5936f8238d7bfff83383594b4de331c470981583d44c37edcf11570d32c4d417470c5b5297801db63f4824e583d96763f3744df1b0933541a86193034ca6f83bb729d6a80911444874ccb27741c789e0401a273cb4c00ab50c4e38750118e04012232890803f323b4e50400021f90404040000002ccd0134014f0071000008fe00ff091c48b0a0c1830813162c71a5a1c38710234614a1b0a2c58b04256adcf8d01fc68f200b721c29d163c89317b3915cd9f086499430113e60b932c5cb983807a2a14972cacd9c3839f01c49e32750984c86724c64f4e849194a356efbd1d429c81051354aa96a15638bac126370ed6a1100d8880ec6925548e82c44036ad71e04e316a28bb8720b0aaddb70db0ebc79072ee1dbd026e0c0ffb0127ee3ef70603184af846b8c18a3bdc8192857aed823f21521fe706daeb8c7f3dd68a3152288ec019b3f60a913d6895cd41fafd8077978deeaef146e83033ca7752c17c1b6c8e2fcedfa6d50136b11fe963127e8c533637fb7a60f84e2194963dfdafffed5f00cc75fb0f0ffb29d881ceaaf35f4263cd7ee857e7ce442dfc367e346de1f32f4e09845d820d04987de3fee48c1425d633466cb81ff08e38f08428c610458696900e13f1a34d6d81323bc711c4fdb24e00f3310f6e2e18afe7863c6372c6d734463f41db80b8b380aa020492b68865e2c380639a115164a65833fa81dc88c904c82282244f31d780a935436e682194138949986074a58e5970274c38289281ed8e197684267db81cba0e96663a2a177ca996f7e6960785ed6f92578da4da9e797cf1c38cc9f5fd6a81d9084521967783726ca246ce1a9e82893074e33a990c5a097e7a52cf2c91ca29cb298a476c4848ae383da29632a8b811eba2a8bfeb18487ccab1efa125e31b47a18eb74b7e4da5899cc9d828bafbd69d768ae994e87abaf5c32a70bb1fee4321da8b9fe17ecb0c466c7dcacc48e8a1b35d06ae0696ac640eb8f33cc5963ee72bf2d0bedb89bb569ae32bfc90b2dbbb16dca2cbc88a96bae3fbae056eebfc08ef6ccbfe6c5760ab7ffeeba592cd8fe2bed68bdd069ae31a9e90b2d31a39d022ec2a1f14b962d11238c2a621a9b1b3062a794dad80ee22860011c2eb846ab3095e5d2a1080e24e201442ccc509ea91807164ba3564430d21b1f704a0d62c0bcfc024ba164e628c78149f3320343e591a8349579f8435449fc398dc85635e64056a124f7e6d99bf913c0825931f0262e6877e54fb406676d23009a708fe6cf026e75f365e0a325505704554a93f75a42f0f5",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.210357904434204,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "0f7ee00766ab480462304eeac2f019ca386d9f4ed18b6210c39d70c84021a480871194cbbc1ec4853172a1de59d94217c5d8c524f18b8c6138e316cc855240000021f90404040000002c5f013101bd0087000008fe00ff091c48b0a0c18308132a5cc8b0a1c38710231ec470a5a2c58b1833664c20b1a3c78f20438a6c7841a3c99316b98c5cc9b2a5cb912551cac4a8f2a5cd9b38719698c9b3a2889c40830a95d8b3a7bfa148932a155874e6b6a34ba34a7599ada9cc1b50a76adddaf181559429b2721d4b36219aaf27a7882dcb962d07b42669ac6d4b772b13b81a71ccadcb77292bbc1967eced4b586808c018a50c2eccf8660bc417632c6e4c992500c8161d4caecc19e44ecc570c6cee4c1a2218d015bd8d2ecd7ae15bd04e44ac6e4ddbe012d46167d7defdef30e837fe74f3a60d03b58ee0c3932724843a0372e5d007f6407d45813f5cd1b3efa1ae3a5af6e808b6fe81c6ea0fd877e85950cbf5c7eb7cf2aaa815fb3be57ef804ea9a85d7278c807a077fbbecc75b13a8dd808d3fcb08589b17d4a511dc2d0ad20605754804475f84acf9411d1cfe0483216ba79c805a283bf863cd87a599401d70fef4822269355068e18b9cf1c0cd86fe20432367285077438909ee485917d48d119c2d4236360e755768a641928df5879a135cf8c30c94855df3d96fc1b988655f2a5227997e5f2a951e6adb7457265f5130b99e976bb6450075db38f7649c6d4d479d13095889675b1530c94070edfd4916834c6a869da164054a1d1d40323a16a2d4c977a1a45a3dc6a438fe3c83e956afadd8e5a75a1199e875a44eb51d932994685eaafe4b5d730093578c096b54be51e7c113fe1473ab52e3dcc8a4a5bf26d585787bbae08f77c50ed523ad82f98364b3413d3008ad4efce729b5418941eb15d1c6c22d50327c9bad3fbe8c9bd3381e7c1baeba379d4220ada1fc7725bc3681f2ed15c4e2ebd26ddfd251a5affeb68446bbdfda59704b60ccfa6d10b2e5b2304bdeee6b458e13af24c1be57e8e50f841987e406c71e28cb6cc81f85b9af641a5c8ab2446c88b8ef14b239f3b2474a10822cb602007873474430c7710e33fe0c111a31cd5ca232461f9df4b727f41c60d30e11f1f4b715b64c754339735cd11125eab235436c20ccf10df68ebdd012327b4d42876a2bf487d7161de78fb8711fa42ffedd572c50a2c479170486a97457f19f318117c4c1067c5fe18475c4244e102b6dd3bdc2752ee77dcd9c8d5ff1c39192ffc3c101dbecec35d8fe882d3939c2361e419fc2488ec6999dd371f8ea95f36d44cfd424ce411d9d5be4c4c591e7cd0305c15fa4993440158a272b29246f9173d364fe52a7787fc90445d25744bdf5d707670cf81f724078f76d602e5470ec0f43fe7e1c14d7bd45e9573f14fbf80f93bd8051c83f7f4597b3dffdf0873f5f",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.210464000701904,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "753b64541f675c172ffaf26840c9c50126b28889b06cf25fbc4c43a33817cb1c1a651a56f882ceb279164bc3f3252012d03bd3ca71748520ad5a70cad8ea5b0083389df46da774e9d10a565f1ddc29c30c24c27e5d1376df29633657f6630dc6a2c9da6c0b08463c709b8de1045dd47dd6698f6848608fde4539990d0a00005e129a6884b081e1684a14050525d4dd3845516cb278d7935b44440385239d3946d94cb00906327fbe11180384a0c6d1ed9aee121a266ca2062133bbfe12181c2cb1891f9a541d97ed579de20507e6348000289660620a25346c10100021f90404040000002c1d015e01c4005c000008fe00fd091c48d01f17101f3aec2898eb9fc38710234a9c48b1a2c58b18336adcc8b1a3c78705056213f223c59593579c1cc1e34d60b08f3063ca9c49b326cc900aa6a0dc89f2c48b04fe7ad91c4ab4a8d1a30e09eed0c1b3294a1670a4219d4ab5aa559002772472caf54a281242af8a1d4bb6e3c0315dbb9e3854b6addbb749fd25499b36851cb878f34e3558856e5a5a7a030ba6e90f8fdfb446b60c5ecc58a3bf0887d366c8d6b8b265882022a74d63ecb2e7c6233477bde1cfd6e7d3810d8be6fa0419ead770a5ace6eac21f30d8b8c9e699ed14a8bf58b98357cdc09b6728110277095f7ed4407194db161074c6bcbacd1d379e9f2c5410b8f5ef375ffe68bf02a2a054f0e839fa13e7e4398390fe8aa59f8f1199bf6ec5439587cf8bbeff89b7f813c037bcad009f401a9cf2df820ff9e28f0b2689a6c381039dc7e07fa708e4cd029a21810d85034573e182c26495c309696d138102201674db88fee132900b52b0d0d436348c805c8b058505637aba14840d080eacd046064270c12385a6fd981e354b461952824ea297a19458baa46095df01936596ae71f91d315f62498c98b84521512c6562a91c9aa729e1c1445eb619e59b705aa604215750b48b9d77e65959141e9c44d1291a00ba24315b0a1ad804851a4a512f8a2e294da38ec2650e8a2859644ca53ce2e25da66e35d0d445d280daa206b790da9604fe4e5d84a8aa2d36e4ea55d9d4c0154694d20aa27cb752e5451d5d6554a2af14ee8269b0430d50425a1a3d832c85b834c9ac4d7ff8b55130d352a8ccb53481e1c7611bcdda2d7cd42c0bee46035c101947b69c7ba006fdadbbd135b06ad651aff286d499bd1829d1c46a1e29d36f4136ec808b8f004774ca26bc7d54ccc1028970c48afef8a2aebd031c501c4c9f1e4cdc4963d8a001750d3fd082763145d3af0b919ee48119010453efb5a7fc11f3c72dcbcb8053113820c233a3ba6ac224e3491a93b4d33a90d60256f863ccc66232416cd24ac7e4a0af09d0e1d71142f8330cd5300e9005d63bd5e432ad6845b68005d80c53348c4c0080364f36855ca9fe15b37d934100beb47ae129ac787c37de365953",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.2106099128723145,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "6bcd92a3fd157af1c74c92758a49fc6f05bd6bd6ddb4e70438f8c37ec5aa03d50cc7820745a3591cf8df36160013dce50a14ffbb020eb0e18fccf50a0c2508610e94972ce085f0661af05dad00104227502518326c550fd8e7b713ac267afeb96a40081d423662248b8621bc01d9c8d72b703c25894b2cd6198678851b0c8589b92adc108d201662e4705460b800154fe080077e11549ba3a2136e860bf8a90a015454493744a001b7994a0c71bc42226032345381c180715c4068f8172b0e3c918a5510cb2ece582917c6d10966c0062e96d72a09e451250c48803fbed6aa1a5cf20a2c580d351899a853d4e193db90c20e343040533d20749f0c02d98867aa7110e2935770420e76800b13728a0390bb6404c4e20b52ea6900dcc0a54a7c60030da86f540b54a607f0108060b432538e54660a1c808d67b83151d954e60210670c63a2299cca3c825886614e2fa1339d2410c130be59a73d1c52992bfe09421276e00b3bc2890dc1c4a74aaa90830e10a3648952c22d05fa936d30209ed6a0a797d03009e830f4275508870190e18c7672080c59b8685422200503ec22171ee5cf295e2752a8a4e0051668063028e92538b6142c34c0830150a10b8946c80401bd29504e70841c902010caa0298ad07000a18a681b1ea0413832000440ac231629254d36b4e8d4d43821024718032d1041853b94410f5f58442494e3bfaefa6d391ca8a85bd5669d6bb074aedb490f0af087d7e8cce70130e8ab710e84027b083635117a80270fbb18143101908cfd4a8d4e61d3c842254968e0aa655742a5013461b39ccd120ac4b8d9319de20ca4652c9b4ee186141eb64ed9687d002cf1faa76ba04013b44dd404f0d8d54a816313ae6d29a74e8102245ed4543df8835cf119ab284820b597ec15071000592a268b080d10c304b557ad530c6013b8e51cb9b2c1863fa881877e1d98407ab007047421b8bd512f47c0a0041320a0069aa04365e42b926b3c4009e6684008ea610818988212f188c71402020021f90404040000002c0b01f2008600c8000008fe00ff091c48b0e0bf53fe122a7c22000e1c713b144a9c4831a1358318336adcc8b1a3c78f1b8b29ec50e8db9593278da41911a0a24b7fd240ca9c49b3264884fe12fc7082b2274a1623b0bd9c18cba6d1a3483f0ef3078785cfa728133d199a7059d2ab58af22b47002aad72bd5b80c0d96b5acd999c20484fafa95464497b6ceca9d9b71470ab66c0bb9bc48b72f5d6785f0b23dd181a206bf88e5eeb82198ed0b8ab9124bc6da6b4463b637de264436b93352623e2eb35520f196e7d33463f98b20fa6b0c85be50cb062992676ba8e114169dcd7ba3861db7bdce48c8acb7718cba1206c79d70f7f1e7ff7625bcbbbc271e7fc6a043579d3051f59e56fcfe9dd2fe1c98c20cdf4f867a128dfc73690a13",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.2107789516448975,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "4e7033c9508e7ae4c21d51c455b9107cee07a75b5ff25c66b003f2ee663720cad42a9740930110750dbc99add6f70fba75cc091cd1d6fa7c4731a9686e7d68b85921eab7be25dc4c013b23a1043cd4b11314eb78afd4ab96c968f0c215ba2c07c1a35ee45c664012b2e1663a5321f58667323a44045deb739ac918109154adcf841443e2ec48b8011e526c0401aadccd0ce00fd1adef0137d31d090d6732d4f8038bd46382cb8e50c429ba6c7c20ac1c235cd68d24524f8b1da35f8346d602978d90847ea0e0a948f88f09762c706e5cdf015c96322952ef022e9323096f66180652ef6611d9e0294d66842b92f014b873e5fa6069b21b44247e95a365c7aa704b1206040021f90404040000002c0901ad00810082000008fe00ff091c48b0a0c18308132a5cc8b021435bc088f99b483181950c48cc24112082a2c7890e438a1c49b2e4a95ec6347cf42762048d2b30635eb93103c44a7f2573eadce9f0542e6a3727c20922b368cc195c3ef25cca74a7ae6741299a7162b4ea9508362936ddca55e1ad68513d16b24a76d007ad5dd3723d056c5a588f49c8ca4d9100a4dabb3b6ff97afbd18511b9727dd8c54b38a42e647c578e010cd800cec290152ac39578a50baa8cc9e2781cb9f340612a2baf6c9359ae132e9e3d2f0b2d7a659ad2722da4860c8c75eb952c6093c5331baf33dbb73f62d34d365cefb4b7a4050f1b80b8d519c7b79edabbfc2d66e732bb45672aac7ae208d88bfeaed8be931765ef7c7f84976980bc49eae8f93a580f938e08f72375018f1f35001dfa527086df42d3f1d71a69e1196183800322c4cb7e0686b5c337e1ad305883070d1361701fdce05c22d85c88e140b128b761707078a05b1a01a035e240ba9ce8dd07e06516ce0e1ebd389086327a1740212a92f58d101a20138d30b9dca2e32912f5181f172ba4f1574c11d012c73ca7e858902de7396920367c68b1482c5a16048640317ac99f34cbd85226426c100245776a7ae78b2e59be89100adc5ce184057506f74c2f7a2ef4874c1e9c15285fc4e4522843141845d7a24169600d998f2e44c075321dd122a51405e368a60b5d53835c638448e92ebc90cad029fe303086c7a2cfb8e96aa95d64b68d036a5263ebad0a5d136b694608d0e32ebf029b90b0c4b1e0cd86c1b4aa2c43a73ab7c0a7e869a0ccb40db5b01e0e1d79c74c9edc2a24017d57e450dd344a96bb1039e8c2344270c5b8cbd012f1c274021ca20593acbd07457142bef5b9909831002fe4450904c714c41361694068c20965a349c3323110ee4ac4904bf1417e605c940e370df3b14221886c54061f8d7af2414ca86c94130a4c840ba62f1be405213217658415fe20e371ce035d9345cf32b160ec3344231429d2300561b0c94d1b3401d4302d509730551b04c60558bf0131305d1b1432d42cfab3",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.2109129428863525,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "4789c85d8d48e3e3d984205637608d6e60822b93f7a5765fdafd4d1407b4da7ffcb539c80cef65a6ab9edb16c4b9eac9ae7affc25d8b2584b3cd996f6b52aa1e2931343e7fd4ef6574ab1e781677402f15f058feab1ee80e84a24455f06af0ebaa8324123cd595b065a00a9e83d4f725ccd57060bc4ad88230183c091631584e8c1d36b2173c64553151ae6b9af496743fc795b165c61b9f950a04bed809b08eff4260f01224b6c699e2901bd9a0827cd81fc35d725f264410163727c652060a8d3b63542a671930fcc50e410e1c9f9b7ed92f94dd0ffe416e1c9fad9e792c24eef04038dc1c25bff98b4d1e482ce393e23bffc4caba21486dc1235f3f0725cf02a1f06cb06c68916454ce027972a3113920827879d260516e7c06026802613a2c740ef4ed1a64e64f1325cdea214b83846ceaa014d9380341e880dcdceaa0c439bf029175066b4d143243fac5e8e5f550802dea7ff81a3c7616b64f749d6a811c1b3bc9563649980de9f3eac6b4d24660a50562edd9603bdb21f96eb16fdd9c6f83fb23d416b3b31b14ed73a37bdbc666b7bb4942ecd9c4ba410e9eb7479e0deb5ce35bdf22e177b1d38d1df7029c23dde6b240c4ad1b1f1f9c23ad6df63f3aed9c877f04c2fd1688712dee112067fc1f97e63844fec2fcf12d3f66ae1647b2bd07a2f2458b1cabf0fe470cc113e5972b04d1ffe0b16a6dee1086af5c20a856cf4779ae907affdcbcab263a435efd71a39b26c34a3f48a88b3d71d1461d218356f7402654589b4b9a2026374c9f5f4e71d314e4c2d8c9f7d5e38df37f60dc38a55ebb40f4aa1ea827dcec7227c8ccb1c3d77ff87c3685b6f984b03df8bc2fbcb20451b469581d75a61ba74d9a56b3e1f7bc6983b0f9a7867fb2c3fd2d6fb9131c3b052dc83cf31ef4f862ddea57b7eb6e11527af0c093ec0d4d88d377b376c7eb66e806e110ca959d75ecd47c20da98d0d8dd5d76d3c08ceeeaa146d42faf9eb81be4f3d8d97dad5b3e9bd023e4c9fe282fc0fffe3e9b99ea5c3d1b7df9db8d93e385901b3b813f37f6699d100eb1ffe0e76fceef0d42f2e8bfbcf75aa72987acbffdb342c4a41c1779fb317f07517fcd317cad567c9d517e0e117fc6117efa367ec6f17e0b817d50f67016e85b0ae171d8414f00d77a18d611dc371b04586b81d420fce710aab71f10986d12f8781e617bc6f17a26e84720914aeec681be0712df575ae036824f176eb6247d3a867fd8616e108176ea1162ade680b81612b3a71b5d77668fb61fe9f5112bb81fce87692f0883ff224bb50684a6d1772cb5228c2663d4671c53d81032681c9be7671197743f5185fb8157862686a671866115237a286059b81f0647128a671c1ee867530763fe427177c671855216855e42147fb81f1aa862e5b42244b8108e482097785a46081e8cf81306081e85b8648768",
+                    "name": "/data/user/0/com.snbaco.newapp/files/loading.gif",
+                    "time": 4.21101188659668,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "53514c69746520666f726d61742033001000010100402020000000090000000a00000007000000050000000800000004000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000009002e4f7d0d000000040dbf000f5e0f0c0e710dbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.214715003967285,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.215056896209717,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "0d000000390a26000fe60fd20fba0f9e0f870f6e0f560f300f140efa0ee30ec70eb20e960e7f0e6a0e530e380e170dfd0de30dc80dac0d8f0d780d5c0d360d170d010cec0cd00cb60c9b0c820c670c500c3c0c1a0bfe0be40bc80baf0b930b820b6b0b500b440b260b090aee0ad00abc0a9f0a830a700a3e0a26021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d02bf02a50287026a0241022f021101fc01db01b801a101850169014d012d000000000000000000000000001d810c030041636f6d2e62616e6b696e7465722e706f72747567616c2e626d6219810b030039636f6d2e62616e6b696e7465722e6c61756e6368657219810a030039636f6d2e62616e6b696e7465722e656d707265736173198109030039636f6d2e62616e6b696e7465722e626b77616c6c657414810803002f636f6d2e62616e6b69612e77616c6c6574208107030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e8106030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212810503002b636f6d2e42616e6b416c42696c61641b810403003d636f6d2e426100000de3003f7777772e696e676469726563742e6e61746976656672616d6500000dc400597769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d504c00000d9800557769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d00000d6e00557769742e616e64726f69642e62637042616e6b696e674170702e61637469766f42616e6b00000d44002f75792e636f6d2e62726f752e746f6b656e00000d2d001b75792e62726f7500000d20003775732e7a6f6f6d2e766964656f6d656574696e677300000d05003b756b2e636f2e7473622e6e65776d6f62696c6562616e6b00000ce8003f756b2e636f2e746573636f6d6f62696c652e616e64726f696400000cc90043756b2e636f2e73616e74616e6465722e73616e74616e646572554b00000ca8006b756b2e636f2e6d6574726f62616e6b6f6e6c696e652e6d6f62696c652e616e64726f69642e70726f64756374696f6e00000c73004b756b2e636f2e6d626e612e6361726473657276696365732e616e64726f696400000c4e0049756b2e636f2e687362632e68736263756b6d6f62696c6562616e6b696e6700000c2a002f7473622e6d6f62696c6562616e6b696e6700000c1300257472656e64796f6c2e636f6d00",
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.216193914413452,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "000000000000000400000008000000090000000a000000060000000609a309880963093d0917090208f108e108ce08b7089a0880085d08470831081c080607eb07d107ad078f0774075a0745072e071206f306d706b5069d0681066a0650062e061205ec05d805c405ae0592057805540532051304f804d504bf049f0484046a0449041b03f603e303ca03ae0385036e0354032f0316030002e702cf02b2029b028a027302560238022101fd01e801d101a4017b016201470130011500000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c03003300000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c030033636f6d2e6f6673732e67626b70726f6472657426831b030053636f6d2e6f6369746f2e63646e2e61637469766974792e63726564697464756e6f72642a831a03005b636f6d2e6f6369746f2e63646e2e61637469766974792e62616e7175656c61796465726e69657214831903002f636f6d2e6f6362632e6d6f62696c656d7912831803002b636f6d2e6f6362632e6d6f62696c65218317030049636f6d2e6e75616e63652e6e6d632e7369686f6d652e6d6574726f70637314831603002f636f6d2e6e6f6f6e2e62757965726170701b831503003d636f6d2e6e657476617269616e742e616c6b68616c696a691a831403003b636f6d2e6e6574666c69782e6d65646961636c69656e7414831303002f636f6d2e6e656172666f726d2e707473620e8312030023636f6d2e4e425142616e6b14831103002f636f6d2e6e626b2e4942476d6f62696c651a831003003b636f6d2e6e6176796665646572616c2e616e64726f696415830f030031636f6d2e6e616d7368692e616e64726f696416830e030033636f6d2e6d7963656c69756d2e77616c6c657413830d03002d636f6d2e6d796333636172642e61707016830c030033636f6d2e6d74656c2e616e64726f696462656122830b03004b636f6d2e6d74622e6d62616e6b696e672e73632e72657461696c2e70726f6417830a030035636f6d2e6d73662e6b62616e6b2e6d6f62696c6514830903002f636f6d2e6d6f766f636173682e6d6f766f268308030053636f6d2e6d6f7267616e7374616e6c65792e636c69656e746d6f62696c652e70726f64198307030039636f6d2e6d6f726162616e632e6d6f62696c65617070168306030033636f6d2e6d6f6f7477696e2e6e617469786973108305030027636f6d2e6d6f6e65796c696f6e22830403004b636f6d2e",
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.218231916427612,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "0d000000880125000fd20fb70f9c0f810f680f470f280f0b0ed60ec20ea80e8b0e750e5d0e3e0e220e020de40dc30da20d790d630d400d2d0d110cf40cca0cac0c940c7d0c640c400c280c0f0bf30bd90bb50b930b6e0b4c0b2a0b010add0abd0a9c0a7b0a600a400a290a0709eb09db09b909a10983096209430924090d08f708dc08c408a8088a086f0856082f080a07e807d407b60796078a0775075e07440731071e070906f106e406c806b2069d067f066e065706390620060805f905d105bc05a20591057c0566054d0533051a050504f004cb04b904a804950471045a0440041903fb03e803b6039f038d0373034b0331030f02f502e302cb02a0028202620252023a0224020501dd01a60191016c015301380125000000000000000000000000001085360300276e7a2e636f2e776573747061631885350300376e7a2e636f2e6b69776962616e6b2e6d6f62696c651685340300336e7a2e636f2e6173622e6173626d6f62696c6522853303004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e6712853203002b6e65742e6f6e6539372e706179746d34853103006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f69642585300300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c852f03003f6e65742e626e70706172696261732e6d6573636f6d7074657313852e03002d6e65742e6269747374616d702e61707015852d0300316e65742e6269746261792e626974636f696e0d852c0300216e65742e6172616d65781d852b0300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b852a03003d6d792e636f6d2e687362632e687362636d616c61797369612885290300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e6563741585280300316d782e687362632e687362636d657869636f0f85270300256d782e636f6d2e62622e62321785260300356d782e62616e637361626164656c6c2e706172741f85250300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c1785240300356d6f62696c6974792e67652e7465726162616e6b2585230300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c691785220300356d652e63727970746f7061792e616e64726f69640f85210300256d62616e6b696e672e4e424714852003002f6d612e6762702e706f636b657462616e6b2f851f0300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c657410851e0300276b746263732e6e657462616e6b1b851d0300",
+                    "name": "/data/user/0/com.snbaco.newapp/files/db.db",
+                    "time": 4.218744993209839,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5451,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.snbaco.newapp/files/txtscreensize.txt",
+                    "time": 4.219552993774414,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5628,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.133015871047974,
+                    "processname": "com.snbaco.newapp"
+                },
+                {
+                    "pid": 5451,
+                    "tid": 5628,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.133548974990845,
+                    "processname": "com.snbaco.newapp"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

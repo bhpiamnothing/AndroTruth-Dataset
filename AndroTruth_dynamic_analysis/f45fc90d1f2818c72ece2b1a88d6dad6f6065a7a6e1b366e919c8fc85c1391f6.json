@@ -1,0 +1,932 @@
+{
+    "apk_info": {
+        "id": "ALWV1498xjyG0kQZ",
+        "url": "https://developer.koodous.com/apks/f45fc90d1f2818c72ece2b1a88d6dad6f6065a7a6e1b366e919c8fc85c1391f6/",
+        "sha256": "f45fc90d1f2818c72ece2b1a88d6dad6f6065a7a6e1b366e919c8fc85c1391f6",
+        "md5": "415990651f6b53b6df3208bea7e5e29d",
+        "sha1": "c3edf6fcdc0770c62cc03078051392db418fec7e",
+        "app": "赢红包打地鼠",
+        "package_name": "com.xdwf.yhbdds",
+        "company": "zhi",
+        "version": "1.0.0.2",
+        "image": "https://developer.koodous.com/media/apk_images/2015/10/26/84986ed34624fc58563aba1f110dcf179d9aac62503401b4a0f885d2fd25e535",
+        "size": 4514772,
+        "tags": [
+            "sms-fraud",
+            "virus",
+            "smsreg",
+            "andr",
+            "trojan",
+            "smspay",
+            "pua",
+            "contains-elf"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 3,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2016-03-08T15:40:26+01:00",
+        "updated_at": "2024-07-30T19:53:15.525854+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "415990651f6b53b6df3208bea7e5e29d",
+                    "sha1": "c3edf6fcdc0770c62cc03078051392db418fec7e",
+                    "size": 4514772,
+                    "crc32": "91E71F08",
+                    "sha256": "f45fc90d1f2818c72ece2b1a88d6dad6f6065a7a6e1b366e919c8fc85c1391f6",
+                    "sha512": "77578e55d904f5b8e7028aa1fdeb29196ba2c9cca4dd57a5118916632162b868f05f69242d81b507d9f5aa7eb67194ae8a0015c8241b39038899ce785e13e37d",
+                    "ssdeep": "98304:69KwedKd+Z4Un+3MaaS2jE4kcqVu0TihFmedUWn3fzZfou2:6jegKCcJ1TkcqYvwedrnvVfp2"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "alog.umeng.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "110.173.196.36",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "alog.umeng.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "qypy.qi1game.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "qypy.qi1game.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "120.55.205.57",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "qypy.qi1game.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "120.55.205.57",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "qypy.qi1game.com"
+                    }
+                ],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://alog.umeng.com/app_logs",
+                        "body": "",
+                        "data": "POST /app_logs HTTP/1.1\r\nX-Umeng-UTC: 1426266928938\r\nX-Umeng-Sdk: Android/5.6.3 %E8%B5%A2%E7%BA%A2%E5%8C%85%E6%89%93%E5%9C%B0%E9%BC%A0%2F1.0.0.2+SAMSUNG+GT-I9100%2F4.1.1+2BC51273A45813E296E3F431FE64D045\r\nMsg-Type: envelope\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: alog.umeng.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Type: application/x-www-form-urlencoded\r\nTransfer-Encoding: chunked\r\n\r\n",
+                        "host": "alog.umeng.com",
+                        "path": "/app_logs",
+                        "port": 80,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "110.173.196.36"
+                ],
+                "domains": [
+                    {
+                        "ip": "110.173.196.36",
+                        "domain": "alog.umeng.com"
+                    },
+                    {
+                        "ip": "120.55.205.57",
+                        "domain": "qypy.qi1game.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://log.umsns.com/",
+                "http://alog.umeng.co/app_logs",
+                "http://gaandroid.talkingdata.net/g/d?crc=",
+                "https://u.talkingdata.net/ota/b/android/dynamic/sdk.zip",
+                "https://u.talkingdata.net/ota/b/android/dynamic/ver",
+                "https://u.talkingdata.net/ota/common/android/dynamic/ver",
+                "http://alog.umeng.com/app_logs",
+                "https://u.talkingdata.net/ota/common/android/dynamic/sdk.zip",
+                "http://log.umsns.com/share/api/",
+                "www.talkingdata.net",
+                "http://ns.adobe.com/xap/1.0/",
+                "http://10.10.32.105:9092/api/inappMsg/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "b08a95943769c3eae02c37ed0728eb8a14607eb730e1b502456cc2f59190e67f",
+                    "ssdeep": "6144:XDNQPxWnFSCPtWN0WpJPateDidzfc6/hxJyHFsQ/DJEmq+K+uik6q1NoinKELVPB:h1Y9XatiF/DJLH4rnKEtqVPwhhf0lix"
+                }
+            },
+            "api_key": {
+                "UMENG_APPKEY": "56692533e0f55a80ba000ed7"
+            },
+            "cordova": "",
+            "filters": [
+                "com.receiver.service",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "赢红包打地鼠",
+            "services": [
+                "com.xx.a.e",
+                "com.xx.a.f"
+            ],
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.xx.g.g"
+            ],
+            "activities": [
+                "com.xx.a.b",
+                "com.xdcy.GameActivity"
+            ],
+            "certificate": {
+                "sha1": "E4046AE9B2C09D28226579717F6F5D1450FCB343",
+                "serial": "630F7E44",
+                "issuerDN": "/C=86/ST=hangzhou/L=hangzhou/O=zhi/OU=zhi/CN=zhi",
+                "not_after": "Mar 7 02:23:33 2125 GMT",
+                "subjectDN": "/C=86/ST=hangzhou/L=hangzhou/O=zhi/OU=zhi/CN=zhi",
+                "not_before": "Aug 31 02:23:33 2015 GMT"
+            },
+            "permissions": [
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.SEND_SMS",
+                "android.permission.WRITE_APN_SETTINGS",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.BROADCAST_SMS",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.WRITE_SMS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_TASKS",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "com.xdwf.yhbdds",
+            "version_code": "1002",
+            "main_activity": "com.xdcy.GameActivity",
+            "signature_name": "META-INF/MV_KEYST.RSA",
+            "functionalities": {
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "k"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https://u.talkingdata.net/ota/common/android/dynamic/ver'",
+                        "class": "Lcom/tendcloud/tenddata/game/ba;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "const-string v0, 'https://u.talkingdata.net/ota/common/android/dynamic/sdk.zip'",
+                        "class": "Lcom/tendcloud/tenddata/game/ba;",
+                        "method": "e"
+                    },
+                    {
+                        "code": "const-string v2, 'https'",
+                        "class": "Lcom/tendcloud/tenddata/game/bw;",
+                        "method": "<init>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/b;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "A"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "A"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/b;",
+                        "method": "f"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "a"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/b;",
+                        "method": "e"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/tendcloud/tenddata/game/bq;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/tendcloud/tenddata/game/bw;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/tendcloud/tenddata/game/bz;",
+                        "method": "a"
+                    }
+                ],
+                "sensor": [
+                    {
+                        "code": "invoke-static v0, v1, v2, v4, v5, Lorg/cocos2dx/lib/Cocos2dxAccelerometer;->onSensorChanged(F F F J)V",
+                        "class": "Lorg/cocos2dx/lib/Cocos2dxGLSurfaceView$2;",
+                        "method": "run"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v4, v6, Ljava/net/DatagramSocket;->send(Ljava/net/DatagramPacket;)V",
+                        "class": "Lcom/tendcloud/tenddata/game/by;",
+                        "method": "y"
+                    },
+                    {
+                        "code": "const-string v5, 'send() error : '",
+                        "class": "Lcom/tendcloud/tenddata/game/cf;",
+                        "method": "h"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/umeng/analytics/social/c;",
+                        "method": "a"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tendcloud/tenddata/game/aj;",
+                        "method": "e"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/tendcloud/tenddata/game/ab;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/tendcloud/tenddata/game/ac;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/tendcloud/tenddata/game/ac;",
+                        "method": "<init>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/xx/g/bo;",
+                        "method": "a"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v3, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/tendcloud/tenddata/game/aj;",
+                        "method": "f"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/tendcloud/tenddata/game/aj;",
+                        "method": "g"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v3, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/tendcloud/tenddata/game/bd;",
+                        "method": "onReceive"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v3, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/tendcloud/tenddata/game/bd;",
+                        "method": "onReceive"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v3, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/tendcloud/tenddata/game/bd;",
+                        "method": "onReceive"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 8,
+            "new_permissions": [],
+            "displayed_version": "1.0.0.2",
+            "target_sdk_version": 18
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "110.173.196.36",
+                    "hostname": "alog.umeng.com"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Tengine\r\nDate: Tue, 08 Mar 2016 15:49:05 GMT\r\nContent-Type: application/thrift\r\nContent-Length: 273\r\nConnection: close\r\n\r\n\b\u0001\u0001\u000b\u0002\u0007succeed\f\u0003\r\u0001\u000b\f\u0002\u0004umid\u000b\u0001\"aid9eb8cadf410699a454748addc751a89\n\u0002\u0001SVъмн\u000b\u0003(adbe8666f085a523376d8fef759ee85c7ade1fbb\u0006jitter\u000b\u0001\b31185216\n\u0002\u0001SVъмн\u000b\u0003(adbe86661c5e9e9d615a7cae30219c98cb5c441d\b\u0002\u0001\u000b\u0003 da0db52d75f7f945f31786f93239a7ba",
+                    "time": 7.685229,
+                    "srchost": "alog.umeng.com",
+                    "srcport": 80,
+                    "processname": "com.xdwf.yhbdds"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "POST /app_logs HTTP/1.1\r\nX-Umeng-UTC: 1426266928938\r\nX-Umeng-Sdk: Android/5.6.3 %E8%B5%A2%E7%BA%A2%E5%8C%85%E6%89%93%E5%9C%B0%E9%BC%A0%2F1.0.0.2+SAMSUNG+GT-I9100%2F4.1.1+2BC51273A45813E296E3F431FE64D045\r\nMsg-Type: envelope\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: alog.umeng.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Type: application/x-www-form-urlencoded\r\nTransfer-Encoding: chunked\r\n\r\n267\r\n\u0018\u00031.0\u0018\u001856692533e0f55a80ba000ed7\u0018@301b64a2be179e5d64d05f8aea78cb62b4176f1613309cb622463ecae6cf0355\u0015\u0002\u0015e0ec98d00a15a209189103789c8d513d6fd350147d324d23b1a48bad8beac1631830f77ddb4f2c096d2a100114374b96cace7b010b624b8e486143cc2c6c88dfc0c42fa82a21c1020cfc1d249c522a245481ee7275cfb9f71c9d1bfa64532404904aa54c72ee7021659e609123a2b31aba34c6b698ffbd07bd79bd8c9fdbe345fce27161edca27d091b18a396ccf66b3236492c0cd21371ccd6068181a1c1a7ddb0cf78c12663432a9347cdf086546c9a6df6f697bad788f4bcd0443c119d79252889cca2d4fb548acd2222d6892e4bae0425bc9b0b054263bd9609c4def1f44078737eea4141176",
+                    "time": 7.157164,
+                    "desthost": "alog.umeng.com",
+                    "destport": 80,
+                    "processname": "com.xdwf.yhbdds"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.xdwf.yhbdds-1.apk",
+                    "time": 0.0004,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 908,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.xdwf.yhbdds-1.apk",
+                    "time": 13.308199,
+                    "processname": "com.xdwf.yhbdds"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "961729e363ac2715d453983f4f76b8a71613cb04",
+                    "name": "/dev/urandom",
+                    "time": 6.769006,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706365056,
+                    "data": "MemTotal:         604776 kB\nMemFree:          329288 kB\nBuffers:               0 kB\nCached:           146284 kB\nSwapCached:            0 kB\nActive:           149904 kB\nInactive:         106564 kB\nActive(anon):     114452 kB\nInactive(anon):        0 kB\nActive(file):      35452 kB\nInactive(file):   106564 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        110184 kB\nMapped:            51396 kB\nSlab:               6324 kB\nSReclaimable:       1728 kB\nSUnreclaim:         4596 kB\nPageTables:         5280 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2495696 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 6.926615,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706801264,
+                    "data": "2\n",
+                    "name": "/sys/devices/platform/smc91x.0/net/eth0/ifindex",
+                    "time": 6.003394,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706801264,
+                    "data": "1\n",
+                    "name": "/sys/devices/virtual/net/lo/ifindex",
+                    "time": 5.882823,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 908,
+                    "tid": 705669832,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"uncatchException\">java.lang.IllegalArgumentException\n\tat com.google.android.gles_jni.EGLImpl._eglCreateContext(Native Method)\n\tat com.google.android.gles_jni.EGLImpl.eglCreateContext(EGLImpl.java:54)\n\tat android.opengl.GLSurfaceView$DefaultContextFactory.createContext(GLSurfaceView.java:771)\n\tat android.opengl.GLSurfaceView$EglHelper.start(GLSurfaceView.java:1030)\n\tat android.opengl.GLSurfaceView$GLThread.guardedRun(GLSurfaceView.java:1401)\n\tat android.opengl.GLSurfaceView$GLThread.run(GLSurfaceView.java:1240)\n</string>\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/unknown.xml",
+                    "time": 13.867411,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706801264,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/850/net/if_inet6",
+                    "time": 6.063034,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 908,
+                    "tid": 1073870640,
+                    "data": "504b050600000000ae00ae003f2f00007fb444000000504b01021400140008080800285a2748cf0772fe78130000693300001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008080800285a274879c13b3259140000e23300001400000000000000000000000000ba1300004d4554412d494e462f4d565f4b455953542e5346504b01021400140008080800285a27485b29a0332b0400002d0500001500000000000000000000000000552800004d4554412d494e462f4d565f4b455953542e525341504b01021400140008080800275a2748ec737768310700007c1c00001300000000000000000000000000c32c0000416e64726f69644d616e69666573742e786d6c504b01020a000a0000080000275a2748690d810a43000000430000001800000000000000000000000000353400006173736574732f636f6e6669672e70726f70657274696573504b01020a000a0000080000275a2748043cb70a13000000130000001100000000000000000000000000ae3400006173736574732f646174612f302e6d6170504b01021400140008080800275a2748706b55ba1f000000230000001100000000000000000000000000f03400006173736574732f646174612f312e6d6170504b01020a000a0000080000275a2748ceefbe8e1b0000001b0000001200",
+                    "name": "/data/app/com.xdwf.yhbdds-1.apk",
+                    "time": 13.316956,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "504b050600000000ae00ae003f2f00007fb444000000504b01021400140008080800285a2748cf0772fe78130000693300001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008080800285a274879c13b3259140000e23300001400000000000000000000000000ba1300004d4554412d494e462f4d565f4b455953542e5346504b01021400140008080800285a27485b29a0332b0400002d0500001500000000000000000000000000552800004d4554412d494e462f4d565f4b455953542e525341504b01021400140008080800275a2748ec737768310700007c1c00001300000000000000000000000000c32c0000416e64726f69644d616e69666573742e786d6c504b01020a000a0000080000275a2748690d810a43000000430000001800000000000000000000000000353400006173736574732f636f6e6669672e70726f70657274696573504b01020a000a0000080000275a2748043cb70a13000000130000001100000000000000000000000000ae3400006173736574732f646174612f302e6d6170504b01021400140008080800275a2748706b55ba1f000000230000001100000000000000000000000000f03400006173736574732f646174612f312e6d6170504b01020a000a0000080000275a2748ceefbe8e1b0000001b0000001200",
+                    "name": "/data/app/com.xdwf.yhbdds-1.apk",
+                    "time": 0.025371,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "Processor\t: ARMv7 Processor rev 0 (v7l)\nBogoMIPS\t: 761.85\nFeatures\t: swp half thumb fastmult vfp edsp neon vfpv3 \nCPU implementer\t: 0x41\nCPU architecture: 7\nCPU variant\t: 0x0\nCPU part\t: 0xc08\nCPU revision\t: 0\n\nHardware\t: Goldfish\nRevision\t: 0000\nSerial\t\t: 0000000000000000\n",
+                    "name": "/proc/cpuinfo",
+                    "time": 5.547409,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706801264,
+                    "data": "3\n",
+                    "name": "/sys/devices/virtual/net/sit0/ifindex",
+                    "time": 6.12727,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "7f454c4601010100000000000000000003002800010000000000000034000000749100000000000534002000070028001500140006000000340000003400000034000000e0000000e0000000040000000400000001000000000000000000000000000000dc820000dc8200000500000000100000010000003c8e00003c9e00003c9e00000b0200004b020000060000000010000002000000488e0000489e0000489e00000801000008010000060000000400000051e574640000000000000000000000000000000000000000060000000000000001000070706300007063000070630000c0010000c0010000040000000400000052e574643c8e00003c9e00003c9e0000c4010000c401000006000000040000000000000000000000000000000000000001000000000000000000000012000000100000000000000000000000120000001d000000851800000a00000022000700370000008056000008000000220007004e0000008f1800000a0000002200070075000000991800001800000022000700a3000000b11800000c00000022000700cc000000885600000800000012000700e3000000bd1800001a000000220007001a010000d71800001a0000002200070052010000f11800001a00000022000700860100000b1900001a00000022000700bb010000251900001c00000022000700f7010000411900000e000000",
+                    "name": "/data/data/com.xdwf.yhbdds/lib/libqygame.so",
+                    "time": 1.057323,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706801264,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/850/net/if_inet6",
+                    "time": 6.288678,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706365056,
+                    "data": "Processor\t: ARMv7 Processor rev 0 (v7l)\nBogoMIPS\t: 761.85\nFeatures\t: swp half thumb fastmult vfp edsp neon vfpv3 \nCPU implementer\t: 0x41\nCPU architecture: 7\nCPU variant\t: 0x0\nCPU part\t: 0xc08\nCPU revision\t: 0\n\nHardware\t: Goldfish\nRevision\t: 0000\nSerial\t\t: 0000000000000000\n",
+                    "name": "/proc/cpuinfo",
+                    "time": 5.337847,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          331188 kB\nBuffers:               0 kB\nCached:           145552 kB\nSwapCached:            0 kB\nActive:           147200 kB\nInactive:         107364 kB\nActive(anon):     112676 kB\nInactive(anon):        0 kB\nActive(file):      34524 kB\nInactive(file):   107364 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        109036 kB\nMapped:            50764 kB\nSlab:               6308 kB\nSReclaimable:       1720 kB\nSUnreclaim:         4588 kB\nPageTables:         5268 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2491920 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 5.579606,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706801264,
+                    "data": "00000000000000000000000000000001 01 80 10 80       lo\nfe80000000000000505400fffe123456 02 40 20 80     eth0\n",
+                    "name": "/proc/850/net/if_inet6",
+                    "time": 5.905257,
+                    "processname": "com.xdwf.yhbdds"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "name": "/data/data/com.xdwf.yhbdds/lib/libcocos2dcpp.so",
+                    "time": 0.814552
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "name": "/data/data/com.xdwf.yhbdds/lib/libsmsmanagerhelper.so",
+                    "time": 0.912208
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "name": "/data/data/com.xdwf.yhbdds/libqygame_bak.so",
+                    "time": 4.502406
+                },
+                {
+                    "pid": 908,
+                    "tid": 1073870640,
+                    "name": "/data/data/com.xdwf.yhbdds/lib/libsmsmanagerhelper.so",
+                    "time": 13.866568
+                }
+            ],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "95, 82, 95, 115, 100, 95, 49, 107",
+                    "pid": 850,
+                    "tid": 706353936,
+                    "time": 7.187057,
+                    "algorithm": "DES",
+                    "processname": "com.xdwf.yhbdds"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"pref.init.key3FD7B0A1D64E6E697A9ED205B98F19B2\" value=\"1426266926857\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/pref_file.xml",
+                    "time": 4.801821,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "1b028c04756d696418226169643965623863616466343130363939613435343734386164646337353161383916baf3d6eeea5418286164626538363636663038356135323333373664386665663735396565383563376164653166626200066a69747465721808333131383532313616baf3d6eeea541828616462653836363631633565396539643631356137636165333032313963393863623563343431640015021820646130646235326437356637663934356633313738366639333233396137626100",
+                    "name": "/data/data/com.xdwf.yhbdds/files/.imprint",
+                    "time": 7.795729,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "1b038c0a616e64726f69645f696418103631656465393262346630373063363616c2ce91c2825315020004696d6569180f3335373234323034333233373531311698d091c282531502000569646d64351820653661643339373438643637343962313838613762333437643532306264313516c8cf91c2825315020000",
+                    "name": "/data/data/com.xdwf.yhbdds/files/umeng_it.cache",
+                    "time": 7.877295,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "\u001f",
+                    "name": "/data/data/com.xdwf.yhbdds/app_td-cache/tdandroidgame",
+                    "time": 6.911634,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "1c1502150015c008001c18183536363932353333653066353561383062613030306564371807312e302e302e3215d40f180f636f6d2e786477662e79686264647315001805352e362e3318065a5a5a5f30323500182f42333a33303a41423a32303a30423a37433a42443a36343a46463a39353a33453a34363a46383a39353a45303a4144001c180f33353732343230343332333735313118206536616433393734386436373439623138386137623334376435323062643135381053414d53554e472047542d4939313030181b41524d76372050726f636573736f72207265762030202876376c291807416e64726f69641805342e312e311c15c007158005003807756e6b6e6f776e1807416e64726f696416c0b2acfdc5521807756e6b6e6f776e18064a524f303352180767656e65726963001c15021802656e180255533807416e64726f696435021804554d545300291c18204430413046333534364238343336413936363141363445333033454433433736191c168ed291c2825318f2036a6176612e6c616e672e496c6c6567616c417267756d656e74457863657074696f6e0a09617420636f6d2e676f6f676c652e616e64726f69642e676c65735f6a6e692e45474c496d706c2e5f65676c437265617465436f6e74657874284e6174697665204d6574686f64290a09617420636f6d2e676f6f676c652e616e64",
+                    "name": "/data/data/com.xdwf.yhbdds/files/mobclick_agent_cached_com.xdwf.yhbdds1002",
+                    "time": 7.956627,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a3c737472696e67206e616d653d22707265662e6163636f756e7469642e6b6579223e3331663136366233366261306662646434643165333332326630323163666238313c2f737472696e673e0a3c6c6f6e67206e616d653d22707265662e696e69742e6b65793346443742304131443634453645363937413945443230354239384631394232222076616c75653d223134323632363639323638353722202f3e0a3c6c6f6e67206e616d653d22707265662e6170706c69737474696d652e6b6579222076616c75653d223134323632363639323638353722202f3e0a3c2f6d61703e0a1fb09490c400c67b226576656e744f6363757254696d65223a313432363236363932373530302c226576656e7444617461223a7b22757365724944223a22333166313636623336626130666264643464316533333232663032316366623831222c22736578223a302c226c6576656c223a302c2267616d65536572766572223a22222c22616765223a302c226163636f756e7454797065223a302c226163636f756e74223a22222c2267616d6553657373696f6e4944223a6e756c6c7d2c226576656e744944223a224737227d1f",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/pref_file.xml",
+                    "time": 6.736198,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"pref.accountid.key\">31f166b36ba0fbdd4d1e3322f021cfb81</string>\n<long name=\"pref.init.key3FD7B0A1D64E6E697A9ED205B98F19B2\" value=\"1426266926857\" />\n<string name=\"TDGApref.activesessionid.key\">69e7c047-f83c-472c-ba5b-8cf397d32d1e</string>\n<long name=\"TDGApref.session.start.key\" value=\"1426266929028\" />\n<long name=\"pref.applisttime.key\" value=\"1426266926857\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/pref_file.xml",
+                    "time": 6.784064,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706497592,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"1426266927628\" />\n<string name=\"session_id\">D0A0F3546B8436A9661A64E303ED3C76</string>\n<long name=\"session_start_time\" value=\"1426266927628\" />\n<long name=\"session_end_time\" value=\"0\" />\n<long name=\"a_end_time\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/umeng_general_config.xml",
+                    "time": 5.396126,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a3c737472696e67206e616d653d22707265662e6163636f756e7469642e6b6579223e3331663136366233366261306662646434643165333332326630323163666238313c2f737472696e673e0a3c6c6f6e67206e616d653d22707265662e696e69742e6b65793346443742304131443634453645363937413945443230354239384631394232222076616c75653d223134323632363639323638353722202f3e0a3c737472696e67206e616d653d2254444741707265662e61637469766573657373696f6e69642e6b6579223e36396537633034372d663833632d343732632d626135622d3863663339376433326431653c2f737472696e673e0a3c6c6f6e67206e616d653d2254444741707265662e73657373696f6e2e737461727473797374656d2e6b6579222076616c75653d223134323632363639323930373522202f3e0a3c6c6f6e67206e616d653d2254444741707265662e73657373696f6e2e656e642e6b6579222076616c75653d223022202f3e0a3c6c6f6e67206e616d653d2254444741707265662e73657373696f6e2e73746172742e6b6579222076616c75653d223134323632363639323930323822202f3e0a3c6c6f6e67206e616d653d",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/pref_file.xml",
+                    "time": 6.827788,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705521832,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">D0A0F3546B8436A9661A64E303ED3C76</string>\n<long name=\"session_start_time\" value=\"1426266927628\" />\n<string name=\"activities\">[&quot;com.xdcy.GameActivity&quot;,724]</string>\n<long name=\"session_end_time\" value=\"1426266928322\" />\n<long name=\"a_end_time\" value=\"1426266928322\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/umeng_general_config.xml",
+                    "time": 6.330014,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "{\"eventOccurTime\":1426266929127,\"eventData\":{\"userID\":\"31f166b36ba0fbdd4d1e3322f021cfb81\",\"sex\":0,\"level\":0,\"interval\":0,\"gameServer\":\"\",\"age\":0,\"accountType\":0,\"account\":\"\",\"gameSessionID\":\"69e7c047-f83c-472c-ba5b-8cf397d32d1e\"},\"eventID\":\"G3\"}",
+                    "name": "/data/data/com.xdwf.yhbdds/app_td-cache/tdandroidgame",
+                    "time": 6.908779,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"appkey\">3FD7B0A1D64E6E697A9ED205B98F19B2</string>\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/td_pefercen_profile.xml",
+                    "time": 4.557437,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "1fcf796ce2003e7b226576656e744f6363757254696d65223a313432363236363932373034352c226576656e7444617461223a7b7d2c226576656e744944223a224732227d1f",
+                    "name": "/data/data/com.xdwf.yhbdds/app_td-cache/tdandroidgame",
+                    "time": 4.787906,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"pref.accountid.key\">31f166b36ba0fbdd4d1e3322f021cfb81</string>\n<long name=\"pref.init.key3FD7B0A1D64E6E697A9ED205B98F19B2\" value=\"1426266926857\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/pref_file.xml",
+                    "time": 5.227254,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "{\"appkey\":\"56692533e0f55a80ba000ed7\",\"signature\":\"301b64a2be179e5d64d05f8aea78cb62b4176f1613309cb622463ecae6cf0355\",\"checksum\":\"e222610bc77899239337fc8956d8e31f\"}",
+                    "name": "/data/data/com.xdwf.yhbdds/files/.umeng/exchangeIdentity.json",
+                    "time": 6.580679,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">D0A0F3546B8436A9661A64E303ED3C76</string>\n<long name=\"first_activate_time\" value=\"1426266930066\" />\n<long name=\"session_start_time\" value=\"1426266927628\" />\n<string name=\"activities\">[&quot;com.xdcy.GameActivity&quot;,724]</string>\n<long name=\"session_end_time\" value=\"1426266928322\" />\n<long name=\"a_end_time\" value=\"1426266928322\" />\n<int name=\"serial\" value=\"2\" />\n<string name=\"signature\">301b64a2be179e5d64d05f8aea78cb62b4176f1613309cb622463ecae6cf0355</string>\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/umeng_general_config.xml",
+                    "time": 7.837563,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "7f454c4601010100000000000000000003002800010000000000000034000000749100000000000534002000070028001500140006000000340000003400000034000000e0000000e0000000040000000400000001000000000000000000000000000000dc820000dc8200000500000000100000010000003c8e00003c9e00003c9e00000b0200004b020000060000000010000002000000488e0000489e0000489e00000801000008010000060000000400000051e574640000000000000000000000000000000000000000060000000000000001000070706300007063000070630000c0010000c0010000040000000400000052e574643c8e00003c9e00003c9e0000c4010000c401000006000000040000000000000000000000000000000000000001000000000000000000000012000000100000000000000000000000120000001d000000851800000a00000022000700370000008056000008000000220007004e0000008f1800000a0000002200070075000000991800001800000022000700a3000000b11800000c00000022000700cc000000885600000800000012000700e3000000bd1800001a000000220007001a010000d71800001a0000002200070052010000f11800001a00000022000700860100000b1900001a00000022000700bb010000251900001c00000022000700f7010000411900000e000000",
+                    "name": "/data/data/com.xdwf.yhbdds/libqygame_bak.so",
+                    "time": 1.832318,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706586072,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">D0A0F3546B8436A9661A64E303ED3C76</string>\n<long name=\"session_start_time\" value=\"1426266927628\" />\n<string name=\"activities\">[&quot;com.xdcy.GameActivity&quot;,724]</string>\n<long name=\"a_end_time\" value=\"1426266928322\" />\n<long name=\"session_end_time\" value=\"1426266928322\" />\n<int name=\"serial\" value=\"2\" />\n<string name=\"signature\">301b64a2be179e5d64d05f8aea78cb62b4176f1613309cb622463ecae6cf0355</string>\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/umeng_general_config.xml",
+                    "time": 6.477154,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "1f837462610d117b226576656e744f6363757254696d65223a313432363236363932383534322c226576656e7444617461223a7b2272756173223a225b363238393436303839333436313631343031362c20363238343830363237363235343632393536352c202d363433353731353236323137363136323534345d222c22726173223a225b363237383834373336323831363237353935312c202d373232373535373730363638333834323932322c20363238393436303839333436313631343031362c20313636303639303738373332363831373539342c202d373332363032383535393431373532343735332c20363237383931383139393134373533343134382c20343037303330343339383236323339373932322c202d373438353036343732383339333339313738382c202d313731313639373435323937353431363137392c202d353334353738313430363438383534363434355d222c22616173223a225b616e64726f69642c205157356b636d39705a43425465584e305a57303d2c20312c20636f6d2e616e64726f69642e6261636b7570636f6e6669726d2c20593239744c6d46755a484a7661575175596d466a61335677593239755a6d6c7962513d3d2c20312c20636f6d2e616e64726f69642e626c7565746f6f74682c20516d78315a5852766233526f49464e6f59584a6c2c20312c20636f6d2e",
+                    "name": "/data/data/com.xdwf.yhbdds/app_td-cache/tdandroidgame",
+                    "time": 6.416832,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706365056,
+                    "data": "ls -l /sbin/su 2>&1\nls -l /vendor/bin/su 2>&1\nls -l /system/sbin/su 2>&1\nls -l /system/bin/su 2>&1\nl",
+                    "name": "pipe:[2936]",
+                    "time": 8.145473,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"accountType\">ANONYMOUS</string>\n<int name=\"userLevel\" value=\"0\" />\n<string name=\"gender\">UNKNOW</string>\n<string name=\"accountName\"></string>\n<string name=\"accountId\">31f166b36ba0fbdd4d1e3322f021cfb81</string>\n<int name=\"age\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/31f166b36ba0fbdd4d1e3322f021cfb81|account_file.xml",
+                    "time": 5.17712,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">D0A0F3546B8436A9661A64E303ED3C76</string>\n<int name=\"successful_request\" value=\"1\" />\n<long name=\"a_end_time\" value=\"1426266928322\" />\n<int name=\"failed_requests \" value=\"0\" />\n<long name=\"first_activate_time\" value=\"1426266930066\" />\n<long name=\"last_req\" value=\"1426266928925\" />\n<long name=\"session_start_time\" value=\"1426266927628\" />\n<long name=\"last_request_time\" value=\"1426266928925\" />\n<string name=\"activities\">[&quot;com.xdcy.GameActivity&quot;,724]</string>\n<long name=\"session_end_time\" value=\"1426266928322\" />\n<int name=\"serial\" value=\"2\" />\n<string name=\"signature\">301b64a2be179e5d64d05f8aea78cb62b4176f1613309cb622463ecae6cf0355</string>\n<int name=\"last_request_spent_ms\" value=\"544\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/umeng_general_config.xml",
+                    "time": 7.910395,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705521832,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"uncatchException\">java.lang.IllegalArgumentException\n\tat com.google.android.gles_jni.EGLImpl._eglCreateContext(Native Method)\n\tat com.google.android.gles_jni.EGLImpl.eglCreateContext(EGLImpl.java:54)\n\tat android.opengl.GLSurfaceView$DefaultContextFactory.createContext(GLSurfaceView.java:771)\n\tat android.opengl.GLSurfaceView$EglHelper.start(GLSurfaceView.java:1030)\n\tat android.opengl.GLSurfaceView$GLThread.guardedRun(GLSurfaceView.java:1401)\n\tat android.opengl.GLSurfaceView$GLThread.run(GLSurfaceView.java:1240)\n</string>\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/unknown.xml",
+                    "time": 8.084545,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"pref.deviceid.key\">31f166b36ba0fbdd4d1e3322f021cfb81</string>\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/tdid.xml",
+                    "time": 4.947442,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">D0A0F3546B8436A9661A64E303ED3C76</string>\n<int name=\"successful_request\" value=\"1\" />\n<long name=\"a_end_time\" value=\"1426266928322\" />\n<int name=\"ekvc\" value=\"0\" />\n<int name=\"failed_requests \" value=\"0\" />\n<int name=\"gkvc\" value=\"0\" />\n<long name=\"thtstart\" value=\"1426266928032\" />\n<long name=\"first_activate_time\" value=\"1426266930066\" />\n<long name=\"last_req\" value=\"1426266928925\" />\n<long name=\"session_start_time\" value=\"1426266927628\" />\n<long name=\"last_request_time\" value=\"1426266928925\" />\n<string name=\"activities\">[&quot;com.xdcy.GameActivity&quot;,724]</string>\n<long name=\"session_end_time\" value=\"1426266928322\" />\n<int name=\"serial\" value=\"2\" />\n<string name=\"signature\">301b64a2be179e5d64d05f8aea78cb62b4176f1613309cb622463ecae6cf0355</string>\n<int name=\"last_request_spent_ms\" value=\"544\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/umeng_general_config.xml",
+                    "time": 8.028589,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706801264,
+                    "data": "|<2m<7d0e1<35,1b0d+4545)ega7)5<6da6?0\\D036<C15A6F3+@256)D13A)B5CB(3ID26996BVsnBwqQtAT17@1D240<K,QA(BMTZMFWBidD5C=F1E11[ZX^Bb`<d0aei64c07b`;d4752acd1174bde3\n",
+                    "name": "/data/data/com.xdwf.yhbdds/.qycache/1afb0624fed1435c9de79b73acd1f9af",
+                    "time": 7.537138,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"TDGApref.activesessionid.key\">69e7c047-f83c-472c-ba5b-8cf397d32d1e</string>\n<string name=\"pref.accountid.key\">31f166b36ba0fbdd4d1e3322f021cfb81</string>\n<long name=\"pref.init.key3FD7B0A1D64E6E697A9ED205B98F19B2\" value=\"1426266926857\" />\n<long name=\"pref.applisttime.key\" value=\"1426266926857\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/pref_file.xml",
+                    "time": 6.777693,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "\u001f",
+                    "name": "/data/data/com.xdwf.yhbdds/app_td-cache/tdandroidgame",
+                    "time": 6.72802,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706500880,
+                    "data": "1b038c0a616e64726f69645f696418103631656465393262346630373063363616c2ce91c2825315020004696d6569180f3335373234323034333233373531311698d091c282531502000569646d64351820653661643339373438643637343962313838613762333437643532306264313516c8cf91c28253150200193c180a616e64726f69645f696428103631656465393262346630373063363616c2ce91c2825300180569646d64352820653661643339373438643637343962313838613762333437643532306264313516c8cf91c28253001804696d6569280f3335373234323034333233373531311698d091c282530000",
+                    "name": "/data/data/com.xdwf.yhbdds/files/umeng_it.cache",
+                    "time": 5.937514,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706367864,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"pref.accountid.key\">31f166b36ba0fbdd4d1e3322f021cfb81</string>\n<long name=\"pref.init.key3FD7B0A1D64E6E697A9ED205B98F19B2\" value=\"1426266926857\" />\n<string name=\"TDGApref.activesessionid.key\">69e7c047-f83c-472c-ba5b-8cf397d32d1e</string>\n<long name=\"TDGApref.session.end.key\" value=\"0\" />\n<long name=\"TDGApref.session.start.key\" value=\"1426266929028\" />\n<long name=\"pref.applisttime.key\" value=\"1426266926857\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/pref_file.xml",
+                    "time": 6.798562,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705521832,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">D0A0F3546B8436A9661A64E303ED3C76</string>\n<long name=\"session_start_time\" value=\"1426266927628\" />\n<long name=\"session_end_time\" value=\"1426266928322\" />\n<long name=\"a_end_time\" value=\"1426266928322\" />\n</map>\n",
+                    "name": "/data/data/com.xdwf.yhbdds/shared_prefs/umeng_general_config.xml",
+                    "time": 6.106486,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.xdwf.yhbdds"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "name": "com.xx.a.e",
+                    "time": 1.020087,
+                    "processname": "com.xdwf.yhbdds"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "name": "com.xx.a.f",
+                    "time": 4.502544,
+                    "processname": "com.xdwf.yhbdds"
+                }
+            ]
+        }
+    }
+}

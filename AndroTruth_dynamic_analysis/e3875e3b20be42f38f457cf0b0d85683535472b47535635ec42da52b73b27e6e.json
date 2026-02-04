@@ -1,0 +1,779 @@
+{
+    "apk_info": {
+        "id": "Kyqm1knV7W3drPa9",
+        "url": "https://developer.koodous.com/apks/e3875e3b20be42f38f457cf0b0d85683535472b47535635ec42da52b73b27e6e/",
+        "sha256": "e3875e3b20be42f38f457cf0b0d85683535472b47535635ec42da52b73b27e6e",
+        "md5": "ed9c745a566fc35e7f24e6b70bbb57cf",
+        "sha1": "db1b313a2f6d11a651fc941c46b2d02a9b2856ff",
+        "app": "Sicurezza Banca",
+        "package_name": "com.affinitycu.mobile",
+        "company": "Anywhere Software",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2024/03/27/icon_j9sOLxU.png",
+        "size": 4616374,
+        "tags": [
+            "trojan",
+            "dropper",
+            "hqwar",
+            "smsagent",
+            "banker",
+            "detect-debug-environment",
+            "obfuscated",
+            "checks-gps",
+            "runtime-modules",
+            "reflection",
+            "telephony",
+            "sends-sms",
+            "bankbot",
+            "multiverze",
+            "copybara",
+            "basbanke",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-03-27T12:04:42.323956+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27227/Wed Mar 27 08:33:27 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "27.03.2024 08:46:07 (Build: 106914)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-03-27T12:07:12.782174+01:00",
+        "matches_count": 9,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-03-27T12:04:40.252251+01:00",
+        "updated_at": "2025-04-13T18:10:52.063509+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "ed9c745a566fc35e7f24e6b70bbb57cf",
+                "name": "",
+                "path": "",
+                "sha1": "db1b313a2f6d11a651fc941c46b2d02a9b2856ff",
+                "size": 4616374,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "2D0E80BA",
+                "sha256": "e3875e3b20be42f38f457cf0b0d85683535472b47535635ec42da52b73b27e6e",
+                "sha512": "394301174649bd52f625d655eaf1d705e6066680936fac290315fa92db0bfa9139d3066448fa3d3a853f07e5160105fbdf69f9cfddf4b88c6bc458a01cf9e97f",
+                "ssdeep": "98304:hhinlhin6Vhinahinx1hin6hinshinUhin1XyyUZCtbjxiwRPtv/qeNLqoDH:PCzC6DC8CxjCcCyCKC1iyUZUgsPtHqef"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "vnd.android.cursor.item/note",
+                "vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://freeipapi.com/api/json",
+                "3vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://invalid-url/",
+                "https://www.affinitycu.ca/",
+                "http://schemas.android.com/apk/res/android",
+                "2vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "57394d2a24965e87bc725469c7e192ccea7e442f4111f294bba6c84147a8a653"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.SENDTO",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "Sicurezza Banca",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.affinitycu.mobile..backgroundservice",
+                "com.affinitycu.mobile..dtrsbnotisuntilactv",
+                "com.affinitycu.mobile..inj_dnlader",
+                "com.affinitycu.mobile..inj_dnlader2",
+                "com.affinitycu.mobile..managerservice",
+                "com.affinitycu.mobile..mediaprojectionbackservice",
+                "com.affinitycu.mobile..notificationservice",
+                "com.affinitycu.mobile..openmics_srv",
+                "com.affinitycu.mobile..s1",
+                "com.affinitycu.mobile..service1",
+                "com.affinitycu.mobile..service2",
+                "com.affinitycu.mobile..service3",
+                "com.affinitycu.mobile..service4",
+                "com.affinitycu.mobile..srvnewphonecall",
+                "com.affinitycu.mobile..starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.affinitycu.mobile..backgroundservice$backgroundservice_BR",
+                "com.affinitycu.mobile..dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.affinitycu.mobile..httputils2service",
+                "com.affinitycu.mobile..inj_dnlader$inj_dnlader_BR",
+                "com.affinitycu.mobile..inj_dnlader2$inj_dnlader2_BR",
+                "com.affinitycu.mobile..managerservice$managerservice_BR",
+                "com.affinitycu.mobile..mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.affinitycu.mobile..myreceiver",
+                "com.affinitycu.mobile..notificationservice$notificationservice_BR",
+                "com.affinitycu.mobile..openmics_srv$openmics_srv_BR",
+                "com.affinitycu.mobile..s1$s1_BR",
+                "com.affinitycu.mobile..service1$service1_BR",
+                "com.affinitycu.mobile..service2$service2_BR",
+                "com.affinitycu.mobile..service3$service3_BR",
+                "com.affinitycu.mobile..service4$service4_BR",
+                "com.affinitycu.mobile..srvnewphonecall$srvnewphonecall_BR",
+                "com.affinitycu.mobile..starter$starter_BR"
+            ],
+            "activities": [
+                "com.affinitycu.mobile..main",
+                "com.affinitycu.mobile..act_perm_dvadmn",
+                "com.affinitycu.mobile..faknotiactivity",
+                "com.affinitycu.mobile..forc_activateacc",
+                "com.affinitycu.mobile..opencamd",
+                "com.affinitycu.mobile..openmics",
+                "com.affinitycu.mobile..perm_activatemediaproject",
+                "com.affinitycu.mobile..perm_activateoverlay",
+                "com.affinitycu.mobile..perm_ignorebatperm",
+                "com.affinitycu.mobile..perm_notiacc",
+                "com.affinitycu.mobile..perm_phonecal",
+                "com.affinitycu.mobile..perm_smsperm",
+                "com.affinitycu.mobile..perm_startactdevmang",
+                "com.affinitycu.mobile..perm_startactwritesy",
+                "com.affinitycu.mobile..perm_unknownapps",
+                "com.affinitycu.mobile..perm_writesys",
+                "com.affinitycu.mobile..req_all_perms",
+                "com.affinitycu.mobile..wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "DD2B8FAB67577CE55712D9881DEBA7E76D7B8DF5",
+                "serial": "58118218",
+                "issuerDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_after": "Dec 23 08:23:07 2054 GMT",
+                "subjectDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_before": "Aug 24 08:23:07 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.CALL_PHONE",
+                "android.permission.CAMERA",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.VIBRATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.WRITE_SMS",
+                "com.android.alarm.permission.SET_ALARM",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "oppo.permission.OPPO_COMPONENT_SAFE"
+            ],
+            "package_name": "com.affinitycu.mobile",
+            "version_code": "200",
+            "main_activity": "com.affinitycu.mobile..main",
+            "signature_name": "META-INF/ANDROIDD.DSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "TakePicture"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/affinitycu/mobile/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.357532024383545,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/base.apk.x86_64.flock",
+                    "time": 1.3857238292694092,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/oat/x86_64/base.vdex",
+                    "time": 1.3870418071746826,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/base.apk",
+                    "time": 1.3881709575653076,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3916079998016357,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.3923208713531494,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/oat/x86_64/base.art",
+                    "time": 1.3927638530731201,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/base.apk",
+                    "time": 1.3931078910827637,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5648,
+                    "name": "/data/user_de/0/com.affinitycu.mobile/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.459610939025879,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5648,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.5872559547424316,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5648,
+                    "name": "/dev/fb0",
+                    "time": 1.5908448696136475,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/loading.gif",
+                    "time": 1.6365740299224854,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.641597032546997,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/txtscreensize.txt",
+                    "time": 1.6430368423461914,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.6437368392944336,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db-journal",
+                    "time": 1.6701419353485107,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files",
+                    "time": 1.6714959144592285,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db-wal",
+                    "time": 1.6729588508605957,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db-shm",
+                    "time": 1.6729838848114014,
+                    "processname": "com.affinitycu.mobile"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "636f6d2e616666696e69747963752e6d6f62696c65000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3838269710540771,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3855018615722656,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "504b0304",
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/base.apk",
+                    "time": 1.3911919593811035,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3920869827270508,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.392516851425171,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "6172740a3035360000803d78280f010089746a3f00903e7800a03e7800a03f780070927800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000000780000",
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/oat/x86_64/base.art",
+                    "time": 1.3929238319396973,
+                    "processname": "com.affinitycu.mobile"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/app/com.affinitycu.mobile-u3VebXCzXqwsMvf1NPzNjw==/base.apk.x86_64.flock",
+                    "time": 1.3861689567565918,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/loading.gif",
+                    "time": 1.6364738941192627,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.6414129734039307,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db-journal",
+                    "time": 1.6728978157043457,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db-shm",
+                    "time": 1.6731059551239014,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db-wal",
+                    "time": 1.730238914489746,
+                    "processname": "com.affinitycu.mobile"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "89504e470d0a1a0a0000000d4948445200000227000000a5080600000087b75d27000000097048597300000b1300000b1301009a9c1800000a4f6943435050686f746f73686f70204943432070726f66696c65000078da9d53675453e9163df7def4424b8880944b6f5215082052428b801491262a2109104a8821a1d91551c1114545041bc8a088038e8e808c15512c0c8a0ad807e421a28e83a3888acafbe17ba36bd6bcf7e6cdfeb5d73ee7acf39db3cf07c0080c9648335135800ca9421e11e083c7c4c6e1e42e40810a2470001008b3642173fd230100f87e3c3c2b22c007be000178d30b0800c04d9bc0301c87ff0fea42995c01808401c07491384b08801400407a8e42a600404601809d98265300a0040060cb6362e300502d0060277fe6d300809df8997b01005b94211501a09100201365884400683b00accf568a450058300014664bc43900d82d00304957664800b0b700c0ce100bb200080c00305188852900047b0060c8232378008499001446f2573cf12bae10e72a00007899b23cb9243945815b082d710757572e1e28ce49172b14366102619a402ec27999193281340fe0f3cc0000a0911511e083f3fd78ce0eaecece368eb60e5f2deabf06ff226262e3fee5cfab70400000e1747ed1fe2c2fb31a803b06806dfea225ee04685e0ba075f78b66b20f40b500a0e9da57f370f87e3c3c45a190b9d9d9e5e4e4d84ac4425b61ca577dfe67c25fc057fd6cf97e3cfcf7f5e0bee22481325d814704f8e0c2ccf44ca51ccf92098462dce68f47fcb70bfffc1dd322c44962b9582a14e35112718e449a8cf332a52289429229c525d2ff64e2df2cfb033edf3500b06a3e017b912da85d6303f64b27105874c0e2f70000f2bb6fc1d4280803806883e1cf77ffef3ffd47a02500806649927100005e44242e54cab33fc708000044a0812ab0411bf4c1182cc0061cc105dcc10bfc6036844224c4c24210420a64801c726029ac82422886cdb01d2a602fd4401d34c051688693700e2ec255b80e3d700ffa61089ec128bc81090441c808136121da8801628a58238e08179985f821c14804128b2420c9881451224b91354831528a542055481df23d720239875c46ba913bc8003282fc86bc47319481b2513dd40cb543b9a8371a8446a20bd06474319a8f16a09bd072b41a3d8c36a1e7d0ab680fda8f3e43c730c0e8180733c46c302ec6c342b1382c099363cbb122ac0cabc61ab056ac03bb89f563cfb17704128145c0093604774220611e4148584c584ed848a8201c243411da093709038451c2272293a84bb426ba11f9c4186232318758482c23d6128f132f107b8843c437241289433227b9900249b1a454d212d246d26e5223e92ca99b34481a2393c9da646bb20739942c202bc885e49de4c3e433e41be421f25b0a9d624071a4f853",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/loading.gif",
+                    "time": 1.636706829071045,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "e0ddea9097ef06c5259e0d229d654f8070722aa03423537bbb4597d97b1fec56516515ecb6b20ddac5686bc6948d65fccc7cc4f7163209a0ddd229077eacc1fb7f32b14b2bf3066a104e8636a0d4e5df98196367866fed5d4d3d125b29fe883cdfe6232aa1b20d64cf5bcca0f2798eeae0ecc5807bd813209c2cb647f15db3d764348d776d15ed2f5e068841d46382439e65ce1a19310d8dfd1ccecc02ca8cb84506c2c9a2d65c4bf1b7774a1af0b5ded62a5c6d957d8d5360a49573fcee0391eb339dc7ca58e889997db499f3b4026b11133d8270d211501a8aef56ac0d787b6735de266160ec68cb6d60a8dd4a6d469e67533904938391618cdb101963702c0827dd2f9a538aef568c7aef833de1505d85bb8b97018e28ebc90b0ddbadc081a1b115fbeeac024a2a98c494e396e26e4f61690c8e05e1a48bd8db3be5c88b664c30994c3226ff5875a81d9c0623194c6282f67c60436056f133abee76ce0d34d6cb82f50d8a7f426e2f4fe9e4c306c7727b0784938e8b6663c0565d39e70a3e97169b75b5875e6cab9c062311484aceb9aa73eea0e2dffc1a338e64900aa82ae9b0736e2a24a438e7caceb97d164cca91cb6e66f13e23f40d28b3e24928441ad9b712274932e59cdb1ad9aada273ffbec725b6fa117c87a8e2db65985bdb7829701aebcedceb92b223f5b5636035fa302739224f588b7632f2a7ff28fffeeb0ef3964c1613e1dbcec3caec88fa3a964b0bd9314bb42ecb210b95a4c8fcd2db45660b987ec350018f570923a310e467c6e3ca0c28eb92d7220c76ddeaff0976af132c0959555c018c420b7382615fe66da6e21a566bf14f172c11033e9f083fc1cd9b6a93136b730a3d5f3a2bf0a476d38ac1be58db30bd04c6c825eaaab39f2257fada5defc3ae03637143e0e809701ae6dad01ce93f47bae5aab605be79324612c44b1f688c1b1209c743d319a119f2b69e9d926ab11adc5d9225ac1119fa9713aac59bb06bdcd68a178d82bfd86e2068d63000c8e05e1a477ab2ef6fef25253dbc7cc2351c46c94f588cf30e7c9da349bd57823fb9e611dcbd190b485a773562ca0cc8ac1b1209c9c76d19c57fcd3315d67b4b4db20e381df55c86c94f632c4d0ede565806b4f23eb16ad059461bbc55327980c057a4f4038e96232f28259e931f7492df22259949841b7bc0c70edc8adc2b6c6c0660dc73b56f62449324130597947b66d6a881979413839ed82d9527c97f38e2e0346636e83ec2d7093eb11618c97018ebe96fc18935c2bec24499a49926cd6ca0d866c48dacc5c26436746f113f7817032b201a5aeb8fb9e25a56eefd8389472e8c5d26eb71419c6ea111fad715a8c6c2899b50a7ba6c072382569a38a7b54bd293ffbf2665ee8377c181c0bc2496fb1b777aaa93119c33a10b653ccad1da6b31f1d0d0b051392362649",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/loading.gif",
+                    "time": 1.6368319988250732,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "53514c69746520666f726d617420330010000101004020200000000b0000000b0000000000000000000000080000000400000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000b002de21a0d000000040dbf000f5e0f0c0e710dbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.6417889595031738,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.6422979831695557,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "05000000050fe2000000000b0ffa0ff40fee0fe80fe20f250f120eff0ef10ed00eb50e920e840e6b0e450e350e1b0df90dd50db90d970d840d650d470d230d050cea0cd30cb40c990c830c630c3c0c1c0bfa0be00bc60ba10b870b6f0b590b3f0b220b080af40adc0ac00aa80a910a780a600a3a0a2209fd09dd09cd09b10995097909560930091c090508f008d308cb08af08960888086a08540830081107ef07dc07c607ad07980776075f07440733071b06f006d606b7069e0689065d063f0620060a05ee05d205b80591056c054f0522050c04f204d504bc049f047f0464044f0437041703f003c703a7038b037403580340031c02f102db02c602ad0288026602410226020801eb01c201b00192017d015c0139012201850169014d012d000014874f03002f636f6d2e62616e6b69612e77616c6c657420874e030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e874d030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212874c03002b636f6d2e42616e6b416c42696c61641b874b03003d636f6d2e42616e6b416c42696c61642e456e6a617a4170700f874a030025636f6d2e62616e696e746572268749030053636f6d2e62616e6573636f2e73616d6662616e63616d6f76696c756e696669636164611a874803003b636f6d2e62616e637361626164656c6c2e77616c6c65741b874703003d636f6d2e62616e636f7270736f7574682e616e64726f6964188746030037636f6d2e62616e636f6d65722e6d62616e6b696e6722874503004b636f6d2e62616e636f646576656e657a75656c612e6264766469676974616c1f8744030045636f6d2e62616e636f6465626f676f74612e62616e63616d6f76696c22874303004b636f6d2e62616e636f63616a61736f6369616c2e67656f6c6f636174696f6e168742030033636f6d2e617a696d6f2e73656e646d6f6e657912874103002b636f6d2e617869732e6d6f62696c6513874003002d636f6d2e61786162616e7175652e667228873f030057636f6d2e6176656e7472692e6669727374686f72697a6f6e62616e6b33303030303537343221873e030049636f6d2e6175622e6d6f62696c6562616e6b696e672e6b772e70686f6e6515873d030031636f6d2e6174742e6d79576972656c65737319873c030039636f6d2e6174622e627573696e6573736d6f62696c6514873b03002f636f6d2e6174622e4154424d6f62696c6519873a030039636f6d2e61737761742e6361727265666f75727561651d8739030041636f6d2e61737365636f2e6879627269642e626f732e70726f64268738030053636f6d2e61726b65612e616e64726f69642e6170706c69636174696f6e2e636d736f3224873703004f636f6d2e61726b65612e",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.642467975616455,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "0d000000880125000fe30fcf0fb90f8b0f700f550f3a0f210f000ee10ec40e8f0e7b0e610e440e2e0e160df70ddb0dbb0d9d0d7c0d5b0d320d1c0cf90ce60cca0cad0c830c650c4d0c360c1d0bf90be10bc80bac0b920b6e0b4c0b270b050ae30aba0a960a760a550a340a1909f909e209c009a409940972095a093c091b08fc08dd08c608b00895087d086108430828080f07e807c307a1078d076f074f0743072e071706fd06ea06d706c206aa069d0681066b065606380627061005f205d905c105b2058a0575055b054a0535051f050604ec04d304be04a9048404720461044e042a041303f903d203b403a1036f03580346032c030402ea02c802ae029c02840259023b021b020b01f301dd01be0196015f014a0125030037636f6d2e6f70656e736f228b7a03004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e67128b7903002b6e65742e6f6e6539372e706179746d348b7803006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f6964258b770300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c8b7603003f6e65742e626e70706172696261732e6d6573636f6d70746573138b7503002d6e65742e6269747374616d702e617070158b740300316e65742e6269746261792e626974636f696e0d8b730300216e65742e6172616d65781d8b720300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b8b7103003d6d792e636f6d2e687362632e687362636d616c6179736961288b700300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e656374158b6f0300316d782e687362632e687362636d657869636f0f8b6e0300256d782e636f6d2e62622e6232178b6d0300356d782e62616e637361626164656c6c2e706172741f8b6c0300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c178b6b0300356d6f62696c6974792e67652e7465726162616e6b258b6a0300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c69178b690300356d652e63727970746f7061792e616e64726f69640f8b680300256d62616e6b696e672e4e4247148b6703002f6d612e6762702e706f636b657462616e6b2f8b660300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c6574108b650300276b746263732e6e657462616e6b1b8b6403003d6a702e6e652e7061797061792e616e64726f69642e617070248b6303004f6a702e6a6170616e706f73742e706f73742e706f7374626f782e616e64726f6964178b620300356a",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.6426448822021484,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "0d000000900133000fe70fcc0fb50f9a0f850f680f540f3d0f2d0f130ef10edb0ebf0eaa0e900e7f0e610e480e300e1a0e070df90ddb0dce0db20d880d710d4d0d2d0d110cf80cd50cb80c9d0c880c6b0c5e0c510c300c140bef0bdd0bc40bad0b8b0b710b500b340b200b0d0af60ada0ab80a9e0a8d0a790a660a4c0a350a1e0a0109ea09bb099b0980096f0955093d08ff08f308e308d608b808a408960878085d08390823080507e907d207b8079a0781076b075507390723071206fa06dd06ca069e067f0667064f062d060f05f205d505bb05a00587057505520533051104f804de04cc04b8049f048b046604410422040703ef03cf03b50397036b034e03380326030302ef02db02b1029c02870272025a023c022001fb01d901ca01a5018b0163014901330000000000000000000000138a7203002d64652e636f6d6469726563742e617070178a7103003564652e636f6d6469726563742e616e64726f6964258a7003005164652e61646573736f5f6d6f62696c652e7365637572656170702e6e657462616e6b178a6f030035637a2e63736f622e736d61727462616e6b696e67228a6e03004b636f6f702e62616e636f6372656469636f6f702e62616e63616d6f62696c650c8a6d03001f636f6d2e7a7a6b6b6f1f8a6c030045636f6d2e7a6f6c7578696f6e65732e6f666669636562616e6b696e67228a6b03004b636f6d2e7a69726161746b6174696c696d2e6d6f62696c6562616e6b696e67198a6a030039636f6d2e7a69726161742e7a69726161746d6f62696c1b8a6903003d636f6d2e7a656e69746842616e6b2e65617a796d6f6e6579158a68030031636f6d2e7a656c6c657061792e7a656c6c65128a6703002b636f6d2e7a61696e6b772e7a61696e128a6603002b636f6d2e796b622e616e64726f6964128a6503002b636f6d2e7961702e62616e6b696e67278a64030055636f6d2e7961686f6f2e6d6f62696c652e636c69656e742e616e64726f69642e6d61696c118a63030029636f6d2e7772782e77617a697278118a62030029636f6d2e776f6f64666f72657374208a61030047636f6d2e77696c6c6d6f62696c652e6d6f62696c6562616e6b2e6663620f8a60030025636f6d2e7768617473617070138a5f03002d636f6d2e77686174736170702e7734621a8a5e03003b636f6d2e77662e77656c6c73666172676f6d6f62696c65298a5d030059636f6d2e7765737465726e756e696f6e2e6d6f6e65797472616e7366657272336170702e65731b8a5c03003d636f6d2e7761766573706c6174666f726d2e77616c6c6574178a5b030035636f6d2e776172626162616e6b2e77616c6c65741d8a5a030041636f6d2e77616c6c65742e63727970746f2e7472757374617070158a59030031636f6d2e7674622e6d6f62",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.642822027206421,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "0d0000005b05e4000fe70fcc0fb90f940f6f0f4a0f350f230ee40ea50e660e4f0e330e240e0e0df90ded0dd70db30d880d730d390d1c0d060cf60cea0ccd0cad0c970c7f0c710c520c350c230c0f0bf00bd30bbf0bb10b960b7c0b630b4d0b330b210b080af10acd0aa50a960a6e0a490a340a180a0209e109be09a6098a09750950092a090008e508ce08ba08a6088708740861084608350824080807e907c607b4079d07790754071f06fe06df06c206a7069a06830659062f060305e4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 1.642927885055542,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 5616,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/txtscreensize.txt",
+                    "time": 1.6431248188018799,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 6488,
+                    "data": "3530303030",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 16.9997079372406,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 6714,
+                    "data": "3530303030",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 44.28058385848999,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 6738,
+                    "data": "3530303030",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 47.81490397453308,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 7018,
+                    "data": "3530303030",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 72.18378400802612,
+                    "processname": "com.affinitycu.mobile"
+                },
+                {
+                    "pid": 5616,
+                    "tid": 7523,
+                    "data": "3530303030",
+                    "name": "/data/user/0/com.affinitycu.mobile/files/db.db",
+                    "time": 93.28293085098267,
+                    "processname": "com.affinitycu.mobile"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}
