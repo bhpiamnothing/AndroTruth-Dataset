@@ -1,0 +1,402 @@
+{
+    "apk_info": {
+        "id": "7QqMdLyQRnL1Am4e",
+        "url": "https://developer.koodous.com/apks/5f3b4eddcc72598721b9ca395d1e5881acbd4fc562e09b688b2d42f65d3a4a93/",
+        "sha256": "5f3b4eddcc72598721b9ca395d1e5881acbd4fc562e09b688b2d42f65d3a4a93",
+        "md5": "acc903afe22dcf0eb5f046dcd8db41c1",
+        "sha1": "a5ee1f12a50d84d8283e9bfbec1050b989e07e78",
+        "app": "Facebook Update",
+        "package_name": "com.facebook.update",
+        "company": "User One",
+        "version": "2.2.2",
+        "image": "https://developer.koodous.com/media/apk_images/2016/09/28/68292de5bc1bd30ef1f0c95104b7f3a39e81992372d2d24d0c8ab7cb98607c19",
+        "size": 951283,
+        "tags": [
+            "sms-thief"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -8,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 4,
+        "comments_count": 2,
+        "votes_count": 8,
+        "created_at": "2016-09-28T13:48:57+02:00",
+        "updated_at": "2023-03-30T15:12:05.957392+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "acc903afe22dcf0eb5f046dcd8db41c1",
+                    "sha1": "a5ee1f12a50d84d8283e9bfbec1050b989e07e78",
+                    "size": 951283,
+                    "crc32": "D0914EC7",
+                    "sha256": "5f3b4eddcc72598721b9ca395d1e5881acbd4fc562e09b688b2d42f65d3a4a93",
+                    "sha512": "e0cba68cc378ced1918520da01e83ef3c167ada2e75b65539fe43643cdfce4a674ef78249747ccf9c582dcc5e1110b48c784131a10b62707a2c040f5fb478534",
+                    "ssdeep": "24576:ZcVGymAaIdgmrUB7yGGaMyZVnJiNadOG2M:Z7y/aIdgmAB7VogJiNadr2M"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "upload101.net"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "107.180.20.91",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "upload101.net"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "upload999.info"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "upload999.info"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "upload999.info"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "46.166.162.195",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "upload999.info"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "46.166.162.195",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "upload999.info"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "46.166.162.195",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "upload999.info"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "107.180.20.91",
+                    "46.166.162.195"
+                ],
+                "domains": [
+                    {
+                        "ip": "107.180.20.91",
+                        "domain": "upload101.net"
+                    },
+                    {
+                        "ip": "46.166.162.195",
+                        "domain": "upload999.info"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://opencellid.org/cell/get?key=18717b9f-4c47-42c7-9317-d40c236ac911&mcc=",
+                "http://upload999.info",
+                "http://upload101.net/android/domains"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "a80af34ff962f1cb41c2c70db8867d7c2cf364812ae61db9cf8e1acdd2aeabc9",
+                    "ssdeep": "12288:uzHDnf24KYF+Ejfw5+dSuuATHowYecXfyDxW/vlCQz0vxkHu:sHDnfEQF1uhfecXjT0ZD"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.PACKAGE_REPLACED",
+                "android.intent.action.MAIN",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "Facebook Update",
+            "services": [
+                "com.facebook.update.services.RecordsService",
+                "com.facebook.update.services.MessagesService",
+                "com.facebook.update.services.DocumentsService",
+                "com.facebook.update.services.CellService",
+                "com.facebook.update.services.UpdateService",
+                "com.facebook.update.services.ContactsService",
+                "net.gotev.uploadservice.UploadService",
+                "com.facebook.update.services.ImagesService",
+                "com.facebook.update.services.RecordingService",
+                "com.facebook.update.services.InfoService"
+            ],
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.facebook.update.receivers.OnlineReceiver",
+                "com.facebook.update.receivers.PowerReceiver",
+                "com.facebook.update.receivers.CallReceiver",
+                "com.facebook.update.receivers.PackageReceiver",
+                "com.facebook.update.receivers.NetworkStateReceiver",
+                "com.facebook.update.receivers.AlarmReceiver",
+                "com.facebook.update.receivers.LogReceiver",
+                "com.facebook.update.receivers.SmsReceiver"
+            ],
+            "activities": [
+                "com.facebook.update.activities.UpdateDialogActivity",
+                "com.facebook.update.activities.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "82D1D91B37A0CC575871EDD3DE9932FC2734AB3C",
+                "serial": "1C0C7E08",
+                "issuerDN": "/CN=User One",
+                "not_after": "Sep 4 10:36:51 2041 GMT",
+                "subjectDN": "/CN=User One",
+                "not_before": "Sep 10 10:36:51 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.INTERNET",
+                "android.permission.READ_LOGS",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.RECEIVE_SMS"
+            ],
+            "package_name": "com.facebook.update",
+            "version_code": "8",
+            "main_activity": "com.facebook.update.activities.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/facebook/update/services/CellService;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v5, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/facebook/update/services/a;",
+                        "method": "a"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https'",
+                        "class": "Lcom/a/a/a/l;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v2, 'https'",
+                        "class": "Lnet/gotev/uploadservice/a/a/b;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v1, 'https://'",
+                        "class": "Lnet/gotev/uploadservice/f;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/ae;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/av;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v4, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/facebook/update/services/a;",
+                        "method": "a"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/facebook/update/services/a;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/facebook/update/d/c;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/a/a/a/l;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/facebook/update/d/b;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/facebook/update/d/g;",
+                        "method": "c"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/facebook/update/d/g;",
+                        "method": "b"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/facebook/update/a/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v1, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/facebook/update/a/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lnet/gotev/uploadservice/UploadService;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/facebook/update/services/a;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/facebook/update/b/b;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/facebook/update/b/b;",
+                        "method": "b"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "2.2.2",
+            "target_sdk_version": 23
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "107.180.20.91",
+                    "hostname": "upload101.net"
+                },
+                {
+                    "ip": "46.166.162.195",
+                    "hostname": "upload999.info"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 843,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.facebook.update-1.apk",
+                    "time": 0.151194,
+                    "processname": "com.facebook.update"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 843,
+                    "tid": 1073870640,
+                    "data": "504b050600000000800180011c920000c1f10d000000504b01021400140008080800738a2a49afc7486e11090000ec290000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01021400140008080800738a2a49e686e085310100006c0200002d00000000000000000000000000560900007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f696e2e786d6c504b01021400140008080800738a2a494e7f10362f0100006c0200002e00000000000000000000000000e20a00007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f6f75742e786d6c504b01021400140008080800738a2a496b16942fdb0000008c01000018000000000000000000000000006d0c00007265732f616e696d2f6162635f666164655f696e2e786d6c504b01021400140008080800738a2a49137a6f39dc0000008c01000019000000000000000000000000008e0d00007265732f616e696d2f6162635f666164655f6f75742e786d6c504b01021400140008080800738a2a49b83a0b23810100005c0300002900000000000000000000000000b10e00007265732f616e696d2f6162635f67726f775f666164655f696e5f66726f6d5f626f74746f6d2e786d6c504b0102140014000808",
+                    "name": "/data/app/com.facebook.update-1.apk",
+                    "time": 0.209437,
+                    "processname": "com.facebook.update"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 843,
+                    "tid": 705453088,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"first_run\" value=\"true\" />\n<boolean name=\"permissions_granted\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.facebook.update/shared_prefs/com.facebook.update_preferences.xml",
+                    "time": 3.431146,
+                    "processname": "com.facebook.update"
+                },
+                {
+                    "pid": 843,
+                    "tid": 705453088,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"first_run\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.facebook.update/shared_prefs/com.facebook.update_preferences.xml",
+                    "time": 3.389067,
+                    "processname": "com.facebook.update"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

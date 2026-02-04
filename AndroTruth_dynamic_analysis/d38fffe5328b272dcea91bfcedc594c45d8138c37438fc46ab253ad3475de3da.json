@@ -1,0 +1,306 @@
+{
+    "apk_info": {
+        "id": "yRjbOxYLyL8dkVM9",
+        "url": "https://developer.koodous.com/apks/d38fffe5328b272dcea91bfcedc594c45d8138c37438fc46ab253ad3475de3da/",
+        "sha256": "d38fffe5328b272dcea91bfcedc594c45d8138c37438fc46ab253ad3475de3da",
+        "md5": "75ef1366295a86661c1e4daf4a5504a1",
+        "sha1": "f055ad2dc5ac461f4f7836d63b68f31d8831cdbf",
+        "app": "Migo AppLocker",
+        "package_name": "com.luna.applocker.gp",
+        "company": "Youmi",
+        "version": "1.0.0",
+        "image": "https://developer.koodous.com/media/apk_images/2017/01/12/5eb6577f5d2e2692aeae316e8226203b8cfa3ca7e8c3d10af9109ebcf7d2e48d",
+        "size": 1647982,
+        "tags": [
+            "Jiagu",
+            "checks-gps",
+            "runtime-modules",
+            "trojan",
+            "jiagu",
+            "reflection",
+            "telephony",
+            "contains-elf",
+            "andr",
+            "dloadr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 5,
+        "comments_count": 0,
+        "votes_count": 3,
+        "created_at": "2017-01-12T05:40:16+01:00",
+        "updated_at": "2025-05-30T16:14:48.505962+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "75ef1366295a86661c1e4daf4a5504a1",
+                    "sha1": "f055ad2dc5ac461f4f7836d63b68f31d8831cdbf",
+                    "size": 1647982,
+                    "crc32": "4F68F7B7",
+                    "sha256": "d38fffe5328b272dcea91bfcedc594c45d8138c37438fc46ab253ad3475de3da",
+                    "sha512": "ffa61412a6bab83f849a495f5aea486b18aed886c20770260ae3c1c64a8ad1467ad1d535f365a2b7622dc0b85f8230c2bb44eaa4d469ae6891dd7e94ef058508",
+                    "ssdeep": "49152:4qqEZukjl1lvRM//9sKYM8oVq/ZELdu4tEFFgmT8Z:4qqt4K39UM8oU/SLLtOFA"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "proton.flurry.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "proton.flurry.vip.gq1.yahoo.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "74.6.34.50",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "proton.flurry.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "74.6.34.50"
+                ],
+                "domains": [
+                    {
+                        "ip": "74.6.34.50",
+                        "domain": "proton.flurry.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "724a5e47da59e006f9c9fb5131e9d407eacc26a7c6b88152422cfd03a5d406bf",
+                    "ssdeep": "12288:/LIkyhHZ9zI1oWRvPDEgRMCHkKvC7hmIg/rM2XR6xetriLdAY4p:ahPvEXDEYMCEKvShmIgTpqMriLdr4p"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MY_PACKAGE_REPLACED",
+                "android.intent.action.PACKAGE_ADDED",
+                "com.android.vending.INSTALL_REFERRER",
+                "android.intent.action.QUERY_PACKAGE_RESTART",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "Migo AppLocker",
+            "services": [
+                "com.luna.applocker.gp.AppLocker.Service.DetectorService",
+                "com.luna.applocker.gp.AppLocker.upgrade.NetworkService",
+                "com.qihoo.util.CommonService",
+                "com.luna.applocker.gp.AppLocker.Service.MyAccessibilityService",
+                "com.qihoo.util.QhJobService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "com.qihoo.util.CommonProvider"
+            ],
+            "receivers": [
+                "com.qihoo.util.CommonReceiver",
+                "com.luna.applocker.gp.AppLocker.Receiver.ReferrerReceiver",
+                "com.luna.applocker.gp.AppLocker.Receiver.StartupServiceReceiver",
+                "com.luna.applocker.gp.AppLocker.Receiver.UninstallIntentReceiver",
+                "com.luna.applocker.gp.AppLocker.Receiver.InstallAppChangeReceiver"
+            ],
+            "activities": [
+                "com.luna.applocker.gp.AppLocker.Activity.AppLockerPreferenceActivity",
+                "com.luna.applocker.gp.AppLocker.LockScreenPatternActivity",
+                "com.luna.applocker.gp.AppLocker.Activity.RetrivePswActivity",
+                "com.luna.applocker.gp.AppLocker.ApplicationListActivity",
+                "com.luna.applocker.gp.AppLocker.Activity.SetPasswordActivity",
+                "com.luna.applocker.gp.AppLocker.LockScreenActivity",
+                "com.luna.applocker.gp.AppLocker.Activity.InstallDetectedActivity",
+                "com.luna.applocker.gp.AppLocker.Activity.SetMailActivity",
+                "com.luna.applocker.gp.AppLocker.MainSplashActivity",
+                "com.qihoo.util.CommonActivity",
+                "com.luna.applocker.gp.accessibility.activity.InterstitalActivity",
+                "com.luna.applocker.gp.accessibility.activity.InstallRecommandActivity",
+                "com.luna.applocker.gp.AppLocker.LockPatternActivity"
+            ],
+            "certificate": {
+                "sha1": "A31BCD0CEC528D8BFC11CAD4872AB57E268A8A32",
+                "serial": "5BBAC70A",
+                "issuerDN": "/C=CN/ST=GuangDong/L=Guangzhou/O=Youmi/OU=Amigo/CN=Migo",
+                "not_after": "Oct 3 05:10:22 2071 GMT",
+                "subjectDN": "/C=CN/ST=GuangDong/L=Guangzhou/O=Youmi/OU=Amigo/CN=Migo",
+                "not_before": "Dec 30 05:10:22 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.REAL_GET_TASKS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_TASKS",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.luna.applocker.gp",
+            "version_code": "1",
+            "main_activity": "com.luna.applocker.gp.AppLocker.ApplicationListActivity",
+            "signature_name": "META-INF/MIGOAPPL.RSA",
+            "functionalities": {
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/qihoo/util/StubApp1286683860;",
+                        "method": "copy"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/qihoo/util/StubApp1286683860;",
+                        "method": "copy"
+                    },
+                    {
+                        "code": "invoke-static v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lcom/qihoo/util/StubApp1286683860;",
+                        "method": "attachBaseContext"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.0.0",
+            "target_sdk_version": 24
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "74.6.34.50",
+                    "hostname": "proton.flurry.com"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 848,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.luna.applocker.gp-1.apk",
+                    "time": 0.408394,
+                    "processname": "com.luna.applocker.gp"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 848,
+                    "tid": 1073870640,
+                    "data": "504b0506000000005b015b0168780000f0ac18000000504b01021400140008080800a77a9e4921890cb27c270000148100001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008080800a77a9e49277cdb99682c00008d8100001400000000000000000000000000be2700004d4554412d494e462f4d49474f4150504c2e5346504b01021400140008080800a77a9e4925177c303e040000420500001500000000000000000000000000685400004d4554412d494e462f4d49474f4150504c2e525341504b0102140014000808080000002100e1181a7ff6040000fb0e00001d00000000000000000000000000e95800004d4554412d494e462f676670726f62652d70726f76696465722e786d6c504b0102140014000808080000002100143d36cccc000000510100001c000000000000000000000000002a5e00004d4554412d494e462f686b322d6c6f6361746f722f64656661756c74504b0102140014000808080000002100eefc0dad06020000100500001d00000000000000000000000000405f00004d4554412d494e462f6a6176616d61696c2e636861727365742e6d6170504b01021400140008080800000021006b49200f0e0000000c0000002500000000000000000000000000916100004d4554412d494e462f6a6176616d61696c2e646566",
+                    "name": "/data/app/com.luna.applocker.gp-1.apk",
+                    "time": 0.440204,
+                    "processname": "com.luna.applocker.gp"
+                },
+                {
+                    "pid": 848,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          343140 kB\nBuffers:               0 kB\nCached:           134572 kB\nSwapCached:            0 kB\nActive:           143932 kB\nInactive:          99156 kB\nActive(anon):     112784 kB\nInactive(anon):        0 kB\nActive(file):      31148 kB\nInactive(file):    99156 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        108568 kB\nMapped:            49720 kB\nSlab:               6152 kB\nSReclaimable:       1640 kB\nSUnreclaim:         4512 kB\nPageTables:         5268 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2489452 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 29.160779,
+                    "processname": "com.luna.applocker.gp"
+                },
+                {
+                    "pid": 848,
+                    "tid": 705535664,
+                    "data": "961729e363ac2715d453983f4f76b8a71613cb04",
+                    "name": "/dev/urandom",
+                    "time": 29.571459,
+                    "processname": "com.luna.applocker.gp"
+                },
+                {
+                    "pid": 848,
+                    "tid": 705535664,
+                    "data": "1f8b08000000000000004d504d4fc240107d8d2226e24722269e8cf1e4c5cd562a8483870aa1d5082a287a6dbb03695cbacdc292f0abf40ff90b3c7b776b13e2bbcccc7b9379338363b69a48a3f54a448b684e99201d4b95bc33008e738513fcc706be2d7d5f3ffbfc41fda9f338b8e9848d6e18bc86fdf15b6bdcf3507119671c8e6d3ef407dda64b82da97b137e12d9e349b289462c0c7d73a565113b44c1362332548e260e4f7472f83e03478beb86dbb9c033bb149a560b18e3281aa9f09ad52016c97b44db7ee860fbc3104f697a4e7a9ca982649f620543ce63217a895bda513aa53ca48a709b05bf2b956c2240b6c4e8c9476775b4f4da4ade79f6c4ce1b7c651a2664c9a2c62519e17ef22cda679a15cef9df7805f6840f2d657010000",
+                    "name": "/data/data/com.luna.applocker.gp/files/.yflurrydatasenderblock.69e7c047-f83c-472c-ba5b-8cf397d32d1e",
+                    "time": 30.254207,
+                    "processname": "com.luna.applocker.gp"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 848,
+                    "tid": 1073870640,
+                    "name": "/data/data/com.luna.applocker.gp/.jiagu/libjiagu.so",
+                    "time": 26.404577
+                }
+            ],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 848,
+                    "tid": 1073870640,
+                    "data": "7f454c460101010000000000000000000300280001000000000000003400000044e004000000000534002000080000001b0000000600000034000000340000003400000000010000000100000400000004000000030000003401000034010000340100001300000013000000040000000100000001000000000000000000000000000000b8af0000b8af0000050000000010000001000000acbd0000accd0000accd00005821040074210400060000000010000002000000b8bd0000b8cd0000b8cd00000801000008010000060000000400000051e57464000000000000000000000000000000000000000006000000000000000100007074a7000074a7000074a700003804000038040000040000000400000052e57464acbd0000accd0000accd0000540200005402000006000000040000002f73797374656d2f62696e2f6c696e6b657200000000000000000000000000000000000001000000000000000000000012000000100000000000000000000000120000001d000000dc1a000004000000120008002e000000308e0000080000001200080045000000388e000008000000220008005c0000002072000020000000120008006d000000000000000000000012000000740000000000000000000000120000007b000000000000000000000012000000820000000000000000000000120000009300000000000000",
+                    "name": "/data/data/com.luna.applocker.gp/.jiagu/libjiagu.so",
+                    "time": 5.588019,
+                    "processname": "com.luna.applocker.gp"
+                },
+                {
+                    "pid": 848,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"user_agent\">Mozilla/5.0 (Linux; U; Android 4.1.1; en-us; SAMSUNG GT-I9100 Build/JRO03R) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30</string>\n</map>\n",
+                    "name": "/data/data/com.luna.applocker.gp/shared_prefs/accesslib.xml",
+                    "time": 28.00066,
+                    "processname": "com.luna.applocker.gp"
+                },
+                {
+                    "pid": 848,
+                    "tid": 705535664,
+                    "data": "1f8b080000000000000063e075cc4bcca92cc94c2ef64dcccc63606060046335b8b04b6249627ca073809f93b387b18b877bb8876f588479989b49bc91b1290081efed083f000000",
+                    "name": "/data/data/com.luna.applocker.gp/files/.YFlurrySenderIndex.info.AnalyticsMain",
+                    "time": 30.165851,
+                    "processname": "com.luna.applocker.gp"
+                },
+                {
+                    "pid": 848,
+                    "tid": 705535664,
+                    "data": "1f8b08000000000000004d504d4fc240107d8d2226e24722269e8cf1e4c5cd562a8483870aa1d5082a287a6dbb03695cbacdc292f0abf40ff90b3c7b776b13e2bbcccc7b9379338363b69a48a3f54a448b684e99201d4b95bc33008e738513fcc706be2d7d5f3ffbfc41fda9f338b8e9848d6e18bc86fdf15b6bdcf3507119671c8e6d3ef407dda64b82da97b137e12d9e349b289462c0c7d73a565113b44c1362332548e260e4f7472f83e03478beb86dbb9c033bb149a560b18e3281aa9f09ad52016c97b44db7ee860fbc3104f697a4e7a9ca982649f620543ce63217a895bda513aa53ca48a709b05bf2b956c2240b6c4e8c9476775b4f4da4ade79f6c4ce1b7c651a2664c9a2c62519e17ef22cda679a15cef9df7805f6840f2d657010000",
+                    "name": "/data/data/com.luna.applocker.gp/files/.yflurrydatasenderblock.69e7c047-f83c-472c-ba5b-8cf397d32d1e",
+                    "time": 29.581629,
+                    "processname": "com.luna.applocker.gp"
+                },
+                {
+                    "pid": 848,
+                    "tid": 705535664,
+                    "data": "1f8b08000000000000006390d48b74cb292d2aaa0c4ecd4b492df20412157a997969f97a0c0c0c8c60ac6266996a9e6c6062ae9b66619cac6b626e94ac9b94689aa46b919c666c699e626c9462980a0059b5104149000000",
+                    "name": "/data/data/com.luna.applocker.gp/files/.YFlurrySenderIndex.info.AnalyticsData_QCPNBCH3DHGWHMVX7VF4_235",
+                    "time": 29.821154,
+                    "processname": "com.luna.applocker.gp"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

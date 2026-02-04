@@ -1,0 +1,441 @@
+{
+    "apk_info": {
+        "id": "9VJl1D8DeAp15QNW",
+        "url": "https://developer.koodous.com/apks/008338b39c0abf3aa75e92e845c34ac60e049a480eb1e0ab8d3147085a7bb745/",
+        "sha256": "008338b39c0abf3aa75e92e845c34ac60e049a480eb1e0ab8d3147085a7bb745",
+        "md5": "6f2da93615bbd205cb9d5485a3575a13",
+        "sha1": "55aedbe7b062bc5f71cdd82aa3d2f5bcc3c7b073",
+        "app": "_Codice Fiscale",
+        "package_name": "com.gxulzkj.atuqczml",
+        "company": "Android",
+        "version": "2.31",
+        "image": "https://developer.koodous.com/media/apk_images/2022/10/25/nm_2kTcWnM.png",
+        "size": 4757380,
+        "tags": [
+            "exploit",
+            "checks-gps",
+            "cve-2009-1157",
+            "sharkbot",
+            "flol",
+            "sends-sms",
+            "trojan",
+            "reflection",
+            "telephony",
+            "bankbot",
+            "banker",
+            "spyware"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -4,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2022-10-27T03:18:54.318641+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 0.105.1/26700/Wed Oct 26 07:55:46 2022",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "26.10.2022 18:13:18 (Build: 105356)",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "",
+                    "result": "",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2022-10-26T01:22:32.010557+02:00",
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 4,
+        "created_at": "2022-10-25T21:42:18.781787+02:00",
+        "updated_at": "2025-02-24T13:49:13.373300+01:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "6f2da93615bbd205cb9d5485a3575a13",
+                "name": "",
+                "path": "",
+                "sha1": "55aedbe7b062bc5f71cdd82aa3d2f5bcc3c7b073",
+                "size": 4757380,
+                "type": "Zip archive data",
+                "yara": [],
+                "crc32": "012E3196",
+                "sha256": "008338b39c0abf3aa75e92e845c34ac60e049a480eb1e0ab8d3147085a7bb745",
+                "sha512": "576650db6535807e0b040679eabe1c8dd982457cd489753bba212a84a50f227ed0e1dde94eec400932859b783b1259ef457f8c765fa067892ed1509fc9c6fdae",
+                "ssdeep": "98304:+vNnjTpjCqrRkkaAxnvEPmWdQrLG8HLzd2ZrWD8N:UTVjrRkTAxeD+K8HLUN"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://mozilla.org/MPL/2.0/",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "vnd.android.cursor.dir/contact",
+                "http://schemas.android.com/apk/res-auto",
+                "http://schemas.android.com/apk/res/android",
+                "http://9ac0dbea6cd369e3.xyz/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "b784547d3a03fbe840a613435dc70610ff5382016c06102e4a2f3ed8a13aaebf"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.ACTION_SCREEN_ON",
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.net.wifi.WIFI_STATE_CHANGED",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.intent.action.SCREEN_ON",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.PACKAGE_CHANGED",
+                "android.intent.action.SENDTO",
+                "android.intent.action.MAIN",
+                "android.net.wifi.STATE_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.PACKAGE_REPLACED",
+                "android.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "_Codice Fiscale",
+            "services": [
+                "com.gxulzkj.atuqczml.Service.ComposeVia",
+                "com.gxulzkj.atuqczml.Service.ServiceHandler",
+                "com.gxulzkj.atuqczml.Service.ServiceManager",
+                "com.gxulzkj.atuqczml.Service.ServicePush"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider",
+                "androidx.startup.InitializationProvider"
+            ],
+            "receivers": [
+                "com.gxulzkj.atuqczml.Receiver.BootReceiver",
+                "com.gxulzkj.atuqczml.Receiver.ReceiverMMS",
+                "com.gxulzkj.atuqczml.Receiver.ReceiverSMS"
+            ],
+            "activities": [
+                "com.gxulzkj.atuqczml.Activity.WebGoogle",
+                "com.gxulzkj.atuqczml.Activity.WebActivity",
+                "com.gxulzkj.atuqczml.Activity.GuildPermissionActivity",
+                "com.gxulzkj.atuqczml.MainActivity",
+                "com.gxulzkj.atuqczml.Activity.ComposeSms"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.BROADCAST_PACKAGE_ADDED",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.QUICKBOOT_POWERON",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_MMS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.STATE_CHANGE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SMS"
+            ],
+            "package_name": "com.gxulzkj.atuqczml",
+            "version_code": "7",
+            "main_activity": "com.gxulzkj.atuqczml.MainActivity",
+            "signature_name": "META-INF/ANDROID.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v2 ... v7, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/gxulzkj/atuqczml/Service/ServiceHandler;",
+                        "method": "F"
+                    },
+                    {
+                        "code": "invoke-virtual/range v2 ... v7, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V",
+                        "class": "Lcom/gxulzkj/atuqczml/Service/ServiceHandler;",
+                        "method": "F"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v4, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/gxulzkj/atuqczml/q;",
+                        "method": "F"
+                    },
+                    {
+                        "code": "invoke-virtual v4, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v0, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/location/LocationManagerCompat$Api30Impl$$ExternalSyntheticLambda0;",
+                        "method": "accept"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lokio/SegmentPool;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v4, v1, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/gxulzkj/atuqczml/q;",
+                        "method": "F"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Lcom/gxulzkj/atuqczml/Service/ServiceManager;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/gxulzkj/atuqczml/Service/ServiceManager;",
+                        "method": "F"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 26,
+            "new_permissions": [],
+            "displayed_version": "2.31",
+            "target_sdk_version": 32
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2884302139282227,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/base.apk.x86_64.flock",
+                    "time": 1.3042290210723877,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/oat/x86_64/base.vdex",
+                    "time": 1.307056188583374,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/base.apk",
+                    "time": 1.309347152709961,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3165740966796875,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.3175361156463623,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/oat/x86_64/base.art",
+                    "time": 1.3181281089782715,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/base.apk",
+                    "time": 1.3734591007232666,
+                    "processname": "com.gxulzkj.atuqczml"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "data": "636f6d2e6778756c7a6b6a2e61747571637a6d6c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2886559963226318,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2886860370635986,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "data": "504b0304",
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/base.apk",
+                    "time": 1.309401035308838,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.317183017730713,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.318066120147705,
+                    "processname": "com.gxulzkj.atuqczml"
+                },
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "data": "6172740a3035360000803d78280f0100f653914000903e7800a03e780070407800d0d37800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000df7c0000",
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/oat/x86_64/base.art",
+                    "time": 1.3183341026306152,
+                    "processname": "com.gxulzkj.atuqczml"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5624,
+                    "tid": 5624,
+                    "name": "/data/app/com.gxulzkj.atuqczml-wTK2KfEl3M_ARGEn4zFmnw==/base.apk.x86_64.flock",
+                    "time": 1.304265022277832,
+                    "processname": "com.gxulzkj.atuqczml"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

@@ -1,0 +1,417 @@
+{
+    "apk_info": {
+        "id": "bxP3db4Nw8NGLezX",
+        "url": "https://developer.koodous.com/apks/8c8ffc01e6466a3e02a4842053aa872119adf8d48fd9acd686213e158a8377ba/",
+        "sha256": "8c8ffc01e6466a3e02a4842053aa872119adf8d48fd9acd686213e158a8377ba",
+        "md5": "ebc0bc3aabe39b42b2e28b3aa88624e6",
+        "sha1": "9756851118f778a917546f0630e92dd20c81326e",
+        "app": "EasyLoan",
+        "package_name": "com.ariashirazi.instabrowser",
+        "company": "",
+        "version": "2.0",
+        "image": "https://developer.koodous.com/media/apk_images/2023/10/16/ic_launcher_tCmoaVa.png",
+        "size": 2756476,
+        "tags": [
+            "checks-gps",
+            "runtime-modules",
+            "trojan",
+            "clipboard",
+            "zgyfv",
+            "smsspy",
+            "reflection",
+            "telephony",
+            "fslg",
+            "piom",
+            "spyware",
+            "smsthief"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": 0,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2023-10-16T16:46:58.421192+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27063/Mon Oct 16 08:02:17 2023",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "16.10.2023 12:19:10 (Build: 106423)",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2023-10-16T16:51:44.581406+02:00",
+        "matches_count": 2,
+        "comments_count": 0,
+        "votes_count": 0,
+        "created_at": "2023-10-16T16:46:56.369297+02:00",
+        "updated_at": "2024-08-07T10:45:10.053016+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "ebc0bc3aabe39b42b2e28b3aa88624e6",
+                "name": "",
+                "path": "",
+                "sha1": "9756851118f778a917546f0630e92dd20c81326e",
+                "size": 2756476,
+                "type": "Zip archive data",
+                "yara": [],
+                "crc32": "F09774F4",
+                "sha256": "8c8ffc01e6466a3e02a4842053aa872119adf8d48fd9acd686213e158a8377ba",
+                "sha512": "416885642d32e78b60e061991463216f387136a97c55d5c201178b7383a57054f16ccf107b8ec56c4a197d51d997289f436977df59ef716f9765d6801eeeb9ed",
+                "ssdeep": "49152:EFdSJtDjQEkNlqPHENgjp/MxsrRj/ZCpgIwRCfrtmw:bJtn+E5McRC8Cfrtf"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res-auto",
+                "Q.TGu/n0\u001f@V",
+                "https://easyloanbahrain.com/connect.php",
+                "http://schemas.android.com/apk/res/android",
+                "https://easyloanbahrain.com/api/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "6f4018aeee2fdcb75a07266e72ccac4b68c099c0e5c022e1abc7ad3011c2e70e"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_RECEIVED"
+            ],
+            "app_name": "EasyLoan",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.ariashirazi.instabrowser.MyReceiver"
+            ],
+            "activities": [
+                "com.ariashirazi.instabrowser.SecondActivity",
+                "com.ariashirazi.instabrowser.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "D122D9ADC3E5D5FF346B32C0413F5CF3A3CC4658",
+                "serial": "333A0B9B",
+                "issuerDN": "C = debugging",
+                "not_after": "Jan 25 11:57:06 3015 GMT",
+                "subjectDN": "C = debugging",
+                "not_before": "Sep 23 11:57:06 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.INTERNET",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.SEND_SMS"
+            ],
+            "package_name": "com.ariashirazi.instabrowser",
+            "version_code": "2",
+            "main_activity": "com.ariashirazi.instabrowser.MainActivity",
+            "signature_name": "META-INF/A103F782.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v4, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v0, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(La/a/a/a/a;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v0, v1, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroidx/core/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v0, v1, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroidx/core/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 23,
+            "new_permissions": [],
+            "displayed_version": "2.0",
+            "target_sdk_version": 31
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.097411870956421,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/base.apk.x86_64.flock",
+                    "time": 1.1219029426574707,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/oat/x86_64/base.vdex",
+                    "time": 1.1269469261169434,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/base.apk",
+                    "time": 1.1276769638061523,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1476597785949707,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1494338512420654,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/oat/x86_64/base.art",
+                    "time": 1.1497488021850586,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/base.apk",
+                    "time": 1.1575908660888672,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5832,
+                    "name": "/data/user_de/0/com.ariashirazi.instabrowser/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.6900928020477295,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5832,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.778120994567871,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5832,
+                    "name": "/dev/fb0",
+                    "time": 1.7798848152160645,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5823,
+                    "name": "/data/misc/profiles/cur/0/com.ariashirazi.instabrowser/primary.prof",
+                    "time": 62.83804178237915,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5823,
+                    "name": "/data/misc/profiles/cur/0/com.ariashirazi.instabrowser/primary.prof",
+                    "time": 62.84592580795288,
+                    "processname": "com.ariashirazi.instabrowser"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "data": "636f6d2e6172696173686972617a692e696e73746162726f777365720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1124417781829834,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1125009059906006,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "data": "504b0304",
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/base.apk",
+                    "time": 1.127837896347046,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.148080825805664,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1496469974517822,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "data": "6172740a3035360000803d78280f01002328be0e00903e7800a03e7800803f780080787800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000476d0000",
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/oat/x86_64/base.art",
+                    "time": 1.1499519348144531,
+                    "processname": "com.ariashirazi.instabrowser"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5797,
+                    "tid": 5797,
+                    "name": "/data/app/com.ariashirazi.instabrowser-btohsdVz4-pP7SeeR46bYQ==/base.apk.x86_64.flock",
+                    "time": 1.1222379207611084,
+                    "processname": "com.ariashirazi.instabrowser"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5797,
+                    "tid": 5823,
+                    "data": "70726f00",
+                    "name": "/data/misc/profiles/cur/0/com.ariashirazi.instabrowser/primary.prof",
+                    "time": 62.87620496749878,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5823,
+                    "data": "30313000",
+                    "name": "/data/misc/profiles/cur/0/com.ariashirazi.instabrowser/primary.prof",
+                    "time": 62.89927577972412,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5823,
+                    "data": "019d3b0000",
+                    "name": "/data/misc/profiles/cur/0/com.ariashirazi.instabrowser/primary.prof",
+                    "time": 62.90721678733826,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5823,
+                    "data": "c4100000",
+                    "name": "/data/misc/profiles/cur/0/com.ariashirazi.instabrowser/primary.prof",
+                    "time": 62.9302659034729,
+                    "processname": "com.ariashirazi.instabrowser"
+                },
+                {
+                    "pid": 5797,
+                    "tid": 5823,
+                    "data": "7801ed5b0d9054d595beaffbcd4c73bbe9e9218003a2f4301a51c1c26014354aa368887193a91426123654f3634cc565325b49945d0d3e66479dc544c7d5a009718bdae83a52a8fc889288715082d9a809d964d524eb424ce9828519904d261585def3ddf3be79779a4146b2bbb555f2a83bdf3dffe79efbf36ef70c19f3fb60d47863ee1fdf1b8c5a60cc82f95fbeea8cf96dd7a41b8c49196302af810e3d1a32f0ea3c1ee5b44dc73ad09d2b6d9cb4d9d21e9406191afd006b623a1323e4f0c9d8e0d7c632df0efd6a9ab90c267b371e65448e8508fe607d3f1efb05d1b5d2384ee071b13d7c8c9486fa614c1c27e3fae88f193e189fc83920cd1c19977c207939e9530f7cbf3136e3625e202f4ae3d8e80be3833efdb64a9fbe26491f63841f34e4394c5a561a6373ce21c3fc7e20968d1705e8f88d318e173ee3fb72f0405f286d8434f8840df9c881f983bf2096f97304ddbf9146bfa091575e1a6b06dacf1bb27a69b0612cdaef8ef9d001ef73d29017d6017580cc8bc8b1220e6a069d66691c4f751cfa029ff3853ec60c4463fda18b7ce18be320323e6a823e6c864bc3d8e10b7cfa654cd60534e61bf5419f71d9a7fe8db10cf1991f65f485d893a581cff140bfda176340c6dca1435d20d71b6281c69860471dfa670e351225252df8769aaebee7a93324dcb20f977e78ba026248be0c6920244ac9b203a18365c232b31488013fe0d32f79a48f61529ba1d402f305bdb3a5a1963c76c64a1f7381a5e1d71bf48a5856ed1ff3e6cf6ff5dc9026c29e4b0fbc33a4f93cfabf403acc8bebc4f741bd6af473419f36e493861dfb40c89117c70ede686987d3239f75829d1fcfcf8bf903e19736d0810de5a0fddae0e8a31c7ce6ebf721873fdf8efeb9d5e11faf04d8a35197f9c0071afda30f1dac07f070ac2137bc7afc71b1cf38a0614b3e9147387cf96365bcc7633bae4bc446e338489f2e3cf8a49ddf670cc6070d3be82026f868b0251f328c0dba4569a08fd4e00379f158652ea82f6c87c94ff76f4e0812a171d43d283ffe2aa6fd124067b634e038f1855b224220451cbbe0b33104e9cb62bd48f0394f8ff2ff0d44ee33c4317cfba5449fa5201fbae74bc332823e8e77960d63445d3e2b0dfab82d8207bd2b6344ffbd364ccd89d2c648fb8c34e4c07a2306dece882b977c17177de64e5de6015dc84e96f609699c17e68439a22d7944f8451f3668d0035dadefd35886c8913e7cc451085d8e65ae085ba4bd2a49f87a1817e2713b50e6d37e2e90d386ba406e11d8511fdb935b12f3885c20832e62364bf37dd0cee7a15fcdafa6abf549530fd8240df383d8c88bf9364a9f7a8cc5fa235fe882c6d14e9ba2f42163ed610ffa8034ea8047bfe74a1f3ed0981bb09af66d68cb9c7c3b9f876bcf39557e7d39f3c15ec2dc603eaa7d835e21",
+                    "name": "/data/misc/profiles/cur/0/com.ariashirazi.instabrowser/primary.prof",
+                    "time": 62.93889594078064,
+                    "processname": "com.ariashirazi.instabrowser"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

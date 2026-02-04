@@ -1,0 +1,908 @@
+{
+    "apk_info": {
+        "id": "Kyqm1knVJz3drPa9",
+        "url": "https://developer.koodous.com/apks/b009ad0ed336f1e4bff3f452e238b3ea83d3bc7773f52d16d057298c116a95ea/",
+        "sha256": "b009ad0ed336f1e4bff3f452e238b3ea83d3bc7773f52d16d057298c116a95ea",
+        "md5": "e6e4cc18665a2cc546979499224241cd",
+        "sha1": "51c4b4fa332ec5774d86eafed59b66604258c2fb",
+        "app": "BNL Sicuro",
+        "package_name": "com.bnlsicuroappapsicura.apk",
+        "company": "Anywhere Software",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2024/03/26/icon_vs7q6Nk.png",
+        "size": 4686006,
+        "tags": [
+            "banker",
+            "dropper",
+            "trojan",
+            "hqwar",
+            "smsagent",
+            "detect-debug-environment",
+            "obfuscated",
+            "checks-gps",
+            "bankbot",
+            "reflection",
+            "telephony",
+            "sends-sms",
+            "copybara",
+            "basbanke",
+            "multiverze",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-03-26T10:25:21.433636+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27226/Tue Mar 26 08:37:28 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "25.03.2024 19:17:04 (Build: 106910)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-03-26T10:27:40.522876+01:00",
+        "matches_count": 9,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-03-26T10:25:19.352746+01:00",
+        "updated_at": "2025-04-13T13:35:00.948059+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "e6e4cc18665a2cc546979499224241cd",
+                "name": "",
+                "path": "",
+                "sha1": "51c4b4fa332ec5774d86eafed59b66604258c2fb",
+                "size": 4686006,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "FA36678F",
+                "sha256": "b009ad0ed336f1e4bff3f452e238b3ea83d3bc7773f52d16d057298c116a95ea",
+                "sha512": "04d45811bb1d00b4e9c2a2dc59fdd74497ecb65eb670749ec52c9022c17a036e1df45e576c569e73c52693555093808268cb117145f3d19b222c7e6e4aaacf4c",
+                "ssdeep": "98304:or6hinlhin6Vhinahinx1hin6hinshinUhinp+Ogr7RSNKeVZg:zCzC6DC8CxjCcCyCKCp+OwE7VZg"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "vnd.android.cursor.item/note",
+                "vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://freeipapi.com/api/json",
+                "3vnd.android.cursor.item/vnd.com.whatsapp.video.call",
+                "vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://invalid-url/",
+                "http://schemas.android.com/apk/res/android",
+                "2vnd.android.cursor.item/vnd.com.whatsapp.voip.call",
+                "https://mozilla.org/MPL/2.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "4562345b5bbdeb5c6238d301d7b8b3dc2358541a2021beafd09490efd8aa98a9"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.SENDTO",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND"
+            ],
+            "app_name": "BNL Sicuro",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.bnlsicuroappapsicura.apk..backgroundservice",
+                "com.bnlsicuroappapsicura.apk..dtrsbnotisuntilactv",
+                "com.bnlsicuroappapsicura.apk..inj_dnlader",
+                "com.bnlsicuroappapsicura.apk..inj_dnlader2",
+                "com.bnlsicuroappapsicura.apk..managerservice",
+                "com.bnlsicuroappapsicura.apk..mediaprojectionbackservice",
+                "com.bnlsicuroappapsicura.apk..notificationservice",
+                "com.bnlsicuroappapsicura.apk..openmics_srv",
+                "com.bnlsicuroappapsicura.apk..s1",
+                "com.bnlsicuroappapsicura.apk..service1",
+                "com.bnlsicuroappapsicura.apk..service2",
+                "com.bnlsicuroappapsicura.apk..service3",
+                "com.bnlsicuroappapsicura.apk..service4",
+                "com.bnlsicuroappapsicura.apk..srvnewphonecall",
+                "com.bnlsicuroappapsicura.apk..starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.bnlsicuroappapsicura.apk..backgroundservice$backgroundservice_BR",
+                "com.bnlsicuroappapsicura.apk..dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.bnlsicuroappapsicura.apk..httputils2service",
+                "com.bnlsicuroappapsicura.apk..inj_dnlader$inj_dnlader_BR",
+                "com.bnlsicuroappapsicura.apk..inj_dnlader2$inj_dnlader2_BR",
+                "com.bnlsicuroappapsicura.apk..managerservice$managerservice_BR",
+                "com.bnlsicuroappapsicura.apk..mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.bnlsicuroappapsicura.apk..myreceiver",
+                "com.bnlsicuroappapsicura.apk..notificationservice$notificationservice_BR",
+                "com.bnlsicuroappapsicura.apk..openmics_srv$openmics_srv_BR",
+                "com.bnlsicuroappapsicura.apk..s1$s1_BR",
+                "com.bnlsicuroappapsicura.apk..service1$service1_BR",
+                "com.bnlsicuroappapsicura.apk..service2$service2_BR",
+                "com.bnlsicuroappapsicura.apk..service3$service3_BR",
+                "com.bnlsicuroappapsicura.apk..service4$service4_BR",
+                "com.bnlsicuroappapsicura.apk..srvnewphonecall$srvnewphonecall_BR",
+                "com.bnlsicuroappapsicura.apk..starter$starter_BR"
+            ],
+            "activities": [
+                "com.bnlsicuroappapsicura.apk..main",
+                "com.bnlsicuroappapsicura.apk..act_perm_dvadmn",
+                "com.bnlsicuroappapsicura.apk..faknotiactivity",
+                "com.bnlsicuroappapsicura.apk..forc_activateacc",
+                "com.bnlsicuroappapsicura.apk..opencamd",
+                "com.bnlsicuroappapsicura.apk..openmics",
+                "com.bnlsicuroappapsicura.apk..perm_activatemediaproject",
+                "com.bnlsicuroappapsicura.apk..perm_activateoverlay",
+                "com.bnlsicuroappapsicura.apk..perm_ignorebatperm",
+                "com.bnlsicuroappapsicura.apk..perm_notiacc",
+                "com.bnlsicuroappapsicura.apk..perm_phonecal",
+                "com.bnlsicuroappapsicura.apk..perm_smsperm",
+                "com.bnlsicuroappapsicura.apk..perm_startactdevmang",
+                "com.bnlsicuroappapsicura.apk..perm_startactwritesy",
+                "com.bnlsicuroappapsicura.apk..perm_unknownapps",
+                "com.bnlsicuroappapsicura.apk..perm_writesys",
+                "com.bnlsicuroappapsicura.apk..req_all_perms",
+                "com.bnlsicuroappapsicura.apk..wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "DD2B8FAB67577CE55712D9881DEBA7E76D7B8DF5",
+                "serial": "58118218",
+                "issuerDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_after": "Dec 23 08:23:07 2054 GMT",
+                "subjectDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_before": "Aug 24 08:23:07 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.CALL_PHONE",
+                "android.permission.CAMERA",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.VIBRATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.WRITE_SMS",
+                "com.android.alarm.permission.SET_ALARM",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "oppo.permission.OPPO_COMPONENT_SAFE"
+            ],
+            "package_name": "com.bnlsicuroappapsicura.apk",
+            "version_code": "200",
+            "main_activity": "com.bnlsicuroappapsicura.apk..main",
+            "signature_name": "META-INF/ANDROIDD.DSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "TakePicture"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/bnlsicuroappapsicura/apk/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.8019540309906006,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/base.apk.x86_64.flock",
+                    "time": 1.8339500427246094,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/oat/x86_64/base.vdex",
+                    "time": 1.8369140625,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/base.apk",
+                    "time": 1.8415110111236572,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.866189956665039,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.8706040382385254,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/oat/x86_64/base.art",
+                    "time": 1.87245512008667,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/base.apk",
+                    "time": 1.9818460941314697,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6865,
+                    "name": "/data/user_de/0/com.bnlsicuroappapsicura.apk/code_cache/com.android.skia.shaders_cache",
+                    "time": 2.1652719974517822,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6865,
+                    "name": "/dev/graphics/fb0",
+                    "time": 2.284262180328369,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6865,
+                    "name": "/dev/fb0",
+                    "time": 2.296175003051758,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.415342092514038,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.420128107070923,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/txtscreensize.txt",
+                    "time": 2.420758008956909,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.434535026550293,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-journal",
+                    "time": 2.439608097076416,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files",
+                    "time": 2.44028902053833,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-wal",
+                    "time": 2.4420690536499023,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-shm",
+                    "time": 2.4421660900115967,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.5707449913024902,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.5953359603881836,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.595853090286255,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 2.5981099605560303,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.5998470783233643,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.6017701625823975,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.602705955505371,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 2.6027910709381104,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 2.9664759635925293,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.9744980335235596,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.993985176086426,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "636f6d2e626e6c73696375726f61707061707369637572612e61706b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.802556037902832,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.8025920391082764,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "504b0304",
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/base.apk",
+                    "time": 1.841576099395752,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.8692359924316406,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.8707129955291748,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "6172740a3035360000803d78280f01003d719ca600903e7800a03e7800a03f780080927800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000f7770000",
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/oat/x86_64/base.art",
+                    "time": 1.8729331493377686,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.5999979972839355,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.6018221378326416,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.6027541160583496,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 2.98581600189209,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.9940340518951416,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/app/com.bnlsicuroappapsicura.apk-lG84rfNKPcS5aSH_X2kNqQ==/base.apk.x86_64.flock",
+                    "time": 1.8342981338500977,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.3985660076141357,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.41913104057312,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-journal",
+                    "time": 2.4420340061187744,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-shm",
+                    "time": 2.442312002182007,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-wal",
+                    "time": 2.514078140258789,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.596412181854248,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "89504e470d0a1a0a0000000d49484452000001e0000001e00802000000f2b629c2000000206348524d00007a26000080840000fa00000080e8000075300000ea6000003a98000017709cba513c00000006624b474400ff00ff00ffa0bda793000080004944415478daecfd77801cc779e78d7f9fa77b667636072c7220012211cca4488aa44889540e54b264050749f66b59f6d9a73bcb41f7bbb32d87d796f3f9fc7396cfb26549564e54a0244aa24431e704221119d8c5627398d0fd3cef1f55d5d3b3d8452276b76751256a31d3fde99a0add4f3ff5d4534f117dfbcf0000501252c62c69da590f7bd8c31ef6f05cc3b5d3a4a1f977467a5a461ef6b0873dece1b9865949dc110134f5b52e99e31ef6b0873dece17983293171d49d8312309b68f7b0873dec610fcf036c546e555280dc0710c87c05608ea4b3f2b0873dec610fcf03cce63ba93947e6832114f6645dc61ef6b0873dece1798143859e30934846829fa8722b79d8c31ef6b087e709e669d73a59ae2728dbd354740f7bd8c31ef6f0dcc24ca2004163a82808aaa4862000a40210540101e0610f7bd8c31e9e3798955449948d895a94c8e9d80a08949d7467a878d8c31ef6b087e70d0e0901d46ad70452a8022006140a222581124855493dec610f7bd8c3f3059b852a2acedf2e315d0bc7424a008362100025041ef6b0873dece1f98299f85b1f556668ecd46c4041aa1a10605cf5082aa0404938560f7bd8c31ef6f0bcc071280101424a501054020291358690b56093c2e4eb610f7bd8c31e9e2f1844777e14602006026549d6852b51e2f2a14c24ea54710f7bd8c31ef6f07cc044dffe136872994b44f660f2c17c063cec610f7bd8c3f30373f245998c49840012137589ec54a341543dec610f7bd8c3f3061b1347bdfc863be7222cd52be71ef6b0873dece1f980ad930789808800bba64515b028a9725ca7907bd8c31ef6b087e7010ecd77b5e25ccdd243c0f8e1996b9c802733c1e8610f7bd8c31e9e0f3834df4955018555b1150011d9104b4ec603ea610f7bd8c31e9e175801565532325b41641832b2dca13647a87ad8c31ef6b087e70726558615eb202658351be62a2bc8095a338378d8c31ef6b087e7096666fbc55e64c47b928751b39d4d84c9c31ef6b0873d3c5fb082926944ab60033016925416304613f2b0873dec610fcf13cc00600c20eee204b2321c502249aef4b0873dec610fcf0b1c92aaa8725ab413c128dd2e0b73a5f9ec610f7bd8c31e9e1f38a09f7e3998c9c9efb4ca9d96e8b5cf1ef6b0873dece179815912af694013833550b386a492873dec610f7b78de60e26ffd317cf2c9279f7cca5e6267f9005c9c8e195232b5e8610f7bd8c31e9e2f98ddd24228b9152cced9c34c238a686217f1b0873dec610fcf1bcc1000160540003188090a26868299",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.416659116744995,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "b4a2a9b576a5c22e5271737f0270da43c3a739484c74ca78518b297901edd3799d8cb713ccf4a0425c84cf2b5a97bcb57df5faae159b97acbdba6b958115b5e0702e441cc8c68120768897ce73977254b3419f0fa926a0c90ed74e2b79d8c38b01263b5636a60c9518f9969febda784bf7da75dd2b2fe95ad59d0e8ee1bc3608b5bfee9371e7f09af39ca71c07b99a675d2d35d25d77267098dc55a795af873ddc68309999bed4b59ad832400281082017b42efdc5de8dd7f4ac5dd3b9ecc2d69e1cb1cb0e3071d4d3e279c6e424f55c6f50525129c551398eaa1a5724ae48148b441a47222271a42222a2a2aa22b19af58eaa2a52c8e53776af5c5a687de16558a8141007e9b6cdea5d77aee030b9e14eebaef2b087330fab713756558859a4953eaf0a25252211455c05d39b7b37bf73f9a64d9d2b56b6f5f44e0fbe9c88f9b315b889bbf4a952556534aa4c46e5c9b85a8aaaa5b85a8eaa95b81ac5512cb1c491c43124aac4321157c6e3ca785c9dd4785caa13717552e2498d27e36852a33189c7341e8de30188c45557678144bfbdeacaad3dabcfb222d948669b99daf7ccdc75730487b540aae4169deaac33a4b5c5301ef670266117e5d344c26710ec5773c89e578d2a0873bfbcee9a9f59b96d496bd7ca96ee260e00981d89dc546162679e61e1df49ec19754f5d124c1218ae9647aaa5b1ead478549e8c2a5351a5542d55a36a5c294b54198bab43517924ae8c4a7538aa0cc595c138ea93eac1b80a8d11c7902ae2aa5d8fc85c5b9508a45e24a87ba9d8862268fcdad6e5af5b737977be198d9cca71541149be66e4ae9b3b3854e7994f00044a27d5bb5dd8010f7b38a3b02ad9dd5261ad7ccc76633e52114154426bef9facbdfacdcbb7b415db9615dbcc65e64f9d6885898ec020158005ca202521704a764f4bc351e9587962a03c3154991a2b4f8e9727cbd5725c9e2c55ab23521e8a2ac352198aab43523d1a57f79ac01d1243c4058e4ef641323548a62309200e0baae6650336ab838d2349add054db23da6c0d6d4e86c5d7aebefcaa256bd1e0a92c5159a5f612cac85d37677068b6e711d5c04c479fb4753cece18cc3463da9ed4a07868840a082b8dcd9bdee9f2fbce1ba25eb3a8a2d6da15d969db62f6b4d7d0654ec7e554658b295934670f657260f4e8d1e9d1a3d5e1e1f2d4f4c9426ca9552a53239129507e3e8585c391697fb243a2c55481571048d6b16c59ad835eb6358cd967a14587304598f91f43c92103416e21088cd06b04a6217d11093d9163c0698c8ec340ab02a1482e8ffe9b8f027d75fb508fc1f2a125551d3a03372d7cd1d1caa28313159277db8ae9df1320f7b38e33045828061e706d58a66ad5eb364c39f6cbcf9b2eed56db9a6bcb566386949359d3b6dd34874d86395d2bea9a1fd638387a686fb2786c7",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.4171690940856934,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "2edbf8fa5517bf62d9c625b9badbe84489a9ce6d33bdfde3c93bc86442e7d0e830af8966ae1e014047aee9e5cb37bc7cf9868f0000c6e2ca434387bedffffc77fb77de3370002a20b37c462180d5b06dbc182522819b5b444dbfa8ebd04cdd481e3e356cf7bb4cae653e5c9d1aad56a60be8dae3a8440a7054addc3372181cba3b21a3159c3bd8086805c36c8eeedcc963b30c51992876f6236bd25e5430004004d412841b105ed0d27ef1ca4d6f5877d90d9dabd3f7cdb4793973555df40900a0d359dc71bea5b620ffb22517be6cc9851fb9f8d692c60f1c3f70cfb1e71feddf7d7ce4d86eadee8b2b1a47b05171954030fb1f42edae7a4ae0184256ff323e8b046b73cfcc8de4e153c0a2b0f154158223e5f1f1ea148aed40daabd5de334464a4fae0d418c607b9d00a88894c90dd0ace0d1cd69a8f63809441125b6ba9826231c25e42b00a8417059c6c0b448088624da178cb8a2d6f5e75c91b566cc9cd64f02505d4ccd999b9c39891d8c524d1281b56239ecba476465ea14d14dcbce4829b975c80ad2f9b90eaf7fa763fdcb7e7e0d0c1bd93633faa8e97e2921a7f710ed86cf542006208830358ef9a181440251b379287cf08268a633094e8607972d24cea60d6b1e65875eafb83fb10e4a004364bde335ec1730f87f61962eb63603693734b330850700011168002bbc26d11c0406d3576185cd5b57a19e79e1f3cfcc9c9d1b5c5aed5c5625bd80c26e230e4201704852057e080ec65201819613230a33800aa64ac1c5e4cd7926d134a8ddc14005a38f7fa155b5ebf624b0c3c317ce8e163fb0e1e3fb477fcd83da5a15d5323a20aa59073310724aa889da30b432365868d78bed03792874f0b8e950222014841803c174d96a3cac9ef9c72147d73703f385056e7c891d90ace151cba017c5279b2e34a2265258175fcb2f124170d0c308114b110f1978f6c870a54a111348212727934f75edbda755973f796e6ae8dcd3deb5bba9af34d41902b84b9a630ecc83753cdeee122d3a744b337779894acfa31d647bbde1020b56e8281ea959dabaeec5c858dd83b31f4c8c0be0303879e1aeffbfa68dfe1a941c4645cf700757b11b05d5a4f9c811bc9c3a70313c5b180988954948283d55235aa981b03b33c2995a8fcdde37bed6057013effba5b3904993b5ea00ce3ab4b56d7719b321348a00c86b30c2e0ad8183a994863620299502c7910b14aa4c0d4d00393c71f804204226045a17d5bfbf21b5b7a2e695b764debd2b6e6b67c2ed7926fee2ab43407d3630578e99c4eb5b5bee44c17704b0d53ed74414bd7052d5d5877c5ce89e3b71f3f3830d47fdfe8e17f1cde2793a3608690f17b246ba1934cdc481e3e1d1801435cfc19417532ae54eced30d39322c0e1c9314c0d71be155033f790e90ace0d1c5a146c23ef109b1095760e2d9952",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.417293071746826,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "5baf2b0e446302142632109cbaa7c4262fb3d46df1c3a4cac4a4421a038262fbfbd75f7f51fb5223ddc82dfcb3498d922ddb070ffe97fb3ffb573b7f40b91686b210204a42aa4034e76506c0b93b278f3d70743760cd16b32581fc73ff4e5008d88bb3df291ef6f0f909b3123341b54ac801647cc0001b224818a2b03e21812e7a1826eaa644c2812000e44fd7bd68db8a0b13690c38b7452bb011038f1cddbfedbe4f7dedd0139c6f21909a984a26fe1d03089568aecacc2a414000101f294d1ee8dfaf38858da35cad1e1bd8cd9c07402a261e48963bc5c31e3e6fe180def262a8828cb72f311360836b0220eb286d3c8109c0a286c1c46601358354abafef5eff7317dfb2bebdd7e9cb6e075827012b717cffc1edd73ff06f3ad24fb92680486156d42bb1997fe35a30d23928b3c95bcdf6e1f1d220dcbc64cdd2a6b69308e88706f6fdcbf6ef93f1e6664ec2850394c94ef1b087cf5f98152e9025a0aa2a66f2ca0d7fcd67a819372f76984405c40a150061d34facb9f4d2256bcd7570622c49e351f5cebd8fbde4be8f636a92c38211cb4a0a552848e344399dd30a9af7864241c127c6fa9e1b388893a63bfb76212c98490932c10e610a9ccd4ef1b087cf5f9893fdec48d55e691544556263cc8603163d6cdc840904a9be7fc94537afbbdc383e9fb8406fa85afadcf61fbfe1fe8f23aa328c0e0bd3f80a2891d5a655c94d08cc5199c9bc8f89188ad2e8bee34726e36876f98c4ff5ef00852a3110dbf079d9ee140f7bf8bc85436832b708aecd80997946499e6a67c55ee4b06d32d56d4d1daf5d7fd5856d3d98291d9a1afddcf61f7df0c9af22283a773ac0e8a1266b9879586310569dd30a1abf40dbcbfcfda17d370f1dbe7ac9ccbb8cc7b1ec3cb61b14ba09e406e8140f7bf8bc85530b2e34b932f99efe36edeba2850500d12b976e7ce99a4b526d5553a1778e1efbff3ff6cd0f3ef34d0445b6db9c382cf927f5439a6af43929b382d88e98c0c157460eee3f3eab9563e7d83194c6d9bcc2ebc60599ee140f7bf8fc8493581ca7134a18e705ac725353db3b37dfd01e164e3cf9c4e0a1bf78e48e3fdaf363508e6dd0fd052eb3b5714095940154a71e1ad87b70722445d43e7e6fe07904394015667bc5856b670f7bd8c3a74a564053ed19d6535eb388618182825bd75e71cdd2f5f5d703c0837d7b3efac857fffed0e3406a85e6429739c158495541e1df1ddbbd7fe868725dda2bfa6b479f03154c85d819614e7ea32c78053dece1f3164ee4cce969538b1e56bdb6a9fd0397de46b503b6f97e7878fbef3cf2e54ff63d0762e220d5ac0b5de6a4a8001111f1d0c4b19d830727e28ab163a56e057cbdef59040cc044d3aa5db93065f6b0873d7cb2c4eee1ac8ffea3b33cb48b1a1600aaefd87af3f242cd8fd8ccb87e77df93fffda12f7e",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.4183201789855957,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "b1bd1c479f7bfaeef73dfa592811e5cc38898d2765c69bcec30d020778e3556ed1440c2286d8cb4080f524b53419d523b3b07dda1014509dfad4f6effc9f817daf685dda9c2b147305e374ec1eb8794c0428dac2fc2b375c3d3e7cfca1b123b5b568196abac68489f0d6ab000025d549444154c98a631041949955018d5bf3cd7f78eddb6e5ab90900a0390e0f1e3ffca97d0f830b7650a3e254efd98ba166829ad9ace8927849b1e3b7d6bff8bf5effb657acdd161095e3ea1dcf3df48e873e8dc84cf828c85944b2df741e6e1038c0edd7d855c760288148ad1ee184ba55bacd67ca309cfa0f847cb13a3af8cf4fdf79b834b5b9b98bc35c739847f2ae9aeb9468696e015b4b98bf79dda52da5ea5d23871195414c4444928da66b4838310f9b1bdbb929cb9f5ffafa9fbee416d71344c0a1a1be7f3bf020384c75fdec3927cf91edc108c0cf2dbff88357bef6fd57be7a59b1154055a26fed7ef4cd0f7c12951271e0c43db179be32df741e6e14d8983894c0e6b4b9339d6e02324e14c6d78dec35d986c90e1fc06020577862e0f9bfdd735fa11af786450e82967c61eec573ed1d60a33500000a1c5ebb6af386a0d83776fce0d4102824820d6b9789a66b30d8dcd76417a6280888267f61fd8b7febc6b7e5898d026c9a7eef70dfc70f3e0531b3e7ce1e7292621833870052babef382ffb5e5d69fb9e67537add868728b24faeeeec75effc07f606a0241e0661419041b0727f34de7e1468103bcf11aa759274b0c8d3a6008b39495ed0742e66172f3ec2624112308207277dff6bfdbf75867256a222ee40bcdb97911d34972050c992fe95db7bead375f2e3d3a7ad0861e9dad8220275032d8ce1982c9f85cc615b42fffcf5b7f6e59539b3a416bd003a3c7fff5f0d388ca202b7fed7372929ca58c62c74737beecbd97ddf6e6ad2fee369bf800b1c89dbb1f7ded039fc2d428acebbd5179ccbd679eae86693a0f671c4e4d12265a1f92e917738cdd79b52a6a96e1943a434aae45988210517457dff64f1f79ae7d6a4a8162a1b925cc4f97a0739452790744eb3a966eee59bd24a61f0c1d84387b684d6a2825b307ee4aca5a3b2f386c1461725a8802acdf79d92f5eed3611a6d4dfa393c30f1c7eaeaf34e2f41437c76862beaa5937e4329718241f58fda28f5cf6aadb2fbe714bf74a4a75e1d7763ef086073e8dc951aaed22ef1e39352e3a26007b869bcec38d0307b8fd6a0725be1d4edf269898306604599f320bab8be7571bcbdac40ce64a65eadb7d3beeecdf1d8e8d8c96279bf2c58e42730d9a63416dc25833516f73fbd625eb36e45aee183a88f2848be26f673b894066c74242cd9b3d5bedbcd0b013a9e6858668ec5fafffd9376fba2e399d4e83e589c78eee7a6eec1811c30e28d9c6b703d7f283222e5fd5bdf6cf2fbbfd1d97dc72",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.418627977371216,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "610b6e46ac14b36e4d6596e5da7b5871b978d09f1df2cad015002037e87aa258fbe4d87139d89e6f641f72101c263f967a031da060c10d896d800e37088b3ba6476232cdead4055ffed8d43e3314c2f675a6e335d9b7294acdaef04d93430625de0d4db204f1461fa060c10d8cdd3805c2cb0c8cda5794e0e6c2ccf63442e815cec351c0d5e64403c53f2fd8b61a37c2010a16dcc03876b11199d7cc49aa135db7040b162c58707db04250b461cd1cc4738a45f4649c172c58b060c175c2ca4474bb8683086f3688d7156aa6a0cd9560c182050bae0376e31b8433a326d680e2c572c182050b165c1fac385e2d1dbc11ad897573a1e0218f60c182050bae0376b07db3fd2bdcae6aa9b54eb060c18205cf378e4d1a5b9302617f83e8b560c182050b9e7f9cec62187f4900c756723209c182050b163ccfd80668a2c4c686c53b880380cf82050b162cb84e58b32205686606b4066233828723da686d4be24482050b162cb84e18e4b2cf5004cd50c108bd0cc0ccd344ec33cc53c5f04fc182050b165c174cf8eac72c858de8d19cb2611d36b32d8d87e90a162c58b0e079c60eeed8643760402990193692008001d38e5a6b4a29204857b060c18205cf3f4e96a06166344210cb9321bf2af60b162c58b0e0f9c4aefdc3f7410a143e5c0c36ae4a57b060c18205d70b13eefd68b49601665b1b024a44f4aa45b060c18205cf330e4ad08895b415814c1509db0de240b060c18205d7053bd8b6190c10c14c6b0404413db698106fe3bd60c182050bae07b603f69b42b5fdc7548b109152b66284a2782f58b060c182eb831d6cdf6cbbb290f176533b0e1ec7c65b22b356b060c18205d7032b581cfd63d2085e0634d842b060c18205d707bbb6ee836b26945c34dbe2b760c182050b9e7f1c8c9e34b7ab3282050b162c78feb1aa5e13d4570760ae54040b162c58f0fc6107db36c7fee4d8ff6d415c91e2da290b162c58b0e079c40a51633b0510d90620613857ccbe8a0575c182050b165c1fec60dbe6a06ba10f98d2b60a223ac09e528e661d6e2f58b060c182eb8309f77e0870001f70c8d4873040e0aa9e2d76f1050b162c58707db00b3800cc060c05d68009e52a2878eb203908162c58b0e0bae1b015870fb800030ee0d8c90b890052708390ef08162c58b0e0ba61d38ac307084a8101f8b1613b08f0190428c00738782158b060c182e71d2b5005704080e72910a088a0c8215010c57d1be6050b162c5870fd3039b86313880105c5663a2c66306b90a9b8364f191960900243b060c18205d7072b80a009d0a6969a11752f344329018006986cb15cb060c18205d7036b07776c86a2a0122408e12098e6d3cc76333b00930305c182050b165c07ac403e60da79104c7b690299095760a23901001198409e60c182050bae0f76b06d334cb7c2000000",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/loading.gif",
+                    "time": 2.4188060760498047,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "53514c69746520666f726d617420330010000101004020200000000b0000000b0000000000000000000000080000000400000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000b002de21a0d000000040dbf000f5e0f0c0e710dbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.4202730655670166,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.420323133468628,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "05000000050fe2000000000b0ffa0ff40fee0fe80fe20f250f120eff0ef10ed00eb50e920e840e6b0e450e350e1b0df90dd50db90d970d840d650d470d230d050cea0cd30cb40c990c830c630c3c0c1c0bfa0be00bc60ba10b870b6f0b590b3f0b220b080af40adc0ac00aa80a910a780a600a3a0a2209fd09dd09cd09b10995097909560930091c090508f008d308cb08af08960888086a08540830081107ef07dc07c607ad07980776075f07440733071b06f006d606b7069e0689065d063f0620060a05ee05d205b80591056c054f0522050c04f204d504bc049f047f0464044f0437041703f003c703a7038b037403580340031c02f102db02c602ad0288026602410226020801eb01c201b00192017d015c0139012201850169014d012d000014874f03002f636f6d2e62616e6b69612e77616c6c657420874e030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e874d030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212874c03002b636f6d2e42616e6b416c42696c61641b874b03003d636f6d2e42616e6b416c42696c61642e456e6a617a4170700f874a030025636f6d2e62616e696e746572268749030053636f6d2e62616e6573636f2e73616d6662616e63616d6f76696c756e696669636164611a874803003b636f6d2e62616e637361626164656c6c2e77616c6c65741b874703003d636f6d2e62616e636f7270736f7574682e616e64726f6964188746030037636f6d2e62616e636f6d65722e6d62616e6b696e6722874503004b636f6d2e62616e636f646576656e657a75656c612e6264766469676974616c1f8744030045636f6d2e62616e636f6465626f676f74612e62616e63616d6f76696c22874303004b636f6d2e62616e636f63616a61736f6369616c2e67656f6c6f636174696f6e168742030033636f6d2e617a696d6f2e73656e646d6f6e657912874103002b636f6d2e617869732e6d6f62696c6513874003002d636f6d2e61786162616e7175652e667228873f030057636f6d2e6176656e7472692e6669727374686f72697a6f6e62616e6b33303030303537343221873e030049636f6d2e6175622e6d6f62696c6562616e6b696e672e6b772e70686f6e6515873d030031636f6d2e6174742e6d79576972656c65737319873c030039636f6d2e6174622e627573696e6573736d6f62696c6514873b03002f636f6d2e6174622e4154424d6f62696c6519873a030039636f6d2e61737761742e6361727265666f75727561651d8739030041636f6d2e61737365636f2e6879627269642e626f732e70726f64268738030053636f6d2e61726b65612e616e64726f69642e6170706c69636174696f6e2e636d736f3224873703004f636f6d2e61726b65612e",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.4203710556030273,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "0d000000880125000fe30fcf0fb90f8b0f700f550f3a0f210f000ee10ec40e8f0e7b0e610e440e2e0e160df70ddb0dbb0d9d0d7c0d5b0d320d1c0cf90ce60cca0cad0c830c650c4d0c360c1d0bf90be10bc80bac0b920b6e0b4c0b270b050ae30aba0a960a760a550a340a1909f909e209c009a409940972095a093c091b08fc08dd08c608b00895087d086108430828080f07e807c307a1078d076f074f0743072e071706fd06ea06d706c206aa069d0681066b065606380627061005f205d905c105b2058a0575055b054a0535051f050604ec04d304be04a9048404720461044e042a041303f903d203b403a1036f03580346032c030402ea02c802ae029c02840259023b021b020b01f301dd01be0196015f014a0125030037636f6d2e6f70656e736f228b7a03004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e67128b7903002b6e65742e6f6e6539372e706179746d348b7803006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f6964258b770300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c8b7603003f6e65742e626e70706172696261732e6d6573636f6d70746573138b7503002d6e65742e6269747374616d702e617070158b740300316e65742e6269746261792e626974636f696e0d8b730300216e65742e6172616d65781d8b720300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b8b7103003d6d792e636f6d2e687362632e687362636d616c6179736961288b700300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e656374158b6f0300316d782e687362632e687362636d657869636f0f8b6e0300256d782e636f6d2e62622e6232178b6d0300356d782e62616e637361626164656c6c2e706172741f8b6c0300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c178b6b0300356d6f62696c6974792e67652e7465726162616e6b258b6a0300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c69178b690300356d652e63727970746f7061792e616e64726f69640f8b680300256d62616e6b696e672e4e4247148b6703002f6d612e6762702e706f636b657462616e6b2f8b660300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c6574108b650300276b746263732e6e657462616e6b1b8b6403003d6a702e6e652e7061797061792e616e64726f69642e617070248b6303004f6a702e6a6170616e706f73742e706f73742e706f7374626f782e616e64726f6964178b620300356a",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.4205191135406494,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "0d000000900133000fe70fcc0fb50f9a0f850f680f540f3d0f2d0f130ef10edb0ebf0eaa0e900e7f0e610e480e300e1a0e070df90ddb0dce0db20d880d710d4d0d2d0d110cf80cd50cb80c9d0c880c6b0c5e0c510c300c140bef0bdd0bc40bad0b8b0b710b500b340b200b0d0af60ada0ab80a9e0a8d0a790a660a4c0a350a1e0a0109ea09bb099b0980096f0955093d08ff08f308e308d608b808a408960878085d08390823080507e907d207b8079a0781076b075507390723071206fa06dd06ca069e067f0667064f062d060f05f205d505bb05a00587057505520533051104f804de04cc04b8049f048b046604410422040703ef03cf03b50397036b034e03380326030302ef02db02b1029c02870272025a023c022001fb01d901ca01a5018b0163014901330000000000000000000000138a7203002d64652e636f6d6469726563742e617070178a7103003564652e636f6d6469726563742e616e64726f6964258a7003005164652e61646573736f5f6d6f62696c652e7365637572656170702e6e657462616e6b178a6f030035637a2e63736f622e736d61727462616e6b696e67228a6e03004b636f6f702e62616e636f6372656469636f6f702e62616e63616d6f62696c650c8a6d03001f636f6d2e7a7a6b6b6f1f8a6c030045636f6d2e7a6f6c7578696f6e65732e6f666669636562616e6b696e67228a6b03004b636f6d2e7a69726161746b6174696c696d2e6d6f62696c6562616e6b696e67198a6a030039636f6d2e7a69726161742e7a69726161746d6f62696c1b8a6903003d636f6d2e7a656e69746842616e6b2e65617a796d6f6e6579158a68030031636f6d2e7a656c6c657061792e7a656c6c65128a6703002b636f6d2e7a61696e6b772e7a61696e128a6603002b636f6d2e796b622e616e64726f6964128a6503002b636f6d2e7961702e62616e6b696e67278a64030055636f6d2e7961686f6f2e6d6f62696c652e636c69656e742e616e64726f69642e6d61696c118a63030029636f6d2e7772782e77617a697278118a62030029636f6d2e776f6f64666f72657374208a61030047636f6d2e77696c6c6d6f62696c652e6d6f62696c6562616e6b2e6663620f8a60030025636f6d2e7768617473617070138a5f03002d636f6d2e77686174736170702e7734621a8a5e03003b636f6d2e77662e77656c6c73666172676f6d6f62696c65298a5d030059636f6d2e7765737465726e756e696f6e2e6d6f6e65797472616e7366657272336170702e65731b8a5c03003d636f6d2e7761766573706c6174666f726d2e77616c6c6574178a5b030035636f6d2e776172626162616e6b2e77616c6c65741d8a5a030041636f6d2e77616c6c65742e63727970746f2e7472757374617070158a59030031636f6d2e7674622e6d6f62",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.4205501079559326,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "0d0000005b05e4000fe70fcc0fb90f940f6f0f4a0f350f230ee40ea50e660e4f0e330e240e0e0df90ded0dd70db30d880d730d390d1c0d060cf60cea0ccd0cad0c970c7f0c710c520c350c230c0f0bf00bd30bbf0bb10b960b7c0b630b4d0b330b210b080af10acd0aa50a960a6e0a490a340a180a0209e109be09a6098a09750950092a090008e508ce08ba08a6088708740861084608350824080807e907c607b4079d07790754071f06fe06df06c206a7069a06830659062f060305e4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db",
+                    "time": 2.420703172683716,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6810,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/txtscreensize.txt",
+                    "time": 2.4213130474090576,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6874,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-shm",
+                    "time": 2.9749300479888916,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                },
+                {
+                    "pid": 6810,
+                    "tid": 6874,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.bnlsicuroappapsicura.apk/files/db.db-shm",
+                    "time": 2.9752659797668457,
+                    "processname": "com.bnlsicuroappapsicura.apk"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

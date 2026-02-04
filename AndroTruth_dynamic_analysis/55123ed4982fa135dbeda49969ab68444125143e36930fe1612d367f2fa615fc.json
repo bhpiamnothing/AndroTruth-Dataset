@@ -1,0 +1,729 @@
+{
+    "apk_info": {
+        "id": "J50l1m8Lbe8d3XrY",
+        "url": "https://developer.koodous.com/apks/55123ed4982fa135dbeda49969ab68444125143e36930fe1612d367f2fa615fc/",
+        "sha256": "55123ed4982fa135dbeda49969ab68444125143e36930fe1612d367f2fa615fc",
+        "md5": "97beeed9d767119846b227d8a280e27c",
+        "sha1": "38aae6842bf2995e95c87d6c6fe8d173ac338d42",
+        "app": "Kik",
+        "package_name": "kik.android",
+        "company": "Default Company Ltd",
+        "version": "8.7.0.1643",
+        "image": "https://developer.koodous.com/media/apk_images/3d/5a/3d5a798f24d525ea3da8612cc4d3b574b8a1366ca55fcc25bb2fd6c5242b0626",
+        "size": 14748484,
+        "tags": [
+            "sms-thief",
+            "domestickitten",
+            "spyagent",
+            "cve-2009-1157",
+            "spyware",
+            "trojan",
+            "golf",
+            "reflection",
+            "telephony",
+            "exploit",
+            "contains-elf"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -7,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 23,
+        "comments_count": 2,
+        "votes_count": 7,
+        "created_at": "2018-10-12T19:27:39+02:00",
+        "updated_at": "2025-05-28T04:37:00.812511+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "97beeed9d767119846b227d8a280e27c",
+                    "sha1": "38aae6842bf2995e95c87d6c6fe8d173ac338d42",
+                    "size": 14748484,
+                    "crc32": "07D78743",
+                    "sha256": "55123ed4982fa135dbeda49969ab68444125143e36930fe1612d367f2fa615fc",
+                    "sha512": "a3e37a2daaaabd041e819252889f8f1332db827087df894fab7a12d9109f427790d29d4a505c467b93d59465173de4303fe87960b0b32d68c32eeed572ca23e3",
+                    "ssdeep": "393216:CpFlln8cD7y9b8KV/wp5g7BUYY6unJZuzqJlCwrT:CxtCb8KVO5gtuJZuw"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "cdn.kik.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "54.192.94.19",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.192.94.132",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.192.94.161",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.192.94.74",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "cdn.kik.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "54.192.94.19"
+                ],
+                "domains": [
+                    {
+                        "ip": "54.192.94.74",
+                        "domain": "cdn.kik.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "https://bot-dashboard.appspot.com/api",
+                "http://meme.kik.com/img/icon-square.png?v=5",
+                "https://kik-shop-dev.herokuapp.com",
+                "https://settings.crashlytics.com/spi/v2/platforms/android/apps/%s/settings",
+                "http://sketch.kik.com/",
+                "https://kik.com/captcha-url",
+                "https://chatpics.kik.com/",
+                "https://my.kik.com/",
+                "http://api.mixpanel.com/engage",
+                "http://kik.com/u/%1$s/share",
+                "http://meme.kik.com/",
+                "http://videos.kik.com/img/icon_square.png?v=5",
+                "https://ws.piranhakik.com",
+                "http://platform.piranhakik.com",
+                "kik.me/%s",
+                "vnd.android.cursor.item/im",
+                "X509Store.CRL/LDAP",
+                "Cipher.RSA/PKCS1",
+                "http://smiley-cdn.kik.com/smileys/",
+                "http://meme.kik.com/img/icon.png?v=5",
+                "Cipher.RSA/RAW",
+                "https://kik-shop-dev.herokuapp.com/#",
+                "http://image-search.kik.com/img/icon.png?v=5",
+                "https://cdn.kik.com/mobile/abtests/",
+                "Cipher.RSA/ISO9796-1",
+                "http://dash.kik.dev:9000/",
+                "http://kik-popbot-staging.twg.ca/feed/",
+                "http://help.kik.com",
+                "http://profilepicsup.piranhakik.com/profilepics",
+                "http://127.0.0.1/chatImage/",
+                "https://platform.kik.com/content/files/",
+                "https://api.mixpanel.com/engage",
+                "https://engine.kik.com/api",
+                "vnd.android.cursor.item/note",
+                "https://clientmetrics.kik.com/clientmetrics/v1/data",
+                "http://videos.kik.com/",
+                "vnd.android.cursor.item/postal-address_v2",
+                "https://engine.apikik.com/api",
+                "http://sketch.kik.com/icon_square.png?v=5",
+                "http://kik.com/support.php",
+                "http://image-search.kik.com/img/icon_square.png?v=5",
+                "http://sketch.kik.com/icon.png?v=5",
+                "www.bouncycastle.org",
+                "X509Store.CRL/COLLECTION",
+                "www.kik.com",
+                "Alg.Alias.Signature.SHA/DSA",
+                "Alg.Alias.Cipher.RSA//OAEPPADDING",
+                "http://kik-popbot-staging.twg.ca/users/%s",
+                "https://home.kik.com/img/icon.png?v=5",
+                "https://platform.piranhakik.com/content/files/",
+                "http://www.w3.org/XML/1998/namespace",
+                "Alg.Alias.Cipher.RSA//NOPADDING",
+                "https://kik.com/",
+                "Alg.Alias.Cipher.RSA//RAW",
+                "Cipher.RSA/1",
+                "Cipher.RSA/2",
+                "http://www.w3.org/2000/xmlns/",
+                "http://www.w3.org/ns/ttml",
+                "http://127.0.0.1/base64/",
+                "http://api.mixpanel.com/track?ip=1",
+                "https://my.kik.com/#",
+                "Alg.Alias.Mac.DES/CFB8",
+                "https://kik-dashboard.herokuapp.com/",
+                "http://image-search.kik.com/",
+                "https://stickers.kik.com/",
+                "http://decide.mixpanel.com/decide",
+                "Alg.Alias.Cipher.RSA//ISO9796-1PADDING",
+                "Alg.Alias.Cipher.RSA//PKCS1PADDING",
+                "https://e.crashlytics.com/spi/v2/events",
+                "https://decide.mixpanel.com/decide",
+                "https://stickers.kik.com/icon_square.png?v=5",
+                "http://www.smpte-ra.org/schemas/2052-1/2010/smpte-tt",
+                "https://ws.kik.com",
+                "http://kik.me/%s #kik #kikme",
+                "http://kik.com/privacy",
+                "http://cdn.kik.com/cards/unsupported.html",
+                "http://xmlpull.org/v1/doc/features.html#process-namespaces",
+                "vnd.android.cursor.item/organization",
+                "https://api.mixpanel.com/track?ip=1",
+                "https://platform.piranhakik.com/clientmetrics/v1/data",
+                "Cipher.RSA/OAEP",
+                "https://home.kik.com/",
+                "Alg.Alias.Mac.IDEA/CFB8",
+                "http://xmlpull.org/v1/doc/",
+                "https://profilepicsup.kik.com/profilepics",
+                "http://127.0.0.1/groupPic/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "88b4e10f0d3fc8319f5edb7c17d430760394e214124cd6c3067a065c1e4753a6",
+                    "ssdeep": "49152:h48XNuSXDxSID60jHWzOz6TtPflhPtCiTsO/+6myvYoiQRhJyK65u9ttc44T:i8XNuSXoDgqHXPv/+6QTK65kttc4M"
+                }
+            },
+            "api_key": {
+                "com::crashlytics::ApiKey": "05f490868c9518194f9555a7d8664f006da667ac"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.BATTERY_OKAY",
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.VIEW",
+                "android.intent.action.SCREEN_ON",
+                "android.intent.action.BATTERY_LOW",
+                "android.intent.action.SCREEN_OFF",
+                "android.intent.action.BATTERY_CHANGED",
+                "android.intent.action.ACTION_POWER_DISCONNECTED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "kik.platform.send",
+                "com.android.vending.INSTALL_REFERRER",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.ACTION_POWER_CONNECTED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE"
+            ],
+            "app_name": "Kik",
+            "services": [
+                "com.golf.rv.Sicas$CanonicalService",
+                "kik.android.sdkutils.concurrent.AlarmManagerExecutorService",
+                "kik.android.net.communicator.CommunicatorService",
+                "com.golf.rv.SicasService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "kik.android.VideoContentProvider",
+                "kik.android.KikDataProvider",
+                "kik.android.KikFileProvider"
+            ],
+            "receivers": [
+                "com.golf.rv.Sicas",
+                "kik.android.chat.service.StartupReceiver",
+                "kik.android.AlarmReceiver",
+                "com.google.android.apps.analytics.AnalyticsReceiver"
+            ],
+            "activities": [
+                "kik.android.chat.activity.ChatActivity",
+                "kik.android.chat.activity.FragmentWrapperActivity",
+                "kik.android.chat.activity.IntroActivity",
+                "kik.android.chat.activity.KikCropActivity",
+                "kik.android.chat.activity.KikApiLandingActivity",
+                "kik.android.chat.activity.ConversationsActivity",
+                "kik.android.chat.fragment.SimpleFragmentWrapperActivity",
+                "kik.android.chat.activity.MissedConversationsActivity",
+                "com.kik.cards.browser.PopupWindowActivity",
+                "kik.android.chat.activity.KikPlatformLanding",
+                "com.kik.cards.usermedia.CustomGalleryActivity",
+                "kik.android.chat.activity.KikWelcomeFragmentActivity"
+            ],
+            "certificate": {
+                "sha1": "DE7AE13985BF5BB4E0DA90154DD0B401AA2A4E2B",
+                "serial": "90928562A236A62F",
+                "issuerDN": "/C=XX/L=Default City/O=Default Company Ltd",
+                "not_after": "Aug 20 09:42:41 2026 GMT",
+                "subjectDN": "/C=XX/L=Default City/O=Default Company Ltd",
+                "not_before": "Aug 22 09:42:41 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.QUICKBOOT_POWERON",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "kik.android.permission.CONTACT",
+                "android.permission.INTERNET",
+                "com.android.vending.BILLING",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.SEND_SMS",
+                "android.permission.WRITE_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.GET_TASKS",
+                "android.permission.READ_CALL_LOG",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.CALL_PHONE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.STORAGE",
+                "android.permission.READ_SMS",
+                "android.permission.VIBRATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.CAMERA",
+                "android.permission.WAKE_LOCK",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.READ_CONTACTS",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "kik.android",
+            "version_code": "127",
+            "main_activity": "kik.android.chat.activity.IntroActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "const-string v2, 'sms_body'",
+                        "class": "Lkik/android/widget/preferences/ShareSmsPreference;",
+                        "method": "onPreferenceClick"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/golf/a/a/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/golf/a/b/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lkik/android/util/DeviceUtils;",
+                        "method": "d"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v2, 'https'",
+                        "class": "Lb/a/a/a/a/e/b;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v7, 'https://e.crashlytics.com/spi/v2/events'",
+                        "class": "Lb/a/a/a/a/g/k;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v7, 'https://settings.crashlytics.com/spi/v2/platforms/android/apps/%s/settings'",
+                        "class": "Lb/a/a/a/a/g/q;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lb/a/a/a/a/b/t;",
+                        "method": "g"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/golf/a/a/d;",
+                        "method": "a"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/golf/a/a/d;",
+                        "method": "a"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v5, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lcom/golf/a/a/a/c$a$2;",
+                        "method": "surfaceCreated"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/golf/a/a/a/c$a$2;",
+                        "method": "surfaceCreated"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, v3, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lcom/golf/a/a/a/c$a$2;",
+                        "method": "surfaceCreated"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lb/a/a/a/a/b/j;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lb/a/a/a/a/b/j;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lb/a/a/a/a/e/i;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v1, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lb/a/a/a/a/e/f;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v3, Ljava/net/URL;->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection;",
+                        "class": "Lb/a/a/a/a/e/f;",
+                        "method": "a"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/golf/a/d/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lkik/android/chat/fragment/KikRegistrationFragment;",
+                        "method": "onCreateView"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lb/a/a/a/a/b/p;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lb/a/a/a/a/c/a;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lb/a/a/a/a/c/p;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/golf/a/a/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lkik/android/util/cj;",
+                        "method": "a"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v3, v1, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/golf/a/b/a;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v1, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lb/a/a/a/a/b/j;",
+                        "method": "c"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 8,
+            "new_permissions": [
+                "kik.android.permission.CONTACT"
+            ],
+            "displayed_version": "8.7.0.1643",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "path": "/data/app/kik.android-1.apk",
+                    "time": 0.669974,
+                    "processname": "kik.android"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 857,
+                    "tid": 705456600,
+                    "data": "74504b010214001400080808007bb8e14c07ce2d10f8300100e07302001e00000000000000000000000000d6f203006173736574732f666f6e74732f526f626f746f2d4974616c69632e747466504b01020a000a0000080000c01b21003e392725560300005603000024000000000000000000000000001a2405007265732f6472617761626c652d686470692d76342f7370696e6e65725f74776f2e706e67504b01020a000a0000080000c01b21001df6941d40020000400200002b00000000000000000000000000b22705007265732f6472617761626c652d78686470692d76342f726563656970745f64656c6976657265642e706e67504b01020a000a0000080000c01b2100ae8439cc940200009402000028000000000000000000000000003b2a05007265732f6472617761626c652d78686470692d76342f73657470686f746f5f636f6c6f722e706e67504b01020a000a0000080000c01b210086150c96df020000df0200002300000000000000000000000000152d05007265732f6472617761626c652d78686470692d76342f6269676d7574656f6e2e706e67504b01020a000a0000080000c01b2100664b7538ca040000ca0400002500000000000000000000000000353005007265732f6472617761626c652d78686470692d76342f63616d6572615f666c69702e706e67504b01020a000a0000080000c01b",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 58.823425,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "2f6472617761626c652d7878686470692d76342f64656661756c745f7765625f69636f6e2e706e67504b01020a000a0000080000c01b210070c252ee1d0400001d040000210000000000000000000000000042eca5007265732f6472617761626c652f64656661756c745f7765625f69636f6e2e706e67504b01020a000a0000080000c01b210060fad080c2010000c201000028000000000000000000000000009ef0a5007265732f6472617761626c652d686470692d76342f67726f75706e616d655f77686974652e706e67504b01020a000a0000080000c01b210011c278df5d0300005d0300002800000000000000000000000000a6f2a5007265732f6472617761626c652d78686470692d76342f73746f705f69636f6e5f646f776e2e706e67504b01020a000a0000080000c01b210001c474f19803000098030000260000000000000000000000000049f6a5007265732f6472617761626c652f6f70656e5f627574746f6e5f707265737365642e392e706e67504b01020a000a0000080000c01b2100083504c2d7000000d7000000230000000000000000000000000025faa5007265732f6472617761626c652f69636f6e6d61736b5f707265737365642e392e706e67504b01020a000a0000080000c01b2100aea7750d490700004907000028000000000000000000000000003dfba5007265732f647261776162",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 56.653799,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "504b0506000000008e098e09ba37030074d3dd000000504b010214001400080808007bb8e14c038efa649d170100217a03001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b010214001400080808007bb8e14c45e01db47b1b0100567a03001000000000000000000000000000e31701004d4554412d494e462f434552542e5346504b010214001400080808007bb8e14c1b25e40b08040000b604000011000000000000000000000000009c3302004d4554412d494e462f434552542e525341504b01020a000a0000080000c01b210050dd8955c6030000c60300002f00000000000000000000000000e33702007265732f6472617761626c652d78686470692d76342f6f75745f627562626c655f73656c65637465642e392e706e67504b01020a000a0000080000c01b2100dcc25337a3000000a30000002100000000000000000000000000f63b02007265732f6472617761626c652d686470692d76342f77656277686974652e706e67504b01020a000a0000080000c01b21004e5cd395d40e0000d40e00003100000000000000000000000000d83c02007265732f6472617761626c652d7878686470692d76342f736d696c65795f636f6c6f6e5f6f70656e5f677261792e706e67504b01020a000a0000080000c01b2100b3fdc6a24c0300004c030000",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 37.313647,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705456600,
+                    "data": "504b0506000000008e098e09ba37030074d3dd000000504b010214001400080808007bb8e14c038efa649d170100217a03001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b010214001400080808007bb8e14c45e01db47b1b0100567a03001000000000000000000000000000e31701004d4554412d494e462f434552542e5346504b010214001400080808007bb8e14c1b25e40b08040000b604000011000000000000000000000000009c3302004d4554412d494e462f434552542e525341504b01020a000a0000080000c01b210050dd8955c6030000c60300002f00000000000000000000000000e33702007265732f6472617761626c652d78686470692d76342f6f75745f627562626c655f73656c65637465642e392e706e67504b01020a000a0000080000c01b2100dcc25337a3000000a30000002100000000000000000000000000f63b02007265732f6472617761626c652d686470692d76342f77656277686974652e706e67504b01020a000a0000080000c01b21004e5cd395d40e0000d40e00003100000000000000000000000000d83c02007265732f6472617761626c652d7878686470692d76342f736d696c65795f636f6c6f6e5f6f70656e5f677261792e706e67504b01020a000a0000080000c01b2100b3fdc6a24c0300004c030000",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 52.51224,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "4b01020a000a0000080000c01b2100115826d236030000360300003200000000000000000000000000c03faa007265732f6472617761626c652d7878686470692d76342f636f6e766f5f726563656970745f7075736865645f6f6e2e706e67504b01020a000a0000080000c01b210047d93c4e490100004901000023000000000000000000000000004643aa007265732f6472617761626c652d686470692d76342f6d696e696d697a656f6e2e706e67504b01020a000a0000080000c01b210006531a8724020000240200002400000000000000000000000000d044aa007265732f6472617761626c652d7878686470692d76342f736176655f677265792e706e67504b01020a000a0000080000c01b210016f9754bc9000000c900000026000000000000000000000000003647aa007265732f6472617761626c652d686470692d76342f63656c6c5f736861646f772e392e706e67504b01020a000a0000080000c01b210067d97dd99e0100009e01000030000000000000000000000000004348aa007265732f6472617761626c652f70726f67726573736261725f696e64657465726d696e6174655f686f6c6f352e706e67504b01020a000a0000080000c01b2100d1668f27ea030000ea03000023000000000000000000000000002f4aaa007265732f6472617761626c652d686470692d76342f69636f6e5f65617274",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 58.782869,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705456600,
+                    "data": "5f637a6563682e747874504b01020a000a0000080000c01b2100681c8401ef010000ef01000031000000000000000000000000004fec02007265732f6472617761626c652d686470692d76342f627574746f6e5f77686974655f646f776e73746174652e392e706e67504b01020a000a0000080000c01b2100a65e90e87c0200007c02000048000000000000000000000000008dee02007265732f6472617761626c652d6e6f6470692d76342f636f6d5f6d697870616e656c5f616e64726f69645f726f756e6465645f626f74746f6d5f73656c65637465642e392e706e67504b01020a000a0000080000c01b210036f8c3a4590800005908000028000000000000000000000000006ff102007265732f6472617761626c652d7878686470692d76342f63616d6572615f7573655f6f6e2e706e67504b01020a000a0000080000c01b210086e15ff0aa000000aa0000002c000000000000000000000000000efa02007265732f6472617761626c652d686470692d76342f66756c6c5f73657474696e67736c696e652e392e706e67504b010214001400080808007bb8e14cbe9001e2ef02000010070000200000000000000000000000000002fb02007265732f6c61796f75742f636f6d706f73655f746f5f6e61766261722e786d6c504b01020a000a0000080000c01b21002d507454720500007205000029000000000000",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 55.744202,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "0aad8b620100002c0300001700000000000000000000000000d835a8007265732f616e696d2f706f7075705f73686f772e786d6c504b01020a000a0000080000c01b2100e941da1c610200006102000044000000000000000000000000007f37a8007265732f6472617761626c652d78686470692d76342f636f6d5f6d697870616e656c5f616e64726f69645f7371756172655f6e6f64726f70736861646f772e392e706e67504b01020a000a0000080000c01b21002e6231bf67000000670000002e00000000000000000000000000423aa8007265732f6472617761626c652f636f6e74656e745f627562626c655f736570617261746f725f766572742e706e67504b01020a000a0000080000c01b2100111947dc39020000390200002800000000000000000000000000f53aa8007265732f6472617761626c652f69636f6e5f726f7461746572696768745f6163746976652e706e67504b01020a000a0000080000c01b2100b857839341020000410200002600000000000000000000000000743da8007265732f6472617761626c652d686470692d76342f70726f6d6f7465645f677261792e706e67504b01020a000a0000080000c01b21004d02eb312b2300002b2300002e00000000000000000000000000f93fa8007265732f6472617761626c652d7878686470692d76342f736d696c65795f636f6c6f6e5f646f",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 57.693802,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "00e86b93007265732f6472617761626c652f636f6e766f5f726563656970745f7075736865642e706e67504b01020a000a0000080000c01b21004f6ef394e7070000e70700001f00000000000000000000000000906d93007265732f6472617761626c652f736d696c65795f636f6c6f6e5f6f2e706e67504b01020a000a0000080000c01b210010c31da748090000480900003b00000000000000000000000000b47593007265732f6472617761626c652d78686470692d76342f736d696c65795f636f6c6f6e5f61706f7374726f7068655f6f70656e5f677261792e706e67504b01020a000a0000080000c01b210079764c2e58090000580900003000000000000000000000000000557f93007265732f6472617761626c652d78686470692d76342f736d696c65795f636f6c6f6e5f737461725f677261792e706e67504b01020a000a0000080000c01b21007192cb9508020000080200002c00000000000000000000000000fb8893007265732f6472617761626c652d78686470692d76342f7472696d6d696e6768616e646c656c6566742e706e67504b01020a000a0000080000c01b2100f4742045c9010000c901000028000000000000000000000000004d8b93007265732f6472617761626c652d78686470692d76342f736d616c6c6d75746577686974652e706e67504b01020a000a0000080000c01b21009d4c",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 54.65544,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "00003c00000000000000000000000000cdc890006f72672f6170616368652f636f6d6d6f6e732f636f6465632f6c616e67756167652f626d2f6173685f72756c65735f68756e67617269616e2e747874504b01020a000a0000080000c01b2100a4a845a30b0100000b0100002300000000000000000000000000a0cc90007265732f6472617761626c652d78686470692d76342f646f6e655f677265792e706e67504b01020a000a0000080000c01b2100618d8353dd010000dd0100002b00000000000000000000000000eccd90007265732f6472617761626c652d686470692d76342f636f6e766f5f726563656970745f73656e742e706e67504b01020a000a0000080000c01b21003ec3176674060000740600002a0000000000000000000000000012d090007265732f6472617761626c652d686470692d76342f627574746f6e5f73657470686f746f2e392e706e67504b01020a000a0000080000c01b2100c0f512b91e0f00001e0f00003400000000000000000000000000ced690007265732f6472617761626c652d7878686470692d76342f627574746f6e5f73657470686f746f5f707265737365642e392e706e67504b01020a000a0000080000c01b2100a25de995c6000000c60000002c000000000000000000000000003ee690007265732f6472617761626c652d686470692d76342f7472696d6d696e6768",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 52.107969,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "504b0506000000008e098e09ba37030074d3dd000000504b010214001400080808007bb8e14c038efa649d170100217a03001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b010214001400080808007bb8e14c45e01db47b1b0100567a03001000000000000000000000000000e31701004d4554412d494e462f434552542e5346504b010214001400080808007bb8e14c1b25e40b08040000b604000011000000000000000000000000009c3302004d4554412d494e462f434552542e525341504b01020a000a0000080000c01b210050dd8955c6030000c60300002f00000000000000000000000000e33702007265732f6472617761626c652d78686470692d76342f6f75745f627562626c655f73656c65637465642e392e706e67504b01020a000a0000080000c01b2100dcc25337a3000000a30000002100000000000000000000000000f63b02007265732f6472617761626c652d686470692d76342f77656277686974652e706e67504b01020a000a0000080000c01b21004e5cd395d40e0000d40e00003100000000000000000000000000d83c02007265732f6472617761626c652d7878686470692d76342f736d696c65795f636f6c6f6e5f6f70656e5f677261792e706e67504b01020a000a0000080000c01b2100b3fdc6a24c0300004c030000",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 0.709357,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "0000000000000000002bac91007265732f6472617761626c652f736d696c65795f677265617465725f7468616e5f636f6c6f6e5f6f70656e5f677261792e706e67504b01020a000a0000080000c01b2100ce83a71a67020000670200002800000000000000000000000000bab291007265732f6472617761626c652d686470692d76342f69636f6e5f736d735f6163746976652e706e67504b01020a000a0000080000c01b21003ca2f50eac000000ac000000220000000000000000000000000067b591007265732f6472617761626c652d78686470692d76342f77656277686974652e706e67504b01020a000a0000080000c01b2100a70aa7598802000088020000200000000000000000000000000053b691007265732f6472617761626c652f626c61636b5f7370696e6e65725f322e706e67504b01020a000a0000080000c01b2100956526540d0800000d080000330000000000000000000000000019b991007265732f6472617761626c652d7878686470692d76342f70726f66696c655f7069635f6461726b5f707265737365642e706e67504b01020a000a0000080000c01b2100e2e0a0c75002000050020000240000000000000000000000000077c191007265732f6472617761626c652d78686470692d76342f6f75745f6d61736b2e392e706e67504b01020a000a0000080000c01b2100ac4750e608010000",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 53.087137,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "80b8e14cb77239e816010000d002000020000000000000000000000000008e02a5007265732f786d6c2f69636f6e5f696e766974655f73656c6563746f722e786d6c504b0102140014000808080080b8e14c138d155ddd020000840800002800000000000000000000000000f203a5007265732f6c61796f75742f6c6973745f656e7472795f686173687461675f67726f7570732e786d6c504b01020a000a0000080000c01b21002368429e560100005601000029000000000000000000000000002507a5007265732f6472617761626c652d7878686470692d76342f736561726368626172636c6561722e706e67504b01020a000a0000080000c01b21001461c9b29d0900009d0900002d00000000000000000000000000c208a5007265732f6472617761626c652d78686470692d76342f736d696c65795f636f6c6f6e5f735f677261792e706e67504b01020a000a0000080000c01b2100e11d80ed80010000800100002400000000000000000000000000aa12a5007265732f6472617761626c652d78686470692d76342f696d6167655f677261792e706e67504b0102140014000808080080b8e14caaf96fbae0000000ac0100001e000000000000000000000000006c14a5007265732f616e696d2f736c6964655f696e5f66726f6d5f746f702e786d6c504b01020a000a0000080000c01b2100e4f560a21c010000",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 55.820632,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705770400,
+                    "data": "01020a000a0000080000c01b2100c047491c41020000410200003100000000000000000000000000a5d706007265732f6472617761626c652d78686470692d76342f636f6e766f5f726563656970745f7075736865645f6f6e2e706e67504b01020a000a0000080000c01b210011f2e6b360010000600100002d0000000000000000000000000035da06007265732f6472617761626c652d78686470692d76342f69636f6e5f61626f757475735f6163746976652e706e67504b01020a000a0000080000c01b210051ca823d9f1700009f1700003700000000000000000000000000e0db06007265732f6472617761626c652d7878686470692d76342f736d696c65795f6c6573735f7468616e5f736c6173685f74687265652e706e67504b01020a000a0000080000c01b210041a527d0b2010000b20100004300000000000000000000000000d4f306007265732f6472617761626c652d686470692d76342f636f6d5f6d697870616e656c5f616e64726f69645f7371756172655f6e6f64726f70736861646f772e392e706e67504b01020a000a0000080000c01b2100b2aff53ec7010000c70100002a00000000000000000000000000e7f506007265732f6472617761626c652d78686470692d76342f69636f6e5f73686f705f6163746976652e706e67504b010214001400080808007bb8e14cffed82001b010000b402",
+                    "name": "/data/app/kik.android-1.apk",
+                    "time": 39.283143,
+                    "processname": "kik.android"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "name": "/data/data/kik.android/lib/libhelloneon.so",
+                    "time": 42.058245
+                }
+            ],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "56, 54, 99, 97, 100, 57, 102, 53, 51, 99, 54, 48, 55, 56, 52, 48, 102, 53, 101, 54, 50, 56, 54, 54, 51, 48, 55, 56, 57, 102, 99, 102, 97, 53, 102, 56, 56, 56, 56, 48",
+                    "pid": 857,
+                    "tid": 705523008,
+                    "time": 39.547319,
+                    "algorithm": "AES/ECB/PKCS7Padding",
+                    "processname": "kik.android"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"Mixpanel.UserId\">4f3b509e0e2c400e87385683554d6e39</string>\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/KikUltraPersistence.xml",
+                    "time": 56.742884,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 706197232,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"super_properties\">{}</string>\n<string name=\"events_distinct_id\">4f3b509e0e2c400e87385683554d6e39</string>\n<null name=\"people_distinct_id\" />\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/com.mixpanel.android.mpmetrics.MixpanelAPI_36e42d002f7142d1dad9d50f4298db43.xml",
+                    "time": 57.638454,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "libcore.io.DiskLruCache\n1\n1\n1\n\n",
+                    "name": "/data/data/kik.android/cache/chatVids/journal.tmp",
+                    "time": 51.98035,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"ConversationManager.QOS_POLLING_INTERVAL\">3600000</string>\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/KikPreferences.xml",
+                    "time": 54.093668,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"Mixpanel.IsFirstAccount\" value=\"true\" />\n<string name=\"Mixpanel.UserId\">4f3b509e0e2c400e87385683554d6e39</string>\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/KikUltraPersistence.xml",
+                    "time": 56.974034,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 706205360,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"Mixpanel.IsFirstAccount\" value=\"true\" />\n<string name=\"Mixpanel.UserId\">4f3b509e0e2c400e87385683554d6e39</string>\n<string name=\"Mixpanel.PeriodDataNew\">AAAAAA==</string>\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/KikUltraPersistence.xml",
+                    "time": 58.548251,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"ContentImageCache.volley.migrated\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/Kik.Storage.ContentImageCache.pref.xml",
+                    "time": 55.011093,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 706197232,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"events_distinct_id\">4f3b509e0e2c400e87385683554d6e39</string>\n<null name=\"people_distinct_id\" />\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/com.mixpanel.android.mpmetrics.MixpanelAPI_36e42d002f7142d1dad9d50f4298db43.xml",
+                    "time": 57.162399,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705880784,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"crashlytics.installation.id\">042e3a5c252a497e9357441fe668c0fe</string>\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/com.crashlytics.prefs.xml",
+                    "time": 41.093359,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"ContactImageCache.volley.migrated\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/Kik.Storage.ContactImageCache.pref.xml",
+                    "time": 54.670882,
+                    "processname": "kik.android"
+                },
+                {
+                    "pid": 857,
+                    "tid": 706197232,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"events_distinct_id\">ebfff671-de46-49bb-9bbc-37737660329c</string>\n<null name=\"people_distinct_id\" />\n</map>\n",
+                    "name": "/data/data/kik.android/shared_prefs/com.mixpanel.android.mpmetrics.MixpanelAPI_36e42d002f7142d1dad9d50f4298db43.xml",
+                    "time": 56.703984,
+                    "processname": "kik.android"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "name": "kik.android.net.communicator.CommunicatorService",
+                    "time": 43.726011,
+                    "processname": "kik.android"
+                }
+            ]
+        }
+    }
+}

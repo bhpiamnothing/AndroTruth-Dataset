@@ -1,0 +1,452 @@
+{
+    "apk_info": {
+        "id": "VqKZ1P2pNwkOv3y0",
+        "url": "https://developer.koodous.com/apks/57802fd7fad01f85de24b66de51509df4c58946e40689428a3887ce258142e2a/",
+        "sha256": "57802fd7fad01f85de24b66de51509df4c58946e40689428a3887ce258142e2a",
+        "md5": "958d569326805c58284557ec35e39757",
+        "sha1": "9c1eeb1e47e2ca87daee3e52fe954a2ef035d693",
+        "app": "写メボックス",
+        "package_name": "com.test.uploadcontacu",
+        "company": "Android",
+        "version": "1.5",
+        "image": null,
+        "size": 27704,
+        "tags": [
+            "sms-thief"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2019-01-04T09:33:55+01:00",
+        "updated_at": "2023-03-30T17:23:25.308715+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "958d569326805c58284557ec35e39757",
+                "name": "",
+                "path": "",
+                "sha1": "9c1eeb1e47e2ca87daee3e52fe954a2ef035d693",
+                "size": 27704,
+                "type": "Android package (APK), with MANIFEST.MF and resources.arsc",
+                "yara": [],
+                "crc32": "F96DA8A",
+                "sha256": "57802fd7fad01f85de24b66de51509df4c58946e40689428a3887ce258142e2a",
+                "sha512": "e1918346f512d330d817a6dbb1509c39b53a08ad2b7c2d755d77f49904c6158d0eacf89f802986718d6a5a5ec5c161d00264338a4887d64061ba2f4e4316b420",
+                "ssdeep": "384:siDmlXFBcSVdxEJimMP76EIJNLZu82r/OAoI6w2m7TJzfXB+/u3Eaw9bwFDAwRAC:KFBddpPJIJ1ZRBIpO/ue9sJAAArU7"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://schemas.android.com/aapt",
+                "http://27.126.180.77:8080/JYSystem/restInt/collect/postData"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "f3a132ee0f445a2be580c53e08db6c58018b579290ec3a2ac54ba99d6b22a385"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "写メボックス",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "sha256": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT",
+                "hash_algorithm": "sha1",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.INTERNET",
+                "android.permission.READ_PHONE_NUMBERS"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": false,
+            "is_signed_v3": false,
+            "package_name": "com.test.uploadcontacu",
+            "version_code": "5",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "files_by_format": {
+                "bin": 10,
+                "png": 7,
+                "txt": 2
+            },
+            "functionalities": {
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/test/uploadcontact/HttpUtil;",
+                        "method": "httpPostJSON"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.5",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "RSA": 1,
+                "aac": 7,
+                "dex": 1,
+                "xml": 6,
+                "arsc": 1
+            },
+            "target_sdk_version": 8
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1383559703826904,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.1685881614685059,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.168869972229004,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1689651012420654,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.169064998626709,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.169145107269287,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.1692891120910645,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.169374942779541,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.1694941520690918,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.1695921421051025,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.1696851253509521,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.1697731018066406,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.1699049472808838,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.1699841022491455,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.170133113861084,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.1702110767364502,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.1702940464019775,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.1703450679779053,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1707630157470703,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1710171699523926,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 1.1711020469665527,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/base.apk.x86_64.flock",
+                    "time": 1.171126127243042,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/oat/x86_64/base.vdex",
+                    "time": 1.1711790561676025,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/base.apk",
+                    "time": 1.1712090969085693,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1756200790405273,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.175678014755249,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/oat/x86_64/base.art",
+                    "time": 1.1823370456695557,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/base.apk",
+                    "time": 1.2082760334014893,
+                    "processname": "com.test.uploadcontacu"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "636f6d2e746573742e75706c6f6164636f6e746163750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1588060855865479,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1654720306396484,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.1707260608673096,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1708991527557373,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.17106294631958,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "504b0304",
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/base.apk",
+                    "time": 1.1755690574645996,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1756460666656494,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.182291030883789,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "data": "6172740a3035360000803d78e036000033f4a40b00c03d7800d03d7800e03d7800303e7800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000880400008804000000000000880400000000000088040000000000008804000000000000880400000000000090040000c012000050170000c80f000018270000c80f00000040000000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000074090000",
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/oat/x86_64/base.art",
+                    "time": 1.1823620796203613,
+                    "processname": "com.test.uploadcontacu"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.1687681674957275,
+                    "processname": "com.test.uploadcontacu"
+                },
+                {
+                    "pid": 4286,
+                    "tid": 4286,
+                    "name": "/data/app/com.test.uploadcontacu-wRSYEGciw-rSjsLAyDx1xg==/base.apk.x86_64.flock",
+                    "time": 1.1711499691009521,
+                    "processname": "com.test.uploadcontacu"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

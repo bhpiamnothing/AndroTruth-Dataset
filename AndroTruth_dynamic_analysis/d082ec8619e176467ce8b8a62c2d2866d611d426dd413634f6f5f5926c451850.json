@@ -1,0 +1,422 @@
+{
+    "apk_info": {
+        "id": "3RqYd8B6Lg6GVrL8",
+        "url": "https://developer.koodous.com/apks/d082ec8619e176467ce8b8a62c2d2866d611d426dd413634f6f5f5926c451850/",
+        "sha256": "d082ec8619e176467ce8b8a62c2d2866d611d426dd413634f6f5f5926c451850",
+        "md5": "d5c63390f8a42e051d0ef9fbe7f08046",
+        "sha1": "394bbf52af22c08aa75533b31941f537f0dcc7b5",
+        "app": "Installer",
+        "package_name": "com.atsral.core",
+        "company": "TESTORG",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2015/12/18/9f767504c47f221b5b6ff6f83f60ac8ff0406178f68b96f30c535c5dd2881c66",
+        "size": 937110,
+        "tags": [
+            "Xbot",
+            "sms-fraud"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -8,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 4,
+        "comments_count": 2,
+        "votes_count": 8,
+        "created_at": "2016-01-30T20:05:09+01:00",
+        "updated_at": "2023-03-30T14:48:08.018564+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "d5c63390f8a42e051d0ef9fbe7f08046",
+                    "sha1": "394bbf52af22c08aa75533b31941f537f0dcc7b5",
+                    "size": 937110,
+                    "crc32": "7F774E69",
+                    "sha256": "d082ec8619e176467ce8b8a62c2d2866d611d426dd413634f6f5f5926c451850",
+                    "sha512": "138324dbe535819325d773bf44f2b10ce36b0f3cf0c3e8182bb70d6f20de308d44fc5d5f4d5b28d711f541d67ffd1cefa48da27c265e3115f1203dfdfb538f5d",
+                    "ssdeep": "24576:8m5rP8+xchXMRSVGq8h9tcU9e3O4oWoL5agVD3vBNt:T5rU6c9VGqO9tccy6X1zzPt"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "81.94.205.226"
+                ],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://23.227.163.110/locker.php",
+                "http://192.227.137.154/request.php",
+                "http://www.w3.org/2000/xmlns/",
+                "http://melon25.ru/cc7_en.html",
+                "http://melon25.ru/cc7_ru.html"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "6217e60ce5aa8f9ed4c6454bd013218e64397ea211b6000c5c6f217b3b59ae9e",
+                    "ssdeep": "24576:3KeRCdmhe2ouQUVbnPQLQjCR55T08dZlCP:6eR4CnH2Rj08dZlCP"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "SMS_DELIVERED",
+                "SMS_SENT",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Installer",
+            "services": [
+                "com.atsral.core.RunService"
+            ],
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.atsral.core.SMSHandler",
+                "com.atsral.core.sms.SentReceiver",
+                "com.atsral.core.AdminReceiver",
+                "com.atsral.core.sms.DeliveredReceiver",
+                "com.atsral.core.OnBootHandler"
+            ],
+            "activities": [
+                "com.atsral.core.activities.Inject",
+                "com.atsral.core.activities.BrowserActivity",
+                "com.atsral.core.activities.RunScript",
+                "com.atsral.core.lck.Lock",
+                "com.atsral.core.CCNotificationResultActivity",
+                "com.atsral.core.MainActivity",
+                "com.atsral.core.activities.GoogleCC",
+                "com.atsral.core.activities.BankApp",
+                "com.atsral.core.activities.Browser",
+                "com.atsral.core.AdminActivity"
+            ],
+            "certificate": {
+                "sha1": "25D6A5507F3262ADF65639C0BA7B0997AE35C36D",
+                "serial": "5672CABA",
+                "issuerDN": "/C=US/ST=US/L=US/O=TESTORG/OU=WORK/CN=TESTER",
+                "not_after": "May 4 14:46:18 2043 GMT",
+                "subjectDN": "/C=US/ST=US/L=US/O=TESTORG/OU=WORK/CN=TESTER",
+                "not_before": "Dec 17 14:46:18 2015 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.SEND_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.ACCESS_MOCK_LOCATION",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.BIND_DEVICE_ADMIN",
+                "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+                "android.permission.DEVICE_POWER",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.INTERNET",
+                "android.permission.MODIFY_AUDIO_SETTINGS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "com.atsral.core",
+            "version_code": "1",
+            "main_activity": "com.atsral.core.MainActivity",
+            "signature_name": "META-INF/KEYSTORE.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/atsral/core/xAPI;",
+                        "method": "sendSMS"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/replayroll/core/xAPI;",
+                        "method": "sendSMS"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/rolly/core/xAPI;",
+                        "method": "sendSMS"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v7, 'https'",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "const-string v16, 'https'",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "const-string v16, 'https'",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient$1;",
+                        "method": "run"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/atsral/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/replayroll/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/rolly/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/atsral/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/replayroll/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/rolly/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v3, v5, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient;",
+                        "method": "expectedKey"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v3, v2, v4, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V",
+                        "class": "Lcom/atsral/core/xAPI;",
+                        "method": "callForward"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Lcom/codebutler/android_websockets/WebSocketClient;->send([B)V",
+                        "class": "Lcom/codebutler/android_websockets/HybiParser;",
+                        "method": "close"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Lcom/codebutler/android_websockets/WebSocketClient;->send([B)V",
+                        "class": "Lcom/codebutler/android_websockets/HybiParser;",
+                        "method": "ping"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/atsral/core/xAPI;",
+                        "method": "callForward"
+                    },
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/replayroll/core/xAPI;",
+                        "method": "callForward"
+                    },
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/rolly/core/xAPI;",
+                        "method": "callForward"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-interface v0, v2, v3, Lorg/mozilla/javascript/Script;->exec(Lorg/mozilla/javascript/Context; Lorg/mozilla/javascript/Scriptable;)Ljava/lang/Object;",
+                        "class": "Lorg/mozilla/javascript/Context;",
+                        "method": "evaluateReader"
+                    },
+                    {
+                        "code": "invoke-interface v0, v2, v3, Lorg/mozilla/javascript/Script;->exec(Lorg/mozilla/javascript/Context; Lorg/mozilla/javascript/Scriptable;)Ljava/lang/Object;",
+                        "class": "Lorg/mozilla/javascript/Context;",
+                        "method": "evaluateString"
+                    },
+                    {
+                        "code": "invoke-direct v0, v2, Lorg/mozilla/javascript/tools/idswitch/Main;->exec([Ljava/lang/String;)I",
+                        "class": "Lorg/mozilla/javascript/tools/idswitch/Main;",
+                        "method": "main"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/atsral/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/replayroll/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/rolly/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Lcom/atsral/core/RunService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/atsral/core/RunService;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Lcom/atsral/core/RunService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/atsral/core/RunService;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Lcom/replayroll/core/RunService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/replayroll/core/RunService;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": "",
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": ""
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 841,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.atsral.core-1.apk",
+                    "time": 0.237201,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.atsral.core-1.apk",
+                    "time": 6.854011,
+                    "processname": "com.atsral.core"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 857,
+                    "tid": 705671008,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"srv\">http://192.227.137.154/request.php</string>\n</map>\n",
+                    "name": "/data/data/com.atsral.core/shared_prefs/cmmn.xml",
+                    "time": 7.139392,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 841,
+                    "tid": 1073870640,
+                    "data": "504b050600000000120012000e05000072470e000000504b01021400140008080800a66a3b48e101fc8889020000f00400001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008080800a66a3b48e321d304c9020000690500001400000000000000000000000000cb0200004d4554412d494e462f4b455953544f52452e5346504b01021400140008080800a66a3b484dbe01470d040000f60400001500000000000000000000000000d60500004d4554412d494e462f4b455953544f52452e525341504b01021400140008080800a66a3b480beefee9dc070000d42100001300040000000000000000000000260a0000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a00000800007c823148cf69dc83ba1f0000ba1f00001500000000000000000000000000471200007265732f6472617761626c652f69636f6e2e706e67504b01021400140008080800a66a3b48d161ccea10010000780200001600000000000000000000000000363200007265732f6c61796f75742f62726f777365722e786d6c504b01021400140008080800a66a3b48390754eb110100007802000017000000000000000000000000008a3300007265732f6c61796f75742f6c6f636b6d61696e2e786d6c504b01021400140008080800a66a3b484354",
+                    "name": "/data/app/com.atsral.core-1.apk",
+                    "time": 0.327932,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 841,
+                    "tid": 705541120,
+                    "data": "\u0001",
+                    "name": "pipe:[2783]",
+                    "time": 1.530053,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 857,
+                    "tid": 705523040,
+                    "data": "\u0001",
+                    "name": "pipe:[2844]",
+                    "time": 7.198976,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 841,
+                    "tid": 705541120,
+                    "data": "\u0001",
+                    "name": "pipe:[2783]",
+                    "time": 1.298122,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "504b050600000000120012000e05000072470e000000504b01021400140008080800a66a3b48e101fc8889020000f00400001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008080800a66a3b48e321d304c9020000690500001400000000000000000000000000cb0200004d4554412d494e462f4b455953544f52452e5346504b01021400140008080800a66a3b484dbe01470d040000f60400001500000000000000000000000000d60500004d4554412d494e462f4b455953544f52452e525341504b01021400140008080800a66a3b480beefee9dc070000d42100001300040000000000000000000000260a0000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a00000800007c823148cf69dc83ba1f0000ba1f00001500000000000000000000000000471200007265732f6472617761626c652f69636f6e2e706e67504b01021400140008080800a66a3b48d161ccea10010000780200001600000000000000000000000000363200007265732f6c61796f75742f62726f777365722e786d6c504b01021400140008080800a66a3b48390754eb110100007802000017000000000000000000000000008a3300007265732f6c61796f75742f6c6f636b6d61696e2e786d6c504b01021400140008080800a66a3b484354",
+                    "name": "/data/app/com.atsral.core-1.apk",
+                    "time": 6.870055,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "\u0001",
+                    "name": "pipe:[2844]",
+                    "time": 7.17986,
+                    "processname": "com.atsral.core"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 841,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"srv\">http://192.227.137.154/request.php</string>\n</map>\n\u0001\u0001",
+                    "name": "/data/data/com.atsral.core/shared_prefs/cmmn.xml",
+                    "time": 1.164563,
+                    "processname": "com.atsral.core"
+                },
+                {
+                    "pid": 857,
+                    "tid": 1073870640,
+                    "data": "\u0001\u0001",
+                    "name": "pipe:[2844]",
+                    "time": 7.17954,
+                    "processname": "com.atsral.core"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 841,
+                    "tid": 1073870640,
+                    "name": "com.atsral.core.RunService",
+                    "time": 0.640862,
+                    "processname": "com.atsral.core"
+                }
+            ]
+        }
+    }
+}

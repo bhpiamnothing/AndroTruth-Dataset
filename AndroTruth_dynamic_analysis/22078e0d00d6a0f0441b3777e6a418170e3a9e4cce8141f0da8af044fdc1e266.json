@@ -1,0 +1,405 @@
+{
+    "apk_info": {
+        "id": "4Dr7OKV0W95GgKv8",
+        "url": "https://developer.koodous.com/apks/22078e0d00d6a0f0441b3777e6a418170e3a9e4cce8141f0da8af044fdc1e266/",
+        "sha256": "22078e0d00d6a0f0441b3777e6a418170e3a9e4cce8141f0da8af044fdc1e266",
+        "md5": "1feadd0f95d84d878c22534f6ef0bedc",
+        "sha1": "84d5ff14328d71d3fa3c03962734cc7179d2685e",
+        "app": "Facebook Update",
+        "package_name": "com.myapps.update",
+        "company": "Joey",
+        "version": "2.3",
+        "image": "https://developer.koodous.com/media/apk_images/2016/12/12/68292de5bc1bd30ef1f0c95104b7f3a39e81992372d2d24d0c8ab7cb98607c19",
+        "size": 1017487,
+        "tags": [
+            "crypto",
+            "spyware",
+            "trojan",
+            "fakeapp",
+            "reflection",
+            "telephony",
+            "clipboard",
+            "malapp",
+            "micropsia",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 3,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2016-12-12T20:37:01+01:00",
+        "updated_at": "2025-05-30T04:47:11.860332+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "1feadd0f95d84d878c22534f6ef0bedc",
+                    "sha1": "84d5ff14328d71d3fa3c03962734cc7179d2685e",
+                    "size": 1017487,
+                    "crc32": "26450F4B",
+                    "sha256": "22078e0d00d6a0f0441b3777e6a418170e3a9e4cce8141f0da8af044fdc1e266",
+                    "sha512": "8d3d9c5f3e73c102494bb219e4a990ceb1951e6ac340aa16cc1e89a93e835f1763b23e35665eb92488b136029d4e62fd571688613c3f621cd43e1c05f2957572",
+                    "ssdeep": "24576:ejvF+yvO09RJsghobZT07tBLhvX7MH2WmKmdOh:ejvPvO09RJsgebF077LhvYH2WmKmA"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "mary-crawley.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "107.180.50.211",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "mary-crawley.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "cecilia-gilbert.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "46.166.161.181",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "cecilia-gilbert.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "107.180.50.211",
+                    "46.166.161.181"
+                ],
+                "domains": [
+                    {
+                        "ip": "107.180.50.211",
+                        "domain": "mary-crawley.com"
+                    },
+                    {
+                        "ip": "46.166.161.181",
+                        "domain": "cecilia-gilbert.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://mary-crawley.com/android/domains",
+                "http://opencellid.org/cell/get?key=18717b9f-4c47-42c7-9317-d40c236ac911&mcc=",
+                "https://cecilia-gilbert.com"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "032c102f4ca65fd8b310085111e265d84969a444ad96f78d0dd4cf9a1c10fb24",
+                    "ssdeep": "12288:YLGNk3UoZfP8sM5bMJCBXoxc0kGyRgzVFNWLGVDl4cMNW1/SZYhLyb9ZDnEiTAAV:YSNk31ZH8slpx8GyvKfRU1JTR"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PACKAGE_REPLACED",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.MAIN",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "Facebook Update",
+            "services": [
+                "com.myapps.update.services.RCOldService",
+                "net.gotev.uploadservice.UploadService",
+                "com.myapps.update.services.RService",
+                "com.myapps.update.services.MService",
+                "com.myapps.update.services.IMService",
+                "com.myapps.update.services.RCNewService",
+                "com.myapps.update.services.NService",
+                "com.myapps.update.services.CService",
+                "com.myapps.update.services.UpdateService",
+                "com.myapps.update.services.IService",
+                "com.myapps.update.services.DCService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.myapps.update.receivers.OnReceiver",
+                "com.myapps.update.receivers.RReceiver",
+                "com.myapps.update.receivers.SReceiver",
+                "com.myapps.update.receivers.PReceiver",
+                "com.myapps.update.receivers.AmReceiver",
+                "com.myapps.update.receivers.LReceiver",
+                "com.myapps.update.receivers.CReceiver",
+                "com.myapps.update.receivers.NetworkReceiver"
+            ],
+            "activities": [
+                "com.myapps.update.activities.UninstallDialogActivity",
+                "com.myapps.update.activities.UpdateDialogActivity",
+                "com.myapps.update.activities.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "76E2714FD2582B21AE4E7EF44245EADD9701DCA9",
+                "serial": "43BD4CDD",
+                "issuerDN": "/CN=Joey",
+                "not_after": "Nov 2 07:38:47 2041 GMT",
+                "subjectDN": "/CN=Joey",
+                "not_before": "Nov 8 07:38:47 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.INTERNET",
+                "android.permission.READ_LOGS",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.RECEIVE_SMS"
+            ],
+            "package_name": "com.myapps.update",
+            "version_code": "10",
+            "main_activity": "com.myapps.update.activities.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v5, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/myapps/update/services/NService$1;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/myapps/update/services/NService;",
+                        "method": "a"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https'",
+                        "class": "Lcom/a/a/a/g;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, 'https://cecilia-gilbert.com'",
+                        "class": "Lcom/myapps/update/app/a;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Lcom/myapps/update/d/g$1;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/l;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/o;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v4, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/myapps/update/services/NService$1;",
+                        "method": "a"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/myapps/update/services/NService$1;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/myapps/update/d/c;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v3, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/a/a/a/g;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/myapps/update/d/b;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/myapps/update/d/g;",
+                        "method": "a"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/myapps/update/services/IService;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/myapps/update/a/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v1, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/myapps/update/a/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lnet/gotev/uploadservice/UploadService;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/myapps/update/services/NService$1;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/a/j$b;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/a/j$b;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/myapps/update/b/b;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 16,
+            "new_permissions": [],
+            "displayed_version": "2.3",
+            "target_sdk_version": 24
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "107.180.50.211",
+                    "hostname": "mary-crawley.com"
+                },
+                {
+                    "ip": "46.166.161.181",
+                    "hostname": "cecilia-gilbert.com"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.myapps.update-1.apk",
+                    "time": 0.000313,
+                    "processname": "com.myapps.update"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 844,
+                    "tid": 705529344,
+                    "data": "50083332b0921954f3d0d490b97a7e0f914670fa",
+                    "name": "/dev/urandom",
+                    "time": 34.686431,
+                    "processname": "com.myapps.update"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0506000000009e019e017e9c0000fbe90e000000504b0102170314000000080000000000d4671691e5080000c0290000130000000000000000002000b68100000000416e64726f69644d616e69666573742e786d6c504b010218001400000008000000000035b8ed0bfe0300003b0400001100000000000000000000000000160900004d4554412d494e462f434552542e525341504b010218001400000008000000000051d86d0aa9300000f6a700001000000000000000000000000000430d00004d4554412d494e462f434552542e5346504b0102180014000000080000000000f57de3458d300000cba7000014000000000000000000000000001a3e00004d4554412d494e462f4d414e49464553542e4d46504b0102180014000000080000000000f06dcdc61b6f070078aa12000b00000000000000000000000000d96e0000636c61737365732e646578504b0102170314000000080000000000ffb29d50ca010000cc040000320000000000000000002000b6811dde07007265732f616e696d2d7632312f64657369676e5f6170706261725f73746174655f6c6973745f616e696d61746f722e786d6c504b0102170314000000080000000000e686e085310100006c0200002d0000000000000000002000b68137e007007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c",
+                    "name": "/data/app/com.myapps.update-1.apk",
+                    "time": 0.007105,
+                    "processname": "com.myapps.update"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 844,
+                    "tid": 704919296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"application_running\" value=\"true\" />\n<boolean name=\"first_run\" value=\"true\" />\n<boolean name=\"permissions_granted\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.myapps.update/shared_prefs/com.myapps.update_preferences.xml",
+                    "time": 4.118221,
+                    "processname": "com.myapps.update"
+                },
+                {
+                    "pid": 844,
+                    "tid": 704919296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"first_run\" value=\"true\" />\n<boolean name=\"permissions_granted\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.myapps.update/shared_prefs/com.myapps.update_preferences.xml",
+                    "time": 4.117693,
+                    "processname": "com.myapps.update"
+                },
+                {
+                    "pid": 844,
+                    "tid": 704919296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"first_run\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.myapps.update/shared_prefs/com.myapps.update_preferences.xml",
+                    "time": 4.11718,
+                    "processname": "com.myapps.update"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

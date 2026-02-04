@@ -1,0 +1,362 @@
+{
+    "apk_info": {
+        "id": "MQ8nd9b2Vwl1XWrL",
+        "url": "https://developer.koodous.com/apks/91ab6e70655abdef8e79eaeb0d83c02246037e2fc168eec956192fac4fcecea6/",
+        "sha256": "91ab6e70655abdef8e79eaeb0d83c02246037e2fc168eec956192fac4fcecea6",
+        "md5": "9ade7d3f38703e1c1b57fcf141043d62",
+        "sha1": "38dc309d3e384f902ebe60473795ccc91864e664",
+        "app": "com.helper.android",
+        "package_name": "com.helper.android",
+        "company": "Google Inc.",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/1f/70/1f70a556150a3c8ce3fd3ad3d56b21c0f5303a850284eac5f8d1dad8e4ae98a1",
+        "size": 1464707,
+        "tags": [
+            "sms-thief"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -4,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 1,
+        "votes_count": 4,
+        "created_at": "2019-03-11T04:22:33+01:00",
+        "updated_at": "2023-03-30T17:43:22.370969+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "9ade7d3f38703e1c1b57fcf141043d62",
+                "name": "",
+                "path": "",
+                "sha1": "38dc309d3e384f902ebe60473795ccc91864e664",
+                "size": 1464707,
+                "type": "Android package (APK), with AndroidManifest.xml, with APK Signing Block",
+                "yara": [],
+                "crc32": "8CB28575",
+                "sha256": "91ab6e70655abdef8e79eaeb0d83c02246037e2fc168eec956192fac4fcecea6",
+                "sha512": "a31500b233454f145de5161a8c20aad8aeb220ab54a4830beeb30015db05f18a77211bb000f3376bf92c92218b0cd9425b4c0e36a5c52868ad860d73d76cc487",
+                "ssdeep": "24576:VnA702w6SAeKrAEuEFptzfRNQejaRbhPOi8ZICjuO8WGUpeAOL1LAt2MssZoBCOj:K70l9KVvztzfRNQnR5xXIuO8fUpeAmz"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://schemas.android.com/apk/res-auto",
+                "https://plus.google.com/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "a82b85128b22cc7d5d07d74736d0ab69aee799b6df4dd4610ef9384df222c49b"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.UNINSTALL_PACKAGE",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "com.helper.android",
+            "services": [
+                "com.lucky.AccService",
+                "com.lucky.RegisterReceiverService",
+                "com.lucky.GeneralService",
+                "com.lucky.Operation"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.lucky.MainActivity",
+                "com.lucky.Consulate$RequestActivity",
+                "com.lucky.CaptureData$WebViewActivity",
+                "com.lucky.CaptureData$AlertActivity",
+                "com.lucky.ScreenOnAndUnlock",
+                "com.lucky.Asterisk$Act",
+                "com.lucky.SUActivity",
+                "com.google.android.gms.common.api.GoogleApiActivity"
+            ],
+            "certificate": {
+                "sha1": "2D416327C990BBF2253E28FFF28A3E00ACC67628",
+                "serial": "C71A96FD4966710206266218843D198ACA771712",
+                "sha256": "7F9BB8C4FB8AF65EFBF66BCF99878A850AFF38CF7F9C6B8CEEC055F3EE0D4952",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_after": "Feb 27 01:13:41 2049 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_before": "Feb 27 01:13:41 2019 GMT",
+                "hash_algorithm": "sha256",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.WAKE_LOCK",
+                "android.permission.ACCESS_NETWORK_STATE"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": true,
+            "is_signed_v3": true,
+            "package_name": "com.helper.android",
+            "version_code": "3",
+            "main_activity": "com.lucky.MainActivity",
+            "signature_name": "META-INF/GOOGPLAY.RSA",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 162,
+                "png": 286,
+                "txt": 34
+            },
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v0, \"https://plus.google.com/\"",
+                        "class": "Lcom/google/android/gms/common/internal/ai;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v1, \"https\"",
+                        "class": "Lokhttp3/a;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v3, \"https\"",
+                        "class": "Lokhttp3/internal/e/d;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v2, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "La/f;",
+                        "method": "c"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/app/PendingIntent;->send()V",
+                        "class": "Lcom/lucky/Asterisk$Act;",
+                        "method": "a"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v7, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/lucky/k;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/google/android/gms/common/api/internal/x;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v1, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/lucky/i;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/lucky/i;",
+                        "method": "b"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 21,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "gz": 1,
+                "RSA": 1,
+                "dex": 1,
+                "png": 286,
+                "pro": 2,
+                "xml": 159,
+                "arsc": 1
+            },
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/proc/self/cmdline",
+                    "time": 3.0281479358673096,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/base.apk.x86_64.flock",
+                    "time": 3.0559089183807373,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/oat/x86_64/base.vdex",
+                    "time": 3.064919948577881,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/base.apk",
+                    "time": 3.0670340061187744,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.0693838596343994,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.0716729164123535,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/oat/x86_64/base.art",
+                    "time": 3.0720739364624023,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/base.apk",
+                    "time": 3.2652828693389893,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4768,
+                    "name": "/data/user_de/0/com.helper.android/code_cache/com.android.skia.shaders_cache",
+                    "time": 4.0084428787231445,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4768,
+                    "name": "/dev/graphics/fb0",
+                    "time": 4.331095933914185,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4768,
+                    "name": "/dev/fb0",
+                    "time": 4.331127882003784,
+                    "processname": "com.helper.android"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "data": "636f6d2e68656c7065722e616e64726f6964000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 3.0286099910736084,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 3.028841018676758,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4760,
+                    "data": "636f6d2e68656c7065722e616e64726f69640000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 3.0331039428710938,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "data": "504b0304",
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/base.apk",
+                    "time": 3.067718029022217,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.071462869644165,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.072026014328003,
+                    "processname": "com.helper.android"
+                },
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "data": "6172740a3035360000803d78700301001114881900903e7800a03e7800103f7800b0547800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000000f620000",
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/oat/x86_64/base.art",
+                    "time": 3.0723249912261963,
+                    "processname": "com.helper.android"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4687,
+                    "tid": 4687,
+                    "name": "/data/app/com.helper.android-ufgfmwryHfrYwo_zOSH96g==/base.apk.x86_64.flock",
+                    "time": 3.056272029876709,
+                    "processname": "com.helper.android"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

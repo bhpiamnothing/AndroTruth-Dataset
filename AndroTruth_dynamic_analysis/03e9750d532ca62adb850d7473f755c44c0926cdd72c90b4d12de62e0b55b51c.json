@@ -1,0 +1,404 @@
+{
+    "apk_info": {
+        "id": "9VaKGJMYMmk1vqMy",
+        "url": "https://developer.koodous.com/apks/03e9750d532ca62adb850d7473f755c44c0926cdd72c90b4d12de62e0b55b51c/",
+        "sha256": "03e9750d532ca62adb850d7473f755c44c0926cdd72c90b4d12de62e0b55b51c",
+        "md5": "ff65220728f3efb0744589675bf5d8a3",
+        "sha1": "93d977ee081af53ab2111690d5e540fb6d555ab1",
+        "app": "佐川急便",
+        "package_name": "ss.go",
+        "company": "s",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/cc/60/cc60b9d09f342bfed4ff672cf6a288723d8b9602702f299ff6458cfe15471c4c",
+        "size": 1639443,
+        "tags": [
+            "banker",
+            "bankbot",
+            "reflection",
+            "fakespy",
+            "telephony",
+            "trojan",
+            "boogr",
+            "obfuscated",
+            "runtime-modules",
+            "clipboard",
+            "andr",
+            "fakebank"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 14,
+        "comments_count": 1,
+        "votes_count": 2,
+        "created_at": "2018-05-20T04:39:45+02:00",
+        "updated_at": "2025-05-29T10:56:54.456162+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "ff65220728f3efb0744589675bf5d8a3",
+                    "sha1": "93d977ee081af53ab2111690d5e540fb6d555ab1",
+                    "size": 1639443,
+                    "crc32": "4692B5A8",
+                    "sha256": "03e9750d532ca62adb850d7473f755c44c0926cdd72c90b4d12de62e0b55b51c",
+                    "sha512": "4657d3622ac248cf13729b52fb266c261e4cc545f94f609720a93336c19e78e924d7677fd6173c7a96387d8c06bf878ce5996b65c7f5340ce4f0acc9ef11b074",
+                    "ssdeep": "49152:7pyJY6QsyvxSJ/RNLKi6YSQMu3InDN6zqrebgOF:7pyJsSJ/z+JZhoIebBF"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "www.sagawa-exp.co.jp"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "42.124.125.51",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "www.sagawa-exp.co.jp"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "42.124.125.51",
+                    "118.160.118.88"
+                ],
+                "domains": [
+                    {
+                        "ip": "42.124.125.51",
+                        "domain": "www.sagawa-exp.co.jp"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://118.160.118.88:8080/",
+                "http://schemas.android.com/apk/res/android",
+                "http://www.sagawa-exp.co.jp/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "7dac33e5d3fb3588bd3c0162d301bc43ecd706c29e55fd437ed73cb0395072fb",
+                    "ssdeep": "24576:EDGKH4FAakGOZ80SYlrmNCDr750DgaYimDrM5m4wNm:YH3a4y4GgaFmDrM8Z"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MEDIA_EJECT",
+                "android.intent.action.MEDIA_REMOVED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.intent.action.TIMEZONE_CHANGED",
+                "android.net.wifi.STATE_CHANGE",
+                "android.intent.action.DATE_CHANGED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.PHONE_STATE",
+                "android.bluetooth.adapter.action.STATE_CHANGED",
+                "android.intent.action.SCREEN_OFF",
+                "android.intent.action.ANY_DATA_STATE",
+                "android.intent.action.MEDIA_UNMOUNTED",
+                "android.intent.action.SCREEN_ON",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.TIME_CHANGED",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.ACTION_PACKAGE_ADDED",
+                "android.net.wifi.WIFI_STATE_CHANGED",
+                "android.intent.action.MEDIA_CHECKING",
+                "android.intent.action.ACTION_POWER_DISCONNECTED",
+                "android.intent.action.ACTION_MEDIA_EJECT",
+                "android.intent.action.ACTION_POWER_CONNECTED",
+                "android.intent.action.SIM_STATE_CHANGED"
+            ],
+            "app_name": "佐川急便",
+            "services": [
+                "kk.service.ShC",
+                "kk.service.HUOLU",
+                "kk.service.FUK"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "kk.receiver.LJ"
+            ],
+            "activities": [
+                "kk.chunyu.MainActivity",
+                "kk.chunyu.PermissionsActivity"
+            ],
+            "certificate": {
+                "sha1": "E35D8D885B9DCDDEE90AE0DF3B8FDFF9867964AF",
+                "serial": "198A0CFA",
+                "issuerDN": "/CN=s",
+                "not_after": "May 10 17:04:01 2043 GMT",
+                "subjectDN": "/CN=s",
+                "not_before": "May 16 17:04:01 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "ss.go",
+            "version_code": "1",
+            "main_activity": "kk.chunyu.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "imei": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lkk/util/StUtil;",
+                        "method": "getMachine"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v11, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV7;",
+                        "method": "preparePanel"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lkk/util/NetUtil;",
+                        "method": "getProvidersName"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lkk/util/StUtil;",
+                        "method": "getMachine"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lkk/util/StringUtil;",
+                        "method": "getMachine"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/sun/crypto/provider/DESedeWrapCipher;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/sun/crypto/provider/HmacCore;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/sun/crypto/provider/HmacCore;",
+                        "method": "b"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;",
+                        "method": "sendRequest"
+                    },
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lkk/util/JRunCheck;",
+                        "method": "executeCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v6, v7, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lkk/util/JRunCheck;",
+                        "method": "executeCommand"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lkk/util/StUtil;",
+                        "method": "getMachine"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lkk/util/StringUtil;",
+                        "method": "getMachine"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowAttached"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v4/media/TransportMediatorJellybeanMR2;",
+                        "method": "windowDetached"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v2, v0, v3, v4, Lkk/chunyu/MyApplication;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Lkk/chunyu/MyApplication;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 23
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "118.160.118.88",
+                    "hostname": "118.160.118.88"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "path": "/data/app/ss.go-1.apk",
+                    "time": 0.133037,
+                    "processname": "ss.go"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "path": "/data/app/ss.go-1.apk",
+                    "time": 3.864682,
+                    "processname": "ss.go:ServiceProcess"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          341892 kB\nBuffers:               0 kB\nCached:           137204 kB\nSwapCached:            0 kB\nActive:           142116 kB\nInactive:         102276 kB\nActive(anon):     110852 kB\nInactive(anon):        0 kB\nActive(file):      31264 kB\nInactive(file):   102276 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        107200 kB\nMapped:            49584 kB\nSlab:               6172 kB\nSReclaimable:       1652 kB\nSUnreclaim:         4520 kB\nPageTables:         5400 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2579356 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       28724 kB\nVmallocChunk:     321540 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 5.351027,
+                    "processname": "ss.go"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "data": "504b05060000000078017801738f00008a7418000000504b010214001400080808008b08b14c8adc389f71090000fc260000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b010214001400080808008b08b14ce686e085310100006c0200002d00000000000000000000000000b60900007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f696e2e786d6c504b010214001400080808008b08b14c4e7f10362f0100006c0200002e00000000000000000000000000420b00007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f6f75742e786d6c504b010214001400080808008b08b14c6b16942fdb0000008c0100001800000000000000000000000000cd0c00007265732f616e696d2f6162635f666164655f696e2e786d6c504b010214001400080808008b08b14c137a6f39dc0000008c0100001900000000000000000000000000ee0d00007265732f616e696d2f6162635f666164655f6f75742e786d6c504b010214001400080808008b08b14cb83a0b23810100005c0300002900000000000000000000000000110f00007265732f616e696d2f6162635f67726f775f666164655f696e5f66726f6d5f626f74746f6d2e786d6c504b0102140014000808",
+                    "name": "/data/app/ss.go-1.apk",
+                    "time": 3.891606,
+                    "processname": "ss.go:ServiceProcess"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b05060000000078017801738f00008a7418000000504b010214001400080808008b08b14c8adc389f71090000fc260000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b010214001400080808008b08b14ce686e085310100006c0200002d00000000000000000000000000b60900007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f696e2e786d6c504b010214001400080808008b08b14c4e7f10362f0100006c0200002e00000000000000000000000000420b00007265732f616e696d2d7632312f64657369676e5f626f74746f6d5f73686565745f736c6964655f6f75742e786d6c504b010214001400080808008b08b14c6b16942fdb0000008c0100001800000000000000000000000000cd0c00007265732f616e696d2f6162635f666164655f696e2e786d6c504b010214001400080808008b08b14c137a6f39dc0000008c0100001900000000000000000000000000ee0d00007265732f616e696d2f6162635f666164655f6f75742e786d6c504b010214001400080808008b08b14cb83a0b23810100005c0300002900000000000000000000000000110f00007265732f616e696d2f6162635f67726f775f666164655f696e5f66726f6d5f626f74746f6d2e786d6c504b0102140014000808",
+                    "name": "/data/app/ss.go-1.apk",
+                    "time": 0.179916,
+                    "processname": "ss.go"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "84, 69, 83, 84, 0, 0, 0, 0",
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "time": 3.423862,
+                    "algorithm": "DES",
+                    "processname": "ss.go"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "http://118.160.118.88:8080/",
+                    "time": 3.554369,
+                    "algorithm": "DES",
+                    "processname": "ss.go"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"URL\">http://118.160.118.88:8080/</string>\n</map>\n",
+                    "name": "/data/data/ss.go/shared_prefs/mybank.xml",
+                    "time": 3.580383,
+                    "processname": "ss.go"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "name": "kk.service.FUK",
+                    "time": 3.580824,
+                    "processname": "ss.go"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "name": "kk.service.HUOLU",
+                    "time": 8.326788,
+                    "processname": "ss.go:ServiceProcess"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "name": "kk.service.HUOLU",
+                    "time": 8.372969,
+                    "processname": "ss.go:ServiceProcess"
+                }
+            ]
+        }
+    }
+}

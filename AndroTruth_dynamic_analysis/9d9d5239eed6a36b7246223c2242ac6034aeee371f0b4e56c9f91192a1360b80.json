@@ -1,0 +1,410 @@
+{
+    "apk_info": {
+        "id": "E2eV1R2ElKR1RoYv",
+        "url": "https://developer.koodous.com/apks/9d9d5239eed6a36b7246223c2242ac6034aeee371f0b4e56c9f91192a1360b80/",
+        "sha256": "9d9d5239eed6a36b7246223c2242ac6034aeee371f0b4e56c9f91192a1360b80",
+        "md5": "e6c3329a8cc357c5ba455bb3c4372de3",
+        "sha1": "c1bd9542eacc9763334cb2276442e9f6acc87f6f",
+        "app": "img198564.jpg",
+        "package_name": "ru.drink.lime",
+        "company": "1",
+        "version": "1.0",
+        "image": null,
+        "size": 505523,
+        "tags": [
+            "banker",
+            "Lime",
+            "smsthief",
+            "bankbot",
+            "trojan",
+            "reflection",
+            "gugi",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -7,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 4,
+        "comments_count": 2,
+        "votes_count": 7,
+        "created_at": "2016-07-17T21:34:59+02:00",
+        "updated_at": "2025-05-30T05:07:05.509850+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "e6c3329a8cc357c5ba455bb3c4372de3",
+                    "sha1": "c1bd9542eacc9763334cb2276442e9f6acc87f6f",
+                    "size": 505523,
+                    "crc32": "547785FA",
+                    "sha256": "9d9d5239eed6a36b7246223c2242ac6034aeee371f0b4e56c9f91192a1360b80",
+                    "sha512": "74d4c3144c2a75613c2b809eb5796991596170e0113b0cf793d480cd136833cd2d3c3abc7ac1c77729b40409382f447acccde2b31d60327c2604f798e8dcf5d8",
+                    "ssdeep": "12288:wsAF6oURhpI4nTdO2p8XnvW9A7oGixIasI3pRH:wsAvB4npVEu9mDilsEpRH"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://80.87.205.126:3001/socket.io/?EIO=3&transport=websocket",
+                        "body": "",
+                        "data": "GET /socket.io/?EIO=3&transport=websocket HTTP/1.1\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: n1VODoaYPujJEH+V/1WbFg==\r\nSec-WebSocket-Version: 13\r\nHost: 80.87.205.126:3001\r\nAccept-Encoding: gzip\r\nUser-Agent: okhttp/3.0.1\r\n\r\n",
+                        "host": "80.87.205.126:3001",
+                        "path": "/socket.io/?EIO=3&transport=websocket",
+                        "port": 3001,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "okhttp/3.0.1"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "80.87.205.126"
+                ],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "ec23769501fa5ce6e8f22cbe1bf28386cb1caffc21dfe7105b5264f24560dff0",
+                    "ssdeep": "6144:a/EbzNga3n3LtjOmb56WsVl4ve+nol40soa2NM:/RvnLtjOk5pXeQpUNM"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "ru.drink.lime.ON_UPDATE",
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "ru.drink.lime.ON_ALARM",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.net.wifi.WIFI_STATE_CHANGED"
+            ],
+            "app_name": "img198564.jpg",
+            "services": [
+                "ru.drink.lime.SocketServiceNew",
+                "ru.drink.lime.UpdateService",
+                "ru.drink.lime.AdminService",
+                "ru.drink.lime.PermissionService"
+            ],
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "ru.drink.lime.BootReceiver",
+                "ru.drink.lime.NetworkChangeReceiver",
+                "ru.drink.lime.AlarmUpdateReceiver",
+                "ru.drink.lime.SmsReceiver",
+                "ru.drink.lime.MyAdmin",
+                "ru.drink.lime.AlarmReceiver"
+            ],
+            "activities": [
+                "ru.drink.lime.MainActivity",
+                "ru.drink.lime.ActivityAdmin",
+                "ru.drink.lime.GetPermissionActivity"
+            ],
+            "certificate": {
+                "sha1": "5375980FEE6C40CB68E5A38475377EC4936400D3",
+                "serial": "273B98D9",
+                "issuerDN": "/C=1/ST=1/L=1/O=1/OU=1/CN=1",
+                "not_after": "Jul 11 15:17:39 2041 GMT",
+                "subjectDN": "/C=1/ST=1/L=1/O=1/OU=1/CN=1",
+                "not_before": "Jul 17 15:17:39 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.SEND_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.CALL_PHONE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "ru.drink.lime",
+            "version_code": "1",
+            "main_activity": "ru.drink.lime.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V",
+                        "class": "Lru/drink/lime/b/c;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V",
+                        "class": "Lru/drink/lime/j;",
+                        "method": "a"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lru/drink/lime/SocketServiceNew;",
+                        "method": "d"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https'",
+                        "class": "La/a/d/a/ai;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v1, '^https?|wss?$'",
+                        "class": "La/a/b/ar;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, 'https'",
+                        "class": "La/a/b/ar;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lru/drink/lime/SocketServiceNew;",
+                        "method": "d"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lb/a/o;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lb/a/o;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lc/f;",
+                        "method": "toString"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "La/a/d/a/a/v;",
+                        "method": "a"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lru/drink/lime/SocketServiceNew;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v2, 'android.intent.action.CALL'",
+                        "class": "Lru/drink/lime/w;",
+                        "method": "a"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lru/drink/lime/SocketServiceNew;",
+                        "method": "d"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lru/drink/lime/b/c;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lru/drink/lime/b/c;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lru/drink/lime/j;",
+                        "method": "b"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 12,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 23
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "80.87.205.126",
+                    "hostname": "80.87.205.126"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 843,
+                    "tid": 705961776,
+                    "data": "HTTP/1.1 101 Switching Protocols\r\nupgrade: websocket\r\nconnection: upgrade\r\nsec-websocket-accept: iVr\r\n\r\n496e4b686a30787132646658687232724e5a79556267394d3d0d0a0d0a8171307b22736964223a2238656366306539612d366630342d343964382d393463362d363037303930333932343538222c227570677261646573223a5b22776562736f636b6574225d2c2270696e67496e74657276616c223a32353030302c2270696e6754696d656f7574223a36303030307d81023430813f34325b226f6e5265676973746572222c7b2270617373776f7264223a224d35357a5a222c226964223a3133332c226861735f636f6e7461637473223a317d5d813f34325b2273656e645f736d73222c7b226964223a3939322c22626f6479223a22d091d0b0d0bbd0b0d0bdd181222c2270686f6e65223a22393030227d2c315d813f34325b2273656e645f736d73222c7b226964223a3939322c22626f6479223a22d091d0b0d0bbd0b0d0bdd181222c2270686f6e65223a22393030227d2c315d811b34325b226f6e417574686f72697a6174696f6e222c22616c6c225d810133810133",
+                    "time": 2.563689,
+                    "srchost": "80.87.205.126",
+                    "srcport": 3001,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 843,
+                    "tid": 705950424,
+                    "data": "81b1d760f3aee352a88cb61587c6b8129ad4b6149ac1b942dfd5f509978ced51c09dfb4283cfa41384c1a504d194f52dc69bad3ad1d38a",
+                    "time": 3.454677,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER",
+                        "TAINT_IMEI"
+                    ],
+                    "desthost": "80.87.205.126",
+                    "destport": 3001,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 705961776,
+                    "data": "GET /socket.io/?EIO=3&transport=websocket HTTP/1.1\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: n1VODoaYPujJEH+V/1WbFg==\r\nSec-WebSocket-Version: 13\r\nHost: 80.87.205.126:3001\r\nAccept-Encoding: gzip\r\nUser-Agent: okhttp/3.0.1\r\n\r\n",
+                    "time": 2.392842,
+                    "desthost": "80.87.205.126",
+                    "destport": 3001,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 705940008,
+                    "data": "8181682e5db45a818195305eada7",
+                    "time": 27.799378,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER",
+                        "TAINT_IMEI"
+                    ],
+                    "desthost": "80.87.205.126",
+                    "destport": 3001,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 705796848,
+                    "data": "81fe00d68cd60ceab8e457c8feb36b83ffa27e8bf8bf6384aefa77c8e3a66998eda26398d3b86d87e9f436c8cdb86898e3bf68c8a0f47c8bfea2628ffe89658eaeec3ec6aea66485e2b32ed0aee739dfb9e33edbb9e339deaefa2e87efb52ed0bfe73cc6aebf618fe5f436c8bfe33bd8b8e43cdebfe43fddb9e73dc8a0f4639ae9a46d9ee3a45387e2b52ed0aee53ddabee03cc8a0f46f85f9b87898f5896f85e8b32ed0aea37fc8a0f46f86e5b3629ed3a56881d3a06998ffbf6384aeec2edea2e722dbaefa2e89e0bf6984f8897a8ffea56585e2f436c8bff83cc8f18b818ef3f86515c7ca3e379c96317480934739c2a5818e2219008d162b5baf4d7754ec517222a11344819c820f080bb63d5329f16a7c54f1627b54f17b697ff77c2a27a0363139af3a2a56819ccc2f164cf81d4d6ebf4a6213bf426513bf5b7738b95c3460ee162f7ee11a3411",
+                    "time": 3.162089,
+                    "dataleak": [
+                        "TAINT_PHONE_NUMBER",
+                        "TAINT_IMEI"
+                    ],
+                    "desthost": "80.87.205.126",
+                    "destport": 3001,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "sendsms": [
+                {
+                    "pid": 843,
+                    "tid": 705796848,
+                    "time": 3.649112,
+                    "number": "900",
+                    "message": "Баланс",
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 705796848,
+                    "time": 3.754181,
+                    "number": "900",
+                    "message": "Баланс",
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "dexclass": [
+                {
+                    "pid": 843,
+                    "tid": 1073870640,
+                    "path": "/data/app/ru.drink.lime-1.apk",
+                    "time": 0.167103,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 843,
+                    "tid": 705917656,
+                    "data": "8ad047bb83d6089878ffab644e0d5ad854781dc0",
+                    "name": "/dev/urandom",
+                    "time": 2.238469,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 705961984,
+                    "data": "4675af784e61f222b393d7a14b4e9142f9105a5d",
+                    "name": "/dev/urandom",
+                    "time": 2.028981,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 1073870640,
+                    "data": "504b0506000000007300730086270000178f07000000504b010214001400080808004d92f148705a983eb4070000d01e0000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01020a000a00000800004992f148dc4ec2d1ac010000ac0100002d00000000000000000000000000f90700007265732f6472617761626c652d686470692d7631312f69635f737461745f616374696f6e5f696e666f2e706e67504b01020a000a00000800004992f1480f61a1e60f0100000f0100004200000000000000000000000000f00900007265732f6472617761626c652d686470692d76342f6170707468656d655f746578746669656c645f6163746976617465645f686f6c6f5f6c696768742e392e706e67504b01020a000a00000800004992f14873f7aa082c0100002c01000040000000000000000000000000005f0b00007265732f6472617761626c652d686470692d76342f6170707468656d655f746578746669656c645f64656661756c745f686f6c6f5f6c696768742e392e706e67504b01020a000a00000800004992f14852279f5186010000860100004900000000000000000000000000ec0c00007265732f6472617761626c652d686470692d76342f6170707468656d655f746578746669656c645f64697361626c65645f666f63757365645f686f6c6f5f",
+                    "name": "/data/app/ru.drink.lime-1.apk",
+                    "time": 0.249214,
+                    "processname": "ru.drink.lime"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [],
+            "servicestart": [
+                {
+                    "pid": 843,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketServiceNew",
+                    "time": 1.536481,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketServiceNew",
+                    "time": 1.775797,
+                    "processname": "ru.drink.lime"
+                },
+                {
+                    "pid": 843,
+                    "tid": 1073870640,
+                    "name": "ru.drink.lime.SocketServiceNew",
+                    "time": 1.778785,
+                    "processname": "ru.drink.lime"
+                }
+            ]
+        }
+    }
+}

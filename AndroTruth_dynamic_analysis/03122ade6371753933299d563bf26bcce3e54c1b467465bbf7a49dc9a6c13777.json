@@ -1,0 +1,1504 @@
+{
+    "apk_info": {
+        "id": "3nkVGvz3MNqG4jXD",
+        "url": "https://developer.koodous.com/apks/03122ade6371753933299d563bf26bcce3e54c1b467465bbf7a49dc9a6c13777/",
+        "sha256": "03122ade6371753933299d563bf26bcce3e54c1b467465bbf7a49dc9a6c13777",
+        "md5": "9cb79abaac5dfa0af418aa8e34e24688",
+        "sha1": "d51b34ca2dd411476407110d9a6d15028114db7a",
+        "app": "WorldTv",
+        "package_name": "com.makinggames.worldtv",
+        "company": "MakingGames",
+        "version": "1.3",
+        "image": "https://developer.koodous.com/media/apk_images/00/e8/00e87c6deb6b7c8283be4699be8b438c67abcd773a2af6dc7341204a2cc0faba",
+        "size": 5172677,
+        "tags": [
+            "virus",
+            "fnui",
+            "reflection",
+            "trojan",
+            "runtime-modules",
+            "telephony",
+            "adware",
+            "hiddad",
+            "hiddenad",
+            "PlayStore",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -5,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 22,
+        "comments_count": 0,
+        "votes_count": 5,
+        "created_at": "2018-12-12T22:59:23+01:00",
+        "updated_at": "2025-05-30T04:41:49.369450+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "9cb79abaac5dfa0af418aa8e34e24688",
+                    "sha1": "d51b34ca2dd411476407110d9a6d15028114db7a",
+                    "size": 5172677,
+                    "crc32": "039B5B00",
+                    "sha256": "03122ade6371753933299d563bf26bcce3e54c1b467465bbf7a49dc9a6c13777",
+                    "sha512": "7d54eeb26be548f9900e576dfb3ef837b1fcb793c52dbc497a1b58ed6b22d5deb937ded093a03c346cc8d7a57b640faed35c6741100660079fe55f757bd16938",
+                    "ssdeep": "98304:fqiOhIdq+mLHNcF1B3G5jeoi2So5aZw5IT8GUZ:SzhIdq5HNcB3G5jeo7SHZNA"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "graph.facebook.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "api.facebook.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "star.c10r.facebook.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "31.13.91.2",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "graph.facebook.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "cdn.partycross.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "54.38.91.33",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "cdn.partycross.com"
+                    }
+                ],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://cdn.partycross.com/com.makinggames.worldtv/settings.txt",
+                        "body": "",
+                        "data": "GET /com.makinggames.worldtv/settings.txt HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: cdn.partycross.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                        "host": "cdn.partycross.com",
+                        "path": "/com.makinggames.worldtv/settings.txt",
+                        "port": 80,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "31.13.91.2",
+                    "54.38.91.33"
+                ],
+                "domains": [
+                    {
+                        "ip": "31.13.91.2",
+                        "domain": "graph.facebook.com"
+                    },
+                    {
+                        "ip": "54.38.91.33",
+                        "domain": "cdn.partycross.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "https://www.%s.facebook.com",
+                "https://www.google.com/dfp/linkDevice",
+                "http://%s:%d/%s",
+                "http://cdn.partycross.com/com.makinggames.worldtv/settings.txt",
+                "https://imasdk.googleapis.com/admob/sdkloader/native_video.html",
+                "https://www.facebook.com/adnw_logging/",
+                "https://www.facebook.com/audience_network/server_side_reward",
+                "http://www.facebook.com",
+                "https://facebook.com",
+                "https://www.facebook.com/",
+                "http://play.google.com/store/apps/details?id=com.facebook.orca",
+                "https://result-api.truenet.ai",
+                "https://req.startappservice.com/1.5/",
+                "http://www.example.com",
+                "0type.googleapis.com/google.crypto.tink.AesCtrKey",
+                "https://init.startappservice.com/1.5/",
+                "https://support.google.com/dfp_premium/answer/7160685#push",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/mraid/v2/mraid_app_expanded_banner.js",
+                "1type.googleapis.com/google.crypto.tink.KmsAeadKey",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/mraid/v2/mraid_app_interstitial.js",
+                "type.googleapis.com/google.crypto.tink.AesGcmKey",
+                "http://cdn.partycross.com/com.makinggames.worldtv/cross3.jpg",
+                "https://graph.facebook.com/network_ads_common",
+                "vnd.android.cursor.dir/event",
+                "https://play.google.com",
+                "http://cdn.partycross.com/com.makinggames.worldtv/cross3.txt",
+                "https://imp.startappservice.com/tracking/infoEvent",
+                "http://www.google.com",
+                "https://www.google.com/dfp/sendDebugData",
+                "https://graph.%s.facebook.com/network_ads_common",
+                "9type.googleapis.com/google.crypto.tink.KmsEnvelopeAeadKey",
+                "https://facebook.com/device?user_code=%1$s&qr=1",
+                "type.googleapis.com/google.crypto.tink.HmacKey",
+                "https://pagead2.googlesyndication.com/pagead/gen_204",
+                "https://www.%s.facebook.com/audience_network/server_side_reward",
+                "type.googleapis.com/google.crypto.tink.KmsEnvelopeAeadKey",
+                "http://cdn.partycross.com/com.makinggames.worldtv/cross1.txt",
+                "https://info.startappservice.com/InApp/resources/info_l.png",
+                "https://csi.gstatic.com/csi",
+                "https://itunes.apple.com",
+                "https://.facebook.com",
+                "http://www.w3.org/ns/ttml#parameter",
+                "type.googleapis.com/google.crypto.tink.AesCtrKey",
+                "http://cdn.partycross.com/com.makinggames.worldtv/cross1.jpg",
+                "https://www.google.com/dfp/inAppPreview",
+                "type.googleapis.com/google.crypto.tink.EciesAeadHkdfPublicKey",
+                "0type.googleapis.com/google.crypto.tink.AesGcmKey",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/native_ads.js",
+                "type.googleapis.com/google.crypto.tink.",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/native_ads.html",
+                "type.googleapis.com/google.crypto.tink.KmsAeadKey",
+                "https://graph-video.%s",
+                "https://validation-engine.truenet.ai",
+                "https://d1byvlfiet2h9q.cloudfront.net/InApp/resources/adInformationDialog3.html",
+                "type.googleapis.com/google.crypto.tink.AesEaxKey",
+                "type.googleapis.com/google.crypto.tink.EciesAeadHkdfPrivateKey",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/sdk-core-v40.html",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/mraid/v2/mraid_app_banner.js",
+                "https://imp.startappservice.com/tracking/adImpression",
+                "http://play.google.com",
+                "www.google.com",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.js",
+                "http://play.google.com/store/apps/",
+                "https://www.%s.facebook.com/adnw_logging/",
+                "type.googleapis.com/google.crypto.tink.AesCtrHmacAeadKey",
+                "type.googleapis.com/google.crypto.tink.ChaCha20Poly1305Key",
+                "8type.googleapis.com/google.crypto.tink.AesCtrHmacAeadKey",
+                "0type.googleapis.com/google.crypto.tink.AesEaxKey",
+                "http://cdn.partycross.com/com.makinggames.worldtv/cross2.txt",
+                "http://schemas.android.com/apk/res/android",
+                "http://cdn.partycross.com/com.makinggames.worldtv/cross2.jpg",
+                "https://www.google.com/dfp/debugSignals",
+                "K-NZK0NZK.ZK.ZK.ZK/LL",
+                "https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps",
+                "https://www.com.startapp.com/policy/sdk-policy/",
+                "http://itunes.apple.com",
+                "https://graph.%s"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "74543da86cc262a659c6ee6a301eb02b3114d5b2a9fa914a4992a6593a4781d7",
+                    "ssdeep": "49152:W6RV3LgWZohK4nfcI7x7g2zooubkjqV029LWLJs39buDSpn4OOgcqvrT0tGwfsa/:5V38f0VodeZxao74"
+                }
+            },
+            "api_key": {
+                "com::facebook::sdk::ApplicationId": "@string/facebook_app_id"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN",
+                "com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "WorldTv",
+            "services": [
+                "com.startapp.android.publish.common.metaData.PeriodicMetaDataService",
+                "com.startapp.android.publish.common.metaData.PeriodicJobService",
+                "com.startapp.android.publish.common.metaData.InfoEventService",
+                "com.makinggames.worldtv.ExampleJobService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "com.facebook.marketing.internal.MarketingInitProvider",
+                "com.facebook.internal.FacebookInitProvider",
+                "com.squareup.picasso.PicassoProvider"
+            ],
+            "receivers": [
+                "com.facebook.CurrentAccessTokenExpirationBroadcastReceiver",
+                "com.makinggames.worldtv.DeviceBootReceiver",
+                "com.startapp.android.publish.common.metaData.BootCompleteListener",
+                "com.makinggames.worldtv.AlarmReceiver"
+            ],
+            "activities": [
+                "com.startapp.android.publish.adsCommon.activities.FullScreenActivity",
+                "com.facebook.FacebookActivity",
+                "com.makinggames.worldtv.CrossTercerRedParty",
+                "com.makinggames.worldtv.MainActivity",
+                "com.google.android.gms.ads.AdActivity",
+                "com.makinggames.worldtv.admobadsfirst",
+                "com.startapp.android.publish.adsCommon.activities.OverlayActivity",
+                "com.makinggames.worldtv.SplashActivity",
+                "com.makinggames.worldtv.fbadsfirst",
+                "com.makinggames.worldtv.NextActivity",
+                "com.makinggames.worldtv.LoadActivity",
+                "com.facebook.CustomTabMainActivity",
+                "com.facebook.CustomTabActivity",
+                "com.makinggames.worldtv.TransActivity",
+                "com.facebook.ads.AudienceNetworkActivity",
+                "com.startapp.android.publish.ads.list3d.List3DActivity"
+            ],
+            "certificate": {
+                "sha1": "081AF78C305FFB812A514083251A025F55321EA8",
+                "serial": "4577D428",
+                "issuerDN": "/CN=MakingGames",
+                "not_after": "Oct 21 22:05:40 2043 GMT",
+                "subjectDN": "/CN=MakingGames",
+                "not_before": "Oct 27 22:05:40 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_WIFI_STATE",
+                "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.INTERNET"
+            ],
+            "package_name": "com.makinggames.worldtv",
+            "version_code": "1",
+            "main_activity": "com.makinggames.worldtv.SplashActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ads": [
+                    {
+                        "code": "iput-object v1, v0, Lcom/facebook/ads/internal/DisplayAdController$10;->b Lcom/facebook/ads/internal/DisplayAdController;",
+                        "class": "Lcom/facebook/ads/internal/DisplayAdController$10;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "iput-object v2, v0, Lcom/facebook/ads/internal/DisplayAdController$10;->a Lcom/facebook/ads/internal/adapters/InterstitialAdapter;",
+                        "class": "Lcom/facebook/ads/internal/DisplayAdController$10;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "iget-object v0, v2, Lcom/facebook/ads/internal/DisplayAdController$10;->b Lcom/facebook/ads/internal/DisplayAdController;",
+                        "class": "Lcom/facebook/ads/internal/DisplayAdController$10;",
+                        "method": "run"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/google/android/gms/internal/ads/fd;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/startapp/android/publish/adsCommon/BaseRequest;",
+                        "method": "fillNetworkOperatorDetails"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https://graph.facebook.com/network_ads_common'",
+                        "class": "Lcom/facebook/ads/internal/o/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v1, 'https://graph.%s.facebook.com/network_ads_common'",
+                        "class": "Lcom/facebook/ads/internal/o/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, 'https://www.facebook.com/adnw_logging/'",
+                        "class": "Lcom/facebook/ads/internal/o/d;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/startapp/android/a/a;",
+                        "method": "g"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/o;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/r;",
+                        "method": "a"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/startapp/android/a/a;",
+                        "method": "h"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v1, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/facebook/FacebookSdk;",
+                        "method": "getApplicationSignature"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/facebook/ads/internal/o/c;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v5, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/facebook/ads/internal/o/c;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/facebook/GraphRequest;",
+                        "method": "createConnection"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/facebook/ads/internal/d/c;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v3, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Lcom/facebook/ads/internal/k/a$1;",
+                        "method": "onServiceConnected"
+                    }
+                ],
+                "serialno": [
+                    {
+                        "code": "const-string v2, 'ro.serialno'",
+                        "class": "Lcom/startapp/android/a/a;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lcom/facebook/ads/internal/a/f;",
+                        "method": "b"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lbolts/a;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/facebook/ads/internal/e/d;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/facebook/ads/internal/q/b/e;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/startapp/android/a/a;",
+                        "method": "f"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/i$b;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/i$b;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/b/a/a/a/c/b;",
+                        "method": "e"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 16,
+            "new_permissions": [],
+            "displayed_version": "1.3",
+            "target_sdk_version": 26
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "31.13.91.2",
+                    "hostname": "graph.facebook.com"
+                },
+                {
+                    "ip": "54.38.91.33",
+                    "hostname": "cdn.partycross.com"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 850,
+                    "tid": 705953928,
+                    "data": "HTTP/1.1 200 OK\r\nServer: nginx/1.10.3 (Ubuntu)\r\nDate: Mon, 01 Apr 2019 10:26:18 GMT\r\nContent-Type: text/plain\r\nContent-Length: 328\r\nLast-Modified: Mon, 07 Jan 2019 13:18:35 GMT\r\nConnection: keep-alive\r\nETag: \"5c3351ab-148\"\r\nAccept-Ranges: bytes\r\n\r\njobtime:15\r\nwindowtime:480\r\nnetwork1:admob\r\nnetwork2:facebook\r\nadmobid:ca-app-pub-9053344617843946~2037898491\r\nadmobinter:ca-app-pub-9053344617843946/2776265098\r\nfacebookid:707227696320045\r\nfacebookfest:707227696320045_707229252986556\r\nfacebookint:707227696320045_707229022986579\r\nstartappid:210772882\r\nupdate:240\r\nminimetime:20",
+                    "time": 5.727843,
+                    "srchost": "cdn.partycross.com",
+                    "srcport": 80,
+                    "processname": "com.makinggames.worldtv"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 850,
+                    "tid": 705953928,
+                    "data": "GET /com.makinggames.worldtv/settings.txt HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: cdn.partycross.com\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 5.586146,
+                    "desthost": "cdn.partycross.com",
+                    "destport": 80,
+                    "processname": "com.makinggames.worldtv"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 0.103891,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705457704,
+                    "path": "/data/data/com.makinggames.worldtv/cache/1521499837408.jar",
+                    "time": 7.478351,
+                    "processname": "com.makinggames.worldtv"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "be038a23618883cacf68f619c3fe232c7d49bef48bad1878496c2f691a7e2e57e396669fb46874095f97d82ab576e9c37ae76af8b95c8ddb01347a44a3c7a051ac223b1ab72d1a6f05d0b8201a17348d16b1b5686df5964523a9d9a72d1abdc2d72bb612dfd87035fc5caec672008d4ba271c9a2e1aeddab01d6eeb5006b7783e835686de4afe7da572d6bad3fae62d889ef1db1bfa0fd1f0ab72d3286795c645d97c221d7df21f17748d3cf58d6bead02d6be1a4de39a685c9372155eb9c35f167bba5b16dd0705adb99eeeb0e80eefa1fbc0a04bfdfdd09053fcfd7d5d34ae6bedf7d0903f88ef5100be84f02534be47967cf45e809c372a7ca37be4bcf72c3ebf6f98637e9f47846f44db0b7f10603e7db8cff9f4a1653e7d60994fef1bf2078dab8f0a1857f743de5eae5d7c6a378cab27259eee479671f5b141d71ff759d138abc5f1b185ef93007c6dc2d7a6f17d62594b3fdd239784f9ccd9e13bb7c7dcfad4a2f1598035a859349ab535a84e6c755a1c9f19d620eadfdf69f65f18fa37cc67680edfa0d84ab5f5c12d877b3520e506345d3fbfabfb4500dda8f045f7d0bd2ae5ae6aba5f5874bf0aa0db217c1d7be85e96729735ddaf0cba54fe718075b855f85a2dba6edef82640def83640dee814bd4ecdff6f2d79e31b4bde786cc81b74c2f8bd617e14075807bbc5a7ee5dda3e2797d478bef8355dbbff0c26ec",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 14.2448,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "be938772346528b3f997a77c25c1496ba32841d4a1032359c4492e91f894fa2337c5a944133a3182c5ace708d77847dcd3d6c01f54a00d8399c872d67291477c22d619bd423e6ad08aae0c621c8bd8c069ee13eeacfee26f5a3398f96ce532af897b4ebc284e33ba30938d1ce436e1cf970bfc42282b38c809ae708f4f24bf605db4a63b7d18c67816f02fc7f9ca8f17dd31a84c0f4299c74e0e738edbbc27c2256b2419e9c94e5e82e9cd7cf6f182ef2f9bb964a53041d4a327a1cc650387b8c9435e13eb8af947561a328add3c20de5575cb4a36b19b933ce62b49ae3967284a2dba329e359ce43931aecb1b45a84a6726b29add1ce723316ff87d41776691e1a6794253ba309edd3c24e22df1a016ed18cc640e70867b84bb6d5f64221f41d4a435c398cf2e0e709a7b3ce4f73be608a5a8401d1ad19231cc601b07097fd7f9410292f01b8d68466fc6328bf92c650d5bd9cd516e1346e47bbecfef64a6182154a7399359cc1a36b387239ce10a778970df59440292938e4284d086892ce110f788f0c0fb2847474259cd364e729da7447ae81e42716ad08631ac6013bbb9c07d3ef0dd2373963f294835bab380e33c20e263339ce4a4273bf9a8466bba329465ece50a61fcfcc47309a2397d99c452d6b29dbd1ce11497b8cb13024fed8558242635992940088de8483f26319f556ce502d7b9c3133e11f999b3826414a4",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 19.964737,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705646960,
+                    "data": "aced00057372003b636f6d2e66616365626f6f6b2e6170706576656e74732e5065727369737465644576656e74732453657269616c697a6174696f6e50726f7879563100000004b1aac9090200014c000b70726f78794576656e74737400134c6a6176612f7574696c2f486173684d61703b7870737200116a6176612e7574696c2e486173684d61700507dac1c31660d103000146000a6c6f6164466163746f7278703f4000007708000000040000000173720040636f6d2e66616365626f6f6b2e6170706576656e74732e416363657373546f6b656e4170704964506169722453657269616c697a6174696f6e50726f78795631dd772aee317ab6130200024c0011616363657373546f6b656e537472696e677400124c6a6176612f6c616e672f537472696e673b4c0005617070496471007e000678707074000f373037323237363936333230303435737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a6578700000000277040000000c73720034636f6d2e66616365626f6f6b2e6170706576656e74732e4170704576656e742453657269616c697a6174696f6e50726f7879563200000004b1ad70b90200035a000a6973496d706c696369744c0008636865636b73756d71007e00064c000a6a736f6e537472696e6771007e00067870017400203061306261343935",
+                    "name": "/data/data/com.makinggames.worldtv/files/AppEventsLogger.persistedevents",
+                    "time": 19.172446,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705703216,
+                    "data": "8dc674a13f6398c66236708c9b3c25fa7e7bcd9fa4a200e5a841633a3182256ce60c0f887b2038f03769c94b28b569c75026318f656ce638e779ca3b221c54cf24e46fd292952254a5015d18cd223672944bdce2091f8876c879c23fe4a230c134a13d5358cb2eaef08998879d3f642437a5a94a63dad39bb9ac613727b9ca63221e518b24273b8509a10eade9cd30a6b29abd9ce0066f897c548e91893c94a53a1d19cc58f67081dbbc20c6317b446af2508acab463285358cc6eaef298374438ae5ef9893f484e5e2ad39cf6f4632c4bd8cc3e4e7081c7044ee87ffc452ab25088cab46218ab38ca651ef2866827ed0bc929421035684937463299456ce30457b8cb6b229d3286ea34a5237d18c15416b3966d1ce434d778439cd37a2549c9403e4a519b667462101399c35236b09ff3dce11d31ce3817f997bc04539756f461180b58c50e8e708e9b7c22ea5931200505a94127063381592c673347b8c47d5e1338e76ec01fa4261f5569481706328530b67081177c26e679f94d7a7210441d5a309e59ace230177944e40bdec7dfa4253b25a84b5786309d751ce50e8ff9cc0f17e533f92943235ad19dc18c6101cbd9c221ce7097cf7c77c97b494b5e4a5199fa34a5351de94e5f66329f25ac6137d708e731af887c590cc849288de8cc00a6b086fd9ce4113f5dd10b68c258a6309765ac6103dbd94594ab728c0424e4",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 21.025578,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705646960,
+                    "data": "a23fb4503457013463f9ddd0e80edf46ed804f1c",
+                    "name": "/dev/urandom",
+                    "time": 4.083908,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705703216,
+                    "data": "504b030400000000080000000000d19c9110da090000a029000013000000416e64726f69644d616e69666573742e786d6cbd5a4d4c5cd715bec3f033985f3b89213660c726188c19b0c1601c3bc9308019cc5f01db9195c41df3e711c34f9881182f6a6791a4522a25919a48ad1a29eb2c622b89b2c83acb2eaba8abaaeaaacbcaaabaa82ab5df39ef3cde9d37f7c21b8ac3d3e779efbc7bbfef9cfb73ee7d570eab88fab24da9906a50c52f287553797fd990775f0d3400ad400f3006bc0d6c00bf07be03fe083c056a51af09b802dc04d681df025f033f027f01fe09541729550fb402978011e04d6015f801780af48695fa35f027a0a958a93780af81bf02ff06464be007f01370b414f7c01f807f0023654a7d0f9c8a287517780a8c942bf539f013103904ff802740a40275811f80d24aa5a68127c07f80b12ac408fc1d184443fc06f833305203bf80dbb5f00778fb307e81f411c409fc0df81750f91c7c072e00c3c01bc003a04465d53db5a056007a4aaba4ba8bfb349e8a554acda935b5caf7ab78e3943aa4d6f1bb81a794cae04a4999325857b97e1a77f3b044f07b1fa5d7503a2bb6236c9b43994d3c2fa861bc5b03d734eee798210b4ea52ac0b4c9de51ed14ee52789b61fd34bf5b45f97b6a1cefe7d9afc3783b87b20bcc32c9b51cbe24d776bcac929816615952713024f1b424dc256a0bcfe4db0297a518",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 14.126717,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705703216,
+                    "data": "9a8cfc417e8a529e768c640a0b59cf36f672824b448f6d4d24252f452847056ad1883674a21bfd18c27866b38493bc215e9ca0406e6ad08dd9ece50191e3aa51f251873ecce43f4e709f70f1ec891464223f7f13422b3a338c892c6637e778c237a27e2fb724233bc1b4a633bd19c72c16b18add1ce2020f784fd4f8f64162d250826a34a323bd19ce7866b39413dc23ce0f41810424250b85294925ea318009cce65fae13e947f923377f5187ce8c60068bd9c6399e123181b8508de60ce15faef186f83fe9318ad292c9ece7322ff9c20f09f52045a84f5f66b096c33ce01389120505325082da74630c2b38c61dbe9230b1cf918322cc62053bb8c423be9138893ea1020d69cd6066b39123dc27e9cf6a9086742594959ce221519306057ea7222d99ca4ab6f39c44c9ac8506b4e71fe6b19e6bbc247c72eb210bc5a9430bbab19b435ce0215f89f78b3c9193eab46020a12c6533c7794320859e220b4134a02f4319c71dbe91f0d7a0c0af6425375d99c162d6b19d63dce435d17e5393e4238896746304f3d9c219ee133ea5f948368a50839e2ce2349fc9984a6f519feeace1280f8998da7ea9435b86328f2d9ce13e11d3580f95f987d9fcc75922a4d50f2426154568466f26b289bd5ce2e5ff3f934e5c69457f4259c436cef39af8bf07057e211bb5694e7766b1997d1ce1219f0997de7ce3474ad381855c224e0631",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 19.497306,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "504b030400000000080000000000d19c9110da090000a029000013000000416e64726f69644d616e69666573742e786d6cbd5a4d4c5cd715bec3f033985f3b89213660c726188c19b0c1601c3bc9308019cc5f01db9195c41df3e711c34f9881182f6a6791a4522a25919a48ad1a29eb2c622b89b2c83acb2eaba8abaaeaaacbcaaabaa82ab5df39ef3cde9d37f7c21b8ac3d3e779efbc7bbfef9cfb73ee7d570eab88fab24da9906a50c52f287553797fd990775f0d3400ad400f3006bc0d6c00bf07be03fe083c056a51af09b802dc04d681df025f033f027f01fe09541729550fb402978011e04d6015f801780af48695fa35f027a0a958a93780af81bf02ff06464be007f01370b414f7c01f807f0023654a7d0f9c8a287517780a8c942bf539f013103904ff802740a40275811f80d24aa5a68127c07f80b12ac408fc1d184443fc06f833305203bf80dbb5f00778fb307e81f411c409fc0df81750f91c7c072e00c3c01bc003a04465d53db5a056007a4aaba4ba8bfb349e8a554acda935b5caf7ab78e3943aa4d6f1bb81a794cae04a4999325857b97e1a77f3b044f07b1fa5d7503a2bb6236c9b43994d3c2fa861bc5b03d734eee798210b4ea52ac0b4c9de51ed14ee52789b61fd34bf5b45f97b6a1cefe7d9afc3783b87b20bcc32c9b51cbe24d776bcac929816615952713024f1b424dc256a0bcfe4db0297a518",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 13.754293,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "32ea4f3463d8ca0342cbea259a308eed3c22673939a31913d8c913de2d6f9ed08249ece619792a440451b4620a7b79c17b156589d64c651f2fc957498d69cb740ef09af72b9bd1b467268778cb8755648c6e2ce60cc9aa9a4354a2174b39478a6ace842af461391748593d22f892aaf46505174955434f529dfec472993435f53b3519481c5749f79f33a4168359c37532d47286d46128ebb841c6dafa86ba0c633db7c85c479f509f116ce40e59ea7ad6d090516ce61ed9ea3943a219c3561e105adf19d298b16ce321391a987b34653c3b784cae86fa84e64c660fcfc9db483fd09aa9ece325f9a29d156d99ce015e93bf7144f037ed98c141de50a089e7371d98c56182a66619ff10c31c8e12bf5944f011a5e9cc3c8e93b0b97703cad295f99c20510bf38272746321a748d23222f88c0af460316748d64a46a8442f96728e14ad65842af46139170869232354a52f2bb848aab6324275fa13cb65d2b493116a329038ae92aebd8c508bc1ace13a193ac8087518ca5a6e90b1a38c509761ace71699636484fa8c602377c8d2494668c82836738f6c9d658468c6b095078476f18ca03163d9c643727495119a329e1d3c26573719a13913d9c5537277374b69c964f6f09cbc3d6487d64c652f2f78afa7fea70dd3d8cf2bf2f7921dda318383bca1406fd9a103b3384cd04776f88718e67094f87d65877fe9c45c8e91a05f",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 19.206123,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          321352 kB\nBuffers:               0 kB\nCached:           149440 kB\nSwapCached:            0 kB\nActive:           155728 kB\nInactive:         108680 kB\nActive(anon):     119832 kB\nInactive(anon):        0 kB\nActive(file):      35896 kB\nInactive(file):   108680 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        114976 kB\nMapped:            52672 kB\nSlab:               6296 kB\nSReclaimable:       1756 kB\nSUnreclaim:         4540 kB\nPageTables:         5292 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2497852 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 6.894917,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "81ba34e219d9be0f0e74652391e2cb3517c9f54370600dc97e0c0ea42015bf93959ce4a1204528411942a8420dead2985674a227fd19ca48c6328919cc6329ffb285039ce022d7b9c733def0816f444c101c884e5c7e222929f99dcce4240f0529451095a9411d1ad28c3674a617fd19ca3f843293052c671ddbd8cb614e72811b3ce405eff84cf89fd410b1884f12529096cce4a210a5284f75ead194b674a6270318c104a6339f65ac652bfb38c6796ef19097bce31b9113060762139f9f49497ab2929b7c14e66fca50919ad4a3092d694f37fa3098318c67368b59c57a767384b3bce32b11129913a4e477b25180bf28453055a84313dad08dfe0c67227358c07a0e7294b35ce6013f25165f9293868c64a3344154a10e2de84228ebb949cc24ea840ab4661ceb39cf6b12fd1c1c284e37a6b29b8b7c214152eb67102bf84c91646615fb4998dcbb19c21cb67099f724fd456d52858e8c652587b84ff814fa8eaa8c641b0f48f7ab3db09e17e4f8cdba99c576eef0534af1a50f9b794bd254ea8dfaf4641cbb38c72302a9d50859a8407f16738f8869c49372b461288b384da4b4c181dfa8c83056738d68e9cc2c8269cf34f6f282c4bfab01ea3290851ce42971d37b1715e9cc643673956ffc9a413e68ce0ccef295d419e59aaecce300cf889f49af518b012ce2106124cdec59b461327b78ce4f59ac9b2ecce40ee9b3",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 20.588472,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705457704,
+                    "data": "6465790a3033360028000000d8490000004a0000be020000c04c000000090000000000000bce78786465780a30333500bdd2223c04a52b68a526c89a52ad2d5ae61638ebfcb15ff3d849000070000000785634120000000000000000444900002a010000700000006e000000180500005c000000d006000032000000200b0000c8000000b00c000020000000f0120000e8320000f0160000ee310000f0310000f7310000fd310000093200001d3200002b3200004632000058320000623200006a3200007132000078320000cb330000ce330000d6330000d9330000e3330000e6330000ea330000f4330000f7330000fb330000ff33000003340000083400000d34000010340000143400001a3400001f34000023340000283400002c3400003134000034340000383400003d34000041340000453400004a3400004f340000553400005b34000060340000663400006a34000082340000a9340000d73400000c3500003b3500005a350000793500009e350000c1350000dc350000fe35000018360000383600005a36000095360000ba360000da360000ff360000203700003c3700005037000065370000803700009a370000be370000e2370000183800002f3800004e380000663800008238000097380000b2380000d0380000ec3800000839000024390000403900005c3900007839000094390000b0390000cc390000",
+                    "name": "/data/data/com.makinggames.worldtv/cache/1521499837408.dex",
+                    "time": 7.81454,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 1073870640,
+                    "data": "504b0506000000004e024e02f5dd0000ba0f4e000000504b0102000000000000080000000000d19c9110da090000a0290000130000000000000000000000000000000000416e64726f69644d616e69666573742e786d6c504b0102180014000000080000000000bf0ee885060400005004000011000000000000000000000000000b0a00004d4554412d494e462f434552542e525341504b0102180014000000080000000000aeed5deaf342000049ee00001000000000000000000000000000400e00004d4554412d494e462f434552542e5346504b01021800140000000800000000007f8155cf754100001eee00001400000000000000000000000000615100004d4554412d494e462f4d414e49464553542e4d46504b0102140014000008080000000000abfb53d608000000060000002f00000000000000000000000000089300004d4554412d494e462f616e64726f69642e617263682e6c6966656379636c655f72756e74696d652e76657273696f6e504b010214001400000808000000000051e3430a09000000070000003d000000000000000000000000005d9300004d4554412d494e462f636f6d2e616e64726f69642e737570706f72745f616e696d617465642d766563746f722d6472617761626c652e76657273696f6e504b010214001400000808000000000051e3430a0900000007000000310000000000",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 0.145112,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "1423985ab4a423bd18c644a6b38055ece024d7784ec445f24832d2909dfc045195160c663cb358cd7fece3345778c447222f0e0e24e657d293972ad4a539bd18ce3fcc65351bd9cd19eef38d284bc485d464a20055694d0f8611ca5276729a07bc27fe52fb201f15a845537a3298b14c6301eb38c64dc288bc4cadf13b41d4a62d0398c65236b083a3dce4159ff961b9fee72faad090ce8c662a1b38cf6712acb02f4a529fae4c600947784f8495e615c949c71f14a6120d684967fa3292692c643dfb38ce65eef18254ab3c832294a60eede9c14826339f8d1ce70dbfad56d354a705ede8ca0866b08c1d1ce42c57794ff235ce5c8268406f26b290a33c26e1bfe24575ead084fe2ce314d778c25bc2add5df24e417d2909dc204538fde8c622e0b59ce5a36b183bd1ce43c7778cc0bdef0e1ffcf5ee7be410a52f33b99c94f1015a842239ad19dbe0c6124e359cd61aef29c4f445eef8e434252f13b05284615ead18e21843283b51ce10a6f88bb414cc94130cd18c64c56b197f33c27c246b5481a32114c23bad29ff14c6219fb38cd656e7087f704fe73ee909ed254a0264d69cf6816f1809f37a9299a339ed51ce20d71368b21a568483f26b38dbbc4d822d694a735c359cc5e1e1177ab739a0ab46314eb39c73b126f33ffa8467726b39e93bce3e7ed6610f519ca420ef28cf83bac8d72b46614ebb8c84712ec744ed1",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 20.830272,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706323800,
+                    "data": "e22a7769ca60319809e259c06ea6a2fc8c1491e3",
+                    "name": "/dev/urandom",
+                    "time": 16.052683,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "d58ceeace63e1f0d880cfe63189b7940ce817a8976cce124490799615467206bb8c98783d594595ce7fd21de8f98c233be1eaa9758c953f20d535306b18b8cc3ad91f19c26e308f3868ecce50c2123e590ba8c622b4fc8334a8e68c72c8e93727464f03df518cd0e9ef3fe18ef1f74633117483d56dfd183f5bca2e03875a70b8b3847aaf191c10f34601cbb78c58713f42c7d88e316d927ca2cad99c621e24f92652a32800d3c22df64f7a2072bb841f629fe9ef6cce30ca9a6ba3f7518c1161e916b9aefd286591c27e974e7444d86b28987e49da1aec4b09073a49aa9aed461045b7844ee59ea4a7be67082c4b36598aaf4238e6b7c3247bfb38677e6ba2f6b4939cfb93299a77c37dfbb1f8b384fa605e6222d58c07dbe5ca8c62ce116b917e935467384d48bf50ded58c23dde5be23e8ce62ce9974606bfd28ab99c25ed32fd413366729290e59ee93463366749bfc2eca0150b394bc84af381da0c67330fc919ab1798c37d2256793fe30419e2f40f3dd8c00b0aafb637a691708dfa3291e7fcb1d6b38135bce08b757e93328f1be45bafee8ce108e936b81f3dd8c03d726d744fda32832324dce43d97aa0c621d77c8b1d9dfd392191c21e116dfa52283d8c423726f755dda328b6324de668d546710ebb8438eedbe4b5b667082e43bbc7b518751ece00505777a46d18b58ae9069973948532671002fd4c18794a517",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 19.559012,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705457704,
+                    "data": "504b050600000000020002007f000000fb2100000000504b01021400140008080800517e734c1252fd2280000000980000001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b01021400140008080800517e734cc506683cfc200000d84900000b00000000000000000000000000c6000000636c61737365732e646578504b050600000000020002007f000000fb2100000000",
+                    "name": "/data/data/com.makinggames.worldtv/cache/1521499837408.jar",
+                    "time": 7.494377,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706863952,
+                    "data": "9a8cfc417e8a529e768c640a0b59cf36f672824b448f6d4d24252f452847056ad1883674a21bfd18c27866b38493bc215e9ca0406e6ad08dd9ece50191e3aa51f251873ecce43f4e709f70f1ec891464223f7f13422b3a338c892c6637e778c237a27e2fb724233bc1b4a633bd19c72c16b18add1ce2020f784fd4f8f64162d250826a34a323bd19ce7866b39413dc23ce0f41810424250b85294925ea318009cce65fae13e947f923377f5187ce8c60068bd9c6399e123181b8508de60ce15faef186f83fe9318ad292c9ece7322ff9c20f09f52045a84f5f66b096c33ce01389120505325082da74630c2b38c61dbe9230b1cf918322cc62053bb8c423be9138893ea1020d69cd6066b39123dc27e9cf6a9086742594959ce221519306057ea7222d99ca4ab6f39c44c9ac8506b4e71fe6b19e6bbc247c72eb210bc5a9430bbab19b435ce0215f89f78b3c9193eab46020a12c6533c7794320859e220b4134a02f4319c71dbe91f0d7a0c0af6425375d99c162d6b19d63dce435d17e5393e4238896746304f3d9c219ee133ea5f948368a50839e2ce2349fc9984a6f519feeace1280f8998da7ea9435b86328f2d9ce13e11d3580f95f987d9fcc75922a4d50f2426154568466f26b289bd5ce2e5ff3f934e5c69457f4259c436cef39af8bf07057e211bb5694e7766b1997d1ce1219f0997de7ce3474ad381855c224e0631",
+                    "name": "/data/app/com.makinggames.worldtv-1.apk",
+                    "time": 20.145934,
+                    "processname": "com.makinggames.worldtv"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705457704,
+                    "time": 6.271337,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705457704,
+                    "time": 10.784865,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.698005,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "com.google.android.ads.zxxz.l",
+                    "time": 13.704306,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.713845,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "com.google.android.ads.zxxz.g",
+                    "time": 13.713948,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.714033,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.721815,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "a",
+                    "time": 13.721886,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.734464,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "com.google.android.ads.zxxz.m",
+                    "time": 13.73457,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.734654,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "a",
+                    "time": 13.734749,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "a",
+                    "time": 13.737457,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854592,
+                    "time": 13.744285,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854592,
+                    "data": "com.google.android.ads.zxxz.o",
+                    "time": 13.755967,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854592,
+                    "time": 13.756065,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.756182,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.763916,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706855464,
+                    "time": 13.764005,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854592,
+                    "data": "a",
+                    "time": 13.769797,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "com.google.android.ads.zxxz.k",
+                    "time": 13.769894,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "com.google.android.ads.zxxz.i",
+                    "time": 13.774653,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706855464,
+                    "data": "com.google.android.ads.zxxz.d",
+                    "time": 13.784441,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.784529,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.784582,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "a",
+                    "time": 13.78471,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "a",
+                    "time": 13.794174,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854872,
+                    "time": 13.794284,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706855464,
+                    "time": 13.802084,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854872,
+                    "data": "com.google.android.ads.zxxz.v",
+                    "time": 13.802149,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706855464,
+                    "data": "a",
+                    "time": 13.803923,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854592,
+                    "time": 13.813889,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.814011,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.814107,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854592,
+                    "data": "com.google.android.ads.zxxz.s",
+                    "time": 13.818911,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "com.google.android.ads.zxxz.f",
+                    "time": 13.82454,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "com.google.android.ads.zxxz.t",
+                    "time": 13.834463,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706441064,
+                    "time": 13.834596,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706855464,
+                    "time": 13.844258,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854872,
+                    "time": 13.844347,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854592,
+                    "time": 13.8444,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.844465,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.844515,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706441064,
+                    "data": "com.google.android.ads.zxxz.b",
+                    "time": 13.844566,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706855464,
+                    "data": "com.google.android.ads.zxxz.u",
+                    "time": 13.865276,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705941440,
+                    "time": 13.865378,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854872,
+                    "data": "a",
+                    "time": 13.865463,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854592,
+                    "data": "a",
+                    "time": 13.865539,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "a",
+                    "time": 13.865613,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "a",
+                    "time": 13.867728,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706855464,
+                    "time": 13.874604,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706441064,
+                    "time": 13.874725,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706855464,
+                    "data": "a",
+                    "time": 13.886502,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706441064,
+                    "data": "a",
+                    "time": 13.886608,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705941440,
+                    "data": "com.google.android.ads.zxxz.j",
+                    "time": 13.886685,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705941440,
+                    "time": 13.894454,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854592,
+                    "time": 13.900114,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.900214,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854872,
+                    "time": 13.9003,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.90399,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706441064,
+                    "time": 13.913814,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706855464,
+                    "time": 13.913902,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705703216,
+                    "time": 13.913998,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705941440,
+                    "data": "a",
+                    "time": 13.918221,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "com.google.android.ads.zxxz.w",
+                    "time": 13.924568,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854872,
+                    "data": "com.google.android.ads.zxxz.c",
+                    "time": 13.924686,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "com.google.android.ads.zxxz.p",
+                    "time": 13.932493,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854592,
+                    "data": "com.google.android.ads.zxxz.n",
+                    "time": 13.932579,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706445336,
+                    "time": 13.944193,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854872,
+                    "time": 13.944297,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706448488,
+                    "time": 13.94435,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706854592,
+                    "time": 13.944414,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706441064,
+                    "data": "com.google.android.ads.zxxz.q",
+                    "time": 13.944498,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706855464,
+                    "data": "com.google.android.ads.zxxz.h",
+                    "time": 13.949053,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705703216,
+                    "data": "com.google.android.ads.zxxz.e",
+                    "time": 13.953936,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706445336,
+                    "data": "a",
+                    "time": 13.954023,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854872,
+                    "data": "a",
+                    "time": 13.963791,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706448488,
+                    "data": "a",
+                    "time": 13.963871,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706854592,
+                    "data": "a",
+                    "time": 13.96396,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706441064,
+                    "time": 13.965999,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 706855464,
+                    "time": 13.978354,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 707163416,
+                    "time": 13.994299,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706855464,
+                    "data": "a",
+                    "time": 13.994412,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 706441064,
+                    "data": "a",
+                    "time": 14.003942,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705703216,
+                    "time": 14.004003,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705703216,
+                    "data": "a",
+                    "time": 14.004091,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705941504,
+                    "time": 14.004149,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705941504,
+                    "data": "com.google.android.ads.zxxz.r",
+                    "time": 14.013804,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 707163416,
+                    "data": "com.google.android.ads.zxxz.a",
+                    "time": 14.013911,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 707163416,
+                    "time": 14.024574,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "key": "-128, -99, -29, 97, 20, 39, 71, 116, -45, -12, 6, 57, -23, 91, 47, -29",
+                    "pid": 850,
+                    "tid": 705941504,
+                    "time": 14.113245,
+                    "algorithm": "AES",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 707163416,
+                    "data": "a",
+                    "time": 14.113319,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705941504,
+                    "data": "a",
+                    "time": 14.113401,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.makinggames.worldtv"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 850,
+                    "tid": 705860048,
+                    "data": "aced00057372003b636f6d2e66616365626f6f6b2e6170706576656e74732e5065727369737465644576656e74732453657269616c697a6174696f6e50726f7879563100000004b1aac9090200014c000b70726f78794576656e74737400134c6a6176612f7574696c2f486173684d61703b7870737200116a6176612e7574696c2e486173684d61700507dac1c31660d103000146000a6c6f6164466163746f7278703f4000007708000000040000000173720040636f6d2e66616365626f6f6b2e6170706576656e74732e416363657373546f6b656e4170704964506169722453657269616c697a6174696f6e50726f78795631dd772aee317ab6130200024c0011616363657373546f6b656e537472696e677400124c6a6176612f6c616e672f537472696e673b4c0005617070496471007e000678707074000f373037323237363936333230303435737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a6578700000000277040000000c73720034636f6d2e66616365626f6f6b2e6170706576656e74732e4170704576656e742453657269616c697a6174696f6e50726f7879563200000004b1ad70b90200035a000a6973496d706c696369744c0008636865636b73756d71007e00064c000a6a736f6e537472696e6771007e00067870017400203061306261343935",
+                    "name": "/data/data/com.makinggames.worldtv/files/AppEventsLogger.persistedevents",
+                    "time": 5.384581,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"com.facebook.appevents.SourceApplicationInfo.callingApplicationPackage\"></string>\n<string name=\"com.facebook.appevents.SessionInfo.sessionId\">ccaa877d-7d0c-4f7b-8331-479aa3aa39b5</string>\n<int name=\"com.facebook.appevents.SessionInfo.interruptionCount\" value=\"0\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionEndTime\" value=\"1426266957738\" />\n<boolean name=\"com.facebook.appevents.SourceApplicationInfo.openedByApplink\" value=\"false\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionStartTime\" value=\"1426266948819\" />\n</map>\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/com.makinggames.worldtv_preferences.xml",
+                    "time": 13.504667,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705770400,
+                    "data": "aced00057372003b636f6d2e66616365626f6f6b2e6170706576656e74732e5065727369737465644576656e74732453657269616c697a6174696f6e50726f7879563100000004b1aac9090200014c000b70726f78794576656e74737400134c6a6176612f7574696c2f486173684d61703b7870737200116a6176612e7574696c2e486173684d61700507dac1c31660d103000146000a6c6f6164466163746f7278703f4000007708000000040000000173720040636f6d2e66616365626f6f6b2e6170706576656e74732e416363657373546f6b656e4170704964506169722453657269616c697a6174696f6e50726f78795631dd772aee317ab6130200024c0011616363657373546f6b656e537472696e677400124c6a6176612f6c616e672f537472696e673b4c0005617070496471007e000678707074000f373037323237363936333230303435737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a6578700000000277040000000c73720034636f6d2e66616365626f6f6b2e6170706576656e74732e4170704576656e742453657269616c697a6174696f6e50726f7879563200000004b1ad70b90200035a000a6973496d706c696369744c0008636865636b73756d71007e00064c000a6a736f6e537472696e6771007e00067870017400203061306261343935",
+                    "name": "/data/data/com.makinggames.worldtv/files/AppEventsLogger.persistedevents",
+                    "time": 20.572837,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"update\">240</string>\n<string name=\"admobinter\">ca-app-pub-9053344617843946/2776265098</string>\n<string name=\"network2\">facebook</string>\n<string name=\"windowtime\">480</string>\n<string name=\"admobid\">ca-app-pub-9053344617843946~2037898491</string>\n<string name=\"facebookfest\">707227696320045_707229252986556</string>\n<string name=\"network1\">admob</string>\n<string name=\"minimetime\">20</string>\n<string name=\"facebookint\">707227696320045_707229022986579</string>\n<string name=\"startappid\">210772882</string>\n<string name=\"jobtime\">15</string>\n<string name=\"facebookid\">707227696320045</string>\n</map>\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/PREFS.xml",
+                    "time": 5.834231,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"anonymousAppDeviceGUID\">XZ3cfa5b0c-7cbf-41a1-8b09-6a2b03ac109e</string>\n</map>\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/com.facebook.sdk.appEventPreferences.xml",
+                    "time": 4.315732,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705457704,
+                    "data": "0a80e501384c6e63356b77486f744a56664e4534463977504f67464c6d61586166476633664a6868426946396850626c77436c5a6d6c516c734a61614845796c475971644d4f3344616b7170644371644c6c6f6977737659586b772b504d4f724d756c546941377952746573316f4258474c69716a695435685861327a39764b674d694b6e6f716f707a4566655936754956526958336b4c732b4a754c4b4b612b4f5735766b764b79367175454e2f4f482b4c384d4c79545678684b7131766f4251754e33716b434972465a654c7746637439686642527a352b33573733682b326b684670425a655a6639502b72526e4c75397745726e5458513137656a7a7a5648507a5a46596b76385a456955383741503735527764376e4431416a6a765370392b4c6b716e49745a5445717a457769747173516a6e776a7558497364653652716c4133336658765854794a6e50634d6a3148584e665972503068642b6c4e546142745a64374b2b455935526f6379706861785a796937676e4f32712b7a4276526761333871564b4c63716b796a5a546977507878697041434f6b697430746a775a6c356a484c32336666772b523746506c6d3076596f37617278594548795651696f5364796d444d3876595153567771396f62496a7139316652726f336b7a785757334d6244726a70752f644a51345a3064446362386b7a4a547941304b",
+                    "name": "/data/data/com.makinggames.worldtv/cache/1521499837408.tmp",
+                    "time": 11.189598,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"com.facebook.appevents.SourceApplicationInfo.callingApplicationPackage\"></string>\n<string name=\"com.facebook.appevents.SessionInfo.sessionId\">ccaa877d-7d0c-4f7b-8331-479aa3aa39b5</string>\n<int name=\"com.facebook.appevents.SessionInfo.interruptionCount\" value=\"0\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionEndTime\" value=\"1426266949364\" />\n<boolean name=\"com.facebook.appevents.SourceApplicationInfo.openedByApplink\" value=\"false\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionStartTime\" value=\"1426266948819\" />\n</map>\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/com.makinggames.worldtv_preferences.xml",
+                    "time": 4.584483,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"707227696320045ping\" value=\"1426266950200\" />\n</map>\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/com.facebook.sdk.attributionTracking.xml",
+                    "time": 5.365,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"first_ad_req_time_ms\" value=\"1426266951217\" />\n</map>\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/admob.xml",
+                    "time": 6.374356,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map />\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/PREFS.xml",
+                    "time": 5.445587,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705878296,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"com.facebook.appevents.SessionInfo.sessionId\">ccaa877d-7d0c-4f7b-8331-479aa3aa39b5</string>\n<long name=\"com.facebook.appevents.SessionInfo.sessionStartTime\" value=\"1426266948819\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionEndTime\" value=\"1426266949364\" />\n<int name=\"com.facebook.appevents.SessionInfo.interruptionCount\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.makinggames.worldtv/shared_prefs/com.makinggames.worldtv_preferences.xml",
+                    "time": 4.534317,
+                    "processname": "com.makinggames.worldtv"
+                },
+                {
+                    "pid": 850,
+                    "tid": 705457704,
+                    "data": "504b0304140008080800517e734c000000000000000000000000140004004d4554412d494e462f4d414e49464553542e4d46feca00002d8d310bc2301046f740fe437649cfe296511deb26eed7e45a0e625aee02467fbd411cdff7e07b372cbc9056ff2051de4a70e370b4e6228495923fbf839bf143d91d5c6add8d276bee282b553fe14c393880170b6552052c49364e80fbde61792228af05b382f48470ec97e13f5973a5e6a72d62fd65634655d22151b3c69a2f504b07081252fd228000000098000000504b0304140008080800517e734c0000000000000000000000000b000000636c61737365732e6465789d7c0b5c5bc795f7992b2181785808836dfc12603bb28d7908b0c14fde36180c068c31a436025d83b0908424f063fb6de3d4ed26dd74fb4adb24cdd7a6499b4d36e96e9ab4dbb4499ba4af75db345fbeddb475db6437db64f37593b6eb2f75dab475c2fecfdc11bab611a42bfffe9c33e79c79dc993367ce5cb0fcfa294745550d7de69f7f956efdfce6f1cf6f387f47cf17b60cbe5250fbdae52f1efbed8536a208119deaaf7691fa3443b64918f210b03c8de87ad0676d445e507726d179d087b2c0835e44cd5f4271b180e83795a0c0ef81b7800cc857039b815660001801268029e014f0832aa267801f033f055e025e015e052e01bf07fe04cc02966aa274201b70024b8142602d5002788052a012",
+                    "name": "/data/data/com.makinggames.worldtv/cache/1521499837408.jar",
+                    "time": 6.576343,
+                    "processname": "com.makinggames.worldtv"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

@@ -1,0 +1,1230 @@
+{
+    "apk_info": {
+        "id": "VqKZ1Pz5eBeOv3y0",
+        "url": "https://developer.koodous.com/apks/34e047f883383bacdc9d4c71a49b67e3ae9ea47dac9c9aac21c6e43c6d61d89a/",
+        "sha256": "34e047f883383bacdc9d4c71a49b67e3ae9ea47dac9c9aac21c6e43c6d61d89a",
+        "md5": "693ad71aaf9481407f89ec32d074e2bd",
+        "sha1": "2f93bd13989462c08d1289677f2b313d024a751a",
+        "app": "Fast Charger",
+        "package_name": "com.fastcharger.optimizing",
+        "company": "along",
+        "version": "1.0.2",
+        "image": "https://developer.koodous.com/media/apk_images/2017/02/16/cca29ef598cc1ffc3c1907bfcf94e25ba3212b5c0d7f1f933bb0b58128d74946",
+        "size": 2247697,
+        "tags": [
+            "Adware",
+            "dyn-class",
+            "adware",
+            "runtime-modules",
+            "trojan",
+            "reflection",
+            "dyn-calls",
+            "telephony",
+            "fhxi",
+            "dnotua",
+            "hiddad",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": true,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 1,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2017-02-16T20:18:52+01:00",
+        "updated_at": "2025-05-26T17:42:19.967278+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "693ad71aaf9481407f89ec32d074e2bd",
+                    "sha1": "2f93bd13989462c08d1289677f2b313d024a751a",
+                    "size": 2247697,
+                    "crc32": "F07C75B7",
+                    "sha256": "34e047f883383bacdc9d4c71a49b67e3ae9ea47dac9c9aac21c6e43c6d61d89a",
+                    "sha512": "55c946ed7736f247510a651c1f92b48f9fa3a1c2034d519919b3883fec947e9075de7be0f5cb486707740d34d7ab3d7ee553ed721083df5e81c63e778353be93",
+                    "ssdeep": "49152:hQYt1RS+98vEHPgk1Wtb405Kekfk6FAZgjjAhdYfMzM52h8ZgBvmzC8O:hNt1RS+98vEvg/bV5NZ6IgPAhdYfMO6r"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "graph.facebook.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "api.facebook.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "star.c10r.facebook.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "31.13.93.3",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "graph.facebook.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "sauvl.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "107.180.2.181",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "sauvl.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "ipinfo.io"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "52.58.78.164",
+                                "type": "A"
+                            },
+                            {
+                                "data": "52.57.110.0",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "ipinfo.io"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "googleads.g.doubleclick.net"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "pagead46.l.doubleclick.net",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "172.217.18.130",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "googleads.g.doubleclick.net"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "31.13.93.3",
+                    "107.180.2.181",
+                    "52.58.78.164",
+                    "172.217.18.130",
+                    "52.57.110.0"
+                ],
+                "domains": [
+                    {
+                        "ip": "31.13.93.3",
+                        "domain": "graph.facebook.com"
+                    },
+                    {
+                        "ip": "107.180.2.181",
+                        "domain": "sauvl.com"
+                    },
+                    {
+                        "ip": "52.58.78.164",
+                        "domain": "ipinfo.io"
+                    },
+                    {
+                        "ip": "172.217.18.130",
+                        "domain": "googleads.g.doubleclick.net"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "https://www.%s.facebook.com",
+                "https://graph.%s.facebook.com/network_ads_common/",
+                "http://sauvl.com",
+                "http://%s:%d/%s",
+                "https://graph.facebook.com/network_ads_common/",
+                "https://www.googleapis.com/auth/games",
+                "https://facebook.com",
+                "https://www.facebook.com/",
+                "http://play.google.com/store/apps/details?id=com.facebook.orca",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/plus.me",
+                "https://www.googleapis.com/auth/drive",
+                "http://media.admob.com/mraid/v1/mraid_app_banner.js",
+                "http://googleads.g.doubleclick.net/mads/static/sdk/native/sdk-core-v40.html",
+                "http://plus.google.com/",
+                "http://hostname/?",
+                "http://www.google.com",
+                "http://sauvl.com/apktool/fastcharging/share.txt",
+                "https://www.googleapis.com/auth/plus.login",
+                "https://ssl.google-analytics.com/collect",
+                "https://www.googleapis.com/auth/datastoremobile",
+                "https://www.googleapis.com/auth/appstate",
+                "http://media.admob.com/mraid/v1/mraid_app_expanded_banner.js",
+                "https://.facebook.com",
+                "http://googleads.g.doubleclick.net/mads/static/mad/sdk/native/sdk-core-v40.html",
+                "http://sauvl.com/battery/api/7",
+                "https://graph-video.%s",
+                "https://www.googleapis.com/auth/drive.appdata",
+                "https://www.googleapis.com/auth/games.firstparty",
+                "http://schemas.android.com/apk/lib/com.google.android.gms.plus",
+                "http://www.google-analytics.com/collect",
+                "http://ipinfo.io/json",
+                "https://www.googletagmanager.com",
+                "https://www.googleapis.com/auth/drive.apps",
+                "http://media.admob.com/mraid/v1/mraid_app_interstitial.js",
+                "https://graph.%s"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "6dbee539980348d2816d697acd7ca4690cb58d52eadfd6429aa523a8c2c12761",
+                    "ssdeep": "24576:snnN7CeXR6BSHQ9Q1NWMxLEyh7LsER86v0AnGwa1pB0ANYDXzP3MGg8lHIqX0/QV:OnNW4RsuUgEELsElvJGoANmflLXE1cv"
+                }
+            },
+            "api_key": {
+                "UMENG_APPKEY": "57d2e21567e58e3a5d0036d6",
+                "com::facebook::sdk::ApplicationId": "@string/facebook_app_id"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.SCREEN_ON",
+                "android.app.action.DEVICE_ADMIN_DISABLED",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.SCREEN_OFF",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Fast Charger",
+            "services": [
+                "com.power.fastcharge.service.PowerFastChargeService",
+                "com.google.android.gms.logs.c"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.power.fastcharge.receiver.BootServiceReceiver",
+                "com.google.android.gms.logs.b"
+            ],
+            "activities": [
+                "com.power.fastcharge.activity.MainActivity",
+                "com.google.android.gms.ads.AdActivity",
+                "com.power.fastcharge.activity.SaverResultActivity",
+                "com.power.fastcharge.activity.SplashActivity",
+                "com.power.fastcharge.activity.CoolingActivity",
+                "com.google.android.gms.logs.Logger",
+                "com.facebook.ads.InterstitialAdActivity",
+                "com.power.fastcharge.activity.ChargeActivity",
+                "com.power.fastcharge.activity.ModeSwitchActivity",
+                "com.power.fastcharge.activity.PowerModeActivity",
+                "com.power.fastcharge.activity.BatterySaverActivity",
+                "com.power.fastcharge.activity.CoolingResultActivity"
+            ],
+            "certificate": {
+                "sha1": "57C256F1D63FFAAED48D54C7179D3E23EFBF3ED8",
+                "serial": "585FBD5B",
+                "issuerDN": "/C=CA/O=along/OU=the/CN=your",
+                "not_after": "Sep 11 08:31:17 2046 GMT",
+                "subjectDN": "/C=CA/O=along/OU=the/CN=your",
+                "not_before": "Sep 18 08:31:17 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.READ_SYNC_SETTINGS",
+                "android.permission.READ_SYNC_STATS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.BLUETOOTH",
+                "android.permission.INTERNET",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.BLUETOOTH_ADMIN",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_TASKS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SYNC_SETTINGS",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+                "android.permission.VIBRATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.MODIFY_AUDIO_SETTINGS"
+            ],
+            "package_name": "com.fastcharger.optimizing",
+            "version_code": "3",
+            "main_activity": "com.power.fastcharge.activity.SplashActivity",
+            "signature_name": "META-INF/COM_OPTI.RSA",
+            "functionalities": {
+                "MMS": [
+                    {
+                        "code": "const-string v1, 'com.android.mms'",
+                        "class": "Lcom/power/fastcharge/g/j;",
+                        "method": "a"
+                    }
+                ],
+                "ads": [
+                    {
+                        "code": "new-instance v0, Lcom/facebook/ads/internal/DisplayAdController;",
+                        "class": "Lcom/facebook/ads/AdView;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-direct/range v0 ... v8, Lcom/facebook/ads/internal/DisplayAdController;-><init>(Landroid/content/Context; Ljava/lang/String; Lcom/facebook/ads/internal/e; Lcom/facebook/ads/internal/server/AdPlacementType; Lcom/facebook/ads/AdSize; Lcom/facebook/ads/internal/c; I Z)V",
+                        "class": "Lcom/facebook/ads/AdView;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "iput-object v0, v9, Lcom/facebook/ads/AdView;->e Lcom/facebook/ads/internal/DisplayAdController;",
+                        "class": "Lcom/facebook/ads/AdView;",
+                        "method": "<init>"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/google/android/gms/internal/ec;",
+                        "method": "<init>"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https://graph.facebook.com/network_ads_common/'",
+                        "class": "Lcom/facebook/ads/internal/server/a;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v1, 'https://graph.%s.facebook.com/network_ads_common/'",
+                        "class": "Lcom/facebook/ads/internal/server/a;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v0, 'https://www.facebook.com/'",
+                        "class": "Lcom/facebook/ads/internal/util/i;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "La/a/cx;",
+                        "method": "A"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "La/a/cx;",
+                        "method": "A"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "La/a/cx;",
+                        "method": "z"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "La/a/cx;",
+                        "method": "f"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v2, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "La/a/cx;",
+                        "method": "s"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "La/a/cy;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "La/a/cy;",
+                        "method": "b"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, v0, Ljava/net/URL;->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection;",
+                        "class": "La/a/r;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "La/a/r;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/a/a/ac;",
+                        "method": "a"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, 'android.intent.action.CALL'",
+                        "class": "Lcom/facebook/ads/internal/a/c;",
+                        "method": "b"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/facebook/ads/internal/util/t;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/facebook/internal/Utility;",
+                        "method": "refreshBestGuessNumberOfCPUCores"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/facebook/ads/internal/DisplayAdController;",
+                        "method": "i"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/facebook/ads/internal/DisplayAdController;",
+                        "method": "j"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/google/android/gms/analytics/am;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 12,
+            "new_permissions": [],
+            "displayed_version": "1.0.2",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "31.13.93.3",
+                    "hostname": "graph.facebook.com"
+                },
+                {
+                    "ip": "107.180.2.181",
+                    "hostname": "sauvl.com"
+                },
+                {
+                    "ip": "52.58.78.164",
+                    "hostname": "ipinfo.io"
+                },
+                {
+                    "ip": "127.0.0.1",
+                    "hostname": "127.0.0.1"
+                },
+                {
+                    "ip": "52.57.110.0",
+                    "hostname": "ipinfo.io"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 846,
+                    "tid": 706233720,
+                    "data": "HTTP/1.1 200 OK\n\nping ok\r\n\r\n",
+                    "time": 13.893437,
+                    "srchost": "127.0.0.1",
+                    "srcport": 57239,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705826152,
+                    "data": "ping ok",
+                    "time": 13.60318,
+                    "srchost": "127.0.0.1",
+                    "srcport": 57239,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705826152,
+                    "data": "HTTP/1.1 200 OK\n\n\r\n\r\n",
+                    "time": 13.593175,
+                    "srchost": "127.0.0.1",
+                    "srcport": 57239,
+                    "processname": "com.fastcharger.optimizing"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 846,
+                    "tid": 706233720,
+                    "data": "GET /ping HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 127.0.0.1:57239\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 13.799223,
+                    "desthost": "127.0.0.1",
+                    "destport": 57239,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705826152,
+                    "data": "GET /ping HTTP/1.1\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 127.0.0.1:57239\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\n\r\n",
+                    "time": 13.469192,
+                    "desthost": "127.0.0.1",
+                    "destport": 57239,
+                    "processname": "com.fastcharger.optimizing"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.fastcharger.optimizing-1.apk",
+                    "time": 0.355988,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "path": "/data/data/com.fastcharger.optimizing/cache/ads-184927387.jar",
+                    "time": 28.803616,
+                    "processname": "com.fastcharger.optimizing"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "504b0506000000009c019c0137960000c4b521000000504b01021400140008080800a98932496743e1d3043100000aa100001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008080800a9893249e2f2f887d531000083a100001400000000000000000000000000463100004d4554412d494e462f434f4d5f4f5054492e5346504b01021400140008080800a9893249ced5d95e20040000bc04000015000000000000000000000000005d6300004d4554412d494e462f434f4d5f4f5054492e525341504b01021400140008080800a8893249df487019db0000008c0100001800000000000000000000000000c06700007265732f616e696d2f6162635f666164655f696e2e786d6c504b01021400140008080800a8893249a7248b0fdd0000008c0100001900000000000000000000000000e16800007265732f616e696d2f6162635f666164655f6f75742e786d6c504b01021400140008080800a8893249e590277ce4000000900100002000000000000000000000000000056a00007265732f616e696d2f6162635f736c6964655f696e5f626f74746f6d2e786d6c504b01021400140008080800a8893249f45cb94ee4000000900100001d00000000000000000000000000376b00007265732f616e696d2f6162635f736c6964655f696e5f746f702e",
+                    "name": "/data/app/com.fastcharger.optimizing-1.apk",
+                    "time": 0.380703,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "Processor\t: ARMv7 Processor rev 0 (v7l)\nBogoMIPS\t: 761.85\nFeatures\t: swp half thumb fastmult vfp edsp neon vfpv3 \nCPU implementer\t: 0x41\nCPU architecture: 7\nCPU variant\t: 0x0\nCPU part\t: 0xc08\nCPU revision\t: 0\n\nHardware\t: Goldfish\nRevision\t: 0000\nSerial\t\t: 0000000000000000\n",
+                    "name": "/proc/cpuinfo",
+                    "time": 9.333997,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "504b05060000000003000300b6000000ad0d00000000504b01021400140008000800257ae1440000000002000000000000000900040000000000000000000000000000004d4554412d494e462ffeca0000504b01021400140008000800257ae14492619b0d470000004700000014000000000000000000000000003d0000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008000800247ae1441d895f6eae0c0000141a00000b00000000000000000000000000c6000000636c61737365732e646578504b05060000000003000300b6000000ad0d00000000",
+                    "name": "/data/data/com.fastcharger.optimizing/cache/ads-184927387.jar",
+                    "time": 28.803951,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "Processor\t: ARMv7 Processor rev 0 (v7l)\nBogoMIPS\t: 761.85\nFeatures\t: swp half thumb fastmult vfp edsp neon vfpv3 \nCPU implementer\t: 0x41\nCPU architecture: 7\nCPU variant\t: 0x0\nCPU part\t: 0xc08\nCPU revision\t: 0\n\nHardware\t: Goldfish\nRevision\t: 0000\nSerial\t\t: 0000000000000000\n",
+                    "name": "/proc/cpuinfo",
+                    "time": 10.387915,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          335996 kB\nBuffers:               0 kB\nCached:           140792 kB\nSwapCached:            0 kB\nActive:           145884 kB\nInactive:         104004 kB\nActive(anon):     112764 kB\nInactive(anon):        0 kB\nActive(file):      33120 kB\nInactive(file):   104004 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        109120 kB\nMapped:            51144 kB\nSlab:               6272 kB\nSReclaimable:       1692 kB\nSUnreclaim:         4580 kB\nPageTables:         5300 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2492040 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 17.62503,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706836208,
+                    "data": "fefb7dd21f19789e2acbd9aa03d2467dd3137e35618dc657687f65abdabb0f0e94adf4b5495d988b",
+                    "name": "/dev/urandom",
+                    "time": 44.431729,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705560384,
+                    "data": "88e461e080587d15db4ddc48818d5cdd3c4dcc2d",
+                    "name": "/dev/urandom",
+                    "time": 7.273918,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          335996 kB\nBuffers:               0 kB\nCached:           140792 kB\nSwapCached:            0 kB\nActive:           145912 kB\nInactive:         104004 kB\nActive(anon):     112792 kB\nInactive(anon):        0 kB\nActive(file):      33120 kB\nInactive(file):   104004 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        109132 kB\nMapped:            51148 kB\nSlab:               6272 kB\nSReclaimable:       1692 kB\nSUnreclaim:         4580 kB\nPageTables:         5300 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2492040 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 17.743652,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          334392 kB\nBuffers:               0 kB\nCached:           142240 kB\nSwapCached:            0 kB\nActive:           147316 kB\nInactive:         103992 kB\nActive(anon):     113936 kB\nInactive(anon):        0 kB\nActive(file):      33380 kB\nInactive(file):   103992 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        109068 kB\nMapped:            52832 kB\nSlab:               6292 kB\nSReclaimable:       1708 kB\nSUnreclaim:         4584 kB\nPageTables:         5304 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2493692 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 52.086718,
+                    "processname": "com.fastcharger.optimizing"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 17.959496,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 35.079286,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.a",
+                    "time": 35.108486,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 35.43133,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.g",
+                    "time": 35.679834,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 36.062528,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.d",
+                    "time": 36.599985,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 36.902242,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.c",
+                    "time": 37.122474,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 37.716374,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.h",
+                    "time": 37.768318,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 38.351911,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.b",
+                    "time": 38.742451,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 39.94163,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.f",
+                    "time": 39.943657,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 39.943822,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "com.google.android.ads.zxxz.e",
+                    "time": 39.943981,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 39.94414,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 39.944303,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 39.944451,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 39.944612,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 39.944832,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 40.07314,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 40.200905,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 40.470972,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 41.917677,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 41.918705,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 41.944099,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 42.077339,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 42.549911,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 42.771618,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "key": "34, -5, -111, -31, 106, 115, -27, 97, -86, -55, -62, 89, -97, -22, -36, 64",
+                    "pid": 846,
+                    "tid": 706228944,
+                    "time": 43.14104,
+                    "algorithm": "AES",
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "a",
+                    "time": 43.479901,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.fastcharger.optimizing"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"countdown_timer_state\" value=\"false\" />\n<boolean name=\"trickle_is_finish\" value=\"false\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/config.xml",
+                    "time": 8.80976,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705549280,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"advertisingId\"></string>\n<string name=\"attributionId\"></string>\n<boolean name=\"limitAdTracking\" value=\"false\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/SDKIDFA.xml",
+                    "time": 14.070639,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "xp",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 17.607019,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"install.time\">1426266970437</string>\n<string name=\"status\">1426266970249</string>\n<long name=\"aksdkkas\" value=\"1426266970310\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/asdfasdllscom.fastcharger.optimizing.xml",
+                    "time": 7.667091,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "t\bLa/a/ab;L\u0001et\bLa/a/ag;L",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.682449,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705699232,
+                    "data": "aced0005737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a6578700000000177040000000c73720009636f6d2e612e612e7615e095f7d11e29ea020006490001684c0001637400124c6a6176612f6c616e672f537472696e673b4c00016471007e00034c00016574000f4c6a6176612f7574696c2f4d61703b4c00016674000b4c636f6d2f612f612f743b4c00016771007e00037870000000007400082f73657373696f6e74000c616e64726f6964342e372e30737200116a6176612e7574696c2e486173684d61700507dac1c31660d103000146000a6c6f6164466163746f7278703f4000007708000000200000001874000d73637265656e5f666f726d61747400066e6f726d616c7400096170695f6c6576656c74000231367400136465766963655f6d616e756661637475726572740007756e6b6e6f776e74000d68617264776172655f6e616d6574003f66756c6c2d656e6720342e312e31204a524f30335220656e672e6c64656c6f7369657265732e32303134313230392e31373134323920746573742d6b65797374000d73657373696f6e5f636f756e747400013174000b6465766963655f7479706574000570686f6e6574000b73637265656e5f73697a6571007e000c74000c7061636b6167655f6e616d6574001a636f6d2e66617374636861726765722e",
+                    "name": "/data/data/com.fastcharger.optimizing/files/AdjustIoPackageQueue",
+                    "time": 16.003701,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705549280,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"deviceIdHash\">f084e15abc535f62eb5ece8c14d40d4b</string>\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/FBAdPrefs.xml",
+                    "time": 13.342692,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705549280,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"anonymousAppDeviceGUID\">XZ1c046afe-0263-4879-bf3c-8e9bdb0f6a4c</string>\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/com.facebook.sdk.appEventPreferences.xml",
+                    "time": 7.700988,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "L",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.854327,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914336,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"1426266977800\" />\n<string name=\"session_id\">06B5F055E5E17593D4F0CB0848E3ED8E</string>\n<string name=\"versionname\">1.0.2</string>\n<int name=\"vt\" value=\"0\" />\n<long name=\"session_start_time\" value=\"1426266971159\" />\n<int name=\"versioncode\" value=\"3\" />\n<string name=\"activities\">[&quot;SplashActivity&quot;,2042]</string>\n<long name=\"session_end_time\" value=\"1426266972968\" />\n<long name=\"a_end_time\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/umeng_general_config.xml",
+                    "time": 14.983629,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"vt\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/umeng_general_config.xml",
+                    "time": 6.829133,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "t\bLa/a/ad;L\u0001iq~!L\u0001jq~\u0005xp",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.923467,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 706228944,
+                    "data": "504b0304140008000800257ae144000000000000000000000000090004004d4554412d494e462ffeca00000300504b0708000000000200000000000000504b0304140008000800257ae144000000000000000000000000140000004d4554412d494e462f4d414e49464553542e4d46f34dcccb4c4b2d2ed10d4b2d2acecccfb35230d433e0e5722e4a4d2c494dd175aa040998e919c41b1b2a680497e629f8662617e517571697a4e6162b78e625eb69f272f1720100504b070892619b0d4700000047000000504b0304140008000800247ae1440000000000000000000000000b000000636c61737365732e6465789d990b6c5b5719c7bf73af63c78e9bdcdc3c9a6449ea38e9ea3e9d57bbb669479e5dd3a56d48daac5bd9da1bfbc6f1ea5c3b7ea4c918ac654354a888f198c4908009690fc140130c8104da604248a8129a989090184220d0b60e0668834d05b5fcbf738f13f7118270f4bbdf77cef9ee797ee73b2776dc5e0c74f6eca4b7e61b5e7f37fec7570e3d5e2b2ecdeeee78e7938d75afbcb15eab6d22ca10d1e254af49ea73ae91e85172f377828735a22d90e33a5100f26019d120e49720cb219ff311a5aa219178c620fa16f82e7819bc067e0fde06ef822b40c0d60f82a00ad480f5a009b48030b81d6c0151d00bf682fbc122f832f815b8c2efa0d7bbc021e080cf80a7c14fc0ef784435446d6010c4c063",
+                    "name": "/data/data/com.fastcharger.optimizing/cache/ads-184927387.jar",
+                    "time": 21.200344,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "p",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 14.960748,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "\u0001d",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.631723,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "c967e258885b99b902000a4c",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.283764,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"status\">1426266970249</string>\n<long name=\"aksdkkas\" value=\"1426266970310\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/asdfasdllscom.fastcharger.optimizing.xml",
+                    "time": 7.519952,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "~$L\u0001b",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 16.293868,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "q~!",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.463971,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914336,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">06B5F055E5E17593D4F0CB0848E3ED8E</string>\n<string name=\"versionname\">1.0.2</string>\n<int name=\"vt\" value=\"0\" />\n<long name=\"session_start_time\" value=\"1426266971159\" />\n<int name=\"versioncode\" value=\"3\" />\n<long name=\"session_end_time\" value=\"1426266972968\" />\n<long name=\"a_end_time\" value=\"1426266972968\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/umeng_general_config.xml",
+                    "time": 10.153509,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705677192,
+                    "data": "aced000573720009636f6d2e612e612e77ccf9b4ab4191a45a02000a5a0001625a0001634900016449000165490001664a0001674a0001684a0001694a00016a4c0001617400124c6a6176612f6c616e672f537472696e673b78700100000000000000000100000001000000000000000000000000000000000000014c1422f64affffffffffffffff74002463396465353234312d373237352d343063622d383062642d633032386362333161346332",
+                    "name": "/data/data/com.fastcharger.optimizing/files/AdjustIoActivityState",
+                    "time": 15.873604,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705549280,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"com.facebook.appevents.SessionInfo.sessionId\">5d68a4d1-dd9c-4e21-add5-255d3d871460</string>\n<long name=\"com.facebook.appevents.SessionInfo.sessionStartTime\" value=\"1426266970059\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionEndTime\" value=\"1426266977752\" />\n<int name=\"com.facebook.appevents.SessionInfo.interruptionCount\" value=\"1\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/com.fastcharger.optimizing_preferences.xml",
+                    "time": 14.943861,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"1426266977800\" />\n<string name=\"session_id\">06B5F055E5E17593D4F0CB0848E3ED8E</string>\n<long name=\"thtstart\" value=\"0\" />\n<string name=\"versionname\">1.0.2</string>\n<int name=\"vt\" value=\"0\" />\n<long name=\"session_start_time\" value=\"1426266971159\" />\n<int name=\"versioncode\" value=\"3\" />\n<string name=\"activities\">[&quot;SplashActivity&quot;,2042]</string>\n<long name=\"session_end_time\" value=\"1426266972968\" />\n<long name=\"a_end_time\" value=\"0\" />\n<int name=\"ekvc\" value=\"0\" />\n<int name=\"gkvc\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/umeng_general_config.xml",
+                    "time": 17.607732,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705699232,
+                    "data": "aced0005737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a6578700000000077040000000c78",
+                    "name": "/data/data/com.fastcharger.optimizing/files/AdjustIoPackageQueue",
+                    "time": 16.31803,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"status\">1426266970249</string>\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/asdfasdllscom.fastcharger.optimizing.xml",
+                    "time": 7.452481,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914336,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"1426266971159\" />\n<string name=\"session_id\">06B5F055E5E17593D4F0CB0848E3ED8E</string>\n<string name=\"versionname\">1.0.2</string>\n<int name=\"vt\" value=\"0\" />\n<long name=\"session_start_time\" value=\"1426266971159\" />\n<int name=\"versioncode\" value=\"3\" />\n<long name=\"session_end_time\" value=\"0\" />\n<long name=\"a_end_time\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/umeng_general_config.xml",
+                    "time": 8.523945,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "L\u0001cq~!L",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.503826,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "737200116a6176612e6c616e672e496e746567657212e2a0a4f781873802000149000576616c7565787200106a6176612e6c616e672e4e756d62657286ac951d0b94e08b020000787000000000737200116a6176612e7574696c2e486173684d61700507dac1c31660d103000146000a6c6f6164466163746f7278703f400000770800000002000000007873720006612e612e616315f41321d32dab140200024c00016171007e00054c00016271007e00057870707073720006612e612e6164749a21943533ef360200024c00016171",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 15.113877,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914336,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"a_start_time\" value=\"0\" />\n<string name=\"session_id\">06B5F055E5E17593D4F0CB0848E3ED8E</string>\n<string name=\"versionname\">1.0.2</string>\n<int name=\"vt\" value=\"0\" />\n<long name=\"session_start_time\" value=\"1426266971159\" />\n<int name=\"versioncode\" value=\"3\" />\n<string name=\"activities\">[&quot;SplashActivity&quot;,2042]</string>\n<long name=\"session_end_time\" value=\"1426266972968\" />\n<long name=\"a_end_time\" value=\"1426266972968\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/umeng_general_config.xml",
+                    "time": 10.283772,
+                    "dataleak": [
+                        "TAINT_IMEI"
+                    ],
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "\u0001gt\bLa/a/ac;L\u0001h",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.878926,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"trickle_is_finish\" value=\"false\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/config.xml",
+                    "time": 8.754833,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "aced000573720006612e612e616193c3592738d3dcd80200024c0001617400084c612f612f616e3b4c0001627400084c612f612f616d3b787073720006612e612e616ebf1411c7583949090200294a0001444a00014b4a00014c4a00014d490001684900016d4a0001784c0001417400124c6a6176612f6c616e672f537472696e673b4c00014271007e00054c00014371007e00054c00014571007e00054c00014671007e00054c00014771007e00054c00014871007e00054c00014971007e00054c00014a71007e00054c00014e71007e00054c00014f71007e00054c00016171007e00054c00016271007e00054c00016371007e00054c00016471007e00054c00016571007e00054c00016671007e00054c00016771007e00054c00016971007e00054c00016a71007e00054c00016b71007e00054c00016c71007e00054c00016e71007e00054c00016f71007e00054c00017071007e00054c00017171007e00054c00017271007e00054c00017371007e00054c00017471007e00054c00017571007e00054c00017671007e00054c00017771007e00054c00017971007e00054c00017a71007e00057870000000000000000100000000000000000000000000000000000000000000000000000003000000000000014a2fd58ca074000767656e657269637070740002656e7400025553740007416e64726f69647400",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 10.865808,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a65787000000000770400000000787371007e002800000000770400000000787371007e0028000000007704000000007873720006612e612e61621c63b5aa76186f970200014a00016178700000014c1422def373720006612e612e61675543a9e2381f98660200034a0001625a0001634c0001617400134c6a6176612f6c616e672f496e74656765723b78",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 14.134071,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705549280,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"com.facebook.appevents.SessionInfo.sessionId\">5d68a4d1-dd9c-4e21-add5-255d3d871460</string>\n<long name=\"com.facebook.appevents.SessionInfo.sessionStartTime\" value=\"1426266970059\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionEndTime\" value=\"1426266972947\" />\n<int name=\"com.facebook.appevents.SessionInfo.interruptionCount\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/com.fastcharger.optimizing_preferences.xml",
+                    "time": 10.158836,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "r\u0006a.a.am",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.273734,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 15.008874,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "\u0001at\u0010Ljava/util/List;L\u0001b",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.353841,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "\u0001ft\u000fLjava/util/Map;",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 13.784628,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705549280,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"com.facebook.appevents.SessionInfo.sessionId\">5d68a4d1-dd9c-4e21-add5-255d3d871460</string>\n<long name=\"com.facebook.appevents.SessionInfo.sessionStartTime\" value=\"1426266970059\" />\n<long name=\"com.facebook.appevents.SessionInfo.sessionEndTime\" value=\"1426266970912\" />\n<int name=\"com.facebook.appevents.SessionInfo.interruptionCount\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/com.fastcharger.optimizing_preferences.xml",
+                    "time": 8.108011,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705914400,
+                    "data": "q~$xppsq~4?@w\b\u0002xsq~(w\u0004",
+                    "name": "/data/data/com.fastcharger.optimizing/files/mobclick_agent_cached_com.fastcharger.optimizing3",
+                    "time": 16.362697,
+                    "processname": "com.fastcharger.optimizing"
+                },
+                {
+                    "pid": 846,
+                    "tid": 707099816,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"save_battery_cache\">[]</string>\n</map>\n",
+                    "name": "/data/data/com.fastcharger.optimizing/shared_prefs/local_stat_preferences.xml",
+                    "time": 16.433598,
+                    "processname": "com.fastcharger.optimizing"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "name": "com.power.fastcharge.service.PowerFastChargeService",
+                    "time": 7.964212,
+                    "processname": "com.fastcharger.optimizing"
+                }
+            ]
+        }
+    }
+}

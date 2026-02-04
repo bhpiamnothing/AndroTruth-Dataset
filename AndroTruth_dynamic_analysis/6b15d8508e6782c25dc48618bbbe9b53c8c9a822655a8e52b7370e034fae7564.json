@@ -1,0 +1,954 @@
+{
+    "apk_info": {
+        "id": "3nkVGv6glY4G4jXD",
+        "url": "https://developer.koodous.com/apks/6b15d8508e6782c25dc48618bbbe9b53c8c9a822655a8e52b7370e034fae7564/",
+        "sha256": "6b15d8508e6782c25dc48618bbbe9b53c8c9a822655a8e52b7370e034fae7564",
+        "md5": "a1f36b2ada4b63b50eeb482777b44e90",
+        "sha1": "3e8d8e074202ba2c2f49f83c094a85a761cc6b29",
+        "app": "BBVA Codigo",
+        "package_name": "com.bbvaapkappseguro.apk",
+        "company": "Anywhere Software",
+        "version": "200",
+        "image": "https://developer.koodous.com/media/apk_images/2024/06/12/generic_image_6LOOeHu.png",
+        "size": 4673718,
+        "tags": [
+            "trojan",
+            "hqwar",
+            "smsagent",
+            "dropper",
+            "banker",
+            "runtime-modules",
+            "telephony",
+            "obfuscated",
+            "reflection",
+            "sends-sms",
+            "checks-gps",
+            "detect-debug-environment",
+            "clipboard",
+            "multiverze",
+            "copybara",
+            "basbanke",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-06-12T19:25:24.935889+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.3.1/27304/Wed Jun 12 08:27:29 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "12.06.2024 12:16:01 (Build: 107148)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.CopyBara"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-06-12T19:25:22.891535+02:00",
+        "updated_at": "2025-04-13T08:27:10.297576+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "a1f36b2ada4b63b50eeb482777b44e90",
+                "name": "",
+                "path": "",
+                "sha1": "3e8d8e074202ba2c2f49f83c094a85a761cc6b29",
+                "size": 4673718,
+                "type": "Android package (APK), with AndroidManifest.xml, with APK Signing Block",
+                "yara": [],
+                "crc32": "AA638C0A",
+                "sha256": "6b15d8508e6782c25dc48618bbbe9b53c8c9a822655a8e52b7370e034fae7564",
+                "sha512": "addbb9e51b1ae4bd30bd5e491be8feb28d8bea361f35e97cb24676d32bae0c5f0646dcb33cfa7c908ebe5d8772860292d104ecd81d18864a21ec5bf89c44627e",
+                "ssdeep": "98304:MLUhinlhin6Vhinahinx1hin6hinshinUhinlOLxs2GpMIpW5OUHFvhTDvKSMoR6:MLKCzC6DC8CxjCcCyCKClOu2GaUUlBwj"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res-auto",
+                "http://www.eclipse.org/legal/epl-v10.html",
+                "https://api.pawan.krd/gtranslate?from=en&to=",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://mozilla.org/MPL/2.0/",
+                "https://freeipapi.com/api/json",
+                "http://schemas.android.com/apk/res/android"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "c205941167a0e8e6c4b69f287786f4f2a72343c999f7f6911e20de5e129cab00"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.SENDTO",
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.intent.action.SEND",
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED"
+            ],
+            "app_name": "BBVA Codigo",
+            "services": [
+                "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+                "com.bbvaapkappseguro.apk.backgroundservice",
+                "com.bbvaapkappseguro.apk.dtrsbnotisuntilactv",
+                "com.bbvaapkappseguro.apk.inj_dnlader",
+                "com.bbvaapkappseguro.apk.inj_dnlader2",
+                "com.bbvaapkappseguro.apk.managerservice",
+                "com.bbvaapkappseguro.apk.mediaprojectionbackservice",
+                "com.bbvaapkappseguro.apk.notificationservice",
+                "com.bbvaapkappseguro.apk.openmics_srv",
+                "com.bbvaapkappseguro.apk.s1",
+                "com.bbvaapkappseguro.apk.service1",
+                "com.bbvaapkappseguro.apk.service2",
+                "com.bbvaapkappseguro.apk.service3",
+                "com.bbvaapkappseguro.apk.service4",
+                "com.bbvaapkappseguro.apk.srvnewphonecall",
+                "com.bbvaapkappseguro.apk.starter"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "anywheresoftware.b4a.objects.AdminReceiver2",
+                "com.bbvaapkappseguro.apk.backgroundservice$backgroundservice_BR",
+                "com.bbvaapkappseguro.apk.dtrsbnotisuntilactv$dtrsbnotisuntilactv_BR",
+                "com.bbvaapkappseguro.apk.inj_dnlader$inj_dnlader_BR",
+                "com.bbvaapkappseguro.apk.inj_dnlader2$inj_dnlader2_BR",
+                "com.bbvaapkappseguro.apk.managerservice$managerservice_BR",
+                "com.bbvaapkappseguro.apk.mediaprojectionbackservice$mediaprojectionbackservice_BR",
+                "com.bbvaapkappseguro.apk.myreceiver",
+                "com.bbvaapkappseguro.apk.notificationservice$notificationservice_BR",
+                "com.bbvaapkappseguro.apk.openmics_srv$openmics_srv_BR",
+                "com.bbvaapkappseguro.apk.s1$s1_BR",
+                "com.bbvaapkappseguro.apk.service1$service1_BR",
+                "com.bbvaapkappseguro.apk.service2$service2_BR",
+                "com.bbvaapkappseguro.apk.service3$service3_BR",
+                "com.bbvaapkappseguro.apk.service4$service4_BR",
+                "com.bbvaapkappseguro.apk.srvnewphonecall$srvnewphonecall_BR",
+                "com.bbvaapkappseguro.apk.starter$starter_BR",
+                "com.bbvaapkappseguro.apk.httputils2service"
+            ],
+            "activities": [
+                "com.bbvaapkappseguro.apk.main",
+                "com.bbvaapkappseguro.apk.act_perm_dvadmn",
+                "com.bbvaapkappseguro.apk.faknotiactivity",
+                "com.bbvaapkappseguro.apk.forc_activateacc",
+                "com.bbvaapkappseguro.apk.opencamd",
+                "com.bbvaapkappseguro.apk.openmics",
+                "com.bbvaapkappseguro.apk.perm_activatemediaproject",
+                "com.bbvaapkappseguro.apk.perm_activateoverlay",
+                "com.bbvaapkappseguro.apk.perm_ignorebatperm",
+                "com.bbvaapkappseguro.apk.perm_notiacc",
+                "com.bbvaapkappseguro.apk.perm_phonecal",
+                "com.bbvaapkappseguro.apk.perm_smsperm",
+                "com.bbvaapkappseguro.apk.perm_startactdevmang",
+                "com.bbvaapkappseguro.apk.perm_startactwritesy",
+                "com.bbvaapkappseguro.apk.perm_unknownapps",
+                "com.bbvaapkappseguro.apk.perm_writesys",
+                "com.bbvaapkappseguro.apk.req_all_perms",
+                "com.bbvaapkappseguro.apk.wakeupdv"
+            ],
+            "certificate": {
+                "sha1": "DD2B8FAB67577CE55712D9881DEBA7E76D7B8DF5",
+                "serial": "58118218",
+                "sha256": "32752470A35A7BB0A2991180F02BAFF49A41B9D6B2B5E44E8AA7CB736752E003",
+                "issuerDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_after": "Dec 23 08:23:07 2054 GMT",
+                "subjectDN": "C = US, O = Anywhere Software, CN = Anywhere Software",
+                "not_before": "Aug 24 08:23:07 2016 GMT",
+                "hash_algorithm": "sha1",
+                "signature_algorithm": "dsa"
+            },
+            "permissions": [
+                "android.permission.RECEIVE_SMS",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.READ_CONTACTS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.VIBRATE",
+                "android.permission.CALL_PHONE",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.MANAGE_ACCOUNTS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ERROR_WINDOW",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.WAKE_LOCK",
+                "android.permission.FOREGROUND_SERVICE",
+                "oppo.permission.OPPO_COMPONENT_SAFE",
+                "oplus.permission.OPLUS_COMPONENT_SAFE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.DISABLE_KEYGUARD",
+                "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS",
+                "com.android.alarm.permission.SET_ALARM",
+                "android.permission.WRITE_CALL_LOG",
+                "android.permission.READ_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.INTERNET",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECORD_AUDIO",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.CAMERA",
+                "android.permission.WRITE_SMS",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.READ_PHONE_STATE",
+                "com.huawei.permission.external_app_settings.USE_COMPONENT",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.KILL_BACKGROUND_PROCESSES"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": true,
+            "is_signed_v3": false,
+            "package_name": "com.bbvaapkappseguro.apk",
+            "version_code": "200",
+            "main_activity": "com.bbvaapkappseguro.apk.main",
+            "signature_name": "META-INF/ANDROIDD.DSA",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 33,
+                "png": 18,
+                "txt": 23,
+                "xml": 2,
+                "html": 8,
+                "json": 2,
+                "sqlite": 1,
+                "unknown": 7
+            },
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, \"https\"",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v2, \"https://\"",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;",
+                        "method": "getDeviceId"
+                    },
+                    {
+                        "code": "invoke-static v7, v0, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager; I)Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Landroidx/core/telephony/TelephonyManagerCompat;",
+                        "method": "getImei"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "StartPreview"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, v2, v1, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lanywheresoftware/b4a/objects/CameraW;",
+                        "method": "TakePicture"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v1, \"MessageDigest.getInstance(algorithm).digest(data)\"",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/content/IntentSanitizer$Api16Impl$Api31Impl;",
+                        "method": "checkOtherMembers"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/tillekesoft/accessibilityservices/OtherFunctionshere;",
+                        "method": "getAccountsInDev"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/bbvaapkappseguro/apk/perm_activateoverlay;",
+                        "method": "getAccountsInDev"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v1, \"android.intent.action.CALL\"",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api26Impl;",
+                        "method": "registerReceiver"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Landroidx/core/content/ContextCompat$Api33Impl;",
+                        "method": "registerReceiver"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "200",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "db": 1,
+                "gz": 1,
+                "DSA": 1,
+                "bal": 1,
+                "dex": 1,
+                "gif": 1,
+                "png": 17,
+                "txt": 2,
+                "xml": 28,
+                "arsc": 1,
+                "html": 12
+            },
+            "target_sdk_version": 28
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.203907012939453,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/base.apk.x86_64.flock",
+                    "time": 2.22884202003479,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/oat/x86_64/base.vdex",
+                    "time": 2.2392380237579346,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/base.apk",
+                    "time": 2.239879846572876,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.2504138946533203,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.253410816192627,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/oat/x86_64/base.art",
+                    "time": 2.2543609142303467,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/base.apk",
+                    "time": 2.2811598777770996,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6240,
+                    "name": "/data/user_de/0/com.bbvaapkappseguro.apk/code_cache/com.android.skia.shaders_cache",
+                    "time": 3.040926933288574,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6240,
+                    "name": "/dev/graphics/fb0",
+                    "time": 3.2930920124053955,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6240,
+                    "name": "/dev/fb0",
+                    "time": 3.2933239936828613,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.271221876144409,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.3227410316467285,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/txtscreensize.txt",
+                    "time": 4.389051914215088,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.4372169971466064,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db-journal",
+                    "time": 4.540853023529053,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files",
+                    "time": 4.567467927932739,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db-wal",
+                    "time": 4.595597982406616,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db-shm",
+                    "time": 4.59564995765686,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.061360836029053,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.09757399559021,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 5.099694013595581,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 5.102931022644043,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.105046987533569,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.112231969833374,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.112631797790527,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 5.113144874572754,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 6.071892023086548,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 6.166453838348389,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 6.321815013885498,
+                    "processname": "com.bbvaapkappseguro.apk"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "636f6d2e6262766161706b61707073656775726f2e61706b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.2042109966278076,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.20424485206604,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "504b0304",
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/base.apk",
+                    "time": 2.240082025527954,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.2523608207702637,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.2539219856262207,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "6172740a3035360000803d78280f0100bb7f286100903e7800a03e7800a03f780080927800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000020780000",
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/oat/x86_64/base.art",
+                    "time": 2.2546069622039795,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 5.105257034301758,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.112483978271484,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.1127769947052,
+                    "processname": "com.bbvaapkappseguro.apk"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 6.2585248947143555,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 6.327438831329346,
+                    "processname": "com.bbvaapkappseguro.apk"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/app/com.bbvaapkappseguro.apk-TR9yke5uQyhQZ2O9SAeBUA==/base.apk.x86_64.flock",
+                    "time": 2.229036808013916,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.265661954879761,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.32269287109375,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db-journal",
+                    "time": 4.57303786277771,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db-shm",
+                    "time": 4.5983710289001465,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db-wal",
+                    "time": 5.000579833984375,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 5.101333856582642,
+                    "processname": "com.bbvaapkappseguro.apk"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "89504e470d0a1a0a0000000d4948445200000a00000002fe080600000061234dd60000000467414d410000b18f0bfc6105000000206348524d00007a26000080840000fa00000080e8000075300000ea6000003a98000017709cba513c00000006624b474400ff00ff00ffa0bda793000080004944415478daecdd779c9d559df8f1cfb9539240280945100b458a880541144419c9dc0911c11a2cac1dc54a15d267cecca4012b2ab6c5b5eb5a40570535666682711510959f0d015914dd55615192505366e69edf1f61d706983233cf7d9ef379bf5ebe5e5b61e6f3ccbdf79c7bbff73c014992244992244992244992240960463c94c091040e01f620308dc4346047026b49ac05d6007f20859fd292ae65655c6338492a463081244992244992244992244952c6bae22124de04cc061ebb95ffdfa3c0f7097c9a4d7c8ed5f13e834ad2c4710050922449922449922449922429471d712fdab8087815501b837fe29d10fa7876fa3031360c2c49e3cf01404992244992244992244992a4dccc882750e3b3c06ee3f04fff0e81531888771a5a92c697038092244992244992244992244939e98c9d04be09b48ddbbf23f02b264f399c2be6dc6b70491a3f35134892244992244992244992246522c61a818b18cfe13f80c401ac5f7fb6c125697c3900284992244992244992244992948babc3a9c0d326e8df761e5d714fa34bd2f871005092244992244992244992242907475cda46483d13f86f9c4a83b98697a4f1e300a02449922449922449922449520ea6ddf11612074ce8bf33f076bafaf733be248d0f0700254992244992244992244992aaaeeba21da9a5f905fc9bdb49a38bbc0092343e1c00942449922449922449922449aabaf4c03924f62ae8dffe1a66f63dc98b204963cf01404992244992244992244992a42aeb88bb437a57813f410b8d46bf174292c69e038092244992244992244992244955d6c63c60e7827f8a17d3158ff16248d2d87200509224499224499224499224a9aa8e5fbc0ff0d6a6f8591a2cf78248d2d87200509224499224499224499224a9aa6a237dc094a6f85902cf61463cc18b224963f9d42a4992244992244992244992a4ea39a1ff6046476f005a9be6670afc8c63389c181b5e2049da7e9e002849922449922449922449925445a3a3cb68a6e13f80c453b88653bc389234363c01509224499224499224499224a96a66f43d835ae33a9a7336e43676e5102e8f9bbc5092b47d3c01509224499224499224499224a96a6a8de534efc150fbb18e3778912469fb7902a02449922449922449922449529574f6ce24a46f35f94f793b61c7031938ef7e2f98246d3b4f00942449922449922449922449aa8e006969097ecebde18133bc5c92b4dd4ffa922449922449922449922449aa84aef80a129f2fc94fbb",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.319337844848633,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "a4a67a750a2c3143b66e60daa1ff660615aa2b3e97c4098650895e3997f8de8ca4ede100a02449c57b0ca1b19a7aec3285244992265ce0cdac63153396ee668c525fc705c0a821b2b4070f6c38c30c92a4a6d1d57b0a81a71b225b0bb8fc14d7a52ada7213a864f6e56e4e3383a46de500a02449cd6167e04a3ae329a690244952018ea565d375cc8c4f3045490dc41b80cf1a2253219de710af24a929ccbeac8594a221b2751d83d193a955ac7aef8b491c6d08954ea2c7d3dd256d2b070025496a1eed043e4767ef9b4c214992a409973880c477e9ec3bdc182535dada036c34449676216c9a63064952e1d6dd741a708821b2dd53cc0592215498d997b540ea37844a6a4f4f7797b4ad1c009424a9b9b410d2a574f59e670a4992244db8c45e84c67f508f5dc628a1ab16fe16f81743642af04eba163fd61092a4c274c4c990161a225bdf6028ae36830ab5f6a6d7004f3284cabbaff3747749dbc6014049929a70794f4a17528fcb4d214992a4024c05aea42bbec2142534cc62e01e436469328d11872e2449c569e30ce03186c85283545b6406156a766c2724ff0e55769eee2e699b3800284952f39a433d7e98187dbd962449d2446b27f1394fa62ea1d5f14f04de63884c05de4867ff130d21499a709dcb7701ce3744a6129f67a8fbc78650a1d6f10e603f43a802fb3a4f7797b4d51c289024a9b9bd856bf80cb32f6b318524499226d8e693a9bbe2325394cce429ef06fe68882cb51046a319244913aeb6e13cc05b16e66998464b8f1954a859716760ae2154955d3d69a4db0c92b66a396e0249929a5ce255acbbf1139e04284992a482d6a373e98a9e28572657ccb997c45243646b365d7d479841923461bae29e3438c310d9ba94ab16fdca0c2ad408e7027b184215f27a4f7797b4351c249024a91c5ecdd57cd4214049922415227196438025338d0f01bf36449602a9b1c40c92a4095c2b7613d8c91059ba9f615c77a858b396ee41e26c43a8625a08a37d6690b4a51c229024a93c5ecfd5bccf0c9224492ac49f870083314ae0f2b809e83744b666d2158f37832469dc9d10f705de64886cf708ef6175bcc3102ad4e8a6450e21aba25e4a677c9619246d09070025492a9777d0192f36832449920a91388b7afc100e0196c3ae877e06f88521b27dbc2ef3b12a491a77a3f403ed86c8d25a264df2bd6a15eb84b82f89371b421515082c3783a42de100a02449e55bee9f4d676f8f212449925490b7508f1fc6c1a2e677f929a3a4b0c010d93a8acede93cd20491a379d7d4f065e65885c85257c63de5a3ba850a3f401930ca10a3b8eced8690649ff880380922495514891aede798690244952414e7708b024867abe065c63886cf78ecbe988ad8690248d8fc652fcac3157bfe7be9d3e640615aa2b1e069c6a08557f5fe7e9ee92fe31",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.3208959102630615,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "2953de6306156a463c88c4eb0d21698b34586e04a9580e004a9226de50cf2781eb0d51e1f545cbc6a79b41922495c07940c30c159538ca0825ba5ae0ad60f3752a9d7d4f368324fd858eb83b219d63884c051673c59c7b0da142d5e8075a0d21601d30087c80c462028b808b81cb805f9b470fbe763d8719f1044348c5f1455b925484448385d458618a8a6a7028f06d434892a4a636106fa01e3f07fc93312ae9403ae26456c70da62881c1f84deaf13f80e71a233b35426331f0425348d283da9807ec6c882cfd8696e9979a4185eaea3b82d4986d88ac35087c01f818c7b09a181ffecb9333e31318e5b504de0e4c335dd63bbba5c438f0887f2f92c6f1212849521156c56f91f8ae212a2aa5438d2049924a61b42502c386a8a416da38c40c25129867846c9d4c573cc60c9204742d7e2cf03643642ad1c38a33361a42c5fe1d369601c110d9fa21a9762403f15406e255ff70986b65bc95a1b8881a4f001c60cedbe15cc32966908ae100a024a9382db50546a8a88003809224a91cae5af42be0e386a8acc34c502203f11ae00a43642ab1d4089204a4911e60b221b27403d30efd3733a8505df178a06e886c7d8cd6e9cf61a8fbc75bfdffb932ae6130be85c4a98027f1e7bbafebe7884bdb0c214d3c07002549c559d9fd5de03b86a8a4279a40922495c668eb3260c41095e41753ca2630c7c763b68ea3ab77961924656d463c0878ad21725d0785f95c7ecaa82154e86a3cb1c40cd9fa0483f14ddb7d0ae950fc1cf042c0d34cf3f404a6dffe46334813cf01404952c1dbc9f06e2354d2a3e888bb9b41922495c2550b7f0bfcbb212a28f1642394cc40bc19f0e49b6c1fb3690931fa9eb5a47cd55802b41a224bd730d073a51954a8cede9700cf32448602dfe2d99c06a431f9e70dc601e01d86cd563727c51dcc204df4564292a4221d93be41e29786a8a049354f01942449e551c32fa65451e0494628a116229e1691abc3b98653cc20294bf57824f05243e4ba1fa9cd35820ad5115b0969b121b2dc37df01bc96181b63facf1d8c1f05be60e02cedcd7ace308334c1cb491348920a15638310de63880a6a246fb7264992ca6365fc01f03d4354cebe9c7cc14e6628996fc5df00ff62884c2596323bb61b42527602cb8060882c7d8395dddf35830ad5c6eb80430c91e3fa3b9ccf40bc735cfed935de0eac317296eb9a39cc8cd30d214d1c07002549c59b9c3e03dc6388caed1a1d0094244925133e6483ea5d5436aef764ea326a6d5f42e25e4364693fd685d79b415256eabd3348741a224b0d6ab5056650a13ae264a0db1059fa31cf4eff366efff495710d2178b2649e76a5c11c334813c701404952f1ae8c0f00971ba272fcb6a024492a97e1f415609d212a26050700cb68c5fc3f52e3624364fbc0ede6e88ba7d841522602a4a566c8",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.321087837219238,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "83d2dbc426569b4113a40778c00c597a295d7dcf348354123397ec0d9c69884c356af38da0421d71691ba45e4364eb470cf55c618626b5e28c8d04fc724fbe1e453b67994155e100a024a95831d608c9c555f96d62ca946f9b41922495d6e6418e630c517289ab591def338426c460fc03890f1a224b81d4f0367e52598c0e2f04763044966bc3afb2aafb5a43a850d3ef783389030c91ebaa31cc0792219ad8263e0ddc62886cd70aef62c6d2dd0ca12a7000509254acef859380830c517adfe68a39f79a41922495566abccb081510c2d78ca0093569d23260ad21b254a7de3bc30c5293ebeadf8fc06986c8d22889056650b1cf4117ed48480b0d91a9c47719e8193444935b1d4708f418225bbb50db34cf0caa020700254945ef80ceb541152ea31fb44a92a412ebeadf0f7891212a20d4bcb59226d637e6ad05fed910d96e869701c10e52333f4c479700ed86c8f1daf32956c51b0da162ff0e1f3887c45e86c8540d873fcb62207e11f88921b2f5763ae3e3cca0f2bfec48925494ce782c81e718a2f4126de94a334892a4f2ae6646e703ad8628bd9f32b0e8363368c2ddb7f37b80df1b224bcfa0defb2233484daab3efc9c0cb0d91a50d40af1954a813974d8374b621b2f54d06e27f98a13412780a60c62613e83683cace0140495271028b8d50093f6445fc9d1924495229d5fb0f045e6b884aec2fbe6a0415e2da73d613586a884ca5b48c8ee810b9d4946b83c672fc1c2c571f6228fe971954a84d1b1700d30c91e70a91462d9aa16406e315c0f70d91add731231e6a0695991b1f495231eaf1f9c07186a8046fff2b4992ca2b8c46a0cd1015d0a8b92e5571eedafb5f09fcca1039be8e7030ade1d586909a4c673c1678be21b2740fc32c33830ad5b5f8b1c0db0d91ad2fb3aafb876628e5e2dedb36e7ab851afd665099390028499a7831d6c0d3ff2a2231daf245334892a4529a119f42e21586a8c4aaf4970c75ffd8102accf5a70f93c22243642aa41e665d32c91052333d2e1d00cbd8bb591dff640615bb3f19e901261b224ba334bc956c690df6ac22f16d4364ebc5cc8c47994165e500a02469e25dcd1b80c30d5109d771d5224fb9902449e554e33df8de484584cfdb40851becf902e0206a9e1ecff09ab79a416a125df105c0b186c8d21f9932e53d6650a14ee83f1878ad2172dd9af26fac8a371aa2c45a980b244364fa086e70a1195456bec92d499a5833e37460a9212ab314f683564992544e9df155c0f186a888945c97aa29fe1209618119b2dd1f2f6056dcd91052c162ac91bc7d5bbeafc4a19f2be6dc6b08156a747429d06a882c0d33d2d26786925b197f007cd310d93a8e7aec3283cac8014049d2c44a2c07f630442534487cc90c9224a9744ebe6027021719a2327ec4aa788b19d414067a5678cba86cedce7038db",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.322099924087524,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "c8b238600895defdbb9c0fdc61888c25ce028221b42d1c009424a9569672b094dda6bc9a15718d3924499254907f00afa4b773e9e635aaa4729e61ce3242b68ffd2266c43186504196e085ca3c053ab8f6d4f58650b1af81d5c51e83b2762b03e9ab66505db8f6d4f5a4b0d410597b312d5dc79a41dbc292e49ceb0000800049444154014049928a772f8437d01b67b16ce6b03924499254905f101a5e446fec318554727df16a60b921b2f454d686779941a3aeb56b2a30d51059ba99dda67cd10c2a545b3c0a683544c612edf4c72143a86e344dfa34f04743642ca485ccb8b8c110da5a0e004a9254aceba87028bd9ddf36852449920af465eedff5087adaff600aa94ea4ca1940d510593ef89d1c1377b283465180b4c00cb91e7298e7879a55f83128b1d00c59bb9123f9a6195457969fbc9110e61b226bcf62ddcd6f3583b69603809224152301e73391c359117f6b0e49922415641d8937d11bdfee6ddba43ad3d7712381af1b224bfbb0217cc00c1a352d5daf075e6a882cfd8cbee8079b55acb6f8068f41994b613631fac117d59fdd0efe02f01b43e47c7c4b5d4c3f7fac21b4351c00942469b405fe4a0ac7d01b4f61591c30882449920af243861b0fa12f5e6c0aa94e0d3574008386c851fa30cd71a21d34e2665cdc4048ee4e93abc02c367dd0592aee1894e83644d6c7a16be9ebfc9e21549796cd1c26d06588ac3d99a17bde67066d0d070025491ae5e53a033cc7135249922415680384594c9c721457cdfba339a43a7655fbef487cc610599a4c13a79b41236eddcdef040e36449656d013af32830ab5f6a677790ccade3c13a8ae1dcec5c02f0d91b3348fe971573b684b1c0094246974dc03bc8dde3893fe78b73924499254909f10783ebd9d4b593673d81c52062a7491b8cf1059fa20472dd8cf0c1a31cd711c297518224b8950996b06157e0c028f41795be920b2eadea6db5b771a226b7b30cca966d09638002849d2c8fb0a8183e88d5f31852449920a723f890f3271ca11f4c4df9843ca484fbc8bc0c70c91a5f15486e6984123664c783ff024436469193d1dd79941856a0a27024f3444c692bbff2913bdf132e02786c858955399be684f43e8b138002849d24809fc0e98466f7c1b3df12e83489224a91089ef32dcf86cfae279eefa27e57a1c187726f00f436428f05e8e9aff344368876b8e1348699621b2344470272215ac65c96e90661b226b97d3177f6c06e5734ee7c06be6e775bb303ce087bbf4981c00942469c75b0f7433c0b3e98d3de69024495241fe08e1f5f4c563b86ade1fcd2165ac6fd63a124b0c91a5262ac35d66d00e3786d380bd0c91a1c4e7dd515ac5db701ab0bb1db255a552693783f23aa78b7d24be6f88acd760efe7a8054f36841e8d03809224edd8c5d777090dcfa23776d21f3718449224",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.32214093208313,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "e26986d1281a26545ee2ad4aa482b5c67ee0e586c84e025e4c6ffcb929b6d2b485fb501dfc2db09331b2f307267210cbe280295498b67838895586c8fdd53bbc91bece4b0c2109d8f4de5e13ff033cd31859fb29bdf1a59bcff1543077002ca7df33982e3483a4edb23cfe05f80bffdc95e598b81303e12554d3cb802381c3819d0da551d24420026f3785544281f38c2069bbf4c721e0579b7f7d0e80d6b82f21bc8c948e24f06f249e03046369843490aa9f24c6c336ef5e29a908d5ca6c2ad56b0c91e199042c02da4cb195d2603b0effe5fae3d2c9b24e87ff54f03188c546c8fe39703d7d9ddf3284a47fe98f43b4764548ee0c9ab717d3125f475ff435a2264eb4dd01b0848f5a98434fa78b6d492363faf963195cf3322a4c23310d788e5134c286a9540ef1b6f6997307c0327a8041266e1ee291a41d6feac22750196a23a4a349b4027b1a4523e0fdf4c64f99412af25c207e87c46b0c91a1c0546f17b5158e9aff341a866fc63b78e4e8468ee0797e5841856a8daf04be6788dc5fb3c32be9e95c6e0849ff4b8c1556f14bbc969cbb9b9938e5392c9b396c8a62554c5042d5f05d23481a31cb4fde485feca3279e4e6f7c2ec38dfb137837f02de0410369043450adce3783543a3f71f84fd2885a39f76ff4767e999e781c47b037f022529807fc0c6f2ba11d67116d712f3348050a95b980170a72b469472977fbdd92c6e16e1cfecbf4f8c81c87ff54a8182b6cdab155795be5f09fa447799da89242bb21b27730eb6e7a87198ae70060f96ce4c8aa3b24491a3d57cdbb839ef8797ae31b18c79ea4f046e0bf817b8da31de8b54ced7e9119a41249dc600449a326c62abdf1e7f4752ea437be98e1c6a712c2a9c0d5801745f5784c02ce328354a04dbbc1bb1b789e36dd2e4a8f6e5af72124de6c882cada227ba19848a75356f060e3144ee2a736d20e951f5755e06fcd410994b449ae3384314fc8a6d82d2b9cb4f7c492acce5f141fa3a2fa137fe3b8d93f722700c81af01eb8da3c72950711740a95c3fb5e11e23482acc55f3fe484fe747e88d2fa3d2b43f8113811f1b46db25f1365abb8f308454a0e1c64e60a321b27c37603e332e6e30c4a3a85617e2759c5cd727b38ca0421d7a611315ba0d91bd5e7a3b7e6006498fb96a09619e19b2f7449ac289662896278ee5f3371348aa09cb4fde484ffc2e3df1381ad99bc43b08f4e1edd8b4fda6d11a5f6806a934d69840524d583177353df193f4c6c368683888401770bb61b40d0254cfc5db504ac5b96ade1f095c60882c4de19e9bdf6e8647d0128f045e65882c5d4e5fbcda0c2ad4a4d52790789a21723f53aa786b4f495bd6d3d94be2fb86c85d9acbab164fb243711c002c1f6fb929a9f62c8ff7d217bf444f6ca5a1e160024b80bb0da36d16fc74b3549e73391e3482a49a7365",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.322299957275391,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "3584803940328324ed403df13bc04f0c21e0cc1cdea3f34d484992b6cc8bad6593c224234892a4ba121a5c93964f03d732d10c525df0a2bc54776babd0ce75270c1a42453e0ba17aa61904fc90ded86306491aa1359f048770356facf76fd201404992b6cc8bade55be14c30822449aa2b870dfe0d183244c90c36ee6204a90ef4c69f03df348454376ee0f0b4cc0c2a544bd7eb81171b4250f116959234527a3a7b497cdf1022b080432f6caaeb15858fb224495be42d80cba69a7632822449aa2b315681bf1aa2641a871c0094eae63c937938882dd58b0f6f5e5b49c59871710321751b4204aea4b7e3078690a4913cd656dc055000cf60f7d5efaae76fd001404992b62479a1b5847636812449aa43ab4d5032c3150700a57ab132de4ae02243482597f8beb7da54e1d6ddf40e608a213c2241659e19246984f576ac02ae3084487470d8b9e3ebf5db73005092a42d09ac3542e91e337700942449f5b8c6596784926948138c20d59144041e348454e69fe3ca5c23a850cd71dce6d713e9dbf4745c6706491a0515da816488ecedc784fb4eaedfa7b92449da82e085d6f27100509224d523d7a56593700050aa27bdf14ee0e386904aeb5bacecb8d60c2a542327014f3444f6aa54e93283248d9215f17a02df328420cd625a9c5c8fdf99038092246d49485e682d1f6f012c4992ea4fd501c0d249c95b004bf56690c5c01a4348a5334c957633a8502d4b762330cb1002bec6caf82b3348d228aa34cc05860c91bd895439ad2e9fe23eb692246df1e5d20bade5e300a02449aa3f81b54628dba9843b004a75a73fae2584b30d2195ce9758196f32838ab5e13460773b646f90e1866806491a6557b6df42e06b8610700ad316ee536fdf94038092246d49a83a00583e8d269024497527857b8d50ba9389b13690ead07dbb9c07dc6108a9343690886650a1dae25ec0298610898bb8aafd778690a40254e804060c91bd9d4883edf5f7f49624495b78b51ce30060f93800284992ea50725deaba54522db8f6d4f5a4b0d01052697c82bef82733a8d8a53c1d04763144f63650695c6006492ac895f176e0f3861089f772f4fc03ebe95b72005092a42d593bee7e23948e175a254952fd09b82e755d2aa956dcb3f76781df1a42aa79f732c81233a8502df100e0bd8610814fd133efcf8690a4020d372e00d61b227b8d0c0fc77afa861c009424694bc6de3b6884d26930812449aa3b21b82e2d9be400a054b7ae3b6110428721a45a5f3f7116fdf16e43a860ddc0183364ef01869b1c4896a4a25d35ef0ee00243087813d3e20beae59b71005092a42de98f43403244a978a1559224d59f6a7200b06c42f28329523debedfc3a89eb0d21d5acbf336efc47cda042b5743f87c05b0c2102e7b172eedf0c2149356090c524ee3384afce2416d6cb37e300a0",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.322350025177002,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "1f9b41856ae264607f43088040bbb7249724e5751ed7f91de06786d0e6b5d02c5a96ecf6d07fe400a024a978472dd88f967821f013e07083e821bee21b39922469d4b4764d65ed4dd76dfe40caee06d1bf542a5f3482a4ba32c862608d21b41586a9d26e0615aa394e04ce308436fb393dd1ddb92549b94980bb21eb9f76a7b2e1f487fe0307002549c5698e136889f36918ba75f3ee2abe2ee9614bd9862f1b4192248db8a9710aadf10a487dc02106d1c3fc9e151d579b41525de98f6b09e16c43688b125f6465bcc9102a54131f06261b429bcd65d31084244979e98d3dc00f0da1cde76aff4573dcfb9fffb7d12292a45177ecd25d7870fd89044e05f634881ec54fe96bbfd90c922469c44c8d5368602e8937010d06d1230a7c192f304aaa4763d347d9c007807d8ca147b1814a6334830a356de13e54074f3184fe5f7bf71e67775ddffbfefd5d3309890a04455bcb767757acd6cb6e6bdde761556c2924a0a77ab45aa83ddd5a76dd47da6db7dd656b0990ccfc1210a552adcae614b545c58754e28d5b93cc4ce27049113cb05b91202288e5222084404212e6b2bee78f445a904b2e33b366d67a3e1f0f1e8405647eebf54b26dfdf5a9ff5fded72f9aee10700e84d35a7a4e40a2148f2cccccbb2247f9ad8690980997478f3ac2c59f167d9befde6947c2886ff782a25e78800004c8ba357be3c4b9acfa7956fa7e6ff8ee13f9edc44d2ffb732005de9e2665b6a3955089e54c959195a76bb1074547b7c20c9338460a7d6800600f4b491e6ca94ac11825dde93234e3d34b1032000336149f37329f96fa9f96f493d481076c3a66c39e07c1900802975f4cad7a7ddfef3b4db6f890f45b27b2e32f80074b5077ef63379f68f4e48f22231789c8732963364a0b3ebf7e64569e7dd429024295993a181cb840080d6b2a47d7492a245cf9b97fec99549fec0002000d3e7a895af4a6dff599277a4669e20ec81cfe4aa13b6cb0000ecb3639af9d95cde92d413d26effba20ec9156394b04a0ab5d7bfc7896ac1848ea17c5e0314a3e92d1e63e21e8a8764e4dbcae4c92a4a664500600483234706d96345f4bf2363148cd3bb278e599060001985a477de499693ffcf694fc696afbff1084bdd04ee9fb1b1900807d5b979efa0bc9e4bbb339ef49ea7305612f6cccdac1511980aef7bafaa56cc80792bc520c76b92763f96b19e8a8c52b5f99b48f15825dbe96b5cd353200c02eed2c4f2b6f49d22746cf6ba5b44f330038f72c940098854a8e6a5e9f9ae3d27ef87753b2bf24ec834b32b4fc0732c0acffce3f5f0460d639bc7956e6e577931c973af91b711b0cf6cd2793541980aed734ed1cd99c9c56568b4192a4e6b48c365b85a0a34afbb792b48420c9645aad011900e0df58d76ccc92e68b49de2906498e300038f73c4f0260d638b279714a",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.322476863861084,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "f4c6e6808ce73d29795f921708023043abd23c664dba6b1dfa931f97071e7dac964d995736a5f46dcab35eb429ab8e9d940f0098f58e6c5e96563e90e477921cb81bffc7b62417a69d26eb9aef09080000c06c539ef2df1e71da21694dbc2e25af4ecd21293928c941495ad2013d607b4a1e3b5c57b33d79dc6325dbd3def558493bc95b99b096000000ad494441548329d9915ab6a7e6a1b432969a8752eaceffaeb61e4c7fc632d9de92896ccb33f77b24979eb4397642017862c75cd09787befb8a4cb65f9f567e393507ef5a93ee2f0ed01376ae29277feab1e4f103770fa5ee7aac954752b32db56c492b63497d30edec48d9b546edcb586a792893ed9d6bde3affc13cb36fcc6e360040cf38bce9cf7eadd764b21e91527f3e35cf4dc9c1491e48c98f53734792cb329ecb7d0017000080d9ecff0737281378f3358db30000002574455874646174653a63726561746500323032322d30332d32345430363a34383a31382b30303a30307d3957c90000002574455874646174653a6d6f6469667900323032322d30332d32345430363a34383a31382b30303a30300c64ef750000000049454e44ae426082",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/loading.gif",
+                    "time": 4.322585821151733,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "53514c69746520666f726d61742033001000010100402020000000090000000a00000007000000050000000800000004000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000009002e4f7d0d000000040dbf000f5e0f0c0e710dbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.322884798049927,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "0d000000010fef000fef000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.322922945022583,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "0d000000390a26000fe60fd20fba0f9e0f870f6e0f560f300f140efa0ee30ec70eb20e960e7f0e6a0e530e380e170dfd0de30dc80dac0d8f0d780d5c0d360d170d010cec0cd00cb60c9b0c820c670c500c3c0c1a0bfe0be40bc80baf0b930b820b6b0b500b440b260b090aee0ad00abc0a9f0a830a700a3e0a26021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d021d02bf02a50287026a0241022f021101fc01db01b801a101850169014d012d000000000000000000000000001d810c030041636f6d2e62616e6b696e7465722e706f72747567616c2e626d6219810b030039636f6d2e62616e6b696e7465722e6c61756e6368657219810a030039636f6d2e62616e6b696e7465722e656d707265736173198109030039636f6d2e62616e6b696e7465722e626b77616c6c657414810803002f636f6d2e62616e6b69612e77616c6c6574208107030047636f6d2e62616e6b6661622e7062672e61652e647562616966697273741e8106030043636f6d2e62616e6b617573747269612e616e64726f69642e6f6c6212810503002b636f6d2e42616e6b416c42696c61641b810403003d636f6d2e426100000de3003f7777772e696e676469726563742e6e61746976656672616d6500000dc400597769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d504c00000d9800557769742e616e64726f69642e62637042616e6b696e674170702e6d696c6c656e6e69756d00000d6e00557769742e616e64726f69642e62637042616e6b696e674170702e61637469766f42616e6b00000d44002f75792e636f6d2e62726f752e746f6b656e00000d2d001b75792e62726f7500000d20003775732e7a6f6f6d2e766964656f6d656574696e677300000d05003b756b2e636f2e7473622e6e65776d6f62696c6562616e6b00000ce8003f756b2e636f2e746573636f6d6f62696c652e616e64726f696400000cc90043756b2e636f2e73616e74616e6465722e73616e74616e646572554b00000ca8006b756b2e636f2e6d6574726f62616e6b6f6e6c696e652e6d6f62696c652e616e64726f69642e70726f64756374696f6e00000c73004b756b2e636f2e6d626e612e6361726473657276696365732e616e64726f696400000c4e0049756b2e636f2e687362632e68736263756b6d6f62696c6562616e6b696e6700000c2a002f7473622e6d6f62696c6562616e6b696e6700000c1300257472656e64796f6c2e636f6d00",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.323011875152588,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "000000000000000400000008000000090000000a000000060000000609a309880963093d0917090208f108e108ce08b7089a0880085d08470831081c080607eb07d107ad078f0774075a0745072e071206f306d706b5069d0681066a0650062e061205ec05d805c405ae0592057805540532051304f804d504bf049f0484046a0449041b03f603e303ca03ae0385036e0354032f0316030002e702cf02b2029b028a027302560238022101fd01e801d101a4017b016201470130011500000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c03003300000018831f030037636f6d2e6f70656e736f6f712e4f70656e536f6f7114831e03002f636f6d2e6f6b696e632e6f6b65782e677018831d030037636f6d2e6f6b696e632e6f6b636f696e2e696e746c16831c030033636f6d2e6f6673732e67626b70726f6472657426831b030053636f6d2e6f6369746f2e63646e2e61637469766974792e63726564697464756e6f72642a831a03005b636f6d2e6f6369746f2e63646e2e61637469766974792e62616e7175656c61796465726e69657214831903002f636f6d2e6f6362632e6d6f62696c656d7912831803002b636f6d2e6f6362632e6d6f62696c65218317030049636f6d2e6e75616e63652e6e6d632e7369686f6d652e6d6574726f70637314831603002f636f6d2e6e6f6f6e2e62757965726170701b831503003d636f6d2e6e657476617269616e742e616c6b68616c696a691a831403003b636f6d2e6e6574666c69782e6d65646961636c69656e7414831303002f636f6d2e6e656172666f726d2e707473620e8312030023636f6d2e4e425142616e6b14831103002f636f6d2e6e626b2e4942476d6f62696c651a831003003b636f6d2e6e6176796665646572616c2e616e64726f696415830f030031636f6d2e6e616d7368692e616e64726f696416830e030033636f6d2e6d7963656c69756d2e77616c6c657413830d03002d636f6d2e6d796333636172642e61707016830c030033636f6d2e6d74656c2e616e64726f696462656122830b03004b636f6d2e6d74622e6d62616e6b696e672e73632e72657461696c2e70726f6417830a030035636f6d2e6d73662e6b62616e6b2e6d6f62696c6514830903002f636f6d2e6d6f766f636173682e6d6f766f268308030053636f6d2e6d6f7267616e7374616e6c65792e636c69656e746d6f62696c652e70726f64198307030039636f6d2e6d6f726162616e632e6d6f62696c65617070168306030033636f6d2e6d6f6f7477696e2e6e617469786973108305030027636f6d2e6d6f6e65796c696f6e22830403004b636f6d2e",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.323131799697876,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "0d000000880125000fd20fb70f9c0f810f680f470f280f0b0ed60ec20ea80e8b0e750e5d0e3e0e220e020de40dc30da20d790d630d400d2d0d110cf40cca0cac0c940c7d0c640c400c280c0f0bf30bd90bb50b930b6e0b4c0b2a0b010add0abd0a9c0a7b0a600a400a290a0709eb09db09b909a10983096209430924090d08f708dc08c408a8088a086f0856082f080a07e807d407b60796078a0775075e07440731071e070906f106e406c806b2069d067f066e065706390620060805f905d105bc05a20591057c0566054d0533051a050504f004cb04b904a804950471045a0440041903fb03e803b6039f038d0373034b0331030f02f502e302cb02a0028202620252023a0224020501dd01a60191016c015301380125000000000000000000000000001085360300276e7a2e636f2e776573747061631885350300376e7a2e636f2e6b69776962616e6b2e6d6f62696c651685340300336e7a2e636f2e6173622e6173626d6f62696c6522853303004b6e7a2e636f2e616e7a2e616e64726f69642e6d6f62696c6562616e6b696e6712853203002b6e65742e6f6e6539372e706179746d34853103006f6e65742e696e7665726c696e652e62616e636f7361626164656c6c2e6f66666963656c6f6361746f722e616e64726f69642585300300516e65742e676172616765636f646572732e655f6c6c61766573636f746961696e666f1c852f03003f6e65742e626e70706172696261732e6d6573636f6d7074657313852e03002d6e65742e6269747374616d702e61707015852d0300316e65742e6269746261792e626974636f696e0d852c0300216e65742e6172616d65781d852b0300416d792e636f6d2e6d617962616e6b32752e6d32756d6f62696c651b852a03003d6d792e636f6d2e687362632e687362636d616c61797369612885290300576d792e636f6d2e686f6e676c656f6e67636f6e6e6563742e6d6f62696c65636f6e6e6563741585280300316d782e687362632e687362636d657869636f0f85270300256d782e636f6d2e62622e62321785260300356d782e62616e637361626164656c6c2e706172741f85250300456d782e62616e636f73616e74616e6465722e73757065726d6f76696c1785240300356d6f62696c6974792e67652e7465726162616e6b2585230300516d6f62692e736f636965746567656e6572616c652e6d6f62696c652e6c6170706c691785220300356d652e63727970746f7061792e616e64726f69640f85210300256d62616e6b696e672e4e424714852003002f6d612e6762702e706f636b657462616e6b2f851f0300656c742e7370656374726f66696e616e63652e7370656374726f636f696e2e616e64726f69642e77616c6c657410851e0300276b746263732e6e657462616e6b1b851d0300",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/db.db",
+                    "time": 4.32315993309021,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6187,
+                    "data": "3539300a3736380a34380a",
+                    "name": "/data/user/0/com.bbvaapkappseguro.apk/files/txtscreensize.txt",
+                    "time": 4.3996570110321045,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6296,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.168414831161499,
+                    "processname": "com.bbvaapkappseguro.apk"
+                },
+                {
+                    "pid": 6187,
+                    "tid": 6296,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.169665813446045,
+                    "processname": "com.bbvaapkappseguro.apk"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

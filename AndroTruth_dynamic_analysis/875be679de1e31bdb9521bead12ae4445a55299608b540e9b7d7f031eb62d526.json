@@ -1,0 +1,1574 @@
+{
+    "apk_info": {
+        "id": "9VaKGJLvrrPdvqMy",
+        "url": "https://developer.koodous.com/apks/875be679de1e31bdb9521bead12ae4445a55299608b540e9b7d7f031eb62d526/",
+        "sha256": "875be679de1e31bdb9521bead12ae4445a55299608b540e9b7d7f031eb62d526",
+        "md5": "ee525981c69544ccd7fe1ca5db3764f2",
+        "sha1": "8ded74c9c7c61273adf9888506870911944ca541",
+        "app": "Flashlight",
+        "package_name": "com.devuni.flashlight",
+        "company": "en",
+        "version": "5.2.3",
+        "image": "https://developer.koodous.com/media/apk_images/2017/12/11/97c53a0821d1a08df0e996e7c6cc6ce2dd15f849ee0c5e510e3858fcb7a94c6a",
+        "size": 1676681,
+        "tags": [
+            "monokle",
+            "pua",
+            "trojan",
+            "spyagent",
+            "reflection",
+            "monocle",
+            "telephony",
+            "clipboard",
+            "obfuscated",
+            "contains-elf",
+            "runtime-modules",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -6,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-04-16T13:22:25.678381+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.2.2/27247/Tue Apr 16 08:25:32 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "16.04.2024 07:45:43 (Build: 106974)",
+                    "result": "malicious",
+                    "signature": "Trojan.AndroidOS.Monokle"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 21,
+        "comments_count": 0,
+        "votes_count": 6,
+        "created_at": "2017-12-11T18:05:13+01:00",
+        "updated_at": "2025-08-01T14:55:17.795396+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "ee525981c69544ccd7fe1ca5db3764f2",
+                    "sha1": "8ded74c9c7c61273adf9888506870911944ca541",
+                    "size": 1676681,
+                    "crc32": "B19BA877",
+                    "sha256": "875be679de1e31bdb9521bead12ae4445a55299608b540e9b7d7f031eb62d526",
+                    "sha512": "784f775c57002681636d4982737e76b2c4a360b3cf951ef19f3dfa48f70cf9229fc2a90c62a4650b87ff54a2bd2b41411f197f08c2d75f0d01999050ddcaa74a",
+                    "ssdeep": "24576:+yx6tG/P/0/+rIs0Gaic1RCQFCck7rsvw3uQBHAoM0PzKDXXGhMK3J1lh:P/2Cb0XqQI5Yw+QNKjaXPlh"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "ma.tinyflashlight.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "52.90.22.172",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "ma.tinyflashlight.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "data.flurry.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "flury-ycpi.gycpi.b.yahoodns.net",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "87.248.116.11",
+                                "type": "A"
+                            },
+                            {
+                                "data": "87.248.116.12",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "data.flurry.com"
+                    }
+                ],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://ma.tinyflashlight.com/",
+                        "body": "f=unknown&n=com.devuni.flashlight&v=169&p=160&o=16&a=1&d=31f",
+                        "data": "POST / HTTP/1.1\r\nAccept-Encoding: gzip\r\nContent-Length: 60\r\nContent-Type: application/x-www-form-urlencoded\r\nHost: ma.tinyflashlight.com\r\nConnection: Keep-Alive\r\n\r\nf=unknown&n=com.devuni.flashlight&v=169&p=160&o=16&a=1&d=31f",
+                        "host": "ma.tinyflashlight.com",
+                        "path": "/",
+                        "port": 80,
+                        "method": "POST",
+                        "version": "1.1"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "52.90.22.172",
+                    "87.248.116.11"
+                ],
+                "domains": [
+                    {
+                        "ip": "52.90.22.172",
+                        "domain": "ma.tinyflashlight.com"
+                    },
+                    {
+                        "ip": "87.248.116.11",
+                        "domain": "data.flurry.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://androidsdk.ads.mp.mydas.mobi/getAd.php5?",
+                "http://ads.mp.mydas.mobi/appConfigServlet?apid=",
+                "https://ads.mp.mydas.mobi/appConfigServlet?apid=",
+                "http://www.androidpit.com/apps/app/",
+                "https://twitter.com/intent/tweet?url=",
+                "http://getjar.com/",
+                "http://data.flurry.com/aap.do",
+                "http://mall.soc.io/apps/",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/mraid/v2/mraid_app_expanded_banner.js",
+                "http://cdn.millennialmedia.com/mmjs/v1.7/mm.js",
+                "http://plus.google.com/",
+                "vnd.android.cursor.dir/event",
+                "http://www.google.com",
+                "http://appworld.blackberry.com/webstore/content/",
+                "https://data.flurry.com/aap.do",
+                "http://m.slideme.org/application/",
+                "http://www.facebook.com/sharer.php?u=",
+                "http://market.android.com/details?id=",
+                "http://ma.tinyflashlight.com/",
+                "http://apps.samsung.com/earth/topApps/topAppsDetail.as?productId=",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/native_ads.html",
+                "http://app.xiaomi.com/detail/",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/sdk-core-v40.html",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/mraid/v2/mraid_app_banner.js",
+                "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/mraid/v2/mraid_app_interstitial.js",
+                "http://www.wandoujia.com/apps/",
+                "https://googleads.g.doubleclick.net/mads/static/sdk/native/sdk-core-v40.html",
+                "https://play.google.com/store/apps/details?id=",
+                "https://plus.google.com/share?url=",
+                "http://wap.mobango.com/free/mobile/apps/",
+                "http://tinyflashlight.com/privacypolicy.html",
+                "http://www.lgworld.com/applicationId=",
+                "http://www.amazon.com/gp/mas/dl/android?p="
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "5a0b7effa5609c09d5e2f0e08dd2f69415219468fc8e41ae782df95e578a86cd",
+                    "ssdeep": "24576:o8oCITAeU8Oneh8qt5OVVRUG+3xj/01wRvqo1bxo:PLniD/BSuxo"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MY_PACKAGE_REPLACED",
+                "android.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.GET_RESTRICTION_ENTRIES",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.appwidget.action.APPWIDGET_CONFIGURE",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.appwidget.action.APPWIDGET_UPDATE",
+                "android.intent.action.BOOT_COMPLETED",
+                "com.devuni.flashlight.API",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "Flashlight",
+            "services": [
+                "com.devuni.flashlight.live.LiveService",
+                "com.devuni.flashlight.daydream.DaydreamService",
+                "com.devuni.color.BackgroundService",
+                "com.devuni.light.LightService",
+                "com.devuni.flashlight.notification.CuttingEdgeNotificationService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.devuni.flashlight.receivers.APIReceiver",
+                "com.devuni.flashlight.receivers.RestrictedProfilesReceiver",
+                "com.devuni.flashlight.receivers.BootReceiver",
+                "com.devuni.color.StartBroadcastReceiver",
+                "com.devuni.flashlight.receivers.WidgetProvider",
+                "com.devuni.flashlight.receivers.PackageReceiver",
+                "com.devuni.color.NewOutListener"
+            ],
+            "activities": [
+                "com.google.android.gms.ads.AdActivity",
+                "com.devuni.flashlight.daydream.DaydreamActivity",
+                "com.devuni.flashlight.WidgetConfigure",
+                "com.devuni.flashlight.MainActivity",
+                "com.millennialmedia.android.MMActivity",
+                "com.devuni.flashlight.live.LiveActivity",
+                "com.devuni.light.LightActivity"
+            ],
+            "certificate": {
+                "sha1": "E6BE06102851BFFF6389F4EC58CC27919C47A498",
+                "serial": "B1212AA2CBDCD4BF",
+                "issuerDN": "/C=en/ST=en/L=en/O=en/OU=en/CN=en/emailAddress=en@en.en",
+                "not_after": "Jul 28 11:16:34 2040 GMT",
+                "subjectDN": "/C=en/ST=en/L=en/O=en/OU=en/CN=en/emailAddress=en@en.en",
+                "not_before": "Mar 13 11:16:34 2013 GMT"
+            },
+            "permissions": [
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.READ_CALENDAR",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.BLUETOOTH",
+                "android.permission.CAMERA",
+                "android.permission.INTERNET",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.SEND_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_CALL_LOG",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "com.devuni.flashlight.CONTROL_LIGHT",
+                "android.permission.WRITE_CONTACTS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.CALL_PHONE",
+                "android.permission.FLASHLIGHT",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.VIBRATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_CONTACTS",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "com.devuni.flashlight",
+            "version_code": "169",
+            "main_activity": "com.devuni.flashlight.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V",
+                        "class": "Lcom/devuni/color/as;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v1, 'sms_body'",
+                        "class": "Lcom/devuni/g/a;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v1, 'sms_body'",
+                        "class": "Lcom/millennialmedia/android/ai;",
+                        "method": "a"
+                    }
+                ],
+                "ads": [
+                    {
+                        "code": "const-string v2, 'com.google.ads.mediation.admob.AdMobAdapter'",
+                        "class": "Lcom/google/android/gms/internal/dg;",
+                        "method": "a"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/devuni/color/al;",
+                        "method": "e"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/google/android/gms/internal/js;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/millennialmedia/android/dt;",
+                        "method": "m"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v1, 'https://play.google.com/store/apps/details?id='",
+                        "class": "Lcom/devuni/c/k;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v1, 'https://play.google.com/store/apps/details?id='",
+                        "class": "Lcom/devuni/c/l;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v1, 'https://twitter.com/intent/tweet?url='",
+                        "class": "Lcom/devuni/g/a;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/devuni/color/as;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/devuni/color/as;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/flurry/sdk/dy;",
+                        "method": "b"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/devuni/color/as;",
+                        "method": "b"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v1, v2, Landroid/media/MediaRecorder;->setPreviewDisplay(Landroid/view/Surface;)V",
+                        "class": "Lcom/devuni/color/c;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/devuni/light/LightCameraNew;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-direct v4, v0, v2, Lcom/devuni/light/LightNative;->startPreview(I I)I",
+                        "class": "Lcom/devuni/light/LightNative;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/devuni/color/bf;",
+                        "method": "e"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/devuni/moreapps/b;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/flurry/sdk/fe;",
+                        "method": "d"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-static v0, Ljavax/mail/Transport;->send(Ljavax/mail/Message;)V",
+                        "class": "Lcom/devuni/color/aj;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/flurry/sdk/en;",
+                        "method": "o"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/google/android/gms/internal/jj;",
+                        "method": "a"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v3, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/devuni/color/l;",
+                        "method": "g"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/devuni/color/as;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/millennialmedia/android/ai;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/devuni/color/ah;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v3, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/devuni/color/ah;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-static v2, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lcom/devuni/light/LightNative;",
+                        "method": "a"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/devuni/color/as;",
+                        "method": "b"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v4, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/devuni/color/l;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v5, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/devuni/flashlight/ui/db/c;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/devuni/b/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v1, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/devuni/b/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v3, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/devuni/color/j;",
+                        "method": "b"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 3,
+            "new_permissions": [
+                "com.devuni.flashlight.CONTROL_LIGHT"
+            ],
+            "displayed_version": "5.2.3",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "52.90.22.172",
+                    "hostname": "ma.tinyflashlight.com"
+                },
+                {
+                    "ip": "87.248.116.11",
+                    "hostname": "data.flurry.com"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 851,
+                    "tid": 705529360,
+                    "data": "HTTP/1.1 200 OK\r\nDate: Thu, 01 Aug 2019 11:41:06 GMT\r\nServer: Apache/2.4.18 (Ubuntu)\r\nVary: Accept-Encoding\r\nContent-Encoding: gzip\r\nContent-Length: 306\r\nConnection: close\r\nContent-Type: text/html; ch\r\n\r\n61727365743d5554462d380d0a0d0a1f8b08000000000000037dd14d6b84301006e0bfb2cc59249f26f1584a0fa5871e167ad69275655d5d36da1616ff7be34445add44b9277e4613279808514a8629a10882083f401711c5765716edb2cafec10b4fe97b721391c318ac0f9c42f1da454504213a60c8fa0f1c708ce90fa7dedf75c0bc2a560a48f06b4cddc05e1c93cfae080f02ea90d920c493192863396304e47b2298acaae518cfe63d9a2d389d59a08ffa9c022987755bebefdd3906c4823382746212996979f4b81fcceee75591728bb89fd086168d6fda529f33d212db73496027d6baaf2737ea8773ced9342734989d2489a0dc9a5964a07f294b97635d5171fecce7424c34cf58a248caac430399075e3ca9f53f965e3da5ead2be711bc76d7dbe1f9ee2b6b58d24408a3c8f2b15880e752dff7bf69515248c0020000",
+                    "time": 1.673061,
+                    "srchost": "ma.tinyflashlight.com",
+                    "srcport": 80,
+                    "processname": "com.devuni.flashlight"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 851,
+                    "tid": 705529360,
+                    "data": "POST / HTTP/1.1\r\nAccept-Encoding: gzip\r\nContent-Length: 60\r\nContent-Type: application/x-www-form-urlencoded\r\nHost: ma.tinyflashlight.com\r\nConnection: Keep-Alive\r\n\r\nf=unknown&n=com.devuni.flashlight&v=169&p=160&o=16&a=1&d=31f",
+                    "time": 1.554638,
+                    "desthost": "ma.tinyflashlight.com",
+                    "destport": 80,
+                    "processname": "com.devuni.flashlight"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.devuni.flashlight-1.apk",
+                    "time": 0.067372,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "path": "/data/data/com.devuni.flashlight/cache/ads-184927387.jar",
+                    "time": 6.361753,
+                    "processname": "com.devuni.flashlight"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "011e001d000000000000000000000000000300ab0000014c1422285d0014434d48383542563643394438584a494d595437310005352e322e33000200000013414e4436316564653932623466303730633636000500147fa75705d75437b6df079bc6ee1719da573f87d50000010000014c142227840000014c142227840006000c6465766963652e6d6f64656c001053414d53554e472047542d493931303000000b6275696c642e6272616e640007416e64726f69640000086275696c642e696400064a524f30335200000f76657273696f6e2e72656c656173650005342e312e3100000c6275696c642e646576696365000767656e6572696300000d6275696c642e70726f64756374000466756c6c000000000000000000000000cdab958a0000",
+                    "name": "/data/data/com.devuni.flashlight/files/.flurrydatasenderblock.5a52e001-da29-495f-87b9-cd51c5e9a467",
+                    "time": 3.699121,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "data": "504b05060000000099009900ee2e0000856619000000504b01021400140008080800a3568d48f9dc24b296100000813200001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b01021400140008080800a3568d4856c056b614110000b63200001000000000000000000000000000dc1000004d4554412d494e462f434552542e5346504b01021400140008080800a3568d48c352af3d730200009f03000011000000000000000000000000002e2200004d4554412d494e462f434552542e525341504b01020a000a0000080000a3568d488ac38d1158050000580500002500000000000000000000000000e02400007265732f6472617761626c652d686470692d76342f6e6f74696669636174696f6e2e706e67504b01020a000a0000080000a3568d487fa4da34950100009501000029000000000000000000000000007b2a00007265732f6472617761626c652d787878686470692d7632312f6275745f73657474696e67732e706e67504b01021400140008080800a3568d48f34d137b8f010000600300001a00000000000000000000000000572c00007265732f786d6c2f6170707769646765745f696e666f2e786d6c504b01021400140008080800a3568d4897d742f1c1000000b401000022000000000000000000000000002e2e00007265732f647261",
+                    "name": "/data/app/com.devuni.flashlight-1.apk",
+                    "time": 0.136547,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 706252816,
+                    "data": "a6c6aad43f84aba89a21297fa43ef35743ae01c4ceced8a7ababa32b7bd0052bd957c013f86a6afa0af8c2e7018b21c7fc94b4eb3e7609c6765e2f5ebc287a4710248e1b17482627f2b9fce78b1687a2659c96ef9300822085ef4234874572ffe4f852c9912fffe47623c7629063760424a1acec45616179f9808f0699fcdbf3577fae32a4dac0edaf100481246f4c48285343ca070b9417a3eeeeee2b1ed88dd7ddafe6a22403a4336f6759850a52565e0e9ffe5f0d92ce2fafd7adfbbb19ffe5af75dd00590e1bff8fce3be62f407d082b08d2dd4d40082bcb512ce2ddeb112421013420988102901baf5fbd9aeb8137fff5eaf9b32b44ad10a4e71eec4010e3f742c8548fd7cf9f3fb7a669fdfdf2e5b373beeafd52db01097e9160a7ce7261bf2fb455ad352f5fbe7170d4bafd0c2091816857a666de19d355585468674700ba408a7abfb02bddcfbd79f3f609cdd0eced9b37bfa360a2b982f4adb34dbb4017964c51c73b0b86843fe97cfbf6d766ccfae9dbb74f9ff8a394f1d32557d776747475f9d875c0621eb42c6127df78dad9f9f406d6fc6b6767e61a5494388234284a22b48a4bd6a2f56eda5f88d2f7343333f789217e5b925935e7b7c4a4182e0f7276d5dec0c0c0d4a00476598ea8bf205a819f3a243974ca9d66b65552bcfb9cbac0665e9ae866602f12b5b5890a0a06ec6454c619b71f3c7ab4f506eee1",
+                    "name": "/data/app/com.devuni.flashlight-1.apk",
+                    "time": 9.847629,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "data": "000000100000000908060000003b2aac320000000473424954080808087c086488",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.280071,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 706252816,
+                    "data": "504b0304140008080800a3568d48000000000000000000000000140004004d4554412d494e462f4d414e49464553542e4d46feca0000ad5a49cfa358b2dd9754ffa196efc9ca649e4aea05930d36663466d8a430b319cd6c7e7dbbaaabdfebce34e054f7d6d217df25e2449c73e2deb357a651d8765fae61d3a655f9fb6fd057f0d75fd826f4ba30f8c23cfffce1b7ffa1cba0a9d2e037238d4bbacefef7d75f7efd45f68af0f7df9ab00582c61bbd5b1e7e49823afd32a04059756994fa5ef70af9b52ee35f7f31041afac2a5f1eb7ffdfe1b968d2a4eb18edbdd6f1465887d5971a26633a90cfe6d21f2344dff080e43c0adefbeb561d7a565dcbe89aea4d893661d723eb9e7c8389f4ee7f660f3b87849fcefa24f450e78753da6411c76dfd232aabebe7efa2edc54b5a5c4c3eced7eed705ce83b89036e41ed006cbc7058e0af80b7f85bfdfabd0d833761ab5222715d66d3e0da96cf12e875f88a1d0e466e654b39f8e7b78f49da856f3efc68ec15d803465a3e1417ffc0dea768aef66e2f78e3625aff59b18d9c2657ab459123b0f7f78f942bee0c233c8a024c0187ff28f49f47fee6f95d3abc3b39d0262924f9b726ba2579a914496987e1241595b90488ad0383a128941981ea392a039d55b8503b3fad8e29e3c5aafd2b68bfc5afb861737bf541f026fa5c1cb10325cd48d865582e25500267364b8559e92f456f",
+                    "name": "/data/app/com.devuni.flashlight-1.apk",
+                    "time": 7.640854,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "b40f04f519b5ea727d508f8a465cbbeed764936c",
+                    "name": "/dev/urandom",
+                    "time": 3.42599,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "data": "89504e470d0a1a0a0000000d49484452",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.238164,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "data": "MemTotal:         604776 kB\nMemFree:          344488 kB\nBuffers:               0 kB\nCached:           134916 kB\nSwapCached:            0 kB\nActive:           141332 kB\nInactive:         100448 kB\nActive(anon):     110528 kB\nInactive(anon):        0 kB\nActive(file):      30804 kB\nInactive(file):   100448 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        106872 kB\nMapped:            49852 kB\nSlab:               6164 kB\nSReclaimable:       1640 kB\nSUnreclaim:         4524 kB\nPageTables:         5224 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2485544 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 5.788092,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "504b05060000000003000300b6000000f70e00000000504b010214001400080808005ca617450000000002000000000000000900040000000000000000000000000000004d4554412d494e462ffeca0000504b010214001400080808005ca61745942c4098430000004400000014000000000000000000000000003d0000004d4554412d494e462f4d414e49464553542e4d46504b010214001400080808005ca61745f956c813fc0d0000841c00000b00000000000000000000000000c2000000636c61737365732e646578504b05060000000003000300b6000000f70e00000000",
+                    "name": "/data/data/com.devuni.flashlight/cache/ads-184927387.jar",
+                    "time": 6.402408,
+                    "processname": "com.devuni.flashlight"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 5.647153,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.633357,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.b",
+                    "time": 6.643569,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.64854,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.h",
+                    "time": 6.658321,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.660558,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.e",
+                    "time": 6.67577,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.677525,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.d",
+                    "time": 6.687597,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.692387,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.i",
+                    "time": 6.692502,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.707057,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.c",
+                    "time": 6.707982,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.767569,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.g",
+                    "time": 6.767691,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.772478,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.f",
+                    "time": 6.778281,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 6.787121,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "com.google.android.ads.zxxz.a",
+                    "time": 6.788206,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.19812,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.418808,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.436232,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.44839,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.448504,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.456128,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.464029,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.467728,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.473063,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.480328,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.488153,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.496318,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.570353,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.577832,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.588025,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.588147,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "key": "6, 39, -106, -34, 104, -44, -121, 45, -16, -72, -118, 69, 4, 108, 104, -39",
+                    "pid": 851,
+                    "tid": 705529080,
+                    "time": 7.59129,
+                    "algorithm": "AES",
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "a",
+                    "time": 7.618422,
+                    "algorithm": "AES/CBC/PKCS5Padding",
+                    "processname": "com.devuni.flashlight"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "000d636865636b496e74657276616c4a0007636865636b65644c00076368616e6765737400124c6a6176612f6c616e672f537472696e673b4c0007636f756e74727971007e00014c0007656e74726965737400154c6a6176612f7574696c2f41727261794c6973743b4c00046c616e6771007e00017870000000000a4cb8000000014c142223cd74000231367400025553737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 2.668309,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705805016,
+                    "data": "3748ca000000000049454e44ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.597121,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705660248,
+                    "data": "0000000d49484452000000100000000908060000003b2aac320000000473424954080808087c086488",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.22012,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "\nI\bcategoryJ\rimageModifiedZ\u0006isPaidJ\bmodifiedI",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 3.438245,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "007e00014c00047061636b71007e00014c00057469746c6571007e0001787000000002000000005a632fa600000000005a632fa600000001740000740015636f6d2e6e6f736978666976652e6e656d6573697371007e000b71007e000b74000a4a756d702044726976657371007e000800000003000000005499b1720000000000565415660000000974000074001c636f6d2e646576756e692e666c6173686c696768742e706f6c69636571007e000f71007e000f74000d506f6c696365204c69676874737371007e000800000003",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 3.698787,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"v_____e__r\" value=\"169\" />\n<int name=\"o_____s__\" value=\"16\" />\n</map>\n",
+                    "name": "/data/data/com.devuni.flashlight/shared_prefs/ctx_1ls_prefs_v.xml",
+                    "time": 1.20511,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "65ad9080",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_sym_ch_n",
+                    "time": 2.398183,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705457704,
+                    "data": "01007f0200117f05009600000001000000a97070707400094d6f727365436f646574000a4d6f72736520436f64657371007e0002000000020000000001007f0200097f05009400000001000000a970707074000a436f6c6f724c69676874740012436f6c6f722026204d6f6f64204c6967687478",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 5.798225,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705805016,
+                    "data": "89504e470d0a1a0a",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.073588,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "ppt\u000bStrobeLightt\fStrobe Lightsq",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 3.628298,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "aced0005737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a6578700000000677040000000c",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.477625,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "b5fa00020014434d48383542563643394438584a494d595437310013414e4436316564653932623466303730633636000000014c142227840000",
+                    "name": "/data/data/com.devuni.flashlight/files/.flurryagent.75859e7c",
+                    "time": 3.307672,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967416,
+                    "data": "r\u0011java.util.HashMap\u0005\u0007зац\u0016`я",
+                    "name": "/data/data/com.devuni.flashlight/files/__more_apps_0",
+                    "time": 2.543148,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "0000000049454e44ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_sym_ch_n",
+                    "time": 2.4697,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "ce1c1bda0000000473424954080808087c086488",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_sym_ch_n",
+                    "time": 1.995632,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705646640,
+                    "data": "000006cd49444154789ced9dcd6f1bc719879fe172a8159796e922271aa86583621b0b860325eec530e402b55da0b06328128a5ee2f43f704fad5b034d0123f5adfd0782c4b94a1594044111f712214881c2856a39b6e34a06ac1c44c04050d10a3fb65cee4e0fcb656589927723d14bd2f35c7efc7849cee0a7f79dd9a1c057b003131313878410af271289d3c061e0959de2351de736f0c8f3bccf94521fcecece7ebd5da068f7e0c4c4c4a14422f17b21c42f3b3644cdae514abde779de1fda19bcc5d8a9a9a90bc0fbc001807abd4eb158a4582c52a95428954a1d1fb0662bd96c16cbb2c8e572e4723952a954f0d41af0d6f4f4f4471be39f32767272f24d21c40df00d7df8f0214b4b4b388ef35c06af0987949242a1403e9f6f19ac94ba343333f34110d332b699a91f06f76fddbac5caca0ac0b7c04dfcfa7e1b283f97d16b3693c1dfe3bc029c05f60d0f0f73e2c4898d31af07992b002e5ebc382ca55c000ed4eb75e6e7e78392fb05701d6d66b791017e039ccc66b38c8f8f0799bbe638ced8dcdcdc4a02404a7995ada6fe05b88a36b51b29e37bf369a954627e7e9e7abd0e70a0e925a299ad8f00eedfbfcfbd7bf7c0cfd4ab310d5a138d6bc0c9d1d1518e1e3d0a80e3388713c964f23cf89ba5a5a525f0d7d4ebb10d531395ebc0b74b4b4b41d6924c26cf278510e300c56231d8fddee419e5379d4e9f320c",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_1",
+                    "time": 2.008146,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "\bmarketIdq~\u0003L\u000bmarketWebIdq~\u0003",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 2.229445,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "\u0001$5a52e001-da29-495f-87b9-cd51c5e9a467",
+                    "name": "/data/data/com.devuni.flashlight/files/.FlurrySenderIndex.info.AnalyticsData_CMH85BV6C9D8XJIMYT71_171",
+                    "time": 3.570109,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967416,
+                    "data": "03000146000a6c6f6164466163746f7278703f40000077080000001000000008740023636f6d2e646576756e692e666c6173686c696768742e7761726e696e676c6967687473737200116a6176612e6c616e672e496e746567657212e2a0a4f781873802000149000576616c7565787200106a6176612e6c616e672e4e756d62657286ac951d0b94e08b020000787000000000740015636f6d2e6e6f736978666976652e6e656d65736973",
+                    "name": "/data/data/com.devuni.flashlight/files/__more_apps_0",
+                    "time": 2.639658,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "\bmarketIdq~\u0001L\u000bmarketWebIdq",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 3.618775,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "I\flocalNameRes",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.946223,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705660248,
+                    "data": "000000a04944415428919d8e310ac2401405e7250b1b36815c20d85809b669bd85b51e2ce8b5ec2490ca6a2d824a02df42b176f39aa9de306adb76676627496bd276058e0ee88661784cd3849921e92f7aef9f4dd374cecc564551e0bdfffbfce5c6cc5e0e2084409665490592007000755d279fcd8c799e3f82aaaa1609628c1f415996bfa494c5187192ee799edf4208db9482711c2f927207ecfbbe3f2f282880c31b0e2998a93748ca000000000049454e44",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.47753,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705566864,
+                    "data": "ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/12_-689152.-689152_0_0_118_76",
+                    "time": 2.640221,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967416,
+                    "data": "~\u0005t\u001fcom.devuni.flashlight.lightbulbq~\u0005t\u001fcom.devuni.flashlight.fastlightq~\u0005t\u001ccom.devuni.flashlight.policeq",
+                    "name": "/data/data/com.devuni.flashlight/files/__more_apps_0",
+                    "time": 3.43791,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "I",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.785443,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705457704,
+                    "data": "aced0005737200136a6176612e7574696c2e41727261794c6973747881d21d99c7619d03000149000473697a6578700000000677040000000c73720025636f6d2e646576756e692e666c6173686c696768742e75692e64622e44617461456e747279d8e8223dc4d1904c02000d49000c617661696c6162696c69747949000a69636f6e5374617475735a000769734c6f63616c5a000869734d61726b656449000c6c6f63616c49636f6e52657349000c6c6f63616c4e616d655265734900066d61726b657449000776657273696f6e4c00046c616e677400124c6a6176612f6c616e672f537472696e673b4c00086d61726b6574496471007e00034c000b6d61726b6574576562496471007e00034c00077265664e616d6571007e00034c0008766965774e616d6571007e00037870000000010000000001007f02000b7f05002900000001000000a97070707400084c45444c696768747400094c4544204c696768747371007e0002000000020000000001007f02001b7f05004100000001000000a970707074000b53637265656e4c6967687474000c53637265656e204c696768747371007e0002000000020000000001017f0200127f05000800000001000000a97070707400104164646974696f6e616c4c69676874737400114164646974696f6e616c204c69676874737371007e0002000000020000000001007f0200",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 4.166226,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "L",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 2.207959,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "01007f0200217f05009800000001000000a970",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 3.554259,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "L\u0007refNameq~\u0003L\bviewName",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 2.477204,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705566864,
+                    "data": "9da9aa5f0000000049454e44",
+                    "name": "/data/data/com.devuni.flashlight/cache/12_-689152.-689152_0_0_118_76",
+                    "time": 2.60005,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "I\flocalIconRes",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.898085,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705553240,
+                    "data": "648b2e400000000049454e44ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_0",
+                    "time": 2.898589,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "011e001d000000000000000000000000000300ab0000014c1422285d0014434d48383542563643394438584a494d595437310005352e322e33000200000013414e4436316564653932623466303730633636000500147fa75705d75437b6df079bc6ee1719da573f87d50000010000014c142227840000014c142227840006000c6465766963652e6d6f64656c001053414d53554e472047542d493931303000000b6275696c642e6272616e640007416e64726f69640000086275696c642e696400064a524f30335200000f76657273696f6e2e72656c656173650005342e312e3100000c6275696c642e646576696365000767656e6572696300000d6275696c642e70726f64756374000466756c6c000000000000000000000000cdab958a0000",
+                    "name": "/data/data/com.devuni.flashlight/files/.flurrydatasenderblock.5a52e001-da29-495f-87b9-cd51c5e9a467",
+                    "time": 3.458624,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "74000b53637265656e4c6967687474000c53637265656e204c696768747371007e0002000000020000000001017f0200127f05000800000001000000a9",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 3.238352,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705553240,
+                    "data": "000006da49444154789ced9d3f6c53471cc7bf67df738c5ec4bba8a5128f4a3895f140062808d1cda9a0539ac6b8c95842978ea00e74a82aa0555b5574ebd6019530b443d260602ca5c952b50ca148852a0614028dfb6fc87b518c6cdf25d7c17612c0f17b6e62fca7bfcff28ded9feddfe9fbee7e77673bc750856432b99331361008047a017403d85b2d9ea83bbf0098595e5e9ed05a5f1a1f1f9f5d2f9055ba33994cee0c0402a719636fd72d4562c368adbf5a5e5efeb092c14f193b3434f40680f300ba00a050282093c92093c9209bcdc2719cba274c3c8d1002a669c2b66dd8b68d5028547e681ec0b1d1d1d1cb6be31f33767070f028636c04281a7af7ee5da4d3e9fb52ca4b002e02b809809c6d0c02c01e00470cc31888c562916834ba62b0d67a786c6cec423978c5d8524fbd54be7dfdfaf5f9d9d9d92f009c7956991335712612899c3e70e0c0dafb06ca3d97014022918818863105a0ab502860626262de75dd43006e3cfb7c891a78d9b2acef7b7b7bbb4a3d775e4ab92f954add0f008061181fa064eae4e424c8d496e186ebba8726272751281400a0abe42582894422120c064700607a7a1a0f1f3efc08c0370d4c96a88d3f73b95c80731edfb66d1b00ec8bc562239c73de0f14274be9747a06c0698f17da2a8438a2b57e853176108055e7c4ffafb85aeb9f19633f398e7311c04295d8d3e974faad68",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_0",
+                    "time": 1.945515,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705646640,
+                    "data": "080808087c086488",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_1",
+                    "time": 1.807939,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "I\u0006marketI\u0007versionL",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.978111,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967416,
+                    "data": "aced000573",
+                    "name": "/data/data/com.devuni.flashlight/files/__more_apps_0",
+                    "time": 2.186749,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "aced00057372",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 2.281081,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705805016,
+                    "data": "\rIHDR\u0010\t\b\u0006",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.138177,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705566864,
+                    "data": "89504e470d0a1a0a0000000d49484452000000760000004c0806000000",
+                    "name": "/data/data/com.devuni.flashlight/cache/12_-689152.-689152_0_0_118_76",
+                    "time": 1.858587,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "000001eb49444154",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_sym_ch_n",
+                    "time": 2.122083,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705964056,
+                    "data": "6a065a6e0000000049454e44ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/frame_drawable",
+                    "time": 2.596826,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "000473697a6578700000000877040000000c7372001b636f6d2e646576756e692e6d6f7265617070732e4d41456e747279a4fb9ac6a1737a5502",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 3.248428,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705964056,
+                    "data": "89504e470d0a1a0a0000000d494844520000000b0000000b0806000000a9ac7726",
+                    "name": "/data/data/com.devuni.flashlight/cache/frame_drawable",
+                    "time": 1.988795,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "4889ed964d6ed44010855f8fa2646b7100e41c0019890398130c27c87082ac58e72444204e801265970923a4acf243600f842d120c2c113ff9b2185bea29b73d6ea7513679bbae7a7eafabbba76a9c0600c05f3be75cacc66888710adc192f01f86f1b0b0a03193095b4761371e00d90f52517c0390bacb77096d0a145a555ac32cd816f9e660a63803990b79132e0d468a632ae2b6f1e3bb06b0581e01d0f3406d8b58402f863482ffa0a76f042c5143ee1d024df058f25de3803ce0c7d5a27f340b5659b588c71c52d812bf3492e606282e75d42b1c615df3edac948d2d8f066ab8406e0ad598fd724d9bb3ce821f43cd2f840d2336f9d09f86a8ea15f8b8b40f5c87e7b1e7307fc92b45193860cf59ee64b3eb73a168ffd00f038b549a5b9e1858e4215df4f6d2ce9810d8c24ed9998fd79a5806d487b75e7fadbe82c8940780ee475f2c424a6098d1b73c04f9634fbe94e02d31d9a282dc9eeac498a332d817f46ef2844cc81ef86380726034cb7ab6f7dfca0ad2bb27808f6a1017ceeb301600bf818f81ecc1fbe467b04c6925e4abad7a2ff5ad207132b243d51b813fe94f4d439b7bf6ae375e59f5a761e834b5b691ff31c98ddc07446473f583989802d498fb438ca56a10a5fb4e88417ceb9575dc4a811581ddb43499b267529e9bd73cede7d2bae016b7cd28d",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_sym_ch_n",
+                    "time": 2.128054,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "\u0005orderL\u0004descq~\u0001L",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 3.553885,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529360,
+                    "data": "89504e470d0a1a0a0000000d4948445200000010000000090806000000",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.543266,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "\u0004lang",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 2.068557,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "000000005393859d0000000000565415600000000874000074001f636f6d2e646576756e692e666c6173686c696768742e666173746c6967687471007e001371007e001374000a46617374204c696768747371007e00080000000300000000549a83dc0000000000549a83dc00000005740000740023636f6d2e646576756e692e666c6173686c696768742e7761726e696e676c696768747371007e001771007e001774000e5761726e696e67204c69676874737371007e00080000000300000000549ad4890000000000549ad4890000000474000074001f636f6d2e646576756e692e666c6173686c696768742e6c6967687462756c6271007e001b71007e001b74000a4c696768742042756c627371007e00080000000300000000527eb45c0000000000540d606900000001740000740020636f6d2e646576756e692e666c6173686c696768742e6c696768747461626c6571007e001f71007e001f74000b4c69676874205461626c657371007e00080000000400000000530af1f70000000000540d60650000000274000074001f636f6d2e646576756e692e666c6173686c696768742e7461736b6c6967687471007e002371007e002374000a5461736b204c696768747371007e0008000000040000000052bbe09f0000000000540d605e00000001740000740021636f6d2e646576756e692e666c6173686c696768",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 4.187712,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705646640,
+                    "data": "15fe319c0000000049454e44ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_1",
+                    "time": 2.834369,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705646640,
+                    "data": "89504e470d0a1a0a0000000d49484452000000760000004c0806000000b84643da0000000473424954",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_1",
+                    "time": 1.727692,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "89504e470d0a1a0a0000000d494844520000001e000000210806000000",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_sym_ch_n",
+                    "time": 1.918117,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529144,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"v_____e__r\" value=\"169\" />\n<int name=\"o_____s__\" value=\"16\" />\n</map>\n",
+                    "name": "/data/data/com.devuni.flashlight/shared_prefs/prefs_v.xml",
+                    "time": 1.435134,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "71007e00037870000000010000000001007f02000b7f05002900000001000000a97070707400084c45444c696768747400094c4544204c696768747371007e0002000000020000000001007f02001b7f05004100000001000000a9707070",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 2.648938,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705553240,
+                    "data": "89504e470d0a1a0a0000000d49484452000000760000004c0806000000",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_0",
+                    "time": 1.64874,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705566864,
+                    "data": "789ceddd414e53011485e1ffb69d34389015002b90c8026403822bb0ba0b136a8cb1246c8208ae407003b801a22b28ac0006924e6aaf83f24a8156c436bec7f1bcc9c70092db9cfc65f8c08fe41377fd426f8ba584cd847560858855c8cb3fb5ffcce41bd00d380a38686e73fabbdda60edbdb626910bc035e97fea1ec243fd692f7d3069e38ec459b8d4cf62258acc887b013ccccb3085e2d7438bcb9e1ad617fbce56564ec977db4fd7333683dfac0a7f11daf0d7bd16603e2a00ac7dafbcae678b9a3617b6f58fe59e7d85fbf0fd3cc3cabffe469738713805a31eca041dba33e5c236271d0a05dec1930ac75d0a05bf67176766bfd5c69ee705203c806cfab70949ddde196975fc5993cabc2517676875b16ff6383e52a1c65e760b07c352cb15689a3ec1c646d6cd8b28fb1731e77546c058eb1f3d3c58aea624575b1a2ba58515daca82e5654172baa8b15d5c58aea624575b1a2ba58515daca82e5654172baa8b15d5c58aea624575b1a2ba58515daca82e5654172baa8b15d5c58aea624575b1a2ba58515daca82e5654172baa8b15d5c58aea624575b1a2ba58515daca82e5654172baa8b15d5c58aea624575b1a2ba58515daca82e5654172baa8b15d5c58a5a0c9b1c977f8c9d8b99c757c3e29729e94877346c045fab71949dd5e196c5b07dbe54e1283bbbc32d2f871dbec13077cb3ecace2abbb7de4659ebd3",
+                    "name": "/data/data/com.devuni.flashlight/cache/12_-689152.-689152_0_0_118_76",
+                    "time": 2.208083,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "sr%com.devuni.flashlight.ui.db.DataEntry",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.656496,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705964056,
+                    "data": "\u0004sBIT\b\b\b\b",
+                    "name": "/data/data/com.devuni.flashlight/cache/frame_drawable",
+                    "time": 2.118355,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529144,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"first_run\" value=\"false\" />\n</map>\n",
+                    "name": "/data/data/com.devuni.flashlight/shared_prefs/ScreenLightprefs.xml",
+                    "time": 2.639281,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705566864,
+                    "data": "0000000473424954080808087c086488",
+                    "name": "/data/data/com.devuni.flashlight/cache/12_-689152.-689152_0_0_118_76",
+                    "time": 1.978433,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967416,
+                    "data": "q~\u0005t\u001fcom.devuni.flashlight.tasklightq~\u0005t!com.devuni.flashlight.togglelightq~\u0005t com.devuni.flashlight.lighttableq",
+                    "name": "/data/data/com.devuni.flashlight/files/__more_apps_0",
+                    "time": 3.248742,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705805016,
+                    "data": "3b2aac320000000473424954080808087c086488000000a04944415428919d8e310ac2401405e7250b1b36815c20d85809b669bd85b51e2ce8b5ec2490ca6a2d824a02df42b176f39aa9de306adb76676627496bd276058e0ee88661784cd3849921e92f7aef9f4dd374cecc564551e0bdfffbfce5c6cc5e0e2084409665490592007000755d279fcd8c799e3f82aaaa1609628c1f415996bfa494c5187192ee799edf4208db9482711c2f927207ecfbbe3f2f282880c31b0e2998a9",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.21953,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705660248,
+                    "data": "ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.654027,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "504b03041400080808005ca61745000000000000000000000000090004004d4554412d494e462ffeca00000300504b0708000000000200000000000000504b03041400080808005ca61745000000000000000000000000140000004d4554412d494e462f4d414e49464553542e4d46f34dcccb4c4b2d2ed10d4b2d2acecccfb35230d433e0e5722e4a4d2c494dd175aa040998eb19c49b992a68f8172526e7a42a38e71715e417259600956bf272f1720100504b0708942c40984300000044000000504b03041400080808005ca617450000000000000000000000000b000000636c61737365732e6465789d990d6c1cc775c7dfecdeb74ee272f921ea4449c7a3441d659a4791a24c8696237ec9a643890a4931b2555b5ede2d8f271df78e777b14e5da8d5c4b8962c74d9d18419118499a3a89911aae933a8181040d8aba080ab845d01668d3a68550b4a8e0d88881aa85610456ff6f768e3c4b6258f484dfbe37336fe7f3cd9b113763af467afafae95ded8bf7bdf4add3e7eafef303fb392a3fb2fb578bdde6139f79f5722b51918856e70e99a47eefed24fa0279f91f03af68447743bea01345205ff313ddcf8601a230c44088a8ab81e8341209d4d2095260084c8147401614c00a78125c0157c1b3e00be04be00fc057c1d7c01f81ef803f06af811f801f816b40475bbbc100b7091e073f00ff043e00cd8d4407c009",
+                    "name": "/data/data/com.devuni.flashlight/cache/ads-184927387.jar",
+                    "time": 6.015667,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529360,
+                    "data": "3b2aac320000000473424954080808087c086488000000a04944415428919d8e310ac2401405e7250b1b36815c20d85809b669bd85b51e2ce8b5ec2490ca6a2d824a02df42b176f39aa9de306adb76676627496bd276058e0ee88661784cd3849921e92f7aef9f4dd374cecc564551e0bdfffbfce5c6cc5e0e2084409665490592007000755d279fcd8c799e3f82aaaa1609628c1f415996bfa494c5187192ee799edf4208db9482711c2f927207ecfbbe3f2f282880c31b0e2998a93748ca000000000049454e44ae426082",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.641025,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705566864,
+                    "data": "0000028549444154",
+                    "name": "/data/data/com.devuni.flashlight/cache/12_-689152.-689152_0_0_118_76",
+                    "time": 2.120354,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967416,
+                    "data": "~\u0005x",
+                    "name": "/data/data/com.devuni.flashlight/files/__more_apps_0",
+                    "time": 3.568582,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "\niconStatusZ\u0007isLocalZ\bisMarked",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.808235,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "t\u0012Ljava/lang/String;",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 2.129587,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705566864,
+                    "data": "b84643da",
+                    "name": "/data/data/com.devuni.flashlight/cache/12_-689152.-689152_0_0_118_76",
+                    "time": 1.948363,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529144,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"vdb_sync\" value=\"true\" />\n<int name=\"v_____e__r\" value=\"169\" />\n<int name=\"o_____s__\" value=\"16\" />\n</map>\n",
+                    "name": "/data/data/com.devuni.flashlight/shared_prefs/prefs_v.xml",
+                    "time": 1.488398,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705967352,
+                    "data": "\u0001&AnalyticsData_CMH85BV6C9D8XJIMYT71_171",
+                    "name": "/data/data/com.devuni.flashlight/files/.FlurrySenderIndex.info.AnalyticsMain",
+                    "time": 3.628784,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705553240,
+                    "data": "b84643da0000000473424954080808087c086488",
+                    "name": "/data/data/com.devuni.flashlight/cache/io_img_ch_n118_0",
+                    "time": 1.757925,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"ls_cache\" value=\"-1\" />\n<int name=\"v_____e__r\" value=\"169\" />\n<int name=\"o_____s__\" value=\"16\" />\n</map>\n",
+                    "name": "/data/data/com.devuni.flashlight/shared_prefs/ctx_1ls_prefs_v.xml",
+                    "time": 1.257749,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "007e0002000000020000000001007f0200117f05009600000001000000a97070707400094d6f727365436f646574000a4d6f72736520436f64657371007e0002000000020000000001007f0200097f05009400000001000000a970707074000a436f6c6f724c69676874740012436f6c6f722026204d6f6f64204c6967687478",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 3.698382,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "pppt\u0010AdditionalLightst\u0011Additional Lightssq~\u0002\u0002",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 3.438565,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705660248,
+                    "data": "89504e470d0a1a0a",
+                    "name": "/data/data/com.devuni.flashlight/cache/2_-16777216.-9408400_-13290187_1_16_9",
+                    "time": 2.107006,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705529080,
+                    "data": "d8e8223dc4d1904c02000d49000c617661696c6162696c697479",
+                    "name": "/data/data/com.devuni.flashlight/files/views_db",
+                    "time": 1.758581,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705964056,
+                    "data": "7c086488000001204944415418957dd1bf4ac3501406f0efbbf54e17ffe0d0429b38091d3aa5b36026c76c77f60dea134805dfa0aec5c1b559ec1358706eb688385e3bb48b560804aee4b8248b947ee3e1773e0e1ca28eb5360170032006a00040445e48decd66b30500b086d3aaaaae96cbe5e766b3098aa2088d31aedd6eaf86c36197e4344dd37b5a6b93aaaa26f3f9fcd07b7f8a7fd15a7f2749b2554a5d2b11196559b6da0501c07b7f9265d94a446e0f005c38e77e76c126ebf53a20d953f5f6d13e5c14c59988fcaafaaebdcdc61807a0a500bc8661f8b10f773a1d47f259919c4451d4d35a7fed825aeb6d14455d000fad3ccfdf078341d0eff7cfcbb2ccbdf7f0de1f1b635c10046f711c6b928f699a3eb169b0d65e02188b484cb2992f008c9b0ffe01295a7678",
+                    "name": "/data/data/com.devuni.flashlight/cache/frame_drawable",
+                    "time": 2.235661,
+                    "processname": "com.devuni.flashlight"
+                },
+                {
+                    "pid": 851,
+                    "tid": 705449000,
+                    "data": "0016636f6d2e646576756e692e6d6f7265617070732e44424096c48e0865d2a90200064a",
+                    "name": "/data/data/com.devuni.flashlight/cache/__more_apps_0",
+                    "time": 2.469559,
+                    "processname": "com.devuni.flashlight"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

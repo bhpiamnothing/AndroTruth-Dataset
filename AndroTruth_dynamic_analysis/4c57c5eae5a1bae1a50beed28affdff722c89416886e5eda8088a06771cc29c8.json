@@ -1,0 +1,804 @@
+{
+    "apk_info": {
+        "id": "Kyqm1kA0n2QOrPa9",
+        "url": "https://developer.koodous.com/apks/4c57c5eae5a1bae1a50beed28affdff722c89416886e5eda8088a06771cc29c8/",
+        "sha256": "4c57c5eae5a1bae1a50beed28affdff722c89416886e5eda8088a06771cc29c8",
+        "md5": "94bb937619e0ebe2f04cde3ab13f9267",
+        "sha1": "6f354963c8d411d8b53f14a3edb946d1fb0ad87d",
+        "app": "Vivo Internet Gratis",
+        "package_name": "com.vivointernetgratis",
+        "company": "Google Inc.",
+        "version": "1.6",
+        "image": "https://developer.koodous.com/media/apk_images/cf/3d/cf3d343b2bfb292dcc49a326fba046efe90ba92daa51d45ecb3bfb09821278a1",
+        "size": 1108590,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 15,
+        "comments_count": 0,
+        "votes_count": 3,
+        "created_at": "2018-12-20T17:08:01+01:00",
+        "updated_at": "2023-03-30T17:18:22.545054+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "94bb937619e0ebe2f04cde3ab13f9267",
+                    "sha1": "6f354963c8d411d8b53f14a3edb946d1fb0ad87d",
+                    "size": 1108590,
+                    "crc32": "6E4CBA56",
+                    "sha256": "4c57c5eae5a1bae1a50beed28affdff722c89416886e5eda8088a06771cc29c8",
+                    "sha512": "59d28464409c417b2c8f2bc67e2ef7b21b0cc5e1e9825e225aab090a6c20b2aa946cb65bb752e6560b88f364b924378d0292809fb26f55bbe7cea7c5132499a4",
+                    "ssdeep": "24576:Ui9pV5D+yI1BAuo5aR6ikrPfEs8giYDDaf:p9N+71muoURt618giYSf"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "https://coffeeme.net/android"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "2cd47637a02e3978cf6b1c34d916062548c358a0d276f4a50fe42cc9b8a14ba0",
+                    "ssdeep": "12288:Dyc73XXaQj0HzE9/uLK7f4zb9uIs9RSO4UhqoWeqCP0Ww0s/BybJ:FLXqQjkgAKLWbns9RBJqafbJ"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.QUICKBOOT_POWEROFF",
+                "android.intent.action.MAIN",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "Vivo Internet Gratis",
+            "services": [
+                "com.vivointernetgratis.GeneralService",
+                "com.vivointernetgratis.Operation",
+                "com.vivointernetgratis.AccService",
+                "com.vivointernetgratis.RegisterReceiverService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.vivointernetgratis.BootReceiver"
+            ],
+            "activities": [
+                "com.vivointernetgratis.CaptureData$AlertActivity",
+                "com.vivointernetgratis.CaptureData$WebViewActivity",
+                "com.vivointernetgratis.MainActivity",
+                "com.vivointernetgratis.ScreenOnAndUnlock",
+                "com.vivointernetgratis.Permissions$RequestActivity"
+            ],
+            "certificate": {
+                "sha1": "1778997206E7E2CC9185B687FA1527BAF1BE85C2",
+                "serial": "FEBC1ECDC6A38626ACCCFF19AEFBF7834E08E101",
+                "issuerDN": "/C=US/ST=California/L=Mountain View/O=Google Inc./OU=Android/CN=Android",
+                "not_after": "Dec 17 07:02:46 2048 GMT",
+                "subjectDN": "/C=US/ST=California/L=Mountain View/O=Google Inc./OU=Android/CN=Android",
+                "not_before": "Dec 17 07:02:46 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.INTERNET",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "com.vivointernetgratis",
+            "version_code": "6",
+            "main_activity": "com.vivointernetgratis.MainActivity",
+            "signature_name": "META-INF/GOOGPLAY.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https://coffeeme.net/android'",
+                        "class": "Lcom/vivointernetgratis/f;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "const-string v1, 'https'",
+                        "class": "Lokhttp3/a;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Lokhttp3/internal/e/d;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/vivointernetgratis/f;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/m;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/p;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v2, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "La/f;",
+                        "method": "c"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v7, v0, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/vivointernetgratis/k;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/h$b;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/h$b;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v1, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/vivointernetgratis/i;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 21,
+            "new_permissions": [],
+            "displayed_version": "1.6",
+            "target_sdk_version": 27
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "1603030050",
+                    "time": 7.263804912567139,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "0200004c0303687502a6715f97a47543b913585fd336f4044c31e8c11743444f574e4752440100c02b0000240000000000170000ff01000100000b000201000023000000100005000302683200050000",
+                    "time": 7.264425039291382,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "16030309cd",
+                    "time": 7.265432834625244,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "0b0009c90009c600039c308203983082033ea0030201020210730a6f2b8bcaf40c111d3b5888e24355300a06082a8648ce3d040302303b310b3009060355040613025553311e301c060355040a1315476f6f676c65205472757374205365727669636573310c300a06035504031303574531301e170d3235303630393039323432335a170d3235303930373130323432315a3017311530130603550403130c636f666665656d652e6e65743059301306072a8648ce3d020106082a8648ce3d03010703420004a7f31002894f8069eadfea91575c48053f31291bf731437d53ec060c1e4ba8ed70e72496c618e14c93eb06b271711df3fd5e5b7a9b976ce487d866cc50ff14f8a382024630820242300e0603551d0f0101ff04040302078030130603551d25040c300a06082b06010505070301300c0603551d130101ff04023000301d0603551d0e041604149a7dfc77851ee3a51141e771e2ee83da855e95c1301f0603551d230418301680149077923567c4ffa8cca9e67bd980797bcc93f938305e06082b0601050507010104523050302706082b06010505073001861b687474703a2f2f6f2e706b692e676f6f672f732f7765312f63776f302506082b060105050730028619687474703a2f2f692e706b692e676f6f672f7765312e63727430170603551d110410300e820c636f666665656d652e6e657430130603551d20040c300a3008060667810c01020130360603551d1f042f302d302ba029a0278625687474703a2f2f632e706b692e676f6f672f7765312f31395757484b6e566f79492e63726c30820105060a2b06010401d6790204020481f60481f300f10077007d591e12e1782a7b1c61677c5efdf8d0875c14a04e959eb9032fd90e8c2e79b80000019754384d150000040300483046022100b5b865083b5e9cd8152fe85b2389e22bbca98cc84c99d58fee99123b1331dd29022100c8f5e59c9079c9eec5b8b0ef2e4d9dc07206b3cc5965e46784a17c0a42aa3c01007600dddcca3495d7e11605e79532fac79ff83d1c50dfdb003a1412760a2cacbbc82a000001975438493d000004030047304502207e624182b628d57b7693788afaeb7767e3c1fbe0cbfc83605e38678d37c5f1e0022100bdeee56e1249f28f9a747061db21c4731264a38c5278ef13cd9ecb626ff98fac300a06082a8648ce3d040302034800304502202f8bd28c052581517481df6851bf3b4dfa5680833cad4ed19db309537785ac8f02210084ed1add823395691a782d8f42045d7a158cd1ea2be2a09c302e151cd99c4f9a0002a33082029f30820225a00302010202107ff31977972c224a76155d13b6d685e3300a06082a8648ce3d0403033047310b300906035504061302555331223020060355040a1319476f6f676c65205472757374205365727669",
+                    "time": 7.265822887420654,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "160303011f",
+                    "time": 7.266274929046631,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "1600011b01000117308201130a0100a082010c3082010806092b06010505073001010481fa3081f730819ea21604149077923567c4ffa8cca9e67bd980797bcc93f938180f32303235303730393135303230375a307330713049300906052b0e03021a05000414b9bed5f1a61e40b24196b0c29e7e1a9d8bfcb52004149077923567c4ffa8cca9e67bd980797bcc93f9380210730a6f2b8bcaf40c111d3b5888e243558000180f32303235303730393135303230375aa011180f32303235303731363134303230365a300a06082a8648ce3d0403020348003045022100b04fcfaeb819c77bcc81ef373326743e930c633f0cb4d54f643b4727a31feb6d022043316fa3437d6fac093c99ed74ea9bdfd33aefe273d9bfda251dc055b58a52e9",
+                    "time": 7.266450881958008,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "1603030073",
+                    "time": 7.374342918395996,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "0c00006f03001d200a91aea93075a31ec40090a68731e7a588df6f4707058a8b8b81f0aae926574c040300473045022100bf718003d7a15df592877cf1b442052c378be2d2ce33ead922ebc9516b3d82620220799061419d1ce8edcb8d05acd540fee2b168383cec6017cb7f30939b24a759e9",
+                    "time": 7.37478494644165,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "1603030004",
+                    "time": 7.375493049621582,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "0e000000",
+                    "time": 7.375810861587524,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "16030300ca",
+                    "time": 7.467896938323975,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "040000c60000fd2000c079717be9befb53c3f3901b40eeeff1ea2f3f8e96d95d9a2d48d87208c503e4dc89f5966cf3e48ccdb860942a1ed8247d3d3b277ad223f5be81fffa05f7bd5ca73f14ad0bc0bbe90cdfd7ddce8b80640f561daeb96218e71428c01243125a79249144a7af82461fe73fe7812ddd17b1826006717770a6fb91903215a96795e40667e91977c30292ad53b7cd03bf5da1c1f7e0fe3a57210e045ca284935076d1eba717913f8ba28e3833696b43a9b45a1ca16c95d86ec6c4966e38af26e0d7841b",
+                    "time": 7.467943906784058,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "1403030001",
+                    "time": 7.4679930210113525,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "01",
+                    "time": 7.4681079387664795,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "1603030028",
+                    "time": 7.46816086769104,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "00000000000000009de8f62a962d1e8589db67e813bdfd9bc2493fa6dc07595e4eb61e66930c25ce",
+                    "time": 7.468272924423218,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "1703030040",
+                    "time": 7.468319892883301,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "000000000000000188792d9952f5656779ba01c63c112d6f4e1fe4b4d2274357ef5e1642c37df787f44d2023a3b49fe3259f65e4f39c80bd6693f2a9611890f4",
+                    "time": 7.4683778285980225,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "1703030021",
+                    "time": 7.556972980499268,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "00000000000000024182b611bf1e9f532a6149cc9d470610f9649f8d927c2755c0",
+                    "time": 7.557020902633667,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "170303023d",
+                    "time": 7.567625045776367,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "000000000000000378b4bca0ecc2c88d34ee339b7560ebeca671dd5b59292e1fbdf3df6dea11d68c491782db57bd3f83f50dd6f355f4f479aad1242d929a70f05823d08874acbf7c0b351b233c97b6edfb8b7137efc619565aed17d4d2ec23bf31e2aca81ea44fc2b71184212e04750089e3d2bc3287122c63242ede787dd09c25341579e6fe0f3c74c2173fe15561813c2eaf1a6c2373f9ab3bfac08d507c3892a880977f4e4e54e96e0c0820bc9071147319cad8c595389b3a8a1b7efb03eacb0481301462c862d39af0f18fe6a5bf5e97d7cd458c7f3e612ffb1bd59a83fd8cdb8520ad7aaecdace6f964d8bbb4f2025cf504481d39c371afa44eea4e72151b6502697b92545876d413c4b81bb9df16d2b85d160b599c9de9d8b4db074c167b22379e0bb330bcc72f4bcec691f49518fa591141ef70f3f7035ea423a0915fb84ca25a914349d42f9a87b83141226102ce64378011a47ed5cdf77f16a77200b1ace1ab5d2119c65dc28b938977a5c1e4d59e0c6fefd450078781ab3ac33d9aa6d10796301f15c140cb5c59d1bcd1e8727ae938095df87ef1898bf4ca23c39222c8bbcbe412b9d1c0b3d66cf71ef1be4edb29ce49ad86cc05ac7cec27c1b20e9228cf9e52e557f72679b58133d65fc2343fad513c852a2907e7af5e9ff722edf1915023ba11d8dd46cc17a1122a9b0c2650f86cbfa2f1b494c92a9b13bbf26ff595301403c24d21e1ebf638b6605d3780586a896f4fd4e8d76ee1b58015af60b862a484ad4ed9c60b5ccb32571993a94557530a34fb1b41beafe31ecb",
+                    "time": 7.567684888839722,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "170303002c",
+                    "time": 7.568939924240112,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "0000000000000004fbc51f294c21593d568ce074b877591a1b3c3fef963f3f7a2b637e139e8934308709fa00",
+                    "time": 7.5693910121917725,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "1703030021",
+                    "time": 7.570013999938965,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5465,
+                    "data": "0000000000000005d0a71f6aa9cd736501d0fb390b3677fe7ad5cec96cf98db8d4",
+                    "time": 7.5701048374176025,
+                    "srchost": "23.227.38.69",
+                    "srcport": 443,
+                    "processname": "com.vivointernetgratis"
+                }
+            ],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1812210083007812,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.1857259273529053,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.1976799964904785,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2038559913635254,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.2040770053863525,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.2042548656463623,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.2043519020080566,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.205082893371582,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.2054438591003418,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.208873987197876,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.2090489864349365,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.2092599868774414,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.2093780040740967,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.2095520496368408,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.2097208499908447,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.2098619937896729,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.2100129127502441,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.2110710144042969,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2113380432128906,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.211918830871582,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 1.2121968269348145,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/base.apk.x86_64.flock",
+                    "time": 1.2127139568328857,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/oat/x86_64/base.vdex",
+                    "time": 1.2135639190673828,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/base.apk",
+                    "time": 1.214582920074463,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2149498462677002,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2157390117645264,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/oat/x86_64/base.art",
+                    "time": 1.2161598205566406,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/base.apk",
+                    "time": 1.2359139919281006,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5279,
+                    "name": "/data/user_de/0/com.vivointernetgratis/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.485806941986084,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5279,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.518064022064209,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5279,
+                    "name": "/dev/fb0",
+                    "time": 1.527642011642456,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "name": "/data/misc/keychain/pubkey_blacklist.txt",
+                    "time": 7.276954889297485,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "name": "/data/misc/keychain/serial_blacklist.txt",
+                    "time": 7.2873618602752686,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "name": "/system/etc/security/cacerts/b0f3e76e.0",
+                    "time": 7.3106889724731445,
+                    "processname": "com.vivointernetgratis"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "636f6d2e7669766f696e7465726e65746772617469730000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1816418170928955,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1816890239715576,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.2112059593200684,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2117488384246826,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2120728492736816,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "504b0304",
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/base.apk",
+                    "time": 1.2147979736328125,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2150888442993164,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2159159183502197,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "data": "6172740a3035360000803d782004010092563d9e00903e7800a03e7800f03e780060517800e0696f90ef230100e08d7022f1ae030000000050813d780800000000000000010000000000000088040000880400000000000088040000000000008804000000000000880400000000000088040000000000009004000000e0000090e40000c80f000058f40000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000805a0000",
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/oat/x86_64/base.art",
+                    "time": 1.21628999710083,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "343130663336333633323538663330623334376431326365343836336534333334333738303661382c633466393636333731366364356537316436393530623566333363653034316339356234333564312c653233623864313035663837373130613638643932343830353065626566633632376265346361362c376232653136626333396263643732623435366539663035356431646536313562373439343564622c653866393132303063363563656531366530333962396638383338343136363136333566383163352c303132396263643562343438616538643234393664316333653139373233393139303838653135322c643333633562343165343563633462336265396164363935326334656363323532383033323938312c653132643839663536643232373666383330653663656166613636633732356330623431613933322c643966356336636535376666616133396363376564313732626435336530643330373833346264312c336563663462626265343630393664353134626235333962623931336437376161346566333162662c363835656563306133396636363861653866643839363466393837343736623435303466643262652c306535303264346464316531363033363861333166303661383130343331626136663732633034312c393364313533323232396363326162643231646666353937656533323066653432343666336430632c663537313739666165613130633534333863623063366531636332373762366530646232666635342c303737616337646538646135353836343361303663353336396535353466616562336466613136362c653538653331356261616565616163366537326563393537333637306361326632353465633334372c333834643063316463343737613762336638363738366430313835313966353839663165396532352c633166396632383934663265383532313530376330383966333632643563643966656666376532312c313166373566333534313236633263383439663533663239636639323936303432333363663836392c65306539306539356166616239373062383937626662353033663732636234633036636662346633",
+                    "name": "/data/misc/keychain/pubkey_blacklist.txt",
+                    "time": 7.2828569412231445,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "",
+                    "name": "/data/misc/keychain/pubkey_blacklist.txt",
+                    "time": 7.283614873886108,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "",
+                    "name": "/data/misc/keychain/serial_blacklist.txt",
+                    "time": 7.288686037063599,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5278,
+                    "data": "2d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d0a4d49494464544343416c3267417749424167494c424141414141414246557461773551774451594a4b6f5a496876634e4151454642514177567a454c4d416b470a4131554542684d43516b55784754415842674e5642416f544545647362324a6862464e705a323467626e5974633245784544414f42674e564241735442314a760a6233516751304578477a415a42674e5642414d54456b647362324a6862464e705a323467556d39766443424451544165467730354f4441354d4445784d6a41770a4d444261467730794f4441784d6a67784d6a41774d4442614d466378437a414a42674e5642415954416b4a464d526b77467759445651514b45784248624739690a5957785461576475494735324c584e684d524177446759445651514c457764536232393049454e424d527377475159445651514445784a4862473969595778540a6157647549464a766233516751304577676745694d4130474353714753496233445145424151554141344942447741776767454b416f4942415144614475615a0a6a63366a34302b4b6676767869344d6c612b7049482f4571734c6d564551533938475052346d646d7a787a647a7874494b2b364e6959366172796d415a6176700a7879305379367363544841486f54304b4d4d30566a552f343364534d5542556337314475784337332f4f6c5338704639344733564e54434f586b4e7a386b48700a3157726a736f6b36566a6b346277593869476c624b6b33467031533462496e4d6d2f6b387975583969665553504a4a346c74626364473654524748526a6364470a736e554f6875675a69745674624e5634467057693663674b4f4f76794a424e506331535445345536473777654e4c574c4259793564347578327838676b61734a0a553236517a6e7333644c6c775235456955574d5765613678726b456d434d675a4b394647716b6a575a437258677a542f4c43724262426c445367654635394e380a3969466f372b72795570392f6b35445041674d424141476a516a42414d41344741315564447745422f77514541774942426a415042674e5648524d42416638450a425441444151482f4d4230474131556444675157424252676532596152513258796f6c514c3330457a54536f2f2f7a39537a414e42676b71686b6947397730420a4151554641414f4341514541316e506e664539323049322f374c7169766a54464b444b31665078736e43777276516d655537397258716f52534c626c434b4f7a0a796a316854644e4743624d2b7736446a593155623872727672546e6851376b346f2b5976696959373736425156766e47437630347a63514c634647556c3567450a33384e666c4e5556795252426e4d52646457515644",
+                    "name": "/system/etc/security/cacerts/b0f3e76e.0",
+                    "time": 7.312603950500488,
+                    "processname": "com.vivointernetgratis"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.1858139038085938,
+                    "processname": "com.vivointernetgratis"
+                },
+                {
+                    "pid": 5248,
+                    "tid": 5248,
+                    "name": "/data/app/com.vivointernetgratis-hqUV1hdRziGCnwAbJqh83A==/base.apk.x86_64.flock",
+                    "time": 1.2128808498382568,
+                    "processname": "com.vivointernetgratis"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

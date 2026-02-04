@@ -1,0 +1,887 @@
+{
+    "apk_info": {
+        "id": "krRVdjxnDQ3GXBEw",
+        "url": "https://developer.koodous.com/apks/9ce2ad40f3998860ca1ab21d97ea7346bf9d26ff867fc69c4d005c477c67a899/",
+        "sha256": "9ce2ad40f3998860ca1ab21d97ea7346bf9d26ff867fc69c4d005c477c67a899",
+        "md5": "8ce057ff57478e98c0e246355ccd27db",
+        "sha1": "1d3cc636883c72d45e8f336344bdea97ec8d91d1",
+        "app": "Play Protect",
+        "package_name": "com.great.calm",
+        "company": "Unknown",
+        "version": "9.9.9",
+        "image": "https://developer.koodous.com/media/apk_images/2023/02/16/ic_launcher_KTkswlJ.png",
+        "size": 2297290,
+        "tags": [
+            "trojan",
+            "boogr",
+            "dropper",
+            "bankbot",
+            "frnc",
+            "banker",
+            "detect-debug-environment",
+            "obfuscated",
+            "reflection",
+            "hqwar"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -4,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2023-02-16T22:37:41.723375+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/26814/Thu Feb 16 08:40:04 2023",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "16.02.2023 19:22:12 (Build: 105698)",
+                    "result": "malicious",
+                    "signature": "Trojan-Dropper.AndroidOS.Agent"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "",
+                    "result": "",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2023-03-08T09:16:17.224371+01:00",
+        "matches_count": 7,
+        "comments_count": 0,
+        "votes_count": 4,
+        "created_at": "2023-02-16T22:37:37.695922+01:00",
+        "updated_at": "2025-06-19T03:16:46.587697+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "8ce057ff57478e98c0e246355ccd27db",
+                "name": "",
+                "path": "",
+                "sha1": "1d3cc636883c72d45e8f336344bdea97ec8d91d1",
+                "size": 2297290,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "689B9F0D",
+                "sha256": "9ce2ad40f3998860ca1ab21d97ea7346bf9d26ff867fc69c4d005c477c67a899",
+                "sha512": "5fd1345c3d605859bc56cf4cf7088712b63d929a3d576e99a88406eaa3387e4a996361c3bcc78275650609ad967636b7042fa42c244b183da96a0e7cfff78a1f",
+                "ssdeep": "49152:grrgUCuMhTKb+/CZFLqtBOU3t95tnUAqkp3IQRRiEKfaFEjI:uTOKb+qXmBOuPUAqkpIQDGsEjI"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://mozilla.org/MPL/2.0/",
+                "https://publicsuffix.org/list/public_suffix_list.dat"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "b96d302169ebfe648587d630a92b4fc2805da01118b724998fe1080a4847f859"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.WAP_PUSH_DELIVER",
+                "android.app.action.ACTION_DEVICE_ADMIN_DISABLE_REQUESTED",
+                "android.provider.action.EXTERNAL_PROVIDER_CHANGE",
+                "android.intent.action.SENDTO",
+                "com.moez.QKSMS.intent.action.ACTION_NOTIFY_DATASET_CHANGED",
+                "android.intent.action.ACTION_POWER_DISCONNECTED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MAIN",
+                "android.intent.action.SEND",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE",
+                "android.intent.action.DREAMING_STOPPED",
+                "android.intent.action.REBOOT",
+                "android.intent.action.SCREEN_OFF",
+                "android.intent.action.VIEW",
+                "android.intent.action.SCREEN_ON",
+                "android.provider.Telephony.SMS_DELIVER",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.provider.action.DEFAULT_SMS_PACKAGE_CHANGED",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.net.wifi.WIFI_STATE_CHANGED",
+                "android.intent.action.BATTERY_OKAY",
+                "android.intent.action.BATTERY_LOW",
+                "android.intent.action.LOCKED_BOOT_COMPLETED",
+                "android.intent.action.BATTERY_CHANGED",
+                "android.app.action.DEVICE_ADMIN_DISABLED",
+                "android.intent.action.ACTION_POWER_CONNECTED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.SEND_MULTIPLE",
+                "android.appwidget.action.APPWIDGET_UPDATE"
+            ],
+            "app_name": "Play Protect",
+            "services": [
+                "org.securitypolicies.setup.services.FitnessAccessibilityService",
+                "org.securitypolicies.setup.services.HeadlessSmsSendService",
+                "org.securitypolicies.setup.services.KingService",
+                "org.securitypolicies.setup.services.NotificationService"
+            ],
+            "wearable": false,
+            "androidtv": true,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "org.securitypolicies.setup.services.AdminReceiver",
+                "org.securitypolicies.setup.services.AlarmReceiver",
+                "org.securitypolicies.setup.services.BootReceiverService",
+                "org.securitypolicies.setup.services.DummyReceiver",
+                "org.securitypolicies.setup.services.MmsReceiver",
+                "org.securitypolicies.setup.services.SmsReceiver"
+            ],
+            "activities": [
+                "org.securitypolicies.setup.activities.ChangeSmsDefaultAppActivity",
+                "org.securitypolicies.setup.activities.DozeModeActivity",
+                "org.securitypolicies.setup.MainActivity",
+                "org.securitypolicies.setup.activities.OverlayInjectActivity",
+                "org.securitypolicies.setup.activities.AccessibilityEnableHintActivity",
+                "org.securitypolicies.setup.activities.CookieGrabberActivity",
+                "org.securitypolicies.setup.activities.PermissionActivity",
+                "org.securitypolicies.setup.activities.SmsComposeActivity",
+                "org.securitypolicies.setup.activities.AdminActivity",
+                "org.securitypolicies.setup.activities.PlayProtectActivity",
+                "org.securitypolicies.setup.XRsNmQsEbKfNgSkClIzNbIw"
+            ],
+            "certificate": {
+                "sha1": "5E8F16062EA3CD2C4A0D547876BAA6F38CABF625",
+                "serial": "232EAE62",
+                "issuerDN": "C = US, ST = Unknown, L = Unknown, O = Unknown, OU = Android, CN = Android Debug",
+                "not_after": "Apr 30 22:35:04 2052 GMT",
+                "subjectDN": "C = US, ST = Unknown, L = Unknown, O = Unknown, OU = Android, CN = Android Debug",
+                "not_before": "Dec 31 22:35:04 2013 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_CONTENT_PROVIDERS_EXTERNALLY",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION",
+                "android.permission.BIND_CARRIER_MESSAGING_CLIENT_SERVICE",
+                "android.permission.BLUETOOTH",
+                "android.permission.CALL_PHONE",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_PACKAGE_SIZE",
+                "android.permission.GET_TASKS",
+                "android.permission.INTERNET",
+                "android.permission.KILL_BACKGROUND_PROCESSES",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.QUICKBOOT_POWERON",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_LAUNCH_BROADCASTS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.USE_FINGERPRINT",
+                "android.permission.USE_FULL_SCREEN_INTENT",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS",
+                "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+                "com.google.android.gms.permission.ACTIVITY_RECOGNITION",
+                "com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA",
+                "com.meizu.flyme.permission.PUSH",
+                "com.moutai.mall.permission.PROCESS_PUSH_MSG",
+                "com.moutai.mall.permission.PUSH_PROVIDER"
+            ],
+            "package_name": "com.great.calm",
+            "version_code": "999",
+            "main_activity": "org.securitypolicies.setup.MainActivity",
+            "signature_name": "META-INF/ANDROIDD.RSA",
+            "functionalities": {
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Lcom/great/calm/TsmRpcModels$AddCardForQrRequest;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/great/calm/ADcRsIkDxTj;",
+                        "method": "clearDeviceId"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Lcom/great/calm/TsmRpcModels$AddCardForQrRequest;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/great/calm/CGtZrFoKqJbOpOcFlUiShRkLdAiQrBmLfBfIlIaYrUuXmHtNkKr;",
+                        "method": "clearDeviceId"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Lcom/great/calm/TsmRpcModels$AddCardForQrRequest;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/great/calm/HLxKlHhYsKgIbCyFcHfLqNiXeSaIgRsHzZsNcNrBpSaZiFkLfEu;",
+                        "method": "clearDeviceId"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, v1, Lcom/liveperson/lp_structured_content/data/model/elements/SimpleElement;->accept(Lcom/liveperson/lp_structured_content/data/visitor/ElementVisitor;)V",
+                        "class": "Lcom/liveperson/lp_structured_content/StructuredContentHandler;",
+                        "method": "load"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v6, Lcom/liveperson/lp_structured_content/data/model/elements/BaseElement;->accept(Lcom/liveperson/lp_structured_content/data/visitor/ElementVisitor;)V",
+                        "class": "Lcom/liveperson/lp_structured_content/ui/quickreplies/QuickRepliesControl;",
+                        "method": "setQuickRepliesElement"
+                    },
+                    {
+                        "code": "invoke-virtual v7, v0, Lcom/liveperson/lp_structured_content/data/model/elements/BaseElement;->accept(Lcom/liveperson/lp_structured_content/data/visitor/ElementVisitor;)V",
+                        "class": "Lcom/liveperson/lp_structured_content/ui/viewpager/CustomViewPagerAdapter;",
+                        "method": "instantiateItem"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v7, v8, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/github/javiersantos/piracychecker/utils/LibraryUtilsKt;",
+                        "method": "e"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 26,
+            "new_permissions": [
+                "com.moutai.mall.permission.PUSH_PROVIDER",
+                "com.moutai.mall.permission.PUSH_WRITE_PROVIDER",
+                "com.moutai.mall.permission.PROCESS_PUSH_MSG"
+            ],
+            "displayed_version": "9.9.9",
+            "target_sdk_version": 31
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3549530506134033,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/base.apk.x86_64.flock",
+                    "time": 1.3864150047302246,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/oat/x86_64/base.vdex",
+                    "time": 1.387519121170044,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/base.apk",
+                    "time": 1.387624979019165,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3906121253967285,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.402332067489624,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/oat/x86_64/base.art",
+                    "time": 1.4105420112609863,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/base.apk",
+                    "time": 1.4819960594177246,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "hDpdaxQ.json",
+                    "time": 1.5819969177246094,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 1.5977060794830322,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 1.9864020347595215,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 1.9864411354064941,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 2.484079122543335,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/files/hDpdaxQ.json",
+                    "time": 2.5040459632873535,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json.x86_64.flock",
+                    "time": 2.5078790187835693,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.odex",
+                    "time": 2.507978916168213,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.vdex",
+                    "time": 2.5080039501190186,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 2.508120059967041,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.vdex",
+                    "time": 2.5111141204833984,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.odex",
+                    "time": 2.511212110519409,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.vdex",
+                    "time": 5.31312894821167,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.313854932785034,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.314119100570679,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.art",
+                    "time": 5.314387083053589,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/hDpdaxQ.json.cur.prof",
+                    "time": 5.369374990463257,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5267,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 6.6116180419921875,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5267,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 7.120405912399292,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5274,
+                    "name": "/data/user_de/0/com.great.calm/code_cache/com.android.skia.shaders_cache",
+                    "time": 8.10198712348938,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.843302011489868,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 8.927881002426147,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 8.953242063522339,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 8.975826025009155,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 8.992489099502563,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 8.99682903289795,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 9.02966594696045,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 9.033884048461914,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 9.034101009368896,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 10.616904973983765,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 11.377922058105469,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 12.21480107307434,
+                    "processname": "com.great.calm"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "636f6d2e67726561742e63616c6d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.355220079421997,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3552720546722412,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "504b0304",
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/base.apk",
+                    "time": 1.3905489444732666,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.402277946472168,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.4104371070861816,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "6172740a3035360000803d7870030100438ac5c900903e7800a03e7800e03e7800105c7800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000051350000",
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/oat/x86_64/base.art",
+                    "time": 1.4106240272521973,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "a289c19cd1cd2fe27b0a8c40868b374ba8c1ad0a245fbad5b3fd7d600b6d8fb01957b647812ce2f03fdb9c2b9d78ad3f22e3292da6a76c21648588b98921dc05a74969c185cfda2acfe16656df1ae1e28b370f45a316b6b6068defe6d2a9912c93e6b87c1b931f5ca3a41df3e1e1be922d253671fc2c56b6209e620bcd1029dd74bff09604b316b24a7397e2ac2efb7914f3a993bf1ab80ad0e89efb7153b5e327d7fba943baea3b930542e397c659580c62792d80935285a46aac2bf647521f52f415157105584726a99dd19d2256e37d2ae292bb25d62c4a4d1da2ac4ea8f61450c5b3d88fc812588b56e5f39d8d8bbac5fe16559e5fe8c3ec247bfc22c62ad5c698600939f67ced92415557aaa94b97fa24f7c947e4cb8e3d42b4a310f02abab9b6a0357bfebf20127dec85181abc801f347e8f0878cd86a116a3bdf5fef1ef09714c663672d1ce9ef94d908e749c73a08fcec54fe025371809a33472be2131a17abfa5a680c0332ba45b74081eba942a2df5b15481f07eaf56f8ac1497ad78b67784ad969fd8859bbdd882ab052599cd2cf7777f51e5d4693fc6f335968b305f38c7b5006a51278aeed84f8d4efc091f46998d43f3125ce892b07a1627be5e53f87ddc09e33d7975f125620bcd1ee1f117016dc2eb8d8dc4ef897b1dae19d1cf2cf139f44757f534b893817b09a6b89694144519032a1c1442c70a7f60b5eb196d4810a65f0c772bfee6ce3a2d512d70156e52210976ab7a596eb1e3c6d979ee92d86071691ef227190ae0bea4b4aae12a158381ad03584247db65180e15be1826bf22e34bd14af552cdd888515d670949f3c45640cb575f1d7153d5f373714c3964042fdbe95ba5a31b91c425c9d791bff78fa119bd57fefe9f066065b00b3912454da539a9b35aefde0a4b179c11501bd58ed9459de4bee05566ee1bcdfde0cf332b8724134540720fbaa8e6284e297df5622fd3413d2df5a2322dc3d9016eb9f34ce607a7b89c1b177c8aa2e99ab4ea3502e8d2a635208d0596f960f8866d149bf7d5874dc1548f0417df485fe81c3e9ee2f4e2d083929512c0bcb367261a6fb28c711eabee69b435339cd4d35c1fa73a5d156b647288c560ef5b3f27527beb12c2c1e5973a6fc2813eb75a8673dbdfd795f2d33b2949f2109559ad13a1d1d3f27afade1e8aac45cd2ceaea0fb280cd4cae5584bf7affb2dd5e838b7850fd9dba23a3d4ed596c6b33b1d129ad7242e9db7e0b6b9236d568c5f245e00af21ddd0a38c08b985494ad3a7a839b4d788e6e4ea7f7d36b5d547d65aa45549446eec237c53ffbfeec140983811b06ec30fb5eff5fee3904f8d1d983d6b979cab470b18b2f8bbd87fd2069af80b73dd23d8718164087eb7876275719e0be5e8827c5e3e0cad11c141693332cb9d3c508430d2254fe14da953c6f37e7aa285a89",
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 1.9864799976348877,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "504b0304",
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 2.508151054382324,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 5.313988924026489,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 5.3142619132995605,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5274,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.10263705253601,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5274,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.1636221408844,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5274,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.255305051803589,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5274,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.255599975585938,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5267,
+                    "data": "0100000000000000",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 8.84275197982788,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 8.996869087219238,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 9.033805131912231,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 9.033919095993042,
+                    "processname": "com.great.calm"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 11.545457124710083,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 12.214844942092896,
+                    "processname": "com.great.calm"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/app/com.great.calm-WT1EBdx1lqe1Mjt1ioPKdA==/base.apk.x86_64.flock",
+                    "time": 1.3872160911560059,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.vdex",
+                    "time": 2.508275032043457,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/oat/x86_64/hDpdaxQ.odex",
+                    "time": 2.511173963546753,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json.x86_64.flock",
+                    "time": 5.314522981643677,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 6.162042140960693,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml.bak",
+                    "time": 6.1624250411987305,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5267,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml.bak",
+                    "time": 7.119549989700317,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5267,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml.bak",
+                    "time": 7.121845960617065,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml.bak",
+                    "time": 8.85486912727356,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 8.982861042022705,
+                    "processname": "com.great.calm"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "a289c19cd1cd2fe27b0a8c40868b374ba8c1ad0a245fbad5b3fd7d600b6d8fb01957b647812ce2f03fdb9c2b9d78ad3f22e3292da6a76c21648588b98921dc05a74969c185cfda2acfe16656df1ae1e28b370f45a316b6b6068defe6d2a9912c93e6b87c1b931f5ca3a41df3e1e1be922d253671fc2c56b6209e620bcd1029dd74bff09604b316b24a7397e2ac2efb7914f3a993bf1ab80ad0e89efb7153b5e327d7fba943baea3b930542e397c659580c62792d80935285a46aac2bf647521f52f415157105584726a99dd19d2256e37d2ae292bb25d62c4a4d1da2ac4ea8f61450c5b3d88fc812588b56e5f39d8d8bbac5fe16559e5fe8c3ec247bfc22c62ad5c698600939f67ced92415557aaa94b97fa24f7c947e4cb8e3d42b4a310f02abab9b6a0357bfebf20127dec85181abc801f347e8f0878cd86a116a3bdf5fef1ef09714c663672d1ce9ef94d908e749c73a08fcec54fe025371809a33472be2131a17abfa5a680c0332ba45b74081eba942a2df5b15481f07eaf56f8ac1497ad78b67784ad969fd8859bbdd882ab052599cd2cf7777f51e5d4693fc6f335968b305f38c7b5006a51278aeed84f8d4efc091f46998d43f3125ce892b07a1627be5e53f87ddc09e33d7975f125620bcd1ee1f117016dc2eb8d8dc4ef897b1dae19d1cf2cf139f44757f534b893817b09a6b89694144519032a1c1442c70a7f60b5eb196d4810a65f0c772bfee6ce3a2d512d70156e52210976ab7a596eb1e3c6d979ee92d86071691ef227190ae0bea4b4aae12a158381ad03584247db65180e15be1826bf22e34bd14af552cdd888515d670949f3c45640cb575f1d7153d5f373714c3964042fdbe95ba5a31b91c425c9d791bff78fa119bd57fefe9f066065b00b3912454da539a9b35aefde0a4b179c11501bd58ed9459de4bee05566ee1bcdfde0cf332b8724134540720fbaa8e6284e297df5622fd3413d2df5a2322dc3d9016eb9f34ce607a7b89c1b177c8aa2e99ab4ea3502e8d2a635208d0596f960f8866d149bf7d5874dc1548f0417df485fe81c3e9ee2f4e2d083929512c0bcb367261a6fb28c711eabee69b435339cd4d35c1fa73a5d156b647288c560ef5b3f27527beb12c2c1e5973a6fc2813eb75a8673dbdfd795f2d33b2949f2109559ad13a1d1d3f27afade1e8aac45cd2ceaea0fb280cd4cae5584bf7affb2dd5e838b7850fd9dba23a3d4ed596c6b33b1d129ad7242e9db7e0b6b9236d568c5f245e00af21ddd0a38c08b985494ad3a7a839b4d788e6e4ea7f7d36b5d547d65aa45549446eec237c53ffbfeec140983811b06ec30fb5eff5fee3904f8d1d983d6b979cab470b18b2f8bbd87fd2069af80b73dd23d8718164087eb7876275719e0be5e8827c5e3e0cad11c141693332cb9d3c508430d2254fe14da953c6f37e7aa285a89",
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 1.9861869812011719,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "504b0304140008080800d7a54e560000000000000000000000000b000000636c61737365732e6465782cd705b49545f738e021ee3917eebd84858241a888182821288a80a0a0949222a9208d344837d2dd0dd2200dd229214848774b49a7d4fff97eebffadf5ac4fce3de79d993d7bef99f7871a2d9367cb9e3b0c78bce4c1e5d74fe68dafd2f348c3a9290aad285ae2f2955de3da74c89725fc1442685936c753e1ffff6ff22759c2b942e1ff3eaf982c84d8e71385d75287d0f4e344a1778a10b2c5250ef3f385d0bf7de2f0653484f46d9386703053e85033e6ff74622687b8c7733fc6848fa9486bc6b296f85a31e15b26728df4b563c2d7b4e257b6719397eac4846acc640bff1053372664a6086df88d5d5c21ae5e4cc84a59daf22bdbb9cd6bf563422586f0078fc8dcc0b8f46233310d6342013ab381989f62426306b184733cdd28267cca8f4c671f491ac7841c3466023b49d1242614a2072b794c9ea631a12e799ac5848eace62eef358f09f598c319de6e21668c6527a95b9a2723d8414c2bcffe3926fccc0cce51a5754c5848da363161002fb48d090ba8dcce67edc58e8d1d7ca7239dfc77679f75f1b76e31a16a77ebeb11135ee9191386f78a0919fb9873df9850bb7f4c787d604c28c304fe25cfa098d0955dbc34d87758c4f34362c257f4e16f920e8d093969ce0aae937d9875b2907ec363c29411c61c19136af037f9478917df8c8e0983d9ce1b63fc8645241f6b2e4ce5e97131a118c7c9355e7eb186980931a12803d847aa89e6c5000e906392efb2819493e5039ffe1a1396f1e19498d09e75c44c8d09c519c465ee4c935bd3c58a69fc43ce1972874364991913be67347bc9344b3db08affc837dbb3b84d873931e12f06fc16138ef1dedc98d08ebf493dcf1ad944c1f931e101b316c8dd853161313917c584448b6342496aff6eaea45a1613cad375b93aa1f58a9870963a2b6342749539b287dcab7d876c6bec330ff86aad3ce602d9d7a94196507ebdfce1f50d7295988dbe4b2fb691ec0fe3b09c077cb4c9ba38c5a79be52e8f29bec5fa69bd55cc68f4a77ddb1613f6f3d176cfe3019ffe652fa9b443be10b7531db384c4bbfc86919ca5c3ee9890e66ffb49c93d31611467f962afbce11e95f7c913e2f6c78481e43960de643fe839fc70489e1c8e090779ff887c3d1a13aab3824cc7f40f6e31f5b85e7522262c25ee644c984c9d53f68772a7d5050fa874c6be9c3516b7487b3e26aca7ea05cfbee87be4b914136ef0d565b54cfa7ff5000a5f91eb6cba1a133eb9665d74bc6e9e37e4f64d75c2ebb762c22432dc8e09bd3941933bf69ff4776342333653f05e4c98c7e7f7d5d57f31a1e503b5c7ce876aee514c68f8589f7a22774224d44e1409891347c224224922a13387c99e341286f24a4c24dce6cf4824548e",
+                    "name": "/data/user/0/com.great.calm/app_DynamicOptDex/hDpdaxQ.json",
+                    "time": 2.4991040229797363,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5267,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2224727374725b414954545d223e3c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 6.688117027282715,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5267,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2224727374725b414954545d223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2224727374725b4149454e5d223e303c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 7.120666980743408,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.054785013198853,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.162890911102295,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.254889011383057,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "0100000000000000",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.255517959594727,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "0100000000000000",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 8.842031955718994,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5042,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2224727374725b414954545d223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2224727374725b4149454e5d223e303c2f737472696e673e0a202020203c737472696e67206e616d653d22556e696e7374616c6c50726f74656374456e61626c6564223e313c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.great.calm/shared_prefs/ThomYorkeARatsNest.xml",
+                    "time": 8.849735021591187,
+                    "processname": "com.great.calm"
+                },
+                {
+                    "pid": 5042,
+                    "tid": 5306,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 11.377516031265259,
+                    "processname": "com.great.calm"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

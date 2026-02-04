@@ -1,0 +1,271 @@
+{
+    "apk_info": {
+        "id": "A5XNdZQ9Q96Oyw0j",
+        "url": "https://developer.koodous.com/apks/537843714adaa141c2a084041a7f373ecab20d75f63dc7dc522bb59b98c1f630/",
+        "sha256": "537843714adaa141c2a084041a7f373ecab20d75f63dc7dc522bb59b98c1f630",
+        "md5": "cc1e4d3af5698feb36878df0233ab14a",
+        "sha1": "8da871d717417704aadc4cfe32e2503cb526503b",
+        "app": "Facebook",
+        "package_name": "kyu.wer.dfsg",
+        "company": "vqiplsjpe",
+        "version": "1.0.0",
+        "image": "https://developer.koodous.com/media/apk_images/8c/c4/8cc48fc124e77b06e385d2b389b4920ca9a850858d05141692216282b15eb539",
+        "size": 399153,
+        "tags": [
+            "telephony",
+            "trojan",
+            "runtime-modules",
+            "wroba",
+            "andr",
+            "reflection",
+            "banker",
+            "dropper"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 19,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2018-05-11T13:48:15+02:00",
+        "updated_at": "2023-03-30T16:06:20.747246+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "cc1e4d3af5698feb36878df0233ab14a",
+                    "sha1": "8da871d717417704aadc4cfe32e2503cb526503b",
+                    "size": 399153,
+                    "crc32": "CFDC96F7",
+                    "sha256": "537843714adaa141c2a084041a7f373ecab20d75f63dc7dc522bb59b98c1f630",
+                    "sha512": "5aaa2825ffe240410259b2d131a75b2a3f76231de13e6c5111fe11942e56889e3b63780f474acb591f5e116261b0bbed08bd5ab00e17b2ac25b7b87fba4e554e",
+                    "ssdeep": "6144:fnn5sWbdPl6u4pskSQElV07e1okt8+EjTri6Kg4vG7ppE0zjrL1kPl1rJqbw1afz:/5sWRPoU1GkgT2L27vzL1kbr+Hsg+9A"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "pop-mail.outlook.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "outlook.office365.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "outlook.ha.office365.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "outlook.ms-acdc.office.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "40.101.61.114",
+                                "type": "A"
+                            },
+                            {
+                                "data": "40.101.8.162",
+                                "type": "A"
+                            },
+                            {
+                                "data": "40.101.124.210",
+                                "type": "A"
+                            },
+                            {
+                                "data": "40.101.60.226",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "pop-mail.outlook.com"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "40.101.61.114"
+                ],
+                "domains": [
+                    {
+                        "ip": "40.101.61.114",
+                        "domain": "pop-mail.outlook.com"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "53296107feaca4bdd0cb320502cbc905f3dff9841a004a2576f7190dbe21e328",
+                    "ssdeep": "96:Eme8ICnjWj8yyj4VpxZkR/WsE0d3bX4xvSbP0K0CAUy9o8Z7MZFsDbXhEOKMc4me:M8C7lZkTEujiy8KPy6rWEO9VrtkM"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PACKAGE_REPLACED",
+                "android.intent.action.VIEW",
+                "android.intent.action.MAIN",
+                "android.intent.action.PACKAGE_ADDED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.NET.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.net.wifi.STATE_CHANGE",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.Net.wifi.WIFI_STATE_CHANGED",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "Facebook",
+            "services": [
+                "com.hss.jjgMainService",
+                "com.hss.gdfCancelNoticeService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.bde.gtAdminReceiver",
+                "com.dasjdf.udtMyReceiver"
+            ],
+            "activities": [
+                "com.bde.kfghsActivity",
+                "com.gsdsefd.mdMyWebActivity"
+            ],
+            "certificate": {
+                "sha1": "E3A039E3BE7EA92A7AA3B9F6E72565E25FC13880",
+                "serial": "24C722A2",
+                "issuerDN": "/C=US/ST=ouxggyzfv/L=gnrcxuemgb/O=vqiplsjpe/OU=sczmiaudzk/CN=mxzacoyyu",
+                "not_after": "Nov 14 05:41:03 2127 GMT",
+                "subjectDN": "/C=US/ST=ouxggyzfv/L=gnrcxuemgb/O=vqiplsjpe/OU=sczmiaudzk/CN=mxzacoyyu",
+                "not_before": "May 9 05:41:03 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.INTERNET",
+                "android.permission.EXPAND_STATUS_BAR",
+                "android.permission.SEND_SMS",
+                "android.permission.WRITE_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_TASKS",
+                "android.permission.PACKAGE_USAGE_STATS",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.MODIFY_PHONE_STATE",
+                "android.permission.CALL_PHONE",
+                "android.permission.WRITE_SETTINGS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.MODIFY_AUDIO_SETTINGS",
+                "android.permission.READ_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.BROADCAST_SMS",
+                "android.permission.SYSTEM_OVERLAY_WINDOW",
+                "android.permission.STOP_APP_SWITCHES",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.RECEIVE_MMS",
+                "android.permission.WAKE_LOCK",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_CONTACTS",
+                "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+                "android.permission.RESTART_PACKAGES",
+                "android.permission.GET_ACCOUNTS"
+            ],
+            "package_name": "kyu.wer.dfsg",
+            "version_code": "1",
+            "main_activity": "com.bde.kfghsActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {},
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "1.0.0",
+            "target_sdk_version": 21
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "path": "/data/app/kyu.wer.dfsg-1.apk",
+                    "time": 0.000206,
+                    "processname": "kyu.wer.dfsg"
+                },
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "path": "/data/data/kyu.wer.dfsg/files/test.dex",
+                    "time": 53.048239,
+                    "processname": "kyu.wer.dfsg"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000a000a008a020000911406000000504b01021703140000000800000000006a08cd5def090000382b0000130000000000000000002000b68100000000416e64726f69644d616e69666573742e786d6c504b0102180014000000080000000000cfe0db974f040000690500001100000000000000000000000000200a00004d4554412d494e462f434552542e525341504b01021800140000000800000000001219afc4990100007e02000010000000000000000000000000009e0e00004d4554412d494e462f434552542e5346504b01021800140000000800000000001cb6f02481010000530200001400000000000000000000000000651000004d4554412d494e462f4d414e49464553542e4d46504b0102140014000008080000000000ea76615392010000950200001a00000000000000000000000000181200004d4554412d494e462f72786a6176612e70726f70657274696573504b01021800140000000800000000004bdf03a946d4050022de05000f00000000000000000000000000e21300006173736574732f646174612e73716c504b01021800140000000800000000005429448fe9140000282c00000b0000000000000000000000000055e80500636c61737365732e646578504b0102170314000000000000000000eedaf7280d0b00000d0b00001c0000000000000000002000b68167fd",
+                    "name": "/data/app/kyu.wer.dfsg-1.apk",
+                    "time": 0.005084,
+                    "processname": "kyu.wer.dfsg"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "data": "6465780a30333500f5a3e028900a58980cb56ee4f8971790f28a2135d4f05307f4b90a007000000078563412000000000000000030b90a00b416000070000000a0040000405b0000c3050000c06d000058070000e4b200000c170000a4ed00000603000004a6010030b30800c40602008e08080090080800930808009a080800a8080800ae080800b1080800b5080800ba080800221e08003c1e08000b1f0800d11f0800c8200800cc200800d1200800d6200800d9200800dc200800e0200800e6200800ed200800f2200800002108000f210800282108003e21080048210800572108006f210800962108009a2108009e210800a2210800a7210800ab210800c6210800ce210800d9210800e3210800ea210800f92108000622080025220800322208004d220800622208007d220800e6220800022308001b2308002c230800362308004f23080067230800742308007f2308009a230800bc230800d5230800e4230800f32308000e240800262408004224080051240800b1240800bb240800dc240800ef2408000925080011250800a325080003260800132608006b2608007326080080260800922608009c260800a5260800b2260800db260800f52608000b2708001327080066270800c92708007c2808001b290800dc290800e1290800412a0800aa2a0800052b0800492b0800b92b0800bc2b0800782c0800a62c0800",
+                    "name": "/data/data/kyu.wer.dfsg/files/test.dex",
+                    "time": 0.897555,
+                    "processname": "kyu.wer.dfsg"
+                },
+                {
+                    "pid": 845,
+                    "tid": 705531456,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"create\" value=\"1\" />\n</map>\n",
+                    "name": "/data/data/kyu.wer.dfsg/shared_prefs/pref.xml",
+                    "time": 54.252615,
+                    "processname": "kyu.wer.dfsg"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "name": "com.hss.jjgMainService",
+                    "time": 54.086717,
+                    "processname": "kyu.wer.dfsg"
+                }
+            ]
+        }
+    }
+}

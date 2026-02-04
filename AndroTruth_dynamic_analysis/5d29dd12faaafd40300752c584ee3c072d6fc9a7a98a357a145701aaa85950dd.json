@@ -1,0 +1,371 @@
+{
+    "apk_info": {
+        "id": "y2LkOQZemDLdwjZJ",
+        "url": "https://developer.koodous.com/apks/5d29dd12faaafd40300752c584ee3c072d6fc9a7a98a357a145701aaa85950dd/",
+        "sha256": "5d29dd12faaafd40300752c584ee3c072d6fc9a7a98a357a145701aaa85950dd",
+        "md5": "e2863271dd8aa0c06a97bbabb115da94",
+        "sha1": "ece567a3bcb96736c5c8bf1297a57ca1e87e0b5b",
+        "app": "スマホ安心セキュリティ",
+        "package_name": "com.z.cloud.px.app",
+        "company": "Google Inc.",
+        "version": "1.0.1",
+        "image": "https://developer.koodous.com/media/apk_images/2022/08/23/ic_launcher_mqccNMt.png",
+        "size": 587484,
+        "tags": [
+            "PlayStore",
+            "obfuscated",
+            "fakeapp",
+            "trojan",
+            "dnotua",
+            "fljl",
+            "reflection",
+            "telephony",
+            "banker"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2022-08-23T13:31:40.525886+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 0.105.1/26636/Tue Aug 23 07:52:45 2022",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "23.08.2022 07:43:47 (Build: 105162)",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "",
+                    "result": "",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2022-08-23T13:33:25.355212+02:00",
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2022-08-23T13:31:34.643411+02:00",
+        "updated_at": "2025-02-24T13:06:09.645335+01:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "e2863271dd8aa0c06a97bbabb115da94",
+                "name": "",
+                "path": "",
+                "sha1": "ece567a3bcb96736c5c8bf1297a57ca1e87e0b5b",
+                "size": 587484,
+                "type": "Zip archive data",
+                "yara": [],
+                "crc32": "F8D0ABB6",
+                "sha256": "5d29dd12faaafd40300752c584ee3c072d6fc9a7a98a357a145701aaa85950dd",
+                "sha512": "41c26660f66a784de2b70524faeca806fec51709d2a48274cf4ac73513c7cd3a5e497e24a57f4da76c03b0cf9a71e27efee8edde8edcf34396ca02084080dea4",
+                "ssdeep": "12288:RGNnExK4m0QlrVH0DVGnL7BNYFqdP/hpBDwouaMj5MyQzjrk:Rpxjm0U6xGfnYahp1wMMrQz/k"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://developer.android.com/guide/topics/permissions/overview"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "a3fb2d29c3c4382a307672425143953bec60d026ba85da8b53ed4f63e3301863"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "スマホ安心セキュリティ",
+            "services": [
+                "com.example.proxy_app.MainService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [
+                "androidx.window.extensions",
+                "androidx.window.sidecar"
+            ],
+            "providers": [],
+            "receivers": [
+                "com.example.proxy_app.StartReceiver"
+            ],
+            "activities": [
+                "com.example.proxy_app.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "7DAA164B6F2A154BD93A1ECA601C18D53E14BBE8",
+                "serial": "AB37186DA372881D707DA0BA825800A25A45587A",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_after": "Aug 10 06:23:24 2052 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_before": "Aug 10 06:23:24 2022 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.INTERNET",
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+            ],
+            "package_name": "com.z.cloud.px.app",
+            "version_code": "2",
+            "main_activity": "com.example.proxy_app.MainActivity",
+            "signature_name": "META-INF/BNDLTOOL.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v1, 'Attempted to get clipboard data that requires additional permission(s).\\nSee the exception details for which permission(s) are required, and consider adding them to your Android Manifest as described in:\\nhttps://developer.android.com/guide/topics/permissions/overview'",
+                        "class": "Lb0/b;",
+                        "method": "p"
+                    },
+                    {
+                        "code": "const-string v1, 'java-httpserver'",
+                        "class": "Lj/g;",
+                        "method": "<init>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual/range v24, Landroid/view/MotionEvent;->getDeviceId()I",
+                        "class": "Lio/flutter/view/AccessibilityViewEmbedder;",
+                        "method": "onAccessibilityHoverEvent"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Lx/d;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Lx/d;",
+                        "method": "c"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroidx/window/embedding/EmbeddingTranslatingCallback;->accept(Ljava/util/List;)V",
+                        "class": "Landroidx/window/embedding/EmbeddingTranslatingCallback;",
+                        "method": "accept"
+                    },
+                    {
+                        "code": "invoke-interface v1, v2, Le/a;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/window/embedding/ExtensionEmbeddingBackend$SplitListenerWrapper;",
+                        "method": "accept$lambda-1"
+                    },
+                    {
+                        "code": "invoke-interface v1, v2, Le/a;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/window/layout/ExtensionWindowLayoutInfoBackend$MulticastConsumer;",
+                        "method": "accept"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "sget-boolean v0, Lio/flutter/embedding/engine/FlutterJNI;->loadLibraryCalled Z",
+                        "class": "Lio/flutter/embedding/engine/FlutterJNI;",
+                        "method": "loadLibrary"
+                    },
+                    {
+                        "code": "const-string v1, 'FlutterJNI.loadLibrary called more than once'",
+                        "class": "Lio/flutter/embedding/engine/FlutterJNI;",
+                        "method": "loadLibrary"
+                    },
+                    {
+                        "code": "invoke-static v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lio/flutter/embedding/engine/FlutterJNI;",
+                        "method": "loadLibrary"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Li/e;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/example/proxy_app/MainService;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 21,
+            "new_permissions": [],
+            "displayed_version": "1.0.1",
+            "target_sdk_version": 33
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/proc/self/cmdline",
+                    "time": 3.584752082824707,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/base.apk.x86_64.flock",
+                    "time": 3.5853230953216553,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/oat/x86_64/base.vdex",
+                    "time": 3.5853869915008545,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/base.apk",
+                    "time": 3.585416078567505,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.6680350303649902,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.678734064102173,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/oat/x86_64/base.art",
+                    "time": 3.68088698387146,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/base.apk",
+                    "time": 3.795650005340576,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4569,
+                    "name": "/system/lib64/libflutter.so",
+                    "time": 4.639177083969116,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4569,
+                    "name": "/system/vendor/lib64/libflutter.so",
+                    "time": 4.807805061340332,
+                    "processname": "com.z.cloud.px.app"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "data": "636f6d2e7a2e636c6f75642e70782e617070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 3.5852210521698,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 3.585287094116211,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "data": "504b0304",
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/base.apk",
+                    "time": 3.585453987121582,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.67547607421875,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.6788291931152344,
+                    "processname": "com.z.cloud.px.app"
+                },
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "data": "6172740a3035360000803d787003010065cfccd800903e7800a03e7842183f7800c0497800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000b1430000",
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/oat/x86_64/base.art",
+                    "time": 3.6820781230926514,
+                    "processname": "com.z.cloud.px.app"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4463,
+                    "tid": 4463,
+                    "name": "/data/app/com.z.cloud.px.app-HNsZc2nXpA4PvmUZ96Ymcg==/base.apk.x86_64.flock",
+                    "time": 3.585355043411255,
+                    "processname": "com.z.cloud.px.app"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

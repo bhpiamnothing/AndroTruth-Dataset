@@ -1,0 +1,602 @@
+{
+    "apk_info": {
+        "id": "Lv8yda2JyYz1EQ3q",
+        "url": "https://developer.koodous.com/apks/758dc6aff09885abf9a6503e4a6473bca83c878f6131acf41290a3c8a5df7cdb/",
+        "sha256": "758dc6aff09885abf9a6503e4a6473bca83c878f6131acf41290a3c8a5df7cdb",
+        "md5": "5cfc132b66f523b1ce907d9aea1ea199",
+        "sha1": "52269f57cb246de8815ecdfb3a36ccf69e5ed257",
+        "app": "PrivatePic",
+        "package_name": "com.app.privatepic",
+        "company": "pro x",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2016/10/27/3a280cd5c72a5b95e255533fd63528e3a93ded9116c6678f6990ada1fa0f2147",
+        "size": 3465363,
+        "tags": [
+            "googleplay",
+            "sms-thief"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 3,
+        "comments_count": 1,
+        "votes_count": 2,
+        "created_at": "2016-10-26T23:29:22+02:00",
+        "updated_at": "2023-03-30T15:14:18.465990+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "5cfc132b66f523b1ce907d9aea1ea199",
+                    "sha1": "52269f57cb246de8815ecdfb3a36ccf69e5ed257",
+                    "size": 3465363,
+                    "crc32": "DB8D9025",
+                    "sha256": "758dc6aff09885abf9a6503e4a6473bca83c878f6131acf41290a3c8a5df7cdb",
+                    "sha512": "1fc345d6f0f15c7733541f525e07d808eb537b76586fa151a18a12fb9ca30054720ccc3cfb617c92974bd76d7a3883990cd0965e3155f12bd1b9ec38580527e9",
+                    "ssdeep": "49152:J6yHlt+cM3FpmB9myRHhuSaa6pp/b0XyTlcVhMMQo+mzpXyX3OWOEk8nMsFB17q:cyHL+cYpmbzVZAp1myTlc/MMncLO0Mqq"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "settings.crashlytics.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "settings-crashlytics-b-103974621.us-east-1.elb.amazonaws.com",
+                                "type": "CNAME"
+                            },
+                            {
+                                "data": "54.243.71.210",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.243.186.144",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.243.89.65",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.243.45.40",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.243.70.185",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.243.110.25",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.243.73.224",
+                                "type": "A"
+                            },
+                            {
+                                "data": "54.243.54.193",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "settings.crashlytics.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "www.google.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "172.217.21.196",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "www.google.com"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "mediauploader.info"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "46.166.162.195",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "mediauploader.info"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "54.243.71.210",
+                    "46.166.162.195",
+                    "54.243.186.144",
+                    "54.243.89.65",
+                    "54.243.45.40",
+                    "54.243.70.185"
+                ],
+                "domains": [
+                    {
+                        "ip": "54.243.70.185",
+                        "domain": "settings.crashlytics.com"
+                    },
+                    {
+                        "ip": "172.217.21.196",
+                        "domain": "www.google.com"
+                    },
+                    {
+                        "ip": "46.166.162.195",
+                        "domain": "mediauploader.info"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://mediauploader.info/share_image/user/image/",
+                "http://mediauploader.info/share_image/user/upload_image",
+                "https://settings.crashlytics.com/spi/v2/platforms/android/apps/%s/settings",
+                "http://mediauploader.info/share_image/android/{device}/showMessage",
+                "http://mediauploader.info/share_image/android/{device}/download",
+                "http://akashipro.com/private_pic/private_pic.apk",
+                "http://mediauploader.info/share_image/user/search/",
+                "http://mediauploader.info/share_image/auth/register",
+                "www.google.com",
+                "http://mediauploader.info/share_image/user/check_email",
+                "http://mediauploader.info/share_image/user/reset_password",
+                "http://mediauploader.info/share_image/android/{device}/install",
+                "http://mediauploader.info/share_image/android/{device}/escapeMessage",
+                "https://e.crashlytics.com/spi/v2/events",
+                "http://mediauploader.info/share_image/user/",
+                "http://schemas.android.com/apk/res/android",
+                "http://mediauploader.info/share_image/auth/login"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "c5cf1b10d5fb55832d672dc53cdcf211004f3e1e9e2ee24b6d4eb75d998e8611",
+                    "ssdeep": "24576:aifCS9AyWw/Cav33Y78o8j+ET7lWoakY0YIya6eB0rbL:5X9FCW33Y78oKBkoakYbIyay"
+                }
+            },
+            "api_key": {
+                "io::fabric::ApiKey": "653d296cbc065839e9164d44a2037ccd95f92ec6"
+            },
+            "cordova": "",
+            "filters": [
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.MAIN",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "PrivatePic",
+            "services": [
+                "net.gotev.uploadservice.UploadService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "recievers.DeviceRebootReceiver",
+                "recievers.DownloadFileReceiver",
+                "recievers.ConnectionChangeedReceiver",
+                "recievers.ShowMessageReceiver"
+            ],
+            "activities": [
+                "com.app.privatepic.ViewSentActivity",
+                "com.app.privatepic.MainActivity",
+                "com.app.privatepic.SignupActivity",
+                "com.app.privatepic.MessageActivity",
+                "com.app.privatepic.ResetPasswordActivity",
+                "com.app.privatepic.NewPasswordActivity",
+                "com.app.privatepic.RecentSentActivity",
+                "com.app.privatepic.ShareImageActivity",
+                "com.app.privatepic.LoginActivity",
+                "com.app.privatepic.SplashActivity",
+                "com.app.privatepic.ViewImageActivity",
+                "com.app.privatepic.ToolbarActivity"
+            ],
+            "certificate": {
+                "sha1": "AA6808175D95DCDB2E442321DB5C1D4B366CB668",
+                "serial": "1C266748",
+                "issuerDN": "/CN=pro x",
+                "not_after": "Jan 19 06:34:21 3015 GMT",
+                "subjectDN": "/CN=pro x",
+                "not_before": "Sep 17 06:34:21 2016 GMT"
+            },
+            "permissions": [
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.app.privatepic",
+            "version_code": "2",
+            "main_activity": "com.app.privatepic.SplashActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https'",
+                        "class": "Lcom/a/a/a/g;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "const-string v0, \"This app relies on Crashlytics. Please sign up for access at https://fabric.io/sign_up,\\ninstall an Android build tool and ask a team member to invite you to this app's organization.\"",
+                        "class": "Lcom/b/a/c/a;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v1, 'https'",
+                        "class": "Lcom/d/a/r;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/k;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/n;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Ld/a/a/a/a/b/i;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Ld/a/a/a/a/b/i;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Ld/a/a/a/a/e/h;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/a/a/a/g;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-interface v0, v2, v3, Ljava/io/FilenameFilter;->accept(Ljava/io/File; Ljava/lang/String;)Z",
+                        "class": "Lcom/b/a/c/l$a;",
+                        "method": "accept"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/d/a/ad;",
+                        "method": "a"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/b/a/c/l;",
+                        "method": "e"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Ld/a/a/a/a/b/n;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Ld/a/a/a/a/c/a;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v5, v2, v3, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/b/a/c/p;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v0, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/b/a/c/p;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v0, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/b/a/c/p;",
+                        "method": "<init>"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 23
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "54.243.71.210",
+                    "hostname": "settings.crashlytics.com"
+                },
+                {
+                    "ip": "46.166.162.195",
+                    "hostname": "mediauploader.info"
+                },
+                {
+                    "ip": "54.243.186.144",
+                    "hostname": "settings.crashlytics.com"
+                },
+                {
+                    "ip": "54.243.89.65",
+                    "hostname": "settings.crashlytics.com"
+                },
+                {
+                    "ip": "54.243.45.40",
+                    "hostname": "settings.crashlytics.com"
+                },
+                {
+                    "ip": "54.243.70.185",
+                    "hostname": "settings.crashlytics.com"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.app.privatepic-1.apk",
+                    "time": 0.227078,
+                    "processname": "com.app.privatepic"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "00001000000000010000001000000010000001937b2274696d657374616d70223a313432363236363935383433382c2261707056657273696f6e4e616d65223a22312e30222c226f7356657273696f6e223a22342e312e315c2f656e672e6c64656c6f7369657265732e32303134313230392e313731343239222c2261707056657273696f6e436f6465223a2232222c226275696c644964223a2262383230623733322d376630372d343065612d393237652d636435373737626163626364222c2261707042756e646c654964223a22636f6d2e6170702e70726976617465706963222c226465766963654d6f64656c223a22756e6b6e6f776e5c2f53414d53554e472047542d4939313030222c22616e64726f69644964223a2236316564653932623466303730633636222c22657865637574696f6e4964223a2266356165623565652d336237312d343932612d383861312d333432623032333833336361222c22696e7374616c6c6174696f6e4964223a226636393466623439396239343435336362336662663466623766396539353163222c2274797065223a22494e5354414c4c227d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap",
+                    "time": 15.217441,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap",
+                    "time": 15.84403,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705768176,
+                    "data": "b0f2bc8184d53070604b447dff9120b7bbfed6aa",
+                    "name": "/dev/urandom",
+                    "time": 12.344236,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705843392,
+                    "data": "007265732f6472617761626c652d686470692d76342f6162635f746578746669656c645f7365617263685f64656661756c745f6d74726c5f616c7068612e392e706e67504b010217031400000000000000000037743283fa050000fa050000210000000000000000002000b681dee808007265732f6472617761626c652d686470692d76342f6164645f69636f6e2e706e67504b0102170314000000000000000000888cd33b1d0200001d0200001f0000000000000000002000b6811eef08007265732f6472617761626c652d686470692d76342f64656c6574652e706e67504b0102170314000000000000000000269ea1636b0600006b0600001d0000000000000000002000b68181f108007265732f6472617761626c652d686470692d76342f68656c702e706e67504b01021703140000000000000000005e8284a34c5605004c560500210000000000000000002000b68127f808007265732f6472617761626c652d686470692d76342f6c6f67696e5f62672e706e67504b0102170314000000000000000000921e81d10502000005020000240000000000000000002000b681b84e0e007265732f6472617761626c652d686470692d76342f6c6f67696e5f656d61696c2e706e67504b0102170314000000000000000000daa9b9e79405000094050000230000000000000000002000b68105510e007265732f647261",
+                    "name": "/data/app/com.app.privatepic-1.apk",
+                    "time": 7.289203,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "\u0010",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap",
+                    "time": 16.470547,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705843392,
+                    "data": "504b050600000000db01db01aead0000cf3234000000504b0102170314000000080000000000bf72eb5f2a070000b81a0000130000000000000000002000b68100000000416e64726f69644d616e69666573742e786d6c504b01021800140000000800000000003c7853e0050400004004000011000000000000000000000000005b0700004d4554412d494e462f434552542e525341504b01021800140000000800000000003e77fdab27370000a7ba000010000000000000000000000000008f0b00004d4554412d494e462f434552542e5346504b0102180014000000080000000000619254200b3700007cba00001400000000000000000000000000e44200004d4554412d494e462f4d414e49464553542e4d46504b0102180014000000080000000000116f3751fb000000530100002300000000000000000000000000217a00006173736574732f63726173686c79746963732d6275696c642e70726f70657274696573504b010218001400000008000000000081fd339015ea0700cca013000b000000000000000000000000005d7b0000636c61737365732e646578504b01021400140000080800000000004ccb73fa550000006400000035000000000000000000000000009b6508006661627269632f636f6d2e63726173686c79746963732e73646b2e616e64726f69642e616e73776572732e70726f70657274",
+                    "name": "/data/app/com.app.privatepic-1.apk",
+                    "time": 6.059364,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705843392,
+                    "data": "00b681b79d08007265732f6472617761626c652d686470692d76342f6162635f62746e5f726174696e675f737461725f6f6e5f6d74726c5f616c7068612e706e67504b0102170314000000000000000000876970110c0600000c0600003a0000000000000000002000b68139a208007265732f6472617761626c652d686470692d76342f6162635f62746e5f7377697463685f746f5f6f6e5f6d74726c5f30303030312e392e706e67504b010217031400000000000000000093497601d4060000d40600003a0000000000000000002000b681a4a808007265732f6472617761626c652d686470692d76342f6162635f62746e5f7377697463685f746f5f6f6e5f6d74726c5f30303031322e392e706e67504b0102170314000000000000000000f3f23d00e5000000e50000003c0000000000000000002000b681d0af08007265732f6472617761626c652d686470692d76342f6162635f6361625f6261636b67726f756e645f746f705f6d74726c5f616c7068612e392e706e67504b0102170314000000000000000000d366c2f30501000005010000350000000000000000002000b68115b108007265732f6472617761626c652d686470692d76342f6162635f69635f61625f6261636b5f6d74726c5f616d5f616c7068612e706e67504b01021703140000000000000000003cd94959d0000000d0000000300000000000",
+                    "name": "/data/app/com.app.privatepic-1.apk",
+                    "time": 6.661022,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "\u0010",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap",
+                    "time": 13.439414,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705768176,
+                    "data": "MemTotal:         604776 kB\nMemFree:          346824 kB\nBuffers:               0 kB\nCached:           134800 kB\nSwapCached:            0 kB\nActive:           140368 kB\nInactive:          99116 kB\nActive(anon):     109564 kB\nInactive(anon):        0 kB\nActive(file):      30804 kB\nInactive(file):    99116 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        104708 kB\nMapped:            48364 kB\nSlab:               6140 kB\nSReclaimable:       1640 kB\nSUnreclaim:         4500 kB\nPageTables:         5192 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      302388 kB\nCommitted_AS:    2478388 kB\nVmallocTotal:     360448 kB\nVmallocUsed:       27704 kB\nVmallocChunk:     322564 kB\n",
+                    "name": "/proc/meminfo",
+                    "time": 13.717838,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "504b050600000000db01db01aead0000cf3234000000504b0102170314000000080000000000bf72eb5f2a070000b81a0000130000000000000000002000b68100000000416e64726f69644d616e69666573742e786d6c504b01021800140000000800000000003c7853e0050400004004000011000000000000000000000000005b0700004d4554412d494e462f434552542e525341504b01021800140000000800000000003e77fdab27370000a7ba000010000000000000000000000000008f0b00004d4554412d494e462f434552542e5346504b0102180014000000080000000000619254200b3700007cba00001400000000000000000000000000e44200004d4554412d494e462f4d414e49464553542e4d46504b0102180014000000080000000000116f3751fb000000530100002300000000000000000000000000217a00006173736574732f63726173686c79746963732d6275696c642e70726f70657274696573504b010218001400000008000000000081fd339015ea0700cca013000b000000000000000000000000005d7b0000636c61737365732e646578504b01021400140000080800000000004ccb73fa550000006400000035000000000000000000000000009b6508006661627269632f636f6d2e63726173686c79746963732e73646b2e616e64726f69642e616e73776572732e70726f70657274",
+                    "name": "/data/app/com.app.privatepic-1.apk",
+                    "time": 0.302417,
+                    "processname": "com.app.privatepic"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "\b",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics_to_send/sa_6a907348-6",
+                    "time": 14.202333,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705768176,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"crashlytics.installation.id\">f694fb499b94453cb3fbf4fb7f9e951c</string>\n</map>\n",
+                    "name": "/data/data/com.app.privatepic/shared_prefs/com.crashlytics.prefs.xml",
+                    "time": 12.573065,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "000001937b2274696d657374616d70223a313432363236363935383433382c2261707056657273696f6e4e616d65223a22312e30222c226f7356657273696f6e223a22342e312e315c2f656e672e6c64656c6f7369657265732e32303134313230392e313731343239222c2261707056657273696f6e436f6465223a2232222c226275696c644964223a2262383230623733322d376630372d343065612d393237652d636435373737626163626364222c2261707042756e646c654964223a22636f6d2e6170702e70726976617465706963222c226465766963654d6f64656c223a22756e6b6e6f776e5c2f53414d53554e472047542d4939313030222c22616e64726f69644964223a2236316564653932623466303730633636222c22657865637574696f6e4964223a2266356165623565652d336237312d343932612d383861312d333432623032333833336361222c22696e7374616c6c6174696f6e4964223a226636393466623439396239343435336362336662663466623766396539353163222c2274797065223a22494e5354414c4c227d",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap",
+                    "time": 13.638174,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890512,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"analytics_launched\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.app.privatepic/shared_prefs/com.crashlytics.sdk.android:answers:settings.xml",
+                    "time": 6.540921,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "\u0010",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap.tmp",
+                    "time": 16.438962,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "ed90b96e02311086e10d7884c8355e7ced7a4d47522024a081a4a2f1311b59d94b7b9044519e222f1c0391923ead3f690aff9ef9e7984c6693c034c4ec16d3af0f34f80afa41572d5a52c13296652acd05cfe748b7ed1374bd6feabdae002d114d089aa3a6ff518322129ad0d302eae7a4745036bd870efa84112a28232aa132782af4d7eba171172f164433fad26d5c78999c112339c3b220120b021a2b26015b974a298db6c6ba9bcbfd58bb12ae45b6a992a0246de7cf7a80d6db90e2e0ec2dec429332a48cf54bddbcd6a7c561b53b3ceed777eb23de284a2e7be8da758dbff5cf283850cc88d09ed82c0bdff006761cc2c0d78422d5605200cc8da45828a6719e6b8ab96086309e736e7528f275386559eadfba4c89c208a58c1222e5d6f0c2144191850295d2cbc4c37b7b39c8667f38aeb65bf439894422914824128944229148e43f7c0306080d6f00100000",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics_to_send/sa_6a907348-6",
+                    "time": 16.326485,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "\u0010\u0001\u0010\u0010",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap",
+                    "time": 13.748559,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705768176,
+                    "data": "0a2243726173686c797469637320416e64726f69642053444b2f322e332e31312e31343212233535303331423532303037342d303030312d303334462d34303336323932454444364318d2b68ca805",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android.crashlytics-core/55031B520074-0001-034F-4036292",
+                    "time": 13.426319,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705768176,
+                    "data": ":l\n\u0012com.app.privatepic\u0012\u00012\u001a\u00031.0**\n(653d296cbc065839e9164d44a2037ccd95f92ec62 f694fb499b94453cb3fbf4fb7f9e951cP\u0001",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android.crashlytics-core/55031B520074-0001-034F-4036292",
+                    "time": 13.599402,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "000001cc7b2274696d657374616d70223a313432363236363936323934362c2261707056657273696f6e4e616d65223a22312e30222c226f7356657273696f6e223a22342e312e315c2f656e672e6c64656c6f7369657265732e32303134313230392e313731343239222c2264657461696c73223a7b226163746976697479223a22636f6d2e6170702e707269766174657069632e53706c6173684163746976697479227d2c2261707056657273696f6e436f6465223a2232222c226275696c644964223a2262383230623733322d376630372d343065612d393237652d636435373737626163626364222c2261707042756e646c654964223a22636f6d2e6170702e70726976617465706963222c226465766963654d6f64656c223a22756e6b6e6f776e5c2f53414d53554e472047542d4939313030222c22616e64726f69644964223a2236316564653932623466303730633636222c22657865637574696f6e4964223a2266356165623565652d336237312d343932612d383861312d333432623032333833336361222c22696e7374616c6c6174696f6e4964223a226636393466623439396239343435336362336662663466623766396539353163222c2274797065223a225354415254227d00001000000000010000001000000010000001cd7b2274696d657374616d70223a313432363236363936323934382c22",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap",
+                    "time": 16.519085,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705768176,
+                    "data": "4a5d0a10363165646539326234663037306336361806221053414d53554e472047542d493931303028013080c0a6a702388080f8a20250005a14086412103631656465393262346630373063363660026a07756e6b6e6f776e720466756c6c",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android.crashlytics-core/55031B520074-0001-034F-4036292",
+                    "time": 15.251822,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705768176,
+                    "data": "B\u0010\b\u0003\u0012\u00054.1.1\u001a\u0003REL \u0001",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android.crashlytics-core/55031B520074-0001-034F-4036292",
+                    "time": 13.646116,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "1f8b",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics_to_send/sa_6a907348-6",
+                    "time": 14.151178,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890512,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map />\n",
+                    "name": "/data/data/com.app.privatepic/shared_prefs/TwitterAdvertisingInfoPreferences.xml",
+                    "time": 12.465287,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 705890312,
+                    "data": "\u0010",
+                    "name": "/data/data/com.app.privatepic/files/.Fabric/com.crashlytics.sdk.android:answers/session_analytics.tap.tmp",
+                    "time": 13.349171,
+                    "processname": "com.app.privatepic"
+                },
+                {
+                    "pid": 847,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"isAlarm\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.app.privatepic/shared_prefs/app.xml",
+                    "time": 14.123819,
+                    "processname": "com.app.privatepic"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

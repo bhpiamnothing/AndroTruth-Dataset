@@ -1,0 +1,389 @@
+{
+    "apk_info": {
+        "id": "Lj2Vd042mYgd8ykY",
+        "url": "https://developer.koodous.com/apks/5bf57842a1dd3c1bd1bd19d7b6b7ed4480682b975bf2acc1193ed0436ad45452/",
+        "sha256": "5bf57842a1dd3c1bd1bd19d7b6b7ed4480682b975bf2acc1193ed0436ad45452",
+        "md5": "4ba0f6e3c133c9c9a682a691316462d6",
+        "sha1": "8c88fc1a8c7cb3b81f23af625dbd78f96fb1e6af",
+        "app": "Shopee",
+        "package_name": "com.delux.Keyboard",
+        "company": "jini",
+        "version": "1.0",
+        "image": null,
+        "size": 10739,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2021-10-27T23:00:47+02:00",
+        "updated_at": "2023-03-30T21:52:29.763482+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "4ba0f6e3c133c9c9a682a691316462d6",
+                "name": "",
+                "path": "",
+                "sha1": "8c88fc1a8c7cb3b81f23af625dbd78f96fb1e6af",
+                "size": 10739,
+                "type": "Android package (APK), with MANIFEST.MF and resources.arsc",
+                "yara": [],
+                "crc32": "65B7C54E",
+                "sha256": "5bf57842a1dd3c1bd1bd19d7b6b7ed4480682b975bf2acc1193ed0436ad45452",
+                "sha512": "0dc4211ca4febdae62afaf334f9b1409f19fd2ee5a9e9f21f63311fdc429f6e5f3a9047bacb19293f5202d33b4a7da0a691f46f85cbf08c724c0584be5dadc65",
+                "ssdeep": "192:YIqAQ5VRPO+BbtFpCuYeNkrlzKyiJdSUbv66Tz1DIFJF8/iUHf3b8y8RR6r:YRAwDOwpxCrBKhdrT5zlaF4io3uy"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "https://jifenmall.aihuixue.com",
+                "https://10-9mopub.oss-ap-southeast-6.aliyuncs.com/Theme%20Call%20Screen/Rich-debug-22.apk"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "2153a180f018759e87531054712b022a91e8b96bd7a869cf5c098d341ed13117"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Shopee",
+            "services": [
+                "kotlinx.service.MyService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "main.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "88573AFABCF70B338E653FF5CEDE01B4594E5C62",
+                "serial": "5B8A99FB",
+                "sha256": "078187CC204C1A17DE06CAE20C0D62034ADF96A70D8C8C8F3AAFDE7BB01CDF6E",
+                "issuerDN": "C = 0122, ST = Mojito, L = Mojito, O = jini, OU = tool, CN = lavin",
+                "not_after": "Feb 20 06:31:30 2076 GMT",
+                "subjectDN": "C = 0122, ST = Mojito, L = Mojito, O = jini, OU = tool, CN = lavin",
+                "not_before": "May 19 06:31:30 2021 GMT",
+                "hash_algorithm": "sha256",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.INTERNET",
+                "android.permission.ACCESS_NETWORK_STATE"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": false,
+            "is_signed_v3": false,
+            "package_name": "com.delux.Keyboard",
+            "version_code": "1",
+            "main_activity": "main.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "files_by_format": {
+                "bin": 5,
+                "txt": 2
+            },
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v2, \"https://jifenmall.aihuixue.com\"",
+                        "class": "Lmain/MainActivity;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "const-string v1, \"https://10-9mopub.oss-ap-southeast-6.aliyuncs.com/Theme%20Call%20Screen/Rich-debug-22.apk\"",
+                        "class": "Lorg/x$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "const-string v1, \"1- down sdk url:  https://10-9mopub.oss-ap-southeast-6.aliyuncs.com/Theme%20Call%20Screen/Rich-debug-22.apk\"",
+                        "class": "Lorg/x;",
+                        "method": "going"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lorg/x;",
+                        "method": "get"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 21,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "RSA": 1,
+                "dex": 1,
+                "xml": 2,
+                "arsc": 1
+            },
+            "target_sdk_version": 30
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "path": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk",
+                    "time": 1.5298881530761719,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "path": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.265089988708496,
+                    "processname": "com.delux.Keyboard"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4970881938934326,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk.x86_64.flock",
+                    "time": 1.5300631523132324,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk",
+                    "time": 1.5418500900268555,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==@base.apk@classes.vdex",
+                    "time": 1.545025110244751,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk",
+                    "time": 1.5451149940490723,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk",
+                    "time": 1.5645151138305664,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.1462390422821045,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.1591920852661133,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 3.2653610706329346,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 3.2697110176086426,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.2901041507720947,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.324524164199829,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.33129620552063,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 3.9557411670684814,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.9743611812591553,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 3.9853861331939697,
+                    "processname": "com.delux.Keyboard"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "data": "636f6d2e64656c75782e4b6579626f617264000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4984359741210938,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.498500108718872,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "data": "504b0304",
+                    "name": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk",
+                    "time": 1.54478120803833,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "data": "504b0304",
+                    "name": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk",
+                    "time": 1.5452711582183838,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 3.2903501987457275,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 3.3310811519622803,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 3.3349130153656006,
+                    "processname": "com.delux.Keyboard"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 3.978515148162842,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 3.98559308052063,
+                    "processname": "com.delux.Keyboard"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/app/com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==/base.apk.x86_64.flock",
+                    "time": 1.5307180881500244,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.delux.Keyboard-h0bVXfr4Hruw7n_rOBEq7g==@base.apk@classes.vdex",
+                    "time": 1.5448930263519287,
+                    "processname": "com.delux.Keyboard"
+                },
+                {
+                    "pid": 5605,
+                    "tid": 5605,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 3.2688751220703125,
+                    "processname": "com.delux.Keyboard"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

@@ -1,0 +1,380 @@
+{
+    "apk_info": {
+        "id": "k8jKOr8p8v61bmLJ",
+        "url": "https://developer.koodous.com/apks/b946bc9647ccc3e5cfd88ab41887e58dc40850a6907df6bb81d18ef0cb340997/",
+        "sha256": "b946bc9647ccc3e5cfd88ab41887e58dc40850a6907df6bb81d18ef0cb340997",
+        "md5": "d8065f9f19e8fae61f7e84498af2431f",
+        "sha1": "83d51acfc96495c83e89272b4d88bebcb8ba5a79",
+        "app": "Reportes ATM",
+        "package_name": "mx.bancosantander.reportesatm",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/41/06/4106468e7426df301d461620bc168427116eeee5fa9e29becf09dd716110b471",
+        "size": 4904266,
+        "tags": [
+            "spyware",
+            "bank",
+            "runtime-modules",
+            "trojan",
+            "reflection",
+            "clipboard",
+            "smisor",
+            "smsthief",
+            "banker",
+            "fjym"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-04-20T08:42:29.698623+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.2.2/27250/Fri Apr 19 08:25:30 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "19.04.2024 18:15:54 (Build: 106986)",
+                    "result": "malicious",
+                    "signature": "Trojan-Banker.AndroidOS.Agent"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-04-19T21:08:42.102499+02:00",
+        "matches_count": 6,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2021-08-19T09:29:20+02:00",
+        "updated_at": "2024-07-16T04:01:30.826383+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "d8065f9f19e8fae61f7e84498af2431f",
+                    "name": "",
+                    "path": "",
+                    "sha1": "83d51acfc96495c83e89272b4d88bebcb8ba5a79",
+                    "size": 4904266,
+                    "type": "Zip archive data",
+                    "yara": [],
+                    "crc32": "13F929B7",
+                    "sha256": "b946bc9647ccc3e5cfd88ab41887e58dc40850a6907df6bb81d18ef0cb340997",
+                    "sha512": "5d159888aeb7f15903ab2dc1509c1bbee3e3fee578b58a2b2c2bd6b96b80e4300703e0b8f7046150e1773b758e515b0fe162bb97a85b003b519556d8a8b00a02",
+                    "ssdeep": "98304:pEj6/9l4NYHW915cnmaNd6pQ6d7UOu2PVCnUoVMwxKwYVvxHBoz:ee/LJmcj6d3ueCUoVDKwYlxH0"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [
+                "K-.Ki.Ki/K-.",
+                "https://appmx2021.com/recibidos.php?id=&usuario=",
+                "https://appmx2021.com/instalados.php?id=",
+                "https://appmx2021.com/acceso2.jpg",
+                "https://mozilla.org/MPL/2.0/",
+                "https://appmx2021.com/recibidos.php?id=&clave=",
+                "https://appmx2021.com/recibidos.php?id=",
+                "http://schemas.android.com/apk/res-auto",
+                "http://schemas.android.com/apk/res/android",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://appmx2021.com/error.php?id="
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "ac7a085b4258ae8023ae3eeb9548d0a8d4e98af22186f819ff44056457ad73ed"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_RECEIVED"
+            ],
+            "app_name": "Reportes ATM",
+            "services": [
+                "mx.bancosantander.reportesatm.ServicioAccesibilidad"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "com.squareup.picasso.PicassoProvider"
+            ],
+            "receivers": [
+                "mx.bancosantander.reportesatm.VisorMensajes"
+            ],
+            "activities": [
+                "mx.bancosantander.reportesatm.MainActivity",
+                "mx.bancosantander.reportesatm.inicio",
+                "mx.bancosantander.reportesatm.operacion",
+                "mx.bancosantander.reportesatm.bloquea",
+                "mx.bancosantander.reportesatm.acceso"
+            ],
+            "certificate": {
+                "sha1": "1119560B7CEE35603F2204D4323535EE1496C672",
+                "serial": "1",
+                "issuerDN": "CN = Android Debug, O = Android, C = US",
+                "not_after": "Jan 24 06:21:45 2051 GMT",
+                "subjectDN": "CN = Android Debug, O = Android, C = US",
+                "not_before": "Jan 31 06:21:45 2021 GMT"
+            },
+            "permissions": [
+                "android.permission.INTERNET",
+                "android.permission.RECEIVE_SMS"
+            ],
+            "package_name": "mx.bancosantander.reportesatm",
+            "version_code": "1",
+            "main_activity": "mx.bancosantander.reportesatm.inicio",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v5, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v9, \"((?:\\\\b|$|^)(?:(?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v1, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "const-string v2, 'MessageDigest.getInstance(algorithm).digest(data)'",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lokio/SegmentedByteString;",
+                        "method": "digest$okio"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v0, v4, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroidx/core/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;",
+                        "method": "register"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 19,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 29
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "path": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk",
+                    "time": 1.1530489921569824,
+                    "processname": "mx.bancosantander.reportesatm"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1425960063934326,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk.x86_64.flock",
+                    "time": 1.171820878982544,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk",
+                    "time": 1.1839358806610107,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/data/dalvik-cache/x86_64/data@app@mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==@base.apk@classes.vdex",
+                    "time": 1.206117868423462,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk",
+                    "time": 1.208988904953003,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk",
+                    "time": 1.4668619632720947,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 6009,
+                    "name": "/data/user_de/0/mx.bancosantander.reportesatm/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.692291021347046,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 6009,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.8192448616027832,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 6009,
+                    "name": "/dev/fb0",
+                    "time": 1.8276588916778564,
+                    "processname": "mx.bancosantander.reportesatm"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "data": "6d782e62616e636f73616e74616e6465722e7265706f7274657361746d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1429409980773926,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1444158554077148,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "data": "504b0304",
+                    "name": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk",
+                    "time": 1.1881840229034424,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "data": "504b0304",
+                    "name": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk",
+                    "time": 1.2121410369873047,
+                    "processname": "mx.bancosantander.reportesatm"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/data/app/mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==/base.apk.x86_64.flock",
+                    "time": 1.1803429126739502,
+                    "processname": "mx.bancosantander.reportesatm"
+                },
+                {
+                    "pid": 5902,
+                    "tid": 5902,
+                    "name": "/data/dalvik-cache/x86_64/data@app@mx.bancosantander.reportesatm-HKaTPsWdXdXxj5ebDWMb7Q==@base.apk@classes.vdex",
+                    "time": 1.1978340148925781,
+                    "processname": "mx.bancosantander.reportesatm"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

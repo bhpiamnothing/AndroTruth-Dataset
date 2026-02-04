@@ -1,0 +1,271 @@
+{
+    "apk_info": {
+        "id": "Lj2Vd0przLZd8ykY",
+        "url": "https://developer.koodous.com/apks/347fbf348449e50849ea578915a4420a60b3abc88ba46465755e5029ceb885cb/",
+        "sha256": "347fbf348449e50849ea578915a4420a60b3abc88ba46465755e5029ceb885cb",
+        "md5": "6ad56c0b8dbc0215e523e1de6a08bf14",
+        "sha1": "82a77b0e7efbd9fa8cad7458c4cd72cfe96f4b31",
+        "app": "Flood",
+        "package_name": "com.colourblock.flood",
+        "company": "l",
+        "version": "1.2.9",
+        "image": "https://developer.koodous.com/media/apk_images/2017/06/26/830aca2522c004b39f8639f1946f4ba8b5419c76a4aba7c3d654832b27ac8214",
+        "size": 13871949,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": 0,
+        "is_detected": false,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 6,
+        "comments_count": 0,
+        "votes_count": 0,
+        "created_at": "2017-06-26T22:17:33+02:00",
+        "updated_at": "2022-04-03T18:45:59.213783+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "6ad56c0b8dbc0215e523e1de6a08bf14",
+                    "sha1": "82a77b0e7efbd9fa8cad7458c4cd72cfe96f4b31",
+                    "size": 13871949,
+                    "crc32": "8029175F",
+                    "sha256": "347fbf348449e50849ea578915a4420a60b3abc88ba46465755e5029ceb885cb",
+                    "sha512": "488caa02fd7a287e4911243325da0aacaad2838040e44c8cd48862f08f4c7b09d089fb1f15f24cc134489ae811e78495c991470b175827d253b385a038ffbd98",
+                    "ssdeep": "196608:3Ww9yUJRnZPzcHNdTSYGl3XuZZmoNCxxnxKSEMKapEs6ZCwEKjML2c3Ku11Mk:mwQUJRxKTS/bz1xj0abVLb6uXd"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "32428e4e009a00c4aaf87085d0dfa10aa9e81666e1396be8c6701412ee63c3c8",
+                    "ssdeep": "12288:Vb7x1ZUV51eNItMiaknZDcSx1G3gpwtLjrG3MbcPyIYFqXvWPQXb1:j1+Vd7Gk3mqXOIXx"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.MAIN",
+                "com.android.vending.INSTALL_REFERRER",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.USER_PRESENT"
+            ],
+            "app_name": "Flood",
+            "services": [
+                "com.colourblock.flood.GameAcceleratorService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.colourblock.flood.InsRefer",
+                "com.colourblock.flood.UserReceiver"
+            ],
+            "activities": [
+                "com.colourblock.flood.SettingsActivity",
+                "com.colourblock.flood.GameActivity"
+            ],
+            "certificate": {
+                "sha1": "340E487DBF55B39EA8E2C1DDA0D0271A623409BC",
+                "serial": "58C397C0",
+                "issuerDN": "/C=01/ST=u/L=o/O=l/OU=o/CN=c",
+                "not_after": "Mar 16 04:07:49 2042 GMT",
+                "subjectDN": "/C=01/ST=u/L=o/O=l/OU=o/CN=c",
+                "not_before": "Mar 22 04:07:49 2017 GMT"
+            },
+            "permissions": [
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.INTERNET",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.colourblock.flood",
+            "version_code": "129",
+            "main_activity": "com.colourblock.flood.GameActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v0, 'https'",
+                        "class": "Lokhttp3/Address;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v1, 'https://'",
+                        "class": "Lokhttp3/Cache$Entry;",
+                        "method": "isHttps"
+                    },
+                    {
+                        "code": "const-string v3, 'https:'",
+                        "class": "Lokhttp3/HttpUrl$Builder;",
+                        "method": "parse"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/k;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/a/n;",
+                        "method": "a"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v1, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lb/f;",
+                        "method": "d"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v6, Lokhttp3/internal/http2/Ping;->send()V",
+                        "class": "Lokhttp3/internal/http2/Http2Connection;",
+                        "method": "writePing"
+                    },
+                    {
+                        "code": "invoke-direct v2, v3, v0, Lokhttp3/internal/ws/RealWebSocket;->send(Lb/f; I)Z",
+                        "class": "Lokhttp3/internal/ws/RealWebSocket;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-direct v2, v0, v1, Lokhttp3/internal/ws/RealWebSocket;->send(Lb/f; I)Z",
+                        "class": "Lokhttp3/internal/ws/RealWebSocket;",
+                        "method": "send"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "La/a/a/b;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v13, v15, Ljava/lang/Runtime;->exec(Ljava/lang/String; [Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "La/a/a/b;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.2.9",
+            "target_sdk_version": 22
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 856,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.colourblock.flood-1.apk",
+                    "time": 0.000411,
+                    "processname": "com.colourblock.flood"
+                },
+                {
+                    "pid": 872,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.colourblock.flood-1.apk",
+                    "time": 2.655551,
+                    "processname": "com.colourblock.flood:GameAcceleratorService"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 856,
+                    "tid": 1073870640,
+                    "data": "504b05060000000056015601b48100008329d3000000504b010214001400000808000000000052df5feffc050000d0140000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01021800140000000800000000003641bc9a1d040000e904000011000000000000000000000000002d0600004d4554412d494e462f434552542e525341504b01021800140000000800000000000f85b3350d260000038b00001000000000000000000000000000790a00004d4554412d494e462f434552542e5346504b010218001400000008000000000054d26f99f0250000d88a00001400000000000000000000000000b43000004d4554412d494e462f4d414e49464553542e4d46504b010218000a000000000000000000407539d64c6d2d004c6d2d001200000000000000000000000000d65600006173736574732f47616d653332312e726573504b010218000a00000000000000000064ce299a820d2e00820d2e00120000000000000000000000000058c42d006173736574732f47616d653332322e726573504b010218000a000000000000000000f9f600fff76f2d00f76f2d0012000000000000000000000000000ad25b006173736574732f47616d653332332e726573504b010218000a0000000000000000001d4ce7d1060407000604070012000000000000000000",
+                    "name": "/data/app/com.colourblock.flood-1.apk",
+                    "time": 0.040528,
+                    "processname": "com.colourblock.flood"
+                },
+                {
+                    "pid": 872,
+                    "tid": 1073870640,
+                    "data": "504b05060000000056015601b48100008329d3000000504b010214001400000808000000000052df5feffc050000d0140000130004000000000000000000000000000000416e64726f69644d616e69666573742e786d6cfeca0000504b01021800140000000800000000003641bc9a1d040000e904000011000000000000000000000000002d0600004d4554412d494e462f434552542e525341504b01021800140000000800000000000f85b3350d260000038b00001000000000000000000000000000790a00004d4554412d494e462f434552542e5346504b010218001400000008000000000054d26f99f0250000d88a00001400000000000000000000000000b43000004d4554412d494e462f4d414e49464553542e4d46504b010218000a000000000000000000407539d64c6d2d004c6d2d001200000000000000000000000000d65600006173736574732f47616d653332312e726573504b010218000a00000000000000000064ce299a820d2e00820d2e00120000000000000000000000000058c42d006173736574732f47616d653332322e726573504b010218000a000000000000000000f9f600fff76f2d00f76f2d0012000000000000000000000000000ad25b006173736574732f47616d653332332e726573504b010218000a0000000000000000001d4ce7d1060407000604070012000000000000000000",
+                    "name": "/data/app/com.colourblock.flood-1.apk",
+                    "time": 2.672381,
+                    "processname": "com.colourblock.flood:GameAcceleratorService"
+                },
+                {
+                    "pid": 872,
+                    "tid": 705691944,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"appchannel\">defaulto</string>\n</map>\n",
+                    "name": "/data/data/com.colourblock.flood/shared_prefs/flood.xml",
+                    "time": 4.856586,
+                    "processname": "com.colourblock.flood:GameAcceleratorService"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 856,
+                    "tid": 705557144,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"board_size\" value=\"18\" />\n</map>\n",
+                    "name": "/data/data/com.colourblock.flood/shared_prefs/com.colourblock.flood_preferences.xml",
+                    "time": 2.399294,
+                    "processname": "com.colourblock.flood"
+                },
+                {
+                    "pid": 856,
+                    "tid": 705557144,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<int name=\"board_size\" value=\"18\" />\n<int name=\"num_colors\" value=\"6\" />\n</map>\n",
+                    "name": "/data/data/com.colourblock.flood/shared_prefs/com.colourblock.flood_preferences.xml",
+                    "time": 2.425918,
+                    "processname": "com.colourblock.flood"
+                },
+                {
+                    "pid": 856,
+                    "tid": 705557144,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"appchannel\">defaulto</string>\n</map>\n",
+                    "name": "/data/data/com.colourblock.flood/shared_prefs/flood.xml",
+                    "time": 2.460704,
+                    "processname": "com.colourblock.flood"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 856,
+                    "tid": 1073870640,
+                    "name": "com.colourblock.flood.GameAcceleratorService",
+                    "time": 2.426067,
+                    "processname": "com.colourblock.flood"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,439 @@
+{
+    "apk_info": {
+        "id": "J2m7Oly7lE0dvRPa",
+        "url": "https://developer.koodous.com/apks/14a9da2c16c4714ebb5647ec5bd23a1de361b779d80f5e5f5350ea9b128f3c40/",
+        "sha256": "14a9da2c16c4714ebb5647ec5bd23a1de361b779d80f5e5f5350ea9b128f3c40",
+        "md5": "9a77855f8c9f632f086deb7e95f48c4d",
+        "sha1": "511b7d7c3efc6b9f8abecf2f8333873dc52f9521",
+        "app": "System Files",
+        "package_name": "com.example.livemusay.myapplication",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2017/04/20/3b670812014c9a949078ec0642c5dbbd196e1c6bdaa75cbeebcc2c431dc09f5e",
+        "size": 177923,
+        "tags": [
+            "bankbot",
+            "banker"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 4,
+        "comments_count": 1,
+        "votes_count": 2,
+        "created_at": "2017-04-20T02:29:10+02:00",
+        "updated_at": "2023-03-30T15:31:39.632211+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "9a77855f8c9f632f086deb7e95f48c4d",
+                    "sha1": "511b7d7c3efc6b9f8abecf2f8333873dc52f9521",
+                    "size": 177923,
+                    "crc32": "6F804738",
+                    "sha256": "14a9da2c16c4714ebb5647ec5bd23a1de361b779d80f5e5f5350ea9b128f3c40",
+                    "sha512": "1122857b99407fd71eacc4d7b42e1fe66d06b4b214a97b19c8f2d2c0ba747eeaa21ebe793c57553c9f6f5b6eef5641928385e18a7baa22d674c4441c98ebf0a4",
+                    "ssdeep": "3072:NxpXttKpCdfsX+pAvWm8MSQ5fgBw3f60Y7DsEbX/90wCKMuPs3hpt:lXt8pC1sXQAem8MS0f2wv6n7Nb907KMv"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "servot.myjino.ru"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "81.177.140.203",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "servot.myjino.ru"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "81.177.140.203"
+                ],
+                "domains": [
+                    {
+                        "ip": "81.177.140.203",
+                        "domain": "servot.myjino.ru"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://servot.myjino.ru"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "2035a6da9a5c12939e44a21f4ac5d0190bfefbd5ad90991dba6689a8791cea85",
+                    "ssdeep": "3072:rVhSRYzI12YcNaYQfkG+F13cUPEgxQHesp9NQnt:ZhuYO2f7G+L9VELw"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.PACKAGE_ADDED",
+                "android.intent.action.PHONE_STATE",
+                "android.intent.action.ACTION_POWER_DISCONNECTED",
+                "android.intent.action.MAIN",
+                "android.app.action.ACTION_DEVICE_ADMIN_DISABLE_REQUESTED",
+                "android.app.action.DEVICE_ADMIN_DISABLED",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "com.htc.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.intent.action.ACTION_BATTERY_OKAY",
+                "android.intent.action.REBOOT",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.ACTION_BATTERY_LOW",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.ACTION_POWER_CONNECTED",
+                "android.intent.action.USER_PRESENT",
+                "android.intent.action.PACKAGE_REMOVED"
+            ],
+            "app_name": "System Files",
+            "services": [
+                "com.example.livemusay.myapplication.injectionService",
+                "com.example.livemusay.myapplication.StartWhile",
+                "com.example.livemusay.myapplication.delSoundSWS"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.example.livemusay.myapplication.DAdm",
+                "com.example.livemusay.myapplication.AlarM",
+                "com.example.livemusay.myapplication.StartBoot"
+            ],
+            "activities": [
+                "com.example.livemusay.myapplication.MainActivity",
+                "com.example.livemusay.myapplication.injectionActivity",
+                "com.example.livemusay.myapplication.Press",
+                "com.example.livemusay.myapplication.g0us_sD",
+                "com.example.livemusay.myapplication.goR00t"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "issuerDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT"
+            },
+            "permissions": [
+                "android.permission.SEND_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.INTERNET",
+                "android.permission.QUICKBOOT_POWERON",
+                "android.permission.WRITE_SMS",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.CALL_PHONE",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "com.example.livemusay.myapplication",
+            "version_code": "1",
+            "main_activity": "com.example.livemusay.myapplication.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/example/livemusay/myapplication/StartWhile;",
+                        "method": "a"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/example/livemusay/myapplication/StartWhile;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/example/livemusay/myapplication/d;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/example/livemusay/myapplication/delSoundSWS;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/example/livemusay/myapplication/c$a;",
+                        "method": "a"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v2, 'android.intent.action.CALL'",
+                        "class": "Lcom/example/livemusay/myapplication/g0us_sD;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "const-string v2, 'android.intent.action.CALL'",
+                        "class": "Lcom/example/livemusay/myapplication/g0us_sD;",
+                        "method": "onCreate"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/example/livemusay/myapplication/StartWhile;",
+                        "method": "a"
+                    }
+                ],
+                "installedapplications": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;",
+                        "class": "Lcom/example/livemusay/myapplication/StartWhile;",
+                        "method": "b"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 9,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 24
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "81.177.140.203",
+                    "hostname": "servot.myjino.ru"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.example.livemusay.myapplication-1.apk",
+                    "time": 0.000285,
+                    "processname": "com.example.livemusay.myapplication"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.example.livemusay.myapplication-1.apk",
+                    "time": 7.836621,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "data": "85fa74318c85fa74928c85fa29928c85f329928cdaf329920cdaf3295d0cdaf38c5d0cda908c5d0c43908c5d1243908c82124390ae82124373ae82128c73ae82918c73ae91918c734891918cbc489191cebc489178cebc48e578cebc6de578ce586de5783a586de5453a586dad453a5882ad453a9a82ad45b49a82add1b49a821bd1b49a5a1bd1b46c5a1bd1c86c5a1b47c86c5a4c47c86cfe4c47c899fe4c47de99fe4c75de99febb75de9957bb75dec857bb75e1c857bbf1e1c857c2f1e1c8e9c2f1e158e9c2f12258e9c2442258e9604422589960442223996044fa239960c9fa239934c9fa230234c9fa770234c9ab770234e1ab77024be1ab77964be1ab04964be1cf04964bfccf04967cfccf049a7cfccf679a7cfc68679a7c9d68679af69d686714f69d688c14f69dab8c14f605ab8c14b805ab8cd9b805ab45d9b8057a45d9b8ee7a45d9f3ee7a456ff3ee7ad26ff3ee64d26ff3c664d26fe0c664d254e0c6649954e0c6909954e03a909954a13a909999a13a906499a13a2e6499a1e02e6499cbe02e6418cbe02ec418cbe0c5c418cbd3c5c4189dd3c5c4719dd3c558719dd38758719dd2875871ebd2875897ebd2871d97ebd2d61d97ebbad61d9734bad61dd334bad65ed334bae35ed33489e35ed3ab89e35e35ab89e3b535ab89eeb535ab08eeb535da08eeb511da08ee5211da080a5211daee0a5211feee0a52",
+                    "name": "/data/app/com.example.livemusay.myapplication-1.apk",
+                    "time": 0.00696,
+                    "processname": "com.example.livemusay.myapplication"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "data": "85fa74318c85fa74928c85fa29928c85f329928cdaf329920cdaf3295d0cdaf38c5d0cda908c5d0c43908c5d1243908c82124390ae82124373ae82128c73ae82918c73ae91918c734891918cbc489191cebc489178cebc48e578cebc6de578ce586de5783a586de5453a586dad453a5882ad453a9a82ad45b49a82add1b49a821bd1b49a5a1bd1b46c5a1bd1c86c5a1b47c86c5a4c47c86cfe4c47c899fe4c47de99fe4c75de99febb75de9957bb75dec857bb75e1c857bbf1e1c857c2f1e1c8e9c2f1e158e9c2f12258e9c2442258e9604422589960442223996044fa239960c9fa239934c9fa230234c9fa770234c9ab770234e1ab77024be1ab77964be1ab04964be1cf04964bfccf04967cfccf049a7cfccf679a7cfc68679a7c9d68679af69d686714f69d688c14f69dab8c14f605ab8c14b805ab8cd9b805ab45d9b8057a45d9b8ee7a45d9f3ee7a456ff3ee7ad26ff3ee64d26ff3c664d26fe0c664d254e0c6649954e0c6909954e03a909954a13a909999a13a906499a13a2e6499a1e02e6499cbe02e6418cbe02ec418cbe0c5c418cbd3c5c4189dd3c5c4719dd3c558719dd38758719dd2875871ebd2875897ebd2871d97ebd2d61d97ebbad61d9734bad61dd334bad65ed334bae35ed33489e35ed3ab89e35e35ab89e3b535ab89eeb535ab08eeb535da08eeb511da08ee5211da080a5211daee0a5211feee0a52",
+                    "name": "/data/app/com.example.livemusay.myapplication-1.apk",
+                    "time": 7.855713,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [],
+            "servicestart": [
+                {
+                    "pid": 845,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 7.473952,
+                    "processname": "com.example.livemusay.myapplication"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 16.708054,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 16.708176,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 16.70827,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 16.708361,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 17.500507,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 17.506482,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 22.894215,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 22.89434,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 27.526829,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 27.534514,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 32.499274,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 32.506422,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 37.498926,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 37.506383,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 42.520019,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 42.534627,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 47.514178,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 47.526834,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 52.517061,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 52.525537,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 57.519661,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                },
+                {
+                    "pid": 862,
+                    "tid": 1073870640,
+                    "name": "com.example.livemusay.myapplication.StartWhile",
+                    "time": 57.526512,
+                    "processname": "com.example.livemusay.myapplication:rt"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,293 @@
+{
+    "apk_info": {
+        "id": "MQ8nd9qYq4wdXWrL",
+        "url": "https://developer.koodous.com/apks/2846c9dda06a052049d89b1586cff21f44d1d28f153a2ff4726051ac27ca3ba7/",
+        "sha256": "2846c9dda06a052049d89b1586cff21f44d1d28f153a2ff4726051ac27ca3ba7",
+        "md5": "4108d51bd010fc4a7b2e943586e110d1",
+        "sha1": "472125bf73c09040f11e4afabac96ac8119acb6f",
+        "app": "Defense Screen",
+        "package_name": "com.defensescreen.application",
+        "company": "Google Inc.",
+        "version": "1.9",
+        "image": "https://developer.koodous.com/media/apk_images/4e/17/4e17b2eef001ab579d1d2d2bee82e63281537444220577e2acc838b48ec21350",
+        "size": 4508667,
+        "tags": [
+            "srio",
+            "banker",
+            "brata",
+            "trojan",
+            "contains-elf",
+            "PlayStore",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -6,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 6,
+        "created_at": "2020-10-13T22:17:36+02:00",
+        "updated_at": "2025-05-30T04:48:08.217966+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "4108d51bd010fc4a7b2e943586e110d1",
+                    "name": "",
+                    "path": "",
+                    "sha1": "472125bf73c09040f11e4afabac96ac8119acb6f",
+                    "size": 4508667,
+                    "type": "Zip archive data, at least v2.0 to extract",
+                    "yara": [],
+                    "crc32": "C4F94137",
+                    "sha256": "2846c9dda06a052049d89b1586cff21f44d1d28f153a2ff4726051ac27ca3ba7",
+                    "sha512": "4c6b073aa2b5f24fcb7b9c0c98d148eda6965850e2086618d12ece7e037f70a289be602253bf451587e7ae01ce440fed4b07e8e2df1440abc9bb0b597d1ef4a6",
+                    "ssdeep": "98304:9QPhRItba2mdsFWZe/27B5bhlJdqKbwgiu/:9Q/I5dWU27Xbh7c+wgiu/"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://xmlpull.org/v1/doc/features.html#process-docdecl",
+                "http://xmlpull.org/v1/doc/features.html#process-namespaces",
+                "aJ.CLg/@^",
+                "http://xmlpull.org/v1/doc/features.html#validation",
+                "http://xmlpull.org/v1/doc/features.html#report-namespace-prefixes"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "a894a81b5469c5e23af207809356ab1217112418311e2b932a12786dc1d7293a"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Defense Screen",
+            "services": [
+                "com.defensescreen.AnoceroSvc",
+                "com.defensescreen.ClecergSvc",
+                "com.defensescreen.NaireonSvc",
+                "com.defensescreen.WindmaySvc",
+                "com.inka.appsealing.AppSealingIPService",
+                "com.inka.appsealing.AppSealingService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.defensescreen.MainActivity",
+                "com.defensescreen.KorreepActivity",
+                "com.defensescreen.GulsaryActivity",
+                "com.defensescreen.HatueldActivity",
+                "com.defensescreen.GismickActivity",
+                "com.defensescreen.DeiralsActivity"
+            ],
+            "certificate": {
+                "sha1": "12E9759E52E50ECC5F36A092EA7B5585A85987D4",
+                "serial": "318C195DB81CDB6E17717DDAEAD13D073F545325",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_after": "Sep 28 04:25:01 2050 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_before": "Sep 28 04:25:01 2020 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.INTERNET",
+                "android.permission.WAKE_LOCK"
+            ],
+            "package_name": "com.defensescreen.application",
+            "version_code": "10",
+            "main_activity": "com.defensescreen.MainActivity",
+            "signature_name": "META-INF/GOOGPLAY.RSA",
+            "functionalities": {
+                "runbinary": [
+                    {
+                        "code": "invoke-static v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lcom/inka/appsealing/AppSealingApplication;",
+                        "method": "attachBaseContext"
+                    },
+                    {
+                        "code": "invoke-static v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lcom/inka/appsealing/AppSealingIPService;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static v3, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V",
+                        "class": "Lcom/inka/appsealing/Covault;",
+                        "method": "_loadLibrary"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 24,
+            "new_permissions": [],
+            "displayed_version": "1.9",
+            "target_sdk_version": 29
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2305150032043457,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/base.apk.x86.flock",
+                    "time": 1.2318520545959473,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/oat/x86/base.vdex",
+                    "time": 1.2450342178344727,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/base.apk",
+                    "time": 1.2475590705871582,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/system/framework/x86/boot.art",
+                    "time": 1.2477171421051025,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/dalvik-cache/x86/system@framework@boot.art",
+                    "time": 1.2481191158294678,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/oat/x86/base.art",
+                    "time": 1.2489030361175537,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/base.apk",
+                    "time": 1.3172340393066406,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/lib/arm/libcovault-appsec.so",
+                    "time": 1.425812005996704,
+                    "processname": "com.defensescreen.application"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "data": "636f6d2e646566656e736573637265656e2e6170706c69636174696f6e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.230760097503662,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2308001518249512,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "data": "504b0304",
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/base.apk",
+                    "time": 1.2476081848144531,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "data": "6172740a303536000000007044a423004d7dcf7d0010e3700020e370e5532a710070727100000000000000000000000000000000000000005854007004000000010000000000000000000000e01e1200e01e1200e0060200c0251400503f0a00f0fe20008ca8000010651e00f0fb010000612000f09d000080a7210000a00000005022006800010068502300dc53000000b0230000500000f0fe2070000000000cff20700000000028ff20700000000044ff20700000000060ff2070000000007cff20700000000098ff207000000000b4ff207000000000d0ff207000000000000000005ca32300",
+                    "name": "/system/framework/x86/boot.art",
+                    "time": 1.2477691173553467,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "data": "6172740a3035360000c0767044a423004d7dcf7d00d0597100e05971e513a1710030e9710000000000000000000000000000000000c076005814777004000000010000000000000000000000e01e1200e01e1200e0060200c0251400503f0a00f0fe20008ca8000010651e00f0fb010000612000f09d000080a7210000a00000005022006800010068502300dc53000000b0230000500000f0be9770000000000cbf97700000000028bf97700000000044bf97700000000060bf9770000000007cbf97700000000098bf977000000000b4bf977000000000d0bf977000000000000000005ca32300",
+                    "name": "/data/dalvik-cache/x86/system@framework@boot.art",
+                    "time": 1.2487962245941162,
+                    "processname": "com.defensescreen.application"
+                },
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "data": "6172740a303536000040ff78d0620000010b710000b0ff7800c0ff782bd8ff780010017900c07670900fe30000e0597114b1a403000000005041ff7804000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e0030000603f000040430000c80f000008530000c80f00000070000000100000f0be9770000000000cbf97700000000028bf97700000000044bf97700000000060bf9770000000007cbf97700000000098bf977000000000b4bf977000000000d0bf977000000000010000009a150000",
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/oat/x86/base.art",
+                    "time": 1.2489581108093262,
+                    "processname": "com.defensescreen.application"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/lib/arm/libcovault-appsec.so",
+                    "time": 1.4259650707244873,
+                    "processname": "com.defensescreen.application"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 7295,
+                    "tid": 7295,
+                    "name": "/data/app/com.defensescreen.application-dUTv7kHij7iP0WC8eObdYg==/base.apk.x86.flock",
+                    "time": 1.2319211959838867,
+                    "processname": "com.defensescreen.application"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

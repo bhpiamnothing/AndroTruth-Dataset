@@ -1,0 +1,418 @@
+{
+    "apk_info": {
+        "id": "m3xWdoBJKyxORoZ5",
+        "url": "https://developer.koodous.com/apks/20bf4c9d0a84ac0f711ccf34110f526f2b216ae74c2a96de3d90e771e9de2ad4/",
+        "sha256": "20bf4c9d0a84ac0f711ccf34110f526f2b216ae74c2a96de3d90e771e9de2ad4",
+        "md5": "748a81df76ee7e691682e64867fcd48a",
+        "sha1": "18e9dfc09be46c53907c813ec946fabb35b7d76c",
+        "app": "Установка...",
+        "package_name": "org.luckybird.core",
+        "company": "TESTORG",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2015/12/18/9f767504c47f221b5b6ff6f83f60ac8ff0406178f68b96f30c535c5dd2881c66",
+        "size": 912526,
+        "tags": [
+            "Xbot",
+            "ransomware"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -9,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 3,
+        "comments_count": 1,
+        "votes_count": 9,
+        "created_at": "2015-12-18T11:14:11+01:00",
+        "updated_at": "2023-03-30T14:40:53.299972+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "748a81df76ee7e691682e64867fcd48a",
+                    "sha1": "18e9dfc09be46c53907c813ec946fabb35b7d76c",
+                    "size": 912526,
+                    "crc32": "85C4FA46",
+                    "sha256": "20bf4c9d0a84ac0f711ccf34110f526f2b216ae74c2a96de3d90e771e9de2ad4",
+                    "sha512": "3a11a8c36b024b8b5eae0c733c17bfe2834ad5c5f000dc7a28eea2a8f7670bc253845665ed2c1dd7ea181766f82afa1de168577585f2c9a84bc6c945d27c600a",
+                    "ssdeep": "24576:/hdLxk8+IgpTf2gko4zAKGHwb04wuwPbOlC0Q:Zddk88p6gj7Hwb04wPI1Q"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "81.94.205.226"
+                ],
+                "domains": []
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://192.227.137.154/request.php",
+                "http://23.227.163.110/locker.php",
+                "http://www.w3.org/2000/xmlns/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "6ef36f5caf768d337b5c7b42a599093b27b56d988f84bd1cc916ef51091efc63",
+                    "ssdeep": "24576:j5eYA/Ok10vVk5IJb3VP9eVOUcRZFMela:P+kVPacRZFMYa"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "SMS_DELIVERED",
+                "SMS_SENT",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.app.action.DEVICE_ADMIN_ENABLED",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Установка...",
+            "services": [
+                "org.luckybird.core.RunService"
+            ],
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "org.luckybird.core.AdminReceiver",
+                "org.luckybird.core.sms.SentReceiver",
+                "org.luckybird.core.sms.DeliveredReceiver",
+                "org.luckybird.core.SMSHandler",
+                "org.luckybird.core.OnBootHandler"
+            ],
+            "activities": [
+                "org.luckybird.core.AdminActivity",
+                "org.luckybird.core.activities.BrowserActivity",
+                "org.luckybird.core.activities.Inject",
+                "org.luckybird.core.activities.Browser",
+                "org.luckybird.core.MainActivity",
+                "org.luckybird.core.lck.Lock",
+                "org.luckybird.core.activities.BankApp",
+                "org.luckybird.core.activities.GoogleCC",
+                "org.luckybird.core.activities.RunScript"
+            ],
+            "certificate": {
+                "sha1": "25D6A5507F3262ADF65639C0BA7B0997AE35C36D",
+                "serial": "5672CABA",
+                "issuerDN": "/C=US/ST=US/L=US/O=TESTORG/OU=WORK/CN=TESTER",
+                "not_after": "May 4 14:46:18 2043 GMT",
+                "subjectDN": "/C=US/ST=US/L=US/O=TESTORG/OU=WORK/CN=TESTER",
+                "not_before": "Dec 17 14:46:18 2015 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.SEND_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.ACCESS_MOCK_LOCATION",
+                "android.permission.BIND_DEVICE_ADMIN",
+                "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.GET_TASKS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "org.luckybird.core",
+            "version_code": "1",
+            "main_activity": "org.luckybird.core.MainActivity",
+            "signature_name": "META-INF/KEYSTORE.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/xbot/core/xAPI;",
+                        "method": "sendSMS"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lorg/luckybird/core/xAPI;",
+                        "method": "sendSMS"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lorg/verywell/kernel/xAPI;",
+                        "method": "sendSMS"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v7, 'https'",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "const-string v16, 'https'",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "const-string v16, 'https'",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient$1;",
+                        "method": "run"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/xbot/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lorg/luckybird/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lorg/verywell/kernel/xAPI;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/xbot/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lorg/luckybird/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lorg/verywell/kernel/xAPI;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v3, v5, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lcom/codebutler/android_websockets/WebSocketClient;",
+                        "method": "expectedKey"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v4, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lorg/java_websocket/drafts/Draft_10;",
+                        "method": "generateFinalKey"
+                    },
+                    {
+                        "code": "invoke-virtual v2, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lorg/java_websocket/drafts/Draft_76;",
+                        "method": "createChallenge"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, v1, Lcom/codebutler/android_websockets/WebSocketClient;->send([B)V",
+                        "class": "Lcom/codebutler/android_websockets/HybiParser;",
+                        "method": "close"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Lcom/codebutler/android_websockets/WebSocketClient;->send([B)V",
+                        "class": "Lcom/codebutler/android_websockets/HybiParser;",
+                        "method": "ping"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v3, Lcom/esotericsoftware/kryonet/TcpConnection;->send(Lcom/esotericsoftware/kryonet/Connection; Ljava/lang/Object;)I",
+                        "class": "Lcom/esotericsoftware/kryonet/Connection;",
+                        "method": "sendTCP"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lcom/xbot/core/xAPI;",
+                        "method": "callForward"
+                    },
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lorg/luckybird/core/xAPI;",
+                        "method": "callForward"
+                    },
+                    {
+                        "code": "const-string v3, 'android.intent.action.CALL'",
+                        "class": "Lorg/verywell/kernel/xAPI;",
+                        "method": "callForward"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-interface v0, v2, v3, Lorg/mozilla/javascript/Script;->exec(Lorg/mozilla/javascript/Context; Lorg/mozilla/javascript/Scriptable;)Ljava/lang/Object;",
+                        "class": "Lorg/mozilla/javascript/Context;",
+                        "method": "evaluateReader"
+                    },
+                    {
+                        "code": "invoke-interface v0, v2, v3, Lorg/mozilla/javascript/Script;->exec(Lorg/mozilla/javascript/Context; Lorg/mozilla/javascript/Scriptable;)Ljava/lang/Object;",
+                        "class": "Lorg/mozilla/javascript/Context;",
+                        "method": "evaluateString"
+                    },
+                    {
+                        "code": "invoke-direct v0, v2, Lorg/mozilla/javascript/tools/idswitch/Main;->exec([Ljava/lang/String;)I",
+                        "class": "Lorg/mozilla/javascript/tools/idswitch/Main;",
+                        "method": "main"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/xbot/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lorg/luckybird/core/xAPI;",
+                        "method": "getTelephonyInfo"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lorg/verywell/kernel/xAPI;",
+                        "method": "getTelephonyInfo"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Lcom/xbot/core/RunService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/xbot/core/RunService;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Lcom/xbot/core/RunService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/xbot/core/RunService;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v0, v1, Lorg/luckybird/core/RunService;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lorg/luckybird/core/RunService;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": "",
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": ""
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 842,
+                    "tid": 1073870640,
+                    "path": "/data/app/org.luckybird.core-1.apk",
+                    "time": 2.17266,
+                    "processname": "org.luckybird.core"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "path": "/data/app/org.luckybird.core-1.apk",
+                    "time": 10.740944,
+                    "processname": "org.luckybird.core"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 858,
+                    "tid": 705671008,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"srv\">http://192.227.137.154/request.php</string>\n</map>\n\u0001",
+                    "name": "/data/data/org.luckybird.core/shared_prefs/cmmn.xml",
+                    "time": 12.266321,
+                    "processname": "org.luckybird.core"
+                },
+                {
+                    "pid": 842,
+                    "tid": 1073870640,
+                    "data": "504b05060000000011001100cd040000abe70d000000504b01021400140008000800f7969147bae98cc16d020000ab0400001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008000800f79691473084a982ad020000240500001400000000000000000000000000af0200004d4554412d494e462f4b455953544f52452e5346504b01021400140008000800f79691474778ef5c09040000f604000015000000000000000000000000009e0500004d4554412d494e462f4b455953544f52452e525341504b01020a000a0000000000e885fa46cf69dc83ba1f0000ba1f00001500040000000000000000000000ea0900007265732f6472617761626c652f69636f6e2e706e67feca0000504b01021400140008000800f78e9147d161ccea10010000780200001600000000000000000000000000de2900007265732f6c61796f75742f62726f777365722e786d6c504b01021400140008000800f78e9147390754eb11010000780200001700000000000000000000000000322b00007265732f6c61796f75742f6c6f636b6d61696e2e786d6c504b01021400140008000800f78e91474354f7c2320100002c0300001300000000000000000000000000882c00007265732f6c61796f75742f6d61696e2e786d6c504b01021400140008000800f78e9147a227",
+                    "name": "/data/app/org.luckybird.core-1.apk",
+                    "time": 2.225852,
+                    "processname": "org.luckybird.core"
+                },
+                {
+                    "pid": 842,
+                    "tid": 705675464,
+                    "data": "\u0001",
+                    "name": "pipe:[2788]",
+                    "time": 3.792542,
+                    "processname": "org.luckybird.core"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "data": "504b05060000000011001100cd040000abe70d000000504b01021400140008000800f7969147bae98cc16d020000ab0400001400000000000000000000000000000000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008000800f79691473084a982ad020000240500001400000000000000000000000000af0200004d4554412d494e462f4b455953544f52452e5346504b01021400140008000800f79691474778ef5c09040000f604000015000000000000000000000000009e0500004d4554412d494e462f4b455953544f52452e525341504b01020a000a0000000000e885fa46cf69dc83ba1f0000ba1f00001500040000000000000000000000ea0900007265732f6472617761626c652f69636f6e2e706e67feca0000504b01021400140008000800f78e9147d161ccea10010000780200001600000000000000000000000000de2900007265732f6c61796f75742f62726f777365722e786d6c504b01021400140008000800f78e9147390754eb11010000780200001700000000000000000000000000322b00007265732f6c61796f75742f6c6f636b6d61696e2e786d6c504b01021400140008000800f78e91474354f7c2320100002c0300001300000000000000000000000000882c00007265732f6c61796f75742f6d61696e2e786d6c504b01021400140008000800f78e9147a227",
+                    "name": "/data/app/org.luckybird.core-1.apk",
+                    "time": 10.793334,
+                    "processname": "org.luckybird.core"
+                },
+                {
+                    "pid": 842,
+                    "tid": 705675464,
+                    "data": "\u0001",
+                    "name": "pipe:[2788]",
+                    "time": 4.052262,
+                    "processname": "org.luckybird.core"
+                },
+                {
+                    "pid": 858,
+                    "tid": 705671008,
+                    "data": "\u0001",
+                    "name": "pipe:[2826]",
+                    "time": 12.612388,
+                    "processname": "org.luckybird.core"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 842,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<string name=\"srv\">http://192.227.137.154/request.php</string>\n</map>\n\u0001\u0001",
+                    "name": "/data/data/org.luckybird.core/shared_prefs/cmmn.xml",
+                    "time": 3.560597,
+                    "processname": "org.luckybird.core"
+                },
+                {
+                    "pid": 858,
+                    "tid": 1073870640,
+                    "data": "\u0001\u0001",
+                    "name": "pipe:[2826]",
+                    "time": 12.413947,
+                    "processname": "org.luckybird.core"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 842,
+                    "tid": 1073870640,
+                    "name": "org.luckybird.core.RunService",
+                    "time": 2.800941,
+                    "processname": "org.luckybird.core"
+                }
+            ]
+        }
+    }
+}

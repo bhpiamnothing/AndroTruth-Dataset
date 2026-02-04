@@ -1,0 +1,461 @@
+{
+    "apk_info": {
+        "id": "VqKZ1Pnb9kqOv3y0",
+        "url": "https://developer.koodous.com/apks/3d69eab1d8ce85d405c194b30ac9cc01f093a0d5a6098fe47e82ec99509f930d/",
+        "sha256": "3d69eab1d8ce85d405c194b30ac9cc01f093a0d5a6098fe47e82ec99509f930d",
+        "md5": "0fb328354716dab8da0bc64c8e100d30",
+        "sha1": "d61683d1de48245a82eae5ca748d3d2dff2fbe94",
+        "app": "BTP",
+        "package_name": "com.kunge.zhitongcar",
+        "company": "",
+        "version": "91.22.33-release",
+        "image": "https://developer.koodous.com/media/apk_images/2024/07/31/generic_image_OgnmBiG.png",
+        "size": 3264907,
+        "tags": [
+            "banker",
+            "trojan",
+            "otnsl",
+            "obfuscated",
+            "reflection",
+            "telephony",
+            "spyware",
+            "ocrspy"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-07-31T21:06:44.252721+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.3.1/27353/Wed Jul 31 08:27:25 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "31.07.2024 18:17:00 (Build: 107294)",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-07-31T21:06:42.196151+02:00",
+        "updated_at": "2025-04-13T03:07:55.375304+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "0fb328354716dab8da0bc64c8e100d30",
+                "name": "",
+                "path": "",
+                "sha1": "d61683d1de48245a82eae5ca748d3d2dff2fbe94",
+                "size": 3264907,
+                "type": "Android package (APK), with AndroidManifest.xml, with APK Signing Block",
+                "yara": [],
+                "crc32": "7D6CAC88",
+                "sha256": "3d69eab1d8ce85d405c194b30ac9cc01f093a0d5a6098fe47e82ec99509f930d",
+                "sha512": "b19cc19db761b24bbc017f9a0dbcb3fb1d1e3a7f6eeeff38bde8f5fcd36a16b6b3d0e77d1d1419b132c26c142763cd853542673e15edba97561ddc633ab1f6d4",
+                "ssdeep": "98304:882sJhxxyJIII7d+C/bqBViM/EohgYyZdj:882sJhxxAIIIICTqBViM/EoCYyDj"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://goo.gle/compose-feedback",
+                "https://www.slf4j.org/codes.html#substituteLogger",
+                "https://www.slf4j.org/codes.html#ignoredBindings",
+                "https://www.slf4j.org/codes.html#multiple_bindings",
+                "http://schemas.android.com/apk/res-auto",
+                "https://youtrack.jetbrains.com/issue/KT-46465",
+                "http://schemas.android.com/aapt",
+                "https://www.slf4j.org/codes.html#version_mismatch",
+                "https://www.slf4j.org/codes.html#unsuccessfulInit",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "http://schemas.android.com/apk/res/android",
+                "https://github.com/TooTallNate/Java-WebSocket/wiki/Lost-connection-detection",
+                "https://mozilla.org/MPL/2.0/",
+                "https://www.slf4j.org/codes.html#loggerNameMismatch",
+                "https://www.slf4j.org/codes.html#replay",
+                "https://www.slf4j.org/codes.html#noProviders"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "95be916436bf03c0a1537a2dd5f1b789fcde098192560702f13371127d086966"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "androidx.profileinstaller.action.BENCHMARK_OPERATION",
+                "androidx.profileinstaller.action.SAVE_PROFILE",
+                "androidx.profileinstaller.action.INSTALL_PROFILE",
+                "android.intent.action.BOOT_COMPLETED",
+                "androidx.profileinstaller.action.SKIP_FILE",
+                "android.intent.action.MAIN",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.provider.Telephony.SMS_RECEIVED"
+            ],
+            "app_name": "BTP",
+            "services": [
+                "com.kunge.zhitongcar.WebSocketService",
+                "com.kunge.zhitongcar.WebSocketJobService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.startup.InitializationProvider"
+            ],
+            "receivers": [
+                "com.kunge.zhitongcar.NetworkChangeReceiver",
+                "com.kunge.zhitongcar.SmsBroadcastReceiver",
+                "com.kunge.zhitongcar.BootBroadcastReceiver",
+                "androidx.profileinstaller.ProfileInstallReceiver"
+            ],
+            "activities": [
+                "com.kunge.zhitongcar.MainActivity",
+                "com.kunge.zhitongcar.AliasMainActivity",
+                "com.kunge.zhitongcar.AliasActivity",
+                "com.kunge.zhitongcar.LauncherActivity",
+                "com.kunge.zhitongcar.WebViewActivity"
+            ],
+            "certificate": {
+                "sha1": "831A2D6A2FDE5E0980431C82501C615AE391C327",
+                "serial": "3DC293E3",
+                "sha256": "474B87992791EDEC64E03E1F72C772F017C649EDCFB2C34797C72B7C3CD6880A",
+                "issuerDN": "C = , ST = , L = , O = , OU = , CN = ",
+                "not_after": "Jul 25 07:25:50 2049 GMT",
+                "subjectDN": "C = , ST = , L = , O = , OU = , CN = ",
+                "not_before": "Jul 31 07:25:50 2024 GMT",
+                "hash_algorithm": "sha512",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.RECEIVE_SMS",
+                "android.permission.READ_CONTACTS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "com.kunge.zhitongcar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+                "android.permission.READ_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SEND_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.ACCESS_MEDIA_LOCATION",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.INTERNET",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+                "android.permission.READ_MEDIA_IMAGES",
+                "android.permission.READ_PHONE_NUMBERS"
+            ],
+            "is_signed_v1": false,
+            "is_signed_v2": false,
+            "is_signed_v3": true,
+            "package_name": "com.kunge.zhitongcar",
+            "version_code": "1",
+            "main_activity": "com.kunge.zhitongcar.AliasMainActivity",
+            "signature_name": "",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 621,
+                "png": 249,
+                "txt": 71,
+                "json": 1,
+                "unknown": 38
+            },
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v6 ... v11, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lvv1;",
+                        "method": "onMessage"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v8, \"See https://www.slf4j.org/codes.html#loggerNameMismatch for an explanation\"",
+                        "class": "Lgk0;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v0, \"org.slf4j.LoggerFactory in failed state. Original exception was thrown EARLIER. See also https://www.slf4j.org/codes.html#unsuccessfulInit\"",
+                        "class": "Lgk0;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "const-string v0, \"See https://www.slf4j.org/codes.html#noProviders for further details.\"",
+                        "class": "Lgk0;",
+                        "method": "d"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual/range v19, Landroid/view/MotionEvent;->getDeviceId()I",
+                        "class": "Landroidx/compose/ui/platform/AndroidComposeView;",
+                        "method": "C"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Lca;",
+                        "method": "dispatchKeyShortcutEvent"
+                    },
+                    {
+                        "code": "invoke-virtual v13, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Lia;",
+                        "method": "H"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v6, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lokio/Buffer;",
+                        "method": "digest"
+                    },
+                    {
+                        "code": "const-string v1, \"messageDigest.digest()\"",
+                        "class": "Lokio/Buffer;",
+                        "method": "digest"
+                    },
+                    {
+                        "code": "invoke-direct v1, v0, Lokio/Buffer;->digest(Ljava/lang/String;)Lokio/ByteString;",
+                        "class": "Lokio/Buffer;",
+                        "method": "md5"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-direct v1, v2, v0, Lokhttp3/internal/ws/RealWebSocket;->send(Lokio/ByteString; I)Z",
+                        "class": "Lokhttp3/internal/ws/RealWebSocket;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-direct v1, v2, v0, Lokhttp3/internal/ws/RealWebSocket;->send(Lokio/ByteString; I)Z",
+                        "class": "Lokhttp3/internal/ws/RealWebSocket;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-direct v3, v4, Lorg/java_websocket/WebSocketImpl;->send(Ljava/util/Collection;)V",
+                        "class": "Lorg/java_websocket/WebSocketImpl;",
+                        "method": "send"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lnj1;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lokio/SegmentPool;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lorg/java_websocket/server/WebSocketServer;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lokhttp3/internal/concurrent/ۣ۟ۢۡۥ;",
+                        "method": "۟ۡۥۣۡ"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v2, v3, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroidx/compose/runtime/ۣۡۨۤ;",
+                        "method": "ۡۨۧۡ"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lcom/google/android/material/search/ۣ۟ۨۢۡ;",
+                        "method": "۟ۢ۠۠ۧ"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lfa;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 28,
+            "new_permissions": [
+                "com.kunge.zhitongcar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            ],
+            "displayed_version": "91.22.33-release",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "gz": 1,
+                "bin": 1,
+                "dex": 1,
+                "png": 249,
+                "txt": 1,
+                "xml": 616,
+                "arsc": 1,
+                "json": 1,
+                "prof": 1,
+                "webp": 31,
+                "profm": 1
+            },
+            "target_sdk_version": 34
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.7158589363098145,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/base.apk.x86_64.flock",
+                    "time": 1.8830909729003906,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/oat/x86_64/base.vdex",
+                    "time": 1.9050648212432861,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/base.apk",
+                    "time": 1.9261448383331299,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.9382438659667969,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.9475889205932617,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/oat/x86_64/base.art",
+                    "time": 1.9519739151000977,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/base.apk",
+                    "time": 2.0168938636779785,
+                    "processname": "com.kunge.zhitongcar"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "data": "636f6d2e6b756e67652e7a6869746f6e6763617200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.7183928489685059,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.7186520099639893,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "data": "504b0304",
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/base.apk",
+                    "time": 1.9265189170837402,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.9467267990112305,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.9504799842834473,
+                    "processname": "com.kunge.zhitongcar"
+                },
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "data": "6172740a3035360000803d78280f010099478d5700903e7800a03e7800a03f7800607c7800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000009b6c0000",
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/oat/x86_64/base.art",
+                    "time": 1.9538569450378418,
+                    "processname": "com.kunge.zhitongcar"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5016,
+                    "tid": 5016,
+                    "name": "/data/app/com.kunge.zhitongcar-pngNmQQC1HgYY1hLAjU3AQ==/base.apk.x86_64.flock",
+                    "time": 1.8839149475097656,
+                    "processname": "com.kunge.zhitongcar"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

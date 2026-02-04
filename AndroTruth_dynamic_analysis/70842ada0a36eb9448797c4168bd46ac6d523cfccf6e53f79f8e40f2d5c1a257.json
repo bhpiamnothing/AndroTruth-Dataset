@@ -1,0 +1,434 @@
+{
+    "apk_info": {
+        "id": "J50l1mY4zax13XrY",
+        "url": "https://developer.koodous.com/apks/70842ada0a36eb9448797c4168bd46ac6d523cfccf6e53f79f8e40f2d5c1a257/",
+        "sha256": "70842ada0a36eb9448797c4168bd46ac6d523cfccf6e53f79f8e40f2d5c1a257",
+        "md5": "87e1731cbb5f234dfa382203d0a658f5",
+        "sha1": "05c9cc093203a9b1d8d2eec97db3e3d7ed01e16d",
+        "app": "iSecurity",
+        "package_name": "com.app.applaunch",
+        "company": "Android",
+        "version": "",
+        "image": "https://developer.koodous.com/media/apk_images/63/c8/63c886ecba48a64e55c7d6b6e4d89092568861a43caf1f65a70a687fe0a621ff",
+        "size": 1222714,
+        "tags": [
+            "banker",
+            "reflection",
+            "trojan",
+            "downloader"
+        ],
+        "is_trusted": false,
+        "is_installed": true,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2021-12-17T18:52:04+01:00",
+        "updated_at": "2023-03-30T22:01:11.788221+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "87e1731cbb5f234dfa382203d0a658f5",
+                "name": "",
+                "path": "",
+                "sha1": "05c9cc093203a9b1d8d2eec97db3e3d7ed01e16d",
+                "size": 1222714,
+                "type": "Android package (APK), with AndroidManifest.xml, with APK Signing Block",
+                "yara": [],
+                "crc32": "8A47DF19",
+                "sha256": "70842ada0a36eb9448797c4168bd46ac6d523cfccf6e53f79f8e40f2d5c1a257",
+                "sha512": "89609c67dd486cebbf7125c080c6eb09d18799dbcbc1d1c7c46bdb276938444c79198693d0854b48d751c11eedef8e8723019aed86ff9917328ab13fcdffd66e",
+                "ssdeep": "24576:neo41IqE18eB4a0Kg1VkFqEN6guW9/r7GtCet0hxu0SziG:nev1hE18eB4a0KX5N6W9/YC3hsb"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://51.38.113.144/AppUpdateExample.txt",
+                "http://51.38.113.144/tap.apk",
+                "https://developer.android.com/reference/androidx/fragment/app/FragmentContainerView.html",
+                "http://schemas.android.com/apk/res-auto"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "c49f7fc375e3c073499d40ac9a82b17e902d0a9636cb02fb5ca3aae76dc78636"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "iSecurity",
+            "services": [
+                "com.app.applaunch.starter",
+                "com.app.applaunch.httputils2service"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider"
+            ],
+            "receivers": [
+                "com.app.applaunch.starter$starter_BR",
+                "com.app.applaunch.httputils2service$httputils2service_BR"
+            ],
+            "activities": [
+                "com.app.applaunch.main"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "sha256": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT",
+                "hash_algorithm": "sha1",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.INTERNET",
+                "android.permission.WAKE_LOCK",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": true,
+            "is_signed_v3": true,
+            "package_name": "com.app.applaunch",
+            "version_code": "1",
+            "main_activity": "com.app.applaunch.main",
+            "signature_name": "META-INF/APKEASYT.RSA",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 50,
+                "png": 16,
+                "txt": 2
+            },
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneSms;",
+                        "method": "Send2"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v5, \"https\"",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v1, \"https://\"",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v1, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetDeviceId"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSubscriberId"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetSimSerialNumber"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v10, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lanywheresoftware/b4h/okhttp/OkHttpClientWrapper$B4AAuthenticator;",
+                        "method": "handleDigest"
+                    },
+                    {
+                        "code": "invoke-virtual v10, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lanywheresoftware/b4h/okhttp/OkHttpClientWrapper$B4AAuthenticator;",
+                        "method": "handleDigest"
+                    },
+                    {
+                        "code": "invoke-virtual v10, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lanywheresoftware/b4h/okhttp/OkHttpClientWrapper$B4AAuthenticator;",
+                        "method": "handleDigest"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;",
+                        "method": "sendRequest"
+                    },
+                    {
+                        "code": "invoke-virtual v13, v7, v5, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/media/session/MediaSessionCompat$Callback$MediaSessionCallbackApi21;",
+                        "method": "onCommand"
+                    }
+                ],
+                "phonecall": [
+                    {
+                        "code": "const-string v2, \"android.intent.action.CALL\"",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneCalls;",
+                        "method": "Call"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v5, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$LogCat$1;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone;",
+                        "method": "Shell"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lanywheresoftware/b4a/phone/Phone$PhoneId;",
+                        "method": "GetLine1Number"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v2, v0, v1, Landroid/app/Application;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lanywheresoftware/b4a/keywords/DateTime;",
+                        "method": "ListenToExternalTimeChanges"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/app/Application;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lanywheresoftware/b4a/phone/PhoneEvents$SMSInterceptor;",
+                        "method": "Initialize2"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/app/Application;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Lanywheresoftware/b4a/phone/PhoneEvents$SMSInterceptor;",
+                        "method": "StopListening"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "gz": 1,
+                "RSA": 1,
+                "bal": 1,
+                "dex": 1,
+                "png": 16,
+                "xml": 45,
+                "arsc": 1
+            },
+            "target_sdk_version": 29
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.402777910232544,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/base.apk.x86_64.flock",
+                    "time": 2.474910020828247,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/oat/x86_64/base.vdex",
+                    "time": 2.4822299480438232,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/base.apk",
+                    "time": 2.4840009212493896,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.4928948879241943,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.4979360103607178,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/oat/x86_64/base.art",
+                    "time": 2.4981749057769775,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/base.apk",
+                    "time": 2.61747407913208,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6627,
+                    "name": "/data/user_de/0/com.app.applaunch/code_cache/com.android.skia.shaders_cache",
+                    "time": 2.7901060581207275,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6627,
+                    "name": "/dev/graphics/fb0",
+                    "time": 2.9143879413604736,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6627,
+                    "name": "/dev/fb0",
+                    "time": 2.9152450561523438,
+                    "processname": "com.app.applaunch"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "data": "636f6d2e6170702e6170706c61756e636800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.403135061264038,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.4031810760498047,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "data": "504b0304",
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/base.apk",
+                    "time": 2.48417592048645,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.497767925262451,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.4980850219726562,
+                    "processname": "com.app.applaunch"
+                },
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "data": "6172740a3035360000803d78280f01002725ae8b00903e7800a03e7800203f7800f0677800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000008b6d0000",
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/oat/x86_64/base.art",
+                    "time": 2.4982759952545166,
+                    "processname": "com.app.applaunch"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 6552,
+                    "tid": 6552,
+                    "name": "/data/app/com.app.applaunch-G9w8MiAfvUswGR_ghapUDg==/base.apk.x86_64.flock",
+                    "time": 2.474961996078491,
+                    "processname": "com.app.applaunch"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 6552,
+                    "tid": 6619,
+                    "data": "3530303030",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.4115450382232666,
+                    "processname": "com.app.applaunch"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

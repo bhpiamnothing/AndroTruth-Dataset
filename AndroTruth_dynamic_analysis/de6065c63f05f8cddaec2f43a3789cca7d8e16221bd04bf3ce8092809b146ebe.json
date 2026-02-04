@@ -1,0 +1,469 @@
+{
+    "apk_info": {
+        "id": "p3xl1VxZln8OenA0",
+        "url": "https://developer.koodous.com/apks/de6065c63f05f8cddaec2f43a3789cca7d8e16221bd04bf3ce8092809b146ebe/",
+        "sha256": "de6065c63f05f8cddaec2f43a3789cca7d8e16221bd04bf3ce8092809b146ebe",
+        "md5": "afbf3584af21571afda1f6652bbca595",
+        "sha1": "fba4a7d08f2c9bc11a16012758a1b08fd5cd9778",
+        "app": "系统优化",
+        "package_name": "com.isyjv.klxblnwc.r",
+        "company": "Android",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/07/0c/070c99d5cf2295638febaa5938b4c615527b99cdaac3d8dd0afb994581eabf9f",
+        "size": 42786,
+        "tags": [
+            "andr",
+            "trojan",
+            "dnotua",
+            "pua",
+            "actionspy"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -5,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 5,
+        "created_at": "2019-01-28T12:15:23+01:00",
+        "updated_at": "2025-11-23T16:45:57.727424+01:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "afbf3584af21571afda1f6652bbca595",
+                "name": "",
+                "path": "",
+                "sha1": "fba4a7d08f2c9bc11a16012758a1b08fd5cd9778",
+                "size": 42786,
+                "type": "Android package (APK), with AndroidManifest.xml",
+                "yara": [],
+                "crc32": "C9223990",
+                "sha256": "de6065c63f05f8cddaec2f43a3789cca7d8e16221bd04bf3ce8092809b146ebe",
+                "sha512": "75143e7dcb3e2de1d6be821441b78e963df77095e1734f40ebe2d4027f07ef655a12ebb9255ec2b3b0b88550d7c783b838368a111a61820fa50830db43364425",
+                "ssdeep": "768:Sr7ABuf6GpVI+5Edo6Yc086BmLNa/KnGyTEI4j/XryVJkRz/l:Sr7ABXSIScJW86CTnGyTEriJk5d"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "e2016ceab2a1a973e2d098aaf601301b4a527d35f615b41236538d7824174d7e"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "系统优化",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.isyjv.klxblnwc.r.u.MyActivity"
+            ],
+            "certificate": {
+                "sha1": "85942B590ED877956CBD112D52A5AC8E17DAC3EB",
+                "serial": "7529DC17",
+                "sha256": "00950C93A7D7E9574E9627E4036838BB4FFC073B069573A3939F47CAB9CC3048",
+                "issuerDN": "C = US, O = Android, CN = Android Debug",
+                "not_after": "Jul 03 02:52:13 2047 GMT",
+                "subjectDN": "C = US, O = Android, CN = Android Debug",
+                "not_before": "Jul 10 02:52:13 2017 GMT",
+                "hash_algorithm": "sha256",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.RESTART_PACKAGES",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": false,
+            "is_signed_v3": false,
+            "package_name": "com.isyjv.klxblnwc.r",
+            "version_code": "1",
+            "main_activity": "com.isyjv.klxblnwc.r.u.MyActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "files_by_format": {
+                "bin": 6,
+                "png": 3,
+                "txt": 2
+            },
+            "functionalities": {
+                "imei": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/isyjv/klxblnwc/r/util/Tools;",
+                        "method": "getIMEI"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v1, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/isyjv/klxblnwc/r/util/Tools;",
+                        "method": "MD5"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/isyjv/klxblnwc/c/Controller;",
+                        "method": "hasRootPerssion"
+                    },
+                    {
+                        "code": "invoke-virtual v5, v6, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/isyjv/klxblnwc/c/Controller;",
+                        "method": "hasRootPerssion"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/isyjv/klxblnwc/c/Controller;",
+                        "method": "silentUninstall"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "RSA": 1,
+                "dex": 1,
+                "png": 3,
+                "txt": 1,
+                "xml": 2,
+                "arsc": 1
+            },
+            "target_sdk_version": 22
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "path": "/system/framework/org.apache.http.legacy.boot.jar:/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk",
+                    "time": 1.2395009994506836,
+                    "processname": "com.isyjv.klxblnwc.r"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2271251678466797,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.2436931133270264,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.255972146987915,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2560110092163086,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.2560391426086426,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.25606107711792,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.2561180591583252,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.2562401294708252,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.256357192993164,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.2653491497039795,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.26694917678833,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.26705002784729,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.324578046798706,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.3248159885406494,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.324923038482666,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.3250181674957275,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.327355146408081,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.3278000354766846,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3279411792755127,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.371190071105957,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk.x86_64.flock",
+                    "time": 1.3778691291809082,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk",
+                    "time": 1.3791379928588867,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==@base.apk@classes.vdex",
+                    "time": 1.3921830654144287,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk",
+                    "time": 1.3923211097717285,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk",
+                    "time": 1.4042940139770508,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5141,
+                    "name": "/data/user_de/0/com.isyjv.klxblnwc.r/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.5695490837097168,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5141,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.7130930423736572,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5141,
+                    "name": "/dev/fb0",
+                    "time": 1.7155871391296387,
+                    "processname": "com.isyjv.klxblnwc.r"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "data": "636f6d2e6973796a762e6b6c78626c6e77632e7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2273781299591064,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2274169921875,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.3279120922088623,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3710989952087402,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.37288498878479,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "data": "504b0304",
+                    "name": "/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk",
+                    "time": 1.3792641162872314,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "data": "504b0304",
+                    "name": "/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk",
+                    "time": 1.3924670219421387,
+                    "processname": "com.isyjv.klxblnwc.r"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.2439780235290527,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/app/com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==/base.apk.x86_64.flock",
+                    "time": 1.379028081893921,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5103,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.isyjv.klxblnwc.r-F-2Q2wSqMOasR7Dqz0LF_A==@base.apk@classes.vdex",
+                    "time": 1.3919391632080078,
+                    "processname": "com.isyjv.klxblnwc.r"
+                },
+                {
+                    "pid": 5103,
+                    "tid": 5140,
+                    "name": "/storage/emulated/0/a",
+                    "time": 1.6218960285186768,
+                    "processname": "com.isyjv.klxblnwc.r"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

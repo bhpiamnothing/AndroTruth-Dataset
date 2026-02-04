@@ -1,0 +1,614 @@
+{
+    "apk_info": {
+        "id": "3nkVGvxmKNQd4jXD",
+        "url": "https://developer.koodous.com/apks/58d090b5ebf57a6af671a02b3b5719591cf2cb0d28de0ec4ebf2dc5393f79320/",
+        "sha256": "58d090b5ebf57a6af671a02b3b5719591cf2cb0d28de0ec4ebf2dc5393f79320",
+        "md5": "8b96a7368b27503e9e0998dde5012c62",
+        "sha1": "9c47df8d20fd30dc30bac26ae2c8fe1a7bf1e0ac",
+        "app": "LoanBee",
+        "package_name": "com.loanbee",
+        "company": "LoanBee",
+        "version": "1.5.3",
+        "image": "https://developer.koodous.com/media/apk_images/2022/11/30/ic_launcher_5r5Y8Rc.png",
+        "size": 9714326,
+        "tags": [],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2022-12-01T03:49:47.890775+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "",
+                    "result": "timeout",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "30.11.2022 19:13:42 (Build: 105462)",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "",
+                    "result": "",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2022-12-01T13:30:55.740079+01:00",
+        "matches_count": 1,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2022-11-30T22:00:45.809197+01:00",
+        "updated_at": "2023-03-30T22:44:00.415992+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "8b96a7368b27503e9e0998dde5012c62",
+                "name": "",
+                "path": "",
+                "sha1": "9c47df8d20fd30dc30bac26ae2c8fe1a7bf1e0ac",
+                "size": 9714326,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "B311198E",
+                "sha256": "58d090b5ebf57a6af671a02b3b5719591cf2cb0d28de0ec4ebf2dc5393f79320",
+                "sha512": "fafdb532afd4c4c304361b91efbfc8014d52a510227d49950631bfb2731e993b4bdcfce0f143484c66a71d876b2f4acd89647783b529c45fab7a052d6828525f",
+                "ssdeep": "196608:iQ3z7YZRzTSOPwdnaMt28JecCv0EABgoYiaguFYG403YcfFGp:H3z7Y7SRdnxNccCJABgoYiaLYG40IcfY"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://gATI",
+                "https://api.loanbee.tech/v1/",
+                "https://api.whatsapp.com/send?phone=",
+                "https://settings.crashlytics.com/spi/v2/platforms/android/apps/%s/settings",
+                "https://.facebook.com",
+                "https://facebook.com",
+                "http://schemas.android.com/apk/res/android",
+                "http://paolorotolo.github.io/",
+                "https://e.crashlytics.com/spi/v2/events",
+                "https://play.google.com/store/apps/details?id=",
+                "https://graph-video.%s",
+                "https://graph.%s"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "652b42b62625dedd7b069f475feca952b3850a80aafb35afbbd5742b838bb23d"
+                }
+            },
+            "api_key": {
+                "io::fabric::ApiKey": "04a39256da422c9b51a8e9411313a9939d8ac4e9",
+                "com::facebook::sdk::ApplicationId": "528933027308955"
+            },
+            "cordova": "",
+            "filters": [
+                "android.net.wifi.WIFI_STATE_CHANGED",
+                "com.loanbee.LoanBee",
+                "com.loanbee.RegisterPhone",
+                "android.intent.action.QUICKBOOT_POWERON",
+                "com.loanbee.RegisterFacebook",
+                "com.loanbee.Tutorial",
+                "android.intent.action.BOOT_COMPLETED",
+                "com.loanbee.ResetPin",
+                "com.htc.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.VIEW",
+                "com.loanbee.Home",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "com.loanbee.ChangeDevice",
+                "com.loanbee.LoginPhone",
+                "android.intent.action.MY_PACKAGE_REPLACED",
+                "com.loanbee.SplashActivity",
+                "android.intent.action.MAIN",
+                "com.loanbee.Confirm"
+            ],
+            "app_name": "LoanBee",
+            "services": [
+                "com.loanbee.collector.services.BatteryStatusService",
+                "com.loanbee.collector.services.ManageContactsService",
+                "com.loanbee.collector.services.ManageDeviceStatusService",
+                "com.loanbee.collector.services.ManageTextMessagesService",
+                "com.loanbee.services.LoanRefreshService",
+                "com.loanbee.services.NotificationsService",
+                "com.loanbee.services.SmsListenerService",
+                "com.loanbee.services.StkOverlayService",
+                "org.eclipse.paho.android.service.MqttService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.loanbee.receivers.BootCompleteReceiver",
+                "com.loanbee.receivers.NetworkChangeReceiver"
+            ],
+            "activities": [
+                "com.loanbee.SplashActivity",
+                "com.loanbee.Tutorial",
+                "com.loanbee.LoanBee",
+                "com.loanbee.RegisterFacebook",
+                "com.loanbee.RegisterPhone",
+                "com.loanbee.LoginPhone",
+                "com.loanbee.ChangeDevice",
+                "com.loanbee.ResetPin",
+                "com.loanbee.Confirm",
+                "com.loanbee.Home",
+                "com.facebook.FacebookActivity",
+                "com.loanbee.utils.deeplinking.DeepLinkActivity"
+            ],
+            "certificate": {
+                "sha1": "AD3E44C92B7B47C89407F9195DDE7F428FBDE3D5",
+                "serial": "601740F3",
+                "issuerDN": "C = KE, ST = Nairobi, L = Nairobi, O = LoanBee, OU = LoanBee, CN = LoanBee",
+                "not_after": "Apr 18 11:45:20 2042 GMT",
+                "subjectDN": "C = KE, ST = Nairobi, L = Nairobi, O = LoanBee, OU = LoanBee, CN = LoanBee",
+                "not_before": "Apr 24 11:45:20 2017 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.WAKE_LOCK"
+            ],
+            "package_name": "com.loanbee",
+            "version_code": "6012",
+            "main_activity": "com.loanbee.SplashActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v1, \"This app relies on Crashlytics. Please sign up for access at https://fabric.io/sign_up,\\ninstall an Android build tool and ask a team member to invite you to this app's organization.\"",
+                        "class": "Lcom/a/a/c/a;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v5, 'https:'",
+                        "class": "Lcom/airbnb/deeplinkdispatch/DeepLinkUri$Builder;",
+                        "method": "parse"
+                    },
+                    {
+                        "code": "const-string v2, 'https'",
+                        "class": "Lcom/airbnb/deeplinkdispatch/DeepLinkUri$Builder;",
+                        "method": "parse"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, v3, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Lcom/loanbee/collector/d/c;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v2, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;",
+                        "class": "Lcom/loanbee/collector/d/c;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/loanbee/collector/d/c;",
+                        "method": "b"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v5, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/facebook/b/o;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v4, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lio/a/a/a/a/b/i;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lio/a/a/a/a/b/i;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v2, v3, Ljava/io/FilenameFilter;->accept(Ljava/io/File; Ljava/lang/String;)Z",
+                        "class": "Lcom/a/a/c/l$a;",
+                        "method": "accept"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/os/Messenger;->send(Landroid/os/Message;)V",
+                        "class": "Lcom/facebook/b/l;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/facebook/o;",
+                        "method": "a"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v2, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/loanbee/utils/j;",
+                        "method": "A"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/a/a/c/l;",
+                        "method": "e"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/facebook/b/o;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lio/a/a/a/a/b/n;",
+                        "method": "a"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/i$b;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/i$b;",
+                        "method": "d"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v1, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/a/a/c/p;",
+                        "method": "<init>"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 14,
+            "new_permissions": [],
+            "displayed_version": "1.5.3",
+            "target_sdk_version": 27
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.500581979751587,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.5412590503692627,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.5518600940704346,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.5798430442810059,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.5799989700317383,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.580491065979004,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.5805790424346924,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.5872159004211426,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.6045279502868652,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.6066439151763916,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.6076200008392334,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.608124017715454,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.6089379787445068,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.6091389656066895,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.609178066253662,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.6097290515899658,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.6098830699920654,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.6100399494171143,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.6115620136260986,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.612657070159912,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 1.614691972732544,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/base.apk.x86_64.flock",
+                    "time": 1.6151800155639648,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/oat/x86_64/base.vdex",
+                    "time": 1.6157639026641846,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/base.apk",
+                    "time": 1.6162240505218506,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.6169960498809814,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.6176888942718506,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/oat/x86_64/base.art",
+                    "time": 1.6180999279022217,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/base.apk",
+                    "time": 1.6294560432434082,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/lib/x86_64/librealm-jni.so",
+                    "time": 1.6921920776367188,
+                    "processname": "com.loanbee"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "636f6d2e6c6f616e62656500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.5009129047393799,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.5009479522705078,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.6109230518341064,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.6119859218597412,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.6132409572601318,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "504b0304",
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/base.apk",
+                    "time": 1.6164839267730713,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.617401123046875,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.617893934249878,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "data": "6172740a3035360000803d78d80f0100a739699c00903e7800a03e781100407800006f7800e0696f90ef230100e08d7022f1ae030000000050813d780800000000000000010000000000000088040000880400000000000088040000000000008804000000000000880400000000000088040000000000009004000000e0000090e40000c80f000058f40000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f000000000100000096660000",
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/oat/x86_64/base.art",
+                    "time": 1.6183080673217773,
+                    "processname": "com.loanbee"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/lib/x86_64/librealm-jni.so",
+                    "time": 1.698889970779419,
+                    "processname": "com.loanbee"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.5416240692138672,
+                    "processname": "com.loanbee"
+                },
+                {
+                    "pid": 4892,
+                    "tid": 4892,
+                    "name": "/data/app/com.loanbee-CP1Typwq_A_u34PtJBiZhA==/base.apk.x86_64.flock",
+                    "time": 1.6155810356140137,
+                    "processname": "com.loanbee"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

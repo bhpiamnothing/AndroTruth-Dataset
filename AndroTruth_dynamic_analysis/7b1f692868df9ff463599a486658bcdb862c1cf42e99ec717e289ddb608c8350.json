@@ -1,0 +1,509 @@
+{
+    "apk_info": {
+        "id": "9VaKGJzQpA4GvqMy",
+        "url": "https://developer.koodous.com/apks/7b1f692868df9ff463599a486658bcdb862c1cf42e99ec717e289ddb608c8350/",
+        "sha256": "7b1f692868df9ff463599a486658bcdb862c1cf42e99ec717e289ddb608c8350",
+        "md5": "506d2d5b09fe8d9e45fc835412ab9964",
+        "sha1": "20de781f0614ecc0cc4b3159253f730d2062849d",
+        "app": "",
+        "package_name": "",
+        "company": "np",
+        "version": "",
+        "image": null,
+        "size": 4899606,
+        "tags": [
+            "smsagent",
+            "fsao",
+            "smsspy",
+            "trojan",
+            "telephony",
+            "spyware",
+            "reflection",
+            "sends-sms",
+            "smsthief",
+            "checks-gps"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": true,
+        "last_scan": {
+            "done_at": "2024-03-08T03:12:50.520592+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27207/Thu Mar  7 09:27:12 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "07.03.2024 19:15:30 (Build: 106855)",
+                    "result": "malicious",
+                    "signature": "Trojan-Spy.AndroidOS.Banker"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2024-03-08T03:12:48.454062+01:00",
+        "updated_at": "2024-06-25T14:30:18.077802+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "506d2d5b09fe8d9e45fc835412ab9964",
+                "name": "",
+                "path": "",
+                "sha1": "20de781f0614ecc0cc4b3159253f730d2062849d",
+                "size": 4899606,
+                "type": "Android package (APK), with APK Signing Block",
+                "yara": [],
+                "crc32": "6E955388",
+                "sha256": "7b1f692868df9ff463599a486658bcdb862c1cf42e99ec717e289ddb608c8350",
+                "sha512": "aedb7f11fd9581ac6db4771d7345a1bc2c7de1a2b8c6423e8a44c6c8fa3efc5b8bb1980ca593133ed11f3d0c684349e0dd22150392a63c0b9b9beb6c9ac5bcee",
+                "ssdeep": "98304:rGj6RQzpNuVC7rwAZ9k6kOtDnmw5fycZVLi7+7v:re6Yrwu91kOtDnjtyVO"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://schemas.android.com/apk/res-auto",
+                "https://appointmentservice0.wixsite.com/onlineappointment",
+                "https://bd3f5c54-0e96-4ab5-a1e0-51650e51da72-00-8ouhuk24g9ox.riker.replit.dev/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "df68dff38ff23aec1eefc502600b5e4e99fd6dfeb5684d03f0b864ffdcffd830"
+                },
+                "classes2": {
+                    "sha256": "2bc9c7cba9d1e9870b8eae1cd0610e0c9253e7bdcc6a2e29fc15c4547b42e34d"
+                },
+                "classes3": {
+                    "sha256": "0dd5bc857c5e719b81c02baf1b4648c685f6953bc417429830f488a715f9d46b"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.MAIN",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "CustomerSupport",
+            "services": [
+                "com.dhruv.smsrecevier.ReceiveSms",
+                "com.dhruv.smsrecevier.startupOnBootUpReceiver"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.startup.InitializationProvider"
+            ],
+            "receivers": [
+                "com.dhruv.smsrecevier.ReceiveSms",
+                "com.dhruv.smsrecevier.startupOnBootUpReceiver"
+            ],
+            "activities": [
+                "com.dhruv.smsrecevier.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "26B02D233509F4AECF56980032343456CEAB722A",
+                "serial": "45FF9A3",
+                "sha256": "492682F877607EE99DF2DDD2BD5953FD727BDF6E19D397DE9DBBAFD582BCAD75",
+                "issuerDN": "C = 中国, ST = 江苏, L = 南京, O = np, OU = np, CN = np",
+                "not_after": "Aug 26 09:03:56 3020 GMT",
+                "subjectDN": "C = 中国, ST = 江苏, L = 南京, O = np, OU = np, CN = np",
+                "not_before": "Apr 25 09:03:56 2021 GMT",
+                "hash_algorithm": "sha512",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.SEND_SMS",
+                "android.permission.INTERNET",
+                "android.permission.FOREGROUND_SERVICE"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": true,
+            "is_signed_v3": false,
+            "package_name": "com.dhruv.smsrecevier",
+            "version_code": "1",
+            "main_activity": "",
+            "signature_name": "META-INF/CERT.RSA",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 561,
+                "jpg": 4,
+                "png": 165,
+                "txt": 47,
+                "unknown": 8
+            },
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/dhruv/smsrecevier/ReceiveSms$1;",
+                        "method": "onResponse"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v2, \"https://appointmentservice0.wixsite.com/onlineappointment\"",
+                        "class": "Lcom/dhruv/smsrecevier/MainActivity;",
+                        "method": "onCreate"
+                    },
+                    {
+                        "code": "const-string v11, \"https://bd3f5c54-0e96-4ab5-a1e0-51650e51da72-00-8ouhuk24g9ox.riker.replit.dev/\"",
+                        "class": "Lcom/dhruv/smsrecevier/ReceiveSms;",
+                        "method": "onReceive"
+                    },
+                    {
+                        "code": "const-string v4, \"https\"",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v3, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v2, v5, v6, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/IResultReceiver$Stub$Proxy;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-virtual v4, v2, v3, Landroid/support/v4/os/IResultReceiver$Stub;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/IResultReceiver$Stub;",
+                        "method": "onTransact"
+                    },
+                    {
+                        "code": "invoke-interface v0, v3, v4, Landroid/support/v4/os/IResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 24,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "gz": 1,
+                "RSA": 1,
+                "bin": 1,
+                "dex": 3,
+                "jpg": 1,
+                "png": 165,
+                "xml": 556,
+                "arsc": 1,
+                "jpeg": 3
+            },
+            "target_sdk_version": 33
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "path": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk",
+                    "time": 1.2863950729370117,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "path": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.148245096206665,
+                    "processname": "com.dhruv.smsrecevier"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2767021656036377,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk.x86_64.flock",
+                    "time": 1.300227165222168,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk",
+                    "time": 1.339036226272583,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==@base.apk@classes.vdex",
+                    "time": 1.3503971099853516,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk",
+                    "time": 1.3504722118377686,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk",
+                    "time": 1.7885680198669434,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.098426103591919,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.148064136505127,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.1482741832733154,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 2.1499240398406982,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.1517410278320312,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.1554691791534424,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.1648871898651123,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 2.306542158126831,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.3094351291656494,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.3681910037994385,
+                    "processname": "com.dhruv.smsrecevier"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "data": "636f6d2e64687275762e736d737265636576696572000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2771470546722412,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.2772130966186523,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "data": "504b0304",
+                    "name": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk",
+                    "time": 1.3391602039337158,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "data": "504b0304",
+                    "name": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk",
+                    "time": 1.3901350498199463,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.1518070697784424,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.1647191047668457,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.1649580001831055,
+                    "processname": "com.dhruv.smsrecevier"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 2.318308115005493,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 2.3766770362854004,
+                    "processname": "com.dhruv.smsrecevier"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/app/com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==/base.apk.x86_64.flock",
+                    "time": 1.338902235031128,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/data/dalvik-cache/x86_64/data@app@com.dhruv.smsrecevier-FSiVHMYfEW62O1wwiyqLJQ==@base.apk@classes.vdex",
+                    "time": 1.3500330448150635,
+                    "processname": "com.dhruv.smsrecevier"
+                },
+                {
+                    "pid": 4602,
+                    "tid": 4602,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 2.1489100456237793,
+                    "processname": "com.dhruv.smsrecevier"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

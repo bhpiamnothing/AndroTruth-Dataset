@@ -1,0 +1,287 @@
+{
+    "apk_info": {
+        "id": "bMo71eNAADKGxR3g",
+        "url": "https://developer.koodous.com/apks/c8e11945d045b763b51d84e681886c41e38b07064911edb2c59a6035f61d9615/",
+        "sha256": "c8e11945d045b763b51d84e681886c41e38b07064911edb2c59a6035f61d9615",
+        "md5": "8eb8170a6b0957ed4943daf6ba5c0f0a",
+        "sha1": "a3be7a062206c7dc01cb8f94b62364aee90f47c2",
+        "app": "Google Media Service",
+        "package_name": "com.android.media.pandora",
+        "company": "Baykanur",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2016/09/12/5f8cdbcf33e8d62900de924f4f4d23037a24a2327c1ca3c7fb09f035790008d1",
+        "size": 141790,
+        "tags": [
+            "sms-fraud",
+            "banker",
+            "trojan",
+            "telephony",
+            "fakeinst",
+            "smsagent",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -4,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 1,
+        "comments_count": 2,
+        "votes_count": 4,
+        "created_at": "2016-09-12T21:53:23+02:00",
+        "updated_at": "2025-05-28T11:16:14.555507+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "8eb8170a6b0957ed4943daf6ba5c0f0a",
+                    "sha1": "a3be7a062206c7dc01cb8f94b62364aee90f47c2",
+                    "size": 141790,
+                    "crc32": "3A43C915",
+                    "sha256": "c8e11945d045b763b51d84e681886c41e38b07064911edb2c59a6035f61d9615",
+                    "sha512": "1a7e8dd7b03d195fdca0e7b24c40fdfedbd3d61d507bdfebe688b6f92238560ec883b72f8d8695532d82f91bce18d00a263ee4b43f460437f8a7784c6f5cbd2d",
+                    "ssdeep": "3072:IYHy496Hy49XHy49/Hy49nWnfti0i0jHkeECv4U3XhhIy1sw7CLuoWb:jwJJIn1li0jEeLvf3Xh5awGGb"
+                },
+                "category": "file"
+            },
+            "network": {
+                "dns": [
+                    {
+                        "type": "A",
+                        "answers": [],
+                        "request": "pandora00.ru"
+                    },
+                    {
+                        "type": "A",
+                        "answers": [
+                            {
+                                "data": "23.253.126.58",
+                                "type": "A"
+                            }
+                        ],
+                        "request": "pandora00.ru"
+                    }
+                ],
+                "irc": [],
+                "http": [],
+                "smtp": [],
+                "hosts": [
+                    "23.253.126.58"
+                ],
+                "domains": [
+                    {
+                        "ip": "23.253.126.58",
+                        "domain": "pandora00.ru"
+                    }
+                ]
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "5dfb3dad3bb0c06eb765f0a3677544694f1dfec0935fbea8037ad8e2c38a92d6",
+                    "ssdeep": "6144:zB5ZG6pECWOcKSatpuEbIl5bp2PLnxUEtfdX8Rbn:fZG6pECWOcKSatpE5b425n"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "CHECK_OUTGOING_SMS",
+                "android.intent.action.MAIN",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "Google Media Service",
+            "services": [
+                "com.android.media.pandora.SocketService",
+                "com.android.media.pandora.OsmsService"
+            ],
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.android.media.pandora.BootReceiver",
+                "com.android.media.pandora.ConnectionChecker",
+                "com.android.media.pandora.MessageReceiver",
+                "com.android.media.pandora.UpdateReceiver",
+                "com.android.media.pandora.OutgoingSmsListener"
+            ],
+            "activities": [
+                "com.android.media.pandora.Player"
+            ],
+            "certificate": {
+                "sha1": "08293B7FE5D825B9B31C44CF5122D9DA97407BBE",
+                "serial": "64C1E7C5",
+                "issuerDN": "/C=ru/ST=Moscow/L=Korolyov/O=Baykanur/OU=astronaut/CN=Yuriy Gagarin",
+                "not_after": "Dec 19 19:13:05 2038 GMT",
+                "subjectDN": "/C=ru/ST=Moscow/L=Korolyov/O=Baykanur/OU=astronaut/CN=Yuriy Gagarin",
+                "not_before": "Dec 25 19:13:05 2013 GMT"
+            },
+            "permissions": [
+                "android.permission.SEND_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.WRITE_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.WAKE_LOCK",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.READ_SMS"
+            ],
+            "package_name": "com.android.media.pandora",
+            "version_code": "1",
+            "main_activity": "com.android.media.pandora.Player",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/android/media/pandora/c;",
+                        "method": "a"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/android/media/pandora/SocketService;",
+                        "method": "onCreate"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/media/pandora/BootReceiver;",
+                        "method": "onReceive"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/media/pandora/ConnectionChecker;",
+                        "method": "onReceive"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;",
+                        "class": "Lcom/android/media/pandora/ConnectionChecker;",
+                        "method": "onReceive"
+                    }
+                ],
+                "imsi": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;",
+                        "class": "Lcom/android/media/pandora/SocketService;",
+                        "method": "onCreate"
+                    }
+                ],
+                "iccid": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;",
+                        "class": "Lcom/android/media/pandora/SocketService;",
+                        "method": "onCreate"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v1, v0, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lb/a/b/d;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v1, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "La/a/c;",
+                        "method": "h"
+                    },
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "La/a/n;",
+                        "method": "run"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/android/media/pandora/SocketService;",
+                        "method": "onCreate"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 8,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 10
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "23.253.126.58",
+                    "hostname": "pandora00.ru"
+                }
+            ],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "path": "/data/app/com.android.media.pandora-1.apk",
+                    "time": 0.000533,
+                    "processname": "com.android.media.pandora"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "504b0506000000000c000c0045030000832602000000504b01021400140008080800378c9a430305ba813f0100008c0200001e00040000000000000000000000000000007265732f6c61796f75742f61637469766974795f706c617965722e786d6cfeca0000504b01021400140008080800378c9a436287247df6000000d001000013000000000000000000000000008f0100007265732f6d656e752f706c617965722e786d6c504b01021400140008080800378c9a436ddbbfe75d060000c01a00001300000000000000000000000000c6020000416e64726f69644d616e69666573742e786d6c504b01020a000a0000080000358c9a4338d2b1cfb0080000b00800000e00000000000000000000000000640900007265736f75726365732e61727363504b01020a000a0000080000304e9943dfd78de78b2b00008b2b00002100000000000000000000000000401200007265732f6472617761626c652d686470692f69635f6c61756e636865722e706e67504b01020a000a0000080000314e9943dfd78de78b2b00008b2b000021000000000000000000000000000b3e00007265732f6472617761626c652d6d6470692f69635f6c61756e636865722e706e67504b01020a000a0000080000314e9943dfd78de78b2b00008b2b00002200000000000000000000000000d76900007265732f6472617761626c652d786864",
+                    "name": "/data/app/com.android.media.pandora-1.apk",
+                    "time": 0.006426,
+                    "processname": "com.android.media.pandora"
+                }
+            ],
+            "libraries": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fileswritten": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "data": "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n<long name=\"time_last_checked\" value=\"1426266925095\" />\n</map>\n",
+                    "name": "/data/data/com.android.media.pandora/shared_prefs/adobepandora.xml",
+                    "time": 0.595877,
+                    "processname": "com.android.media.pandora"
+                }
+            ],
+            "servicestart": [
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "name": "com.android.media.pandora.SocketService",
+                    "time": 0.084669,
+                    "processname": "com.android.media.pandora"
+                },
+                {
+                    "pid": 844,
+                    "tid": 1073870640,
+                    "name": "com.android.media.pandora.OsmsService",
+                    "time": 0.104361,
+                    "processname": "com.android.media.pandora"
+                }
+            ]
+        }
+    }
+}

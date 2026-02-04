@@ -1,0 +1,305 @@
+{
+    "apk_info": {
+        "id": "Lv8yda7nXMVGEQ3q",
+        "url": "https://developer.koodous.com/apks/d9bc87ab45b0c786aa09f964a8101f6df7ea76895e2e8438c13935a356d9116b/",
+        "sha256": "d9bc87ab45b0c786aa09f964a8101f6df7ea76895e2e8438c13935a356d9116b",
+        "md5": "f9f2b86885ab5251b994c352de0c36d5",
+        "sha1": "343dd3f27a5d8d4d74242a4d97660c3462370946",
+        "app": "Privacy Titan",
+        "package_name": "com.privacytitan.android",
+        "company": "Google Inc.",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/3d/4e/3d4ee7e0afca6f1c8d2df9b5fd693a3f0e15a1d12ce17c75d9e6da2191c19c63",
+        "size": 1262105,
+        "tags": [
+            "dropper",
+            "brata",
+            "PlayStore",
+            "piom",
+            "banker",
+            "trojan",
+            "afub",
+            "andr"
+        ],
+        "is_trusted": false,
+        "is_installed": true,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 3,
+        "created_at": "2020-06-21T15:00:06+02:00",
+        "updated_at": "2025-05-29T11:48:45.915250+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "f9f2b86885ab5251b994c352de0c36d5",
+                    "name": "",
+                    "path": "",
+                    "sha1": "343dd3f27a5d8d4d74242a4d97660c3462370946",
+                    "size": 1262105,
+                    "type": "Zip archive data, at least v2.0 to extract",
+                    "yara": [],
+                    "crc32": "90F05A75",
+                    "sha256": "d9bc87ab45b0c786aa09f964a8101f6df7ea76895e2e8438c13935a356d9116b",
+                    "sha512": "d11394df3ec1db65e5c5230fa3df1873cc19be91290329f2f26eea671f653e1f568ce263c665e625d75062e96e07f84bd5b9df76a94af17fcb028d020a495d1f",
+                    "ssdeep": "24576:Acr08fO0Wlu2D0YOWtKeaRTw4wZXLikLp8I6SZIRHUlg2ApB92F:AMFtWNoYOCK3Rj7s8RS6Gg2AfUF"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "137566b2501dded655f376e689c843b0344ac43be374009cf55bbeaad7f2b197"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Privacy Titan",
+            "services": [
+                "com.privacytitan.IletesSvc",
+                "com.privacytitan.SlebekSvc",
+                "com.privacytitan.UndsipSvc"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.privacytitan.MainActivity",
+                "com.privacytitan.XretaoActivity",
+                "com.privacytitan.KroideActivity",
+                "com.privacytitan.WaxentActivity",
+                "com.privacytitan.WigrabActivity",
+                "com.privacytitan.JodampActivity"
+            ],
+            "certificate": {
+                "sha1": "1F09ADBEB5F061A9F9F415DB57B0AC74724013BB",
+                "serial": "54CCE9C8182FC24C739B0550186D5D410E9BD5C6",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_after": "Jun 4 04:58:11 2050 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Google Inc., OU = Android, CN = Android",
+                "not_before": "Jun 4 04:58:11 2020 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.INTERNET",
+                "android.permission.WAKE_LOCK"
+            ],
+            "package_name": "com.privacytitan.android",
+            "version_code": "4",
+            "main_activity": "com.privacytitan.MainActivity",
+            "signature_name": "META-INF/GOOGPLAY.RSA",
+            "functionalities": {
+                "imei": [
+                    {
+                        "code": "invoke-virtual v12, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "La/b/k/h;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "La/b/k/r;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/privacytitan/IletesSvc$a;",
+                        "method": "run"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "La/b/k/h$g;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "La/b/k/h$g;",
+                        "method": "e"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 24,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 29
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.5358638763427734,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/base.apk.x86_64.flock",
+                    "time": 1.597203016281128,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/oat/x86_64/base.vdex",
+                    "time": 1.620391845703125,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/base.apk",
+                    "time": 1.6243979930877686,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.6246778964996338,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.6359689235687256,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/oat/x86_64/base.art",
+                    "time": 1.6377768516540527,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/base.apk",
+                    "time": 1.6856000423431396,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4783,
+                    "name": "/data/user_de/0/com.privacytitan.android/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.9836740493774414,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4783,
+                    "name": "/dev/graphics/fb0",
+                    "time": 2.108170986175537,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4783,
+                    "name": "/dev/fb0",
+                    "time": 2.108228921890259,
+                    "processname": "com.privacytitan.android"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "data": "636f6d2e70726976616379746974616e2e616e64726f6964000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.536133050918579,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.5361700057983398,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "data": "504b0304",
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/base.apk",
+                    "time": 1.6245079040527344,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.6358048915863037,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.63771390914917,
+                    "processname": "com.privacytitan.android"
+                },
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "data": "6172740a3035360000803d78700301002df0509b00903e7800a03e7800e03e780070497800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000384e0000",
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/oat/x86_64/base.art",
+                    "time": 1.6415119171142578,
+                    "processname": "com.privacytitan.android"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4747,
+                    "tid": 4747,
+                    "name": "/data/app/com.privacytitan.android-n6CU-TuYNfsmIV9seYByjQ==/base.apk.x86_64.flock",
+                    "time": 1.5974650382995605,
+                    "processname": "com.privacytitan.android"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

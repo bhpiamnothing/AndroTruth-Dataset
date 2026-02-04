@@ -1,0 +1,582 @@
+{
+    "apk_info": {
+        "id": "J50l1mZ3kLRG3XrY",
+        "url": "https://developer.koodous.com/apks/48e7a7ee2cce1e2f2c3abd901a6a4965323e91d65cacdc445a5494d8bb3a9d06/",
+        "sha256": "48e7a7ee2cce1e2f2c3abd901a6a4965323e91d65cacdc445a5494d8bb3a9d06",
+        "md5": "c96f109fb8fd69795231c115dca1bbba",
+        "sha1": "fe8a8e885a95034a3c0b57462e18c9f49aa21c43",
+        "app": "MOF",
+        "package_name": "com.gniaanigdaaa.gniaanigdafz",
+        "company": "gigabud",
+        "version": "1.6.1",
+        "image": "https://developer.koodous.com/media/apk_images/2023/09/07/full_wallet_kny8VUb.png",
+        "size": 33955683,
+        "tags": [
+            "contains-elf",
+            "fakeapp",
+            "trojan",
+            "gigabud",
+            "flpv",
+            "sends-sms",
+            "reflection",
+            "checks-cpu-name",
+            "clipboard",
+            "telephony",
+            "runtime-modules",
+            "banker",
+            "obfuscated",
+            "checks-gps"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2023-09-07T18:36:11.095373+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27024/Thu Sep  7 07:40:44 2023",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "07.09.2023 12:15:01 (Build: 106306)",
+                    "result": "malicious",
+                    "signature": "Trojan-Rat.AndroidOS.Gigabud"
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2023-09-07T18:38:52.438985+02:00",
+        "matches_count": 10,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2023-09-07T18:36:08.851944+02:00",
+        "updated_at": "2024-10-16T17:19:09.628093+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "c96f109fb8fd69795231c115dca1bbba",
+                "name": "",
+                "path": "",
+                "sha1": "fe8a8e885a95034a3c0b57462e18c9f49aa21c43",
+                "size": 33955683,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "F7D6A5BD",
+                "sha256": "48e7a7ee2cce1e2f2c3abd901a6a4965323e91d65cacdc445a5494d8bb3a9d06",
+                "sha512": "e8cb04eab41c18930862af7aabe4c97710dc4c28175b578c4efb691af3b955685b2619ebe00b2547d1071cf2b78998760d8aff8257f91dae58c2bab25efae843",
+                "ssdeep": "786432:UiwpTpL85eKYL7AXNOKNLV0gfE69feFMZMNQ3yS5p:UfxpgU0kKN3lV0QMNHS5p"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://api.mofd2.cc",
+                "http://localhost/",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://mozilla.org/MPL/2.0/",
+                "https://cfg.flurry.com/sdk/v1/config",
+                "vnd.android.cursor.dir/contact",
+                "http://schemas.android.com/apk/res-auto",
+                "http://schemas.android.com/apk/res/android",
+                "https://data.flurry.com/v1/flr.do",
+                "http://www.example.com",
+                "https://api.login.yahoo.com/oauth2/device_session"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "17b7aaf7a40d596a5f989932dd7dcfaae4f92fe715261642125218efd2fbcc55"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "com.xingchat.android.close.dialog",
+                "com.xingchat.android.show.dialog",
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "MOF",
+            "services": [
+                "com.blankj.utilcode.util.MessengerUtils$ServerService",
+                "com.xingchat.android.controller.OpenService",
+                "com.xingchat.android.controller.TouchAccessibilityService",
+                "com.xingchat.android.floatwindow.FloatWindowService",
+                "com.xingchat.android.floatwindow.LightFloatWindowService",
+                "com.xingchat.android.record.CameraService",
+                "com.xingchat.android.record.CameraServiceTest",
+                "com.xingchat.android.record.ScreenRecordService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.core.content.FileProvider",
+                "com.blankj.utilcode.util.UtilsFileProvider",
+                "com.flurry.android.agent.FlurryContentProvider",
+                "com.lzf.easyfloat.EasyFloatInitializer"
+            ],
+            "receivers": [
+                "com.xingchat.android.receiver.GlobalBroadcast"
+            ],
+            "activities": [
+                "cn.hx.plugin.ui.ucpmba0.Cysvta0Activity",
+                "cn.hx.plugin.ui.ucpmba0.Aajkeb1Activity",
+                "cn.hx.plugin.ui.ucpmba0.Xhdqyc2Activity",
+                "cn.hx.plugin.ui.jxwetb1.Fcmcba0Activity",
+                "cn.hx.plugin.ui.jxwetb1.Atsywb1Activity",
+                "cn.hx.plugin.ui.jxwetb1.Ijowmc2Activity",
+                "cn.hx.plugin.ui.tjshsc2.Jnihea0Activity",
+                "cn.hx.plugin.ui.tjshsc2.Pgzjwb1Activity",
+                "cn.hx.plugin.ui.tjshsc2.Ignxtc2Activity",
+                "cn.hx.plugin.ui.napqvd3.Fpiuha0Activity",
+                "cn.hx.plugin.ui.napqvd3.Ikbozb1Activity",
+                "cn.hx.plugin.ui.napqvd3.Udtrac2Activity",
+                "cn.hx.plugin.ui.ahlmqe4.Iwltna0Activity",
+                "cn.hx.plugin.ui.ahlmqe4.Tjkzfb1Activity",
+                "cn.hx.plugin.ui.ahlmqe4.Xmmyfc2Activity",
+                "cn.hx.plugin.ui.vnrwgf5.Vlawna0Activity",
+                "cn.hx.plugin.ui.vnrwgf5.Cmwfmb1Activity",
+                "cn.hx.plugin.ui.vnrwgf5.Eeuhec2Activity",
+                "cn.hx.plugin.ui.pahgig6.Qifeda0Activity",
+                "cn.hx.plugin.ui.pahgig6.Bcypzb1Activity",
+                "cn.hx.plugin.ui.pahgig6.Rrdsxc2Activity",
+                "cn.hx.plugin.ui.vtfegh7.Ymmgja0Activity",
+                "cn.hx.plugin.ui.vtfegh7.Zmpeib1Activity",
+                "cn.hx.plugin.ui.vtfegh7.Zacamc2Activity",
+                "cn.hx.plugin.ui.olyjai8.Wedmza0Activity",
+                "cn.hx.plugin.ui.olyjai8.Anmlyb1Activity",
+                "cn.hx.plugin.ui.olyjai8.Oadlnc2Activity",
+                "cn.hx.plugin.ui.hbclzj9.Qqweba0Activity",
+                "cn.hx.plugin.ui.hbclzj9.Bsqirb1Activity",
+                "cn.hx.plugin.ui.hbclzj9.Efegoc2Activity",
+                "cn.hx.plugin.ui.pygddk10.Fvlmha0Activity",
+                "cn.hx.plugin.ui.pygddk10.Hfbirb1Activity",
+                "cn.hx.plugin.ui.pygddk10.Bknnnc2Activity",
+                "cn.hx.plugin.ui.uqlhrl11.Fdpuba0Activity",
+                "cn.hx.plugin.ui.uqlhrl11.Meftub1Activity",
+                "cn.hx.plugin.ui.uqlhrl11.Knporc2Activity",
+                "cn.hx.plugin.ui.erchvm12.Kiykga0Activity",
+                "cn.hx.plugin.ui.erchvm12.Jrnjtb1Activity",
+                "cn.hx.plugin.ui.erchvm12.Dplftc2Activity",
+                "cn.hx.plugin.ui.tjrzrn13.Qiueua0Activity",
+                "cn.hx.plugin.ui.tjrzrn13.Antglb1Activity",
+                "cn.hx.plugin.ui.tjrzrn13.Wsarmc2Activity",
+                "cn.hx.plugin.ui.fjzxgo14.Hkwfoa0Activity",
+                "cn.hx.plugin.ui.fjzxgo14.Nbxeab1Activity",
+                "cn.hx.plugin.ui.fjzxgo14.Iquinc2Activity",
+                "cn.hx.plugin.ui.rbsccp15.Gxsqha0Activity",
+                "cn.hx.plugin.ui.rbsccp15.Tfentb1Activity",
+                "cn.hx.plugin.ui.rbsccp15.Phaklc2Activity",
+                "cn.hx.plugin.ui.zjrfzq16.Yarqma0Activity",
+                "cn.hx.plugin.ui.zjrfzq16.Wnsvnb1Activity",
+                "cn.hx.plugin.ui.zjrfzq16.Rhnkuc2Activity",
+                "cn.hx.plugin.ui.slmdqr17.Tqddoa0Activity",
+                "cn.hx.plugin.ui.slmdqr17.Pftulb1Activity",
+                "cn.hx.plugin.ui.slmdqr17.Jsigwc2Activity",
+                "cn.hx.plugin.ui.mhigns18.Hrcqpa0Activity",
+                "cn.hx.plugin.ui.mhigns18.Rdfpyb1Activity",
+                "cn.hx.plugin.ui.mhigns18.Wvcekc2Activity",
+                "cn.hx.plugin.ui.ylqlrt19.Qdixfa0Activity",
+                "cn.hx.plugin.ui.ylqlrt19.Sbhtbb1Activity",
+                "cn.hx.plugin.ui.ylqlrt19.Fsvsjc2Activity",
+                "cn.hx.plugin.ui.cgqfgu20.Dkbawa0Activity",
+                "cn.hx.plugin.ui.cgqfgu20.Mfokab1Activity",
+                "cn.hx.plugin.ui.cgqfgu20.Idpsdc2Activity",
+                "cn.hx.plugin.ui.xnjztv21.Pwzbfa0Activity",
+                "cn.hx.plugin.ui.xnjztv21.Hwyhqb1Activity",
+                "cn.hx.plugin.ui.xnjztv21.Scjbic2Activity",
+                "cn.hx.plugin.ui.hiicrw22.Zvubma0Activity",
+                "cn.hx.plugin.ui.hiicrw22.Cxdpzb1Activity",
+                "cn.hx.plugin.ui.hiicrw22.Nistpc2Activity",
+                "cn.hx.plugin.ui.zsbhrx23.Yypvba0Activity",
+                "cn.hx.plugin.ui.zsbhrx23.Wsohnb1Activity",
+                "cn.hx.plugin.ui.zsbhrx23.Frmghc2Activity",
+                "cn.hx.plugin.ui.uhczqy24.Pdjmpa0Activity",
+                "cn.hx.plugin.ui.uhczqy24.Tfrkjb1Activity",
+                "cn.hx.plugin.ui.uhczqy24.Hgsngc2Activity",
+                "cn.hx.plugin.ui.mgihpz25.Orjrsa0Activity",
+                "cn.hx.plugin.ui.mgihpz25.Uyixdb1Activity",
+                "cn.hx.plugin.ui.mgihpz25.Buijkc2Activity",
+                "cn.hx.plugin.ui.srogiab26.Moapha0Activity",
+                "cn.hx.plugin.ui.srogiab26.Vqfvub1Activity",
+                "cn.hx.plugin.ui.srogiab26.Pdjktc2Activity",
+                "cn.hx.plugin.ui.opbpgbb27.Tgaeaa0Activity",
+                "cn.hx.plugin.ui.opbpgbb27.Rmepab1Activity",
+                "cn.hx.plugin.ui.opbpgbb27.Gzamyc2Activity",
+                "cn.hx.plugin.ui.ydpptcb28.Jlvvga0Activity",
+                "cn.hx.plugin.ui.ydpptcb28.Yrinrb1Activity",
+                "cn.hx.plugin.ui.ydpptcb28.Jgfdmc2Activity",
+                "cn.hx.plugin.ui.weysddb29.Aiqpna0Activity",
+                "cn.hx.plugin.ui.weysddb29.Tllajb1Activity",
+                "cn.hx.plugin.ui.weysddb29.Jxufkc2Activity",
+                "com.xingchat.android.activity.SplashActivity",
+                "com.xingchat.android.activity.MainActivity",
+                "com.xingchat.android.activity.SettingActivity",
+                "com.xingchat.android.activity.LoginActivity",
+                "com.xingchat.android.activity.AboutUsActivity",
+                "com.xingchat.android.activity.SettingInquirePwdActivity",
+                "com.xingchat.android.activity.SettingSafePwdActivity",
+                "com.xingchat.android.activity.CheckPermissionActivity",
+                "com.xingchat.android.activity.ActivationActivity",
+                "com.xingchat.android.activity.WaitCheckActivity",
+                "com.xingchat.android.activity.TransplentPermissionActivity",
+                "com.blankj.utilcode.util.UtilsTransActivity4MainProcess",
+                "com.blankj.utilcode.util.UtilsTransActivity",
+                "com.common.lib.activity.PhotoPreviewActivity",
+                "com.common.lib.activity.CameraActivity",
+                "com.common.lib.activity.BasePermissionActivity"
+            ],
+            "certificate": {
+                "sha1": "E0552BB14671AF82495E0DE3DC6B5B6205DE9E50",
+                "serial": "1",
+                "issuerDN": "CN = gigabud, OU = gigabud, O = gigabud, L = gigabud, ST = gigabud, C = cn",
+                "not_after": "Aug 5 20:21:06 2048 GMT",
+                "subjectDN": "CN = gigabud, OU = gigabud, O = gigabud, L = gigabud, ST = gigabud, C = cn",
+                "not_before": "Aug 12 20:21:06 2023 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_FINE_LOCATION",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.ACCESS_NOTIFICATION_POLICY",
+                "android.permission.ACCESS_WIFI_STATE",
+                "android.permission.BIND_ACCESSIBILITY_SERVICE",
+                "android.permission.CAMERA",
+                "android.permission.CHANGE_NETWORK_STATE",
+                "android.permission.DISABLE_KEYGUARD",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.GET_INSTALLED_APPS",
+                "android.permission.INTERNET",
+                "android.permission.MODIFY_AUDIO_SETTINGS",
+                "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+                "android.permission.QUERY_ALL_PACKAGES",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECORD_AUDIO",
+                "android.permission.REQUEST_DELETE_PACKAGES",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.REQUEST_INSTALL_PACKAGES",
+                "android.permission.SEND_SMS",
+                "android.permission.SYSTEM_ALERT_WINDOW",
+                "android.permission.SYSTEM_OVERLAY_WINDOW",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.WRITE_SETTINGS"
+            ],
+            "package_name": "com.gniaanigdaaa.gniaanigdafz",
+            "version_code": "161",
+            "main_activity": "com.xingchat.android.activity.SplashActivity",
+            "signature_name": "META-INF/KEY1.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lv2/o;",
+                        "method": "n"
+                    }
+                ],
+                "mcc": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/flurry/sdk/av;",
+                        "method": "getCellularData"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;",
+                        "class": "Lcom/flurry/sdk/gy;",
+                        "method": "a"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v4, 'https'",
+                        "class": "Landroidx/core/net/UriCompat;",
+                        "method": "toSafeString"
+                    },
+                    {
+                        "code": "const-string v4, 'https://'",
+                        "class": "Landroidx/core/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v4, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroidx/core/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroidx/appcompat/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "camera": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lcom/common/lib/camera/view/CameraGLSurfaceView;",
+                        "method": "u"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lh0/a;",
+                        "method": "g"
+                    },
+                    {
+                        "code": "invoke-virtual v5, Landroid/hardware/Camera;->startPreview()V",
+                        "class": "Lh0/a;",
+                        "method": "onSurfaceCreated"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Landroidx/core/content/pm/PackageInfoCompat;",
+                        "method": "computeSHA256Digest"
+                    },
+                    {
+                        "code": "invoke-virtual v3, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/flurry/android/FlurryPrivacySession$Request;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "invoke-virtual v2, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/flurry/sdk/df;",
+                        "method": "a"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v2, v3, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/a;)V",
+                        "class": "Landroidx/core/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, Landroidx/core/provider/FontRequestWorker$2;->accept(Landroidx/core/provider/FontRequestWorker$TypefaceResult;)V",
+                        "class": "Landroidx/core/provider/FontRequestWorker$2;",
+                        "method": "accept"
+                    },
+                    {
+                        "code": "invoke-interface v1, v5, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V",
+                        "class": "Landroidx/core/provider/FontRequestWorker$4;",
+                        "method": "accept"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "La2/f;",
+                        "method": "g"
+                    },
+                    {
+                        "code": "invoke-virtual v3, v4, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "La2/f;",
+                        "method": "g"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/blankj/utilcode/util/o;",
+                        "method": "g"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/flurry/sdk/ar;",
+                        "method": "<init>"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 26,
+            "new_permissions": [],
+            "displayed_version": "1.6.1",
+            "target_sdk_version": 32
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/proc/self/cmdline",
+                    "time": 2.8627121448516846,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/base.apk.x86.flock",
+                    "time": 2.9148499965667725,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/oat/x86/base.vdex",
+                    "time": 2.9466161727905273,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/base.apk",
+                    "time": 2.953442096710205,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/system/framework/x86/boot.art",
+                    "time": 2.9602420330047607,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/dalvik-cache/x86/system@framework@boot.art",
+                    "time": 2.967895030975342,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/oat/x86/base.art",
+                    "time": 2.9739060401916504,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/base.apk",
+                    "time": 3.172865152359009,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/lib/arm/libnative-lib.so",
+                    "time": 3.965036153793335,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "data": "636f6d2e676e6961616e6967646161612e676e6961616e69676461667a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.864506959915161,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 2.865302085876465,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "data": "504b0304",
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/base.apk",
+                    "time": 2.9546051025390625,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "data": "6172740a303536000000007044a423004d7dcf7d0010e3700020e370e5532a710070727100000000000000000000000000000000000000005854007004000000010000000000000000000000e01e1200e01e1200e0060200c0251400503f0a00f0fe20008ca8000010651e00f0fb010000612000f09d000080a7210000a00000005022006800010068502300dc53000000b0230000500000f0fe2070000000000cff20700000000028ff20700000000044ff20700000000060ff2070000000007cff20700000000098ff207000000000b4ff207000000000d0ff207000000000000000005ca32300",
+                    "name": "/system/framework/x86/boot.art",
+                    "time": 2.964022159576416,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "data": "6172740a3035360000c0767044a423004d7dcf7d00d0597100e05971e513a1710030e9710000000000000000000000000000000000c076005814777004000000010000000000000000000000e01e1200e01e1200e0060200c0251400503f0a00f0fe20008ca8000010651e00f0fb010000612000f09d000080a7210000a00000005022006800010068502300dc53000000b0230000500000f0be9770000000000cbf97700000000028bf97700000000044bf97700000000060bf9770000000007cbf97700000000098bf977000000000b4bf977000000000d0bf977000000000000000005ca32300",
+                    "name": "/data/dalvik-cache/x86/system@framework@boot.art",
+                    "time": 2.9700591564178467,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                },
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "data": "6172740a303536000040ff7828cf0000d2ca4e5b0010007900200079f118027900e07b7900c07670900fe30000e0597114b1a403000000005041ff7804000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000a00000e0a30000c80f0000a8b30000801b000000d0000000100000f0be9770000000000cbf97700000000028bf97700000000044bf97700000000060bf9770000000007cbf97700000000098bf977000000000b4bf977000000000d0bf9770000000000100000003710000",
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/oat/x86/base.art",
+                    "time": 2.9779391288757324,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/lib/arm/libnative-lib.so",
+                    "time": 4.084861993789673,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5473,
+                    "tid": 5473,
+                    "name": "/data/app/com.gniaanigdaaa.gniaanigdafz-eL2XB6llB93E_5Z5p-XETA==/base.apk.x86.flock",
+                    "time": 2.9149630069732666,
+                    "processname": "com.gniaanigdaaa.gniaanigdafz"
+                }
+            ],
+            "fileswritten": [],
+            "servicestart": []
+        }
+    }
+}

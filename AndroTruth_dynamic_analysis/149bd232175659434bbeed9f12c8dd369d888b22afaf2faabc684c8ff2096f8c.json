@@ -1,0 +1,614 @@
+{
+    "apk_info": {
+        "id": "4Dr7OKePJ3R1gKv8",
+        "url": "https://developer.koodous.com/apks/149bd232175659434bbeed9f12c8dd369d888b22afaf2faabc684c8ff2096f8c/",
+        "sha256": "149bd232175659434bbeed9f12c8dd369d888b22afaf2faabc684c8ff2096f8c",
+        "md5": "a097e2b3ec5496dd18b34c9344b5b231",
+        "sha1": "d92439fcdba8d468b2b6d64d0542c48c41b99abc",
+        "app": "gov24",
+        "package_name": "com.douyin.softwareapp",
+        "company": "kimzhudong",
+        "version": "3.4.2-release",
+        "image": "https://developer.koodous.com/media/apk_images/2024/07/02/generic_image_XPM0rHZ.png",
+        "size": 8903265,
+        "tags": [
+            "bfmj",
+            "telephony",
+            "reflection",
+            "sends-sms",
+            "trojan",
+            "piom",
+            "yyxdv",
+            "smsspy",
+            "zip"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": 0,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-07-02T08:34:42.781320+02:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.3.1/27323/Mon Jul  1 08:40:06 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "01.07.2024 18:20:26 (Build: 107206)",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 0,
+        "created_at": "2024-07-02T08:34:40.735760+02:00",
+        "updated_at": "2025-05-19T04:14:42.830736+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "a097e2b3ec5496dd18b34c9344b5b231",
+                "name": "",
+                "path": "",
+                "sha1": "d92439fcdba8d468b2b6d64d0542c48c41b99abc",
+                "size": 8903265,
+                "type": "Android package (APK), with gradle app-metadata.properties",
+                "yara": [],
+                "crc32": "DCBB92E1",
+                "sha256": "149bd232175659434bbeed9f12c8dd369d888b22afaf2faabc684c8ff2096f8c",
+                "sha512": "45b400ea85aa225dfaeee7c0ad108b3d27b15ab633a003fe8d767df7162544e4a661083041e76587f79f841a36e63e59b55ef8bf3f15848d65d30d21862a83f2",
+                "ssdeep": "196608:JH6fslAGOGD+ZAeZx2S7cRrFXKe+rof8n7DLH:lwslAPTAeZxeFXWr+o"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://goo.gle/compose-feedback",
+                "https://www.slf4j.org/codes.html#substituteLogger",
+                "https://www.slf4j.org/codes.html#ignoredBindings",
+                "https://www.slf4j.org/codes.html#multiple_bindings",
+                "http://schemas.android.com/apk/res-auto",
+                "https://youtrack.jetbrains.com/issue/KT-46465",
+                "http://schemas.android.com/aapt",
+                "https://www.slf4j.org/codes.html#version_mismatch",
+                "https://www.slf4j.org/codes.html#unsuccessfulInit",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "http://schemas.android.com/apk/res/android",
+                "https://github.com/TooTallNate/Java-WebSocket/wiki/Lost-connection-detection",
+                "https://gov24.me/gov24.html",
+                "https://mozilla.org/MPL/2.0/",
+                "https://www.slf4j.org/codes.html#loggerNameMismatch",
+                "https://www.slf4j.org/codes.html#replay",
+                "https://www.slf4j.org/codes.html#noProviders"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "2fc24012098e50a55c656258082ae687c8e0b35ff4512dc20bfc3b0d72a7af2e"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "androidx.profileinstaller.action.BENCHMARK_OPERATION",
+                "androidx.profileinstaller.action.SAVE_PROFILE",
+                "androidx.profileinstaller.action.INSTALL_PROFILE",
+                "android.intent.action.BOOT_COMPLETED",
+                "androidx.profileinstaller.action.SKIP_FILE",
+                "android.intent.action.MAIN",
+                "android.net.conn.CONNECTIVITY_CHANGE",
+                "android.provider.Telephony.SMS_RECEIVED"
+            ],
+            "app_name": "gov24",
+            "services": [
+                "com.douyin.softwareapp.WebSocketService",
+                "com.douyin.softwareapp.WebSocketJobService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.startup.InitializationProvider"
+            ],
+            "receivers": [
+                "com.douyin.softwareapp.NetworkChangeReceiver",
+                "com.douyin.softwareapp.SmsBroadcastReceiver",
+                "com.douyin.softwareapp.BootBroadcastReceiver",
+                "androidx.profileinstaller.ProfileInstallReceiver"
+            ],
+            "activities": [
+                "com.douyin.softwareapp.MainActivity",
+                "com.douyin.softwareapp.LauncherActivity"
+            ],
+            "certificate": {
+                "sha1": "7CAB34ABCF56A94D2685BFAACA5EC3C4A4AD4315",
+                "serial": "13203F42CA444B3D",
+                "sha256": "F871C4DF087918F6AE820092A1A3FFFBF03D7C27FBE4F846F12564DD59E890B3",
+                "issuerDN": "C = china, ST = liaolingsheng, L = dalianshi, O = kimzhudong, OU = kimzhudong, CN = kim",
+                "not_after": "Nov 17 20:03:18 2051 GMT",
+                "subjectDN": "C = china, ST = liaolingsheng, L = dalianshi, O = kimzhudong, OU = kimzhudong, CN = kim",
+                "not_before": "Jul 01 20:03:18 2024 GMT",
+                "hash_algorithm": "sha384",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.RECEIVE_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "com.douyin.softwareapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+                "android.permission.READ_SMS",
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.SEND_SMS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.ACCESS_MEDIA_LOCATION",
+                "android.permission.POST_NOTIFICATIONS",
+                "android.permission.INTERNET",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+                "android.permission.READ_MEDIA_IMAGES",
+                "android.permission.READ_PHONE_NUMBERS"
+            ],
+            "is_signed_v1": false,
+            "is_signed_v2": true,
+            "is_signed_v3": false,
+            "package_name": "com.douyin.softwareapp",
+            "version_code": "1",
+            "main_activity": "com.douyin.softwareapp.MainActivity",
+            "signature_name": "",
+            "files_by_format": {
+                "gz": 1,
+                "bin": 618,
+                "png": 243,
+                "txt": 70,
+                "json": 1,
+                "webp": 31,
+                "unknown": 8
+            },
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v1 ... v6, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V",
+                        "class": "Lcom/douyin/softwareapp/WebSocketService;",
+                        "method": "access$sendSms"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v0, \"See https://www.slf4j.org/codes.html#noProviders for further details.\"",
+                        "class": "La52;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v0, \"See https://www.slf4j.org/codes.html#version_mismatch for further details.\"",
+                        "class": "La52;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "const-string v0, \"See also https://www.slf4j.org/codes.html#replay\"",
+                        "class": "La52;",
+                        "method": "c"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Le84;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v13, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Lni;",
+                        "method": "y"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Lxn4;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v4, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lokio/ByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "invoke-virtual v7, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lokio/SegmentedByteString;",
+                        "method": "digest$okio"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v2, Ljava/security/MessageDigest;->digest([B)[B",
+                        "class": "Lorg/java_websocket/drafts/Draft_6455;",
+                        "method": "generateFinalKey"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-interface v0, v3, v4, Lyk1;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v4/os/ResultReceiver;",
+                        "method": "send"
+                    },
+                    {
+                        "code": "invoke-interface v4, v2, Lokhttp3/WebSocket;->send(Ljava/lang/String;)Z",
+                        "class": "Lcom/douyin/softwareapp/SmsBroadcastReceiver;",
+                        "method": "onReceive"
+                    },
+                    {
+                        "code": "invoke-interface v1, v0, Lokhttp3/WebSocket;->send(Ljava/lang/String;)Z",
+                        "class": "Lcom/douyin/softwareapp/WebSocketService;",
+                        "method": "access$fetchAllMessages"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lokio/SegmentPool;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lu04;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lorg/java_websocket/server/WebSocketServer;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/douyin/softwareapp/WebSocketService;",
+                        "method": "onCreate"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v6, v7, v8, v9, v10, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler;)Landroid/content/Intent;",
+                        "class": "Lef0;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Lef0;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual/range v0 ... v5, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter; Ljava/lang/String; Landroid/os/Handler; I)Landroid/content/Intent;",
+                        "class": "Lhf0;",
+                        "method": "a"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 28,
+            "new_permissions": [
+                "com.douyin.softwareapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            ],
+            "displayed_version": "3.4.2-release",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "gz": 1,
+                "bin": 1,
+                "dex": 1,
+                "png": 243,
+                "xml": 614,
+                "arsc": 1,
+                "json": 1,
+                "prof": 1,
+                "webp": 31,
+                "profm": 1
+            },
+            "target_sdk_version": 34
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3392879962921143,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/base.apk.x86_64.flock",
+                    "time": 1.370877981185913,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/oat/x86_64/base.vdex",
+                    "time": 1.3718039989471436,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/base.apk",
+                    "time": 1.3770978450775146,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/base.apk",
+                    "time": 1.3833339214324951,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3836889266967773,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.3865718841552734,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/oat/x86_64/base.art",
+                    "time": 1.3873507976531982,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/base.apk",
+                    "time": 1.4051527976989746,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.9892139434814453,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 1.9943008422851562,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 1.9948627948760986,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.vdex",
+                    "time": 1.9985218048095703,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.0004518032073975,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.0082437992095947,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.012462854385376,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/dalvik-cache/x86_64/system@app@Chrome@Chrome.apk@classes.art",
+                    "time": 2.0128538608551025,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/local/tmp/webview-command-line",
+                    "time": 2.790264844894409,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.8225979804992676,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 3.2267868518829346,
+                    "processname": "com.douyin.softwareapp"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "636f6d2e646f7579696e2e736f6674776172656170700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3396258354187012,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.339660882949829,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "504b0304",
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/base.apk",
+                    "time": 1.377140998840332,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "504b0304",
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/base.apk",
+                    "time": 1.3834288120269775,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3864128589630127,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.3867499828338623,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "6172740a3035360000803d78280f01007c5d978400903e7800a03e78008040780030417800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000801b00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000004d710000",
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/oat/x86_64/base.art",
+                    "time": 1.3878488540649414,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "504b0304",
+                    "name": "/system/app/Chrome/Chrome.apk",
+                    "time": 2.0006179809570312,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 2.011741876602173,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.012659788131714,
+                    "processname": "com.douyin.softwareapp"
+                }
+            ],
+            "libraries": [
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/app/Chrome/Chrome.apk!/lib/x86_64/libmonochrome_base.so",
+                    "time": 3.2022409439086914,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/lib64/libwebviewchromium_plat_support.so",
+                    "time": 3.2338929176330566,
+                    "processname": "com.douyin.softwareapp"
+                }
+            ],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/data/app/com.douyin.softwareapp-Z7PnkuU9JXpcffJWROd5VQ==/base.apk.x86_64.flock",
+                    "time": 1.3711349964141846,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4764,
+                    "name": "/system/app/Chrome/Chrome.apk.x86_64.flock",
+                    "time": 1.9974219799041748,
+                    "processname": "com.douyin.softwareapp"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 4764,
+                    "tid": 4845,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.820261001586914,
+                    "processname": "com.douyin.softwareapp"
+                },
+                {
+                    "pid": 4764,
+                    "tid": 4845,
+                    "data": "3430303030303030",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 2.82077693939209,
+                    "processname": "com.douyin.softwareapp"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

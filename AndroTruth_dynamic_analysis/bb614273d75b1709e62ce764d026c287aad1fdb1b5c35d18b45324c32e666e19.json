@@ -1,0 +1,479 @@
+{
+    "apk_info": {
+        "id": "Dx5ydBPb0K2GnQ63",
+        "url": "https://developer.koodous.com/apks/bb614273d75b1709e62ce764d026c287aad1fdb1b5c35d18b45324c32e666e19/",
+        "sha256": "bb614273d75b1709e62ce764d026c287aad1fdb1b5c35d18b45324c32e666e19",
+        "md5": "56287388c7033aae8938a578ee0d10fa",
+        "sha1": "493a5a5626e42bc66abd2edc7aa38062ae98c32a",
+        "app": "스윗톡",
+        "package_name": "com.milk.shots",
+        "company": "Android",
+        "version": "4.2.0",
+        "image": null,
+        "size": 3462143,
+        "tags": [
+            "trojan",
+            "fakeapp",
+            "runtime-modules",
+            "reflection",
+            "checks-gps",
+            "obfuscated",
+            "ttgro",
+            "telephony",
+            "spyware",
+            "smsagent",
+            "fsfg"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-04-27T01:39:03.239921+02:00",
+            "results": [
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "malicious",
+                    "signature": "detected"
+                },
+                {
+                    "antivirus": "ClamAv",
+                    "version": "",
+                    "result": "",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "",
+                    "result": "",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-04-27T01:38:34.161449+02:00",
+        "matches_count": 4,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2023-10-23T16:10:23.954977+02:00",
+        "updated_at": "2024-08-12T22:02:51.483571+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "56287388c7033aae8938a578ee0d10fa",
+                "name": "",
+                "path": "",
+                "sha1": "493a5a5626e42bc66abd2edc7aa38062ae98c32a",
+                "size": 3462143,
+                "type": "Zip archive data, at least v2.0 to extract",
+                "yara": [],
+                "crc32": "3AAC7562",
+                "sha256": "bb614273d75b1709e62ce764d026c287aad1fdb1b5c35d18b45324c32e666e19",
+                "sha512": "c8b8da571ad44f4f9efc9fb094395ee99ee782d400709c4665d09fdf3b6b4c5a839e6ee84725a9bea21fa898a4b20a700c492d9eb1fd3f56890e6c7e3613d033",
+                "ssdeep": "49152:R46BvqunDbjPsBS9ivGz3CihyvI7spfiE2q9s/GdgZogLCrj+H:RHTrPmS9cGz3OvI4aE2sgLCrjg"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "https://mozilla.org/MPL/2.0/",
+                "https://publicsuffix.org/list/public_suffix_list.dat",
+                "https://api.sweetchat23.com/api/getlogintoken",
+                "http://schemas.android.com/apk/res-auto",
+                "http://schemas.android.com/apk/res/android",
+                "https://onenumsource.com/PRISM_Onboarding_Clean.mp4",
+                "http://ns.adobe.com/xap/1.0/"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "7ac4bec209b1776e5d143f3e7c0c6f4ebeb9266675a3ce54b14c00dedbdb8fca"
+                },
+                "classes2": {
+                    "sha256": "9c5ed864236f24e19dbfe5305606bf42257659b18d019489064c937d750f5689"
+                },
+                "classes3": {
+                    "sha256": "c519261317da15f7739231660ec00fa5f277a915cb2f50c217b0b3ad2ebb29fd"
+                },
+                "classes4": {
+                    "sha256": "b69d1ed491783749b3388ecd059e25091168904a1febbe0b50e095c111704672"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "스윗톡",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [
+                "androidx.startup.InitializationProvider"
+            ],
+            "receivers": [],
+            "activities": [
+                "com.milk.shots.MainActivity",
+                "com.milk.shots.ui.LoginActivity",
+                "com.milk.shots.ui.StartActivity"
+            ],
+            "certificate": {
+                "sha1": "",
+                "serial": "",
+                "issuerDN": "",
+                "not_after": "",
+                "subjectDN": "",
+                "not_before": ""
+            },
+            "permissions": [
+                "android.permission.INTERNET",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "com.milk.shots.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            ],
+            "package_name": "com.milk.shots",
+            "version_code": "420",
+            "main_activity": "com.milk.shots.MainActivity",
+            "signature_name": "",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "iget-object v0, v1, Lcom/milk/shots/bean/NewSms$ContentBean;->sms_body Ljava/lang/String;",
+                        "class": "Lcom/milk/shots/bean/NewSms$ContentBean;",
+                        "method": "getSmsbody"
+                    },
+                    {
+                        "code": "iput-object v1, v0, Lcom/milk/shots/bean/NewSms$ContentBean;->sms_body Ljava/lang/String;",
+                        "class": "Lcom/milk/shots/bean/NewSms$ContentBean;",
+                        "method": "setSmsbody"
+                    }
+                ],
+                "ssl": [
+                    {
+                        "code": "const-string v5, 'https'",
+                        "class": "Ls3/a;",
+                        "method": "<init>"
+                    },
+                    {
+                        "code": "const-string v5, 'https:'",
+                        "class": "Ls3/q;",
+                        "method": "c"
+                    },
+                    {
+                        "code": "const-string v3, 'https'",
+                        "class": "Ls3/q;",
+                        "method": "c"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v14, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Ld/h0;",
+                        "method": "I"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Ld/t0;",
+                        "method": "i"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Ld/y0;",
+                        "method": "i"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v4, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lf4/h;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Landroidx/appcompat/widget/a0;",
+                        "method": "v"
+                    },
+                    {
+                        "code": "invoke-virtual v8, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lf4/q;",
+                        "method": "b"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v8, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lcom/bumptech/glide/load/data/l;",
+                        "method": "f"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/bumptech/glide/b;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/bumptech/glide/b;",
+                        "method": "b"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lf4/p;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/milk/shots/ui/StartActivity;",
+                        "method": "getDeviceInfo"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Ld/e0;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Ld/e0;",
+                        "method": "g"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 26,
+            "new_permissions": [
+                "com.milk.shots.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            ],
+            "displayed_version": "4.2.0",
+            "target_sdk_version": 33
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [
+                {
+                    "ip": "",
+                    "domain": "onenumsource.com",
+                    "hostname": "onenumsource.com"
+                }
+            ],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.3813161849975586,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/base.apk.x86_64.flock",
+                    "time": 1.3841850757598877,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/oat/x86_64/base.vdex",
+                    "time": 1.386634111404419,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/base.apk",
+                    "time": 1.3876371383666992,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3878490924835205,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.3881020545959473,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/oat/x86_64/base.art",
+                    "time": 1.3882660865783691,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/base.apk",
+                    "time": 1.4023351669311523,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5611,
+                    "name": "/data/user_de/0/com.milk.shots/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.5295040607452393,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5611,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.6886281967163086,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5611,
+                    "name": "/dev/fb0",
+                    "time": 1.6892170906066895,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5607,
+                    "name": "/data/misc/profiles/cur/0/com.milk.shots/primary.prof",
+                    "time": 48.12987017631531,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5607,
+                    "name": "/data/misc/profiles/cur/0/com.milk.shots/primary.prof",
+                    "time": 48.130311012268066,
+                    "processname": "com.milk.shots"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "data": "636f6d2e6d696c6b2e73686f747300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.381633996963501,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.381683111190796,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "data": "504b0304",
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/base.apk",
+                    "time": 1.3877370357513428,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.3880391120910645,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.3881700038909912,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "data": "6172740a3035360000803d78088b0300bec9a4ca001041780020417800c041780060647800e0696f90ef230100e08d7022f1ae030000000070823d7808000000000000000100000000000000180700001807000000000000180700000000000018070000000000001807000000000000180700000000000020070000a0580300c05f0300c80f0000886f0300801b00000090030000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000002a0a0100",
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/oat/x86_64/base.art",
+                    "time": 1.3883671760559082,
+                    "processname": "com.milk.shots"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 5528,
+                    "tid": 5528,
+                    "name": "/data/app/com.milk.shots-7yiLSqeFIb7XfW3ac6M1MQ==/base.apk.x86_64.flock",
+                    "time": 1.3855080604553223,
+                    "processname": "com.milk.shots"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5528,
+                    "tid": 5607,
+                    "data": "70726f00",
+                    "name": "/data/misc/profiles/cur/0/com.milk.shots/primary.prof",
+                    "time": 48.1312210559845,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5607,
+                    "data": "30313000",
+                    "name": "/data/misc/profiles/cur/0/com.milk.shots/primary.prof",
+                    "time": 48.131479024887085,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5607,
+                    "data": "04de250000",
+                    "name": "/data/misc/profiles/cur/0/com.milk.shots/primary.prof",
+                    "time": 48.13176417350769,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5607,
+                    "data": "d80a0000",
+                    "name": "/data/misc/profiles/cur/0/com.milk.shots/primary.prof",
+                    "time": 48.13223099708557,
+                    "processname": "com.milk.shots"
+                },
+                {
+                    "pid": 5528,
+                    "tid": 5607,
+                    "data": "7801dd997b8c5c551dc7cfbdf3d8d9ee42876eb72c85b6b3456029a4349457b1b47729600918aa54eb1f45a6850644225b8ba6100b97472ad6822512e383c81888a982f82024fcd1d8218148628ca0f28f2438c61089fe419ba2a840ebf773cefd75eeecce966e53053d9bdffdbd1ff7bce69cbb836e967bce39f7c6e6afffe2b5b273ebd76ddab070ddd86787afbb79dda64d1b369db3f0fa0d9b07dd63ae51746ef75fbe70d33f87261a9d8d51c5fdc05d5b72ee96a77edc7027b48d06ddc5eea5d8b9b5e58d1bf777715e8cf3af22e764e32a02b058d793d14aec796400363fcfe8d9c27d026c3e29c0d700db824035b95e013c3a6cc1e88855172c9212193606c65f275955408c9a40bde4a609b60bb09d2b20c76e37db5dab8803ee6475eaddea8348b665d10551b1fe7a3cfe982447dc1a69795b0f6fd0ade98d2a494ef9f2bdeeab3328dd5a9e36d944fce2893959ea52ff96a3fe9953a8d3c455e881a3d5d6be34baf7ae4982d5258fee6b2b1bdf5e55bf3a668cace569934dc4b733ecbe89a8ba6a4d74adc2b3b331cac39d22cf9da427efbc4c40c63bd4dff0cc00662c7ecb25d828bc4080eed20c431b306b8d065396f1fda2cf177c487091e05881e96d26634b2ef361d88d06636f32ea04e08f13a0cfc7c9fb057a86bbd04571f474bc46c6d1f6685d4037b8288a9e286c0cba2d81bb3f708f819e8a1f0735e35610beeea242f47ce12dd00b0539837a8415e5b8c8679813b8b303b712d48cb7a98cb705f4ea6b02aa67d5d0c3ab339e4a5987a1e2f0c6da770ef2f8988eb725d63102eb1574d8a09b27602f4086dd3a759ff91ab611988c37b9e17c7e9375c38c2230993da38f1fb583d94d66d3f52f172995b2cc354f9b0c17e8f1e5e7f5ddca1a6f8fcdfdeaa498b1ec2dcd08686e400b025a022a979607747940570754d034be4aa547a3f1c72589cba59ed2a702bf97b72997780af506f460408f33677a4b4f06ee99807683f6179f0fe86f41d81f0b974bcaa0aef224b3a328763af96696064bec7fab049def1eb9af60ff4af17aa998616708be24582160b61c2ff893de1f5dbeabf2614e918ed0a4c086a1c9cf3464cbf4c8fb4f85feb4fcc96731c196bf2eda66ef80baf982a8a0e18e5543af9be3065537bf4165f95604656922c9fa25ebd30a0a923ec9e93afcf80b967d92ccf0def3dd75aeee3df13efcbf826a28c9af57b9f8158cc431837b0fc628b8966aa046f4e4e777b3286c994aee2c4f4fd3ee15324f137f82afbfe63d8ef7bebdee137a9f583dc0a8f38e03e262450b5183ef31aaa02cb842162565b52ce05e69aa9230d2fef70d3cc2e303d486e2d1c3aca6d66197788e754d6bf6b496e84d7d632232716971da3f36b6f4a7f35dd31d0892293cb37853f0e830ad1eca3f895c526b9bcf6e6ae31eeba944b58589a4",
+                    "name": "/data/misc/profiles/cur/0/com.milk.shots/primary.prof",
+                    "time": 48.13250517845154,
+                    "processname": "com.milk.shots"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

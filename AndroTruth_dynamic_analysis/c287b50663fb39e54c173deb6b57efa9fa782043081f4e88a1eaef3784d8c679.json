@@ -1,0 +1,717 @@
+{
+    "apk_info": {
+        "id": "A5XNdZ9KpzZOyw0j",
+        "url": "https://developer.koodous.com/apks/c287b50663fb39e54c173deb6b57efa9fa782043081f4e88a1eaef3784d8c679/",
+        "sha256": "c287b50663fb39e54c173deb6b57efa9fa782043081f4e88a1eaef3784d8c679",
+        "md5": "c9fb6f127ca18a3c2cf94e405df67f51",
+        "sha1": "2971c15d7534dffd37535535d5dba4479355f153",
+        "app": "PrivateTalk",
+        "package_name": "com.pure.talk",
+        "company": "Toy",
+        "version": "7.5.3",
+        "image": "https://developer.koodous.com/media/apk_images/b7/fb/b7fbd74bb4816550db9e44e7abf6ec96a092982fa31214d3dc1aaa41df26136b",
+        "size": 1925288,
+        "tags": [
+            "trojan",
+            "reflection",
+            "clipboard",
+            "kevdroid",
+            "andr",
+            "boogr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -3,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 3,
+        "created_at": "2020-09-29T14:51:16+02:00",
+        "updated_at": "2023-03-30T20:23:50.615959+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "c9fb6f127ca18a3c2cf94e405df67f51",
+                    "name": "",
+                    "path": "",
+                    "sha1": "2971c15d7534dffd37535535d5dba4479355f153",
+                    "size": 1925288,
+                    "type": "Zip archive data",
+                    "yara": [],
+                    "crc32": "CF650A4D",
+                    "sha256": "c287b50663fb39e54c173deb6b57efa9fa782043081f4e88a1eaef3784d8c679",
+                    "sha512": "46dcca7d723447082cf01c131f77ba0b5b5bf185f79d0182232c9a3df0d74ff5973d7855d1f79e2a58aeacd994a885091fd8b6f0710f88b000f5962b847204d7",
+                    "ssdeep": "49152:zvqQ3PtJkBSrkKZ5H4NcLmYmFrE6PrA/daCm2R+GCCV6RKJ+1gi9R:DvftJkBSoKZ5YimYmFNrUdpXzV6RKwLR"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [
+                "http://haeundaejugong.com/data/jugong/do.php",
+                "http://schemas.android.com/apk/res/android",
+                "http://haeundaejugong.com/data/app.php"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "cf1e7d13572cb9582d97e45a461963aeb327c78e8d6f4dc08fa07142e0089dd8"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "PrivateTalk",
+            "services": [
+                "com.pure.talk.service.AppService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.pure.talk.receiver.OnAlarmReceiver",
+                "com.pure.talk.receiver.OnBootReceiver"
+            ],
+            "activities": [
+                "com.pure.talk.activity.SplashActivity",
+                "com.pure.talk.activity.ForgotPwdActivity",
+                "com.pure.talk.activity.SignUpActivity",
+                "com.pure.talk.activity.LoginActivity",
+                "com.pure.talk.activity.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "3408F6A58DA622E0BEF8FCCF0131F84DE0A889AF",
+                "serial": "2EEF1E3B",
+                "issuerDN": "C = US, ST = Washinton, L = Hill, O = Toy, OU = Toy, CN = Nastcha",
+                "not_after": "Jul 31 02:33:14 2045 GMT",
+                "subjectDN": "C = US, ST = Washinton, L = Hill, O = Toy, OU = Toy, CN = Nastcha",
+                "not_before": "Aug 6 02:33:14 2020 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.GET_ACCOUNTS",
+                "android.permission.INTERNET",
+                "android.permission.READ_CALL_LOG",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.WAKE_LOCK",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.pure.talk",
+            "version_code": "7",
+            "main_activity": "com.pure.talk.activity.SplashActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v4, u'https://'",
+                        "class": "Landroid/support/v4/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v2, u\"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)?(?:\"",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v8, u\"((?:\\\\b|$|^)(?:(?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,64}(?:\\\\:(?:[a-zA-Z0-9\\\\$\\\\-\\\\_\\\\.\\\\+\\\\!\\\\*\\\\'\\\\(\\\\)\\\\,\\\\;\\\\?\\\\&\\\\=]|(?:\\\\%[a-fA-F0-9]{2})){1,25})?\\\\@)?)(?:\"",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV9;",
+                        "method": "preparePanel"
+                    }
+                ],
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v3, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lcom/bumptech/glide/load/engine/cache/SafeKeyGenerator;",
+                        "method": "calculateHexStringDigest"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v1, v8, v7, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v13/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, v7, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v13/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-interface v2, v3, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    }
+                ],
+                "accounts": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;",
+                        "class": "Lcom/pure/talk/application/App;",
+                        "method": "getAllAccounts"
+                    }
+                ],
+                "runbinary": [
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/bumptech/glide/load/engine/executor/RuntimeCompat;",
+                        "method": "availableProcessors"
+                    },
+                    {
+                        "code": "invoke-static Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;",
+                        "class": "Lcom/pure/talk/helper/PhoneHelper;",
+                        "method": "RunCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v6, v5, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;",
+                        "class": "Lcom/pure/talk/helper/PhoneHelper;",
+                        "method": "RunCommand"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v0, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/pure/talk/helper/PhoneHelper;",
+                        "method": "getPhoneInfo"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV14$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImplV14$AutoNightModeManager;",
+                        "method": "setup"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;",
+                        "method": "register"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 19,
+            "new_permissions": [],
+            "displayed_version": "7.5.3",
+            "target_sdk_version": 27
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1700568199157715,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.172860860824585,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.1744868755340576,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.179480791091919,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.1820337772369385,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.1836400032043457,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.1844079494476318,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.1848959922790527,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.1860828399658203,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.1864328384399414,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.1866979598999023,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.1871938705444336,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.1933448314666748,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.1933958530426025,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.193617820739746,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.193699836730957,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.1938729286193848,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.1939759254455566,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1943669319152832,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1947197914123535,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 1.1956219673156738,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/base.apk.x86_64.flock",
+                    "time": 1.1956689357757568,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/oat/x86_64/base.vdex",
+                    "time": 1.1957528591156006,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/base.apk",
+                    "time": 1.1957879066467285,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1958439350128174,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.204807996749878,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/oat/x86_64/base.art",
+                    "time": 1.2056419849395752,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/base.apk",
+                    "time": 1.2074408531188965,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7219,
+                    "name": "/data/user_de/0/com.pure.talk/code_cache/com.android.skia.shaders_cache",
+                    "time": 1.591627836227417,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7218,
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal.tmp",
+                    "time": 1.6099398136138916,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7218,
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 1.6246998310089111,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7219,
+                    "name": "/dev/graphics/fb0",
+                    "time": 1.6388487815856934,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7219,
+                    "name": "/dev/fb0",
+                    "time": 1.6388828754425049,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/02b1b355339bdf0e8b170132809cd8dbf7640354a95512640696ac239e141f1d.0.tmp",
+                    "time": 2.0184249877929688,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/a2c5933932ffda19f64446ab720260af17b6cc57ed995e3fca778acbf4366c5b.0.tmp",
+                    "time": 2.0388379096984863,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/9eb03b676c53309b3de684d8ae9cbf3b55b77b45ab488adabde7ff4816475da9.0.tmp",
+                    "time": 2.04424786567688,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/fb78e3dd75c625a743d088ad10e2991f528a21d392a43c3de0fff046e326a434.0.tmp",
+                    "time": 2.2952640056610107,
+                    "processname": "com.pure.talk"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "636f6d2e707572652e74616c6b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.170639991760254,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1708688735961914,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.1941819190979004,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.1945769786834717,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.1955828666687012,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "504b0304",
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/base.apk",
+                    "time": 1.1958198547363281,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.2041327953338623,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2053618431091309,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "data": "6172740a3035360000803d7820040100a97d224800903e7800a03e7800303f7800e0657800e0696f90ef230100e08d7022f1ae030000000050813d780800000000000000010000000000000088040000880400000000000088040000000000008804000000000000880400000000000088040000000000009004000000e0000090e40000c80f000058f40000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000d6680000",
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/oat/x86_64/base.art",
+                    "time": 1.207000970840454,
+                    "processname": "com.pure.talk"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [],
+            "filesdeleted": [
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.1730239391326904,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7181,
+                    "name": "/data/app/com.pure.talk-Twk_vLmrUFUPoPaAxrwZBQ==/base.apk.x86_64.flock",
+                    "time": 1.1957218647003174,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7218,
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal.bkp",
+                    "time": 1.624673843383789,
+                    "processname": "com.pure.talk"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 7181,
+                    "tid": 7218,
+                    "data": "6c6962636f72652e696f2e4469736b4c727543616368650a310a310a310a0a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal.tmp",
+                    "time": 1.6246299743652344,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "444952545920303262316233353533333962646630653862313730313332383039636438646266373634303335346139353531323634303639366163323339653134316631640a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.0147218704223633,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "89504e470d0a1a0a0000000d49484452000000a00000008f08060000007d35d0ce0000000473424954080808087c0864880000200049444154789ced5d777814d5d77e67b6f7f44e7a0881104207290920d25410050141e027f6867e8a0888a0a0828a8280a8a814451090ae2025a1234208214020216c427acf667b99f9fe58526667378d0d09c8fb3c799eec9d3b77eecc9c39f7dc53093c805d9495d18a43678ec726fcb507194a25a6be3c3331fdfa35249c3c0b0010194aad1d691a200858481e8c3c397ac644c12f3018ed7cdc927f58b962e680a123e01d1593fce2d01e95ad783b6d16446b4fa0ad617f6a4e9713bbb77d7df552b28b4cae882d2f2b855eaf6ff6780a57376875da641e8753f1fc9bef6264dfe8414e9cee3d8fff3c01d234add8f36f46ec85638763751ad5d717ce9d6dd1eb89a4724c7ef659ecfbf340fca499ef260f0d73fb4f73c6ff340116a94d5f6df86553fc954ba9b1b9d937efeab505421108824c1e39edb5c41747f67cebae5ebc0de13f49806bf6277509176a93bfff69032acbcb1a750e472c0047210129e483e4f3009204c1b9fdf86880b650a04d6650463328ad1e960a35280bd5a8b163fa0d4641eecdf8c7a6be943cbe47d87f8a23fee70870eba1b309db366d88ad282e7069a8afc0df03ee237b43e0eb0ebeab0ca48b04a4800f52c003419200594d8034688a066d3283369a61d1ea612e55c158a6823af9062a8e5e046532d77b2dbe4088a0e0d0e4f90b3e48f492f2fe331cf13f4380a79252e2366fdef6f5b5ab57621df521795c08827d208b0d83d7b878907c1e08f2ce1f116db6407bed168ab626429f530c63710540dbefab707145fb0e51333f9ef35622411017eff8e26d1cff0902dc722afdab23bfad99999d7d0b14656759240828fa7484e7e30f4114ee0752c06fb1b9180bcba1b99285c29ff7c3505165b78f502844cf3e7d2ae29e78267e40a8eb7d4d84f73d015ecd2f8f5bf9f9e78919e9d759c7481e17e2a820f83d3f12a2209fbb3a2fca6044e95f6751f2e73f301696d9e58831fd06432896c57efcc694fb960839ad3d819646f7614f07a7a5244dd35631657b81b72b02673e05af7171e0bb2beefabc082e07920e8150f4e9088224a14dcb66f529bc751346ad7ac2e831e3f71f4bf8bbf0ae4ff22e806ced09b43446f56c5fa1f0905654ff26043cb80ee98688956f40d623b24597dbc680efe902bfe92310bef83908fd3d59c78b0b725db26f2993df7eefa32ead30bd16c77dbf041fa1cbbb24166726e6a55c77d15ebf05b721dd200cf105c9e3b6f6d458309654a278d74994ec3ac93ae6e2ea5ae1efdb2e7ed992f9f7d5727c5f136089599fb0949315dfdaf3680a68b305793ffe89b2fd67597ac47641c1f06ddfe5be9209efdb25f8085dde651359e050e5d256417039f0",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/02b1b355339bdf0e8b170132809cd8dbf7640354a95512640696ac239e141f1d.0.tmp",
+                    "time": 2.0361008644104004,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "434c45414e20303262316233353533333962646630653862313730313332383039636438646266373634303335346139353531323634303639366163323339653134316631642031353837330a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.0365898609161377,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "444952545920613263353933333933326666646131396636343434366162373230323630616631376236636335376564393935653366636137373861636266343336366335620a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.0384860038757324,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "89504e470d0a1a0a0000000d49484452000000a0000000990806000000a8ba31480000000473424954080808087c0864880000200049444154789ced9d797c5355dac77ff7e6e6664fd3266dd396d29616285020ec85b214460475908ae2a0f0ba8c28b3e8b8cc383a23e38ce3fe99f11547f4750445c45106d9dc460447ca52297bc1620b14bad07d5fd2ac37f7be7f144ad3246d92e66669f3fd7cfa2939f7e69ea7e497e76ccf790e81300080d29a9a79a777bd84f9cc171053404bc2725d912d619da8f21ba88956d0b0000062b846008084b4802144b0da3848480b8c2c0d00a8273400801a2e0606610aa2d21721d57af431147f5cd0886814a9164332f6af050ba7126d81f94b830b22d0060492f73efdf8f53b6bffa093136618a3a764eb1b2b10c93581200001589fd6c570242c10c2288882823415d0d696d63c7612d8ec0d0573270c7bdca7958510434280e7ebb889e78e6e512dac7c1695135fcf559c7e11094465a0cdb2e31c3d15ea990f833af8587691ee43cc9d35fd40a06df207835a80859596d74bbffc932e5b51a033193b5491a6320808df7a365f63e528742ad2c17454e6e6a5ad47cee21be607da263e197402dcf9f987f3a624c6ae2bcdff5437ddb61712c2e2d3e7730407682c20849c7d3938800640533eadcf4444201f0bd12110f8f4b9be40fffd7098ab445ebd57122143f46cdd63834680574a0bf7335fac825c2acde6d3d37134db25c05ee5ac9003e25890c1a713def8e1c511a8facae6f5fbd9d414f8f6ebea67b67c77686276e7d7d9e2a613eb34ffb9011000308357bfeef2d104bff5063b42b9048ae17100808e8a1a58f546bbebd2d83888d512181b0c30b53482631890974a435780fff9f8f9fd332e3fa55399cb54a48f47ac613c2779e112d0b24800807a740b2eeeda0600206912daa9b31039621c00806559d49ede8796a23200082d01beb773ebc4e96d9f67c7584bd7c5b4bc156873c25c453d7966b7f80080964562e46d77a2e2c07fa01e33069129e3baaf91240945f2e4d013e09e3d5fee1f5bfe8a2e81b91cf6784146db8573d08e9d605746cb22317cdecd76c2bc86a9f972f7bf835e80c5fbdf79545693bb6ed8a5d58136258c0b187d3b9a4a2f22322915244976973b139fa1b505cde7424080870a2b276614ac59479c7b2d5b497404da9c30fd5077f42000409d32d2e53d86b6565cc9dd0346dfde5d167402dcb6ef44c48d238cb99dff59ac53918d437a64194a700c83fae3b9904445431aa1727a4f63419e9df880201460ec8597732525a77511a421d0a684f100922691306b8e4bf1018076ea2c580c9fc3dc64ea2e0b1a011edafef74747b7ef59176dccc3601d63586d041a5ac53098afffb74b681b344a1344b4eb3fbad348a1b15d04ab8d74798f4cc4205a650225e05cde730d8e",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/a2c5933932ffda19f64446ab720260af17b6cc57ed995e3fca778acbf4366c5b.0.tmp",
+                    "time": 2.0414249897003174,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "434c45414e206132633539333339333266666461313966363434343661623732303236306166313762366363353765643939356533666361373738616362663433363663356220383734370a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.0418739318847656,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "444952545920396562303362363736633533333039623364653638346438616539636266336235356237376234356162343838616461626465376666343831363437356461390a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.043890953063965,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "89504e470d0a1a0a0000000d4948445200000097000000a0080600000001e0fe6c0000000473424954080808087c0864880000200049444154789ced9d775853d71bc7bf37832c46d820430441545454141c551c555bb7b8aaa256706b1d6d2d56fd59471dd5d6815bdc5aa556c55157b5e2441115278a283800d91042c820b9bf3fa848c820402009cde779eea3f79c73cf7913be39f7ccf70055e054eccbe643468e0c193b691ac960304800651783c924bff9e17f24976bd375fdcedfedab92af91ff380f1e3fbbe2d3da2f0be504a5eca2d1e8a485a555c2dd5759877567ad1183e0c2c30f9c6dfb22afa3125155bccccc2dc8598b56add48dd5460c82437f45df35b3e05649581f2f4b5b0772c39e48630d664491898b5635870ae1b46cec4c76f1f52abb9aba3992140aa190cedec181bc74f5ea385d7d0623ba83a62a4228243d468e1d155d31dc8263825fa60fc1c0aeedc13563978567e517e2e8e538ccdd1029973ee3c3071c89ba1006609ff6cc36620810aa22464cfea1d5f50bc7e2d35292cac2580c2a0e2d99822f3bb65099e18d872f3168de26f08b4565618e4e4eb8f5f06540231bf61d2dd96dc400a0280b4cca2c5c16b97d7544796101c0f7a3fba815160004f8b8a3ef67be7261e9a9a908193d2c3aea5642ef1ada6bc4805010d7fe53574286f40e5c08c0af7c38934147c7569e956648a35231a697bf42f83f17fe626e5a1e76febb35bb15238dd44be4da5c499985cb7a770958f8eaf953858436161cb83bda689469a306cad35d3a7b12ef53d3a3c3ffbc3668e6d02e17aa61af1103a2ace6ea151cccf171b50b54262c0090c94894944835ca944ea3aa8c7bfe3096991473e67c15ed340260fbc13f57faf9fb97f5c4d96c36b96ad32eb25dffa0e6bab64d1965e2ea1938205a269375569590572440465ebe469926a765ab8d0f5fb706fd46041bc7bfaa40bb8e1d0fcf9b35352ceecea73e91402040d88c10bcb97f27daa7ad8f870ecd530a050036edfdb3f9bc90617e62b14865427eb10457e2532acdb0442ac3be73b7d5a691c948c45ebd34f2cc8d38e3f85725acdffda7ffb8c9df90776fdd1a599093a5344d66ea7b1b36c72e4969a40ea1024062c2931db93959dee523b856d6a0b33810170bcac26213dea0a587133c5d54cf4bc73c798565bb4e412429290b3331a1c3c6d61645fca2b23081408026decdbca3ff3ebf597b1fa77ed1777870efbf4f1d3d7ff9dc2995e3911f497d938c6fd746d0622e9eba5217b669c4aa5d475a35f7f5ab30f94c2527de3c4d36e915a830e26e65ce21f72e9a40e65edc400aaf6d2bbb32cead237f5f3659e9687ea72143c8d127f6920c26532ebc69abb6a40e3eb2de73f2f66bfbb317fe49e75a2a9f76b3b7b727dbfb07284eb7595b9cd099d1caa0d3d18aa8306dd37ed218",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/9eb03b676c53309b3de684d8ae9cbf3b55b77b45ab488adabde7ff4816475da9.0.tmp",
+                    "time": 2.0468339920043945,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "434c45414e20396562303362363736633533333039623364653638346438616539636266336235356237376234356162343838616461626465376666343831363437356461392031303531390a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.2116849422454834,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "444952545920666237386533646437356336323561373433643038386164313065323939316635323861323164333932613433633364653066666630343665333236613433340a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.29441499710083,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "89504e470d0a1a0a0000000d4948445200000074000000a00806000000dd35481e0000000473424954080808087c086488000013ab49444154789ced9d79701bd77dc7bf6f77b1b80102bc0f50bcc4c392c8656c39e33431a15893c64ee2cc24b1eb588e3a6eec346dd3946a1367124f3d9dce34e73866ecb19c2aae271327ed4c9c7ada66e2747c11723cb513c926283992a8839478c89278812400820becbefe0182a2c40b0bec6201683f331c09c73efcf0befcbdf77bdf7dbb048a9c978e4df6d43fd23ff0cb231707de3833dba3773c5a43f40e402b444abbf6fdeb40df5c64c97fe6721800d056edc2d30fecea6b2eb71dd0393ccd283a416728757ff19923c2879abc8183af8facf98214c0818fb5e0ceae2a7f699925e825644e8f38b5a2a804bdb4203eb1f7f13ff8891417c24b890dbf1c05d059e7c2831f6908ded1e10d382da6a2c9d88217748652f7f4544c38353117f8e1cbe770612aaae8f8c6723bbef9c956f8bc2ea1ad921fd428cc9c51d0822ec4e24ffcef7bd3fe9fbf352a1c1b9bcbf8cb50002d95f6d0977a9a82f7dc52b547cd18734dc1097a6e86bae72261616c3a12e8cb2023378302682877e0d14fb4a0d663f15756390a6e8e2d2841df199d7be22f9e7dd7eff35a8513171734fb9cd41c7bcf2d35c1dbdbca03f5a596829963f35a5091d2ae5f1db954e2e449dfc0e89cf0d337477589e32ffd8d78a67fd87ff00bddb8abb3fcb02e41a4495e0a2ac6a527fe7bf08af0b3374785a89828199e8aea1e2805b0bdc28ed3972381a7bed0854f7556e4e55cab773f8152ea0ec512c2aec77e8743fb77f41d1f5b107e1c58bb7ecc376410fcddde26fce895f3fe1f7e7e173eb6b32ce4e089ee55b26efd36138ef7efffe9714c4ccd973497db85a317e64040f35ec8eba1005a2aec30734ce8f8fbe1a0b0ad14bf7868171c3ca74b0693ba470294818c83fb76c06961b1efd9637e80c35bdfda0d0bc781e3008ee360e1000e08920daa3e4aa93b010889049000108e25f0a5e78f6360248c43fbdbfaec3c2b4445198363f3f87160044c6ebf67ce9141f0953b9ad059eb80d9c462dfb3837e80c3ef1ed90d878583c392ec5b0a8478b27166a7fa359600128904620920164be023df3f8243fbdbfa789611c24b12befa1f27f0f4be9d20be47faa90989ab0d00a020e8f6b9c03200210404c97f872e2f066717e32169590e020a0a0216323c56b6a4b5d22e0014a08024530c5d8e20bc2481500a903c18df7582aefc4b20f89c6019029610104210599243c7df0f0753ef95578d532c6478ad4c496ba543a09442a614940212a5088e2dac19d19edcd7b9565083c2e5c97d9d453ff2dd7014bda0549620c7427a87913338bd03d00c4a218b11480be3802c81b194e81d514e282e4129050505124b90a253a0914900146079bd23",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/fb78e3dd75c625a743d088ad10e2991f528a21d392a43c3de0fff046e326a434.0.tmp",
+                    "time": 2.2993478775024414,
+                    "processname": "com.pure.talk"
+                },
+                {
+                    "pid": 7181,
+                    "tid": 7220,
+                    "data": "434c45414e206662373865336464373563363235613734336430383861643130653239393166353238613231643339326134336333646530666666303436653332366134333420353130380a",
+                    "name": "/data/user/0/com.pure.talk/cache/image_manager_disk_cache/journal",
+                    "time": 2.299790859222412,
+                    "processname": "com.pure.talk"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

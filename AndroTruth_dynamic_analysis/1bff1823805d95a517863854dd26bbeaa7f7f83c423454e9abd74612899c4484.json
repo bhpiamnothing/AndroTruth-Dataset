@@ -1,0 +1,472 @@
+{
+    "apk_info": {
+        "id": "P7nyOwN3gD4G2VgQ",
+        "url": "https://developer.koodous.com/apks/1bff1823805d95a517863854dd26bbeaa7f7f83c423454e9abd74612899c4484/",
+        "sha256": "1bff1823805d95a517863854dd26bbeaa7f7f83c423454e9abd74612899c4484",
+        "md5": "e105666f4a81aa9f6e6276e6a0247d71",
+        "sha1": "f66927e129c1211568b1dda76c46a6f876313fdc",
+        "app": "K-epost",
+        "package_name": "com.example.kepost",
+        "company": "IT Co.",
+        "version": "1.0",
+        "image": "https://developer.koodous.com/media/apk_images/2024/03/07/CG_EIpw3nK.png",
+        "size": 1099557,
+        "tags": [
+            "obfuscated",
+            "checks-gps",
+            "trojan",
+            "reflection",
+            "telephony",
+            "boogr",
+            "sends-sms",
+            "spyware",
+            "banker"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": 0,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": {
+            "done_at": "2024-03-07T13:12:25.270674+01:00",
+            "results": [
+                {
+                    "antivirus": "ClamAv",
+                    "version": "ClamAV 1.0.0/27207/Thu Mar  7 09:27:12 2024",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "Ikarus",
+                    "version": "07.03.2024 08:47:10 (Build: 106853)",
+                    "result": "undetected",
+                    "signature": ""
+                },
+                {
+                    "antivirus": "KoodousAI",
+                    "version": "Build: 0d6bea9b71f6a07576b20b54dae664d6",
+                    "result": "undetected",
+                    "signature": ""
+                }
+            ]
+        },
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": "2024-03-07T13:16:52.729295+01:00",
+        "matches_count": 3,
+        "comments_count": 0,
+        "votes_count": 0,
+        "created_at": "2024-03-07T13:12:23.094860+01:00",
+        "updated_at": "2025-05-19T04:15:51.044065+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "e105666f4a81aa9f6e6276e6a0247d71",
+                "name": "",
+                "path": "",
+                "sha1": "f66927e129c1211568b1dda76c46a6f876313fdc",
+                "size": 1099557,
+                "type": "Zip archive data",
+                "yara": [],
+                "crc32": "6C8A483F",
+                "sha256": "1bff1823805d95a517863854dd26bbeaa7f7f83c423454e9abd74612899c4484",
+                "sha512": "6d1f48b233df01c38892c59c5c0d95559665c48fa824a72b8eafb85946608cda7888bc8230875572626a9df2063832c567592d61b2fda6251287677a060c734a",
+                "ssdeep": "24576:zq2XzyPSgR+aml9TSOFu0JlVXJZCC+khfYdMlIAtR4Fc0b:G2DyPSgR+aml7s0bDp+efY8BtR4/"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://38.177.48.157/kepost/index.php?phone/savephone",
+                "http://107.148.6.129/aepost/index.php?phone/requestservertime",
+                "http://38.177.48.157/kepost/index.php?phone/replysendsmsinfo",
+                "http://107.148.6.129/aepost/index.php?phone/sendsmsprocess",
+                "http://107.148.6.129/aepost/index.php?phone/sendsmsprogress",
+                "http://107.148.6.129/aepost/index.php?phone/upload",
+                "http://38.177.48.157/kepost/index.php?phone/sendsmsprogress",
+                "http://107.148.6.129/aepost/index.php?phone/replysendsmsinfo",
+                "http://107.148.6.129/aepost/index.php?phone/requestimage",
+                "http://107.148.6.129/aepost/index.php?phone/savephone",
+                "http://schemas.android.com/apk/res/android",
+                "http://38.177.48.157/kepost/index.php?phone/sendsmsprocess",
+                "http://38.177.48.157/kepost/index.php?phone/requestservertime",
+                "http://38.177.48.157/kepost/index.php?phone/ping",
+                "http://38.177.48.157/kepost/index.php?phone/requestimage",
+                "http://38.177.48.157/kepost/index.php?phone/upload"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "a19890b9c35fc258b8eefabb6c54f2f08a6c85b170868ebdfa71ea6d7beed295"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.QUICKBOOT_POWERON",
+                "android.intent.action.MAIN",
+                "android.intent.action.BOOT_COMPLETED"
+            ],
+            "app_name": "K-epost",
+            "services": [
+                "androidx.room.MultiInstanceInvalidationService"
+            ],
+            "wearable": false,
+            "androidtv": true,
+            "libraries": [],
+            "providers": [
+                "androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            ],
+            "receivers": [
+                "com.example.kepost.BootCompletedReceiver",
+                "com.example.kepost.SendImageAlarmBroadcastReceiver",
+                "com.example.kepost.SendImageAlarmBroadcastReceiver_A",
+                "com.example.kepost.SendPhoneInformationAlarmBroadcastReceiver",
+                "com.example.kepost.SendPhoneInformationAlarmBroadcastReceiver_A",
+                "com.example.kepost.SendPhoneTimeDiffAlarmBroadcastReceiver",
+                "com.example.kepost.SendPhoneTimeDiffAlarmBroadcastReceiver_A",
+                "com.example.kepost.SendSmsAlarmBroadcastReceiver",
+                "com.example.kepost.SetAPostAlarmBroadcastReceiver",
+                "com.example.kepost.SmsSentReceiver"
+            ],
+            "activities": [
+                "com.example.kepost.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "C7C6E9AF5C0F70196BB0D42F468317D305B14A78",
+                "serial": "75581136",
+                "issuerDN": "C = CN, ST = LiaoNing, L = ShenYang, O = IT Co., OU = IT, CN = Alpras",
+                "not_after": "May 4 13:31:56 2051 GMT",
+                "subjectDN": "C = CN, ST = LiaoNing, L = ShenYang, O = IT Co., OU = IT, CN = Alpras",
+                "not_before": "Dec 17 13:31:56 2023 GMT"
+            },
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.INTERNET",
+                "android.permission.MANAGE_EXTERNAL_STORAGE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_BOOT_COMPLETED",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+                "android.permission.SCHEDULE_EXACT_ALARM",
+                "android.permission.SEND_SMS",
+                "android.permission.USE_EXACT_ALRAM",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.example.kepost",
+            "version_code": "1",
+            "main_activity": "com.example.kepost.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "functionalities": {
+                "SMS": [
+                    {
+                        "code": "invoke-virtual/range v12 ... v17, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/util/ArrayList; Ljava/util/ArrayList; Ljava/util/ArrayList;)V",
+                        "class": "Lcom/example/kepost/SendSmsAlarmBroadcastReceiver;",
+                        "method": "onReceive"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v7, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "La/b/c/k$d;",
+                        "method": "dispatchKeyShortcutEvent"
+                    },
+                    {
+                        "code": "invoke-virtual v13, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "La/b/c/k;",
+                        "method": "S"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v3, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lb/b/a/b$a;",
+                        "method": "doInBackground"
+                    },
+                    {
+                        "code": "invoke-virtual v8, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lb/b/a/b$b;",
+                        "method": "doInBackground"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;",
+                        "class": "Lb/b/a/b$c;",
+                        "method": "doInBackground"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v8, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lb/b/a/b;",
+                        "method": "c"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v1, v0, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "La/b/c/k$f;",
+                        "method": "a"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v2, v0, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "La/b/c/k$f;",
+                        "method": "e"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 21,
+            "new_permissions": [],
+            "displayed_version": "1.0",
+            "target_sdk_version": 31
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.475912094116211,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/base.apk.x86_64.flock",
+                    "time": 1.4791531562805176,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/oat/x86_64/base.vdex",
+                    "time": 1.4812650680541992,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/base.apk",
+                    "time": 1.4821231365203857,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.4833660125732422,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.4876279830932617,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/oat/x86_64/base.art",
+                    "time": 1.4889721870422363,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/base.apk",
+                    "time": 1.5612101554870605,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 3.6227200031280518,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 4.343549013137817,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 4.3438639640808105,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 5.4384660720825195,
+                    "processname": "com.example.kepost"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "636f6d2e6578616d706c652e6b65706f7374000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4762341976165771,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.4762799739837646,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "504b0304",
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/base.apk",
+                    "time": 1.4825820922851562,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.4873180389404297,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.4879851341247559,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "6172740a3035360000803d78700301006935fc1500903e7800a03e7800103f780020507800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000e0030000e003000000000000e003000000000000e003000000000000e003000000000000e003000000000000e003000000e00000e0e30000c80f0000a8f30000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000b3580000",
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/oat/x86_64/base.art",
+                    "time": 1.489396095275879,
+                    "processname": "com.example.kepost"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/app/com.example.kepost-0GpPSvXJgcvJafAB0IOx7Q==/base.apk.x86_64.flock",
+                    "time": 1.4795501232147217,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml.bak",
+                    "time": 3.622873067855835,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml.bak",
+                    "time": 4.34380316734314,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml.bak",
+                    "time": 4.48810601234436,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml.bak",
+                    "time": 5.44099497795105,
+                    "processname": "com.example.kepost"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d734964223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65416c7265616479536574416c61726d223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65496e7374616c6c223e323032352d30372d30372030333a30333c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65446966665769746853657276657241223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654469666657697468536572766572223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654e756d626572223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d7344617465223e3c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 3.6228060722351074,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5536,
+                    "data": "3430303030303030",
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 3.6229920387268066,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5540,
+                    "data": "3530303030",
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 4.343348979949951,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d734964223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65416c7265616479536574416c61726d223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65496e7374616c6c223e323032352d30372d30372030333a30333c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65446966665769746853657276657241223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654469666657697468536572766572223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654e756d626572223e313735313837313832383139373c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d7344617465223e3c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 4.343767166137695,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d734964223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65416c7265616479536574416c61726d223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65496e7374616c6c223e323032352d30372d30372030333a30333c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65446966665769746853657276657241223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65556e69714e756d626572223e313735313837313832383139373c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654469666657697468536572766572223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654e756d626572223e313735313837313832383139373c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d7344617465223e3c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 4.343937158584595,
+                    "processname": "com.example.kepost"
+                },
+                {
+                    "pid": 5434,
+                    "tid": 5434,
+                    "data": "3c3f786d6c2076657273696f6e3d27312e302720656e636f64696e673d277574662d3827207374616e64616c6f6e653d2779657327203f3e0a3c6d61703e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d734964223e3c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65416c7265616479536574416c61726d223e416c72656164793c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65496e7374616c6c223e323032352d30372d30372030333a30333c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65446966665769746853657276657241223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e65556e69714e756d626572223e313735313837313832383139373c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654469666657697468536572766572223e303c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e654e756d626572223e313735313837313832383139373c2f737472696e673e0a202020203c737472696e67206e616d653d2250686f6e6553656e64536d7344617465223e3c2f737472696e673e0a3c2f6d61703e0a",
+                    "name": "/data/user/0/com.example.kepost/shared_prefs/com.alpras.assist.shared_preferences.xml",
+                    "time": 5.43913197517395,
+                    "processname": "com.example.kepost"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

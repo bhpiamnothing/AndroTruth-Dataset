@@ -1,0 +1,1105 @@
+{
+    "apk_info": {
+        "id": "yRjbOxyR7p8dkVM9",
+        "url": "https://developer.koodous.com/apks/8bbce0a896087a59d012c179dc5811e3e28e15b592e54b6a03fd1bdc6ce21692/",
+        "sha256": "8bbce0a896087a59d012c179dc5811e3e28e15b592e54b6a03fd1bdc6ce21692",
+        "md5": "717259753cc762d0fb5f6f95af8ca796",
+        "sha1": "034bc59cf7220ba38513c5109412d11f90d27b6c",
+        "app": "Protection",
+        "package_name": "com.test.uploadcontact",
+        "company": "zph-mph",
+        "version": "2.2",
+        "image": null,
+        "size": 1260606,
+        "tags": [
+            "dropper",
+            "reflection",
+            "runtime-modules",
+            "trojan",
+            "fftm",
+            "boogr"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2020-08-01T16:15:41+02:00",
+        "updated_at": "2023-03-30T20:07:02.391790+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "target": {
+                "file": {
+                    "md5": "717259753cc762d0fb5f6f95af8ca796",
+                    "name": "",
+                    "path": "",
+                    "sha1": "034bc59cf7220ba38513c5109412d11f90d27b6c",
+                    "size": 1260606,
+                    "type": "Zip archive data",
+                    "yara": [],
+                    "crc32": "011D3AED",
+                    "sha256": "8bbce0a896087a59d012c179dc5811e3e28e15b592e54b6a03fd1bdc6ce21692",
+                    "sha512": "1c6bbad794ff7bb00218fd2e8cb971e9580a16e48706930df7373e1f4583456a95f10946f09984a587a41e9c2bf3b358812f773ef038a8e258e9fce3cac58db7",
+                    "ssdeep": "24576:pjqu4Ec29nDMrOUo8IVs/yQTem6+ruVvH3HXd2RWHep3sVQSCtt4NQ5CPQUiVjw:xqvEfR27o8cs/dH6IwHepcHCtFUiV8"
+                },
+                "file_id": "",
+                "category": "file"
+            }
+        },
+        "androguard": {
+            "urls": [],
+            "dexes": {
+                "classes": {
+                    "sha256": "e106c0e949b4cf7395dcebbfc5bb7d59933764691a0e3201fb0ddfa44a30369e"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MY_PACKAGE_UNSUSPENDED",
+                "android.intent.action.BATTERY_CHANGED",
+                "service_destroy",
+                "android.intent.action.MY_PACKAGE_SUSPENDED",
+                "android.intent.action.PACKAGE_CHANGED",
+                "android.intent.action.NEW_OUTGOING_CALL",
+                "android.provider.Telephony.SMS_RECEIVED",
+                "android.intent.action.HEADSET_PLUG",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.DOCK_EVENT",
+                "aaaac",
+                "android.intent.action.MAIN",
+                "android.intent.action.USER_PRESENT"
+            ],
+            "app_name": "Protection",
+            "services": [
+                "com.test.uploadcontact.Alarm.PollingService",
+                "com.test.uploadcontact.SMSService"
+            ],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [
+                "com.test.uploadcontact.SMSReceiver"
+            ],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "7D64F9C253C7EF35A0720F6F8A802BD4B920AA3A",
+                "serial": "1",
+                "issuerDN": "C = 8609, ST = Surigao Del Norte, L = Caraga, OU = anon.org, O = zph-mph, CN = Jx Clarynx",
+                "not_after": "Aug 22 18:25:01 2118 GMT",
+                "subjectDN": "C = 8609, ST = Surigao Del Norte, L = Caraga, OU = anon.org, O = zph-mph, CN = Jx Clarynx",
+                "not_before": "Sep 15 18:25:01 2018 GMT"
+            },
+            "permissions": [
+                "android.permission.INTERNET",
+                "android.permission.READ_CONTACTS",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_SMS",
+                "android.permission.RECEIVE_SMS",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "package_name": "com.test.uploadcontact",
+            "version_code": "2002",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/MAGICPH.RSA",
+            "functionalities": {
+                "crypto": [
+                    {
+                        "code": "invoke-virtual v8, Ljava/security/MessageDigest;->digest()[B",
+                        "class": "Lmph/dexprotect/a/a;",
+                        "method": "x"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "2.2",
+            "target_sdk_version": 25
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "path": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex",
+                    "time": 2.1716151237487793,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "filesopen": [
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.142280101776123,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.1473321914672852,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.149522066116333,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.149609088897705,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.151198148727417,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.1512811183929443,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.1514241695404053,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.1515581607818604,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.151691198348999,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.1564741134643555,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.1587581634521484,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.1608641147613525,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.175246000289917,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.1824660301208496,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.1853821277618408,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.1876671314239502,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.190406084060669,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.1929771900177002,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.197477102279663,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.204862117767334,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 1.2117412090301514,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/base.apk.x86_64.flock",
+                    "time": 1.2180662155151367,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/oat/x86_64/base.vdex",
+                    "time": 1.3920161724090576,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/base.apk",
+                    "time": 1.4171881675720215,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.4413750171661377,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.444310188293457,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/oat/x86_64/base.art",
+                    "time": 1.4902331829071045,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/base.apk",
+                    "time": 1.490873098373413,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex",
+                    "time": 1.4910762310028076,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex.x86_64.flock",
+                    "time": 2.173159122467041,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex",
+                    "time": 2.1735451221466064,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat/x86_64/classes.vdex",
+                    "time": 2.174835205078125,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat/x86_64/classes.odex",
+                    "time": 2.1755430698394775,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat/x86_64/classes.vdex",
+                    "time": 6.0158531665802,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 6.0159502029418945,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.016157150268555,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat/x86_64/classes.art",
+                    "time": 6.016367197036743,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat/classes.dex.cur.prof",
+                    "time": 6.016570091247559,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.178624153137207,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 6.814881086349487,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 6.815099000930786,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 6.816177129745483,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.110940217971802,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.114747047424316,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.118530035018921,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.305912017822266,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.30712604522705,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7160,
+                    "name": "/data/user_de/0/com.test.uploadcontact/code_cache/com.android.skia.shaders_cache",
+                    "time": 8.30853819847107,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "636f6d2e746573742e75706c6f6164636f6e746163740000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1426420211791992,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.1426920890808105,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.1958520412445068,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.203719139099121,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.2109792232513428,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "504b0304",
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/base.apk",
+                    "time": 1.4412012100219727,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.4416429996490479,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.4899802207946777,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6172740a3035360000803d78703f00007de3608d00c03d7800d03d7800e03d780090407800e0696f90ef230100e08d7022f1ae030000000050813d7808000000000000000100000000000000880400008804000000000000880400000000000088040000000000008804000000000000880400000000000090040000501b0000e01f0000c80f0000a82f0000c80f00000040000000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f0000000001000000670d0000",
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/oat/x86_64/base.art",
+                    "time": 1.4906201362609863,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6465780a",
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex",
+                    "time": 2.1739180088043213,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 6.016067028045654,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 6.016266107559204,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 6.815953016281128,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "23576564204a756c2032332031393a34343a31392045445420323032350a70686f6e653d6e6f0a",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.111170053482056,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.111291170120239,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.111565113067627,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "23576564204a756c2032332031393a34343a31392045445420323032350a70686f6e653d6e6f0a",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.115669012069702,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.116913080215454,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.117270231246948,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "23576564204a756c2032332031393a34343a31392045445420323032350a70686f6e653d6e6f0a",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.118612051010132,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.118741035461426,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.118862152099609,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "23576564204a756c2032332031393a34343a31392045445420323032350a70686f6e653d6e6f0a",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.306453227996826,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.306559085845947,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.306875228881836,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "23576564204a756c2032332031393a34343a31392045445420323032350a70686f6e653d6e6f0a",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.307253122329712,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.307317018508911,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7130,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 8.307629108428955,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.1474251747131348,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/app/com.test.uploadcontact-vFDWPUqAu6nwgUehXMyTiA==/base.apk.x86_64.flock",
+                    "time": 1.2200322151184082,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat/x86_64/classes.vdex",
+                    "time": 2.174495220184326,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat/x86_64/classes.odex",
+                    "time": 2.1752171516418457,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex.x86_64.flock",
+                    "time": 6.016479015350342,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_odex",
+                    "time": 6.016684055328369,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex",
+                    "time": 6.016819000244141,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/oat",
+                    "time": 6.016923189163208,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex",
+                    "time": 6.017019033432007,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "6465780a30333500b414413f21029efa34deb6555a11cc88d77d4b79803060810c5d1b0070000000785634120000000000000000305c1b00f53e0000700000004b08000044fc0000bb0c0000701d0100d327000034b60100dd3b0000ccf402004e050000b4d3040098df1500747d0500747d0500767d0500a97d0500e87d0500eb7d0500f97d0500fc7d0500007e0500057e05000b7e0500107e0500277e0500377e0500517e05006e7e05008f7e0500977e0500b47e0500c37e0500d17e0500df7e0500ee7e0500fc7e0500067f05001e7f0500397f0500457f05005b7f05005f7f0500637f0500677f0500b17f0500bb7f0500d77f0500dc7f0500e27f0500f67f0500fd7f05000d8005001a800500328005004a80050053800500988005009c800500a0800500b9800500c28005000d8105001e8105002c810500408105005e8105006a8105007c810500a4810500b0810500b6810500ca810500e9810500158205002f82050039820500558205008d820500c1820500ec8205001783050043830500738305009e830500c8830500f38305001d840500468405007c84050095840500b2840500e4840500248505004485050061850500848505008b85050097850500a4850500ad850500b7850500c0850500c7850500e9850500f28505001f860500358605005c860500628605006a860500708605007c86050097860500a9860500c0860500d4860500e68605001a87050038870500438705004f870500618705007b870500ab870500cc870500f6870500058805000c880500158805002a880500478805005f8805006d8805007e880500918805009f880500ac880500ba880500c9880500d5880500e2880500ec8805000589050012890500228905003389050048890500558905005f8905006b8905007989050088890500948905009c890500b2890500c7890500db890500e3890500eb890500f0890500f7890500368a0500488a05005f8a0500728a0500b78a0500c28a0500ec8a0500078b0500248b05003e8b05005d8b0500748b05007b8b0500818b05008e8b0500958b0500a78b0500ae8b0500c28b0500d18b0500d88b0500e88b0500f48b05002c8c05003b8c0500508c05005a8c0500708c05007f8c0500898c05009b8c0500a38c0500bf8c0500cb8c0500fb8c0500048d05000c8d0500128d0500248d0500368d0500558d0500718d0500788d0500ae8d0500b58d0500c08d0500cb8d0500d38d0500f08d0500fc8d0500088e0500268e0500328e0500368e0500398e05003e8e0500718e0500a48e0500df8e0500e88e0500fd8e0500288f0500528f05007d8f0500a78f0500b88f0500e78f0500159005002e900500329005003990050040900500469005004c900500549005005c9005005f9005008d9005009c9005009f900500",
+                    "name": "/data/user/0/com.test.uploadcontact/app_mph_dex/classes.dex",
+                    "time": 2.153663158416748,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31322e333536202036383436202036383436205720742e75706c6f6164636f6e7461633a20556e6578706563746564204350552076617269616e7420666f7220583836207573696e672064656661756c74733a207838365f36340a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.205971002578735,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e353936202036383436202036383436204920742e75706c6f6164636f6e7461633a2054686520436c6173734c6f61646572436f6e746578742069732061207370656369616c20736861726564206c6962726172792e0a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.210071086883545,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a20556e61626c6520746f20696e7374616e746961746520617070436f6d706f6e656e74466163746f72790a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.212252140045166,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a206a6176612e6c616e672e436c6173734e6f74466f756e64457863657074696f6e3a204469646e27742066696e6420636c6173732022616e64726f69642e737570706f72742e76342e6170702e436f7265436f6d706f6e656e74466163746f727922206f6e20706174683a20446578506174684c6973745b5b7a69702066696c6520222f73797374656d2f6672616d65776f726b2f6f72672e6170616368652e687474702e6c65676163792e626f6f742e6a6172222c207a69702066696c6520222f646174612f6170702f636f6d2e746573742e75706c6f6164636f6e746163742d764644575055714175366e7767556568584d795469413d3d2f626173652e61706b225d2c6e61746976654c6962726172794469726563746f726965733d5b2f646174612f6170702f636f6d2e746573742e75706c6f6164636f6e746163742d764644575055714175366e7767556568584d795469413d3d2f6c69622f7838365f36342c202f73797374656d2f6c696236342c202f73797374656d2f76656e646f722f6c696236345d5d0a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.213770151138306,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a200961742064616c76696b2e73797374656d2e42617365446578436c6173734c6f616465722e66696e64436c6173732842617365446578436c6173734c6f616465722e6a6176613a313334290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.2156641483306885,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a20096174206a6176612e6c616e672e436c6173734c6f616465722e6c6f6164436c61737328436c6173734c6f616465722e6a6176613a333739290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.218789100646973,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a20096174206a6176612e6c616e672e436c6173734c6f616465722e6c6f6164436c61737328436c6173734c6f616465722e6a6176613a333132290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.218843221664429,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e4c6f6164656441706b2e637265617465417070466163746f7279284c6f6164656441706b2e6a6176613a323236290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.219162225723267,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e4c6f6164656441706b2e6372656174654f72557064617465436c6173734c6f616465724c6f636b6564284c6f6164656441706b2e6a6176613a373331290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.219482183456421,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e4c6f6164656441706b2e676574436c6173734c6f61646572284c6f6164656441706b2e6a6176613a383130290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.219536066055298,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e4c6f6164656441706b2e6765745265736f7572636573284c6f6164656441706b2e6a6176613a31303332290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.220080137252808,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e436f6e74657874496d706c2e637265617465417070436f6e7465787428436f6e74657874496d706c2e6a6176613a32333435290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.22028923034668,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e41637469766974795468726561642e68616e646c6542696e644170706c69636174696f6e2841637469766974795468726561642e6a6176613a35373439290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.2220141887664795,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e41637469766974795468726561642e61636365737324313130302841637469766974795468726561642e6a6176613a313939290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.223372220993042,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e416374697669747954687265616424482e68616e646c654d6573736167652841637469766974795468726561642e6a6176613a31363530290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.224684000015259,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6f732e48616e646c65722e64697370617463684d6573736167652848616e646c65722e6a6176613a313036290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.226267099380493,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6f732e4c6f6f7065722e6c6f6f70284c6f6f7065722e6a6176613a313933290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.227269172668457,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420616e64726f69642e6170702e41637469766974795468726561642e6d61696e2841637469766974795468726561642e6a6176613a36363639290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.227866172790527,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a20096174206a6176612e6c616e672e7265666c6563742e4d6574686f642e696e766f6b65284e6174697665204d6574686f64290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.230533123016357,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420636f6d2e616e64726f69642e696e7465726e616c2e6f732e52756e74696d65496e6974244d6574686f64416e644172677343616c6c65722e72756e2852756e74696d65496e69742e6a6176613a353138290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.2305991649627686,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e3634392020363834362020363834362045204c6f6164656441706b3a2009617420636f6d2e616e64726f69642e696e7465726e616c2e6f732e5a79676f7465496e69742e6d61696e285a79676f7465496e69742e6a6176613a383538290a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.230820178985596,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31332e363530202036383436202036383436205720742e75706c6f6164636f6e7461633a207265736f75726365732e6172736320696e2041504b20272f646174612f6170702f636f6d2e746573742e75706c6f6164636f6e746163742d764644575055714175366e7767556568584d795469413d3d2f626173652e61706b2720697320636f6d707265737365642e0a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.231516122817993,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31342e333933202036383436202036383635204920742e75706c6f6164636f6e7461633a204261636b67726f756e6420636f6e63757272656e7420636f7079696e672047432066726565642035303537283338354b422920416c6c6f635370616365206f626a656374732c2035283531364b4229204c4f53206f626a656374732c2034392520667265652c20313635304b422f334d422c2070617573656420313632757320746f74616c203430372e3237316d730a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.234537124633789,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31342e363234202036383436202036383436205720742e75706c6f6164636f6e7461633a20556e737570706f7274656420636c617373206c6f616465720a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.236250162124634,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31352e303730202036383436202036383635204920742e75706c6f6164636f6e7461633a204261636b67726f756e6420636f6e63757272656e7420636f7079696e67204743206672656564203435362838324b422920416c6c6f635370616365206f626a656374732c203428354d4229204c4f53206f626a656374732c2035372520667265652c20313131364b422f324d422c207061757365642037382e3233366d7320746f74616c203534352e3736376d730a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.2367331981658936,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31382e333438202036383436202036383436205720742e75706c6f6164636f6e7461633a20536b697070696e67206475706c696361746520636c61737320636865636b2064756520746f20756e737570706f7274656420636c6173736c6f616465720a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.2377610206604,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31382e353136202036383436202036383436204920436f6e746163742d4d794170706c69636174696f6e3a206f6e437265617465206170700a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.2397541999816895,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31382e353637202036383436202036383436204920436f6e746163742d4c6f6763617448656c7065723a2073746172743a204c6f676361740a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.240444183349609,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31382e353637202036383436202036383436204920436f6e746163742d4d794170706c69636174696f6e3a206f6e4372656174653a200a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.240575075149536,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31382e353638202036383436202036383436204920436f6e746163742d4d794170706c69636174696f6e3a206f6e5472696d4d656d6f72793a200a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.24881911277771,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31382d2d30372d32332031393a34343a31382e393633202036383436202036383436204920436f6e746163742d506f6c6c696e675574696c733a203d3d537461727420706f6c6c696e6720736572766963652e2e2e0a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.512587070465088,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a31392d2d30372d32332031393a34343a31392e323737202036383436202036383635204920742e75706c6f6164636f6e7461633a204261636b67726f756e6420636f6e63757272656e7420636f7079696e672047432066726565642036383136283936334b422920416c6c6f635370616365206f626a656374732c203028304229204c4f53206f626a656374732c2035342520667265652c20313239314b422f324d422c207061757365642031372e3533366d7320746f74616c203331382e3637306d730a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 6.826553106307983,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 6846,
+                    "data": "23576564204a756c2032332031393a34343a31392045445420323032350a70686f6e653d6e6f0a",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 7.110539197921753,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a32302d2d30372d32332031393a34343a32302e343830202036383436202037313330204920436f6e746163742d5574696c733a2075706c6f6164436f6e74616374733a20436f6e74616374733a300a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 8.305582046508789,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a32302d2d30372d32332031393a34343a32302e343931202036383436202037313330204920436f6e746163742d5574696c733a2072756e3a206a736f6e6f626a6563743a7b2270686f6e6553797374656d223a22616e64222c2270686f6e654e756d626572223a226e6f222c2263726561746554696d65223a2231222c22616464726573734c697374223a225b5d227d0a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 8.308757066726685,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a32302d2d30372d32332031393a34343a32302e3439322020363834362020363834362044204f70656e474c52656e64657265723a20536b696120474c20506970656c696e650a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 8.308925151824951,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a32302d2d30372d32332031393a34343a32302e383531202036383436202036383436204920436f6e746163742d4d794170706c69636174696f6e3a206f6e5472696d4d656d6f72793a200a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 8.400776147842407,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 6846,
+                    "tid": 7096,
+                    "data": "323032352d30372d32332031393a34343a32302d2d30372d32332031393a34343a32302e383531202036383436202037313330204920436f6e746163742d5574696c733a2075706c6f61644d53473a20736d73732d3e300a",
+                    "name": "/storage/emulated/0/Upload/Log/Log-2025-07-23.logger",
+                    "time": 8.400872230529785,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}

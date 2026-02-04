@@ -1,0 +1,583 @@
+{
+    "apk_info": {
+        "id": "KByDd2AVaP6OY8mn",
+        "url": "https://developer.koodous.com/apks/64b95975f939959bb38988443d2bcbf569d87c453e334fc1d50d1ff9473781da/",
+        "sha256": "64b95975f939959bb38988443d2bcbf569d87c453e334fc1d50d1ff9473781da",
+        "md5": "9e470723852133861cf8381d643aa5bb",
+        "sha1": "c9d3ad11cf635a866feb3aaa257474559298d292",
+        "app": "Zerobyte",
+        "package_name": "com.test.uploadcontact",
+        "company": "Android",
+        "version": "1.8",
+        "image": "https://developer.koodous.com/media/apk_images/93/a1/93a1bb67db2b5aaa4a53ba4eb457dfe91fb63a17b0d63fb55d4ce8ec6cb196cf",
+        "size": 1430261,
+        "tags": [
+            "goontact",
+            "spyagent",
+            "spyware",
+            "trojan",
+            "reflection",
+            "telephony",
+            "fgxs"
+        ],
+        "is_trusted": false,
+        "is_installed": false,
+        "rating": -2,
+        "is_detected": true,
+        "is_corrupted": false,
+        "last_scan": null,
+        "is_static_analyzed": true,
+        "is_dynamic_analyzed": true,
+        "is_false_positive": false,
+        "last_yara_analysis_at": null,
+        "matches_count": 0,
+        "comments_count": 0,
+        "votes_count": 2,
+        "created_at": "2020-02-23T17:50:26+01:00",
+        "updated_at": "2024-08-03T04:15:49.526775+02:00"
+    },
+    "static_analysis": {
+        "cuckoo": {
+            "file": {
+                "md5": "9e470723852133861cf8381d643aa5bb",
+                "name": "",
+                "path": "",
+                "sha1": "c9d3ad11cf635a866feb3aaa257474559298d292",
+                "size": 1430261,
+                "type": "Android package (APK), with AndroidManifest.xml",
+                "yara": [],
+                "crc32": "6EAC9FCF",
+                "sha256": "64b95975f939959bb38988443d2bcbf569d87c453e334fc1d50d1ff9473781da",
+                "sha512": "34498f9bd1885010b16cdcd06c295c5863057948f31785d6b6794b2ccd63915bdb09572e0b1ea69f0a9d0a982818e81b2ea644c63de2ca5d27de70dc86a608fe",
+                "ssdeep": "24576:qmhVHPICz/Cun4paXwYtZUwyVQU2mVwLFyw9wwbC83bLGrx/gvCQfG:DbH1CkWaXbtZLyWU20wxx97bT3bUgvCX"
+            },
+            "file_id": "",
+            "category": "file"
+        },
+        "androguard": {
+            "urls": [
+                "http://schemas.android.com/apk/res/android",
+                "http://107.151.194.116:8080/JYSystem/restInt/collect/postData",
+                "http://schemas.android.com/apk/res-auto"
+            ],
+            "dexes": {
+                "classes": {
+                    "sha256": "d814684e7f4173a891bb18ba35add7c01262135d0698ede2586cef9437e3933e"
+                }
+            },
+            "api_key": {},
+            "cordova": "",
+            "filters": [
+                "android.intent.action.MAIN"
+            ],
+            "app_name": "Zerobyte",
+            "services": [],
+            "wearable": false,
+            "androidtv": false,
+            "libraries": [],
+            "providers": [],
+            "receivers": [],
+            "activities": [
+                "com.test.uploadcontact.MainActivity"
+            ],
+            "certificate": {
+                "sha1": "61ED377E85D386A8DFEE6B864BD85B0BFAA5AF81",
+                "serial": "936EACBE07F201DF",
+                "sha256": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC",
+                "issuerDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_after": "Jul 17 01:33:46 2035 GMT",
+                "subjectDN": "C = US, ST = California, L = Mountain View, O = Android, OU = Android, CN = Android, E = android@android.com",
+                "not_before": "Feb 29 01:33:46 2008 GMT",
+                "hash_algorithm": "sha1",
+                "signature_algorithm": "rsassa_pkcs1v15"
+            },
+            "permissions": [
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.READ_PHONE_NUMBERS",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.READ_CONTACTS",
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+            ],
+            "is_signed_v1": true,
+            "is_signed_v2": false,
+            "is_signed_v3": false,
+            "package_name": "com.test.uploadcontact",
+            "version_code": "8",
+            "main_activity": "com.test.uploadcontact.MainActivity",
+            "signature_name": "META-INF/CERT.RSA",
+            "files_by_format": {
+                "bin": 161,
+                "png": 250,
+                "txt": 29
+            },
+            "functionalities": {
+                "ssl": [
+                    {
+                        "code": "const-string v2, \"https://\"",
+                        "class": "Landroid/support/v4/text/util/LinkifyCompat;",
+                        "method": "addLinks"
+                    },
+                    {
+                        "code": "const-string v1, \"(((?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)?(?:\"",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    },
+                    {
+                        "code": "const-string v1, \"((?:\\b|$|^)(?:(?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)(?:\"",
+                        "class": "Landroid/support/v4/util/PatternsCompat;",
+                        "method": "<clinit>"
+                    }
+                ],
+                "imei": [
+                    {
+                        "code": "invoke-virtual v10, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImpl;",
+                        "method": "preparePanel"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/ToolbarActionBar;",
+                        "method": "onKeyShortcut"
+                    },
+                    {
+                        "code": "invoke-virtual v6, Landroid/view/KeyEvent;->getDeviceId()I",
+                        "class": "Landroid/support/v7/app/WindowDecorActionBar;",
+                        "method": "onKeyShortcut"
+                    }
+                ],
+                "socket": [
+                    {
+                        "code": "invoke-virtual v1, v8, v7, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v13/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-virtual v1, v0, v7, Landroid/os/ResultReceiver;->send(I Landroid/os/Bundle;)V",
+                        "class": "Landroid/support/v13/view/inputmethod/InputConnectionCompat;",
+                        "method": "handlePerformPrivateCommand"
+                    },
+                    {
+                        "code": "invoke-interface v0, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V",
+                        "class": "Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;",
+                        "method": "processListenerQueue"
+                    }
+                ],
+                "phonenumber": [
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity$3;",
+                        "method": "run"
+                    },
+                    {
+                        "code": "invoke-virtual v1, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;",
+                        "class": "Lcom/test/uploadcontact/MainActivity$3;",
+                        "method": "run"
+                    }
+                ],
+                "dynamicbroadcastreceiver": [
+                    {
+                        "code": "invoke-virtual v0, v1, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "cleanup"
+                    },
+                    {
+                        "code": "invoke-virtual v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;",
+                        "class": "Landroid/support/v7/app/AppCompatDelegateImpl$AutoNightModeManager;",
+                        "method": "setup"
+                    }
+                ]
+            },
+            "max_sdk_version": "",
+            "min_sdk_version": 15,
+            "new_permissions": [],
+            "displayed_version": "1.8",
+            "androguard_version": "4.1.1",
+            "files_by_extension": {
+                "MF": 1,
+                "SF": 1,
+                "RSA": 1,
+                "dex": 1,
+                "png": 250,
+                "pro": 1,
+                "xml": 158,
+                "arsc": 1
+            },
+            "target_sdk_version": 26
+        }
+    },
+    "dynamic_analysis": {
+        "droidbox": {
+            "dns": [],
+            "debug": [],
+            "phone": [],
+            "recvnet": [],
+            "sendnet": [],
+            "sendsms": [],
+            "dexclass": [],
+            "filesopen": [
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/proc/self/cmdline",
+                    "time": 1.682020902633667,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.7163448333740234,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.vdex",
+                    "time": 1.7669589519500732,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.7671289443969727,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-core-libart.art",
+                    "time": 1.767244815826416,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-conscrypt.art",
+                    "time": 1.767387866973877,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-okhttp.art",
+                    "time": 1.7675368785858154,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-bouncycastle.art",
+                    "time": 1.7676239013671875,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-apache-xml.art",
+                    "time": 1.7680869102478027,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ext.art",
+                    "time": 1.768157958984375,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework.art",
+                    "time": 1.7682628631591797,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-telephony-common.art",
+                    "time": 1.7683329582214355,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-voip-common.art",
+                    "time": 1.7684288024902344,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-ims-common.art",
+                    "time": 1.7685449123382568,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.hidl.manager-V1.0-java.art",
+                    "time": 1.7686388492584229,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-framework-oahl-backward-compatibility.art",
+                    "time": 1.7687180042266846,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot-android.test.base.art",
+                    "time": 1.7687909603118896,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.7688798904418945,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.7690320014953613,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.7797958850860596,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/system/framework/oat/x86_64/org.apache.http.legacy.boot.art",
+                    "time": 1.7804529666900635,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/base.apk.x86_64.flock",
+                    "time": 1.794179916381836,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/oat/x86_64/base.vdex",
+                    "time": 1.7977969646453857,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/base.apk",
+                    "time": 1.7979998588562012,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.7983498573303223,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.798710823059082,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/oat/x86_64/base.art",
+                    "time": 1.799048900604248,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/base.apk",
+                    "time": 2.095122814178467,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7383,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 3.8123018741607666,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7383,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 3.8482089042663574,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7384,
+                    "name": "/data/user_de/0/com.test.uploadcontact/code_cache/com.android.skia.shaders_cache",
+                    "time": 3.978163003921509,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7383,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 3.9984328746795654,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7383,
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 4.038800001144409,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7384,
+                    "name": "/dev/graphics/fb0",
+                    "time": 4.269469976425171,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7384,
+                    "name": "/dev/fb0",
+                    "time": 4.269643783569336,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "filesread": [
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "636f6d2e746573742e75706c6f6164636f6e746163740000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.6827809810638428,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "",
+                    "name": "/proc/self/cmdline",
+                    "time": 1.6828219890594482,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "504b0304",
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar",
+                    "time": 1.768967866897583,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.776378870010376,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.7800698280334473,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "504b0304",
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/base.apk",
+                    "time": 1.7982428073883057,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "6172740a303536000000007044e42e00aef4696f00f02371000024716f306d710050b57100000000000000000000000000000000000000006077007008000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e000060000008bb2b700000000030bb2b700000000058bb2b700000000080bb2b7000000000a8bb2b7000000000d0bb2b7000000000f8bb2b700000000020bc2b700000000048bc2b7000000000000000005ce32e00",
+                    "name": "/system/framework/x86_64/boot.art",
+                    "time": 1.7985107898712158,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "6172740a3035360000e0696f44e42e00aef4696f00d08d7000e08d706f10d77000301f710000000000000000000000000000000000e069ff60576a6f08000000010000000000000000000000a8cb1500a8cb1500e006020088d21700c0b40e0008bb2b00c8f0000048872600e0f70300287f2a00e03b0100d0ab2c0000e0000000902d006800010068902e00dc53000000f02e0000600000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000000000005ce32e00",
+                    "name": "/data/dalvik-cache/x86_64/system@framework@boot.art",
+                    "time": 1.798874855041504,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "data": "6172740a3035360000803d78200401000d14a52200903e7800a03e7800203f7800905c7800e0696f90ef230100e08d7022f1ae030000000050813d780800000000000000010000000000000088040000880400000000000088040000000000008804000000000000880400000000000088040000000000009004000000e0000090e40000c80f000058f40000c80f00000010010000100000089b956f00000000309b956f00000000589b956f00000000809b956f00000000a89b956f00000000d09b956f00000000f89b956f00000000209c956f00000000489c956f00000000010000008e630000",
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/oat/x86_64/base.art",
+                    "time": 1.802489995956421,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7383,
+                    "data": "",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 4.01672887802124,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "libraries": [],
+            "processes": [],
+            "phonecalls": [],
+            "cryptousage": [],
+            "fingerprint": [
+                "get_line_1_number"
+            ],
+            "filesdeleted": [
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/system/framework/org.apache.http.legacy.boot.jar.x86_64.flock",
+                    "time": 1.7164099216461182,
+                    "processname": "com.test.uploadcontact"
+                },
+                {
+                    "pid": 7286,
+                    "tid": 7286,
+                    "name": "/data/app/com.test.uploadcontact-h9kuMerL5hXFLVmIhgxQKA==/base.apk.x86_64.flock",
+                    "time": 1.7967329025268555,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "fileswritten": [
+                {
+                    "pid": 7286,
+                    "tid": 7383,
+                    "data": "23576564204a756c2032332031393a34323a34322045445420323032350a757569643d37653565383364342d376631362d343438662d386430392d6335373338393431663364630a",
+                    "name": "/storage/emulated/0/sd_acc.con",
+                    "time": 4.160664796829224,
+                    "processname": "com.test.uploadcontact"
+                }
+            ],
+            "servicestart": []
+        }
+    }
+}
