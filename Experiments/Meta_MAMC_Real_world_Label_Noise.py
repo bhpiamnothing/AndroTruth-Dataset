@@ -237,11 +237,7 @@ def main():
     print(f"[*] Device: {device}")
 
 
-<<<<<<< HEAD
     sha_list, X = load_feature_matrix_csv(FEATURES_CSV)
-=======
-    sha_list, X = load_feature_matrix_csv(FEATURE_CSV)
->>>>>>> e31f203e63b99468d5aa58a0fa378a203f1fb990
     noisy_map = load_label_map(NOISY_LABELS_CSV)
     clean_map = load_label_map(CLEAN_LABELS_CSV)
 
