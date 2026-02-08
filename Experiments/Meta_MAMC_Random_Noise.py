@@ -18,9 +18,11 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader, TensorDataset
 
 
+# INPUT OUR ANDROTRUTH FEATURE CSV PATH HERE
+FEATURES_CSV = r"Experiments\AndroTruth_feature_3000_matrix_df.csv"
+# INPUT OUR ANDROTRUTH CLEAN LABEL CSV PATH HERE
+CLEAN_LABELS_CSV = r"Experiments\AndroTruth_labels.csv"
 
-FEATURE_CSV = "AndroTruth_feature_3000_matrix_df.csv"
-CLEAN_LABELS_CSV = "AndroTruth_labels.csv"
 
 SHA_COL = "sha256"
 FAMILY_COL = "family"
@@ -30,6 +32,7 @@ DEVICE = "auto"         # "auto" | "cuda" | "cpu"
 N_FOLDS = 5
 
 # ---- Synthetic label noise ----
+# Proportion of training labels to be randomly flipped
 NOISE_RATIO = 0.05
 NOISE_BY_CLASS = True
 

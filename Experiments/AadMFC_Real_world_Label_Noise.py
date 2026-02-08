@@ -13,7 +13,7 @@ from sklearn.model_selection import StratifiedKFold
 # ---------------- config ----------------
 # INPUT OUR ANDROTRUTH FEATURE CSV PATH HERE
 FEATURES_CSV = r"Experiments\AndroTruth_feature_3000_matrix_df.csv"
-# INPUT KASPERSKY NOISY LABEL CSV PATH HERE
+# INPUT KASPERSKY NOISY LABEL CSV PATH HERE, you can change to other noisy label sources if needed (e.g., avlcass2,claravy etc.) For GT labels experiment, please use AndroTruth_labels.csv
 NOISY_LABELS_CSV = r"Experiments\AndroTruth_kaspersky_datasets.csv"
 # INPUT OUR ANDROTRUTH CLEAN LABEL CSV PATH HERE
 CLEAN_LABELS_CSV = r"Experiments\AndroTruth_labels.csv"
