@@ -1,0 +1,1423 @@
+{
+  "type": "file",
+  "attributes": {
+    "names": [
+      "cd2caec3e4e9e0de5b1cf31e117b2c44.virus"
+    ],
+    "type_tags": [
+      "executable",
+      "mobile",
+      "android",
+      "apk"
+    ],
+    "md5": "cd2caec3e4e9e0de5b1cf31e117b2c44",
+    "sha256": "7386eac4c4093b2ab433131edef48a2846ed11ce7d58e7069fe5531ae549f29c",
+    "meaningful_name": "cd2caec3e4e9e0de5b1cf31e117b2c44.virus",
+    "unique_sources": 1,
+    "type_extension": "apk",
+    "crowdsourced_ids_results": [
+      {
+        "rule_category": "A Network Trojan was detected",
+        "alert_severity": "high",
+        "rule_msg": "ET MOBILE_MALWARE AndroidOS/Basbanke.A Activity (POST)",
+        "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET 1024: (msg:\"ET MOBILE_MALWARE AndroidOS/Basbanke.A Activity (POST)\"; flow:established,to_server; http.request_line; content:\"POST /rdc?method=\"; fast_pattern; startswith; http.user_agent; content:\"okhttp/\"; startswith; http.header_names; content:!\"Referer\"; http.host; pcre:\"/^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$/\"; reference:md5,220ec1e3effb6f4a4a3acb6b3b3d2e90; reference:url,www.cleafy.com/cleafy-labs/how-brata-is-monitoring-your-bank-account; classtype:trojan-activity; sid:2034965; rev:1; metadata:attack_target Mobile_Client, created_at 2022_01_25, deployment Perimeter, former_category MOBILE_MALWARE, signature_severity Major, updated_at 2022_01_25;)",
+        "alert_context": [
+          {
+            "url": "http://51.83.254.113/rdc?method=query2",
+            "hostname": "51.83.254.113",
+            "dest_port": 9988,
+            "dest_ip": "51.83.254.113"
+          }
+        ],
+        "rule_references": [
+          "https://www.virustotal.com/gui/search/220ec1e3effb6f4a4a3acb6b3b3d2e90",
+          "https://www.cleafy.com/cleafy-labs/how-brata-is-monitoring-your-bank-account"
+        ],
+        "rule_source": "Proofpoint Emerging Threats Open",
+        "rule_url": "https://rules.emergingthreats.net/",
+        "rule_id": "1:2034965"
+      },
+      {
+        "rule_category": "policy-violation",
+        "alert_severity": "info",
+        "rule_msg": "POLICY-OTHER HTTP request by IPv4 address attempt",
+        "rule_raw": "alert tcp any any -> any $HTTP_PORTS ( msg:\"POLICY-OTHER HTTP request by IPv4 address attempt\"; flow:to_server,established; http_header; content:\"Host:\",fast_pattern,nocase; pcre:\"/^Host\\x3a\\s*(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\\s*:?\\s*\\d*\\s*$/smi\"; service:http; reference:url,www.w3.org/Protocols/rfc2616/rfc2616-sec15.html; classtype:policy-violation; sid:50447; rev:1; )",
+        "alert_context": [
+          {
+            "dest_port": 9988,
+            "dest_ip": "51.83.254.113"
+          }
+        ],
+        "rule_references": [
+          "https://www.w3.org/Protocols/rfc2616/rfc2616-sec15.html"
+        ],
+        "rule_source": "Snort registered user ruleset",
+        "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+        "rule_id": "1:50447"
+      }
+    ],
+    "trid": [
+      {
+        "file_type": "Android Package",
+        "probability": 67.5
+      },
+      {
+        "file_type": "Java Archive",
+        "probability": 23.6
+      },
+      {
+        "file_type": "ZIP compressed archive",
+        "probability": 7.0
+      },
+      {
+        "file_type": "PrintFox/Pagefox bitmap (640x800)",
+        "probability": 1.7
+      }
+    ],
+    "size": 12266432,
+    "last_analysis_results": {
+      "Bkav": {
+        "method": "blacklist",
+        "engine_name": "Bkav",
+        "engine_version": "1.3.0.9899",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Lionic": {
+        "method": "blacklist",
+        "engine_name": "Lionic",
+        "engine_version": "7.5",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Trojan.AndroidOS.Basbanke.C!c"
+      },
+      "MicroWorld-eScan": {
+        "method": "blacklist",
+        "engine_name": "MicroWorld-eScan",
+        "engine_version": "14.0.409.0",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "FireEye": {
+        "method": "blacklist",
+        "engine_name": "FireEye",
+        "engine_version": "35.24.1.0",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "CAT-QuickHeal": {
+        "method": "blacklist",
+        "engine_name": "CAT-QuickHeal",
+        "engine_version": "14.00",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "McAfee": {
+        "method": "blacklist",
+        "engine_name": "McAfee",
+        "engine_version": "6.0.6.653",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Artemis!CD2CAEC3E4E9"
+      },
+      "Malwarebytes": {
+        "method": "blacklist",
+        "engine_name": "Malwarebytes",
+        "engine_version": "4.3.3.37",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "VIPRE": {
+        "method": "blacklist",
+        "engine_name": "VIPRE",
+        "engine_version": "6.0.0.35",
+        "engine_update": "20220703",
+        "category": "undetected",
+        "result": null
+      },
+      "Trustlook": {
+        "method": "blacklist",
+        "engine_name": "Trustlook",
+        "engine_version": "1.0",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Android.Malware.Trojan"
+      },
+      "BitDefender": {
+        "method": "blacklist",
+        "engine_name": "BitDefender",
+        "engine_version": "7.2",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "K7GW": {
+        "method": "blacklist",
+        "engine_name": "K7GW",
+        "engine_version": "12.23.43180",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Trojan ( 0055f8ea1 )"
+      },
+      "K7AntiVirus": {
+        "method": "blacklist",
+        "engine_name": "K7AntiVirus",
+        "engine_version": "12.22.43165",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "BitDefenderTheta": {
+        "method": "blacklist",
+        "engine_name": "BitDefenderTheta",
+        "engine_version": "7.2.37796.0",
+        "engine_update": "20220614",
+        "category": "undetected",
+        "result": null
+      },
+      "VirIT": {
+        "method": "blacklist",
+        "engine_name": "VirIT",
+        "engine_version": "9.5.230",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "Cyren": {
+        "method": "blacklist",
+        "engine_name": "Cyren",
+        "engine_version": "6.5.1.2",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "SymantecMobileInsight": {
+        "method": "blacklist",
+        "engine_name": "SymantecMobileInsight",
+        "engine_version": "2.0",
+        "engine_update": "20220208",
+        "category": "malicious",
+        "result": "AdLibrary:Generisk"
+      },
+      "Symantec": {
+        "method": "blacklist",
+        "engine_name": "Symantec",
+        "engine_version": "1.17.0.0",
+        "engine_update": "20220704",
+        "category": "malicious",
+        "result": "Trojan.Gen.MBT"
+      },
+      "ESET-NOD32": {
+        "method": "blacklist",
+        "engine_name": "ESET-NOD32",
+        "engine_version": "25542",
+        "engine_update": "20220704",
+        "category": "malicious",
+        "result": "a variant of Android/Spy.Banker.BHU"
+      },
+      "Baidu": {
+        "method": "blacklist",
+        "engine_name": "Baidu",
+        "engine_version": "1.0.0.2",
+        "engine_update": "20190318",
+        "category": "undetected",
+        "result": null
+      },
+      "TrendMicro-HouseCall": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro-HouseCall",
+        "engine_version": "10.0.0.1040",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Avast": {
+        "method": "blacklist",
+        "engine_name": "Avast",
+        "engine_version": "21.1.5827.0",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "ClamAV": {
+        "method": "blacklist",
+        "engine_name": "ClamAV",
+        "engine_version": "0.105.0.0",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "Kaspersky": {
+        "method": "blacklist",
+        "engine_name": "Kaspersky",
+        "engine_version": "21.0.1.45",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "HEUR:Trojan-Banker.AndroidOS.Basbanke.l"
+      },
+      "Alibaba": {
+        "method": "blacklist",
+        "engine_name": "Alibaba",
+        "engine_version": "0.3.0.5",
+        "engine_update": "20190527",
+        "category": "malicious",
+        "result": "TrojanBanker:Android/Brata.4a20bf3f"
+      },
+      "NANO-Antivirus": {
+        "method": "blacklist",
+        "engine_name": "NANO-Antivirus",
+        "engine_version": "1.0.146.25588",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "ViRobot": {
+        "method": "blacklist",
+        "engine_name": "ViRobot",
+        "engine_version": "2014.3.20.0",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Rising": {
+        "method": "blacklist",
+        "engine_name": "Rising",
+        "engine_version": "25.0.0.27",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Ad-Aware": {
+        "method": "blacklist",
+        "engine_name": "Ad-Aware",
+        "engine_version": "3.0.21.193",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Sophos": {
+        "method": "blacklist",
+        "engine_name": "Sophos",
+        "engine_version": "1.4.1.0",
+        "engine_update": "20220704",
+        "category": "malicious",
+        "result": "Andr/Spy-BGC"
+      },
+      "Comodo": {
+        "method": "blacklist",
+        "engine_name": "Comodo",
+        "engine_version": "34775",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "F-Secure": {
+        "method": "blacklist",
+        "engine_name": "F-Secure",
+        "engine_version": "18.10.978.51",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Malware.ANDROID/Svpeng.B.Gen"
+      },
+      "DrWeb": {
+        "method": "blacklist",
+        "engine_name": "DrWeb",
+        "engine_version": "7.0.56.4040",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Android.BankBot.972.origin"
+      },
+      "Zillya": {
+        "method": "blacklist",
+        "engine_name": "Zillya",
+        "engine_version": "2.0.0.4664",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "TrendMicro": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro",
+        "engine_version": "11.0.0.1006",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "McAfee-GW-Edition": {
+        "method": "blacklist",
+        "engine_name": "McAfee-GW-Edition",
+        "engine_version": "v2019.1.2+3728",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Artemis!Trojan"
+      },
+      "Emsisoft": {
+        "method": "blacklist",
+        "engine_name": "Emsisoft",
+        "engine_version": "2021.5.0.7597",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Ikarus": {
+        "method": "blacklist",
+        "engine_name": "Ikarus",
+        "engine_version": "6.0.24.0",
+        "engine_update": "20220704",
+        "category": "malicious",
+        "result": "Trojan-Banker.AndroidOS.Agent"
+      },
+      "GData": {
+        "method": "blacklist",
+        "engine_name": "GData",
+        "engine_version": "A:25.33430B:27.27962",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Jiangmin": {
+        "method": "blacklist",
+        "engine_name": "Jiangmin",
+        "engine_version": "16.0.100",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "Avira": {
+        "method": "blacklist",
+        "engine_name": "Avira",
+        "engine_version": "8.3.3.14",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "ANDROID/Svpeng.B.Gen"
+      },
+      "Kingsoft": {
+        "method": "blacklist",
+        "engine_name": "Kingsoft",
+        "engine_version": "2017.9.26.565",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Microsoft": {
+        "method": "blacklist",
+        "engine_name": "Microsoft",
+        "engine_version": "1.1.19300.2",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Trojan:AndroidOS/Brata.B"
+      },
+      "Gridinsoft": {
+        "method": "blacklist",
+        "engine_name": "Gridinsoft",
+        "engine_version": "1.0.83.174",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Arcabit": {
+        "method": "blacklist",
+        "engine_name": "Arcabit",
+        "engine_version": "1.0.0.889",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "SUPERAntiSpyware": {
+        "method": "blacklist",
+        "engine_name": "SUPERAntiSpyware",
+        "engine_version": "5.6.0.1032",
+        "engine_update": "20220702",
+        "category": "undetected",
+        "result": null
+      },
+      "ZoneAlarm": {
+        "method": "blacklist",
+        "engine_name": "ZoneAlarm",
+        "engine_version": "1.0",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "HEUR:Trojan-Banker.AndroidOS.Basbanke.l"
+      },
+      "Avast-Mobile": {
+        "method": "blacklist",
+        "engine_name": "Avast-Mobile",
+        "engine_version": "220704-02",
+        "engine_update": "20220704",
+        "category": "malicious",
+        "result": "Android:Evo-gen [Trj]"
+      },
+      "Cynet": {
+        "method": "blacklist",
+        "engine_name": "Cynet",
+        "engine_version": "4.0.0.27",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Malicious (score: 99)"
+      },
+      "BitDefenderFalx": {
+        "method": "blacklist",
+        "engine_name": "BitDefenderFalx",
+        "engine_version": "2.0.936",
+        "engine_update": "20220103",
+        "category": "malicious",
+        "result": "Android.Trojan.InfoStealer.YG"
+      },
+      "AhnLab-V3": {
+        "method": "blacklist",
+        "engine_name": "AhnLab-V3",
+        "engine_version": "3.22.1.10283",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Trojan/Android.Banker.1136305"
+      },
+      "Acronis": {
+        "method": "blacklist",
+        "engine_name": "Acronis",
+        "engine_version": "1.2.0.108",
+        "engine_update": "20220426",
+        "category": "undetected",
+        "result": null
+      },
+      "VBA32": {
+        "method": "blacklist",
+        "engine_name": "VBA32",
+        "engine_version": "5.0.0",
+        "engine_update": "20220630",
+        "category": "undetected",
+        "result": null
+      },
+      "ALYac": {
+        "method": "blacklist",
+        "engine_name": "ALYac",
+        "engine_version": "1.1.3.1",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "MAX": {
+        "method": "blacklist",
+        "engine_name": "MAX",
+        "engine_version": "2019.9.16.1",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Zoner": {
+        "method": "blacklist",
+        "engine_name": "Zoner",
+        "engine_version": "2.2.2.0",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "Tencent": {
+        "method": "blacklist",
+        "engine_name": "Tencent",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Android.Trojan-spy.Banker.Szbo"
+      },
+      "Yandex": {
+        "method": "blacklist",
+        "engine_name": "Yandex",
+        "engine_version": "5.5.2.24",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "TACHYON": {
+        "method": "blacklist",
+        "engine_name": "TACHYON",
+        "engine_version": "2022-07-05.01",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "MaxSecure": {
+        "method": "blacklist",
+        "engine_name": "MaxSecure",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20220705",
+        "category": "undetected",
+        "result": null
+      },
+      "Fortinet": {
+        "method": "blacklist",
+        "engine_name": "Fortinet",
+        "engine_version": "6.2.142.0",
+        "engine_update": "20220705",
+        "category": "malicious",
+        "result": "Android/Banker.BHU!tr"
+      },
+      "Panda": {
+        "method": "blacklist",
+        "engine_name": "Panda",
+        "engine_version": "4.6.4.2",
+        "engine_update": "20220704",
+        "category": "undetected",
+        "result": null
+      },
+      "Elastic": {
+        "method": "blacklist",
+        "engine_name": "Elastic",
+        "engine_version": "4.0.40",
+        "engine_update": "20220623",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "tehtris": {
+        "method": "blacklist",
+        "engine_name": "tehtris",
+        "engine_version": "v0.1.4",
+        "engine_update": "20220705",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Webroot": {
+        "method": "blacklist",
+        "engine_name": "Webroot",
+        "engine_version": "1.0.0.403",
+        "engine_update": "20220705",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "APEX": {
+        "method": "blacklist",
+        "engine_name": "APEX",
+        "engine_version": "6.309",
+        "engine_update": "20220704",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Paloalto": {
+        "method": "blacklist",
+        "engine_name": "Paloalto",
+        "engine_version": "0.9.0.1003",
+        "engine_update": "20220705",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Trapmine": {
+        "method": "blacklist",
+        "engine_name": "Trapmine",
+        "engine_version": "3.5.48.98",
+        "engine_update": "20220628",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Cylance": {
+        "method": "blacklist",
+        "engine_name": "Cylance",
+        "engine_version": "2.3.1.101",
+        "engine_update": "20220705",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "SentinelOne": {
+        "method": "blacklist",
+        "engine_name": "SentinelOne",
+        "engine_version": "22.2.1.2",
+        "engine_update": "20220330",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "CrowdStrike": {
+        "method": "blacklist",
+        "engine_name": "CrowdStrike",
+        "engine_version": "1.0",
+        "engine_update": "20220418",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Cybereason": {
+        "method": "blacklist",
+        "engine_name": "Cybereason",
+        "engine_version": "1.2.449",
+        "engine_update": "20210330",
+        "category": "type-unsupported",
+        "result": null
+      }
+    },
+    "ssdeep": "196608:/OXAmELFg+4LyIIKsnJgTKfZPVcBuQhDIbvML8EWiPGCqfUfJU6eFmEO2O0kSXJH:/OvK4OItsJyKfZPeuOIbve8MPGCq2+jV",
+    "magic": "Zip archive data, at least v2.0 to extract",
+    "tlsh": "T1B5C63392F2A8BE17C473D0330E9297322416CD609B03EB07325D7679AAFBBE44E456D1",
+    "vhash": "db10ac38f3894c74f39c1b65dfda70fd",
+    "first_submission_date": "2022-07-04 13:18:05 UTC",
+    "tags": [
+      "apk",
+      "android",
+      "runtime-modules",
+      "reflection"
+    ],
+    "androguard": {
+      "Activities": [
+        "com.app.app.unicredit.main",
+        "com.app.app.unicredit.actpermclicked7",
+        "com.app.app.unicredit.actpermclicked8",
+        "com.app.app.unicredit.centralmessagebox",
+        "com.app.app.unicredit.lockedoutactold",
+        "com.app.app.unicredit.login",
+        "com.app.app.unicredit.onlytestmp",
+        "com.app.app.unicredit.regetthedevicesizes",
+        "com.app.app.unicredit.reqpermissionsforsystem",
+        "com.app.app.unicredit.runussdcodefast",
+        "com.app.app.unicredit.scenebuilderrect",
+        "com.app.app.unicredit.startactdevmang",
+        "com.app.app.unicredit.startactgpper",
+        "com.app.app.unicredit.startactoverlay",
+        "com.app.app.unicredit.startactwritesy",
+        "com.app.app.unicredit.startscreencap",
+        "com.app.app.unicredit.startsmspermnew",
+        "com.app.app.unicredit.takescreenshot",
+        "com.app.app.unicredit.xiaomireqsmsperm"
+      ],
+      "AndroidVersionCode": "7",
+      "certificate": {
+        "Subject": {
+          "DN": "C:US, CN:Android, L:Mountain View, O:Android, ST:California, OU:Android, email:android@android.com",
+          "C": "US",
+          "CN": "Android",
+          "L": "Mountain View",
+          "O": "Android",
+          "ST": "California",
+          "OU": "Android",
+          "email": "android@android.com"
+        },
+        "validto": "2035-07-17 01:33:46",
+        "serialnumber": "936eacbe07f201df",
+        "thumbprint": "61ed377e85d386a8dfee6b864bd85b0bfaa5af81",
+        "validfrom": "2008-02-29 01:33:46",
+        "Issuer": {
+          "DN": "C:US, CN:Android, L:Mountain View, O:Android, ST:California, OU:Android, email:android@android.com",
+          "C": "US",
+          "CN": "Android",
+          "L": "Mountain View",
+          "O": "Android",
+          "ST": "California",
+          "OU": "Android",
+          "email": "android@android.com"
+        }
+      },
+      "VTAndroidInfo": 2.0,
+      "Package": "com.app.app.unicredit",
+      "AndroidApplication": 1,
+      "AndroidApplicationError": false,
+      "StringsInformation": [
+        "http://51.68.145.103/gvcrfRK.zip",
+        "http://dashif.org/guidelines/last-segment-number",
+        "http://dashif.org/guidelines/trickmode",
+        "http://ns.adobe.com/xap/1.0/",
+        "http://schemas.android.com/apk/res/android",
+        "http://schemas.microsoft.com/DRM/2007/03/protocols/AcquireLicense",
+        "http://www.w3.org/ns/ttml#parameter",
+        "https://aomedia.org/emsg/ID3",
+        "https://developer.android.com/reference/androidx/fragment/app/FragmentContainerView.html",
+        "https://developer.apple.com/streaming/emsg-id3",
+        "https://plus.google.com/",
+        "https://www.googleapis.com/auth/appstate",
+        "https://www.googleapis.com/auth/datastoremobile",
+        "https://www.googleapis.com/auth/drive",
+        "https://www.googleapis.com/auth/drive.appdata",
+        "https://www.googleapis.com/auth/drive.apps",
+        "https://www.googleapis.com/auth/drive.file",
+        "https://www.googleapis.com/auth/fitness.activity.read",
+        "https://www.googleapis.com/auth/fitness.activity.write",
+        "https://www.googleapis.com/auth/fitness.blood_glucose.read",
+        "https://www.googleapis.com/auth/fitness.blood_glucose.write",
+        "https://www.googleapis.com/auth/fitness.blood_pressure.read",
+        "https://www.googleapis.com/auth/fitness.blood_pressure.write",
+        "https://www.googleapis.com/auth/fitness.body.read",
+        "https://www.googleapis.com/auth/fitness.body.write",
+        "https://www.googleapis.com/auth/fitness.body_temperature.read",
+        "https://www.googleapis.com/auth/fitness.body_temperature.write",
+        "https://www.googleapis.com/auth/fitness.location.read",
+        "https://www.googleapis.com/auth/fitness.location.write",
+        "https://www.googleapis.com/auth/fitness.nutrition.read",
+        "https://www.googleapis.com/auth/fitness.nutrition.write",
+        "https://www.googleapis.com/auth/fitness.oxygen_saturation.read",
+        "https://www.googleapis.com/auth/fitness.oxygen_saturation.write",
+        "https://www.googleapis.com/auth/fitness.reproductive_health.read",
+        "https://www.googleapis.com/auth/fitness.reproductive_health.write",
+        "https://www.googleapis.com/auth/games",
+        "https://www.googleapis.com/auth/games.firstparty",
+        "https://www.googleapis.com/auth/games_lite",
+        "https://www.googleapis.com/auth/plus.login",
+        "https://www.googleapis.com/auth/plus.me",
+        "https://x"
+      ],
+      "Providers": [
+        "androidx.core.content.FileProvider"
+      ],
+      "AndroidVersionName": "7",
+      "RiskIndicator": {
+        "PERM": {
+          "DEVELOPMENT": 2,
+          "PRIVACY": 6,
+          "NORMAL": 17,
+          "APPOP": 2,
+          "PRE23": 2,
+          "SMS": 3,
+          "DANGEROUS": 5,
+          "PREINSTALLED": 2,
+          "MONEY": 1,
+          "SIGNATURE": 11,
+          "INTERNET": 1,
+          "PRIVILEGED": 6,
+          "GPS": 1
+        }
+      },
+      "Services": [
+        "anywheresoftware.b4a.objects.NotificationListenerWrapper",
+        "com.app.app.unicredit.accservice",
+        "com.app.app.unicredit.httputils2service",
+        "com.app.app.unicredit.notificationservice",
+        "com.app.app.unicredit.s1",
+        "com.app.app.unicredit.service1",
+        "com.app.app.unicredit.service2",
+        "com.app.app.unicredit.service3",
+        "com.app.app.unicredit.service4",
+        "com.app.app.unicredit.starter",
+        "com.app.app.unicredit.trackggppss"
+      ],
+      "MinSdkVersion": "5",
+      "TargetSdkVersion": "24",
+      "Receivers": [
+        "anywheresoftware.b4a.objects.AdminReceiver2",
+        "com.app.app.unicredit.accservice$accservice_BR",
+        "com.app.app.unicredit.httputils2service$httputils2service_BR",
+        "com.app.app.unicredit.notificationservice$notificationservice_BR",
+        "com.app.app.unicredit.s1$s1_BR",
+        "com.app.app.unicredit.service1$service1_BR",
+        "com.app.app.unicredit.service2$service2_BR",
+        "com.app.app.unicredit.service3$service3_BR",
+        "com.app.app.unicredit.service4$service4_BR",
+        "com.app.app.unicredit.starter$starter_BR",
+        "com.app.app.unicredit.trackggppss$trackggppss_BR"
+      ],
+      "AndroguardVersion": "3.4.0a1",
+      "AndroidApplicationInfo": "APK",
+      "main_activity": "com.app.app.unicredit.main",
+      "intent_filters": {
+        "Services": {
+          "anywheresoftware.b4a.objects.NotificationListenerWrapper": {
+            "action": [
+              "android.service.notification.NotificationListenerService"
+            ]
+          },
+          "com.app.app.unicredit.service3": {
+            "action": [
+              "android.intent.action.RESPOND_VIA_MESSAGE"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.app.app.unicredit.accservice": {
+            "action": [
+              "android.accessibilityservice.AccessibilityService"
+            ]
+          }
+        },
+        "Activities": {
+          "com.app.app.unicredit.main": {
+            "action": [
+              "android.intent.action.MAIN",
+              "android.intent.action.SEND",
+              "android.intent.action.SENDTO"
+            ],
+            "category": [
+              "android.intent.category.LAUNCHER",
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          }
+        },
+        "Receivers": {
+          "com.app.app.unicredit.trackggppss$trackggppss_BR": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          },
+          "com.app.app.unicredit.accservice$accservice_BR": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          },
+          "anywheresoftware.b4a.objects.AdminReceiver2": {
+            "action": [
+              "android.app.action.DEVICE_ADMIN_ENABLED"
+            ]
+          },
+          "com.app.app.unicredit.service2$service2_BR": {
+            "action": [
+              "android.provider.Telephony.WAP_PUSH_DELIVER"
+            ]
+          },
+          "com.app.app.unicredit.notificationservice$notificationservice_BR": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          },
+          "com.app.app.unicredit.service1$service1_BR": {
+            "action": [
+              "android.provider.Telephony.SMS_DELIVER"
+            ]
+          },
+          "com.app.app.unicredit.s1$s1_BR": {
+            "action": [
+              "android.provider.Telephony.SMS_RECEIVED"
+            ]
+          },
+          "com.app.app.unicredit.starter$starter_BR": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          }
+        }
+      },
+      "permission_details": {
+        "miui.permission.USE_INTERNAL_GENERAL_API": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.google.android.providers.gsf.permission.READ_GSERVICES": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "org.adw.launcher_donut.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.yulong.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.INTERNET": {
+          "permission_type": "normal",
+          "short_description": "have full network access",
+          "full_description": "Allows the app to create\n     network sockets and use custom network protocols. The browser and other\n     applications provide means to send data to the internet, so this\n     permission is not required to send data to the internet."
+        },
+        "com.zte.mifavor.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.GET_APP_GRANTED_URI_PERMISSIONS": {
+          "permission_type": "signature",
+          "short_description": "",
+          "full_description": ""
+        },
+        "com.android.launcher.permission.INSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "install shortcuts",
+          "full_description": "Allows an application to add\n        Homescreen shortcuts without user intervention."
+        },
+        "com.mi.android.globallauncher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.miui.systemAdSolution.adSwitch.PROVIDER": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.PERMISSION_CALL_PHONE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+          "permission_type": "signature|preinstalled|appop|pre23|development",
+          "short_description": "draw over other apps",
+          "full_description": "Allows the app to draw on top of other\n        applications or parts of the user interface.  They may interfere with your\n        use of the interface in any application, or change what you think you are\n        seeing in other applications."
+        },
+        "android.permission.ACCESS_NOTIFICATION_POLICY": {
+          "permission_type": "normal",
+          "short_description": "access Do Not Disturb",
+          "full_description": "Allows the app to read and write Do Not Disturb configuration."
+        },
+        "android.permission.CHANGE_WIFI_STATE": {
+          "permission_type": "normal",
+          "short_description": "connect and disconnect from Wi-Fi",
+          "full_description": "Allows the app to connect to and\n      disconnect from Wi-Fi access points and to make changes to device\n      configuration for Wi-Fi networks."
+        },
+        "android.permission.RECEIVE_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "receive text messages (SMS)",
+          "full_description": "Allows the app to receive and process SMS\n      messages. This means the app could monitor or delete messages sent to your\n      device without showing them to you."
+        },
+        "com.yulong.android.launcherL.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.miui.cleanmaster.permission.InstallCleanMaster": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.huawei.launcher3.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.xiaomi.permission.AUTH_SERVICE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CAPTURE_SECURE_VIDEO_OUTPUT": {
+          "permission_type": "signature|privileged",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.ACCESS_KEYGUARD_SECURE_STORAGE": {
+          "permission_type": "signature",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.READ_PRIVILEGED_PHONE_STATE": {
+          "permission_type": "signature|privileged",
+          "short_description": "",
+          "full_description": ""
+        },
+        "com.android.launcher3.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+          "permission_type": "normal",
+          "short_description": "view network connections",
+          "full_description": "Allows the app to view\n      information about network connections such as which networks exist and are\n      connected."
+        },
+        "com.htc.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.bbk.launcher2.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_SETTINGS": {
+          "permission_type": "signature|preinstalled|appop|pre23",
+          "short_description": "modify system settings",
+          "full_description": "Allows the app to modify the\n        system's settings data. Malicious apps may corrupt your system's\n        configuration."
+        },
+        "com.miui.gallery.permission.USE_API": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.qiku.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.meizu.flyme.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.launcher.permission.WRITE_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.mi.android.globallauncher.permission.WRITE_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.REQUEST_INSTALL_PACKAGES": {
+          "permission_type": "normal",
+          "short_description": "request install packages",
+          "full_description": "Allows an application to request installation of packages."
+        },
+        "com.yulong.android.launcher3.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.MODIFY_AUDIO_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "change your audio settings",
+          "full_description": "Allows the app to modify global audio settings such as volume and which speaker is used for output."
+        },
+        "com.sec.android.app.twlauncher.settings.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "net.qihoo.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.ebproductions.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.huawei.launcher2.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.oppo.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.MANAGE_ACCOUNTS": {
+          "permission_type": "dangerous",
+          "short_description": "manage the accounts list",
+          "full_description": "Allows an application to\n    perform operations like adding, and removing accounts and deleting\n    their password."
+        },
+        "android.permission.SEND_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "send and view SMS messages",
+          "full_description": "Allows the app to send SMS messages.\n     This may result in unexpected charges. Malicious apps may cost you money by\n     sending messages without your confirmation."
+        },
+        "android.permission.ACTION_MANAGE_OVERLAY_PERMISSION": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.xiaomi.gallery.permission.CLOUD": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.mi.android.globalFileexplorer.permission.DIRPARSE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.GET_TASKS": {
+          "permission_type": "normal",
+          "short_description": "retrieve running apps",
+          "full_description": "Allows the app to retrieve information\n       about currently and recently running tasks.  This may allow the app to\n       discover information about which applications are used on the device."
+        },
+        "android.permission.MANAGE_EXTERNAL_STORAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "org.adwfreak.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "cn.nubia.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+          "permission_type": "normal",
+          "short_description": "run at startup",
+          "full_description": "Allows the app to\n        have itself started as soon as the system has finished booting.\n        This can make it take longer to start the phone and allow the\n        app to slow down the overall phone by always running."
+        },
+        "android.permission.CALL_PHONE": {
+          "permission_type": "dangerous",
+          "short_description": "directly call phone numbers",
+          "full_description": "Allows the app to call phone numbers\n      without your intervention. This may result in unexpected charges or calls.\n      Note that this doesn't allow the app to call emergency numbers.\n      Malicious apps may cost you money by making calls without your\n      confirmation."
+        },
+        "android.permission.INTERACT_ACROSS_USERS": {
+          "permission_type": "signature|privileged|development",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.READ_PHONE_STATE": {
+          "permission_type": "dangerous",
+          "short_description": "read phone status and identity",
+          "full_description": "Allows the app to access the phone\n      features of the device.  This permission allows the app to determine the\n      phone number and device IDs, whether a call is active, and the remote number\n      connected by a call."
+        },
+        "com.android.launcher2.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.KILL_BACKGROUND_PROCESSES": {
+          "permission_type": "normal",
+          "short_description": "close other apps",
+          "full_description": "Allows the app to end\n      background processes of other apps.  This may cause other apps to stop\n      running."
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+          "permission_type": "normal",
+          "short_description": "view Wi-Fi connections",
+          "full_description": "Allows the app to view information\n      about Wi-Fi networking, such as whether Wi-Fi is enabled and name of\n      connected Wi-Fi devices."
+        },
+        "android.permission.WAKE_LOCK": {
+          "permission_type": "normal",
+          "short_description": "prevent phone from sleeping",
+          "full_description": "Allows the app to prevent the phone from going to sleep."
+        },
+        "com.huawei.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.launcher3.permission.WRITE_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.launcher2.permission.WRITE_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.DELETE_CACHE_FILES": {
+          "permission_type": "signature",
+          "short_description": "delete other applications' caches",
+          "full_description": "Allows an application to delete\n        cache files."
+        },
+        "android.permission.GET_ACCOUNTS": {
+          "permission_type": "dangerous",
+          "short_description": "find accounts on the device",
+          "full_description": "Allows the app to get\n      the list of accounts known by the phone.  This may include any accounts\n      created by applications you have installed."
+        },
+        "android.permission.ACCESS_MTP": {
+          "permission_type": "signature|privileged",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.DISABLE_KEYGUARD": {
+          "permission_type": "normal",
+          "short_description": "disable your screen lock",
+          "full_description": "Allows the app to disable the\n      keylock and any associated password security.  For example, the phone\n      disables the keylock when receiving an incoming phone call, then\n      re-enables the keylock when the call is finished."
+        },
+        "com.android.launcher.permission.UNINSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "uninstall shortcuts",
+          "full_description": "Allows the application to remove\n        Homescreen shortcuts without user intervention."
+        },
+        "android.permission.USE_CREDENTIALS": {
+          "permission_type": "dangerous",
+          "short_description": "use the authentication\n    credentials of an account",
+          "full_description": "Allows an application to\n    request authentication tokens."
+        },
+        "com.tencent.qqlauncher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_MEDIA_STORAGE": {
+          "permission_type": "signature|privileged",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.MANAGE_USERS": {
+          "permission_type": "signature|privileged",
+          "short_description": "",
+          "full_description": ""
+        },
+        "com.lge.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.EXPAND_STATUS_BAR": {
+          "permission_type": "normal",
+          "short_description": "expand/collapse status bar",
+          "full_description": "Allows the app to expand or collapse the status bar."
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+          "permission_type": "dangerous",
+          "short_description": "access precise location (GPS and\n      network-based)",
+          "full_description": "Allows the app to get your\n      precise location using the Global Positioning System (GPS) or network\n      location sources such as cell towers and Wi-Fi. These location services\n      must be turned on and available to your device for the app to use them.\n      Apps may use this to determine where you are, and may consume additional\n      battery power."
+        },
+        "com.nd.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.mylauncher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.google.android.c2dm.permission.RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.lenovo.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.fileexplorer.permission.ota": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+          "permission_type": "dangerous",
+          "short_description": "modify or delete the contents of your SD card",
+          "full_description": "Allows the app to write to the SD card."
+        },
+        "android.permission.GET_PACKAGE_SIZE": {
+          "permission_type": "normal",
+          "short_description": "measure app storage space",
+          "full_description": "Allows the app to retrieve its code, data, and cache sizes"
+        },
+        "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS": {
+          "permission_type": "normal",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.READ_EXTERNAL_STORAGE": {
+          "permission_type": "dangerous",
+          "short_description": "read the contents of your SD card",
+          "full_description": "Allows the app to read the contents of your SD card."
+        },
+        "com.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.cleanmaster.permission.sdk.clean": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.google.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.ztemt.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.FOREGROUND_SERVICE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "read your text messages (SMS or MMS)",
+          "full_description": "Allows the app to read SMS\n      messages stored on your phone or SIM card. This allows the app to read all\n      SMS messages, regardless of content or confidentiality."
+        },
+        "android.permission.VIBRATE": {
+          "permission_type": "normal",
+          "short_description": "control vibration",
+          "full_description": "Allows the app to control the vibrator."
+        },
+        "com.fede.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "org.adw.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.qihoo360.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_ALL_EXTERNAL_STORAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.MOUNT_UNMOUNT_FILESYSTEMS": {
+          "permission_type": "dangerous",
+          "short_description": "mount and unmount filesystems",
+          "full_description": "Allows the application to mount and\n        unmount filesystems for removable storage."
+        }
+      }
+    },
+    "type_description": "Android",
+    "last_modification_date": "2024-04-17 11:23:57 UTC",
+    "type_tag": "android",
+    "crowdsourced_ids_stats": {
+      "high": 1,
+      "info": 1,
+      "medium": 0,
+      "low": 0
+    },
+    "total_votes": {
+      "harmless": 0,
+      "malicious": 0
+    },
+    "sha1": "31d0ca28d91fc9c3ea41063333569f5c1c6679c1",
+    "times_submitted": 1,
+    "reputation": 0,
+    "last_submission_date": "2022-07-04 13:18:05 UTC",
+    "last_analysis_stats": {
+      "malicious": 23,
+      "suspicious": 0,
+      "undetected": 38,
+      "harmless": 0,
+      "timeout": 0,
+      "confirmed-timeout": 0,
+      "failure": 0,
+      "type-unsupported": 10
+    },
+    "last_analysis_date": "2022-07-05 06:06:55 UTC",
+    "bundle_info": {
+      "highest_datetime": "2022-07-04 04:24:08",
+      "lowest_datetime": "1980-12-31 16:00:00",
+      "num_children": 393,
+      "extensions": {
+        "xml": 125,
+        "dex": 2,
+        "MF": 1,
+        "db": 4,
+        "gz": 1,
+        "RSA": 1,
+        "gif": 1,
+        "mp4": 1,
+        "SF": 1,
+        "bal": 2,
+        "txt": 1,
+        "ttf": 1,
+        "png": 236
+      },
+      "file_types": {
+        "XML": 126,
+        "DEX": 2,
+        "unknown": 28,
+        "GIF": 1,
+        "HTML": 1,
+        "PNG": 235
+      },
+      "type": "APK",
+      "uncompressed_size": 18517645
+    },
+    "first_seen_itw_date": 1656938104,
+    "first_submission_date_epoch": 1656940685,
+    "last_submission_date_epoch": 1656940685,
+    "last_modification_date_epoch": 1713353037,
+    "last_analysis_date_epoch": 1657001215
+  },
+  "id": "7386eac4c4093b2ab433131edef48a2846ed11ce7d58e7069fe5531ae549f29c"
+}

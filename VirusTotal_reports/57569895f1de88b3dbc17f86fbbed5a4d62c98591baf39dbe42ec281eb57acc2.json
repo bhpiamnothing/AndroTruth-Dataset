@@ -1,0 +1,3661 @@
+{
+  "type": "file",
+  "attributes": {
+    "tags": [
+      "obfuscated",
+      "checks-gps",
+      "contains-elf",
+      "android",
+      "reflection",
+      "sends-sms",
+      "runtime-modules",
+      "apk",
+      "nxdomain",
+      "telephony",
+      "cve-2016-2569",
+      "exploit"
+    ],
+    "type_tags": [
+      "executable",
+      "mobile",
+      "android",
+      "apk"
+    ],
+    "last_analysis_date": "2025-07-29 04:06:16 UTC",
+    "names": [
+      "88f969ab63f13660719275e951bd52d85cbbccfc0786c7ae9057547960967be8_adv"
+    ],
+    "trid": [
+      {
+        "file_type": "Android Package",
+        "probability": 51.4
+      },
+      {
+        "file_type": "Java Archive",
+        "probability": 25.7
+      },
+      {
+        "file_type": "Mozilla Firefox browser extension",
+        "probability": 15.2
+      },
+      {
+        "file_type": "ZIP compressed archive",
+        "probability": 7.6
+      }
+    ],
+    "sandbox_verdicts": {
+      "Zenbox android": {
+        "category": "malicious",
+        "malware_classification": [
+          "MALWARE",
+          "RANSOM",
+          "TROJAN",
+          "ADWARE",
+          "EVADER"
+        ],
+        "sandbox_name": "Zenbox android",
+        "confidence": 64
+      }
+    },
+    "total_votes": {
+      "harmless": 0,
+      "malicious": 1
+    },
+    "type_extension": "apk",
+    "last_analysis_stats": {
+      "malicious": 28,
+      "suspicious": 0,
+      "undetected": 38,
+      "harmless": 0,
+      "timeout": 1,
+      "confirmed-timeout": 0,
+      "failure": 2,
+      "type-unsupported": 7
+    },
+    "ssdeep": "98304:IT0V7VnwtiAbKn3CHfiSDePuf/6pq+SAzZoBchTuujrBcue5JnBWESJ5SzcfJT:L7VnwPqC/bwXxzZ0eTfjrBcFJnBTM",
+    "filecondis": {
+      "dhash": "00001c1e1e160910",
+      "raw_md5": "7ffab07dc81bd9f8fcfc9ec1e6cb8248"
+    },
+    "md5": "589c48bc3ff1c5c29b58f4f5569a556d",
+    "times_submitted": 2,
+    "reputation": -1,
+    "tlsh": "T1C2868B51B7E8DB16F1FB5B369E7AC1C0153EBE819E0AC22F3510731C49B2B818D65B62",
+    "crowdsourced_yara_results": [
+      {
+        "ruleset_id": "0121ae37cc",
+        "rule_name": "Adobe_XMP_Identifier",
+        "ruleset_name": "Adobe_XMP_Identifier",
+        "description": "This signature identifies Adobe Extensible Metadata Platform (XMP) identifiers embedded within files. Defined as a standard for mapping graphical asset relationships, XMP allows for tracking of both parent-child relationships and individual revisions. There are three categories of identifiers: original document, document, and instance. Generally, XMP data is stored in XML format, updated on save/copy, and embedded within the graphical asset. These identifiers can be used to track both malicious and benign graphics within common Microsoft and Adobe document lures.",
+        "author": "InQuest Labs",
+        "match_date": "2025-07-29 04:06:55 UTC",
+        "ruleset_version": "0121ae37cc|589bbefc22847193cac455858fa15e627d671918",
+        "source": "https://github.com/InQuest/yara-rules-vt",
+        "match_date_epoch": 1753762015
+      }
+    ],
+    "sha1": "d2600c95c4016234ef495ac69b7184edb48ce584",
+    "last_analysis_results": {
+      "Bkav": {
+        "method": "blacklist",
+        "engine_name": "Bkav",
+        "engine_version": "2.0.0.1",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Lionic": {
+        "method": "blacklist",
+        "engine_name": "Lionic",
+        "engine_version": "8.16",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Riskware.AndroidOS.Hippo.z!c"
+      },
+      "Elastic": {
+        "method": "blacklist",
+        "engine_name": "Elastic",
+        "engine_version": "4.0.218",
+        "engine_update": "20250724",
+        "category": "undetected",
+        "result": null
+      },
+      "MicroWorld-eScan": {
+        "method": "blacklist",
+        "engine_name": "MicroWorld-eScan",
+        "engine_version": "14.0.409.0",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "CTX": {
+        "method": "blacklist",
+        "engine_name": "CTX",
+        "engine_version": "2024.8.29.1",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "apk.trojan.hippo"
+      },
+      "CAT-QuickHeal": {
+        "method": "blacklist",
+        "engine_name": "CAT-QuickHeal",
+        "engine_version": "22.00",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Android.Hippo.GEN40535"
+      },
+      "Skyhigh": {
+        "method": "blacklist",
+        "engine_name": "Skyhigh",
+        "engine_version": "v2021.2.0+4045",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "ALYac": {
+        "method": "blacklist",
+        "engine_name": "ALYac",
+        "engine_version": "2.0.0.10",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Malwarebytes": {
+        "method": "blacklist",
+        "engine_name": "Malwarebytes",
+        "engine_version": "4.5.5.54",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Zillya": {
+        "method": "blacklist",
+        "engine_name": "Zillya",
+        "engine_version": "2.0.0.5412",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Sangfor": {
+        "method": "blacklist",
+        "engine_name": "Sangfor",
+        "engine_version": "2.22.3.0",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "PUP.Android-Script.Save.e0dfea63"
+      },
+      "Trustlook": {
+        "method": "blacklist",
+        "engine_name": "Trustlook",
+        "engine_version": "1.0",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "Android.PUA.Riskware"
+      },
+      "Alibaba": {
+        "method": "blacklist",
+        "engine_name": "Alibaba",
+        "engine_version": "0.3.0.5",
+        "engine_update": "20190527",
+        "category": "malicious",
+        "result": "RiskWare:Android/Robtes.f73b252b"
+      },
+      "K7GW": {
+        "method": "blacklist",
+        "engine_name": "K7GW",
+        "engine_version": "12.250.56515",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "Trojan ( 004c3f231 )"
+      },
+      "K7AntiVirus": {
+        "method": "blacklist",
+        "engine_name": "K7AntiVirus",
+        "engine_version": "12.250.56514",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Arcabit": {
+        "method": "blacklist",
+        "engine_name": "Arcabit",
+        "engine_version": "2025.0.0.23",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Baidu": {
+        "method": "blacklist",
+        "engine_name": "Baidu",
+        "engine_version": "1.0.0.2",
+        "engine_update": "20190318",
+        "category": "undetected",
+        "result": null
+      },
+      "SymantecMobileInsight": {
+        "method": "blacklist",
+        "engine_name": "SymantecMobileInsight",
+        "engine_version": "2.0",
+        "engine_update": "20250124",
+        "category": "malicious",
+        "result": "Other:Android.Reputation.1"
+      },
+      "Symantec": {
+        "method": "blacklist",
+        "engine_name": "Symantec",
+        "engine_version": "1.22.0.0",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "PUA.Gen.2"
+      },
+      "ESET-NOD32": {
+        "method": "blacklist",
+        "engine_name": "ESET-NOD32",
+        "engine_version": "31602",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "a variant of Android/TrojanSMS.Hippo.J"
+      },
+      "Cynet": {
+        "method": "blacklist",
+        "engine_name": "Cynet",
+        "engine_version": "4.0.3.4",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "Malicious (score: 99)"
+      },
+      "TrendMicro-HouseCall": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro-HouseCall",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Avast": {
+        "method": "blacklist",
+        "engine_name": "Avast",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Android:Hippo-GE [PUP]"
+      },
+      "ClamAV": {
+        "method": "blacklist",
+        "engine_name": "ClamAV",
+        "engine_version": "1.4.3.0",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Kaspersky": {
+        "method": "blacklist",
+        "engine_name": "Kaspersky",
+        "engine_version": "22.0.1.28",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "not-a-virus:HEUR:RiskTool.AndroidOS.Robtes.dm"
+      },
+      "BitDefender": {
+        "method": "blacklist",
+        "engine_name": "BitDefender",
+        "engine_version": "7.2",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "NANO-Antivirus": {
+        "method": "blacklist",
+        "engine_name": "NANO-Antivirus",
+        "engine_version": "1.0.170.26895",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "SUPERAntiSpyware": {
+        "method": "blacklist",
+        "engine_name": "SUPERAntiSpyware",
+        "engine_version": "5.6.0.1032",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Rising": {
+        "method": "blacklist",
+        "engine_name": "Rising",
+        "engine_version": "25.0.0.28",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Emsisoft": {
+        "method": "blacklist",
+        "engine_name": "Emsisoft",
+        "engine_version": "2024.8.0.61147",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "F-Secure": {
+        "method": "blacklist",
+        "engine_name": "F-Secure",
+        "engine_version": "18.10.1547.307",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "Trojan:Android/SpyService.A"
+      },
+      "DrWeb": {
+        "method": "blacklist",
+        "engine_name": "DrWeb",
+        "engine_version": "7.0.69.6040",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "Android.Siggen.10072"
+      },
+      "VIPRE": {
+        "method": "blacklist",
+        "engine_name": "VIPRE",
+        "engine_version": "6.0.0.35",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "TrendMicro": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "McAfeeD": {
+        "method": "blacklist",
+        "engine_name": "McAfeeD",
+        "engine_version": "1.2.0.10275",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "CMC": {
+        "method": "blacklist",
+        "engine_name": "CMC",
+        "engine_version": "2.4.2022.1",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Sophos": {
+        "method": "blacklist",
+        "engine_name": "Sophos",
+        "engine_version": "3.0.3.0",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Andr/Xgen-BCA"
+      },
+      "huorong": {
+        "method": "blacklist",
+        "engine_name": "huorong",
+        "engine_version": "b14b224:b14b224:1995682:1995682",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Avast-Mobile": {
+        "method": "blacklist",
+        "engine_name": "Avast-Mobile",
+        "engine_version": "250728-00",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "APK:CRepMalware [Trj]"
+      },
+      "Jiangmin": {
+        "method": "blacklist",
+        "engine_name": "Jiangmin",
+        "engine_version": "16.0.100",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Webroot": {
+        "method": "blacklist",
+        "engine_name": "Webroot",
+        "engine_version": "1.9.0.8",
+        "engine_update": "20250227",
+        "category": "undetected",
+        "result": null
+      },
+      "Avira": {
+        "method": "blacklist",
+        "engine_name": "Avira",
+        "engine_version": "8.3.3.22",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "ANDROID/Siggen.FLIB.Gen"
+      },
+      "Antiy-AVL": {
+        "method": "blacklist",
+        "engine_name": "Antiy-AVL",
+        "engine_version": "3.0",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Kingsoft": {
+        "method": "blacklist",
+        "engine_name": "Kingsoft",
+        "engine_version": "None",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Android.Troj.TrojanSMS.J"
+      },
+      "Gridinsoft": {
+        "method": "blacklist",
+        "engine_name": "Gridinsoft",
+        "engine_version": "1.0.221.174",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Xcitium": {
+        "method": "blacklist",
+        "engine_name": "Xcitium",
+        "engine_version": "37915",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Microsoft": {
+        "method": "blacklist",
+        "engine_name": "Microsoft",
+        "engine_version": "1.1.25060.6",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "ViRobot": {
+        "method": "blacklist",
+        "engine_name": "ViRobot",
+        "engine_version": "2014.3.20.0",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "ZoneAlarm": {
+        "method": "blacklist",
+        "engine_name": "ZoneAlarm",
+        "engine_version": "6.18-106782940",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Andr/Xgen-BCA"
+      },
+      "GData": {
+        "method": "blacklist",
+        "engine_name": "GData",
+        "engine_version": "GD:27.41225AVA:64.29556",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Varist": {
+        "method": "blacklist",
+        "engine_name": "Varist",
+        "engine_version": "6.6.1.3",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "ABApplication.GUT"
+      },
+      "BitDefenderFalx": {
+        "method": "blacklist",
+        "engine_name": "BitDefenderFalx",
+        "engine_version": "2.0.936",
+        "engine_update": "20250416",
+        "category": "malicious",
+        "result": "Android.Riskware.Gemini.A"
+      },
+      "AhnLab-V3": {
+        "method": "blacklist",
+        "engine_name": "AhnLab-V3",
+        "engine_version": "3.28.0.10568",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "PUP/Android.Resharer.554957"
+      },
+      "Acronis": {
+        "method": "blacklist",
+        "engine_name": "Acronis",
+        "engine_version": "1.2.0.121",
+        "engine_update": "20240328",
+        "category": "undetected",
+        "result": null
+      },
+      "VBA32": {
+        "method": "blacklist",
+        "engine_name": "VBA32",
+        "engine_version": "5.3.2",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "TACHYON": {
+        "method": "blacklist",
+        "engine_name": "TACHYON",
+        "engine_version": "2025-07-29.01",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Zoner": {
+        "method": "blacklist",
+        "engine_name": "Zoner",
+        "engine_version": "2.2.2.0",
+        "engine_update": "20250729",
+        "category": "undetected",
+        "result": null
+      },
+      "Tencent": {
+        "method": "blacklist",
+        "engine_name": "Tencent",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "Android.Risktool.Robtes.Xwhl"
+      },
+      "Yandex": {
+        "method": "blacklist",
+        "engine_name": "Yandex",
+        "engine_version": "5.5.2.24",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "TrellixENS": {
+        "method": "blacklist",
+        "engine_name": "TrellixENS",
+        "engine_version": "6.0.6.653",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Artemis!589C48BC3FF1"
+      },
+      "Ikarus": {
+        "method": "blacklist",
+        "engine_name": "Ikarus",
+        "engine_version": "6.4.16.0",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Trojan.AndroidOS.Hippo"
+      },
+      "MaxSecure": {
+        "method": "blacklist",
+        "engine_name": "MaxSecure",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "Fortinet": {
+        "method": "blacklist",
+        "engine_name": "Fortinet",
+        "engine_version": "7.0.30.0",
+        "engine_update": "20250729",
+        "category": "malicious",
+        "result": "Android/Hippo.J!tr"
+      },
+      "AVG": {
+        "method": "blacklist",
+        "engine_name": "AVG",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20250728",
+        "category": "malicious",
+        "result": "Android:Hippo-GE [PUP]"
+      },
+      "Panda": {
+        "method": "blacklist",
+        "engine_name": "Panda",
+        "engine_version": "4.6.4.2",
+        "engine_update": "20250728",
+        "category": "undetected",
+        "result": null
+      },
+      "CrowdStrike": {
+        "method": "blacklist",
+        "engine_name": "CrowdStrike",
+        "engine_version": "1.0",
+        "engine_update": "20231026",
+        "category": "undetected",
+        "result": null
+      },
+      "Google": {
+        "method": "blacklist",
+        "engine_name": "Google",
+        "engine_version": null,
+        "engine_update": "20250729",
+        "category": "timeout",
+        "result": null
+      },
+      "VirIT": {
+        "method": "blacklist",
+        "engine_name": "VirIT",
+        "engine_version": null,
+        "engine_update": "20250728",
+        "category": "failure",
+        "result": null
+      },
+      "DeepInstinct": {
+        "method": "blacklist",
+        "engine_name": "DeepInstinct",
+        "engine_version": "5.0.0.8",
+        "engine_update": "20250728",
+        "category": "failure",
+        "result": null
+      },
+      "tehtris": {
+        "method": "blacklist",
+        "engine_name": "tehtris",
+        "engine_version": "v0.1.4",
+        "engine_update": "20250729",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "APEX": {
+        "method": "blacklist",
+        "engine_name": "APEX",
+        "engine_version": "6.680",
+        "engine_update": "20250728",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Paloalto": {
+        "method": "blacklist",
+        "engine_name": "Paloalto",
+        "engine_version": "0.9.0.1003",
+        "engine_update": "20250729",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Trapmine": {
+        "method": "blacklist",
+        "engine_name": "Trapmine",
+        "engine_version": "4.0.4.0",
+        "engine_update": "20250721",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Cylance": {
+        "method": "blacklist",
+        "engine_name": "Cylance",
+        "engine_version": "3.0.0.0",
+        "engine_update": "20250710",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "SentinelOne": {
+        "method": "blacklist",
+        "engine_name": "SentinelOne",
+        "engine_version": "25.1.1.1",
+        "engine_update": "20250114",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "alibabacloud": {
+        "method": "blacklist",
+        "engine_name": "alibabacloud",
+        "engine_version": "2.2.0",
+        "engine_update": "20250321",
+        "category": "type-unsupported",
+        "result": null
+      }
+    },
+    "first_submission_date": "2023-02-07 13:49:04 UTC",
+    "crowdsourced_ids_results": [
+      {
+        "rule_category": "denial-of-service",
+        "alert_severity": "medium",
+        "rule_msg": "SERVER-OTHER Squid HTTP Vary response header denial of service attempt",
+        "rule_id": "1:41379",
+        "rule_source": "Snort registered user ruleset",
+        "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+        "rule_raw": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any ( msg:\"SERVER-OTHER Squid HTTP Vary response header denial of service attempt\"; flow:to_client,established; http_header; content:\"Vary|3A|\"; content:!\"|0D 0A|\",within 250; metadata:policy max-detect-ips drop; service:http; reference:cve,2016-2569; reference:url,www.squid-cache.org/Advisories/SQUID-2016_2.txt; classtype:denial-of-service; sid:41379; rev:1; )",
+        "rule_references": [
+          "https://cve.mitre.org/cgi-bin/cvename.cgi?name=2016-2569",
+          "https://www.squid-cache.org/Advisories/SQUID-2016_2.txt"
+        ],
+        "alert_context": [
+          {
+            "src_ip": "212.129.163.180",
+            "src_port": 80
+          },
+          {
+            "src_ip": "212.129.163.60",
+            "src_port": 80
+          }
+        ]
+      },
+      {
+        "rule_category": "misc-activity",
+        "alert_severity": "low",
+        "rule_msg": "(eth) truncated ethernet header",
+        "rule_id": "116:424",
+        "rule_source": "Snort registered user ruleset",
+        "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+        "rule_raw": "alert ( gid:116; sid:424; rev:2; msg:\"(eth) truncated ethernet header\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:misc-activity;)"
+      },
+      {
+        "rule_category": "Generic Protocol Command Decode",
+        "alert_severity": "low",
+        "rule_msg": "SURICATA STREAM SHUTDOWN RST invalid ack",
+        "rule_id": "1:2210046",
+        "rule_source": "Suricata",
+        "rule_url": "https://www.openinfosecfoundation.org/",
+        "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM SHUTDOWN RST invalid ack\"; stream-event:rst_invalid_ack; classtype:protocol-command-decode; sid:2210046; rev:2;)",
+        "alert_context": [
+          {
+            "dest_ip": "74.125.133.188",
+            "dest_port": 5228
+          }
+        ]
+      }
+    ],
+    "unique_sources": 1,
+    "androguard": {
+      "VTAndroidInfo": 2.0,
+      "AndroidApplicationError": false,
+      "MinSdkVersion": "7",
+      "AndroguardVersion": "4.1.2",
+      "Activities": [
+        "com.snda.tt.ui.WelcomeActivity",
+        "com.snda.recommend.ui.AppDetailActivity",
+        "com.snda.recommend.ui.AppListActivity",
+        "com.snda.recommend.ui.DownloadActivity",
+        "com.snda.recommend.ui.HtmlAppDetailActivity",
+        "com.snda.recommend.ui.HtmlAppListActivity",
+        "com.snda.tt.A001b83dfCNa9993e36EMgmlYdgaAlVGUa9993e36QMFQjrLWNuEb",
+        "com.snda.tt.A12d33351YVa9993e36DsnXlzuPBdYUFMa9993e36fPKVnIgycCxI",
+        "com.snda.tt.Ab90825f1XKa9993e36RjSxcuIaKcwdYEa9993e36ioPVaLCHGoIX",
+        "com.snda.tt.C06ee82d2DUa9993e36LgVKxGDLbPQpQIa9993e36CTTGlzFQjQSR",
+        "com.snda.tt.E5006921fKEa9993e36ktgoVqWUmgRHBJa9993e36yEkoyyBkuAKq",
+        "com.snda.tt.Eb198465bRQa9993e36BXdQyMbeaaHwTHa9993e36ciRESWJtcTJx",
+        "com.snda.tt.F5e958ebdDKa9993e36nlrDTzhqGnpKMOa9993e36YhNstzrUHbMM",
+        "com.snda.tt.Fefa615d7YJa9993e36UuXnXSNqqdLxMYa9993e36nExcWCbkJTrJ",
+        "com.snda.tt.G6994a0d8OAa9993e36dSOnGmAFXNsCOWa9993e36oFwrOlqofBoZ",
+        "com.snda.tt.G7b21aec8LSa9993e36xdzftTJJtroQCZa9993e36obAGVQccHJuH",
+        "com.snda.tt.Gc94e99e0EXa9993e36gmxhaLYHwgCsNNa9993e36uBbmYttFgTOj",
+        "com.snda.tt.H5f76267cCTa9993e36mUIVcqtRboVgTAa9993e36wJkLtvTfVxcb",
+        "com.snda.tt.H5f9f0096QUa9993e36HbzIXlnZnSwsEKa9993e36rHNnnfnwUjrh",
+        "com.snda.tt.Hc68f65ffJWa9993e36iWJXyPxdGigVCRa9993e36wVHqBfasoPiN",
+        "com.snda.tt.I95aa4a5dIDa9993e36loWsIyFRnwQiWJa9993e36WGDwxAWwBcyF",
+        "com.snda.tt.K7b3aeb9dMYa9993e36FmfQyZWIzMQHHFa9993e36gmPyrANSyLYb",
+        "com.snda.tt.K7f356eccZOa9993e36UqeQqmhWCxIiWZa9993e36lucrYyidvazQ",
+        "com.snda.tt.L0ea89e13MBa9993e36OhfGZMlAhrQWCZa9993e36kdMARUSWhFXY",
+        "com.snda.tt.L707c8c48VOa9993e36YzBiBMxFwAfYLMa9993e36QdJMcTthVWqQ",
+        "com.snda.tt.L999244c8XDa9993e36xIPjfWfEqUuZUGa9993e36cZMltVTZloHd",
+        "com.snda.tt.M32ad5ca5MVa9993e36apLRveUDsGOtKGa9993e36tmQLwnmRJPVd",
+        "com.snda.tt.Mac5e4e47AQa9993e36MNvEWDEzzUQQYCa9993e36jjWbnioeYaDT",
+        "com.snda.tt.N610565f9XYa9993e36NCdtQlyaFcuGSJa9993e36etzfmkutDdDA",
+        "com.snda.tt.O482489e5BOa9993e36MQwGPhfVYOfAATa9993e36DnjBmDyGZmLx",
+        "com.snda.tt.Pa6a1f4e5NKa9993e36JlwPkJOVqTuGVRa9993e36vbQOMgabTimI",
+        "com.snda.tt.R0e454e66XGa9993e36kRzePdeMnCIRLIa9993e36tZHzlTHBOTiC",
+        "com.snda.tt.R723281cdTKa9993e36QRIIzSaTXJqsRDa9993e36BiTteMdqWKyV",
+        "com.snda.tt.R8c799269HLa9993e36sxGLoMlPfNBaGFa9993e36ghcUODlOYnDB",
+        "com.snda.tt.Ra6273678OUa9993e36PHJjbJOaqEWPNIa9993e36RioFzZTnrhZN",
+        "com.snda.tt.S2463ccf1NWa9993e36NWNrDgsWaLxDYJa9993e36BxxeAsODDGei",
+        "com.snda.tt.S33c2b1c2BFa9993e36ONufnnWVmnWbPQa9993e36qsviGRYmnggV",
+        "com.snda.tt.Tcc70033cPHa9993e36FlgLJGdIKSNbHMa9993e36cJGzoMWoUPDg",
+        "com.snda.tt.U77db0a7cXCa9993e36JpmBHKvlTwnVYFa9993e36kBbJOQZFabwo",
+        "com.snda.tt.U8412d7dfEBa9993e36jzBAJLVgITQHFFa9993e36AJXsXokwRHnq",
+        "com.snda.tt.Vf82939d1KAa9993e36cayjcQbrCLaBHMa9993e36bNlCSCmKOrtt",
+        "com.snda.tt.Wcbabec44TPa9993e36meLLuZegTKETDKa9993e36EuAbpXrPKPFJ",
+        "com.snda.tt.X0de088b5INa9993e36NbpSjuIuXrKCOBa9993e36QItVyvVOjULD",
+        "com.snda.tt.X12d12356JXa9993e36whPkxljEPzgcDKa9993e36EMNMLkVKMpgN",
+        "com.snda.tt.Xc1c15b22PCa9993e36GqxYTHDdakTIDRa9993e36RSPqxzbGUlXS",
+        "com.snda.tt.Xfad24da3ZZa9993e36gHBlHgWWJCrCPMa9993e36axwYwnbdkDnC",
+        "com.snda.tt.Yfd68f38aBZa9993e36maGVnOXENnNMRNa9993e36UYPAUOfHaKxM",
+        "com.snda.tt.baseui.CallChooserActivity",
+        "com.snda.tt.call.CallActivity",
+        "com.snda.tt.call.FriendCallActivity",
+        "com.snda.tt.call.MibarCallActivity",
+        "com.snda.tt.call.VoipCallActivity",
+        "com.snda.tt.call.base.CallProvider",
+        "com.snda.tt.cropimage.CropActivity",
+        "com.snda.tt.friend.AreaSelActivity",
+        "com.snda.tt.friend.FriendAppActivity",
+        "com.snda.tt.friend.FriendBlacklistActivity",
+        "com.snda.tt.friend.FriendChatActivity",
+        "com.snda.tt.friend.FriendFindActivity",
+        "com.snda.tt.friend.FriendFollowActivity",
+        "com.snda.tt.friend.FriendSettingUsingActivity",
+        "com.snda.tt.friend.FriendcardActivity",
+        "com.snda.tt.friend.LocationBasedActivity",
+        "com.snda.tt.friend.MycardActivity",
+        "com.snda.tt.friend.ViewFriendCompleteActivity",
+        "com.snda.tt.friend.ViewFriendPhotoActivity",
+        "com.snda.tt.friend.YinyuanActivity",
+        "com.snda.tt.friend.YinyuanPastActivity",
+        "com.snda.tt.friend.YinyuanRegisterActivity",
+        "com.snda.tt.friend.YinyuanSmsModeActivity",
+        "com.snda.tt.friendmsg.FriendComposeMessageActivity",
+        "com.snda.tt.friendmsg.FriendUnknownActivity",
+        "com.snda.tt.groupcontact.GroupActivity",
+        "com.snda.tt.groupcontact.GroupAddDelContactActivity",
+        "com.snda.tt.groupcontact.GroupContactManagerActivity",
+        "com.snda.tt.groupcontact.GroupManagerActivity",
+        "com.snda.tt.groupcontact.GroupSendMessageActivity",
+        "com.snda.tt.mibar.ui.MibarHallActivity",
+        "com.snda.tt.mibar.ui.MibarHostActivity",
+        "com.snda.tt.mibar.ui.MibarRoomActivity",
+        "com.snda.tt.mibar.ui.MibarWebActivity",
+        "com.snda.tt.recommend.RecommendWebActivity",
+        "com.snda.tt.sms.ui.BatchDeleteMessageActivity",
+        "com.snda.tt.sms.ui.ClassZeroActivity",
+        "com.snda.tt.sms.ui.ComposeMessageActivity",
+        "com.snda.tt.sms.ui.DeliveryReportActivity",
+        "com.snda.tt.sms.ui.EditSlideDurationActivity",
+        "com.snda.tt.sms.ui.MainMessageActivity",
+        "com.snda.tt.sms.ui.MmsNotifyDialogActivity",
+        "com.snda.tt.sms.ui.NewMmsListViewActivity",
+        "com.snda.tt.sms.ui.SearchActivity",
+        "com.snda.tt.sms.ui.SelectContactsMMSActivity",
+        "com.snda.tt.sms.ui.SelectContactsTTCallActivity",
+        "com.snda.tt.sms.ui.SmsSettingsActivity",
+        "com.snda.tt.ui.AboutActivity",
+        "com.snda.tt.ui.AddAttachmentActivity",
+        "com.snda.tt.ui.AgreementActivity",
+        "com.snda.tt.ui.AuthenticationCodeActivity",
+        "com.snda.tt.ui.AuthenticationPadActivity",
+        "com.snda.tt.ui.BlackListManagerActivity"
+      ],
+      "certificate": {
+        "Subject": {
+          "DN": "C:Unknown, CN:Unknown, L:Unknown, O:Unknown, ST:Unknown, OU:Unknown",
+          "C": "Unknown",
+          "CN": "Unknown",
+          "L": "Unknown",
+          "O": "Unknown",
+          "ST": "Unknown",
+          "OU": "Unknown"
+        },
+        "validto": "2014-05-13 11:23:48",
+        "serialnumber": "6d454aac",
+        "thumbprint": "5ad2acb089f8be5112ff5125d94036983de3e8d5",
+        "validfrom": "2013-05-13 11:23:48",
+        "Issuer": {
+          "DN": "C:Unknown, CN:Unknown, L:Unknown, O:Unknown, ST:Unknown, OU:Unknown",
+          "C": "Unknown",
+          "CN": "Unknown",
+          "L": "Unknown",
+          "O": "Unknown",
+          "ST": "Unknown",
+          "OU": "Unknown"
+        }
+      },
+      "AndroidApplication": 1,
+      "RiskIndicator": {
+        "APK": {
+          "DEX": 1,
+          "SHARED LIBRARIES": 9
+        },
+        "PERM": {
+          "PRIVACY": 12,
+          "MONEY": 4,
+          "NORMAL": 7,
+          "SMS": 5,
+          "SYSTEM": 3,
+          "CALL": 2,
+          "DANGEROUS": 12,
+          "SIGNATURE": 6,
+          "INTERNET": 1,
+          "GPS": 3
+        }
+      },
+      "Services": [
+        "com.snda.tt.E6d6aca33AMa9993e36GLBqkaOvubUcFRa9993e36OmXmsqoduHeM",
+        "com.snda.tt.Eb7f9a941FKa9993e36JZQDhQMrBMHPRJa9993e36ZwQMtVcbtgit",
+        "com.snda.tt.G22000cfdBSa9993e36YVzGJGUbhsRyFUa9993e36AelIDKALWUKO",
+        "com.snda.tt.H5a78989cJWa9993e36iWJXyPxdGigVCRa9993e36wVHqBfasoPiN",
+        "com.snda.tt.Jdc595e64HFa9993e36tXjcAaQQXedOEZa9993e36ThJgmKClBeDu",
+        "com.snda.tt.K3be2ae27BNa9993e36ioSqFFBDffYlJFa9993e36VHCjFLpOcPCR",
+        "com.snda.tt.K98782e13BNa9993e36ioSqFFBDffYlJFa9993e36VHCjFLpOcPCR",
+        "com.snda.tt.Lc531564eQCa9993e36oZbaXWVzkKcuOIa9993e36TGeUhdJBobkQ",
+        "com.snda.tt.Le6fb6102YMa9993e36uiFSdzcRVxFsFQa9993e36FOyhVuebADzI",
+        "com.snda.tt.Mc109363bECa9993e36pOflhgmiSmHZNXa9993e36MMdIuVCQDSJq",
+        "com.snda.tt.N7c7c5d08XYa9993e36NCdtQlyaFcuGSJa9993e36etzfmkutDdDA",
+        "com.snda.tt.O2be3eccaFGa9993e36WMcBJSFZasnTHGa9993e36kOpwgeQbqCBy",
+        "com.snda.tt.Obab35662WLa9993e36rpoVjVHvYHjOHAa9993e36yCsxjvOKhYln",
+        "com.snda.tt.P7a6e0854EDa9993e36kvYefWAQahZmLOa9993e36wPwgohTWjICi",
+        "com.snda.tt.R04d15a77HXa9993e36BMHQjjCApPOGYTa9993e36oEpcrfvIpEqM",
+        "com.snda.tt.Rc0fd7b52EPa9993e36dQocASvPCNsxNUa9993e36zQtruippSRZE",
+        "com.snda.tt.S36f04b0eNWa9993e36NWNrDgsWaLxDYJa9993e36BxxeAsODDGei",
+        "com.snda.tt.Sdda3af03BFa9993e36ONufnnWVmnWbPQa9993e36qsviGRYmnggV",
+        "com.snda.tt.Ub6e388aaZCa9993e36qhFOEHgqAAoVJEa9993e36YhMoNcmUQxQj",
+        "com.snda.tt.W6b53a030NRa9993e36uKzzuiPnDIfvINa9993e36oEBZxwoRxHYS",
+        "com.snda.tt.Zede0b68aZLa9993e36RDRkklNAnSFtTVa9993e36lvbAMbAFfQdQ",
+        "com.snda.tt.mmstransaction.SmsReceiverService",
+        "com.snda.tt.mmstransaction.TransactionService",
+        "com.snda.tt.service.SndaTTService"
+      ],
+      "AndroidVersionCode": "1551",
+      "Package": "com.snda.tt",
+      "AndroidVersionName": "1.5.5.1",
+      "AndroidApplicationInfo": "APK",
+      "Providers": [
+        "com.snda.tt.safepay.PayProvider"
+      ],
+      "Receivers": [
+        "com.snda.recommend.services.OnAlarmReceiver",
+        "com.snda.tt.A04d04b12RXa9993e36PDbTYDsKKCNkVXa9993e36rzoSzagsZSvu",
+        "com.snda.tt.A0cdcd640VWa9993e36xzvUKitlpYUlNBa9993e36bkHlzluuzIiP",
+        "com.snda.tt.A2fc5af91AIa9993e36ayGPBeiAIhGICBa9993e36WweTFdbwwNjf",
+        "com.snda.tt.A5f31f957YVa9993e36DsnXlzuPBdYUFMa9993e36fPKVnIgycCxI",
+        "com.snda.tt.Ad5e2d962PDa9993e36hkTEtfmFDYWFVGa9993e36YTWSSHwonOHa",
+        "com.snda.tt.C25d90865OIa9993e36LxHFCNHhXHvSXUa9993e36ZjmPEsOJuscw",
+        "com.snda.tt.Ccf5ebe55VQa9993e36VpKtQtyqjGMkYHa9993e36VVmbFzMFNbTS",
+        "com.snda.tt.Ce0e989eaDUa9993e36LgVKxGDLbPQpQIa9993e36CTTGlzFQjQSR",
+        "com.snda.tt.D1e42d3f9AKa9993e36PXTnBBiZILVuEKa9993e36lSKfDSjokZHc",
+        "com.snda.tt.D28655e8eVZa9993e36uqHlxbxYSLUKNGa9993e36IyYDRheMwcTA",
+        "com.snda.tt.D4bd8d770IBa9993e36nIygrbMrIsEjZHa9993e36oDEORAugxVgW",
+        "com.snda.tt.D726ae91bTMa9993e36TMeQoQFwjBZaBDa9993e36riqUqIsDEIdg",
+        "com.snda.tt.D88b12d3dTMa9993e36TMeQoQFwjBZaBDa9993e36riqUqIsDEIdg",
+        "com.snda.tt.Da519f8a6AKa9993e36PXTnBBiZILVuEKa9993e36lSKfDSjokZHc",
+        "com.snda.tt.De54c8d99RTa9993e36eSZXzLmnClYZVVa9993e36cNLKgbbrmAot",
+        "com.snda.tt.De5fa527eVZa9993e36uqHlxbxYSLUKNGa9993e36IyYDRheMwcTA",
+        "com.snda.tt.E065a173cAGa9993e36cvbOneUUddQWGMa9993e36XqwQBlWHrGPb",
+        "com.snda.tt.E2762fb11HDa9993e36vJFzWzByuGsjIMa9993e36nsOgeogfrUFE",
+        "com.snda.tt.E2ad3b2daYZa9993e36ioOkRhoAiUmrEJa9993e36IiOfNAKoIAGi",
+        "com.snda.tt.E5b20b2b8RQa9993e36BXdQyMbeaaHwTHa9993e36ciRESWJtcTJx",
+        "com.snda.tt.F19e5148bIKa9993e36SLwAWLPsbQcoYXa9993e36ewAhuWJGZdRc",
+        "com.snda.tt.F580630a2IKa9993e36SLwAWLPsbQcoYXa9993e36ewAhuWJGZdRc",
+        "com.snda.tt.Fd329a899YSa9993e36WoEMBDLEbpeCPYa9993e36iVsrromdDoPV",
+        "com.snda.tt.Fdc38f1b9ZYa9993e36IIdwaJXvKboZINa9993e36AggmYaDvMNhB",
+        "com.snda.tt.Gf685ab0cEXa9993e36gmxhaLYHwgCsNNa9993e36uBbmYttFgTOj",
+        "com.snda.tt.He2128e8eGNa9993e36igLgWdwGLwcEKTa9993e36uXOJLhkctdaD",
+        "com.snda.tt.Hea1f80a9QUa9993e36HbzIXlnZnSwsEKa9993e36rHNnnfnwUjrh",
+        "com.snda.tt.I18eb7a1cFKa9993e36BimiZFJOFNpNPYa9993e36lfdmQCJMLFWO",
+        "com.snda.tt.I356992b5WKa9993e36sDzmUNQFGKObPNa9993e36rlUOxqPLPAtJ",
+        "com.snda.tt.I3eb81cb3KCa9993e36UWZPvDbInaifFJa9993e36uhNdGdqMsTZh",
+        "com.snda.tt.I6de468b3VWa9993e36xyWnoddiiwlCBUa9993e36rFQoYvpNRAjT",
+        "com.snda.tt.I7bb41394CHa9993e36nNLJPYHBRAOrIUa9993e36vnyINJVTfPMK",
+        "com.snda.tt.Iaa326e02WKa9993e36sDzmUNQFGKObPNa9993e36rlUOxqPLPAtJ",
+        "com.snda.tt.Ibabbe818FKa9993e36BimiZFJOFNpNPYa9993e36lfdmQCJMLFWO",
+        "com.snda.tt.Ie6f952beKHa9993e36BfTzdXcHfnjfNHa9993e36izyjhuIOfTrH",
+        "com.snda.tt.If16ece46VWa9993e36xyWnoddiiwlCBUa9993e36rFQoYvpNRAjT",
+        "com.snda.tt.Ifd0d9cecNAa9993e36ZKVmvZQzYFIKIGa9993e36cdaSMQztphAd",
+        "com.snda.tt.J476b6ecaJFa9993e36tjEMboYGimLDCEa9993e36Vwzteqqwilvo",
+        "com.snda.tt.K1d85f753PNa9993e36yfrNdTACmpefRRa9993e36XootwMKfhEcT",
+        "com.snda.tt.K2dd77995NFa9993e36uZJCBrDLnUdyLVa9993e36mHGdeQdvhtQe",
+        "com.snda.tt.K7ce4bdf7IXa9993e36FvVnfQcLbJSPEFa9993e36AoWMiGlbPaFC",
+        "com.snda.tt.Lb47378f3SSa9993e36nVIQHxhdsXbCVWa9993e36kcAbBQQgZIgU",
+        "com.snda.tt.Lcb946b8fMYa9993e36fNhDgVNVadIvYNa9993e36qEircrlBAfcV",
+        "com.snda.tt.M1bed75a0NPa9993e36YHAYCuBceYGaXRa9993e36wOHyaLJmuAvH",
+        "com.snda.tt.Mda02840fCAa9993e36fbuxFjBkuVTKQFa9993e36RdUkkslUELGa",
+        "com.snda.tt.Me2af1377WWa9993e36qOjffEGqZfNgWSa9993e36ReRtILGuWQoY",
+        "com.snda.tt.Meacb6b3aECa9993e36pOflhgmiSmHZNXa9993e36MMdIuVCQDSJq",
+        "com.snda.tt.N009121f8BBa9993e36IstKJTDxwZzfLSa9993e36xdzftTJJtroQ",
+        "com.snda.tt.N97adedcbBBa9993e36IstKJTDxwZzfLSa9993e36xdzftTJJtroQ",
+        "com.snda.tt.N9b7dd48aCYa9993e36svEVbZQubxbNLHa9993e36jtNkxDTHCBsl",
+        "com.snda.tt.Nf03c7352OMa9993e36wRbDhqmAjjzFMCa9993e36WdtJwnlbgDri",
+        "com.snda.tt.O3c7dd8dcFGa9993e36WMcBJSFZasnTHGa9993e36kOpwgeQbqCBy",
+        "com.snda.tt.O6308c496WJa9993e36WGDwxAWwBcyFFLa9993e36IqcOQNcGeaDx",
+        "com.snda.tt.O8abb7791BOa9993e36MQwGPhfVYOfAATa9993e36DnjBmDyGZmLx",
+        "com.snda.tt.Oad602f16OEa9993e36OBpJWjnRJkEuBWa9993e36nQfkAcdNBZsC",
+        "com.snda.tt.Oe7f35611ETa9993e36ZKBtTHagjIijNRa9993e36XxwzDgqckthY",
+        "com.snda.tt.Oec67572aAQa9993e36MNvEWDEzzUQQYCa9993e36jjWbnioeYaDT",
+        "com.snda.tt.Pb16ea792ZNa9993e36XfGvdVRUAdMqXXa9993e36zEPQMmmVmoDh",
+        "com.snda.tt.Pbcd02c0bNKa9993e36JlwPkJOVqTuGVRa9993e36vbQOMgabTimI",
+        "com.snda.tt.Pc289d0a1PBa9993e36lnoLUZgtWqOrUQa9993e36mfjNVjcLqErW",
+        "com.snda.tt.Pe86f285bKPa9993e36lCEthcBdQFxHLWa9993e36CZuwKOqwJQvJ",
+        "com.snda.tt.Q52831a06XAa9993e36OPEPoMMCeTUVJRa9993e36gyMcPYUPFBEb",
+        "com.snda.tt.Qb389893dJCa9993e36qCKUdWLKABRMQOa9993e36LFCkdwwnjPEM",
+        "com.snda.tt.R2af28e32GSa9993e36RksHROIVvfnMFDa9993e36oNBRmWrkiBqs",
+        "com.snda.tt.R57470c21EPa9993e36dQocASvPCNsxNUa9993e36zQtruippSRZE",
+        "com.snda.tt.R8ec11131KQa9993e36VfGjwMHXdGDPJSa9993e36WVmmACFXElzr",
+        "com.snda.tt.R951d0f3aJIa9993e36fiTTNfoxaKCLXZa9993e36zByblHokROMk",
+        "com.snda.tt.Rcc87cbdbXGa9993e36kRzePdeMnCIRLIa9993e36tZHzlTHBOTiC",
+        "com.snda.tt.Rde2cb0ffBJa9993e36UpSkNdyyNQBFGXa9993e36DkWfQSXhYJlt",
+        "com.snda.tt.Rf90e71f3ONa9993e36uSIsxhUUdHoeLTa9993e36UtELpwMAHApF",
+        "com.snda.tt.S6a6ff2cdGIa9993e36brXWDuntCJxBCSa9993e36ZKInzZIoiXhg",
+        "com.snda.tt.Saa52386bSEa9993e36xYUDPTWHVANpMOa9993e36NCMdkTObimsR",
+        "com.snda.tt.Se4b61cc9SEa9993e36xYUDPTWHVANpMOa9993e36NCMdkTObimsR",
+        "com.snda.tt.T264d401aAKa9993e36WGbRsaIwbFqsGMa9993e36gePWAhlHKwlr",
+        "com.snda.tt.T7f64aa2eZHa9993e36HUSMtvJEmtUbLZa9993e36PQTEJuSDXgBG",
+        "com.snda.tt.Tb2125effDTa9993e36iFOMTRFkevTHBGa9993e36sSsgICMwyAXq",
+        "com.snda.tt.Uf85011b3SXa9993e36EfFaAmpbOeYiHUa9993e36gWrGnzWtHvUp",
+        "com.snda.tt.Wbed9039fMNa9993e36eKqeGOkPxfoVHUa9993e36BNdqUAXUDMkp",
+        "com.snda.tt.X08f9d9f0KWa9993e36zJzUaAfRvBbUBKa9993e36OErIVGNtOaKI",
+        "com.snda.tt.X0c1c024bZZa9993e36gHBlHgWWJCrCPMa9993e36axwYwnbdkDnC",
+        "com.snda.tt.Xb0a8f525MDa9993e36XCnHTYPaMiJQFNa9993e36YHMYiRGDOjcU",
+        "com.snda.tt.Y2cc2adc5RJa9993e36UeAAjNfQCCHdXGa9993e36lpTVeyLDtjkl",
+        "com.snda.tt.Y2e31ae56RPa9993e36tyDfHEBWsCibKSa9993e36zMJlCsopIVlm",
+        "com.snda.tt.Yaffe0184OMa9993e36sgZnsBPcGOIjLFa9993e36YrtusFvZPzEG",
+        "com.snda.tt.Ybd475eb4CLa9993e36wETvTsGpLePKRQa9993e36mwElRvhahNSV",
+        "com.snda.tt.Yfdb7b149EBa9993e36MrQIeZkBbRuISVa9993e36RYJjsJdKFjGs",
+        "com.snda.tt.Z1fbef2f5LMa9993e36nFTVyCSbNOmHWVa9993e36KPFtWxogYgzO",
+        "com.snda.tt.Z610ae0faBAa9993e36BQDmJqYtPyTwCKa9993e36JolXCqMxiYJt",
+        "com.snda.tt.mmstransaction.MessageStatusReceiver",
+        "com.snda.tt.mmstransaction.MmsSystemEventReceiver",
+        "com.snda.tt.mmstransaction.PrivilegedSmsReceiver",
+        "com.snda.tt.mmstransaction.SmsReceiver",
+        "com.snda.tt.network.KeepLiveReceiver",
+        "com.snda.tt.service.BootReceiver",
+        "com.snda.tt.service.IMReceiver",
+        "com.snda.tt.service.NetWorkReceiver",
+        "com.snda.tt.service.SDCardReceiver"
+      ],
+      "StringsInformation": [
+        "http://10.0.0.172:80",
+        "http://10.0.0.200:80",
+        "http://17et.com/api/upload/crash",
+        "http://17et.com/api/upload/logfaillog",
+        "http://17et.com/faq.html",
+        "http://17et.com/invite?t=",
+        "http://17et.com/user/mobileinvite?",
+        "http://221.130.195.228:8082/ttmobile/api/insertRegfailCheck",
+        "http://ad.app.17et.com/ad/show/",
+        "http://andhot.app.17et.com/andhot/show/",
+        "http://auth.app.17et.com/checksession.php",
+        "http://h5.snyu.com/2001/detail.html",
+        "http://h5.snyu.com/2001/index.html",
+        "http://maps.google.cn/maps/geo?key=abcdefg&q=%f,%f",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/query/account",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/query/config_1_2_9",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/reg/abroadphone",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/reg/getseq",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/reg/mtsend",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/reg/phone",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/reg/pt",
+        "http://mreg.sdo.com/HurrayWirelessOA/api/reg/query",
+        "http://r.snyu.com/api/appdetail",
+        "http://r.snyu.com/api/appdetail?",
+        "http://r.snyu.com/api/applist",
+        "http://r.snyu.com/api/applist?",
+        "http://r.snyu.com/api/dreport",
+        "http://r.snyu.com/api/packagelist",
+        "http://r.snyu.com/api/queryNotify",
+        "http://r.snyu.com/api/ulog",
+        "http://res.m.snyu.com",
+        "http://share.renren.com/share/buttonshare.do?link=http://17et.com/mobile/renrenindex&title=",
+        "http://suggestapi.app.17et.com:8081/ttmobile/api/addUserSuggest",
+        "http://ttcfg.app.17et.com/ttvoicecfg/",
+        "http://ttcfg.app.17et.com/ttvoicecfg/update/",
+        "http://txz.sdo.com/a/",
+        "http://update.17et.com/updown/apkdown",
+        "http://update.17et.com/updown/apkup",
+        "http://v.t.sina.com.cn/share/share.php?title=",
+        "http://vosapi.app.17et.com/vosapi",
+        "http://woa.hurray.com.cn/HurrayWirelessOA/api/account/querymobilebind",
+        "http://woa.hurray.com.cn/HurrayWirelessOA/api/mars/getmarsaccount",
+        "http://woa.hurray.com.cn/HurrayWirelessOA/api/mars/regmarsaccount",
+        "http://woa.hurray.com.cn/HurrayWirelessOA/api/mars/upgrademarsaccount",
+        "http://woa.hurray.com.cn/HurrayWirelessOA/api/query/getUpdateInfo",
+        "http://www.17et.com",
+        "http://www.17et.com/acoustic/getmoney/?",
+        "http://www.17et.com/acoustic/help",
+        "http://www.17et.com/acoustic/request/?",
+        "http://www.17et.com/api/upload/friendregfail",
+        "http://www.17et.com/user/callback",
+        "http://www.17et.com/user/paymobile?",
+        "http://www.17et.com/user/paymobilenoreg",
+        "http://www.17et.com/user/paymobilestep?",
+        "http://www.google.com/loc/json",
+        "http://www.w3.org/2001/SMIL20/Language",
+        "https://api.weibo.com/2/account/get_uid.json",
+        "https://api.weibo.com/2/friendships/create.json",
+        "https://api.weibo.com/2/statuses/user_timeline.json",
+        "https://api.weibo.com/2/users/show.json",
+        "https://api.weibo.com/oauth2/authorize?"
+      ],
+      "main_activity": "com.snda.tt.ui.WelcomeActivity",
+      "intent_filters": {
+        "Services": {
+          "com.snda.tt.Mc109363bECa9993e36pOflhgmiSmHZNXa9993e36MMdIuVCQDSJq": {
+            "action": [
+              "com.hfx.bohaojingling.contactssearch.ISearchContactName"
+            ]
+          },
+          "com.snda.tt.K3be2ae27BNa9993e36ioSqFFBDffYlJFa9993e36VHCjFLpOcPCR": {
+            "action": [
+              "asia.msip.sip.service.SipService"
+            ]
+          },
+          "com.snda.tt.Le6fb6102YMa9993e36uiFSdzcRVxFsFQa9993e36FOyhVuebADzI": {
+            "action": [
+              "android.intent.action.HEADSET_PLUG"
+            ]
+          },
+          "com.snda.tt.O2be3eccaFGa9993e36WMcBJSFZasnTHGa9993e36kOpwgeQbqCBy": {
+            "action": [
+              "qitlabs.gps.android.utilities.VIBRATE"
+            ]
+          },
+          "com.snda.tt.Rc0fd7b52EPa9993e36dQocASvPCNsxNUa9993e36zQtruippSRZE": {
+            "action": [
+              "com.beekee.marketCOM.XMPP.CLIENT.XMPPSERVICE"
+            ]
+          },
+          "com.snda.tt.S36f04b0eNWa9993e36NWNrDgsWaLxDYJa9993e36BxxeAsODDGei": {
+            "action": [
+              ".service.BackgroundLocator"
+            ]
+          },
+          "com.snda.tt.Jdc595e64HFa9993e36tXjcAaQQXedOEZa9993e36ThJgmKClBeDu": {
+            "action": [
+              "com.suepcorp.kitten.sounds.animals.soundboard.action.REWIND"
+            ]
+          },
+          "com.snda.tt.Eb7f9a941FKa9993e36JZQDhQMrBMHPRJa9993e36ZwQMtVcbtgit": {
+            "action": [
+              "android.intent.action.GET_CONTENT"
+            ]
+          },
+          "com.snda.tt.P7a6e0854EDa9993e36kvYefWAQahZmLOa9993e36wPwgohTWjICi": {
+            "action": [
+              "com.uplab.battery.service"
+            ]
+          },
+          "com.snda.tt.R04d15a77HXa9993e36BMHQjjCApPOGYTa9993e36oEpcrfvIpEqM": {
+            "action": [
+              "de.taxiaddi.apps.service.TaxiService"
+            ]
+          },
+          "com.snda.tt.W6b53a030NRa9993e36uKzzuiPnDIfvINa9993e36oEBZxwoRxHYS": {
+            "action": [
+              "com.manle.phone.android.pull.service.makeup.NotificationService"
+            ]
+          },
+          "com.snda.tt.Zede0b68aZLa9993e36RDRkklNAnSFtTVa9993e36lvbAMbAFfQdQ": {
+            "action": [
+              "com.cyou.cma.cmawidget.service"
+            ]
+          },
+          "com.snda.tt.Ub6e388aaZCa9993e36qhFOEHgqAAoVJEa9993e36YhMoNcmUQxQj": {
+            "action": [
+              "com.ct.bri.wifi.service.ICtbriWifiLocService"
+            ]
+          },
+          "com.snda.tt.Obab35662WLa9993e36rpoVjVHvYHjOHAa9993e36yCsxjvOKhYln": {
+            "action": [
+              "com.actionlauncher.api.action.LiveWallpaperSource"
+            ]
+          },
+          "com.snda.tt.H5a78989cJWa9993e36iWJXyPxdGigVCRa9993e36wVHqBfasoPiN": {
+            "action": [
+              "cn.apps123.shell.yishizhuxingwan.ChatNotificationService"
+            ]
+          },
+          "com.snda.tt.Sdda3af03BFa9993e36ONufnnWVmnWbPQa9993e36qsviGRYmnggV": {
+            "action": [
+              "com.lbe.security.intent.security_service"
+            ]
+          },
+          "com.snda.tt.E6d6aca33AMa9993e36GLBqkaOvubUcFRa9993e36OmXmsqoduHeM": {
+            "action": [
+              "com.eltonfaust.multiplayer.INTENT_PLAYPAUSE"
+            ]
+          },
+          "com.snda.tt.N7c7c5d08XYa9993e36NCdtQlyaFcuGSJa9993e36etzfmkutDdDA": {
+            "action": [
+              "com.nhn.android.npush.intent.action.SUBSCRIBE"
+            ]
+          },
+          "com.snda.tt.Lc531564eQCa9993e36oZbaXWVzkKcuOIa9993e36TGeUhdJBobkQ": {
+            "action": [
+              "com.gexin.im.GexinMainService"
+            ]
+          },
+          "com.snda.tt.K98782e13BNa9993e36ioSqFFBDffYlJFa9993e36VHCjFLpOcPCR": {
+            "action": [
+              "com.tcs.VZNavigator.ScreenListenService"
+            ]
+          },
+          "com.snda.tt.G22000cfdBSa9993e36YVzGJGUbhsRyFUa9993e36AelIDKALWUKO": {
+            "action": [
+              "com.google.android.gms.wearable.BIND_LISTENER"
+            ]
+          }
+        },
+        "Activities": {
+          "com.snda.tt.F5e958ebdDKa9993e36nlrDTzhqGnpKMOa9993e36YhNstzrUHbMM": {
+            "action": [
+              "com.ufony.ACTION_MULTIPLE_PICK"
+            ]
+          },
+          "com.snda.tt.G6994a0d8OAa9993e36dSOnGmAFXNsCOWa9993e36oFwrOlqofBoZ": {
+            "action": [
+              "com.Dean.launcher.launcherrex.theme"
+            ]
+          },
+          "com.snda.tt.R723281cdTKa9993e36QRIIzSaTXJqsRDa9993e36BiTteMdqWKyV": {
+            "action": [
+              "com.privacystar.android.DISPLAY_CUSTOM_DATA"
+            ]
+          },
+          "com.snda.tt.K7b3aeb9dMYa9993e36FmfQyZWIzMQHHFa9993e36gmPyrANSyLYb": {
+            "action": [
+              "com.iproperty.android.apps.irealtor.action_LOGIN"
+            ]
+          },
+          "com.snda.tt.ui.ImportVCardActivity": {
+            "action": [
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.R0e454e66XGa9993e36kRzePdeMnCIRLIa9993e36tZHzlTHBOTiC": {
+            "action": [
+              "cat.ereza.customactivityoncrash.ERROR"
+            ]
+          },
+          "com.snda.tt.ui.ContactsDetails": {
+            "action": [
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.C06ee82d2DUa9993e36LgVKxGDLbPQpQIa9993e36CTTGlzFQjQSR": {
+            "action": [
+              "pl.mawo78.wallpaperlibv2.SHOWPREFS"
+            ]
+          },
+          "com.snda.tt.A001b83dfCNa9993e36EMgmlYdgaAlVGUa9993e36QMFQjrLWNuEb": {
+            "action": [
+              "com.onlineis.kajian.Akhlaq"
+            ]
+          },
+          "com.snda.tt.U77db0a7cXCa9993e36JpmBHKvlTwnVYFa9993e36kBbJOQZFabwo": {
+            "action": [
+              "android.settings.APPLICATION_SETTINGS"
+            ]
+          },
+          "com.snda.tt.Fefa615d7YJa9993e36UuXnXSNqqdLxMYa9993e36nExcWCbkJTrJ": {
+            "action": [
+              "net.pierrox.lightning_launcher.lp.ENUMERATE"
+            ]
+          },
+          "com.snda.tt.O482489e5BOa9993e36MQwGPhfVYOfAATa9993e36DnjBmDyGZmLx": {
+            "action": [
+              "com.sonetel.ui.action.PREFS_FAST"
+            ]
+          },
+          "com.snda.tt.call.base.CallProvider": {
+            "action": [
+              "android.intent.action.CALL",
+              "com.snda.tt.call.send"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.L0ea89e13MBa9993e36OhfGZMlAhrQWCZa9993e36kdMARUSWhFXY": {
+            "action": [
+              "SUPPORT_PDK_THEME_THEME"
+            ]
+          },
+          "com.snda.tt.sms.ui.MainMessageActivity": {
+            "action": [
+              "android.intent.action.MAIN"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.L999244c8XDa9993e36xIPjfWfEqUuZUGa9993e36cZMltVTZloHd": {
+            "action": [
+              "android.intent.action.BROWSER_INCOGNITO"
+            ]
+          },
+          "com.snda.tt.Hc68f65ffJWa9993e36iWJXyPxdGigVCRa9993e36wVHqBfasoPiN": {
+            "action": [
+              "COM.ESET.EMS.ACTIVITY_SETTINGS_ANTISPAM"
+            ]
+          },
+          "com.snda.tt.E5006921fKEa9993e36ktgoVqWUmgRHBJa9993e36yEkoyyBkuAKq": {
+            "action": [
+              "ANDROID.INTENT.ACTION.VIEW"
+            ]
+          },
+          "com.snda.tt.H5f9f0096QUa9993e36HbzIXlnZnSwsEKa9993e36rHNnnfnwUjrh": {
+            "action": [
+              "com.bankcommhd.client.android.SCAN"
+            ]
+          },
+          "com.snda.tt.I95aa4a5dIDa9993e36loWsIyFRnwQiWJa9993e36WGDwxAWwBcyF": {
+            "action": [
+              "android.intent.action.PUSH_NOTIFICATION_NEW_DATA"
+            ]
+          },
+          "com.snda.tt.X0de088b5INa9993e36NbpSjuIuXrKCOBa9993e36QItVyvVOjULD": {
+            "action": [
+              "com.do_apps.catalog_210"
+            ]
+          },
+          "com.snda.tt.Xfad24da3ZZa9993e36gHBlHgWWJCrCPMa9993e36axwYwnbdkDnC": {
+            "action": [
+              "asia.msip.sip.ACTION_SIP_INCOMING_CALL"
+            ]
+          },
+          "com.snda.tt.ui.TongbaoActivity": {
+            "action": [
+              "com.snda.tt.tongbao"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.sms.ui.ComposeMessageActivity": {
+            "action": [
+              "android.intent.action.VIEW",
+              "android.intent.action.SENDTO",
+              "android.intent.action.SEND",
+              "android.intent.action.SEND_MULTIPLE"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.snda.tt.Ra6273678OUa9993e36PHJjbJOaqEWPNIa9993e36RioFzZTnrhZN": {
+            "action": [
+              "android.intent.action.SET_ALARM"
+            ]
+          },
+          "com.snda.tt.X12d12356JXa9993e36whPkxljEPzgcDKa9993e36EMNMLkVKMpgN": {
+            "action": [
+              "com.revesoft.itelmobiledialer.topup.TOP_UP_OPERATOR_LIST"
+            ]
+          },
+          "com.snda.tt.A12d33351YVa9993e36DsnXlzuPBdYUFMa9993e36fPKVnIgycCxI": {
+            "action": [
+              "org.addhen.ushahidi.INCIDENTS"
+            ]
+          },
+          "com.snda.tt.ui.WelcomeActivity": {
+            "action": [
+              "android.intent.action.MAIN"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.LAUNCHER",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.snda.tt.Yfd68f38aBZa9993e36maGVnOXENnNMRNa9993e36UYPAUOfHaKxM": {
+            "action": [
+              "com.kbc.mobile.android.oob.ENROLL"
+            ]
+          },
+          "com.snda.tt.Vf82939d1KAa9993e36cayjcQbrCLaBHMa9993e36bNlCSCmKOrtt": {
+            "action": [
+              "uk.co.oxola.essentialturkish.MAINACTIVITY"
+            ]
+          },
+          "com.snda.tt.Xc1c15b22PCa9993e36GqxYTHDdakTIDRa9993e36RSPqxzbGUlXS": {
+            "action": [
+              "android.intent.action.SEARCH_LONG_PRESS"
+            ]
+          },
+          "com.snda.tt.M32ad5ca5MVa9993e36apLRveUDsGOtKGa9993e36tmQLwnmRJPVd": {
+            "action": [
+              "com.speedup.browser3.BookmarksActivity"
+            ]
+          },
+          "com.snda.tt.friend.YinyuanRegisterActivity": {
+            "action": [
+              "android.intent.action.CREATE_SHORTCUT"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.U8412d7dfEBa9993e36jzBAJLVgITQHFFa9993e36AJXsXokwRHnq": {
+            "action": [
+              "android.intent.action.Alert"
+            ]
+          },
+          "com.snda.tt.L707c8c48VOa9993e36YzBiBMxFwAfYLMa9993e36QdJMcTthVWqQ": {
+            "action": [
+              "com.experient.engageSSW.BARCODESCAN"
+            ]
+          },
+          "com.snda.tt.Gc94e99e0EXa9993e36gmxhaLYHwgCsNNa9993e36uBbmYttFgTOj": {
+            "action": [
+              "COM.ESET.EMS.ACTIVITY_ANTITHEFT"
+            ]
+          },
+          "com.snda.tt.ui.ContactsEditActivity": {
+            "action": [
+              "android.intent.action.EDIT",
+              "android.intent.action.INSERT"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.N610565f9XYa9993e36NCdtQlyaFcuGSJa9993e36etzfmkutDdDA": {
+            "action": [
+              "m3rd.supremeventures.CLEARSCREEN"
+            ]
+          },
+          "com.snda.tt.ui.SelectContactsMMSinS1Activity": {
+            "action": [
+              "com.snda.tt.ui.SelectContactsMMSActivity"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.sms.ui.SearchActivity": {
+            "action": [
+              "android.intent.action.SEARCH"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.G7b21aec8LSa9993e36xdzftTJJtroQCZa9993e36obAGVQccHJuH": {
+            "action": [
+              "android.intent.action.CALL_PRIVILEGED"
+            ]
+          },
+          "com.snda.tt.K7f356eccZOa9993e36UqeQqmhWCxIiWZa9993e36lucrYyidvazQ": {
+            "action": [
+              "com.adamrocker.android.simeji.ACTION_INTERCEPT"
+            ]
+          },
+          "com.snda.tt.ui.ContactInsertEditActivity": {
+            "action": [
+              "android.intent.action.INSERT_OR_EDIT"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.snda.tt.Mac5e4e47AQa9993e36MNvEWDEzzUQQYCa9993e36jjWbnioeYaDT": {
+            "action": [
+              "org.addhen.ushahidi.NEW"
+            ]
+          },
+          "com.snda.tt.Ab90825f1XKa9993e36RjSxcuIaKcwdYEa9993e36ioPVaLCHGoIX": {
+            "action": [
+              "com.revesoft.itelmobiledialer.topup.TOP_UP_CHECK_STATUS"
+            ]
+          },
+          "com.snda.tt.Pa6a1f4e5NKa9993e36JlwPkJOVqTuGVRa9993e36vbQOMgabTimI": {
+            "action": [
+              "com.World01Plus.ui.action.PREFS_FAST"
+            ]
+          },
+          "com.snda.tt.H5f76267cCTa9993e36mUIVcqtRboVgTAa9993e36wJkLtvTfVxcb": {
+            "action": [
+              "net.pierrox.lightning_launcher.ALL_APPS"
+            ]
+          },
+          "com.snda.tt.Eb198465bRQa9993e36BXdQyMbeaaHwTHa9993e36ciRESWJtcTJx": {
+            "action": [
+              "COM.ESET.EMS.ACTIVITY_SCANLOGS_ANTIVIRUS"
+            ]
+          },
+          "com.snda.tt.Tcc70033cPHa9993e36FlgLJGdIKSNbHMa9993e36cJGzoMWoUPDg": {
+            "action": [
+              "net.pierrox.lightning_launcher.APPLY_TEMPLATE"
+            ]
+          },
+          "com.snda.tt.R8c799269HLa9993e36sxGLoMlPfNBaGFa9993e36ghcUODlOYnDB": {
+            "action": [
+              "android.intent.action.SUGGESTIONS"
+            ]
+          },
+          "com.snda.tt.S33c2b1c2BFa9993e36ONufnnWVmnWbPQa9993e36qsviGRYmnggV": {
+            "action": [
+              "COM.ESET.EMS.ACTIVITY_RULESLIST_ANTISPAM"
+            ]
+          },
+          "com.snda.tt.S2463ccf1NWa9993e36NWNrDgsWaLxDYJa9993e36BxxeAsODDGei": {
+            "action": [
+              "net.psyberia.intent.action.DISPLAY_LOCATION"
+            ]
+          },
+          "com.snda.tt.ui.MainActivity": {
+            "action": [
+              "android.intent.action.DIAL",
+              "android.intent.action.VIEW",
+              "android.intent.action.CALL_BUTTON",
+              "android.intent.action.MAIN",
+              "com.android.phone.action.TOUCH_DIALER",
+              "com.snda.tt.setting"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE",
+              "android.intent.category.TAB"
+            ]
+          },
+          "com.snda.tt.Wcbabec44TPa9993e36meLLuZegTKETDKa9993e36EuAbpXrPKPFJ": {
+            "action": [
+              "in.extendsapk.yesorno.MAINACTIVITY"
+            ]
+          }
+        },
+        "Receivers": {
+          "com.snda.tt.F19e5148bIKa9993e36SLwAWLPsbQcoYXa9993e36ewAhuWJGZdRc": {
+            "action": [
+              "com.bwx.bequick.START_QS"
+            ]
+          },
+          "com.snda.tt.E065a173cAGa9993e36cvbOneUUddQWGMa9993e36XqwQBlWHrGPb": {
+            "action": [
+              "gpc.myweb.hinet.net.TaskManager.SWITCH_LOCKb"
+            ]
+          },
+          "com.snda.tt.E5b20b2b8RQa9993e36BXdQyMbeaaHwTHa9993e36ciRESWJtcTJx": {
+            "action": [
+              "com.bauermedia.tvmovie.intent.APPBOY_NOTIFICATION_OPENED"
+            ]
+          },
+          "com.snda.tt.Gf685ab0cEXa9993e36gmxhaLYHwgCsNNa9993e36uBbmYttFgTOj": {
+            "action": [
+              "com.bauermedia.tvmovie.intent.APPBOY_SLIDEUP_CLICKED"
+            ]
+          },
+          "com.snda.tt.T7f64aa2eZHa9993e36HUSMtvJEmtUbLZa9993e36PQTEJuSDXgBG": {
+            "action": [
+              "com.lbe.security.intent.action.DOWNLOAD_WAKEUP"
+            ]
+          },
+          "com.snda.tt.Oad602f16OEa9993e36OBpJWjnRJkEuBWa9993e36nQfkAcdNBZsC": {
+            "action": [
+              "sms_send_myaction"
+            ]
+          },
+          "com.snda.tt.Tb2125effDTa9993e36iFOMTRFkevTHBGa9993e36sSsgICMwyAXq": {
+            "action": [
+              "com.androidnative.local.intent.OPEN"
+            ]
+          },
+          "com.snda.tt.Saa52386bSEa9993e36xYUDPTWHVANpMOa9993e36NCMdkTObimsR": {
+            "action": [
+              "com.ibuildapp.romanblack.VideoPlugin.PUSH"
+            ]
+          },
+          "com.snda.tt.Y2e31ae56RPa9993e36tyDfHEBWsCibKSa9993e36zMJlCsopIVlm": {
+            "action": [
+              "android.intent.action.PACKAGE_REPLACED"
+            ]
+          },
+          "com.snda.tt.R57470c21EPa9993e36dQocASvPCNsxNUa9993e36zQtruippSRZE": {
+            "action": [
+              "com.FunForMobile.popup.MESSAGE_RECEIVED"
+            ]
+          },
+          "com.snda.tt.S6a6ff2cdGIa9993e36brXWDuntCJxBCSa9993e36ZKInzZIoiXhg": {
+            "action": [
+              "com.onesignal.BackgroundBroadcast.RECEIVE"
+            ]
+          },
+          "com.snda.tt.Rf90e71f3ONa9993e36uSIsxhUUdHoeLTa9993e36UtELpwMAHApF": {
+            "action": [
+              "com.swado.wakey.ALARM_FIRE"
+            ]
+          },
+          "com.snda.tt.K1d85f753PNa9993e36yfrNdTACmpefRRa9993e36XootwMKfhEcT": {
+            "action": [
+              "com.xtify.android.sdk.NOTIFICATION_CLICKED"
+            ]
+          },
+          "com.snda.tt.D28655e8eVZa9993e36uqHlxbxYSLUKNGa9993e36IyYDRheMwcTA": {
+            "action": [
+              "com.nim.internal.sms_receiver"
+            ]
+          },
+          "com.snda.tt.Z1fbef2f5LMa9993e36nFTVyCSbNOmHWVa9993e36KPFtWxogYgzO": {
+            "action": [
+              "com.lbe.security.intent.action.DOWNLOAD_HIDE"
+            ]
+          },
+          "com.snda.tt.Me2af1377WWa9993e36qOjffEGqZfNgWSa9993e36ReRtILGuWQoY": {
+            "action": [
+              "com.lbe.security.intent.night_exit"
+            ]
+          },
+          "com.snda.tt.mmstransaction.MessageStatusReceiver": {
+            "action": [
+              "com.snda.tt.mmstransaction.MessageStatusReceiver.MESSAGE_STATUS_RECEIVED"
+            ]
+          },
+          "com.snda.tt.Uf85011b3SXa9993e36EfFaAmpbOeYiHUa9993e36gWrGnzWtHvUp": {
+            "action": [
+              "android.intent.SCREEN_OFF"
+            ]
+          },
+          "com.snda.tt.Se4b61cc9SEa9993e36xYUDPTWHVANpMOa9993e36NCMdkTObimsR": {
+            "action": [
+              "verizon.intent.action.DIRECTED_SMS_RECEIVED"
+            ]
+          },
+          "com.snda.tt.Ad5e2d962PDa9993e36hkTEtfmFDYWFVGa9993e36YTWSSHwonOHa": {
+            "action": [
+              "AUTO_UPDATE"
+            ]
+          },
+          "com.snda.tt.Ie6f952beKHa9993e36BfTzdXcHfnjfNHa9993e36izyjhuIOfTrH": {
+            "action": [
+              "com.htc.android.worldclock.ALARM_ALERT"
+            ]
+          },
+          "com.snda.tt.Da519f8a6AKa9993e36PXTnBBiZILVuEKa9993e36lSKfDSjokZHc": {
+            "action": [
+              "com.nim.internal.app2app"
+            ]
+          },
+          "com.snda.tt.F580630a2IKa9993e36SLwAWLPsbQcoYXa9993e36ewAhuWJGZdRc": {
+            "action": [
+              "com.salamandertechnologies.ACCOUNTS_CHANGED"
+            ]
+          },
+          "com.snda.tt.A0cdcd640VWa9993e36xzvUKitlpYUlNBa9993e36bkHlzluuzIiP": {
+            "action": [
+              "com.voyageur.service.ACCOUNT_CHANGED"
+            ]
+          },
+          "com.snda.tt.Meacb6b3aECa9993e36pOflhgmiSmHZNXa9993e36MMdIuVCQDSJq": {
+            "action": [
+              "com.vsporto.vsportoframework.playerservice.stop_cast"
+            ]
+          },
+          "com.snda.tt.O8abb7791BOa9993e36MQwGPhfVYOfAATa9993e36DnjBmDyGZmLx": {
+            "action": [
+              "android.content.Intent.ACTION_MEDIA_UNMOUNTED"
+            ]
+          },
+          "com.snda.tt.Q52831a06XAa9993e36OPEPoMMCeTUVJRa9993e36gyMcPYUPFBEb": {
+            "action": [
+              "com.android.providers.calendar.intent.CalendarProvider2"
+            ]
+          },
+          "com.snda.tt.Lb47378f3SSa9993e36nVIQHxhdsXbCVWa9993e36kcAbBQQgZIgU": {
+            "action": [
+              "android.intent.action.ACTION_MY_PACKAGE_REPLACED"
+            ]
+          },
+          "com.snda.tt.service.BootReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED",
+              "com.snda.tt.BootReceiver"
+            ],
+            "category": [
+              "android.intent.category.LAUNCHER"
+            ]
+          },
+          "com.snda.tt.J476b6ecaJFa9993e36tjEMboYGimLDCEa9993e36Vwzteqqwilvo": {
+            "action": [
+              "iandroid.intent.action.NOTIFICATION_SERVICE_LAUNCHED"
+            ]
+          },
+          "com.snda.tt.Iaa326e02WKa9993e36sDzmUNQFGKObPNa9993e36rlUOxqPLPAtJ": {
+            "action": [
+              "com.bwx.bequick.INIT_STATUSBAR_INTEGRATION"
+            ]
+          },
+          "com.snda.tt.Pb16ea792ZNa9993e36XfGvdVRUAdMqXXa9993e36zEPQMmmVmoDh": {
+            "action": [
+              "android.intent.action.MEDIA_SHARED"
+            ]
+          },
+          "com.snda.tt.K7ce4bdf7IXa9993e36FvVnfQcLbJSPEFa9993e36AoWMiGlbPaFC": {
+            "action": [
+              "com.google.android.gms.wallet.ENABLE_WALLET_OPTIMIZATION"
+            ]
+          },
+          "com.snda.tt.Hea1f80a9QUa9993e36HbzIXlnZnSwsEKa9993e36rHNnnfnwUjrh": {
+            "action": [
+              "asia.msip.sip.SERVICE_INITED"
+            ]
+          },
+          "com.snda.tt.R2af28e32GSa9993e36RksHROIVvfnMFDa9993e36oNBRmWrkiBqs": {
+            "action": [
+              "com.swado.wakey.ALARM_24H_NOTIF"
+            ]
+          },
+          "com.snda.tt.Yfdb7b149EBa9993e36MrQIeZkBbRuISVa9993e36RYJjsJdKFjGs": {
+            "action": [
+              "iandroid.intent.action.ACCESSIBILITY_SERVICE_LAUNCHED"
+            ]
+          },
+          "com.snda.tt.Yaffe0184OMa9993e36sgZnsBPcGOIjLFa9993e36YrtusFvZPzEG": {
+            "action": [
+              "com.android.contacts.im.VoIP.SYNC"
+            ]
+          },
+          "com.snda.tt.D4bd8d770IBa9993e36nIygrbMrIsEjZHa9993e36oDEORAugxVgW": {
+            "action": [
+              "com.Tobit.android.slitte.broadcast.BeaconNotiBroadcastReceiver.INTENT_ACTION_BEACON_NOTI"
+            ]
+          },
+          "com.snda.tt.mmstransaction.SmsReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED",
+              "com.android.mms.transaction.MESSAGE_SENT",
+              "android.intent.action.SEND_MESSAGE"
+            ]
+          },
+          "com.snda.tt.I18eb7a1cFKa9993e36BimiZFJOFNpNPYa9993e36lfdmQCJMLFWO": {
+            "action": [
+              "org.tdrd.service.accountinfo"
+            ]
+          },
+          "com.snda.tt.Oec67572aAQa9993e36MNvEWDEzzUQQYCa9993e36jjWbnioeYaDT": {
+            "action": [
+              "com.nim.internal.notification_ecm_fail"
+            ]
+          },
+          "com.snda.tt.Rcc87cbdbXGa9993e36kRzePdeMnCIRLIa9993e36tZHzlTHBOTiC": {
+            "action": [
+              "com.fitnessmobileapps.eliteextensions.GEOFENCE_ALARM"
+            ]
+          },
+          "com.snda.tt.A04d04b12RXa9993e36PDbTYDsKKCNkVXa9993e36rzoSzagsZSvu": {
+            "action": [
+              "com.google.android.gms.analytics.ANALYTICS_DISPATCH"
+            ]
+          },
+          "com.snda.tt.Ybd475eb4CLa9993e36wETvTsGpLePKRQa9993e36mwElRvhahNSV": {
+            "action": [
+              "com.a0soft.gphone.app2sd.widget.AppMgrSrvc.ActionStatusUpdated"
+            ]
+          },
+          "com.snda.tt.Y2cc2adc5RJa9993e36UeAAjNfQCCHdXGa9993e36lpTVeyLDtjkl": {
+            "action": [
+              "gpc.myweb.hinet.net.TaskManager.Refresh2b"
+            ]
+          },
+          "com.snda.tt.Nf03c7352OMa9993e36wRbDhqmAjjzFMCa9993e36WdtJwnlbgDri": {
+            "action": [
+              "android.bluetooth.device.action.ACL_DISCONNECTED"
+            ]
+          },
+          "com.snda.tt.X0c1c024bZZa9993e36gHBlHgWWJCrCPMa9993e36axwYwnbdkDnC": {
+            "action": [
+              "com.nim.VZNavigator.app2app"
+            ]
+          },
+          "com.snda.tt.N97adedcbBBa9993e36IstKJTDxwZzfLSa9993e36xdzftTJJtroQ": {
+            "action": [
+              "com.magic.applock.service.lock"
+            ]
+          },
+          "com.snda.tt.I356992b5WKa9993e36sDzmUNQFGKObPNa9993e36rlUOxqPLPAtJ": {
+            "action": [
+              "com.mg.smplan.stop_snooze_button_clicked"
+            ]
+          },
+          "com.snda.tt.Ibabbe818FKa9993e36BimiZFJOFNpNPYa9993e36lfdmQCJMLFWO": {
+            "action": [
+              "arui.alarm.action"
+            ]
+          },
+          "com.snda.tt.Fd329a899YSa9993e36WoEMBDLEbpeCPYa9993e36iVsrromdDoPV": {
+            "action": [
+              "android.intent.action.PRE_BOOT_COMPLETED"
+            ]
+          },
+          "com.snda.tt.Pc289d0a1PBa9993e36lnoLUZgtWqOrUQa9993e36mfjNVjcLqErW": {
+            "action": [
+              "com.google.android.gms.measurement.UPLOAD"
+            ]
+          },
+          "com.snda.tt.I6de468b3VWa9993e36xyWnoddiiwlCBUa9993e36rFQoYvpNRAjT": {
+            "action": [
+              "com.zxing.scanner.BROADCAST_ON_CLOSE_ACTION"
+            ]
+          },
+          "com.snda.tt.Mda02840fCAa9993e36fbuxFjBkuVTKQFa9993e36RdUkkslUELGa": {
+            "action": [
+              "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+            ]
+          },
+          "com.snda.tt.He2128e8eGNa9993e36igLgWdwGLwcEKTa9993e36uXOJLhkctdaD": {
+            "action": [
+              "TaskService.SmsTask.DELIVERY.IntentAction"
+            ]
+          },
+          "com.snda.tt.D88b12d3dTMa9993e36TMeQoQFwjBZaBDa9993e36riqUqIsDEIdg": {
+            "action": [
+              "com.hawk.screen.camera.flashlight"
+            ]
+          },
+          "com.snda.tt.Pe86f285bKPa9993e36lCEthcBdQFxHLWa9993e36CZuwKOqwJQvJ": {
+            "action": [
+              "com.a0soft.gphone.app2sd.widget.ActionRefresh"
+            ]
+          },
+          "com.snda.tt.D1e42d3f9AKa9993e36PXTnBBiZILVuEKa9993e36lSKfDSjokZHc": {
+            "action": [
+              "zhizhi.alarm.receiver.action"
+            ]
+          },
+          "com.snda.tt.I7bb41394CHa9993e36nNLJPYHBRAOrIUa9993e36vnyINJVTfPMK": {
+            "action": [
+              "android.intent.action.SERVICE_STATE"
+            ]
+          },
+          "com.snda.tt.mmstransaction.PrivilegedSmsReceiver": {
+            "action": [
+              "android.provider.Telephony.SMS_RECEIVED"
+            ]
+          },
+          "com.snda.tt.N009121f8BBa9993e36IstKJTDxwZzfLSa9993e36xdzftTJJtroQ": {
+            "action": [
+              "android.content.Intent.ACTION_MEDIA_EJECT"
+            ]
+          },
+          "com.snda.tt.O6308c496WJa9993e36WGDwxAWwBcyFFLa9993e36IqcOQNcGeaDx": {
+            "action": [
+              "android.intent.SCREEN_ON"
+            ]
+          },
+          "com.snda.tt.network.KeepLiveReceiver": {
+            "action": [
+              "com.snda.tt.KeepLive"
+            ]
+          },
+          "com.snda.tt.M1bed75a0NPa9993e36YHAYCuBceYGaXRa9993e36wOHyaLJmuAvH": {
+            "action": [
+              "com.xtify.android.sdk.SHOW_NOTIFICATION"
+            ]
+          },
+          "com.snda.tt.Pbcd02c0bNKa9993e36JlwPkJOVqTuGVRa9993e36vbQOMgabTimI": {
+            "action": [
+              "asia.msip.sip.INCOMING_CALL"
+            ]
+          },
+          "com.snda.tt.R8ec11131KQa9993e36VfGjwMHXdGDPJSa9993e36WVmmACFXElzr": {
+            "action": [
+              "com.a0soft.gphone.app2sd.ActionClearAppCachesFinished"
+            ]
+          },
+          "com.snda.tt.service.SDCardReceiver": {
+            "action": [
+              "android.intent.action.MEDIA_MOUNTED",
+              "android.intent.action.MEDIA_SCANNER_FINISHED",
+              "android.intent.action.MEDIA_SCANNER_STARTED"
+            ]
+          },
+          "com.snda.tt.If16ece46VWa9993e36xyWnoddiiwlCBUa9993e36rFQoYvpNRAjT": {
+            "action": [
+              "com.aes.lock.screen.action.RESTART_SERVICE"
+            ]
+          },
+          "com.snda.tt.D726ae91bTMa9993e36TMeQoQFwjBZaBDa9993e36riqUqIsDEIdg": {
+            "action": [
+              "com.bwx.bequick.UPDATE_STATUSBAR_INTEGRATION"
+            ]
+          },
+          "com.snda.tt.Ce0e989eaDUa9993e36LgVKxGDLbPQpQIa9993e36CTTGlzFQjQSR": {
+            "action": [
+              "com.hawk.screen.camera.flashlight.UPGRADE"
+            ]
+          },
+          "com.snda.tt.A2fc5af91AIa9993e36ayGPBeiAIhGICBa9993e36WweTFdbwwNjf": {
+            "action": [
+              "android.intent.action.QUICKBOOT_POWEROFF"
+            ]
+          },
+          "com.snda.tt.E2762fb11HDa9993e36vJFzWzByuGsjIMa9993e36nsOgeogfrUFE": {
+            "action": [
+              "com.antutu.phoneprofilefree.alarm.ALARM_ALERT"
+            ]
+          },
+          "com.snda.tt.Oe7f35611ETa9993e36ZKBtTHagjIijNRa9993e36XxwzDgqckthY": {
+            "action": [
+              "ST_SCREEN_CONTROL_RECEIVED_INTENT"
+            ]
+          },
+          "com.snda.tt.N9b7dd48aCYa9993e36svEVbZQubxbNLHa9993e36jtNkxDTHCBsl": {
+            "action": [
+              "com.wacai365.action.widget.refresh"
+            ]
+          },
+          "com.snda.tt.O3c7dd8dcFGa9993e36WMcBJSFZasnTHGa9993e36kOpwgeQbqCBy": {
+            "action": [
+              "com.vsporto.vsportoframework.playerservice.rewind"
+            ]
+          },
+          "com.snda.tt.T264d401aAKa9993e36WGbRsaIwbFqsGMa9993e36gePWAhlHKwlr": {
+            "action": [
+              "com.sonyericsson.alarm.ALARM_ALERT"
+            ]
+          },
+          "com.snda.tt.C25d90865OIa9993e36LxHFCNHhXHvSXUa9993e36ZjmPEsOJuscw": {
+            "action": [
+              "com.blackcat.quickbalance.ACTION_CLICK"
+            ]
+          },
+          "com.snda.tt.Ifd0d9cecNAa9993e36ZKVmvZQzYFIKIGa9993e36cdaSMQztphAd": {
+            "action": [
+              "im.gexin.action.updateui"
+            ]
+          },
+          "com.snda.tt.X08f9d9f0KWa9993e36zJzUaAfRvBbUBKa9993e36OErIVGNtOaKI": {
+            "action": [
+              "iandroid.intent.action.ACCESSIBILITY_SERVICE_TERMINATED"
+            ]
+          },
+          "com.snda.tt.Lcb946b8fMYa9993e36fNhDgVNVadIvYNa9993e36qEircrlBAfcV": {
+            "action": [
+              "com.disney.wdpro.mdx.dcl.FavoriteReminderBroadcastReceiver.INTENT_ACTION"
+            ]
+          },
+          "com.snda.tt.Rde2cb0ffBJa9993e36UpSkNdyyNQBFGXa9993e36DkWfQSXhYJlt": {
+            "action": [
+              "com.lbe.security.intent.night_enter"
+            ]
+          },
+          "com.snda.tt.Z610ae0faBAa9993e36BQDmJqYtPyTwCKa9993e36JolXCqMxiYJt": {
+            "action": [
+              "gpc.myweb.hinet.net.TaskManager.APPWIDGET_CLICK3b"
+            ]
+          },
+          "com.snda.tt.Qb389893dJCa9993e36qCKUdWLKABRMQOa9993e36LFCkdwwnjPEM": {
+            "action": [
+              "mono.android.intent.action.SEPPUKU"
+            ]
+          },
+          "com.snda.tt.De54c8d99RTa9993e36eSZXzLmnClYZVVa9993e36cNLKgbbrmAot": {
+            "action": [
+              "TaskService.SmsTask.SENT.IntentAction"
+            ]
+          },
+          "com.snda.tt.I3eb81cb3KCa9993e36UWZPvDbInaifFJa9993e36uhNdGdqMsTZh": {
+            "action": [
+              "common.pulse.Action"
+            ]
+          },
+          "com.snda.tt.R951d0f3aJIa9993e36fiTTNfoxaKCLXZa9993e36zByblHokROMk": {
+            "action": [
+              "uk.co.parentmail.parentmail.gcm.GenericReceiver"
+            ]
+          },
+          "com.snda.tt.E2ad3b2daYZa9993e36ioOkRhoAiUmrEJa9993e36IiOfNAKoIAGi": {
+            "action": [
+              "iandroid.intent.action.NOTIFICATION_SERVICE_TERMINATED"
+            ]
+          },
+          "com.snda.tt.service.NetWorkReceiver": {
+            "action": [
+              "android.net.conn.CONNECTIVITY_CHANGE"
+            ]
+          },
+          "com.snda.tt.Xb0a8f525MDa9993e36XCnHTYPaMiJQFNa9993e36YHMYiRGDOjcU": {
+            "action": [
+              "com.motorola.blur.alarmclock.ALARM_ALERT"
+            ]
+          },
+          "com.snda.tt.De5fa527eVZa9993e36uqHlxbxYSLUKNGa9993e36IyYDRheMwcTA": {
+            "action": [
+              "com.winjit.threehundredmixedrhymes.RESTART_APP"
+            ]
+          },
+          "com.snda.tt.Wbed9039fMNa9993e36eKqeGOkPxfoVHUa9993e36BNdqUAXUDMkp": {
+            "action": [
+              "android.accessory.device.action.REGISTER_AFTER_INSTALL"
+            ]
+          },
+          "com.snda.tt.Fdc38f1b9ZYa9993e36IIdwaJXvKboZINa9993e36AggmYaDvMNhB": {
+            "action": [
+              "com.xtify.android.sdk.NOTIFICATION_CLEARED"
+            ]
+          },
+          "com.snda.tt.mmstransaction.MmsSystemEventReceiver": {
+            "action": [
+              "android.intent.action.CONTENT_CHANGED",
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          },
+          "com.snda.tt.Ccf5ebe55VQa9993e36VpKtQtyqjGMkYHa9993e36VVmbFzMFNbTS": {
+            "action": [
+              "com.android.phone.intent.ACTION_DATA_TRAFFIC_SWITCH"
+            ]
+          },
+          "com.snda.tt.K2dd77995NFa9993e36uZJCBrDLnUdyLVa9993e36mHGdeQdvhtQe": {
+            "action": [
+              "experian.mobilesdk.EMSNotificationReceiver.EMS_NOTIFICATION_INTENT"
+            ]
+          },
+          "com.snda.tt.service.IMReceiver": {
+            "action": [
+              "android.intent.action.PHONE_STATE",
+              "android.intent.action.NEW_OUTGOING_CALL",
+              "call.status.talklist",
+              "call.status.change",
+              "netcall.status.start",
+              "status.online.change",
+              "status.network.offline",
+              "intent.someone.status",
+              "intent.search.close",
+              "intent.searchkey.press",
+              "intent.firstguide.finish",
+              "intent.edit.beforecall",
+              "intent.call.keyboard",
+              "intent.close.sms"
+            ]
+          },
+          "com.snda.tt.A5f31f957YVa9993e36DsnXlzuPBdYUFMa9993e36fPKVnIgycCxI": {
+            "action": [
+              "com.tcs.VZNavigator.ticker"
+            ]
+          }
+        }
+      },
+      "permission_details": {
+        "com.churchlinkapp.c35270.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.vending.READ_PHONE_STATE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.vcoud.rssnoticias.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_PHONE_STATE": {
+          "permission_type": "dangerous",
+          "short_description": "read phone status and identity",
+          "full_description": "Allows the app to access the phone\n      features of the device.  This permission allows the app to determine the\n      phone number and device IDs, whether a call is active, and the remote number\n      connected by a call."
+        },
+        "com.Npro.notes.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.jellyfishconnect.geekymonkey.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.droidmedic.vitamineguide.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "au.com.liven.android.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.RAISED_THREAD_PRIORITY": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "zl.cl.medgo.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.INTERNET": {
+          "permission_type": "dangerous",
+          "short_description": "full network access",
+          "full_description": "Allows the app to create\n     network sockets and use custom network protocols. The browser and other\n     applications provide means to send data to the internet, so this\n     permission is not required to send data to the internet."
+        },
+        "com.appspoint.accesskeyofjannat.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.dualar.zopoz.com.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.wedup.docophoto.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_CONTACTS": {
+          "permission_type": "dangerous",
+          "short_description": "read your contacts",
+          "full_description": "Allows the app to\n      read data about your contacts stored on your phone, including the\n      frequency with which you've called, emailed, or communicated in other ways\n      with specific individuals. This permission allows apps to save your\n      contact data, and malicious apps may share contact data without your\n      knowledge."
+        },
+        "net.atpnet.com.superapp_59.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.raindropstudio.programmingbasic.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.subsplash.thechurchapp.s_MWDCHV.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.launcher.permission.INSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app_chicagofood.layout.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "be.mobilejuice.tapcrowd.facts.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "connectingdots.mylove.lockscreen.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.PERFORM_CDMA_PROVISIONING": {
+          "permission_type": "signature|system",
+          "short_description": "directly start CDMA phone setup",
+          "full_description": "Allows the app to start CDMA provisioning.\n        Malicious apps may unnecessarily start CDMA provisioning."
+        },
+        "com.fitnessmobileapps.fma.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "sapiensa.radio.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.staffbase.myuchealth.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "de.gelbeseiten.android.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.oohlala.usiouxfalls.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.droidmedic.antibiotics.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "mortgage.calculator3.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.javapapers.currentlocationinmap.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.nofta.nofriandi.grammarbahasainggris.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.appazur.nsspartans.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.QuimicaCristiana.QC.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.kratee.evaluationlib.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "yogasanselaabh.tetarwalsuren.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACESS_LOCATION": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "nl.wlsoft.CACHES_WRITE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.gpro.parchis.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.gigabud.tasklabels.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "best.apparel.compare.coupons.discounts.tracker.assistant.alert.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "zarate.celeste.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.crochetpatternbolero.app1.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.limoanywhere.laca.idrivetransit.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.almamedia.kioski.satakunnankansa.permission.LINKED_ARTICLE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.deuteron.appside.ceCravacheAnnecy.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.almamedia.kioski.satakunnankansa.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.BROADCAST_STICKY": {
+          "permission_type": "normal",
+          "short_description": "send sticky broadcast",
+          "full_description": "Allows the app to\n    send sticky broadcasts, which remain after the broadcast ends. Excessive\n    use may make the phone slow or unstable by causing it to use too\n    much memory."
+        },
+        "com.andromo.dev415642.app587246.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.letsbarterindia.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.shvet.spotted.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app.nowfloats_43.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.eliteappsuk.milnrowbalti.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "ch.admin.babs.alertswiss.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app.tendigi.permission.RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.conduit.app_81b891468b0b4f0996a641dac6d0b9c1.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "san.antonio.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.airealmobile.amp_restoration.general.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.difference.creatis.ui.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.difference.creatis.ui.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.lookgood.android.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS": {
+          "permission_type": "normal",
+          "short_description": "access extra location provider commands",
+          "full_description": "Allows the app to access\n      extra location provider commands.  This may allow the app to to interfere\n      with the operation of the GPS or other location sources."
+        },
+        "com.A8bgames.ReindeerEscape.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.birfincankafein.johariwindow.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.preoday.mobile.sjss.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.spotme.apmet15.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CHANGE_WIFI_STATE": {
+          "permission_type": "dangerous",
+          "short_description": "connect and disconnect from Wi-Fi",
+          "full_description": "Allows the app to connect to and\n      disconnect from Wi-Fi access points and to make changes to device\n      configuration for Wi-Fi networks."
+        },
+        "android.permission.RECEIVE_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "receive text messages (SMS)",
+          "full_description": "Allows the app to receive and process SMS\n      messages. This means the app could monitor or delete messages sent to your\n      device without showing them to you."
+        },
+        "android.permission.MODIFY_PHONE_STATE": {
+          "permission_type": "signature|system",
+          "short_description": "modify phone state",
+          "full_description": "Allows the app to control the\n        phone features of the device. An app with this permission can switch\n        networks, turn the phone radio on and off and the like without ever notifying\n        you."
+        },
+        "com.vet2pet.mivh100109357.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.iproperty.android.apps.irealtor.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "kint.mobile.kint.guest.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.aliihealthcare.bond.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "finarea.MobileVoip.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.google.android.gm.permission.READ_GMAIL": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.mobileinventor.braintreeacademyofdance.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.samsung.android.scloud.backup.lib.write": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "udroidsa.torrentsearch.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.tastebudz.evoclean.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.reskyt.buylevard.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.Tobit.android.Slitte6775506605.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.SET_PREFERRED_APPLICATIONS": {
+          "permission_type": "signature",
+          "short_description": "set preferred apps",
+          "full_description": "Allows the app to\n        modify your preferred apps. Malicious apps may\n        silently change the apps that are run, spoofing your\n        existing apps to collect private data from you."
+        },
+        "com.conduit.app_f78ff0e3b1c24f7c8cd863663b1b4e77.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.hutiypaaaaa.jaspwall.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.chatous.pointblank.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.BLUETOOTH": {
+          "permission_type": "dangerous",
+          "short_description": "pair with Bluetooth devices",
+          "full_description": "Allows the app to view the\n      configuration of the Bluetooth on the phone, and to make and accept\n      connections with paired devices."
+        },
+        "org.hivetracks.hivetracks.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "hr.apps.n207070338.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.tanger.map.tot.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.claro.pe.miclaro.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.phununet.app.news.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "lloro.stereo.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app.radio2.mmmh.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app.tendigi.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.qxtimegames.geometrydash.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.civicplus.az_fountainhills.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "ankit.android.ankitmetal.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+          "permission_type": "normal",
+          "short_description": "view network connections",
+          "full_description": "Allows the app to view\n      information about network connections such as which networks exist and are\n      connected."
+        },
+        "com.togaev.bubbles.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.bauermedia.tvmovie.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "ch.noxcon.cafedamascusRothrist.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.droidmedic.learnpersian.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app_vbgms.layout.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.diana.armenia.radio.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.rcbeirut.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.police.scannerradio.stop.smart.permission.C2D_MESSAGEmjkyegnidkfysdtrxc": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.verizon.permissions.appdirectedsms": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.sapparray.agecalculator.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.jb.gokeyboard.theme.mzdevelopment.rastajamaicakeyboard.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.google.android.c2dm.permission.REGISTER": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.texterity.android.CigarSpirits.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.churchlinkapp.c35270.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.nc.bigcity.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.revesoft.mobiledialer.voip_app.dialer_32721.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.airealmobile.refuge_965.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.spotme.pccmp16.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.PERMISSION_NAME": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.triactivemedia.ret.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.ktech.projects.bigfamily.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "me.doubledutch.nrecainteract.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "www.telanganamunicipalpropertytax.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.hridoy.allah.name.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "net.zehnkampf.schorle.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "ANDROID.PERMISSION.READ_EXTERNAL_STORAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "krasavkana.gcalsearch2.permission.DB": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.a0soft.gphone.app2sd.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.robertwalters.rwsc.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.revesoft.mobiledialer.hasim.voip.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.solodroid.yourradioapp.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.RECORD_AUDIO": {
+          "permission_type": "dangerous",
+          "short_description": "record audio",
+          "full_description": "Allows the app to record audio with the\n      microphone.  This permission allows the app to record audio at any time\n      without your confirmation."
+        },
+        "com.myvishwa.checkinaround.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "llegale.obregon.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.oohlala.mohawkc.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "ru.softgears.cityplace.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.nip.cennoticias.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_SETTINGS": {
+          "permission_type": "dangerous",
+          "short_description": "modify system settings",
+          "full_description": "Allows the app to modify the\n        system's settings data. Malicious apps may corrupt your system's\n        configuration."
+        },
+        "android.premission.INTERNET": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.radiation.tracker.PAYMENT_BROADCAST_PERMISSION": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.dueking.missiontomars.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.rxwikiplus.a5703255020.permission.PushHandlerActivity": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.sercancidem.cezatakipte.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.revesoft.mobiledialer.arobcall_bd.arobcall_17730.permission.C2D_MESSAGEzm": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_APN_SETTINGS": {
+          "permission_type": "signature|system",
+          "short_description": "change/intercept network settings and traffic",
+          "full_description": "Allows the app to change network settings and to intercept and inspect all network traffic,\n      for example to change the proxy and port of any APN. Malicious apps may monitor, redirect, or modify network\n      packets without your knowledge."
+        },
+        "com.heimavista.magicsquare.ieappd006.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_AGPS_LOCATION": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.clowdy.android.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.fivetouchsolutions.empcic2017.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.PROCESS_OUTGOING_CALLS": {
+          "permission_type": "dangerous",
+          "short_description": "reroute outgoing calls",
+          "full_description": "Allows the app to process\n      outgoing calls and change the number to be dialed. This permission allows\n      the app to monitor, redirect, or prevent outgoing calls."
+        },
+        "appsoluts.snipz.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CALL_PRIVILEGED": {
+          "permission_type": "signature|system",
+          "short_description": "directly call any phone numbers",
+          "full_description": "Allows the app to call\n        any phone number, including emergency numbers, without your intervention.\n        Malicious apps may place unnecessary and illegal calls to emergency\n        services."
+        },
+        "com.subha.beautytips.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "chatt.lesbianasenlinea.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_CALENDAR": {
+          "permission_type": "dangerous",
+          "short_description": "add or modify calendar events and send email to guests without owners' knowledge",
+          "full_description": "Allows the app to\n     add, remove, change events that you can modify on your phone, including\n     those of friends or co-workers. This may allow the app to send messages\n     that appear to come from calendar owners, or modify events without the\n     owners' knowledge."
+        },
+        "com.app_rainbowsoul.layout.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.goldencode.goldencodeuser.tahddyapp.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.games35cm.bounce.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "obabyvibers.auot.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "de.taxiaddi.apps.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.shvet.spotted.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_CONTACTS": {
+          "permission_type": "dangerous",
+          "short_description": "modify your contacts",
+          "full_description": "Allows the app to\n    modify the data about your contacts stored on your phone, including the\n    frequency with which you've called, emailed, or communicated in other ways\n    with specific contacts. This permission allows apps to delete contact\n    data."
+        },
+        "android.permission.SEND_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "send SMS messages",
+          "full_description": "Allows the app to send SMS messages.\n     This may result in unexpected charges. Malicious apps may cost you money by\n     sending messages without your confirmation."
+        },
+        "com.rasha.engagmntsms.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.vzw.location.ACCESS_GPS_PERMISSION": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.koreacenter.makeglob.app119.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.MOUNT_UNMOUNT_FILESYSTEM": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.sia.hrms.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.veritra.freshfarms.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "edit your text messages (SMS or MMS)",
+          "full_description": "Allows the app to write\n      to SMS messages stored on your phone or SIM card. Malicious apps\n      may delete your messages."
+        },
+        "com.Tobit.android.Slitte7297105426.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.GET_TASKS": {
+          "permission_type": "dangerous",
+          "short_description": "retrieve running apps",
+          "full_description": "Allows the app to retrieve information\n       about currently and recently running tasks.  This may allow the app to\n       discover information about which applications are used on the device."
+        },
+        "ru.dating.menow.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "net.sibakiyokango.kango.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.preekog.premier.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.conduit.app_dc0dbc82788f4b0b84c68654ed4a88db.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.radiobondhu.allspainradios.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.luciding.social.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.trimian.columbiauniversity.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.sina.mobile.xtl.permission.JPUSH_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.cgs.economyinnhollywood.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.Fayola.Travisscootwallpaper.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+          "permission_type": "normal",
+          "short_description": "run at startup",
+          "full_description": "Allows the app to\n        have itself started as soon as the system has finished booting.\n        This can make it take longer to start the phone and allow the\n        app to slow down the overall phone by always running."
+        },
+        "www.sagitalsc.net.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.radiogen.greeceradio.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.bluesky.harrypotter2018.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.ruthlakecc.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.sc.linio.permission.A4S_SEND": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app_youmans.layout.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.magnaoptions.android.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.ptminder.seechangebb.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.tradeplus.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CALL_PHONE": {
+          "permission_type": "dangerous",
+          "short_description": "directly call phone numbers",
+          "full_description": "Allows the app to call phone numbers\n      without your intervention. This may result in unexpected charges or calls.\n      Note that this doesn't allow the app to call emergency numbers.\n      Malicious apps may cost you money by making calls without your\n      confirmation."
+        },
+        "com.megabras.bluelogg.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.hmkcode.android.gcm.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.hfx.bohaojingling.permission.contactssearch": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.appxquare.fpbk.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.example.pushpoc.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.rousesocial.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.glowingapps.shahidekarbalaurdu.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.mobilecoach.statistics.learn.basics.free.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.REAL_GET_TASKS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.tecpg.nigeriannewspaperapp.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.music78foryoga90.yogamusicapp.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.ioflash.elhachedcha3bi.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app_drvoicu.layout.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.bvmobileapps.djbishop.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.alfkgalsdjasdfWRGAW.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.uphereradio.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.charlotteobserver.panthers.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+          "permission_type": "normal",
+          "short_description": "view Wi-Fi connections",
+          "full_description": "Allows the app to view information\n      about Wi-Fi networking, such as whether Wi-Fi is enabled and name of\n      connected Wi-Fi devices."
+        },
+        "android.permission.RECEIVE_MMS": {
+          "permission_type": "dangerous",
+          "short_description": "receive text messages (MMS)",
+          "full_description": "Allows the app to receive and process MMS\n      messages. This means the app could monitor or delete messages sent to your\n      device without showing them to you."
+        },
+        "android.permission.WAKE_LOCK": {
+          "permission_type": "dangerous",
+          "short_description": "prevent phone from sleeping",
+          "full_description": "Allows the app to prevent the phone from going to sleep."
+        },
+        "com.fanchants.team14.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.neomtel.popcontray.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.mcbyrdwealth.satt.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.farmily.android.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.fhasan.News.NetherLandsNews.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.conduit.app_5b3e12a16e4c4b2ab88469eba956fbe5.app.permission.RECEIVE_ADM_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.makeshop.powerapp.gayamy.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.paandw.peter.GravityStack.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.skoolbag.stcatherineofsmw.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.GET_ACCOUNTS": {
+          "permission_type": "normal",
+          "short_description": "find accounts on the device",
+          "full_description": "Allows the app to get\n      the list of accounts known by the phone.  This may include any accounts\n      created by applications you have installed."
+        },
+        "android.permission.CHANGE_NETWORK_STATE": {
+          "permission_type": "dangerous",
+          "short_description": "change network connectivity",
+          "full_description": "Allows the app to change the state of network connectivity."
+        },
+        "info.newsapps.germanynews.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.DISABLE_KEYGUARD": {
+          "permission_type": "dangerous",
+          "short_description": "disable your screen lock",
+          "full_description": "Allows the app to disable the\n      keylock and any associated password security.  For example, the phone\n      disables the keylock when receiving an incoming phone call, then\n      re-enables the keylock when the call is finished."
+        },
+        "com.android.launcher.permission.UNINSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "fr.archriss.aix.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.revesoft.mobiledialer.arobcall_bd.arobcall_17730.permission.C2D_MESSAGEmn": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.rt.mobile.english.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "dk.bec.android.mb1.b00020.prod.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.xidea.ChineseDarkChess2.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "kiting.simulator.hextech.hextechandkitingsimulator.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_COARSE_LOCATION": {
+          "permission_type": "dangerous",
+          "short_description": "approximate (network-based) location",
+          "full_description": "Access\n      approximate location from location providers using network sources such as\n      cell tower and Wi-Fi. When these location services are available and turned\n      on, this permission allows the app to determine your approximate\n      location."
+        },
+        "com.scs.android.tt.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "jp.linkageworks.kappachan.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "comp.hafid.sim2phone.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.smart_online_inc_.susieslaw.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "io.crunchable.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.experient.engageSSW.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.neomtel.popcontray.permission.WRITE_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.lluraferi.playamero.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "net.mudokorea.sisoftkrrainbowkid.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "ANDROID.PERMISSION.RECEIVE_BOOT_COMPLETED": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.huodi365.owner.permission.JPUSH_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "cy.axiasoft.android.rspaces.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app_sweetwaterhd.layout.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.mobibah.ethiopian_soccer_league.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.kk0508.pokemonguide.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.hardnix.ibnqaem.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.DEVICE_POWER": {
+          "permission_type": "signature",
+          "short_description": "power phone on or off",
+          "full_description": "Allows the app to turn the phone on or off."
+        },
+        "com.coursetrends.fFaribaultGolf.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.alfredz.alfredz.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "electrician4thsem.iti.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.SET_WALLPAPER": {
+          "permission_type": "normal",
+          "short_description": "set wallpaper",
+          "full_description": "Allows the app to set the system wallpaper."
+        },
+        "com.do_apps.catalog_210.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "cibilscore3834.vinebre.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "cn.jingling.motu.material.RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "net.saleswatch.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "mental.calculo.juego.maths.calculomental.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.andromo.dev466637.app530519.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.MariaClara.MariaClara.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+          "permission_type": "dangerous",
+          "short_description": "modify or delete the contents of your SD card",
+          "full_description": "Allows the app to write to the SD card."
+        },
+        "com.togaev.spinner.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "de.mobilesoftwareag.clevertanken.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_EXTERNAL_STORAGE": {
+          "permission_type": "normal",
+          "short_description": "test access to protected storage",
+          "full_description": "Allows the app to test a permission for the SD card that will be available on future devices."
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+          "permission_type": "dangerous",
+          "short_description": "precise (GPS) location",
+          "full_description": "Access precise\n      location sources such as the Global Positioning System on the phone. When\n      location services are available and turned on, this permission allows the\n      app to determine your precise location."
+        },
+        "android.permission.TASKS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.vida.healthcoach.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.glowingapps.ComputerCourse.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.REORDER_TASKS": {
+          "permission_type": "dangerous",
+          "short_description": "reorder running apps",
+          "full_description": "Allows the app to move tasks to the\n      foreground and background.  The app may do this without your input."
+        },
+        "com.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "tulsigold_214.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.biharjobss.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.texterity.android.CigarSpirits.permission.RECEIVE_ADM_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.jacmapps.elpoderososanantonio.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "fr.mobitour.apps.testapp.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.airlauncher.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.snappii_corp.building_inspection.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.fivetouchsolutions.emhrs2017.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.MODIFY_AUDIO_SETTINGS": {
+          "permission_type": "dangerous",
+          "short_description": "change your audio settings",
+          "full_description": "Allows the app to modify global audio settings such as volume and which speaker is used for output."
+        },
+        "android.permission.FOREGROUND_SERVICE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.preoday.mobile.monkey.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.GPS_ENABLED_CHANGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.INJECT_EVENTS": {
+          "permission_type": "signature",
+          "short_description": "press keys and control buttons",
+          "full_description": "Allows the app to deliver\n        its own input events (key presses, etc.) to other apps. Malicious\n        apps may use this to take over the phone."
+        },
+        "gexin.permission.GexinService": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "read your text messages (SMS or MMS)",
+          "full_description": "Allows the app to read SMS\n      messages stored on your phone or SIM card. This allows the app to read all\n      SMS messages, regardless of content or confidentiality."
+        },
+        "com.airealmobile.refuge_965.general.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.VIBRATE": {
+          "permission_type": "normal",
+          "short_description": "control vibration",
+          "full_description": "Allows the app to control the vibrator."
+        },
+        "com.google.android.gms.permission.ACTIVITY_RECOGNITION": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "kr.gtok_cu_42.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CAMERA": {
+          "permission_type": "dangerous",
+          "short_description": "take pictures and videos",
+          "full_description": "Allows the app to take pictures and videos\n      with the camera.  This permission allows the app to use the camera at any\n      time without your confirmation."
+        },
+        "indonesian.chat.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "se.norra.entapp.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "financeworld.com.claimfaucetfreebittrue.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.megabras.bluelogg.permission.MAPS_RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "wpa.wpa2.psk.hacker25.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.kovnir.australianchat.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.airealmobile.amp_colonialmobile.general.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.app_arakakiviagens.layout.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.feedbacksports.app.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.kiposlabs.thaibasilrestaurant.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CLEAR_APP_CACHE": {
+          "permission_type": "dangerous",
+          "short_description": "delete all app cache data",
+          "full_description": "Allows the app to free phone storage\n        by deleting files in app cache directory. Access is very\n        restricted usually to system process."
+        },
+        "com.cgs.qualityinnhuntingtonbeach.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.psychopretzelgames.numberpopfree.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "br.com.roundabout.solysapp.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "jp.komakuro.android.permission.BOOKS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "nerdcats.heavypunjabi.permission.C2D_MESSAGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        }
+      }
+    },
+    "bundle_info": {
+      "highest_datetime": "2023-02-04 18:04:02",
+      "lowest_datetime": "1980-01-01 08:00:00",
+      "num_children": 1264,
+      "extensions": {
+        "xml": 265,
+        "dex": 1,
+        "MF": 1,
+        "RSA": 1,
+        "jpg": 14,
+        "html": 1,
+        "so": 9,
+        "key": 1,
+        "SF": 1,
+        "png": 706
+      },
+      "file_types": {
+        "XML": 265,
+        "DEX": 1,
+        "unknown": 4,
+        "ELF": 9,
+        "JPG": 14,
+        "HTML": 1,
+        "PNG": 706
+      },
+      "type": "APK",
+      "uncompressed_size": 8516790
+    },
+    "permhash": "416b9b56c70fe0c71524067ac978f0ad7d9fc512f4338c66fb8ea68131a90b22",
+    "last_modification_date": "2025-07-29 06:08:39 UTC",
+    "last_submission_date": "2023-02-15 09:57:24 UTC",
+    "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+    "type_description": "Android",
+    "meaningful_name": "88f969ab63f13660719275e951bd52d85cbbccfc0786c7ae9057547960967be8_adv",
+    "magika": "APK",
+    "vhash": "424d598269ee8fe16c6cc7f33fad2cb9",
+    "type_tag": "android",
+    "sha256": "57569895f1de88b3dbc17f86fbbed5a4d62c98591baf39dbe42ec281eb57acc2",
+    "crowdsourced_ids_stats": {
+      "high": 0,
+      "medium": 1,
+      "low": 2,
+      "info": 0
+    },
+    "size": 8523990,
+    "popular_threat_classification": {
+      "popular_threat_category": [
+        {
+          "value": "pua",
+          "count": 6
+        },
+        {
+          "value": "trojan",
+          "count": 5
+        }
+      ],
+      "suggested_threat_label": "pua.hippo/robtes",
+      "popular_threat_name": [
+        {
+          "value": "hippo",
+          "count": 8
+        },
+        {
+          "value": "robtes",
+          "count": 3
+        },
+        {
+          "value": "andr",
+          "count": 2
+        }
+      ]
+    },
+    "first_submission_date_epoch": 1675777744,
+    "last_submission_date_epoch": 1676455044,
+    "last_modification_date_epoch": 1753769319,
+    "last_analysis_date_epoch": 1753761976
+  },
+  "id": "57569895f1de88b3dbc17f86fbbed5a4d62c98591baf39dbe42ec281eb57acc2"
+}

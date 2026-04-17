@@ -1,17 +1,48 @@
+# -*- coding: utf-8 -*-
+"""
+Primary downstream evaluation for Meta-MAMC under multiple label sources:
+  - GT
+  - Kaspersky
+  - AVClass2
+  - ClarAVy
 
+Primary protocol:
+1. Build a joint pool aligned by sha256 between features, clean GT labels, and noisy sources.
+2. Distinguish tool-unlabeled cases:
+   - N/A -> missing_scan
+   - null / benign -> no_malicious_detection
+   - SINGLETON -> singleton
+   - empty / [] / - -> missing
+3. Globally exclude GT families with fewer than 5 samples BEFORE cross-validation.
+4. Run standard 5-fold stratified CV on the retained GT families.
+5. For noisy-label training, only source samples with explicit family labels are used.
+6. Evaluation is always against filtered expert GT labels.
 
+Metrics:
+- ACC, Macro-Precision, Macro-Recall, Macro-F1
+- AMI
+- AVCLASS/Euphony-style Cluster-Precision / Recall / F1
+"""
+
+import os
 import re
-import csv
 import random
-from dataclasses import dataclass
-from typing import Dict, List, Tuple
+import argparse
+from collections import Counter, defaultdict
+from typing import Dict, List
 
 import numpy as np
 import pandas as pd
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import StratifiedKFold
-from sklearn.metrics import accuracy_score, f1_score, recall_score
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    adjusted_mutual_info_score,
+)
 
 import torch
 import torch.nn as nn
@@ -19,21 +50,12 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader, TensorDataset
 
 
-
-# INPUT OUR ANDROTRUTH FEATURE CSV PATH HERE
-FEATURES_CSV = r"Experiments\AndroTruth_feature_3000_matrix_df.csv"
-# INPUT KASPERSKY NOISY LABEL CSV PATH HERE, you can change to other noisy label sources if needed (e.g., avlcass2,claravy etc.) For GT labels experiment, please use AndroTruth_labels.csv
-NOISY_LABELS_CSV = r"Experiments\AndroTruth_kaspersky_datasets.csv"
-# INPUT OUR ANDROTRUTH CLEAN LABEL CSV PATH HERE
-CLEAN_LABELS_CSV = r"Experiments\AndroTruth_labels.csv"
-
 SHA_COL = "sha256"
 FAMILY_COL = "family"
 
 SEED = 42
 DEVICE = "auto"
 N_FOLDS = 5
-
 
 N_WAY = 5
 K_SHOT = 5
@@ -51,9 +73,7 @@ FT_EPOCHS = 15
 FT_LR = 1e-3
 BATCH_SIZE = 256
 
-
-SAVE_PER_FAMILY_CSV = ""
-SAVE_CONFUSION_CSV = ""
+PRIMARY_MIN_GT_FAMILY_SIZE = 5
 
 
 def set_seed(seed: int = 42):
@@ -62,6 +82,7 @@ def set_seed(seed: int = 42):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
 
+
 def pick_device(arg: str = "auto"):
     if arg == "cpu":
         return torch.device("cpu")
@@ -69,58 +90,174 @@ def pick_device(arg: str = "auto"):
         return torch.device("cuda" if torch.cuda.is_available() else "cpu")
     return torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+
 def normalize_family(x: str) -> str:
-    """Fix case/whitespace variants so same family isn't split into multiple classes."""
     if pd.isna(x):
         return ""
     s = str(x).strip()
     s = re.sub(r"\s+", " ", s)
-    s = s.casefold()
-    return s
+    return s.casefold()
 
 
+def keyize(s: str) -> str:
+    s = str(s).lower().strip()
+    return re.sub(r"[^a-z0-9]+", "", s)
 
-def load_feature_matrix_csv(feature_csv: str) -> Tuple[np.ndarray, np.ndarray]:
-    df = pd.read_csv(feature_csv)
+
+def normalize_for_display(s: str) -> str:
+    s = str(s).lower()
+    s = re.sub(r"[^a-z0-9._+-]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def load_synonyms(path):
+    alias2canon_key = {}
+    canon_key2display = {}
+
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            parts = [p.strip() for p in line.split(",") if p.strip()]
+            if not parts:
+                continue
+            canon = parts[0]
+            canon_key = keyize(canon)
+            canon_key2display[canon_key] = canon
+            for p in parts:
+                alias2canon_key[keyize(p)] = canon_key
+    return alias2canon_key, canon_key2display
+
+
+def make_canonizer(alias2canon_key, canon_key2display):
+    def canon_key_func(lbl):
+        if lbl is None or (isinstance(lbl, float) and pd.isna(lbl)):
+            return None
+        k = keyize(lbl)
+        return alias2canon_key.get(k, k)
+
+    def canonize(lbl):
+        if lbl is None or (isinstance(lbl, float) and pd.isna(lbl)):
+            return None
+        ck = canon_key_func(lbl)
+        return canon_key2display.get(ck, normalize_for_display(lbl))
+    return canonize, canon_key_func
+
+
+def normalize_tool_family(lbl):
+    if lbl is None or (isinstance(lbl, float) and pd.isna(lbl)):
+        return None, "missing"
+
+    s = str(lbl).strip()
+    s_lower = s.lower()
+
+    if s == "" or s in {"-", "[]"}:
+        return None, "missing"
+
+    if s_lower == "n/a":
+        return None, "missing_scan"
+
+    if s_lower in {"null", "benign"}:
+        return None, "no_malicious_detection"
+
+    if s_lower == "singleton" or s_lower.startswith("singleton:"):
+        return None, "singleton"
+
+    return s, "labeled"
+
+
+def load_feature_matrix_csv(feature_csv: str):
+    df = pd.read_csv(feature_csv, low_memory=False)
     if SHA_COL not in df.columns:
         raise RuntimeError(f"{feature_csv} must contain column '{SHA_COL}'")
-    sha_list = df[SHA_COL].astype(str).values
+    df[SHA_COL] = df[SHA_COL].astype(str).str.lower()
+
     feat_cols = [c for c in df.columns if c != SHA_COL]
     if not feat_cols:
         raise RuntimeError("No feature columns found (CSV only has sha256?)")
-    X = df[feat_cols].apply(pd.to_numeric, errors="coerce").fillna(0).astype(np.float32).values
-    return sha_list, X
+    df[feat_cols] = df[feat_cols].apply(pd.to_numeric, errors="coerce").fillna(0).astype(np.float32)
+    return df, feat_cols
 
-def load_label_map(labels_csv: str) -> Dict[str, str]:
-    df = pd.read_csv(labels_csv)
+
+def load_clean_labels(clean_csv: str, canon_key_func):
+    df = pd.read_csv(clean_csv, low_memory=False)
     if SHA_COL not in df.columns or FAMILY_COL not in df.columns:
-        raise RuntimeError(f"{labels_csv} must contain columns '{SHA_COL}' and '{FAMILY_COL}'")
+        raise RuntimeError(f"{clean_csv} must contain '{SHA_COL}' and '{FAMILY_COL}'")
     df = df[[SHA_COL, FAMILY_COL]].copy()
-    df[SHA_COL] = df[SHA_COL].astype(str)
-    df[FAMILY_COL] = df[FAMILY_COL].map(normalize_family)
-    return dict(zip(df[SHA_COL].values, df[FAMILY_COL].values))
+    df[SHA_COL] = df[SHA_COL].astype(str).str.lower()
+    df["family_clean_raw"] = df[FAMILY_COL].astype(str)
+    df["family_clean"] = df["family_clean_raw"].map(normalize_family)
+    df["family_clean_ckey"] = df["family_clean"].map(canon_key_func)
+    return df[[SHA_COL, "family_clean", "family_clean_ckey"]]
 
-def align_pool(sha_list: np.ndarray, X: np.ndarray,
-               noisy_map: Dict[str, str], clean_map: Dict[str, str]) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    mask = np.array([(s in noisy_map) and (s in clean_map) for s in sha_list], dtype=bool)
-    if mask.sum() == 0:
-        raise RuntimeError("No samples have BOTH noisy and clean labels after sha256 alignment.")
-    X2 = X[mask]
-    sha2 = sha_list[mask]
-    y_noisy_str = np.array([noisy_map[s] for s in sha2], dtype=object)
-    y_clean_str = np.array([clean_map[s] for s in sha2], dtype=object)
-    return X2, y_noisy_str, y_clean_str
 
+def load_noisy_labels(noisy_csv: str, source_name: str, canon_key_func):
+    df = pd.read_csv(noisy_csv, low_memory=False)
+    if SHA_COL not in df.columns or FAMILY_COL not in df.columns:
+        raise RuntimeError(f"{noisy_csv} must contain '{SHA_COL}' and '{FAMILY_COL}'")
+
+    df = df[[SHA_COL, FAMILY_COL]].copy()
+    df[SHA_COL] = df[SHA_COL].astype(str).str.lower()
+    df.rename(columns={FAMILY_COL: f"{source_name}_raw"}, inplace=True)
+
+    norm_results = df[f"{source_name}_raw"].map(normalize_tool_family)
+    df[f"{source_name}_family"] = norm_results.map(lambda x: normalize_family(x[0]) if x[0] is not None else None)
+    df[f"{source_name}_status"] = norm_results.map(lambda x: x[1])
+    df[f"{source_name}_is_labeled"] = df[f"{source_name}_status"] == "labeled"
+    df[f"{source_name}_ckey"] = df[f"{source_name}_family"].map(canon_key_func)
+
+    return df[[SHA_COL, f"{source_name}_family", f"{source_name}_ckey",
+               f"{source_name}_status", f"{source_name}_is_labeled"]]
+
+
+def build_joint_dataframe(features_csv: str, clean_csv: str, source_csvs: Dict[str, str], canon_key_func):
+    feat_df, feature_cols = load_feature_matrix_csv(features_csv)
+    clean_df = load_clean_labels(clean_csv, canon_key_func)
+    df = feat_df.merge(clean_df, on=SHA_COL, how="inner")
+    if df.empty:
+        raise RuntimeError("No overlap between features and clean labels.")
+
+    for src_name, src_csv in source_csvs.items():
+        noisy_df = load_noisy_labels(src_csv, src_name, canon_key_func)
+        df = df.merge(noisy_df, on=SHA_COL, how="left")
+
+    print(f"[*] Joint dataframe before GT filtering: samples={len(df)}, features={len(feature_cols)}")
+    return df, feature_cols
+
+
+def filter_primary_eval_pool(df: pd.DataFrame, min_count: int = PRIMARY_MIN_GT_FAMILY_SIZE):
+    counts = df["family_clean_ckey"].value_counts(dropna=False)
+    keep_ckeys = set(counts[counts >= min_count].index)
+    removed_ckeys = set(counts[counts < min_count].index)
+
+    df_filtered = df[df["family_clean_ckey"].isin(keep_ckeys)].copy().reset_index(drop=True)
+
+    print(f"[*] Primary eval filter: min GT family size = {min_count}")
+    print(f"[*] Before filter: samples={len(df)}, GT families={df['family_clean_ckey'].nunique()}")
+    print(f"[*] After  filter: samples={len(df_filtered)}, GT families={df_filtered['family_clean_ckey'].nunique()}")
+    print(f"[*] Removed GT families: {len(removed_ckeys)}")
+    return df_filtered, counts
+
+
+def make_stratified_folds(y_clean_ckey, n_splits=5, seed=42):
+    y_clean_ckey = np.asarray(y_clean_ckey)
+    skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=seed)
+    idx = np.arange(len(y_clean_ckey))
+    folds = []
+    for train_idx, test_idx in skf.split(idx, y_clean_ckey):
+        folds.append((np.array(train_idx, dtype=int), np.array(test_idx, dtype=int)))
+    return folds
 
 
 def functional_forward(params: List[torch.Tensor], x: torch.Tensor) -> torch.Tensor:
-
     x = F.linear(x, params[0], params[1])
     x = F.relu(x)
     x = F.linear(x, params[2], params[3])
     x = F.relu(x)
     x = F.linear(x, params[4], params[5])
     return x
+
 
 def inner_update_params(params: List[torch.Tensor], x: torch.Tensor, y: torch.Tensor, lr: float, steps: int) -> List[torch.Tensor]:
     for _ in range(steps):
@@ -129,7 +266,6 @@ def inner_update_params(params: List[torch.Tensor], x: torch.Tensor, y: torch.Te
         grad = torch.autograd.grad(loss, params, create_graph=True)
         params = [p - lr * g for p, g in zip(params, grad)]
     return params
-
 
 
 def application_based_sample(class_to_idx: Dict[int, np.ndarray],
@@ -141,6 +277,7 @@ def application_based_sample(class_to_idx: Dict[int, np.ndarray],
 
     selected_y = y[selected_indices]
     unique_classes = np.unique(selected_y)
+
     if len(unique_classes) < n_way:
         additional = np.setdiff1d(np.unique(y), unique_classes)
         np.random.shuffle(additional)
@@ -174,6 +311,7 @@ def application_based_sample(class_to_idx: Dict[int, np.ndarray],
         return np.array([]), np.array([]), np.array([]), np.array([])
 
     return X[np.array(support_idx)], np.array(support_y), X[np.array(query_idx)], np.array(query_y)
+
 
 def family_based_sample(class_to_idx: Dict[int, np.ndarray],
                         n_way: int, k_shot: int, q_query: int,
@@ -209,6 +347,7 @@ def family_based_sample(class_to_idx: Dict[int, np.ndarray],
 
     return X[np.array(support_idx)], np.array(support_y), X[np.array(query_idx)], np.array(query_y)
 
+
 def sample_task(class_to_idx: Dict[int, np.ndarray],
                 n_way: int, k_shot: int, q_query: int, p: float,
                 X: np.ndarray, y: np.ndarray):
@@ -217,212 +356,315 @@ def sample_task(class_to_idx: Dict[int, np.ndarray],
     return family_based_sample(class_to_idx, n_way, k_shot, q_query, X)
 
 
+def avclass_cluster_metrics(y_true, y_pred):
+    N = len(y_true)
+    if N == 0:
+        return 0.0, 0.0, 0.0
 
-@dataclass
-class PerFamilyMetrics:
-    total_tp: int = 0
-    total_fp: int = 0
-    total_fn: int = 0
-    total_tn: int = 0
-    acc: float = 0.0
-    prec: float = 0.0
-    rec: float = 0.0
-    f1: float = 0.0
+    pred_clusters = defaultdict(list)
+    ref_clusters = defaultdict(list)
 
+    for i in range(N):
+        pred_clusters[y_pred[i]].append(i)
+        ref_clusters[y_true[i]].append(i)
+
+    pred_sets = {k: set(v) for k, v in pred_clusters.items()}
+    ref_sets = {k: set(v) for k, v in ref_clusters.items()}
+
+    prec_sum = 0
+    for cj in pred_sets.values():
+        prec_sum += max(len(cj & rk) for rk in ref_sets.values())
+
+    rec_sum = 0
+    for rk in ref_sets.values():
+        rec_sum += max(len(cj & rk) for cj in pred_sets.values())
+
+    prec = prec_sum / N
+    rec = rec_sum / N
+    f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0.0
+
+    if not (0.0 <= prec <= 1.0 and 0.0 <= rec <= 1.0 and 0.0 <= f1 <= 1.0):
+        raise RuntimeError(
+            f"Cluster metrics out of range: prec={prec}, rec={rec}, f1={f1}. "
+            f"Please check the normalization."
+        )
+    return prec, rec, f1
+
+
+def build_model(input_dim, num_classes, device):
+    return nn.Sequential(
+        nn.Linear(input_dim, 128),
+        nn.ReLU(),
+        nn.Linear(128, 128),
+        nn.ReLU(),
+        nn.Linear(128, num_classes)
+    ).to(device)
+
+
+def eval_fold(df, feature_cols, source_name, le, train_idx, test_idx, seed, device):
+    if source_name == "gt":
+        effective_train_idx = np.array(train_idx, dtype=int)
+    else:
+        labeled_mask = df.iloc[train_idx][f"{source_name}_is_labeled"].values
+        effective_train_idx = np.array(train_idx[labeled_mask], dtype=int)
+
+    if len(effective_train_idx) == 0:
+        raise RuntimeError(f"[{source_name}] No labeled training samples in this fold.")
+
+    effective_test_idx = np.array(test_idx, dtype=int)
+
+    X_train = df.iloc[effective_train_idx][feature_cols].values.astype(np.float32)
+    X_test = df.iloc[effective_test_idx][feature_cols].values.astype(np.float32)
+
+    if source_name == "gt":
+        y_train_str = df.iloc[effective_train_idx]["family_clean"].values
+    else:
+        y_train_str = df.iloc[effective_train_idx][f"{source_name}_family"].values
+    y_test_str = df.iloc[effective_test_idx]["family_clean"].values
+
+    y_train = le.transform(y_train_str)
+    y_test = le.transform(y_test_str)
+
+    train_class_to_idx = {c: np.flatnonzero(y_train == c) for c in np.unique(y_train)}
+
+    set_seed(seed)
+    input_dim = X_train.shape[1]
+    num_classes = len(le.classes_)
+
+    model = build_model(input_dim, num_classes, device)
+    optimizer = torch.optim.Adam(model.parameters(), lr=META_LR)
+
+    prev_loss = float("inf")
+    patience_cnt = 0
+
+    for epoch in range(1, META_EPOCHS + 1):
+        model.train()
+        meta_loss = 0.0
+        valid_tasks = 0
+
+        denom = max(1, N_WAY * (K_SHOT + Q_QUERY))
+        num_tasks = max(1, len(y_train) // denom)
+
+        for _ in range(num_tasks):
+            support_x, support_y, query_x, query_y = sample_task(
+                train_class_to_idx, N_WAY, K_SHOT, Q_QUERY, P_MIX, X_train, y_train
+            )
+            if support_x.size == 0 or query_x.size == 0:
+                continue
+
+            support_x_t = torch.from_numpy(support_x).to(device)
+            support_y_t = torch.from_numpy(support_y).long().to(device)
+            query_x_t = torch.from_numpy(query_x).to(device)
+            query_y_t = torch.from_numpy(query_y).long().to(device)
+
+            base_params = [p.clone().detach().requires_grad_(True) for p in model.parameters()]
+            fast_params = inner_update_params(base_params, support_x_t, support_y_t, INNER_LR, INNER_STEPS)
+
+            query_pred = functional_forward(fast_params, query_x_t)
+            task_loss = F.cross_entropy(query_pred, query_y_t)
+            if torch.isnan(task_loss) or torch.isinf(task_loss):
+                continue
+
+            meta_loss += task_loss
+            valid_tasks += 1
+
+        if valid_tasks > 0:
+            meta_loss = meta_loss / valid_tasks
+        else:
+            meta_loss = torch.tensor(0.0, device=device, requires_grad=True)
+
+        optimizer.zero_grad()
+        meta_loss.backward()
+        optimizer.step()
+
+        if abs(prev_loss - meta_loss.item()) < EPS_STOP:
+            patience_cnt += 1
+            if patience_cnt >= STOP_PATIENCE:
+                break
+        else:
+            patience_cnt = 0
+        prev_loss = meta_loss.item()
+
+    model.train()
+    ft_opt = torch.optim.Adam(model.parameters(), lr=FT_LR)
+    ft_dataset = TensorDataset(
+        torch.from_numpy(X_train.astype(np.float32)),
+        torch.from_numpy(y_train).long()
+    )
+    ft_loader = DataLoader(ft_dataset, batch_size=BATCH_SIZE, shuffle=True)
+
+    for _ in range(FT_EPOCHS):
+        for bx, by in ft_loader:
+            bx, by = bx.to(device), by.to(device)
+            pred = model(bx)
+            loss = F.cross_entropy(pred, by)
+            ft_opt.zero_grad()
+            loss.backward()
+            ft_opt.step()
+
+    model.eval()
+    with torch.no_grad():
+        test_x = torch.from_numpy(X_test.astype(np.float32)).to(device)
+        test_pred = model(test_x).argmax(dim=1).cpu().numpy()
+
+    acc = accuracy_score(y_test, test_pred)
+    mp = precision_score(y_test, test_pred, average="macro", zero_division=0)
+    mr = recall_score(y_test, test_pred, average="macro", zero_division=0)
+    mf1 = f1_score(y_test, test_pred, average="macro", zero_division=0)
+
+    ami = adjusted_mutual_info_score(y_test, test_pred, average_method="arithmetic")
+    c_prec, c_rec, c_f1 = avclass_cluster_metrics(y_test, test_pred)
+
+    return {
+        "n_train": len(effective_train_idx),
+        "n_test": len(effective_test_idx),
+        "acc": acc,
+        "macro_precision": mp,
+        "macro_recall": mr,
+        "macro_f1": mf1,
+        "ami": ami,
+        "cluster_prec": c_prec,
+        "cluster_rec": c_rec,
+        "cluster_f1": c_f1,
+    }
+
+
+def run_source(df, feature_cols, source_name, folds, le, base_seed, out_dir, device):
+    rows = []
+    print(f"\n{'='*20} SOURCE: {source_name.upper()} {'='*20}")
+
+    for fold_id, (train_idx, test_idx) in enumerate(folds, start=1):
+        seed = base_seed + fold_id * 100
+        metrics = eval_fold(df, feature_cols, source_name, le, train_idx, test_idx, seed, device)
+        metrics["source"] = source_name
+        metrics["fold"] = fold_id
+        rows.append(metrics)
+
+        print(
+            f"Fold {fold_id}: "
+            f"train={metrics['n_train']}, test={metrics['n_test']}, "
+            f"ACC={metrics['acc']:.4f}, "
+            f"Macro-Precision={metrics['macro_precision']:.4f}, "
+            f"Macro-Recall={metrics['macro_recall']:.4f}, "
+            f"Macro-F1={metrics['macro_f1']:.4f}, "
+            f"AMI={metrics['ami']:.4f}, "
+            f"C-Prec={metrics['cluster_prec']:.4f}, "
+            f"C-Rec={metrics['cluster_rec']:.4f}, "
+            f"C-F1={metrics['cluster_f1']:.4f}"
+        )
+
+    fold_df = pd.DataFrame(rows)
+    fold_df.to_csv(os.path.join(out_dir, f"fold_metrics_{source_name}.csv"), index=False, encoding="utf-8-sig")
+
+    summary = {
+        "source": source_name,
+        "n_folds": len(fold_df),
+        "mean_train": fold_df["n_train"].mean(),
+        "mean_test": fold_df["n_test"].mean(),
+    }
+
+    metric_cols = [
+        "acc", "macro_precision", "macro_recall", "macro_f1",
+        "ami", "cluster_prec", "cluster_rec", "cluster_f1"
+    ]
+    for m in metric_cols:
+        summary[f"{m}_mean"] = fold_df[m].mean()
+        summary[f"{m}_std"] = fold_df[m].std(ddof=0)
+    return summary
+
+
+def save_status_breakdown(df, source_name, out_dir):
+    status_col = f"{source_name}_status"
+    if status_col not in df.columns:
+        return
+    vc = df[status_col].value_counts(dropna=False).rename_axis("status").reset_index(name="count")
+    vc["ratio"] = vc["count"] / len(df)
+    vc.to_csv(os.path.join(out_dir, f"status_breakdown_{source_name}.csv"), index=False, encoding="utf-8-sig")
+
+
+def save_primary_filter_info(df_before: pd.DataFrame, df_after: pd.DataFrame, out_dir: str):
+    info = pd.DataFrame({
+        "stat": ["samples_before", "samples_after", "gt_families_before", "gt_families_after"],
+        "value": [
+            len(df_before),
+            len(df_after),
+            df_before["family_clean_ckey"].nunique(),
+            df_after["family_clean_ckey"].nunique(),
+        ]
+    })
+    info.to_csv(os.path.join(out_dir, "primary_filter_info.csv"), index=False, encoding="utf-8-sig")
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--features", required=True)
+    parser.add_argument("--clean", required=True)
+    parser.add_argument("--kaspersky", required=True)
+    parser.add_argument("--avclass2", required=True)
+    parser.add_argument("--claravy", required=True)
+    parser.add_argument("--synonyms", default=None)
+    parser.add_argument("--out", default="./out_metamamc_multi_primary")
+    parser.add_argument("--device", default=DEVICE, choices=["auto", "cpu", "cuda"])
+    args = parser.parse_args()
+
+    os.makedirs(args.out, exist_ok=True)
+
     set_seed(SEED)
-    device = pick_device(DEVICE)
+    device = pick_device(args.device)
     print(f"[*] Device: {device}")
 
+    if args.synonyms:
+        alias2canon_key, canon_key2display = load_synonyms(args.synonyms)
+    else:
+        alias2canon_key, canon_key2display = {}, {}
+    _, canon_key_func = make_canonizer(alias2canon_key, canon_key2display)
 
-    sha_list, X = load_feature_matrix_csv(FEATURES_CSV)
-    noisy_map = load_label_map(NOISY_LABELS_CSV)
-    clean_map = load_label_map(CLEAN_LABELS_CSV)
+    source_csvs = {
+        "kaspersky": args.kaspersky,
+        "avclass2": args.avclass2,
+        "claravy": args.claravy,
+    }
 
-    X, y_noisy_str, y_clean_str = align_pool(sha_list, X, noisy_map, clean_map)
-    print(f"[*] Aligned pool: samples={X.shape[0]}, features={X.shape[1]}")
-    print(f"[*] Noisy==Clean agreement (normalized): {np.mean(y_noisy_str == y_clean_str):.2%}")
+    df, feature_cols = build_joint_dataframe(args.features, args.clean, source_csvs, canon_key_func)
+    df_before = df.copy()
+    df, _ = filter_primary_eval_pool(df, min_count=PRIMARY_MIN_GT_FAMILY_SIZE)
+    save_primary_filter_info(df_before, df, args.out)
 
+    for src in source_csvs.keys():
+        save_status_breakdown(df, src, args.out)
+
+    all_labels = set(df["family_clean"].dropna().astype(str).tolist())
+    for src in source_csvs.keys():
+        all_labels.update(df[f"{src}_family"].dropna().astype(str).tolist())
 
     le = LabelEncoder()
-    le.fit(np.concatenate([y_noisy_str, y_clean_str], axis=0))
-    y_noisy = le.transform(y_noisy_str)
-    y_clean = le.transform(y_clean_str)
+    le.fit(sorted(all_labels))
+    print(f"[*] Unified classes after primary filtering: {len(le.classes_)}")
 
-    classes = le.classes_
-    num_classes = len(classes)
-    input_dim = X.shape[1]
-    print(f"[*] Classes: {num_classes}")
+    folds = make_stratified_folds(df["family_clean_ckey"].values, n_splits=N_FOLDS, seed=SEED)
 
+    summaries = []
+    for src in ["gt", "kaspersky", "avclass2", "claravy"]:
+        summary = run_source(df, feature_cols, src, folds, le, SEED, args.out, device)
+        summaries.append(summary)
 
-    skf = StratifiedKFold(n_splits=N_FOLDS, shuffle=True, random_state=SEED)
+    summary_df = pd.DataFrame(summaries)
+    summary_df.to_csv(os.path.join(args.out, "summary_all_sources.csv"), index=False, encoding="utf-8-sig")
 
-    all_acc, all_f1, all_rec = [], [], []
-    all_confusions = []
-    all_per_family: Dict[str, List[PerFamilyMetrics]] = {c: [] for c in classes}
-
-    for fold_id, (train_idx, test_idx) in enumerate(skf.split(np.arange(len(y_clean)), y_clean), start=1):
-        fold_seed = SEED + fold_id * 100
-        set_seed(fold_seed)
-
-        print(f"\n===== Fold {fold_id}/{N_FOLDS} (seed={fold_seed}) =====")
-
-
-        X_train = X[train_idx]
-        y_train = y_noisy[train_idx]
-        X_test = X[test_idx]
-        y_test = y_clean[test_idx]
-
-        train_class_to_idx = {c: np.flatnonzero(y_train == c) for c in np.unique(y_train)}
-
-
-        model = nn.Sequential(
-            nn.Linear(input_dim, 128),
-            nn.ReLU(),
-            nn.Linear(128, 128),
-            nn.ReLU(),
-            nn.Linear(128, num_classes)
-        ).to(device)
-
-        optimizer = torch.optim.Adam(model.parameters(), lr=META_LR)
-
-        prev_loss = float("inf")
-        patience_cnt = 0
-
-        for epoch in range(1, META_EPOCHS + 1):
-            model.train()
-            meta_loss = 0.0
-            valid_tasks = 0
-
-            num_tasks = max(1, len(y_train) // max(1, (N_WAY * (K_SHOT + Q_QUERY))))
-
-            for _ in range(num_tasks):
-                support_x, support_y, query_x, query_y = sample_task(
-                    train_class_to_idx, N_WAY, K_SHOT, Q_QUERY, P_MIX, X_train, y_train
-                )
-                if support_x.size == 0 or query_x.size == 0:
-                    continue
-
-                support_x_t = torch.from_numpy(support_x).to(device)
-                support_y_t = torch.from_numpy(support_y).long().to(device)
-                query_x_t = torch.from_numpy(query_x).to(device)
-                query_y_t = torch.from_numpy(query_y).long().to(device)
-
-                base_params = [p.clone().detach().requires_grad_(True) for p in model.parameters()]
-                fast_params = inner_update_params(base_params, support_x_t, support_y_t, INNER_LR, INNER_STEPS)
-
-                query_pred = functional_forward(fast_params, query_x_t)
-                task_loss = F.cross_entropy(query_pred, query_y_t)
-                if torch.isnan(task_loss) or torch.isinf(task_loss):
-                    continue
-
-                meta_loss += task_loss
-                valid_tasks += 1
-
-            if valid_tasks > 0:
-                meta_loss = meta_loss / valid_tasks
-            else:
-                meta_loss = torch.tensor(0.0, device=device, requires_grad=True)
-
-            optimizer.zero_grad()
-            meta_loss.backward()
-            optimizer.step()
-
-            print(f"[*] Meta Epoch {epoch}/{META_EPOCHS}: Loss {meta_loss.item():.4f}")
-
-            if abs(prev_loss - meta_loss.item()) < EPS_STOP:
-                patience_cnt += 1
-                if patience_cnt >= STOP_PATIENCE:
-                    print(f"[*] Early stop at epoch {epoch}")
-                    break
-            else:
-                patience_cnt = 0
-            prev_loss = meta_loss.item()
-
-
-        model.train()
-        ft_opt = torch.optim.Adam(model.parameters(), lr=FT_LR)
-        ft_dataset = TensorDataset(
-            torch.from_numpy(X_train.astype(np.float32)),
-            torch.from_numpy(y_train).long()
-        )
-        ft_loader = DataLoader(ft_dataset, batch_size=BATCH_SIZE, shuffle=True)
-
-        for ft_epoch in range(1, FT_EPOCHS + 1):
-            ft_loss = 0.0
-            for bx, by in ft_loader:
-                bx, by = bx.to(device), by.to(device)
-                pred = model(bx)
-                loss = F.cross_entropy(pred, by)
-                ft_opt.zero_grad()
-                loss.backward()
-                ft_opt.step()
-                ft_loss += loss.item()
-            print(f"[*] FT Epoch {ft_epoch}/{FT_EPOCHS}: Loss {ft_loss / max(1, len(ft_loader)):.4f}")
-
-
-        model.eval()
-        with torch.no_grad():
-            test_x = torch.from_numpy(X_test.astype(np.float32)).to(device)
-            test_pred = model(test_x).argmax(dim=1).cpu().numpy()
-
-        acc = accuracy_score(y_test, test_pred)
-        f1m = f1_score(y_test, test_pred, average="macro", zero_division=0)
-        recm = recall_score(y_test, test_pred, average="macro", zero_division=0)
-        print(f"[*] Test(clean): Acc {acc:.4f}, Macro-F1 {f1m:.4f}, Macro-Recall {recm:.4f}")
-
-        all_acc.append(acc); all_f1.append(f1m); all_rec.append(recm)
-
-
-        conf = np.zeros((num_classes, num_classes), dtype=int)
-        for t, p in zip(y_test, test_pred):
-            conf[t, p] += 1
-        all_confusions.append(conf)
-
-
-        for c_idx, c_name in enumerate(classes):
-            tp = conf[c_idx, c_idx]
-            fp = conf[:, c_idx].sum() - tp
-            fn = conf[c_idx, :].sum() - tp
-            tn = conf.sum() - tp - fp - fn
-
-            prec = tp / (tp + fp) if tp + fp > 0 else 0.0
-            rec = tp / (tp + fn) if tp + fn > 0 else 0.0
-            f1c = 2 * prec * rec / (prec + rec) if prec + rec > 0 else 0.0
-            accc = (tp + tn) / (tp + tn + fp + fn) if (tp + tn + fp + fn) > 0 else 0.0
-
-            all_per_family[c_name].append(PerFamilyMetrics(
-                total_tp=tp, total_fp=fp, total_fn=fn, total_tn=tn,
-                acc=accc, prec=prec, rec=rec, f1=f1c
-            ))
-
-
-    print("\n===== 5-Fold CV Summary (train=noisy, test=clean) =====")
-    print(f"Acc mean±std: {np.mean(all_acc):.4f} ± {np.std(all_acc):.4f}")
-    print(f"Macro-F1 mean±std: {np.mean(all_f1):.4f} ± {np.std(all_f1):.4f}")
-    print(f"Macro-Recall mean±std: {np.mean(all_rec):.4f} ± {np.std(all_rec):.4f}")
-
-    if SAVE_PER_FAMILY_CSV:
-        with open(SAVE_PER_FAMILY_CSV, "w", newline="", encoding="utf-8") as f:
-            w = csv.writer(f)
-            w.writerow(["Family", "Avg_Acc", "Avg_Prec", "Avg_Rec", "Avg_F1"])
-            for fam, ms in sorted(all_per_family.items(), key=lambda x: len(x[1]), reverse=True):
-                w.writerow([
-                    fam,
-                    f"{np.mean([m.acc for m in ms]):.4f}",
-                    f"{np.mean([m.prec for m in ms]):.4f}",
-                    f"{np.mean([m.rec for m in ms]):.4f}",
-                    f"{np.mean([m.f1 for m in ms]):.4f}",
-                ])
-        print(f"[*] Saved per-family metrics: {SAVE_PER_FAMILY_CSV}")
-
-    if SAVE_CONFUSION_CSV:
-        avg_conf = np.mean(all_confusions, axis=0)
-        df_conf = pd.DataFrame(avg_conf, index=classes, columns=classes)
-        df_conf.to_csv(SAVE_CONFUSION_CSV)
-        print(f"[*] Saved confusion matrix: {SAVE_CONFUSION_CSV}")
+    show_cols = [
+        "source",
+        "acc_mean", "acc_std",
+        "macro_precision_mean", "macro_precision_std",
+        "macro_recall_mean", "macro_recall_std",
+        "macro_f1_mean", "macro_f1_std",
+        "ami_mean", "ami_std",
+        "cluster_prec_mean", "cluster_prec_std",
+        "cluster_rec_mean", "cluster_rec_std",
+        "cluster_f1_mean", "cluster_f1_std",
+    ]
+    print("\n===== FINAL SUMMARY =====")
+    print(summary_df[show_cols].to_string(index=False))
+    print(f"\n[OK] Results saved to: {args.out}")
 
 
 if __name__ == "__main__":

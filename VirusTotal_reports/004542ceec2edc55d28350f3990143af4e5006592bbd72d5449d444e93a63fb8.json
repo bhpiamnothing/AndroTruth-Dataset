@@ -1,0 +1,856 @@
+{
+  "type": "file",
+  "attributes": {
+    "reputation": 0,
+    "last_analysis_stats": {
+      "malicious": 31,
+      "suspicious": 0,
+      "undetected": 35,
+      "harmless": 0,
+      "timeout": 0,
+      "confirmed-timeout": 0,
+      "failure": 1,
+      "type-unsupported": 8
+    },
+    "popular_threat_classification": {
+      "popular_threat_category": [
+        {
+          "count": 16,
+          "value": "banker"
+        },
+        {
+          "count": 15,
+          "value": "trojan"
+        }
+      ],
+      "popular_threat_name": [
+        {
+          "count": 7,
+          "value": "ghimob"
+        },
+        {
+          "count": 2,
+          "value": "andr"
+        },
+        {
+          "count": 2,
+          "value": "fgud"
+        }
+      ],
+      "suggested_threat_label": "banker.ghimob/andr"
+    },
+    "total_votes": {
+      "harmless": 0,
+      "malicious": 0
+    },
+    "type_description": "Android",
+    "type_tags": [
+      "executable",
+      "mobile",
+      "android",
+      "apk"
+    ],
+    "magika": "APK",
+    "tlsh": "T1BD25CF41E7C8782FC9B7813B4BB68B6B51564C8A8B06D3134561B26C9DFFAC04E92FC5",
+    "unique_sources": 6,
+    "size": 1034597,
+    "magic": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+    "names": [
+      "004542CEEC2EDC55D28350F3990143AF4E5006592BBD72D5449D444E93A63FB8.apk",
+      "004542ceec2edc55d28350f3990143af4e5006592bbd72d5449d444e93a63fb8.apk",
+      "download (4).apk"
+    ],
+    "meaningful_name": "004542CEEC2EDC55D28350F3990143AF4E5006592BBD72D5449D444E93A63FB8.apk",
+    "times_submitted": 8,
+    "permhash": "10ddb083351b7727aadac92cb2de3cbd7c1e6ecca019e9f6c41e243921218545",
+    "androguard": {
+      "VTAndroidInfo": 2.0,
+      "AndroidApplicationError": false,
+      "MinSdkVersion": "24",
+      "AndroguardVersion": "4.1.2",
+      "Activities": [
+        "com.intelsyss.plugins.m1x"
+      ],
+      "certificate": {
+        "Subject": {
+          "DN": "C:US, CN:Android Debug, O:Android",
+          "C": "US",
+          "CN": "Android Debug",
+          "O": "Android"
+        },
+        "validto": "2050-01-23 09:50:17",
+        "serialnumber": "1",
+        "thumbprint": "61d71c30af20a5d08139ab3588a7ab39676283a0",
+        "validfrom": "2020-01-31 09:50:17",
+        "Issuer": {
+          "DN": "C:US, CN:Android Debug, O:Android",
+          "C": "US",
+          "CN": "Android Debug",
+          "O": "Android"
+        }
+      },
+      "AndroidApplication": 1,
+      "RiskIndicator": {
+        "APK": {
+          "DEX": 1
+        },
+        "PERM": {
+          "INTERNET": 1,
+          "INSTANT": 2,
+          "NORMAL": 5,
+          "PRIVACY": 2
+        }
+      },
+      "Services": [
+        "com.intelsyss.plugins.a2y"
+      ],
+      "AndroidVersionCode": "10",
+      "Package": "com.intelsyss.plugins",
+      "AndroidVersionName": "1.7",
+      "TargetSdkVersion": "27",
+      "AndroidApplicationInfo": "APK",
+      "Receivers": [
+        "com.intelsyss.plugins.b0z"
+      ],
+      "main_activity": "com.intelsyss.plugins.m1x",
+      "intent_filters": {
+        "Services": {
+          "com.intelsyss.plugins.a2y": {
+            "action": [
+              "android.accessibilityservice.AccessibilityService"
+            ]
+          }
+        },
+        "Activities": {
+          "com.intelsyss.plugins.m1x": {
+            "action": [
+              "android.intent.action.MAIN"
+            ],
+            "category": [
+              "android.intent.category.LAUNCHER"
+            ]
+          }
+        },
+        "Receivers": {
+          "com.intelsyss.plugins.b0z": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          }
+        }
+      },
+      "permission_details": {
+        "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS": {
+          "permission_type": "normal",
+          "short_description": "ask to ignore battery optimizations",
+          "full_description": "Allows an app to ask for permission to ignore battery optimizations for that app."
+        },
+        "android.permission.DISABLE_KEYGUARD": {
+          "permission_type": "normal",
+          "short_description": "disable your screen lock",
+          "full_description": "Allows the app to disable the\n      keylock and any associated password security.  For example, the phone\n      disables the keylock when receiving an incoming phone call, then\n      re-enables the keylock when the call is finished."
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+          "permission_type": "normal",
+          "short_description": "run at startup",
+          "full_description": "Allows the app to\n        have itself started as soon as the system has finished booting.\n        This can make it take longer to start the phone and allow the\n        app to slow down the overall phone by always running."
+        },
+        "android.permission.READ_PHONE_STATE": {
+          "permission_type": "dangerous",
+          "short_description": "read phone status and identity",
+          "full_description": "Allows the app to access the phone\n      features of the device.  This permission allows the app to determine the\n      phone number and device IDs, whether a call is active, and the remote number\n      connected by a call."
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+          "permission_type": "normal|instant",
+          "short_description": "view network connections",
+          "full_description": "Allows the app to view\n      information about network connections such as which networks exist and are\n      connected."
+        },
+        "android.permission.WAKE_LOCK": {
+          "permission_type": "normal|instant",
+          "short_description": "prevent phone from sleeping",
+          "full_description": "Allows the app to prevent the phone from going to sleep."
+        },
+        "android.permission.INTERNET": {
+          "permission_type": "normal|instant",
+          "short_description": "have full network access",
+          "full_description": "Allows the app to create\n     network sockets and use custom network protocols. The browser and other\n     applications provide means to send data to the internet, so this\n     permission is not required to send data to the internet."
+        },
+        "android.permission.GET_ACCOUNTS": {
+          "permission_type": "dangerous",
+          "short_description": "find accounts on the device",
+          "full_description": "Allows the app to get\n      the list of accounts known by the phone.  This may include any accounts\n      created by applications you have installed."
+        }
+      }
+    },
+    "bundle_info": {
+      "highest_datetime": "1980-00-00 00:00:00",
+      "lowest_datetime": "1980-00-00 00:00:00",
+      "num_children": 399,
+      "extensions": {
+        "xml": 123,
+        "dex": 1,
+        "MF": 1,
+        "arsc": 1,
+        "kotlin_module": 6,
+        "kotlin_builtins": 7,
+        "gz": 1,
+        "version": 11,
+        "png": 247
+      },
+      "file_types": {
+        "XML": 123,
+        "unknown": 29,
+        "PNG": 247
+      },
+      "type": "APK",
+      "uncompressed_size": 1653054
+    },
+    "last_modification_date": "2025-09-01 08:53:16 UTC",
+    "sha1": "82977835ccf5c0af9cf62a1a0271f229e5683003",
+    "type_extension": "apk",
+    "trid": [
+      {
+        "file_type": "Android Package",
+        "probability": 49.0
+      },
+      {
+        "file_type": "Java Archive",
+        "probability": 24.5
+      },
+      {
+        "file_type": "Sweet Home 3D Design (generic)",
+        "probability": 19.0
+      },
+      {
+        "file_type": "ZIP compressed archive",
+        "probability": 7.2
+      }
+    ],
+    "vhash": "8b409a554840c7f0021f46626c2498f5",
+    "last_analysis_date": "2025-05-30 02:32:58 UTC",
+    "tags": [
+      "apk",
+      "android"
+    ],
+    "filecondis": {
+      "dhash": "0000001c1e0d1410",
+      "raw_md5": "3a747670c8e7ab5067cd0ac05b748d72"
+    },
+    "sha256": "004542ceec2edc55d28350f3990143af4e5006592bbd72d5449d444e93a63fb8",
+    "last_analysis_results": {
+      "Bkav": {
+        "method": "blacklist",
+        "engine_name": "Bkav",
+        "engine_version": "2.0.0.1",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Lionic": {
+        "method": "blacklist",
+        "engine_name": "Lionic",
+        "engine_version": "8.16",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Trojan.AndroidOS.Ghimob.C!c"
+      },
+      "MicroWorld-eScan": {
+        "method": "blacklist",
+        "engine_name": "MicroWorld-eScan",
+        "engine_version": "14.0.409.0",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "ClamAV": {
+        "method": "blacklist",
+        "engine_name": "ClamAV",
+        "engine_version": "1.4.2.0",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "CTX": {
+        "method": "blacklist",
+        "engine_name": "CTX",
+        "engine_version": "2024.8.29.1",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "apk.trojan.banker"
+      },
+      "CAT-QuickHeal": {
+        "method": "blacklist",
+        "engine_name": "CAT-QuickHeal",
+        "engine_version": "22.00",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Android.Agent.GEN44184"
+      },
+      "Skyhigh": {
+        "method": "blacklist",
+        "engine_name": "Skyhigh",
+        "engine_version": "v2021.2.0+4045",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Android/Banker.g"
+      },
+      "ALYac": {
+        "method": "blacklist",
+        "engine_name": "ALYac",
+        "engine_version": "2.0.0.10",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Zillya": {
+        "method": "blacklist",
+        "engine_name": "Zillya",
+        "engine_version": "2.0.0.5370",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Trojan.Banker.Android.31715"
+      },
+      "Sangfor": {
+        "method": "blacklist",
+        "engine_name": "Sangfor",
+        "engine_version": "2.22.3.0",
+        "engine_update": "20250526",
+        "category": "undetected",
+        "result": null
+      },
+      "Trustlook": {
+        "method": "blacklist",
+        "engine_name": "Trustlook",
+        "engine_version": "1.0",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Android.Malware.Trojan"
+      },
+      "Alibaba": {
+        "method": "blacklist",
+        "engine_name": "Alibaba",
+        "engine_version": "0.3.0.5",
+        "engine_update": "20190527",
+        "category": "malicious",
+        "result": "TrojanBanker:Android/Ghimob.ffead267"
+      },
+      "K7GW": {
+        "method": "blacklist",
+        "engine_name": "K7GW",
+        "engine_version": "12.239.55893",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "K7AntiVirus": {
+        "method": "blacklist",
+        "engine_name": "K7AntiVirus",
+        "engine_version": "12.239.55890",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Arcabit": {
+        "method": "blacklist",
+        "engine_name": "Arcabit",
+        "engine_version": "2022.0.0.18",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Baidu": {
+        "method": "blacklist",
+        "engine_name": "Baidu",
+        "engine_version": "1.0.0.2",
+        "engine_update": "20190318",
+        "category": "undetected",
+        "result": null
+      },
+      "SymantecMobileInsight": {
+        "method": "blacklist",
+        "engine_name": "SymantecMobileInsight",
+        "engine_version": "2.0",
+        "engine_update": "20250124",
+        "category": "malicious",
+        "result": "Trojan:Ghimob"
+      },
+      "Symantec": {
+        "method": "blacklist",
+        "engine_name": "Symantec",
+        "engine_version": "1.22.0.0",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Trojan.Gen.MBT"
+      },
+      "ESET-NOD32": {
+        "method": "blacklist",
+        "engine_name": "ESET-NOD32",
+        "engine_version": "31280",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "a variant of Android/Spy.Banker.ARD"
+      },
+      "TrendMicro-HouseCall": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro-HouseCall",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Avast": {
+        "method": "blacklist",
+        "engine_name": "Avast",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Cynet": {
+        "method": "blacklist",
+        "engine_name": "Cynet",
+        "engine_version": "4.0.3.4",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Malicious (score: 99)"
+      },
+      "Kaspersky": {
+        "method": "blacklist",
+        "engine_name": "Kaspersky",
+        "engine_version": "22.0.1.28",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "HEUR:Trojan-Banker.AndroidOS.Ghimob.a"
+      },
+      "BitDefender": {
+        "method": "blacklist",
+        "engine_name": "BitDefender",
+        "engine_version": "7.2",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "NANO-Antivirus": {
+        "method": "blacklist",
+        "engine_name": "NANO-Antivirus",
+        "engine_version": "1.0.170.26710",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Trojan.Android.Banker.htdemk"
+      },
+      "SUPERAntiSpyware": {
+        "method": "blacklist",
+        "engine_name": "SUPERAntiSpyware",
+        "engine_version": "5.6.0.1032",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Rising": {
+        "method": "blacklist",
+        "engine_name": "Rising",
+        "engine_version": "25.0.0.28",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Emsisoft": {
+        "method": "blacklist",
+        "engine_name": "Emsisoft",
+        "engine_version": "2024.8.0.61147",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "F-Secure": {
+        "method": "blacklist",
+        "engine_name": "F-Secure",
+        "engine_version": "18.10.1547.307",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Malware.ANDROID/Banker.FGUD.Gen"
+      },
+      "DrWeb": {
+        "method": "blacklist",
+        "engine_name": "DrWeb",
+        "engine_version": "7.0.67.2170",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Android.Banker.396.origin"
+      },
+      "VIPRE": {
+        "method": "blacklist",
+        "engine_name": "VIPRE",
+        "engine_version": "6.0.0.35",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "TrendMicro": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "McAfeeD": {
+        "method": "blacklist",
+        "engine_name": "McAfeeD",
+        "engine_version": "1.2.0.10275",
+        "engine_update": "20250530",
+        "category": "undetected",
+        "result": null
+      },
+      "CMC": {
+        "method": "blacklist",
+        "engine_name": "CMC",
+        "engine_version": "2.4.2022.1",
+        "engine_update": "20250530",
+        "category": "undetected",
+        "result": null
+      },
+      "Sophos": {
+        "method": "blacklist",
+        "engine_name": "Sophos",
+        "engine_version": "3.0.3.0",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Andr/Banker-GZT"
+      },
+      "Ikarus": {
+        "method": "blacklist",
+        "engine_name": "Ikarus",
+        "engine_version": "6.4.16.0",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Trojan-Banker.AndroidOS.Agent"
+      },
+      "GData": {
+        "method": "blacklist",
+        "engine_name": "GData",
+        "engine_version": "GD:27.40506AVA:64.29262",
+        "engine_update": "20250530",
+        "category": "undetected",
+        "result": null
+      },
+      "Jiangmin": {
+        "method": "blacklist",
+        "engine_name": "Jiangmin",
+        "engine_version": "16.0.100",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Webroot": {
+        "method": "blacklist",
+        "engine_name": "Webroot",
+        "engine_version": "1.9.0.8",
+        "engine_update": "20250227",
+        "category": "undetected",
+        "result": null
+      },
+      "Varist": {
+        "method": "blacklist",
+        "engine_name": "Varist",
+        "engine_version": "6.6.1.3",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "AndroidOS/ABRisk.JZSQ-2"
+      },
+      "Avira": {
+        "method": "blacklist",
+        "engine_name": "Avira",
+        "engine_version": "8.3.3.20",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "ANDROID/Banker.FGUD.Gen"
+      },
+      "Antiy-AVL": {
+        "method": "blacklist",
+        "engine_name": "Antiy-AVL",
+        "engine_version": "3.0",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Trojan[APT]/Android.Guildma"
+      },
+      "Kingsoft": {
+        "method": "blacklist",
+        "engine_name": "Kingsoft",
+        "engine_version": "None",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Gridinsoft": {
+        "method": "blacklist",
+        "engine_name": "Gridinsoft",
+        "engine_version": "1.0.217.174",
+        "engine_update": "20250530",
+        "category": "undetected",
+        "result": null
+      },
+      "Xcitium": {
+        "method": "blacklist",
+        "engine_name": "Xcitium",
+        "engine_version": "37764",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Malware@#3je6qilg98w6"
+      },
+      "Microsoft": {
+        "method": "blacklist",
+        "engine_name": "Microsoft",
+        "engine_version": "1.1.25040.1",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Trojan:AndroidOS/Ghimob.A!MTB"
+      },
+      "ViRobot": {
+        "method": "blacklist",
+        "engine_name": "ViRobot",
+        "engine_version": "2014.3.20.0",
+        "engine_update": "20250530",
+        "category": "undetected",
+        "result": null
+      },
+      "ZoneAlarm": {
+        "method": "blacklist",
+        "engine_name": "ZoneAlarm",
+        "engine_version": "6.16-103870983",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Andr/Banker-GZT"
+      },
+      "Avast-Mobile": {
+        "method": "blacklist",
+        "engine_name": "Avast-Mobile",
+        "engine_version": "250529-00",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Android:Evo-gen [Trj]"
+      },
+      "Google": {
+        "method": "blacklist",
+        "engine_name": "Google",
+        "engine_version": "1748568634",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Detected"
+      },
+      "BitDefenderFalx": {
+        "method": "blacklist",
+        "engine_name": "BitDefenderFalx",
+        "engine_version": "2.0.936",
+        "engine_update": "20250416",
+        "category": "malicious",
+        "result": "Android.Trojan.Ghimob.A"
+      },
+      "AhnLab-V3": {
+        "method": "blacklist",
+        "engine_name": "AhnLab-V3",
+        "engine_version": "3.27.2.10550",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Trojan/Android.Banker.1129035"
+      },
+      "Acronis": {
+        "method": "blacklist",
+        "engine_name": "Acronis",
+        "engine_version": "1.2.0.121",
+        "engine_update": "20240328",
+        "category": "undetected",
+        "result": null
+      },
+      "VBA32": {
+        "method": "blacklist",
+        "engine_name": "VBA32",
+        "engine_version": "5.3.2",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "TACHYON": {
+        "method": "blacklist",
+        "engine_name": "TACHYON",
+        "engine_version": "2025-05-30.01",
+        "engine_update": "20250530",
+        "category": "undetected",
+        "result": null
+      },
+      "Zoner": {
+        "method": "blacklist",
+        "engine_name": "Zoner",
+        "engine_version": "2.2.2.0",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Tencent": {
+        "method": "blacklist",
+        "engine_name": "Tencent",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Android.Trojan-Banker.Ghimob.Kzfl"
+      },
+      "Yandex": {
+        "method": "blacklist",
+        "engine_name": "Yandex",
+        "engine_version": "5.5.2.24",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "TrellixENS": {
+        "method": "blacklist",
+        "engine_name": "TrellixENS",
+        "engine_version": "6.0.6.653",
+        "engine_update": "20250529",
+        "category": "malicious",
+        "result": "Artemis!321432B9429D"
+      },
+      "huorong": {
+        "method": "blacklist",
+        "engine_name": "huorong",
+        "engine_version": "dfcb2cd:dfcb2cd:1cdd6e8:1cdd6e8",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "MaxSecure": {
+        "method": "blacklist",
+        "engine_name": "MaxSecure",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Fortinet": {
+        "method": "blacklist",
+        "engine_name": "Fortinet",
+        "engine_version": "7.0.30.0",
+        "engine_update": "20250530",
+        "category": "malicious",
+        "result": "Android/Banker.ARD!tr.spy"
+      },
+      "AVG": {
+        "method": "blacklist",
+        "engine_name": "AVG",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "Panda": {
+        "method": "blacklist",
+        "engine_name": "Panda",
+        "engine_version": "4.6.4.2",
+        "engine_update": "20250529",
+        "category": "undetected",
+        "result": null
+      },
+      "CrowdStrike": {
+        "method": "blacklist",
+        "engine_name": "CrowdStrike",
+        "engine_version": "1.0",
+        "engine_update": "20231026",
+        "category": "undetected",
+        "result": null
+      },
+      "alibabacloud": {
+        "method": "blacklist",
+        "engine_name": "alibabacloud",
+        "engine_version": "2.2.0",
+        "engine_update": "20250321",
+        "category": "malicious",
+        "result": "Trojan[stealer]:Android/Banker.ARD"
+      },
+      "VirIT": {
+        "method": "blacklist",
+        "engine_name": "VirIT",
+        "engine_version": null,
+        "engine_update": "20250529",
+        "category": "failure",
+        "result": null
+      },
+      "Elastic": {
+        "method": "blacklist",
+        "engine_name": "Elastic",
+        "engine_version": "4.0.208",
+        "engine_update": "20250528",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "DeepInstinct": {
+        "method": "blacklist",
+        "engine_name": "DeepInstinct",
+        "engine_version": "5.0.0.8",
+        "engine_update": "20250529",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "APEX": {
+        "method": "blacklist",
+        "engine_name": "APEX",
+        "engine_version": "6.659",
+        "engine_update": "20250528",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Paloalto": {
+        "method": "blacklist",
+        "engine_name": "Paloalto",
+        "engine_version": "0.9.0.1003",
+        "engine_update": "20250530",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Trapmine": {
+        "method": "blacklist",
+        "engine_name": "Trapmine",
+        "engine_version": "4.0.4.0",
+        "engine_update": "20250515",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Cylance": {
+        "method": "blacklist",
+        "engine_name": "Cylance",
+        "engine_version": "3.0.0.0",
+        "engine_update": "20250529",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "SentinelOne": {
+        "method": "blacklist",
+        "engine_name": "SentinelOne",
+        "engine_version": "25.1.1.1",
+        "engine_update": "20250114",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "tehtris": {
+        "method": "blacklist",
+        "engine_name": "tehtris",
+        "engine_version": "v0.1.4",
+        "engine_update": "20250530",
+        "category": "type-unsupported",
+        "result": null
+      }
+    },
+    "last_submission_date": "2025-09-01 08:53:15 UTC",
+    "ssdeep": "24576:kyqL6y3L3DB270/ByBcXzaR6i0AugiAMI0TP:kyO3rDBsuBMcX+Rt0tgiAk",
+    "first_submission_date": "2020-08-25 13:33:21 UTC",
+    "type_tag": "android",
+    "md5": "321432b9429ddf4edcf9040cf7acd0d8",
+    "first_submission_date_epoch": 1598362401,
+    "last_submission_date_epoch": 1756716795,
+    "last_modification_date_epoch": 1756716796,
+    "last_analysis_date_epoch": 1748572378
+  },
+  "id": "004542ceec2edc55d28350f3990143af4e5006592bbd72d5449d444e93a63fb8"
+}

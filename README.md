@@ -1,81 +1,459 @@
-# AndroTruth: A Benchmark Android Malware Dataset Derived from Technical Expert Reports
+# AndroTruth: A Reliable Benchmark Android Malware Dataset Derived from Technical Expert Reports
 
 ## Overview
-This repository accompanies the research paper *"AndroTruth: A Benchmark Android Malware Dataset Derived from Technical Expert Reports"*. We present **AndroTruth**, an Android malware dataset grounded in real-world security industry expertise.
 
-AndroTruth is constructed by systematically collecting and analyzing professional threat reports published by leading cybersecurity vendors since 2016. From these reports, we extract **expert-validated indicators of compromise (IoCs)**—primarily file hashes and their associated malware family attributions. The final dataset comprises **8,172  malware samples** spanning **187 distinct malware families**.
+This repository accompanies the paper *"AndroTruth: A Reliable Benchmark Android Malware Dataset Derived from Technical Expert Reports"*.
 
-All samples are retrieved from the [Koodous](https://koodous.com/) repository and temporally anchored using key metadata such as first submission dates, ensuring both timeliness and long-term research value.
+**AndroTruth** is an Android malware family benchmark built from **traceable expert technical reports** rather than AV-consensus voting. The current release contains:
 
-### Long-Term Maintenance and Open Collaboration  
-AndroTruth is designed as a **long-term, openly maintained dataset** for the Android security research community. In future work, we plan to continuously expand the dataset with newly reported malware samples and refine family annotations based on evolving threat landscapes. We welcome **feedback and suggestions** from researchers in the field of Android malware detection to help improve the quality, coverage, and usability of the dataset.
+- **8,172 malware samples**
+- **187 malware families**
+- **276 security reports / blog posts**
+- **42 vendors and individual analyst sources**
+- a temporal span from **2016 to 2025**
 
-### Request Access to the Dataset  
-Due to legal and ethical considerations regarding malware distribution, full access to the AndroTruth dataset is granted on a **research-purpose basis**.  
+The dataset is designed for research on **family-label reliability**, **temporal robustness**, and **multimodal Android malware analysis**.
 
-If you would like to access the dataset, please send an email to: **[anonymous.4open.science.mail.com](mailto:anonymous.4open.science.mail.com)** (We will provide the official contact email upon completion of the peer review process).   
+## Why AndroTruth?
 
-To obtain the actual APK sample files, we follow the same requirements as datasets such as Drebin—**all requests will be manually reviewed** to verify the intended use. Please include the following information in your email:  
-- The intended **purpose** of using the dataset  
-- Your background in **Android security or malware research** (if applicable)  
-- A link to your **recent publications**, **Google Scholar profile**, or personal research webpage  
-- If you are a student, please include a link to your **advisor’s academic profile**  
-- Your Gmail address (we will grant you access permissions to the APK files via this account)  
-We appreciate your cooperation and look forward to fostering collaborative, ethical research in the Android security community.
+Most public Android malware datasets rely wholly or partly on VirusTotal engine aggregation for family labels. In contrast, AndroTruth prioritizes **label reliability over sheer scale**:
 
+- family labels are derived from **expert technical reports**;
+- each sample is linked to **auditable provenance metadata**;
+- unresolved conflicts are **excluded rather than force-merged**;
+- the release includes **APK access, static features, dynamic reports, and VirusTotal scan reports**.
 
-## Dataset and Resources
+During dataset construction, we extracted **8,421 unique hashes** after cross-report deduplication. Among them, **245 hashes could not be retrieved from Koodous** and were therefore excluded. An additional **4 samples** were removed because their family assignments remained unresolved after manual reconciliation. The final release contains **8,172 samples from 187 families**.
 
-### 📁 `apks/`
-- Contains a subset of the APK files we have downloaded.
-- **Full APK access**: The complete set of APKs will be made publicly available for research purposes upon paper acceptance.
-
-### 📁 `code_for_download_apks_from_koodous/`
-- Includes custom scripts developed to:
-  - Download APK files from Koodous.
-  - Retrieve dynamic and static analysis reports from Koodous.
-
-### 📁 `code_for_feature_extraction/`
-- Contains code for extracting **static features** from APKs based on the **Drebin** feature extraction method.
-- **Important update**: Recognizing that Android APIs and permissions have evolved significantly since the original Drebin study, we have updated the **permission-to-API mapping** to support API levels up to **level 36**.
-- This enhancement ensures more **complete and accurate** feature extraction from modern malware samples, addressing limitations of older datasets that may miss contemporary malicious behaviors.
-- The updated permission-to-API mappings are based on:  
-  [https://github.com/XFY9326/AndroidInfo](https://github.com/XFY9326/AndroidInfo)
-
-### 📁 `dynamic_analysis_feature/`
-- Contains the full set of dynamic analysis reports we retrieved from Koodous.
-
-### 📁 `AndroTruth_Static_analysis/`
-- Here, we release the complete static features of all samples formatted to the Drebin feature specification. 
-- We performed static feature extraction on the samples using Androguard (version 4.1.3); feature extraction failed for a small subset of samples.
-
-
-### 📁 `Experiments/`
-- Contains code and scripts for reproducing the experiments presented in our paper.
-- We attempted to benchmark several state-of-the-art Android malware classification methods, including **AndMFC** and **Meta-MAMC**.
-- **Note on reproducibility**: The original source code for AndMFC and Meta-MAMC is either incomplete or not fully publicly available. In this work, we have **reimplemented and adapted** their approaches based on the published papers and available code fragments, making every effort to adhere to the original methodologies.
-- Implementation details, hyperparameters, and evaluation scripts are included to ensure transparency and facilitate future comparisons.
-- **Execution Scripts**:
-  - Real-world label noise scenarios: `AadMFC_Real_world_Label_Noise.py`, `Meta_MAMC_Real_world_Label_Noise.py`
-  - Simulated noise environments: `AadMFC_Random_Noise.py`, `Meta_MAMC_Random_Noise.py`
-- **Run commands**:
-  ```bash
-  python AadMFC_Real_world_Label_Noise.py
-  python Meta_MAMC_Real_world_Label_Noise.py
-  python AadMFC_Random_Noise.py
-  python Meta_MAMC_Random_Noise.py
+## Access to APK files
 
 
 
-### 📄 `AndroTruth.csv`
-- The core metadata file of the dataset.
-- Contains the following fields for each sample:
-  - `File hash` (SHA-256)
-  - `Reported family`
-  - `Source` 
-  - `First Submission date` (to Virustotal)
-  - `Report date` (publication date of the original analysis)
-  - `Report URL` (link to the original vendor report)
-  - `Category` (e.g., banking trojan, ransomware, spyware)
-- Enables full **provenance tracking** and allows researchers to verify and audit each sample's origin and classification.
+After the paper is accepted, we plan to make the APK files available to qualified researchers upon request. To ensure responsible and research-oriented use, access requests will be manually reviewed.
 
+If you would like to request APK access after acceptance, please provide:
+
+- your intended research purpose,
+- your background in Android security / malware research,
+- a link to your homepage, Google Scholar, or recent publications,
+- if you are a student, a link to your advisor's academic profile,
+- your Gmail address for permissioned APK access.
+
+The official long-term contact email will be provided after peer review.
+
+## Repository contents
+
+### `AndroTruth.csv`
+
+Core metadata file for the released samples. It provides per-sample provenance information, including:
+
+- SHA-256 hash
+- malware family
+- source vendor / analyst
+- first submission date (VirusTotal)
+- report date
+- report URL
+- malware category
+
+This file is the main entry point for auditing dataset provenance.
+
+### `apks/`
+
+Contains a subset of downloaded APK files. Full APK access is handled separately because of malware-distribution restrictions.
+
+### `code_for_download_apks_from_koodous/`
+
+Scripts used to:
+
+- download APKs from Koodous,
+- retrieve static and dynamic analysis reports from Koodous.
+
+### `code_for_feature_extraction/`
+
+Code for extracting Drebin-style static features from APKs.
+
+We update the permission-to-API mapping so that feature extraction supports **Android API level 36**, improving coverage for modern Android malware samples.
+
+### `dynamic_analysis_feature/`
+
+Koodous dynamic analysis reports released with the dataset.
+
+### `AndroTruth_Static_analysis/`
+
+Released static features in Drebin-style format.
+
+Static feature extraction was performed with **Androguard 4.1.3**. A small subset of samples could not be fully parsed during feature extraction.
+
+### `malware_families_aliases.json`
+
+Canonical malware-family alias file released with this version.
+
+Format:
+
+```json
+[
+  {
+    "family": "adwind",
+    "aliases": ["AlienSpy", "jRAT", "JBifrost"]
+  },
+  {
+    "family": "anatsa",
+    "aliases": ["TeaBot", "Toddler", "BankTeaBot"]
+  }
+]
+```
+
+This file is useful for:
+
+- label harmonization,
+- family-name normalization across reports,
+- reproducible synonym handling in third-party studies.
+
+### `conflict_table.csv`
+
+Detailed information for the **4 excluded unresolved conflict samples**.
+
+This file records, for each excluded sample:
+
+- hash (SHA-256 or MD5 as available),
+- conflicting label A / source A / URL A,
+- conflicting label B / source B / URL B.
+
+The current file includes the four excluded cases involving:
+
+- **Anubis vs Hydra**
+- **Youzicheng vs Cookiethief**
+- **AmexTroll vs Ermac**
+- **Wroba vs Xloader**
+
+These samples are **not** part of the final 8,172-sample release.
+
+### VirusTotal scan reports
+
+This release also includes the full VirusTotal scan reports for all released samples.
+
+These reports support:
+
+- the detection-count analysis in the paper,
+- the evaluation of AV-derived labels,
+- future research on engine disagreement, confidence, and temporal drift.
+
+### `Experiments/`
+
+Reproducible experiment scripts for the paper.
+
+We evaluate two representative probes:
+
+- **AndMFC**
+- **Meta-MAMC**
+
+Because the original public implementations are incomplete or not directly runnable for our setting, the repository contains our **reimplemented and adapted versions** for reproducible comparison under multiple label sources.
+
+---
+
+## Experiment reproduction
+
+## 1. Environment
+
+Recommended environment:
+
+- Python **3.9+**
+- `numpy`
+- `pandas`
+- `scikit-learn`
+
+Additionally required for **Meta-MAMC**:
+
+- `torch`
+
+Example installation:
+
+```bash
+pip install numpy pandas scikit-learn torch
+```
+
+## 2. Expected input files
+
+Most experiment scripts expect CSV files with the following minimum columns.
+
+### Feature matrix
+
+A CSV with:
+
+- `sha256`
+- one or more numeric feature columns
+
+### Clean ground-truth labels
+
+A CSV with:
+
+- `sha256`
+- `family`
+
+### Noisy label files
+
+Separate CSV files for Kaspersky / AVClass2 / ClarAVy, each with:
+
+- `sha256`
+- `family`
+
+### ClarAVy confidence file
+
+A CSV with:
+
+- `sha256` (or `a256` / `sha-256`)
+- `family`
+- `confidence`
+
+### Metadata file (for temporal / zero-day appendix)
+
+A CSV with:
+
+- `sha256` (or another SHA-like column)
+- `First Submission date`  
+  (or a custom date column passed via `--date_col`)
+
+---
+
+## 3. Important note about the alias file
+
+We release the family alias file as `malware_families_aliases.json` for transparency and for researchers who may want to reuse the alias mapping in their own data curation or label-harmonization pipeline.
+
+**However, this file is not required to reproduce the experiments reported in our paper.** Before running the experiments, we have already applied synonym / alias normalization to the AV-derived label sources used in the paper, including **AVClass2**, **ClarAVy**, and **Kaspersky**. Therefore, the released experimental label files are already harmonized, and the paper's results can be reproduced **without loading any additional synonym / alias file**.
+
+For reproducing the results in this paper, users can simply run the provided scripts with the released label files directly, **without providing `--synonyms`**.
+
+The current experiment scripts still keep an optional `--synonyms` argument for users who want to apply alias normalization to newly collected labels or to custom external datasets. In those scripts, the optional synonym file is expected in a **plain-text line format** such as:
+
+```text
+canonical_family,alias1,alias2,alias3
+```
+
+If your own label files are already canonicalized, you may omit `--synonyms`.
+
+---
+
+## 4. Main-paper experiments
+
+### 4.1 Primary downstream evaluation under real-world label noise
+
+**AndMFC**
+
+```bash
+python AadMFC_Real_world_Label_Noise.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --kaspersky path/to/kaspersky_labels.csv \
+  --avclass2 path/to/avclass2_labels.csv \
+  --claravy path/to/claravy_labels.csv \
+  --out out_andmfc_multi_primary
+```
+
+**Meta-MAMC**
+
+```bash
+python Meta_MAMC_Real_world_Label_Noise.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --kaspersky path/to/kaspersky_labels.csv \
+  --avclass2 path/to/avclass2_labels.csv \
+  --claravy path/to/claravy_labels.csv \
+  --device auto \
+  --out out_metamamc_multi_primary
+```
+
+Outputs include:
+
+- `summary_all_sources.csv`
+- `primary_filter_info.csv`
+- `fold_metrics_<source>.csv`
+- `status_breakdown_<source>.csv`
+
+> Note: the AndMFC primary script filename is currently `AadMFC_Real_world_Label_Noise.py` in the repository and is kept here exactly as released.
+
+---
+
+### 4.2 Matched-pool decomposition
+
+This experiment compares:
+
+- `gt`
+- `real_<source>`
+- `synthetic_uniform`
+- `synthetic_structured`
+
+on the same source-specific matched pool.
+
+**AndMFC**
+
+```bash
+python AndMFC_MatchedPool.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --kaspersky path/to/kaspersky_labels.csv \
+  --avclass2 path/to/avclass2_labels.csv \
+  --claravy path/to/claravy_labels.csv \
+  --repeats 1 \
+  --out out_andmfc_all_sources_matched_decomposition
+```
+
+**Meta-MAMC**
+
+```bash
+python Meta_MAMC_MatchedPool.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --kaspersky path/to/kaspersky_labels.csv \
+  --avclass2 path/to/avclass2_labels.csv \
+  --claravy path/to/claravy_labels.csv \
+  --repeats 1 \
+  --device auto \
+  --out out_metamamc_all_sources_matched_decomposition
+```
+
+Outputs:
+
+- `fold_metrics_all.csv`
+- `summary_matched_pool_all_sources.csv`
+
+---
+
+### 4.3 ClarAVy confidence-threshold experiment
+
+These scripts automatically evaluate the thresholds:
+
+- `0.4`
+- `0.5`
+- `0.6`
+- `0.7`
+
+**AndMFC**
+
+```bash
+python AndMFC_GT_ClarAVy_confidence_batch.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --claravy_conf path/to/claravy_with_confidence.csv \
+  --out out_andmfc_claravy_conf_batch
+```
+
+**Meta-MAMC**
+
+```bash
+python Meta_MAMC_GT_ClarAVy_confidence_batch.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --claravy_conf path/to/claravy_with_confidence.csv \
+  --device auto \
+  --out out_metamamc_claravy_conf_batch
+```
+
+Outputs:
+
+- `summary_gt_claravy_confidence_all_thresholds.csv`
+- per-threshold subdirectories containing:
+  - `summary_gt_claravy_confidence.csv`
+  - `claravy_confidence_pool_info.csv`
+  - `fold_metrics_gt.csv`
+  - `fold_metrics_claravy.csv`
+
+
+
+## 5. Appendix experiments
+
+### 5.1 Matched-sample singleton sensitivity
+
+This appendix experiment keeps AVClass2 / ClarAVy singleton cases as a unified pseudo-label and forces all label sources to use the same train/test sample IDs.
+
+**AndMFC**
+
+```bash
+python AndMFC_matched_singleton.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --kaspersky path/to/kaspersky_labels.csv \
+  --avclass2 path/to/avclass2_labels.csv \
+  --claravy path/to/claravy_labels.csv \
+  --out out_andmfc_matched_singleton
+```
+
+**Meta-MAMC**
+
+```bash
+python Meta_MAMC_matched_singleton.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --kaspersky path/to/kaspersky_labels.csv \
+  --avclass2 path/to/avclass2_labels.csv \
+  --claravy path/to/claravy_labels.csv \
+  --device auto \
+  --out out_metamamc_matched_singleton
+```
+
+Outputs:
+
+- `summary_all_sources.csv`
+- `matched_pool_info.csv`
+- `fold_metrics_<source>.csv`
+- `status_breakdown_<source>.csv`
+
+---
+
+### 5.2 Temporal closed-set and zero-day family analysis
+
+These appendix experiments evaluate **year-based temporal splits**.
+In the commands below, the released scripts still use the argument name `--cutoffs`, but the values represent **split years**.
+
+**AndMFC**
+
+```bash
+python AndMFC_temporal_zeroday.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --metadata path/to/AndroTruth.csv \
+  --date_col "First Submission date" \
+  --cutoffs 2020,2021,2022 \
+  --out out_andmfc_temporal_zeroday
+```
+
+**Meta-MAMC**
+
+```bash
+python Meta_MAMC_temporal_zeroday.py \
+  --features path/to/features.csv \
+  --clean path/to/gt_labels.csv \
+  --metadata path/to/AndroTruth.csv \
+  --date_col "First Submission date" \
+  --cutoffs 2020,2021,2022 \
+  --device auto \
+  --out out_metamamc_temporal_zeroday
+```
+
+Outputs include:
+
+- `temporal_closedset_summary.csv`
+- `zeroday_known_summary.csv`
+- `zeroday_novel_summary.csv`
+
+and per-year / per-setting CSV breakdowns where applicable.
+
+---
+
+## 6. Notes on reproducibility
+
+- All evaluations use the released feature / label files aligned by `sha256`.
+- The scripts globally remove GT families with very small sample counts before cross-validation when required by the protocol.
+- The real-world label-noise experiments distinguish:
+  - explicit family labels,
+  - singleton / unresolved cases,
+  - no-malicious-detection cases,
+  - missing-scan cases.
+- Meta-MAMC can run on CPU, but GPU is recommended for speed.
+
+## Citation
+
+If you use AndroTruth in your research, please cite the corresponding paper once the bibliographic information is finalized.
+
+## Contact
+
+For dataset access, collaboration, or questions about the release, please use the repository contact information described above.

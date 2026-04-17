@@ -1,0 +1,1217 @@
+{
+  "type": "file",
+  "attributes": {
+    "sha1": "6683969c617c5d72dcd1cf32500ed34ecb427ecc",
+    "tags": [
+      "checks-gps",
+      "obfuscated",
+      "android",
+      "reflection",
+      "detect-debug-environment",
+      "apk",
+      "telephony"
+    ],
+    "size": 14149370,
+    "times_submitted": 15,
+    "sha256": "20e8688726e843e9119b33be88ef642cb646f1163dce4109b8b8a2c792b5f9fc",
+    "tlsh": "T172E6228BFB98C51FD9731632C917453372A31E0824929BBA2315F32819B7D425F57BCA",
+    "magic": "Zip archive data, at least v0.0 to extract, compression method=deflate",
+    "crowdsourced_ids_stats": {
+      "high": 0,
+      "info": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "popular_threat_classification": {
+      "popular_threat_name": [
+        {
+          "value": "sharkbot",
+          "count": 8
+        },
+        {
+          "value": "andr",
+          "count": 2
+        }
+      ],
+      "suggested_threat_label": "trojan.sharkbot/andr",
+      "popular_threat_category": [
+        {
+          "value": "trojan",
+          "count": 16
+        },
+        {
+          "value": "downloader",
+          "count": 4
+        },
+        {
+          "value": "banker",
+          "count": 3
+        }
+      ]
+    },
+    "crowdsourced_ids_results": [
+      {
+        "rule_category": "Misc activity",
+        "alert_severity": "low",
+        "rule_msg": "ET INFO Android Device Connectivity Check",
+        "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Android Device Connectivity Check\"; flow:established,to_server; urilen:13; http.method; content:\"GET\"; http.uri; content:\"/generate_204\"; fast_pattern; endswith; http.host; content:\"connectivitycheck.gstatic.com\"; http.accept_enc; content:\"gzip\"; depth:4; endswith; http.header_names; content:!\"Cache\"; content:!\"Referer\"; classtype:misc-activity; sid:2036220; rev:4; metadata:affected_product Android, attack_target Mobile_Client, created_at 2018_09_14, deployment Perimeter, deployment Internal, former_category INFO, performance_impact Low, signature_severity Informational, tag Connectivity_Check, updated_at 2020_09_16;)",
+        "alert_context": [
+          {
+            "url": "http://connectivitycheck.gstatic.com/generate_204",
+            "hostname": "connectivitycheck.gstatic.com",
+            "dest_port": 80,
+            "dest_ip": "142.251.143.99"
+          }
+        ],
+        "rule_url": "https://rules.emergingthreats.net/",
+        "rule_source": "Proofpoint Emerging Threats Open",
+        "rule_id": "1:2036220"
+      }
+    ],
+    "type_extension": "apk",
+    "type_tags": [
+      "executable",
+      "mobile",
+      "android",
+      "apk"
+    ],
+    "first_submission_date": "2022-03-04 05:18:10 UTC",
+    "names": [
+      "20E8688726E843E9119B33BE88EF642CB646F1163DCE4109B8B8A2C792B5F9FC.apk",
+      "atom_clean_booster.apk",
+      "example.apk",
+      "com.abbondioendrizzi.tools.supercleaner-9-apkplz.net.apk",
+      "Atom_Clean-Booster,_Antivirus_base.apk"
+    ],
+    "ssdeep": "393216:lYbH5macX7X52NWdXJq2TNhTfwa5pMrfum7j:lYbZqgY56eqj",
+    "type_tag": "android",
+    "meaningful_name": "20E8688726E843E9119B33BE88EF642CB646F1163DCE4109B8B8A2C792B5F9FC.apk",
+    "magika": "APK",
+    "trid": [
+      {
+        "file_type": "Android Package",
+        "probability": 36.9
+      },
+      {
+        "file_type": "VYM Mind Map",
+        "probability": 17.1
+      },
+      {
+        "file_type": "Pocket Code/Catroid Catrobat Project",
+        "probability": 15.0
+      },
+      {
+        "file_type": "Sweet Home 3D Design (generic)",
+        "probability": 14.3
+      },
+      {
+        "file_type": "Mozilla Firefox browser extension",
+        "probability": 10.9
+      }
+    ],
+    "last_analysis_results": {
+      "Bkav": {
+        "method": "blacklist",
+        "engine_name": "Bkav",
+        "engine_version": "2.0.0.1",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Lionic": {
+        "method": "blacklist",
+        "engine_name": "Lionic",
+        "engine_version": "8.16",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan.AndroidOS.SharkBot.C!c"
+      },
+      "MicroWorld-eScan": {
+        "method": "blacklist",
+        "engine_name": "MicroWorld-eScan",
+        "engine_version": "14.0.409.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan.GenericKD.50099056"
+      },
+      "ClamAV": {
+        "method": "blacklist",
+        "engine_name": "ClamAV",
+        "engine_version": "1.4.3.0",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "CTX": {
+        "method": "blacklist",
+        "engine_name": "CTX",
+        "engine_version": "2024.8.29.1",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "apk.trojan.generic"
+      },
+      "CAT-QuickHeal": {
+        "method": "blacklist",
+        "engine_name": "CAT-QuickHeal",
+        "engine_version": "22.00",
+        "engine_update": "20251008",
+        "category": "malicious",
+        "result": "Android.Sharkbotdropper.A"
+      },
+      "ALYac": {
+        "method": "blacklist",
+        "engine_name": "ALYac",
+        "engine_version": "2.0.0.10",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Malwarebytes": {
+        "method": "blacklist",
+        "engine_name": "Malwarebytes",
+        "engine_version": "3.1.0.168",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Zillya": {
+        "method": "blacklist",
+        "engine_name": "Zillya",
+        "engine_version": "2.0.0.5462",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Sangfor": {
+        "method": "blacklist",
+        "engine_name": "Sangfor",
+        "engine_version": "2.22.3.0",
+        "engine_update": "20251006",
+        "category": "undetected",
+        "result": null
+      },
+      "K7AntiVirus": {
+        "method": "blacklist",
+        "engine_name": "K7AntiVirus",
+        "engine_version": "14.12.57281",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Alibaba": {
+        "method": "blacklist",
+        "engine_name": "Alibaba",
+        "engine_version": "0.3.0.5",
+        "engine_update": "20190527",
+        "category": "malicious",
+        "result": "TrojanSpy:Android/Sharkbot.b9bd688a"
+      },
+      "K7GW": {
+        "method": "blacklist",
+        "engine_name": "K7GW",
+        "engine_version": "14.12.57282",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan ( 0001140e1 )"
+      },
+      "Trustlook": {
+        "method": "blacklist",
+        "engine_name": "Trustlook",
+        "engine_version": "1.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Android.Malware.Trojan"
+      },
+      "Arcabit": {
+        "method": "blacklist",
+        "engine_name": "Arcabit",
+        "engine_version": "2025.0.0.23",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan.Generic.D2FC7370"
+      },
+      "Baidu": {
+        "method": "blacklist",
+        "engine_name": "Baidu",
+        "engine_version": "1.0.0.2",
+        "engine_update": "20190318",
+        "category": "undetected",
+        "result": null
+      },
+      "VirIT": {
+        "method": "blacklist",
+        "engine_name": "VirIT",
+        "engine_version": "9.5.1059",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "SymantecMobileInsight": {
+        "method": "blacklist",
+        "engine_name": "SymantecMobileInsight",
+        "engine_version": "2.0",
+        "engine_update": "20250124",
+        "category": "malicious",
+        "result": "AppRisk:Generisk"
+      },
+      "Symantec": {
+        "method": "blacklist",
+        "engine_name": "Symantec",
+        "engine_version": "1.22.0.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan.Gen.2"
+      },
+      "ESET-NOD32": {
+        "method": "blacklist",
+        "engine_name": "ESET-NOD32",
+        "engine_version": "31997",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "a variant of Android/TrojanDownloader.Agent.AAE"
+      },
+      "TrendMicro-HouseCall": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro-HouseCall",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Avast": {
+        "method": "blacklist",
+        "engine_name": "Avast",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Android:Agent-SMY [Trj]"
+      },
+      "Cynet": {
+        "method": "blacklist",
+        "engine_name": "Cynet",
+        "engine_version": "4.0.3.4",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Malicious (score: 99)"
+      },
+      "Kaspersky": {
+        "method": "blacklist",
+        "engine_name": "Kaspersky",
+        "engine_version": "22.0.1.28",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "HEUR:Trojan-Downloader.AndroidOS.Banker.j"
+      },
+      "BitDefender": {
+        "method": "blacklist",
+        "engine_name": "BitDefender",
+        "engine_version": "7.2",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan.GenericKD.50099056"
+      },
+      "NANO-Antivirus": {
+        "method": "blacklist",
+        "engine_name": "NANO-Antivirus",
+        "engine_version": "1.0.170.26895",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "SUPERAntiSpyware": {
+        "method": "blacklist",
+        "engine_name": "SUPERAntiSpyware",
+        "engine_version": "5.6.0.1032",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Tencent": {
+        "method": "blacklist",
+        "engine_name": "Tencent",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "a.privacy.BankSharkBot"
+      },
+      "Emsisoft": {
+        "method": "blacklist",
+        "engine_name": "Emsisoft",
+        "engine_version": "2024.8.0.61147",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan.GenericKD.50099056 (B)"
+      },
+      "F-Secure": {
+        "method": "blacklist",
+        "engine_name": "F-Secure",
+        "engine_version": "18.10.1547.307",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Malware.ANDROID/Sharkbot.GAN.Gen"
+      },
+      "DrWeb": {
+        "method": "blacklist",
+        "engine_name": "DrWeb",
+        "engine_version": "7.0.72.9030",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Android.DownLoader.1069.origin"
+      },
+      "VIPRE": {
+        "method": "blacklist",
+        "engine_name": "VIPRE",
+        "engine_version": "6.0.0.35",
+        "engine_update": "20251008",
+        "category": "malicious",
+        "result": "Trojan.GenericKD.50099056"
+      },
+      "TrendMicro": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "McAfeeD": {
+        "method": "blacklist",
+        "engine_name": "McAfeeD",
+        "engine_version": "1.2.0.10275",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "CMC": {
+        "method": "blacklist",
+        "engine_name": "CMC",
+        "engine_version": "2.4.2022.1",
+        "engine_update": "20251006",
+        "category": "undetected",
+        "result": null
+      },
+      "Sophos": {
+        "method": "blacklist",
+        "engine_name": "Sophos",
+        "engine_version": "3.2.1.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Andr/Banker-HBB"
+      },
+      "Ikarus": {
+        "method": "blacklist",
+        "engine_name": "Ikarus",
+        "engine_version": "6.4.16.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan-Spy.AndroidOS.SharkBot"
+      },
+      "Avast-Mobile": {
+        "method": "blacklist",
+        "engine_name": "Avast-Mobile",
+        "engine_version": "251009-00",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Android:SharkBot-B [Trj]"
+      },
+      "Jiangmin": {
+        "method": "blacklist",
+        "engine_name": "Jiangmin",
+        "engine_version": "16.0.100",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "TrojanDownloader.AndroidOS.rpk"
+      },
+      "Webroot": {
+        "method": "blacklist",
+        "engine_name": "Webroot",
+        "engine_version": "1.9.0.8",
+        "engine_update": "20250227",
+        "category": "undetected",
+        "result": null
+      },
+      "Google": {
+        "method": "blacklist",
+        "engine_name": "Google",
+        "engine_version": "1760043635",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Detected"
+      },
+      "Avira": {
+        "method": "blacklist",
+        "engine_name": "Avira",
+        "engine_version": "8.3.3.22",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "ANDROID/Sharkbot.GAN.Gen"
+      },
+      "Antiy-AVL": {
+        "method": "blacklist",
+        "engine_name": "Antiy-AVL",
+        "engine_version": "3.0",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Kingsoft": {
+        "method": "blacklist",
+        "engine_name": "Kingsoft",
+        "engine_version": "None",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Gridinsoft": {
+        "method": "blacklist",
+        "engine_name": "Gridinsoft",
+        "engine_version": "1.0.227.174",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Xcitium": {
+        "method": "blacklist",
+        "engine_name": "Xcitium",
+        "engine_version": "38101",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Malware@#d8c5jn7xd7f9"
+      },
+      "Microsoft": {
+        "method": "blacklist",
+        "engine_name": "Microsoft",
+        "engine_version": "1.1.25090.3001",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "ViRobot": {
+        "method": "blacklist",
+        "engine_name": "ViRobot",
+        "engine_version": "2014.3.20.0",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "ZoneAlarm": {
+        "method": "blacklist",
+        "engine_name": "ZoneAlarm",
+        "engine_version": "6.20-109671927",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Andr/Banker-HBB"
+      },
+      "GData": {
+        "method": "blacklist",
+        "engine_name": "GData",
+        "engine_version": "GD:27.42090AVA:64.29954",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan.GenericKD.50099056"
+      },
+      "Varist": {
+        "method": "blacklist",
+        "engine_name": "Varist",
+        "engine_version": "6.6.1.3",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "AndroidOS/SpyAgent.G.gen!Eldorado"
+      },
+      "BitDefenderFalx": {
+        "method": "blacklist",
+        "engine_name": "BitDefenderFalx",
+        "engine_version": "2.0.936",
+        "engine_update": "20250416",
+        "category": "malicious",
+        "result": "Android.Trojan.SharkBot.A"
+      },
+      "AhnLab-V3": {
+        "method": "blacklist",
+        "engine_name": "AhnLab-V3",
+        "engine_version": "3.28.0.10568",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Trojan/Android.SharkBot.1122647"
+      },
+      "Acronis": {
+        "method": "blacklist",
+        "engine_name": "Acronis",
+        "engine_version": "1.2.0.121",
+        "engine_update": "20240328",
+        "category": "undetected",
+        "result": null
+      },
+      "VBA32": {
+        "method": "blacklist",
+        "engine_name": "VBA32",
+        "engine_version": "5.4.0",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "TACHYON": {
+        "method": "blacklist",
+        "engine_name": "TACHYON",
+        "engine_version": "2025-10-09.02",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Zoner": {
+        "method": "blacklist",
+        "engine_name": "Zoner",
+        "engine_version": "2.2.2.0",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Rising": {
+        "method": "blacklist",
+        "engine_name": "Rising",
+        "engine_version": "25.0.0.28",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Yandex": {
+        "method": "blacklist",
+        "engine_name": "Yandex",
+        "engine_version": "5.5.2.24",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "huorong": {
+        "method": "blacklist",
+        "engine_name": "huorong",
+        "engine_version": "8a2a22c:8a2a22c:1e2de9d:1e2de9d",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "MaxSecure": {
+        "method": "blacklist",
+        "engine_name": "MaxSecure",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "Fortinet": {
+        "method": "blacklist",
+        "engine_name": "Fortinet",
+        "engine_version": "7.0.30.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Android/Agent.AAK!tr"
+      },
+      "AVG": {
+        "method": "blacklist",
+        "engine_name": "AVG",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20251009",
+        "category": "malicious",
+        "result": "Android:Agent-SMY [Trj]"
+      },
+      "Panda": {
+        "method": "blacklist",
+        "engine_name": "Panda",
+        "engine_version": "4.6.4.2",
+        "engine_update": "20251009",
+        "category": "undetected",
+        "result": null
+      },
+      "CrowdStrike": {
+        "method": "blacklist",
+        "engine_name": "CrowdStrike",
+        "engine_version": "1.0",
+        "engine_update": "20231026",
+        "category": "undetected",
+        "result": null
+      },
+      "Skyhigh": {
+        "method": "blacklist",
+        "engine_name": "Skyhigh",
+        "engine_version": null,
+        "engine_update": "20251009",
+        "category": "timeout",
+        "result": null
+      },
+      "TrellixENS": {
+        "method": "blacklist",
+        "engine_name": "TrellixENS",
+        "engine_version": "6.0.6.653",
+        "engine_update": "20251009",
+        "category": "timeout",
+        "result": null
+      },
+      "Elastic": {
+        "method": "blacklist",
+        "engine_name": "Elastic",
+        "engine_version": "4.0.229",
+        "engine_update": "20250929",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "DeepInstinct": {
+        "method": "blacklist",
+        "engine_name": "DeepInstinct",
+        "engine_version": "5.0.0.8",
+        "engine_update": "20251009",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "APEX": {
+        "method": "blacklist",
+        "engine_name": "APEX",
+        "engine_version": "6.704",
+        "engine_update": "20251007",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Paloalto": {
+        "method": "blacklist",
+        "engine_name": "Paloalto",
+        "engine_version": "0.9.0.1003",
+        "engine_update": "20251009",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Trapmine": {
+        "method": "blacklist",
+        "engine_name": "Trapmine",
+        "engine_version": "4.0.5.0",
+        "engine_update": "20250923",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Cylance": {
+        "method": "blacklist",
+        "engine_name": "Cylance",
+        "engine_version": "3.0.0.0",
+        "engine_update": "20251009",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "SentinelOne": {
+        "method": "blacklist",
+        "engine_name": "SentinelOne",
+        "engine_version": "7.3.0.8",
+        "engine_update": "20250827",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "tehtris": {
+        "method": "blacklist",
+        "engine_name": "tehtris",
+        "engine_version": "v0.1.4",
+        "engine_update": "20251009",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "alibabacloud": {
+        "method": "blacklist",
+        "engine_name": "alibabacloud",
+        "engine_version": "2.2.0",
+        "engine_update": "20250321",
+        "category": "type-unsupported",
+        "result": null
+      }
+    },
+    "picklescan": {
+      "globals": [],
+      "contains_invalid_pickle": false,
+      "issues_count": 0
+    },
+    "md5": "acaed4c74eb9f0c85c603d4077a95697",
+    "total_votes": {
+      "harmless": 0,
+      "malicious": 1
+    },
+    "permhash": "39b204ca5543fb599a1742d8c1413feabff49c55c3f8effd621baf209a8bc5eb",
+    "last_analysis_stats": {
+      "malicious": 34,
+      "suspicious": 0,
+      "undetected": 31,
+      "harmless": 0,
+      "timeout": 2,
+      "confirmed-timeout": 0,
+      "failure": 0,
+      "type-unsupported": 9
+    },
+    "type_description": "Android",
+    "filecondis": {
+      "raw_md5": "493f14a16088bdb1e38f94beb9b101d7",
+      "dhash": "0000001e1e0e1110"
+    },
+    "reputation": -1,
+    "last_submission_date": "2025-10-22 14:36:21 UTC",
+    "vhash": "fa2f3720a95e6362f7810f091e47a42f",
+    "last_analysis_date": "2025-10-09 21:46:14 UTC",
+    "bundle_info": {
+      "highest_datetime": "1981-01-01 01:01:02",
+      "lowest_datetime": "1981-01-01 01:01:02",
+      "num_children": 988,
+      "extensions": {
+        "xml": 666,
+        "bin": 2,
+        "png": 198,
+        "arsc": 1,
+        "kotlin_module": 12,
+        "kotlin_builtins": 7,
+        "gz": 1,
+        "dex": 1,
+        "json": 27,
+        "version": 51,
+        "MainDispatcherFactory": 1,
+        "webp": 1,
+        "txt": 1,
+        "ttf": 6,
+        "properties": 1,
+        "CoroutineExceptionHandler": 1,
+        "mp3": 9
+      },
+      "file_types": {
+        "XML": 666,
+        "unknown": 92,
+        "Java Bytecode": 1,
+        "JSON": 22,
+        "MP3": 9,
+        "PNG": 198
+      },
+      "type": "APK",
+      "uncompressed_size": 17848702
+    },
+    "androguard": {
+      "VTAndroidInfo": 2.0,
+      "Libraries": [
+        "org.apache.http.legacy"
+      ],
+      "AndroidApplicationError": false,
+      "MinSdkVersion": "26",
+      "AndroguardVersion": "4.1.2",
+      "Activities": [
+        "com.abbondioendrizzi.tools.supercleaner.screen.main.MainActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.lock.GestureCreateLockActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.lock.GestureSelfUnlockLockActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.lock.GestureUnlockLockActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.main.MainLockActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.main.SplashLockActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.pwd.CreatePwdLockActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.setting.LockSettingLockActivity",
+        "com.abbondioendrizzi.tools.supercleaner.lock.activities.setting.SecuritySettingActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.ExitActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.antivirus.AntivirusActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.antivirus.ScanAppInstallActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.antivirus.ScanAppUninstallActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.appManager.AppManagerActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.cleanNotification.NotificationCleanActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.cleanNotification.NotificationCleanGuildActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.cleanNotification.NotificationCleanSettingActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.gameboost.GameBoostActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.guildPermission.GuildPermissionActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.junkfile.JunkFileActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.listAppSelect.AppSelectActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.notDissturb.NotDissturbActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.phoneboost.PhoneBoostActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.result.ResultAcitvity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.setting.SettingActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.smartCharger.SmartChargerActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.smartCharger.SmartChargerBoostActivity",
+        "com.abbondioendrizzi.tools.supercleaner.screen.splash.SplashActivity",
+        "com.security.applock.ui.forgotpassword.ForgotPasswordActivity",
+        "com.security.applock.ui.guildPermission.GuildPermissionActivity",
+        "com.security.applock.ui.main.MainActivity",
+        "com.security.applock.ui.password.PasswordActivity",
+        "com.security.applock.ui.splash.SplashActivity",
+        "com.testapp.duplicatefileremover.DuplicateActivity",
+        "com.testapp.duplicatefileremover.MainActivity",
+        "com.testapp.duplicatefileremover.NoFileActiviy",
+        "com.testapp.duplicatefileremover.ResultActivity",
+        "com.testapp.duplicatefileremover.SettingActivity"
+      ],
+      "certificate": {
+        "Subject": {
+          "DN": "C:US, CN:Android, L:Mountain View, O:Google Inc., ST:California, OU:Android",
+          "C": "US",
+          "CN": "Android",
+          "L": "Mountain View",
+          "O": "Google Inc.",
+          "ST": "California",
+          "OU": "Android"
+        },
+        "validto": "2052-01-14 21:54:36",
+        "serialnumber": "941578de90df014adda9e3acb77497d4311dc65",
+        "thumbprint": "cbe8e06e4f7e60c09732f6d9c566720fcd4f7f35",
+        "validfrom": "2022-01-14 21:54:36",
+        "Issuer": {
+          "DN": "C:US, CN:Android, L:Mountain View, O:Google Inc., ST:California, OU:Android",
+          "C": "US",
+          "CN": "Android",
+          "L": "Mountain View",
+          "O": "Google Inc.",
+          "ST": "California",
+          "OU": "Android"
+        }
+      },
+      "AndroidApplication": 1,
+      "RiskIndicator": {
+        "APK": {
+          "DEX": 1
+        },
+        "PERM": {
+          "DEVELOPMENT": 2,
+          "INSTANT": 4,
+          "NORMAL": 20,
+          "APPOP": 4,
+          "PRE23": 2,
+          "DANGEROUS": 2,
+          "PREINSTALLED": 2,
+          "SIGNATURE": 5,
+          "INTERNET": 1,
+          "PRIVILEGED": 2,
+          "PRIVACY": 1
+        }
+      },
+      "Services": [
+        "androidx.room.MultiInstanceInvalidationService",
+        "androidx.work.impl.background.systemalarm.SystemAlarmService",
+        "androidx.work.impl.background.systemjob.SystemJobService",
+        "androidx.work.impl.foreground.SystemForegroundService",
+        "com.abbondioendrizzi.tools.supercleaner.api.NotificationListener",
+        "com.abbondioendrizzi.tools.supercleaner.lock.services.LoadAppListService",
+        "com.abbondioendrizzi.tools.supercleaner.lock.services.LockService",
+        "com.abbondioendrizzi.tools.supercleaner.service.ForceStopAccessibility",
+        "com.abbondioendrizzi.tools.supercleaner.service.ServiceManager",
+        "com.security.applock.service.AntiTheftService",
+        "com.security.applock.service.KeepLiveService",
+        "com.security.applock.service.jobScheduler.JobSchedulerService"
+      ],
+      "AndroidVersionCode": "9",
+      "Package": "com.abbondioendrizzi.tools.supercleaner",
+      "AndroidVersionName": "1.9",
+      "TargetSdkVersion": "30",
+      "AndroidApplicationInfo": "APK",
+      "Providers": [
+        "androidx.core.content.FileProvider",
+        "androidx.lifecycle.ProcessLifecycleOwnerInitializer",
+        "androidx.work.impl.WorkManagerInitializer"
+      ],
+      "Receivers": [
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+        "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+        "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+        "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+        "com.abbondioendrizzi.tools.supercleaner.lock.receiver.BootBroadcastReceiver",
+        "com.abbondioendrizzi.tools.supercleaner.lock.receiver.LockRestarterBroadcastReceiver",
+        "com.abbondioendrizzi.tools.supercleaner.receiver.AlarmReceiver",
+        "com.abbondioendrizzi.tools.supercleaner.receiver.AutoRebootReceiver",
+        "com.abbondioendrizzi.tools.supercleaner.receiver.BatteryStatusReceiver",
+        "com.abbondioendrizzi.tools.supercleaner.receiver.PackageRecerver",
+        "com.security.applock.service.receiver.RestarterBroadcastReceiver",
+        "com.security.applock.service.receiver.WatchmenReceiver",
+        "com.security.applock.service.receiver.WidgetReceiver"
+      ],
+      "StringsInformation": [
+        "http://ns.adobe.com/xap/1.0/\u0000",
+        "http://schemas.android.com/apk/res-auto",
+        "http://schemas.android.com/apk/res/android",
+        "http://statscodicefiscale.xyz/stats/"
+      ],
+      "main_activity": "com.abbondioendrizzi.tools.supercleaner.screen.main.MainActivity",
+      "intent_filters": {
+        "Services": {
+          "com.abbondioendrizzi.tools.supercleaner.service.ForceStopAccessibility": {
+            "action": [
+              "android.accessibilityservice.AccessibilityService"
+            ]
+          },
+          "com.abbondioendrizzi.tools.supercleaner.api.NotificationListener": {
+            "action": [
+              "android.service.notification.NotificationListenerService"
+            ]
+          }
+        },
+        "Activities": {
+          "com.abbondioendrizzi.tools.supercleaner.screen.main.MainActivity": {
+            "action": [
+              "android.intent.action.MAIN"
+            ],
+            "category": [
+              "android.intent.category.LAUNCHER"
+            ]
+          }
+        },
+        "Receivers": {
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy": {
+            "action": [
+              "android.intent.action.BATTERY_OKAY",
+              "android.intent.action.BATTERY_LOW"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver": {
+            "action": [
+              "androidx.work.impl.background.systemalarm.UpdateProxies"
+            ]
+          },
+          "androidx.work.impl.diagnostics.DiagnosticsReceiver": {
+            "action": [
+              "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+            ]
+          },
+          "com.abbondioendrizzi.tools.supercleaner.receiver.AlarmReceiver": {
+            "action": [
+              "com.app.action.alarmmanager"
+            ]
+          },
+          "com.abbondioendrizzi.tools.supercleaner.receiver.AutoRebootReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED",
+              "android.intent.action.SCREEN_ON",
+              "android.net.wifi.WIFI_STATE_CHANGED",
+              "android.net.wifi.STATE_CHANGE",
+              "android.intent.action.USER_PRESENT",
+              "android.net.conn.CONNECTIVITY_CHANGE",
+              "android.intent.action.ACTION_POWER_CONNECTED",
+              "android.intent.action.QUICKBOOT_POWERON"
+            ]
+          },
+          "com.security.applock.service.receiver.WidgetReceiver": {
+            "action": [
+              "android.appwidget.action.APPWIDGET_UPDATE",
+              "android.intent.action.SCREEN_ON",
+              "android.intent.action.USER_PRESENT"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.abbondioendrizzi.tools.supercleaner.lock.receiver.BootBroadcastReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ],
+            "category": [
+              "android.intent.category.LAUNCHER"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy": {
+            "action": [
+              "android.intent.action.DEVICE_STORAGE_LOW",
+              "android.intent.action.DEVICE_STORAGE_OK"
+            ]
+          },
+          "com.security.applock.service.receiver.WatchmenReceiver": {
+            "action": [
+              "android.net.wifi.WIFI_STATE_CHANGED",
+              "android.net.conn.CONNECTIVITY_CHANGE",
+              "android.intent.action.USER_PRESENT",
+              "android.intent.action.MEDIA_MOUNTED",
+              "android.intent.action.ACTION_POWER_CONNECTED",
+              "android.intent.action.ACTION_POWER_DISCONNECTED",
+              "android.intent.action.QUICKBOOT_POWERON",
+              "android.intent.action.SCREEN_ON",
+              "android.intent.action.TIME_SET",
+              "android.intent.action.BOOT_COMPLETED"
+            ],
+            "category": [
+              "android.intent.category.LAUNCHER",
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy": {
+            "action": [
+              "android.net.conn.CONNECTIVITY_CHANGE"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy": {
+            "action": [
+              "android.intent.action.ACTION_POWER_CONNECTED",
+              "android.intent.action.ACTION_POWER_DISCONNECTED"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.RescheduleReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED",
+              "android.intent.action.TIME_SET",
+              "android.intent.action.TIMEZONE_CHANGED"
+            ]
+          }
+        }
+      },
+      "permission_details": {
+        "android.permission.CHANGE_NETWORK_STATE": {
+          "permission_type": "normal",
+          "short_description": "change network connectivity",
+          "full_description": "Allows the app to change the state of network connectivity."
+        },
+        "android.permission.REQUEST_DELETE_PACKAGES": {
+          "permission_type": "normal",
+          "short_description": "request delete packages",
+          "full_description": "Allows an application to request deletion of packages."
+        },
+        "android.permission.QUICKBOOT_POWERON": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_SYNC_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "toggle sync on and off",
+          "full_description": "Allows an app to modify the sync settings for an account.  For example, this can be used to enable sync of the People app with an account."
+        },
+        "android.permission.BLUETOOTH": {
+          "permission_type": "normal",
+          "short_description": "pair with Bluetooth devices",
+          "full_description": "Allows the app to view the\n      configuration of the Bluetooth on the phone, and to make and accept\n      connections with paired devices."
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+          "permission_type": "normal",
+          "short_description": "view Wi-Fi connections",
+          "full_description": "Allows the app to view information\n      about Wi-Fi networking, such as whether Wi-Fi is enabled and name of\n      connected Wi-Fi devices."
+        },
+        "android.permission.INTERNET": {
+          "permission_type": "normal|instant",
+          "short_description": "have full network access",
+          "full_description": "Allows the app to create\n     network sockets and use custom network protocols. The browser and other\n     applications provide means to send data to the internet, so this\n     permission is not required to send data to the internet."
+        },
+        "android.permission.BLUETOOTH_ADMIN": {
+          "permission_type": "normal",
+          "short_description": "access Bluetooth settings",
+          "full_description": "Allows the app to configure\n      the local Bluetooth phone, and to discover and pair with remote devices."
+        },
+        "android.permission.REQUEST_INSTALL_PACKAGES": {
+          "permission_type": "signature|appop",
+          "short_description": "request install packages",
+          "full_description": "Allows an application to request installation of packages."
+        },
+        "android.permission.USE_FINGERPRINT": {
+          "permission_type": "normal",
+          "short_description": "use fingerprint hardware",
+          "full_description": "Allows the app to use fingerprint hardware for authentication"
+        },
+        "android.permission.RECEIVE_USER_PRESENT": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.launcher.permission.INSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "install shortcuts",
+          "full_description": "Allows an application to add\n        Homescreen shortcuts without user intervention."
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+          "permission_type": "normal",
+          "short_description": "run at startup",
+          "full_description": "Allows the app to\n        have itself started as soon as the system has finished booting.\n        This can make it take longer to start the phone and allow the\n        app to slow down the overall phone by always running."
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+          "permission_type": "normal|instant",
+          "short_description": "view network connections",
+          "full_description": "Allows the app to view\n      information about network connections such as which networks exist and are\n      connected."
+        },
+        "android.permission.SET_WALLPAPER": {
+          "permission_type": "normal",
+          "short_description": "set wallpaper",
+          "full_description": "Allows the app to set the system wallpaper."
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+          "permission_type": "dangerous",
+          "short_description": "modify or delete the contents of your shared storage",
+          "full_description": "Allows the app to write the contents of your shared storage."
+        },
+        "android.permission.GET_PACKAGE_SIZE": {
+          "permission_type": "normal",
+          "short_description": "measure app storage space",
+          "full_description": "Allows the app to retrieve its code, data, and cache sizes"
+        },
+        "android.permission.READ_EXTERNAL_STORAGE": {
+          "permission_type": "dangerous",
+          "short_description": "read the contents of your shared storage",
+          "full_description": "Allows the app to read the contents of your shared storage."
+        },
+        "android.permission.QUERY_ALL_PACKAGES": {
+          "permission_type": "normal",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.FOREFGROUND_SERVICE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_SETTINGS": {
+          "permission_type": "signature|preinstalled|appop|pre23",
+          "short_description": "modify system settings",
+          "full_description": "Allows the app to modify the\n        system's settings data. Malicious apps may corrupt your system's\n        configuration."
+        },
+        "android.permission.FOREGROUND_SERVICE": {
+          "permission_type": "normal|instant",
+          "short_description": "run foreground service",
+          "full_description": "Allows the app to make use of foreground services."
+        },
+        "android.permission.VIBRATE": {
+          "permission_type": "normal|instant",
+          "short_description": "control vibration",
+          "full_description": "Allows the app to control the vibrator."
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+          "permission_type": "signature|preinstalled|appop|pre23|development",
+          "short_description": "This app can appear on top of other apps",
+          "full_description": "This app can appear on top of other apps or other parts of the screen. This may interfere with normal app usage and change the way that other apps appear."
+        },
+        "android.permission.ACCESS_NOTIFICATION_POLICY": {
+          "permission_type": "normal",
+          "short_description": "access Do Not Disturb",
+          "full_description": "Allows the app to read and write Do Not Disturb configuration."
+        },
+        "android.permission.KILL_BACKGROUND_PROCESSES": {
+          "permission_type": "normal",
+          "short_description": "close other apps",
+          "full_description": "Allows the app to end\n      background processes of other apps.  This may cause other apps to stop\n      running."
+        },
+        "android.permission.GET_TASKS": {
+          "permission_type": "normal",
+          "short_description": "retrieve running apps",
+          "full_description": "Allows the app to retrieve information\n       about currently and recently running tasks.  This may allow the app to\n       discover information about which applications are used on the device."
+        },
+        "android.permission.CAMERA": {
+          "permission_type": "dangerous|instant",
+          "short_description": "take pictures and videos",
+          "full_description": "This app can take pictures and record videos using the camera at any time."
+        },
+        "android.permission.WAKE_LOCK": {
+          "permission_type": "normal|instant",
+          "short_description": "prevent phone from sleeping",
+          "full_description": "Allows the app to prevent the phone from going to sleep."
+        },
+        "android.permission.CHANGE_WIFI_STATE": {
+          "permission_type": "normal",
+          "short_description": "connect and disconnect from Wi-Fi",
+          "full_description": "Allows the app to connect to and\n      disconnect from Wi-Fi access points and to make changes to device\n      configuration for Wi-Fi networks."
+        },
+        "android.permission.PACKAGE_USAGE_STATS": {
+          "permission_type": "signature|privileged|development|appop",
+          "short_description": "",
+          "full_description": ""
+        },
+        "android.permission.CLEAR_APP_CACHE": {
+          "permission_type": "signature|privileged",
+          "short_description": "",
+          "full_description": ""
+        }
+      }
+    },
+    "unique_sources": 9,
+    "last_modification_date": "2025-10-22 14:36:22 UTC",
+    "first_submission_date_epoch": 1646371090,
+    "last_submission_date_epoch": 1761143781,
+    "last_modification_date_epoch": 1761143782,
+    "last_analysis_date_epoch": 1760046374
+  },
+  "id": "20e8688726e843e9119b33be88ef642cb646f1163dce4109b8b8a2c792b5f9fc"
+}

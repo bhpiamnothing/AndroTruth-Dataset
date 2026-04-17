@@ -1,0 +1,1827 @@
+{
+  "type": "file",
+  "attributes": {
+    "tags": [
+      "android",
+      "checks-gps",
+      "obfuscated",
+      "apk",
+      "reflection",
+      "contains-elf",
+      "sends-sms",
+      "telephony"
+    ],
+    "trid": [
+      {
+        "file_type": "Android Package",
+        "probability": 30.8
+      },
+      {
+        "file_type": "OpenOffice Extension",
+        "probability": 24.5
+      },
+      {
+        "file_type": "Java Archive",
+        "probability": 15.4
+      },
+      {
+        "file_type": "Pocket Code/Catroid Catrobat Project",
+        "probability": 12.5
+      },
+      {
+        "file_type": "Sweet Home 3D Design (generic)",
+        "probability": 12.0
+      }
+    ],
+    "tlsh": "T1E10812D3F355ECA6D0F39335863190A6692A0CB45F13E2D72E02B23C5EB3AD09585ED9",
+    "crowdsourced_ids_results": [
+      {
+        "rule_category": "Misc activity",
+        "alert_severity": "low",
+        "rule_msg": "ET INFO Android Device Connectivity Check",
+        "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Android Device Connectivity Check\"; flow:established,to_server; urilen:13; http.method; content:\"GET\"; http.uri; content:\"/generate_204\"; fast_pattern; endswith; http.host; content:\"connectivitycheck.gstatic.com\"; http.accept_enc; content:\"gzip\"; depth:4; endswith; http.header_names; content:!\"Cache\"; content:!\"Referer\"; classtype:misc-activity; sid:2036220; rev:4; metadata:affected_product Android, attack_target Mobile_Client, created_at 2018_09_14, deployment Perimeter, deployment Internal, former_category INFO, performance_impact Low, signature_severity Informational, tag Connectivity_Check, updated_at 2020_09_16;)",
+        "alert_context": [
+          {
+            "url": "http://connectivitycheck.gstatic.com/generate_204",
+            "hostname": "connectivitycheck.gstatic.com",
+            "dest_ip": "108.177.119.94",
+            "dest_port": 80
+          }
+        ],
+        "rule_url": "https://rules.emergingthreats.net/",
+        "rule_source": "Proofpoint Emerging Threats Open",
+        "rule_id": "1:2036220"
+      }
+    ],
+    "names": [
+      "WA2_Abo3rab_v16.10F (1).apk",
+      "WA2_Abo3rab_v16.10F (2).apk",
+      "WA2_Abo3rab_v16.10F.apk"
+    ],
+    "type_tag": "android",
+    "type_description": "Android",
+    "bundle_info": {
+      "highest_datetime": "2023-10-23 10:27:18",
+      "lowest_datetime": "2023-10-23 10:27:16",
+      "num_children": 11748,
+      "extensions": {
+        "xml": 901,
+        "dex": 6,
+        "kotlin_builtins": 7,
+        "jpg": 4,
+        "MainDispatcherFactory": 1,
+        "so": 8,
+        "CoroutineExceptionHandler": 1,
+        "Provider": 1,
+        "Processor": 1,
+        "png": 70
+      },
+      "file_types": {
+        "XML": 901,
+        "DEX": 6,
+        "unknown": 11,
+        "ELF": 8,
+        "JPG": 4,
+        "PNG": 70
+      },
+      "type": "APK",
+      "uncompressed_size": 34193309
+    },
+    "permhash": "f3b63e8a463cf26ad635d9b2c4191fa87d4297270104e80f3f5c80434421c4a5",
+    "last_analysis_date": "2025-11-29 13:47:57 UTC",
+    "unique_sources": 4,
+    "size": 77936201,
+    "sha256": "e8f20d9a32e2189d061a165b9f59a0d63b7b407c91317fad551f8f0fb5eb89d1",
+    "vhash": "782929551db1732195bb9a27a829b290",
+    "sandbox_verdicts": {
+      "Zenbox": {
+        "category": "harmless",
+        "confidence": 91,
+        "sandbox_name": "Zenbox",
+        "malware_classification": [
+          "CLEAN"
+        ]
+      }
+    },
+    "meaningful_name": "WA2_Abo3rab_v16.10F (1).apk",
+    "popular_threat_classification": {
+      "popular_threat_category": [
+        {
+          "count": 11,
+          "value": "trojan"
+        },
+        {
+          "count": 2,
+          "value": "spyware"
+        }
+      ],
+      "popular_threat_name": [
+        {
+          "count": 8,
+          "value": "canesspy"
+        },
+        {
+          "count": 4,
+          "value": "andr"
+        },
+        {
+          "count": 2,
+          "value": "wamod"
+        }
+      ],
+      "suggested_threat_label": "trojan.canesspy/andr"
+    },
+    "first_submission_date": "2023-10-23 12:04:59 UTC",
+    "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+    "reputation": 0,
+    "androguard": {
+      "VTAndroidInfo": 2.0,
+      "Libraries": [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+        "com.sec.android.app.multiwindow",
+        "org.apache.http.legacy"
+      ],
+      "AndroidApplicationError": false,
+      "MinSdkVersion": "21",
+      "AndroguardVersion": "4.1.2",
+      "Activities": [
+        "androidx.car.app.CarAppPermissionActivity",
+        "androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity",
+        "androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity",
+        "androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity",
+        "com.WhatsApp2Plus.CatalogImageListActivity",
+        "com.WhatsApp2Plus.CatalogMediaView",
+        "com.WhatsApp2Plus.Conversation",
+        "com.WhatsApp2Plus.HomeActivity",
+        "com.WhatsApp2Plus.Main",
+        "com.WhatsApp2Plus.RequestPermissionActivity",
+        "com.WhatsApp2Plus.ShareCatalogLinkActivity",
+        "com.WhatsApp2Plus.ShareProductLinkActivity",
+        "com.WhatsApp2Plus.VoiceMessagingActivity",
+        "com.WhatsApp2Plus.WaInAppBrowsingActivity",
+        "com.WhatsApp2Plus.acceptinvitelink.AcceptInviteLinkActivity",
+        "com.WhatsApp2Plus.account.delete.DeleteAccountActivity",
+        "com.WhatsApp2Plus.account.delete.DeleteAccountConfirmation",
+        "com.WhatsApp2Plus.account.delete.DeleteAccountFeedback",
+        "com.WhatsApp2Plus.account.remove.RemoveAccountActivity",
+        "com.WhatsApp2Plus.accountswitching.secondaryprocess.AccountSwitchingActivity",
+        "com.WhatsApp2Plus.accountsync.CallContactLandingActivity",
+        "com.WhatsApp2Plus.accountsync.LoginActivity",
+        "com.WhatsApp2Plus.accountsync.ProfileActivity",
+        "com.WhatsApp2Plus.audiopicker.AudioPickerActivity",
+        "com.WhatsApp2Plus.authentication.AppAuthSettingsActivity",
+        "com.WhatsApp2Plus.authentication.AppAuthenticationActivity",
+        "com.WhatsApp2Plus.avatar.home.AvatarHomeActivity",
+        "com.WhatsApp2Plus.avatar.profilephoto.AvatarProfilePhotoActivity",
+        "com.WhatsApp2Plus.backup.encryptedbackup.EncBackupMainActivity",
+        "com.WhatsApp2Plus.backup.google.GoogleDriveNewUserSetupActivity",
+        "com.WhatsApp2Plus.backup.google.RestoreFromBackupActivity",
+        "com.WhatsApp2Plus.backup.google.SettingsGoogleDrive",
+        "com.WhatsApp2Plus.biz.BusinessProfileExtraFieldsActivity",
+        "com.WhatsApp2Plus.biz.catalog.view.activity.CatalogCategoryTabsActivity",
+        "com.WhatsApp2Plus.biz.catalog.view.activity.CatalogListActivity",
+        "com.WhatsApp2Plus.biz.catalog.view.activity.ProductListActivity",
+        "com.WhatsApp2Plus.biz.compliance.view.BusinessComplianceDetailActivity",
+        "com.WhatsApp2Plus.biz.linkedaccounts.LinkedAccountMediaView",
+        "com.WhatsApp2Plus.biz.product.view.activity.ProductBottomSheetTransparentActivity",
+        "com.WhatsApp2Plus.biz.product.view.activity.ProductDetailActivity",
+        "com.WhatsApp2Plus.blockbusiness.BlockBusinessActivity",
+        "com.WhatsApp2Plus.blockinguserinteraction.BlockingUserInteractionActivity",
+        "com.WhatsApp2Plus.blocklist.BlockList",
+        "com.WhatsApp2Plus.businessapisearch.view.activity.BusinessApiSearchActivity",
+        "com.WhatsApp2Plus.businesscollection.view.activity.CollectionProductListActivity",
+        "com.WhatsApp2Plus.businessdirectory.view.activity.BusinessDirectoryActivity",
+        "com.WhatsApp2Plus.businessdirectory.view.activity.BusinessDirectoryFrequentContactedActivity",
+        "com.WhatsApp2Plus.businessdirectory.view.activity.BusinessDirectoryMapViewActivity",
+        "com.WhatsApp2Plus.businessdirectory.view.activity.BusinessDirectorySERPMapViewActivity",
+        "com.WhatsApp2Plus.businessdirectory.view.activity.DirectoryBusinessChainingActivity",
+        "com.WhatsApp2Plus.businessdirectory.view.activity.DirectorySetLocationMapActivity",
+        "com.WhatsApp2Plus.businessupsell.BusinessAppEducation",
+        "com.WhatsApp2Plus.businessupsell.BusinessProfileEducation",
+        "com.WhatsApp2Plus.camera.CameraActivity",
+        "com.WhatsApp2Plus.camera.LauncherCameraActivity",
+        "com.WhatsApp2Plus.catalogcategory.view.activity.CatalogAllCategoryActivity",
+        "com.WhatsApp2Plus.chatinfo.ContactInfoActivity",
+        "com.WhatsApp2Plus.chatinfo.ListChatInfoActivity",
+        "com.WhatsApp2Plus.chatlock.ChatLockAuthActivity",
+        "com.WhatsApp2Plus.chatlock.ChatLockRequestAuthInterstitialActivity",
+        "com.WhatsApp2Plus.community.AddGroupsToCommunityActivity",
+        "com.WhatsApp2Plus.community.CommunityHomeActivity",
+        "com.WhatsApp2Plus.community.CommunityMembersActivity",
+        "com.WhatsApp2Plus.community.CommunityNUXActivity",
+        "com.WhatsApp2Plus.community.CommunityNavigationActivity",
+        "com.WhatsApp2Plus.community.CommunitySettingsActivity",
+        "com.WhatsApp2Plus.community.EditCommunityActivity",
+        "com.WhatsApp2Plus.community.LinkExistingGroups",
+        "com.WhatsApp2Plus.community.ManageGroupsInCommunityActivity",
+        "com.WhatsApp2Plus.community.NewCommunityActivity",
+        "com.WhatsApp2Plus.community.deactivate.DeactivateCommunityDisclaimerActivity",
+        "com.WhatsApp2Plus.companiondevice.CompanionHelloConfirmationActivity",
+        "com.WhatsApp2Plus.companiondevice.LinkedDevicesActivity",
+        "com.WhatsApp2Plus.companiondevice.LinkedDevicesEnterCodeActivity",
+        "com.WhatsApp2Plus.companiondevice.optin.ui.ForcedOptInActivity",
+        "com.WhatsApp2Plus.companionmode.registration.CompanionBootstrapActivity",
+        "com.WhatsApp2Plus.companionmode.registration.CompanionPostLogoutActivity",
+        "com.WhatsApp2Plus.companionmode.registration.RegisterAsCompanionActivity",
+        "com.WhatsApp2Plus.companionmode.registration.RegisterAsCompanionEnterNumberActivity",
+        "com.WhatsApp2Plus.companionmode.registration.RegisterAsCompanionLinkCodeActivity",
+        "com.WhatsApp2Plus.contact.contactform.ContactFormActivity",
+        "com.WhatsApp2Plus.contact.picker.AddGroupParticipantsSelector",
+        "com.WhatsApp2Plus.contact.picker.AudienceSelectionContactPicker",
+        "com.WhatsApp2Plus.contact.picker.ContactPicker",
+        "com.WhatsApp2Plus.contact.picker.ContactPickerHelp",
+        "com.WhatsApp2Plus.contact.picker.ContactsAttachmentSelector",
+        "com.WhatsApp2Plus.contact.picker.ContactsAttachmentSelectorBottomSheet",
+        "com.WhatsApp2Plus.contact.picker.ListMembersSelector",
+        "com.WhatsApp2Plus.contact.picker.PhoneContactsSelector",
+        "com.WhatsApp2Plus.contact.picker.PhoneContactsSelectorBottomSheet",
+        "com.WhatsApp2Plus.contact.picker.invite.InviteNonWhatsAppContactPickerActivity",
+        "com.WhatsApp2Plus.contactinput.contactscreen.NativeContactActivity",
+        "com.WhatsApp2Plus.contextualhelp.ContextualHelpActivity",
+        "com.WhatsApp2Plus.conversation.EditBroadcastRecipientsSelector",
+        "com.WhatsApp2Plus.conversation.EditMessageActivity",
+        "com.WhatsApp2Plus.conversation.conversationrow.ContactSyncActivity",
+        "com.WhatsApp2Plus.conversation.conversationrow.album.MediaAlbumActivity",
+        "com.WhatsApp2Plus.conversation.conversationrow.message.KeptMessagesActivity",
+        "com.WhatsApp2Plus.conversation.conversationrow.message.MessageDetailsActivity",
+        "com.WhatsApp2Plus.conversation.conversationrow.message.StarredMessagesActivity"
+      ],
+      "certificate": {
+        "Subject": {
+          "DN": "C:US, CN:Android, L:Mountain View, O:Android, ST:California, OU:Android, email:android@android.com",
+          "C": "US",
+          "CN": "Android",
+          "L": "Mountain View",
+          "O": "Android",
+          "ST": "California",
+          "OU": "Android",
+          "email": "android@android.com"
+        },
+        "validto": "2035-07-17 01:33:46",
+        "serialnumber": "936eacbe07f201df",
+        "thumbprint": "61ed377e85d386a8dfee6b864bd85b0bfaa5af81",
+        "validfrom": "2008-02-29 01:33:46",
+        "Issuer": {
+          "DN": "C:US, CN:Android, L:Mountain View, O:Android, ST:California, OU:Android, email:android@android.com",
+          "C": "US",
+          "CN": "Android",
+          "L": "Mountain View",
+          "O": "Android",
+          "ST": "California",
+          "OU": "Android",
+          "email": "android@android.com"
+        }
+      },
+      "AndroidApplication": 1,
+      "RiskIndicator": {
+        "APK": {
+          "DEX": 6,
+          "SHARED LIBRARIES": 8
+        },
+        "PERM": {
+          "DEVELOPMENT": 1,
+          "INSTANT": 5,
+          "NORMAL": 23,
+          "MONEY": 1,
+          "PRIVACY": 11,
+          "SMS": 2,
+          "DANGEROUS": 5,
+          "PREINSTALLED": 1,
+          "APPOP": 2,
+          "PRE23": 1,
+          "SIGNATURE": 2,
+          "INTERNET": 1,
+          "GPS": 2
+        }
+      },
+      "AndroidVersionCode": "2147483647",
+      "Package": "com.WhatsApp2Plus",
+      "Services": [
+        "X.g3",
+        "androidx.room.MultiInstanceInvalidationService",
+        "androidx.sharetarget.ChooserTargetServiceCompat",
+        "androidx.work.impl.background.systemalarm.SystemAlarmService",
+        "androidx.work.impl.background.systemjob.SystemJobService",
+        "androidx.work.impl.foreground.SystemForegroundService",
+        "com.WhatsApp2Plus.AlarmService",
+        "com.WhatsApp2Plus.ExternalMediaManager",
+        "com.WhatsApp2Plus.VoiceMessagingService",
+        "com.WhatsApp2Plus.accountsync.AccountAuthenticatorService",
+        "com.WhatsApp2Plus.appwidget.WidgetService",
+        "com.WhatsApp2Plus.backup.google.GoogleBackupService",
+        "com.WhatsApp2Plus.contact.sync.ContactsSyncAdapterService",
+        "com.WhatsApp2Plus.crash.upload.ExceptionsUploadService",
+        "com.WhatsApp2Plus.instrumentation.api.InstrumentationService",
+        "com.WhatsApp2Plus.instrumentation.service.InstrumentationFGService",
+        "com.WhatsApp2Plus.location.LocationSharingService",
+        "com.WhatsApp2Plus.media.download.service.MediaDownloadService",
+        "com.WhatsApp2Plus.media.transcode.MediaTranscodeService",
+        "com.WhatsApp2Plus.messaging.MessageService",
+        "com.WhatsApp2Plus.migration.android.integration.service.GoogleMigrateService",
+        "com.WhatsApp2Plus.migration.export.service.MessagesExporterService",
+        "com.WhatsApp2Plus.migration.transfer.service.DonorChatTransferService",
+        "com.WhatsApp2Plus.migration.transfer.service.ReceiverChatTransferService",
+        "com.WhatsApp2Plus.notification.AndroidWear",
+        "com.WhatsApp2Plus.notification.DirectReplyService",
+        "com.WhatsApp2Plus.perf.profilo.ProfiloUploadService",
+        "com.WhatsApp2Plus.push.GcmListenerService",
+        "com.WhatsApp2Plus.push.RegistrationIntentService",
+        "com.WhatsApp2Plus.service.BackgroundMediaControlService",
+        "com.WhatsApp2Plus.service.GcmFGService",
+        "com.WhatsApp2Plus.service.UnsentMessagesNetworkAvailableJob",
+        "com.WhatsApp2Plus.service.YoHiddenService",
+        "com.WhatsApp2Plus.wearos.WearOsListenerService",
+        "com.google.android.gms.analytics.AnalyticsJobService",
+        "com.google.android.gms.analytics.AnalyticsService",
+        "com.google.android.gms.auth.api.signin.RevocationBoundService",
+        "com.google.firebase.components.ComponentDiscoveryService",
+        "com.google.firebase.messaging.FirebaseMessagingService",
+        "com.whatsapp.calling.service.VoiceFGService",
+        "com.whatsapp.calling.telecom.SelfManagedConnectionService",
+        "org.npci.upi.security.pinactivitycomponent.CLRemoteServiceImpl"
+      ],
+      "AndroidVersionName": "2.23.13.76",
+      "TargetSdkVersion": "29",
+      "AndroidApplicationInfo": "APK",
+      "Providers": [
+        "androidx.car.app.connection",
+        "androidx.core.content.FileProvider",
+        "com.WhatsApp2Plus.accountswitching.AccountSwitchingContentProvider",
+        "com.WhatsApp2Plus.contentprovider.MediaProvider",
+        "com.WhatsApp2Plus.instrumentation.api.InstrumentationProvider",
+        "com.WhatsApp2Plus.migration.export.api.ExportMigrationContentProvider",
+        "com.WhatsApp2Plus.registration.directmigration.MigrationContentProvider",
+        "com.google.firebase.provider.FirebaseInitProvider",
+        "com.whatsapp.stickers.storage.WhitelistPackQueryContentProvider"
+      ],
+      "Receivers": [
+        "androidx.car.app.notification.CarAppNotificationBroadcastReceiver",
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+        "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+        "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+        "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+        "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+        "com.WhatsApp2Plus.AlarmBroadcastReceiver",
+        "com.WhatsApp2Plus.ExternalMediaManager$ExternalMediaStateReceiver",
+        "com.WhatsApp2Plus.TellAFriendReceiver",
+        "com.WhatsApp2Plus.accounttransfer.AccountTransferReceiver",
+        "com.WhatsApp2Plus.appwidget.WidgetProvider",
+        "com.WhatsApp2Plus.companiondevice.CompanionDeviceVerificationReceiver",
+        "com.WhatsApp2Plus.companionmode.CompanionStateHolder$CompanionKillswitchStateReceiver",
+        "com.WhatsApp2Plus.companionmode.CompanionStateHolder$CompanionLogoutStateReceiver",
+        "com.WhatsApp2Plus.companionmode.CompanionStateHolder$CompanionPreferenceStateReceiver",
+        "com.WhatsApp2Plus.instrumentation.notification.DelayedNotificationReceiver",
+        "com.WhatsApp2Plus.location.FinalLiveLocationBroadcastReceiver",
+        "com.WhatsApp2Plus.migration.android.api.DeferredRestoreBroadcastReceiver",
+        "com.WhatsApp2Plus.notification.MessageNotificationDismissedReceiver",
+        "com.WhatsApp2Plus.notification.MessageOtpNotificationBroadcastReceiver",
+        "com.WhatsApp2Plus.notification.MissedCallNotificationDismissedReceiver",
+        "com.WhatsApp2Plus.notification.OtpZeroTapMarkAsReadNotificationHandlerReceiver",
+        "com.WhatsApp2Plus.otp.OtpRequestedReceiver",
+        "com.WhatsApp2Plus.phoneid.PhoneIdRequestReceiver",
+        "com.WhatsApp2Plus.push.WAFbnsPreloadReceiver",
+        "com.WhatsApp2Plus.registration.PreRegNotificationLearnMoreReceiver",
+        "com.WhatsApp2Plus.registration.RegRetryVerificationReceiver",
+        "com.WhatsApp2Plus.registration.RegistrationCompletedReceiver",
+        "com.WhatsApp2Plus.registration.directmigration.MigrationProviderOrderedBroadcastReceiver",
+        "com.WhatsApp2Plus.registration.directmigration.MigrationRequesterBroadcastReceiver",
+        "com.WhatsApp2Plus.schedulecall.ScheduleCallBroadcastReceiver",
+        "com.WhatsApp2Plus.systemreceivers.appupdated.AppUpdatedReceiver",
+        "com.WhatsApp2Plus.systemreceivers.boot.BootReceiver",
+        "com.WhatsApp2Plus.yo.FMBackupReceiver",
+        "com.WhatsApp2Plus.yo.WidgetProvider",
+        "com.WhatsApp2Plus.yo.autoschedreply.Receiver",
+        "com.google.android.gms.analytics.AnalyticsReceiver",
+        "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+        "com.whatsapp.calling.calllink.CallLinkShareReceiver"
+      ],
+      "StringsInformation": [
+        "http://javax.xml.XMLConstants/feature/secure-processing",
+        "http://ns.adobe.com/xap/1.0/\u0000",
+        "http://schemas.android.com/apk/res/android",
+        "http://schemas.xmlsoap.org/soap/security/2000-12",
+        "http://www.google-analytics.com",
+        "http://www.nue.et-inf.uni-siegen.de/~geuer-pollmann/#xpathFilter",
+        "http://www.w3.org/1999/XSL/Transform",
+        "http://www.w3.org/1999/xlink",
+        "http://www.w3.org/2000/09/xmldsig#",
+        "http://www.w3.org/2000/09/xmldsig#Manifest",
+        "http://www.w3.org/2000/09/xmldsig#dsa-sha1",
+        "http://www.w3.org/2000/09/xmldsig#hmac-sha1",
+        "http://www.w3.org/2000/09/xmldsig#rsa-sha1",
+        "http://www.w3.org/2000/svg",
+        "http://www.w3.org/2000/xmlns/",
+        "http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1",
+        "http://www.w3.org/2001/04/xmldsig-more#hmac-md5",
+        "http://www.w3.org/2001/04/xmldsig-more#hmac-ripemd160",
+        "http://www.w3.org/2001/04/xmldsig-more#hmac-sha256",
+        "http://www.w3.org/2001/04/xmldsig-more#hmac-sha384",
+        "http://www.w3.org/2001/04/xmldsig-more#hmac-sha512",
+        "http://www.w3.org/2001/04/xmldsig-more#rsa-md5",
+        "http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160",
+        "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "http://www.w3.org/2001/04/xmldsig-more#rsa-sha384",
+        "http://www.w3.org/2001/04/xmldsig-more#rsa-sha512",
+        "http://www.w3.org/2001/04/xmlenc#",
+        "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "http://www.w3.org/2001/10/xml-exc-c14n#WithComments",
+        "http://www.w3.org/2002/03/xkms#",
+        "http://www.w3.org/2002/04/xmldsig-filter2",
+        "http://www.w3.org/2002/06/xmldsig-filter2",
+        "http://www.w3.org/2006/12/xml-c14n11",
+        "http://www.w3.org/2006/12/xml-c14n11#WithComments",
+        "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments",
+        "http://www.w3.org/TR/2001/WD-xptr-20010108",
+        "http://www.w3.org/TR/SVG11/feature#",
+        "http://www.w3.org/XML/1998/namespace",
+        "http://www.xmlsecurity.org/NS/#configuration",
+        "http://xmlpull.org/v1/doc/features.html#process-docdecl",
+        "http://xmlpull.org/v1/doc/features.html#process-namespaces",
+        "https://ssl.google-analytics.com",
+        "https://t.me/abu3raab"
+      ],
+      "main_activity": "com.WhatsApp2Plus.0",
+      "intent_filters": {
+        "Services": {
+          "com.WhatsApp2Plus.instrumentation.api.InstrumentationService": {
+            "action": [
+              "com.WhatsApp2Plus.instrumentation.REQUEST"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.WhatsApp2Plus.contact.sync.ContactsSyncAdapterService": {
+            "action": [
+              "android.content.SyncAdapter"
+            ]
+          },
+          "com.WhatsApp2Plus.wearos.WearOsListenerService": {
+            "action": [
+              "com.google.android.gms.wearable.BIND_LISTENER",
+              "com.google.android.gms.wearable.MESSAGE_RECEIVED"
+            ]
+          },
+          "com.WhatsApp2Plus.push.GcmListenerService": {
+            "action": [
+              "com.google.firebase.MESSAGING_EVENT"
+            ]
+          },
+          "com.google.firebase.messaging.FirebaseMessagingService": {
+            "action": [
+              "com.google.firebase.MESSAGING_EVENT"
+            ]
+          },
+          "com.WhatsApp2Plus.accountsync.AccountAuthenticatorService": {
+            "action": [
+              "android.accounts.AccountAuthenticator"
+            ]
+          },
+          "com.whatsapp.calling.telecom.SelfManagedConnectionService": {
+            "action": [
+              "android.telecom.ConnectionService"
+            ]
+          },
+          "androidx.sharetarget.ChooserTargetServiceCompat": {
+            "action": [
+              "android.service.chooser.ChooserTargetService"
+            ]
+          },
+          "org.npci.upi.security.pinactivitycomponent.CLRemoteServiceImpl": {
+            "action": [
+              "org.npci.upi.security.services.CLRemoteService"
+            ]
+          }
+        },
+        "Activities": {
+          "com.WhatsApp2Plus.registration.VerifyPhoneNumber": {
+            "action": [
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.WhatsApp2Plus.identity.IdentityVerificationActivity": {
+            "action": [
+              "android.nfc.action.NDEF_DISCOVERED"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity": {
+            "action": [
+              "android.intent.action.MAIN"
+            ]
+          },
+          "androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity": {
+            "action": [
+              "android.intent.action.MAIN"
+            ]
+          },
+          "com.WhatsApp2Plus.VoiceMessagingActivity": {
+            "action": [
+              "com.google.android.voicesearch.SEND_MESSAGE_TO_CONTACTS"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.WhatsApp2Plus.accountsync.LoginActivity": {
+            "action": [
+              "android.intent.action.VIEW"
+            ]
+          },
+          "com.WhatsApp2Plus.contact.picker.ContactPicker": {
+            "action": [
+              "android.intent.action.PICK",
+              "android.intent.action.SEND",
+              "android.intent.action.SEND_MULTIPLE",
+              "android.intent.action.CREATE_SHORTCUT"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "com.WhatsApp2Plus"
+            ]
+          },
+          "org.npci.upi.security.pinactivitycomponent.GetCredential": {
+            "action": [
+              "org.npci.upi.security.pinactivitycomponent.GetCredential"
+            ]
+          },
+          "com.WhatsApp2Plus.settings.SettingsDataUsageActivity": {
+            "action": [
+              "android.intent.action.MANAGE_NETWORK_USAGE"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.WhatsApp2Plus.settings.SettingsNotifications": {
+            "action": [
+              "android.intent.action.MAIN"
+            ],
+            "category": [
+              "android.intent.category.NOTIFICATION_PREFERENCES"
+            ]
+          },
+          "com.WhatsApp2Plus.authentication.AppAuthenticationActivity": {
+            "action": [
+              "android.appwidget.action.APPWIDGET_CONFIGURE"
+            ]
+          },
+          "com.WhatsApp2Plus.HomeActivity": {
+            "action": [
+              "android.nfc.action.NDEF_DISCOVERED",
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.WhatsApp2Plus.identity.ScanQrCodeActivity": {
+            "action": [
+              "android.nfc.action.NDEF_DISCOVERED"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity": {
+            "action": [
+              "android.intent.action.MAIN"
+            ]
+          },
+          "com.whatsapp.stickers.thirdparty.AddThirdPartyStickerPackActivity": {
+            "action": [
+              "com.whatsapp.intent.action.ENABLE_STICKER_PACK"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.WhatsApp2Plus.Conversation": {
+            "action": [
+              "android.intent.action.VIEW",
+              "android.intent.action.SENDTO",
+              "com.WhatsApp2Plus.Conversation"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.WhatsApp2Plus.Main": {
+            "action": [
+              "android.intent.action.MAIN"
+            ]
+          },
+          "com.WhatsApp2Plus.accountsync.ProfileActivity": {
+            "action": [
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.WhatsApp2Plus.camera.CameraActivity": {
+            "action": [
+              "android.intent.action.CREATE_SHORTCUT"
+            ]
+          },
+          "com.WhatsApp2Plus.xfamily.accountlinking.ui.AccountLinkingWebAuthActivity": {
+            "action": [
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.WhatsApp2Plus.migration.export.ui.ExportMigrationActivity": {
+            "action": [
+              "com.WhatsApp2Plus.intent.action.migrate.ios.START"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT"
+            ]
+          },
+          "com.WhatsApp2Plus.payments.receiver.IndiaUpiPayIntentReceiverActivity": {
+            "action": [
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          },
+          "com.WhatsApp2Plus.accountsync.CallContactLandingActivity": {
+            "action": [
+              "android.intent.action.VIEW"
+            ],
+            "category": [
+              "android.intent.category.DEFAULT",
+              "android.intent.category.BROWSABLE"
+            ]
+          }
+        },
+        "Receivers": {
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy": {
+            "action": [
+              "android.intent.action.BATTERY_OKAY",
+              "android.intent.action.BATTERY_LOW"
+            ]
+          },
+          "com.WhatsApp2Plus.phoneid.PhoneIdRequestReceiver": {
+            "action": [
+              "com.facebook.GET_PHONE_ID"
+            ]
+          },
+          "com.WhatsApp2Plus.registration.RegistrationCompletedReceiver": {
+            "action": [
+              "com.WhatsApp2Plus.SMBRegistrationCompleted"
+            ]
+          },
+          "com.WhatsApp2Plus.yo.FMBackupReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          },
+          "com.WhatsApp2Plus.registration.RegRetryVerificationReceiver": {
+            "action": [
+              "com.WhatsApp2Plus.alarm.REGISTRATION_RETRY"
+            ]
+          },
+          "com.WhatsApp2Plus.migration.android.api.DeferredRestoreBroadcastReceiver": {
+            "action": [
+              "com.google.android.apps.pixelmigrate.IOS_APP_DATA_AVAILABLE"
+            ]
+          },
+          "com.WhatsApp2Plus.yo.WidgetProvider": {
+            "action": [
+              "android.appwidget.action.APPWIDGET_UPDATE"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy": {
+            "action": [
+              "android.intent.action.ACTION_POWER_CONNECTED",
+              "android.intent.action.ACTION_POWER_DISCONNECTED"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.RescheduleReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED",
+              "android.intent.action.TIME_SET",
+              "android.intent.action.TIMEZONE_CHANGED"
+            ]
+          },
+          "com.WhatsApp2Plus.yo.autoschedreply.Receiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          },
+          "com.WhatsApp2Plus.registration.directmigration.MigrationProviderOrderedBroadcastReceiver": {
+            "action": [
+              "com.WhatsApp2Plus.registration.directmigration.initialMigrationInfoAction",
+              "com.WhatsApp2Plus.registration.directmigration.recoveryTokenAction",
+              "com.WhatsApp2Plus.registration.directmigration.setMigrationStateOnProviderSide"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy": {
+            "action": [
+              "android.net.conn.CONNECTIVITY_CHANGE"
+            ]
+          },
+          "com.WhatsApp2Plus.appwidget.WidgetProvider": {
+            "action": [
+              "android.appwidget.action.APPWIDGET_UPDATE"
+            ]
+          },
+          "com.WhatsApp2Plus.push.WAFbnsPreloadReceiver": {
+            "action": [
+              "com.facebook.rti.fbns.intent.RECEIVE"
+            ],
+            "category": [
+              "com.WhatsApp2Plus"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver": {
+            "action": [
+              "androidx.work.impl.background.systemalarm.UpdateProxies"
+            ]
+          },
+          "com.WhatsApp2Plus.otp.OtpRequestedReceiver": {
+            "action": [
+              "com.WhatsApp2Plus.otp.OTP_REQUESTED"
+            ]
+          },
+          "com.WhatsApp2Plus.systemreceivers.boot.BootReceiver": {
+            "action": [
+              "android.intent.action.BOOT_COMPLETED"
+            ]
+          },
+          "com.WhatsApp2Plus.systemreceivers.appupdated.AppUpdatedReceiver": {
+            "action": [
+              "android.intent.action.MY_PACKAGE_REPLACED"
+            ]
+          },
+          "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy": {
+            "action": [
+              "android.intent.action.DEVICE_STORAGE_LOW",
+              "android.intent.action.DEVICE_STORAGE_OK"
+            ]
+          },
+          "com.WhatsApp2Plus.accounttransfer.AccountTransferReceiver": {
+            "action": [
+              "com.google.android.gms.auth.START_ACCOUNT_EXPORT"
+            ]
+          },
+          "com.google.firebase.iid.FirebaseInstanceIdReceiver": {
+            "action": [
+              "com.google.android.c2dm.intent.RECEIVE"
+            ]
+          },
+          "com.WhatsApp2Plus.registration.directmigration.MigrationRequesterBroadcastReceiver": {
+            "action": [
+              "com.WhatsApp2Plus.registration.directmigration.providerIsLoggedOutAction",
+              "com.WhatsApp2Plus.registration.directmigration.providerAppMigrationSpaceNeededAction"
+            ]
+          },
+          "androidx.work.impl.diagnostics.DiagnosticsReceiver": {
+            "action": [
+              "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+            ]
+          },
+          "com.WhatsApp2Plus.ExternalMediaManager$ExternalMediaStateReceiver": {
+            "action": [
+              "android.intent.action.MEDIA_BAD_REMOVAL",
+              "android.intent.action.MEDIA_EJECT",
+              "android.intent.action.MEDIA_MOUNTED",
+              "android.intent.action.MEDIA_REMOVED",
+              "android.intent.action.MEDIA_SHARED",
+              "android.intent.action.MEDIA_UNMOUNTED"
+            ]
+          }
+        }
+      },
+      "permission_details": {
+        "android.permission.CHANGE_NETWORK_STATE": {
+          "permission_type": "normal",
+          "short_description": "change network connectivity",
+          "full_description": "Allows the app to change the state of network connectivity."
+        },
+        "com.whatsapp.sticker.READ": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.huawei.android.launcher.permission.WRITE_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.android.launcher.permission.UNINSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "uninstall shortcuts",
+          "full_description": "Allows the application to remove\n        Homescreen shortcuts without user intervention."
+        },
+        "android.permission.USE_CREDENTIALS": {
+          "permission_type": "dangerous",
+          "short_description": "use accounts on the device",
+          "full_description": "Allows the app to request authentication tokens."
+        },
+        "android.permission.READ_SYNC_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "read sync settings",
+          "full_description": "Allows the app to read the sync settings for an account. For example, this can determine whether the People app is synced with an account."
+        },
+        "android.permission.USE_FULL_SCREEN_INTENT": {
+          "permission_type": "normal",
+          "short_description": "",
+          "full_description": ""
+        },
+        "com.WhatsApp2Plus.permission.REGISTRATION": {
+          "permission_type": "signature",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.NEARBY_WIFI_DEVICES": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.RECEIVE_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "receive text messages (SMS)",
+          "full_description": "Allows the app to receive and process SMS\n      messages. This means the app could monitor or delete messages sent to your\n      device without showing them to you."
+        },
+        "android.permission.ACCESS_COARSE_LOCATION": {
+          "permission_type": "dangerous|instant",
+          "short_description": "access approximate location (network-based) only in the foreground",
+          "full_description": "This app can get your location based on network sources such as cell towers and Wi-Fi networks, but only when the app is in the foreground. These location services must be turned on and available on your phone for the app to be able to use them."
+        },
+        "android.permission.READ_SYNC_STATS": {
+          "permission_type": "normal",
+          "short_description": "read sync statistics",
+          "full_description": "Allows an app to read the sync stats for an account, including the history of sync events and how much data is synced. "
+        },
+        "android.permission.RECEIVE_BOOT_COMPLETED": {
+          "permission_type": "normal",
+          "short_description": "run at startup",
+          "full_description": "Allows the app to\n        have itself started as soon as the system has finished booting.\n        This can make it take longer to start the phone and allow the\n        app to slow down the overall phone by always running."
+        },
+        "android.permission.BLUETOOTH": {
+          "permission_type": "normal",
+          "short_description": "pair with Bluetooth devices",
+          "full_description": "Allows the app to view the\n      configuration of the Bluetooth on the phone, and to make and accept\n      connections with paired devices."
+        },
+        "android.permission.ACCESS_WIFI_STATE": {
+          "permission_type": "normal",
+          "short_description": "view Wi-Fi connections",
+          "full_description": "Allows the app to view information\n      about Wi-Fi networking, such as whether Wi-Fi is enabled and name of\n      connected Wi-Fi devices."
+        },
+        "android.permission.INTERNET": {
+          "permission_type": "normal|instant",
+          "short_description": "have full network access",
+          "full_description": "Allows the app to create\n     network sockets and use custom network protocols. The browser and other\n     applications provide means to send data to the internet, so this\n     permission is not required to send data to the internet."
+        },
+        "com.google.android.providers.gsf.permission.READ_GSERVICES": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.MANAGE_OWN_CALLS": {
+          "permission_type": "normal",
+          "short_description": "route calls through the system",
+          "full_description": "Allows the app to route its calls through the system in\n        order to improve the calling experience."
+        },
+        "com.sec.android.provider.badge.permission.WRITE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.NFC": {
+          "permission_type": "normal",
+          "short_description": "control Near Field Communication",
+          "full_description": "Allows the app to communicate\n      with Near Field Communication (NFC) tags, cards, and readers."
+        },
+        "android.permission.USE_BIOMETRIC": {
+          "permission_type": "normal",
+          "short_description": "use biometric hardware",
+          "full_description": "Allows the app to use biometric hardware for authentication"
+        },
+        "android.permission.SEND_SMS": {
+          "permission_type": "dangerous",
+          "short_description": "send and view SMS messages",
+          "full_description": "Allows the app to send SMS messages.\n     This may result in unexpected charges. Malicious apps may cost you money by\n     sending messages without your confirmation."
+        },
+        "android.permission.REQUEST_INSTALL_PACKAGES": {
+          "permission_type": "signature|appop",
+          "short_description": "request install packages",
+          "full_description": "Allows an application to request installation of packages."
+        },
+        "android.permission.USE_FINGERPRINT": {
+          "permission_type": "normal",
+          "short_description": "use fingerprint hardware",
+          "full_description": "Allows the app to use fingerprint hardware for authentication"
+        },
+        "com.android.launcher.permission.INSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "install shortcuts",
+          "full_description": "Allows an application to add\n        Homescreen shortcuts without user intervention."
+        },
+        "android.permission.REORDER_TASKS": {
+          "permission_type": "normal",
+          "short_description": "reorder running apps",
+          "full_description": "Allows the app to move tasks to the\n      foreground and background.  The app may do this without your input."
+        },
+        "android.permission.READ_MEDIA_VIDEO": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.SCHEDULE_EXACT_ALARM": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.google.android.c2dm.permission.RECEIVE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_NETWORK_STATE": {
+          "permission_type": "normal|instant",
+          "short_description": "view network connections",
+          "full_description": "Allows the app to view\n      information about network connections such as which networks exist and are\n      connected."
+        },
+        "android.permission.GET_TASKS": {
+          "permission_type": "normal",
+          "short_description": "retrieve running apps",
+          "full_description": "Allows the app to retrieve information\n       about currently and recently running tasks.  This may allow the app to\n       discover information about which applications are used on the device."
+        },
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.INSTALL_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.htc.launcher.permission.UPDATE_SHORTCUT": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.htc.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.WRITE_EXTERNAL_STORAGE": {
+          "permission_type": "dangerous",
+          "short_description": "modify or delete the contents of your shared storage",
+          "full_description": "Allows the app to write the contents of your shared storage."
+        },
+        "android.permission.MANAGE_ACCOUNTS": {
+          "permission_type": "dangerous",
+          "short_description": "add or remove accounts",
+          "full_description": "Allows the app to\n    perform operations like adding and removing accounts, and deleting\n    their password."
+        },
+        "android.permission.POST_NOTIFICATIONS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.ACCESS_FINE_LOCATION": {
+          "permission_type": "dangerous|instant",
+          "short_description": "access precise location only in the foreground",
+          "full_description": "This app can get your exact location only when it is in the foreground. These location services must be turned on and available on your phone for the app to be able to use them. This may increase battery consumption."
+        },
+        "android.permission.READ_EXTERNAL_STORAGE": {
+          "permission_type": "dangerous",
+          "short_description": "read the contents of your shared storage",
+          "full_description": "Allows the app to read the contents of your shared storage."
+        },
+        "android.permission.WRITE_SYNC_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "toggle sync on and off",
+          "full_description": "Allows an app to modify the sync settings for an account.  For example, this can be used to enable sync of the People app with an account."
+        },
+        "android.permission.READ_MEDIA_IMAGES": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.AUTHENTICATE_ACCOUNTS": {
+          "permission_type": "dangerous",
+          "short_description": "create accounts and set passwords",
+          "full_description": "Allows the app\n    to use the account authenticator capabilities of the\n    AccountManager, including creating accounts and getting and\n    setting their passwords."
+        },
+        "android.permission.FOREGROUND_SERVICE_DATA_SYNC": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_MEDIA_AUDIO": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_PHONE_NUMBERS": {
+          "permission_type": "dangerous|instant",
+          "short_description": "read phone numbers",
+          "full_description": "Allows the app to access the phone numbers of the device."
+        },
+        "com.google.android.gms.permission.AD_ID": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.BROADCAST_STICKY": {
+          "permission_type": "normal",
+          "short_description": "send sticky broadcast",
+          "full_description": "Allows the app to\n    send sticky broadcasts, which remain after the broadcast ends. Excessive\n    use may make the phone slow or unstable by causing it to use too\n    much memory."
+        },
+        "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.READ_PHONE_STATE": {
+          "permission_type": "dangerous",
+          "short_description": "read phone status and identity",
+          "full_description": "Allows the app to access the phone\n      features of the device.  This permission allows the app to determine the\n      phone number and device IDs, whether a call is active, and the remote number\n      connected by a call."
+        },
+        "android.permission.FOREGROUND_SERVICE": {
+          "permission_type": "normal|instant",
+          "short_description": "run foreground service",
+          "full_description": "Allows the app to make use of foreground services."
+        },
+        "android.permission.WRITE_CONTACTS": {
+          "permission_type": "dangerous",
+          "short_description": "modify your contacts",
+          "full_description": "Allows the app to modify the data about your contacts stored on your phone.\n      This permission allows apps to delete contact data."
+        },
+        "android.permission.VIBRATE": {
+          "permission_type": "normal|instant",
+          "short_description": "control vibration",
+          "full_description": "Allows the app to control the vibrator."
+        },
+        "com.sonyericsson.home.permission.BROADCAST_BADGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.SYSTEM_ALERT_WINDOW": {
+          "permission_type": "signature|preinstalled|appop|pre23|development",
+          "short_description": "This app can appear on top of other apps",
+          "full_description": "This app can appear on top of other apps or other parts of the screen. This may interfere with normal app usage and change the way that other apps appear."
+        },
+        "com.huawei.android.launcher.permission.READ_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.WhatsApp2Plus.permission.MAPS_RECEIVE": {
+          "permission_type": "signature",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.WhatsApp2Plus.permission.BROADCAST": {
+          "permission_type": "signature",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CAMERA": {
+          "permission_type": "dangerous|instant",
+          "short_description": "take pictures and videos",
+          "full_description": "This app can take pictures and record videos using the camera at any time."
+        },
+        "android.permission.WAKE_LOCK": {
+          "permission_type": "normal|instant",
+          "short_description": "prevent phone from sleeping",
+          "full_description": "Allows the app to prevent the phone from going to sleep."
+        },
+        "com.huawei.android.launcher.permission.CHANGE_BADGE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.CHANGE_WIFI_STATE": {
+          "permission_type": "normal",
+          "short_description": "connect and disconnect from Wi-Fi",
+          "full_description": "Allows the app to connect to and\n      disconnect from Wi-Fi access points and to make changes to device\n      configuration for Wi-Fi networks."
+        },
+        "android.permission.RECORD_AUDIO": {
+          "permission_type": "dangerous|instant",
+          "short_description": "record audio",
+          "full_description": "This app can record audio using the microphone at any time."
+        },
+        "android.permission.READ_CONTACTS": {
+          "permission_type": "dangerous",
+          "short_description": "read your contacts",
+          "full_description": "Allows the app to read data about your contacts stored on your phone.\n      This permission allows apps to save your contact data, and malicious apps may share contact data without your knowledge."
+        },
+        "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.MODIFY_AUDIO_SETTINGS": {
+          "permission_type": "normal",
+          "short_description": "change your audio settings",
+          "full_description": "Allows the app to modify global audio settings such as volume and which speaker is used for output."
+        },
+        "android.permission.READ_PROFILE": {
+          "permission_type": "dangerous",
+          "short_description": "read your own contact card",
+          "full_description": "Allows the app to read\n     personal profile information stored on your device, such as your name and\n     contact information. This means the app can identify you and may send your\n     profile information to others."
+        },
+        "com.sec.android.provider.badge.permission.READ": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "com.facebook.services.identity.FEO2": {
+          "permission_type": "normal",
+          "short_description": "Unknown permission from android reference",
+          "full_description": "Unknown permission from android reference"
+        },
+        "android.permission.GET_ACCOUNTS": {
+          "permission_type": "dangerous",
+          "short_description": "find accounts on the device",
+          "full_description": "Allows the app to get\n      the list of accounts known by the phone.  This may include any accounts\n      created by applications you have installed."
+        }
+      }
+    },
+    "picklescan": {
+      "globals": [],
+      "issues_count": 0,
+      "contains_invalid_pickle": false
+    },
+    "last_modification_date": "2025-11-29 15:59:49 UTC",
+    "md5": "19c489bcd11d7eb84e0ade091889c913",
+    "crowdsourced_ids_stats": {
+      "high": 0,
+      "info": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "filecondis": {
+      "raw_md5": "40bfda239e06ce2a90dced8acab62ef0",
+      "dhash": "00003e3e1e151420"
+    },
+    "times_submitted": 6,
+    "type_tags": [
+      "executable",
+      "mobile",
+      "android",
+      "apk"
+    ],
+    "last_analysis_stats": {
+      "malicious": 23,
+      "suspicious": 0,
+      "undetected": 39,
+      "harmless": 0,
+      "timeout": 4,
+      "confirmed-timeout": 0,
+      "failure": 1,
+      "type-unsupported": 9
+    },
+    "last_submission_date": "2023-11-06 09:57:05 UTC",
+    "type_extension": "apk",
+    "sha1": "806651d01c1058e495220cc5869bab8a0f79432f",
+    "total_votes": {
+      "harmless": 0,
+      "malicious": 0
+    },
+    "last_analysis_results": {
+      "Bkav": {
+        "method": "blacklist",
+        "engine_name": "Bkav",
+        "engine_version": "2.0.0.1",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Lionic": {
+        "method": "blacklist",
+        "engine_name": "Lionic",
+        "engine_version": "8.16",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Trojan.AndroidOS.CanesSpy.C!c"
+      },
+      "Elastic": {
+        "method": "blacklist",
+        "engine_name": "Elastic",
+        "engine_version": "4.0.240",
+        "engine_update": "20251125",
+        "category": "undetected",
+        "result": null
+      },
+      "MicroWorld-eScan": {
+        "method": "blacklist",
+        "engine_name": "MicroWorld-eScan",
+        "engine_version": "14.0.409.0",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "CTX": {
+        "method": "blacklist",
+        "engine_name": "CTX",
+        "engine_version": "2024.8.29.1",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "apk.trojan.canesspy"
+      },
+      "CAT-QuickHeal": {
+        "method": "blacklist",
+        "engine_name": "CAT-QuickHeal",
+        "engine_version": "22.00",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "ALYac": {
+        "method": "blacklist",
+        "engine_name": "ALYac",
+        "engine_version": "2.0.0.10",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "Malwarebytes": {
+        "method": "blacklist",
+        "engine_name": "Malwarebytes",
+        "engine_version": "3.1.0.176",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Zillya": {
+        "method": "blacklist",
+        "engine_name": "Zillya",
+        "engine_version": "2.0.0.5494",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "Sangfor": {
+        "method": "blacklist",
+        "engine_name": "Sangfor",
+        "engine_version": "2.22.3.0",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "Trustlook": {
+        "method": "blacklist",
+        "engine_name": "Trustlook",
+        "engine_version": "1.0",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Android.Malware.Spyware"
+      },
+      "BitDefender": {
+        "method": "blacklist",
+        "engine_name": "BitDefender",
+        "engine_version": "7.2",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "K7GW": {
+        "method": "blacklist",
+        "engine_name": "K7GW",
+        "engine_version": "14.20.57832",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Trojan ( 005be4a41 )"
+      },
+      "K7AntiVirus": {
+        "method": "blacklist",
+        "engine_name": "K7AntiVirus",
+        "engine_version": "14.20.57830",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Baidu": {
+        "method": "blacklist",
+        "engine_name": "Baidu",
+        "engine_version": "1.0.0.2",
+        "engine_update": "20190318",
+        "category": "undetected",
+        "result": null
+      },
+      "VirIT": {
+        "method": "blacklist",
+        "engine_name": "VirIT",
+        "engine_version": "9.5.1095",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "SymantecMobileInsight": {
+        "method": "blacklist",
+        "engine_name": "SymantecMobileInsight",
+        "engine_version": "2.0",
+        "engine_update": "20250124",
+        "category": "malicious",
+        "result": "AppRisk:Generisk"
+      },
+      "Symantec": {
+        "method": "blacklist",
+        "engine_name": "Symantec",
+        "engine_version": "1.22.0.0",
+        "engine_update": "20251128",
+        "category": "malicious",
+        "result": "Android.Malapp"
+      },
+      "ESET-NOD32": {
+        "method": "blacklist",
+        "engine_name": "ESET-NOD32",
+        "engine_version": "18.2.18.0",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Android/Spy.CanesSpy.A trojan"
+      },
+      "TrendMicro-HouseCall": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro-HouseCall",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "ClamAV": {
+        "method": "blacklist",
+        "engine_name": "ClamAV",
+        "engine_version": "1.5.1.0",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Kaspersky": {
+        "method": "blacklist",
+        "engine_name": "Kaspersky",
+        "engine_version": "22.0.1.28",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "HEUR:Trojan-Spy.AndroidOS.CanesSpy.a"
+      },
+      "Alibaba": {
+        "method": "blacklist",
+        "engine_name": "Alibaba",
+        "engine_version": "0.3.0.5",
+        "engine_update": "20190527",
+        "category": "malicious",
+        "result": "TrojanSpy:Android/CanesSpy.af50466a"
+      },
+      "NANO-Antivirus": {
+        "method": "blacklist",
+        "engine_name": "NANO-Antivirus",
+        "engine_version": "1.0.170.26895",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Trojan.Android.Mlw.kdcism"
+      },
+      "ViRobot": {
+        "method": "blacklist",
+        "engine_name": "ViRobot",
+        "engine_version": "2014.3.20.0",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Rising": {
+        "method": "blacklist",
+        "engine_name": "Rising",
+        "engine_version": "25.0.0.28",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Spyware.CanesSpy/Android!8.18CB8 (CLOUD)"
+      },
+      "Sophos": {
+        "method": "blacklist",
+        "engine_name": "Sophos",
+        "engine_version": "3.3.1.0",
+        "engine_update": "20251128",
+        "category": "malicious",
+        "result": "Andr/Spy-BIX"
+      },
+      "F-Secure": {
+        "method": "blacklist",
+        "engine_name": "F-Secure",
+        "engine_version": "18.10.1547.307",
+        "engine_update": "20251128",
+        "category": "malicious",
+        "result": "PrivacyRisk.SPR/ANDR.WAMod.BAB.Gen"
+      },
+      "DrWeb": {
+        "method": "blacklist",
+        "engine_name": "DrWeb",
+        "engine_version": "7.0.72.9030",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Android.Spy.5864"
+      },
+      "VIPRE": {
+        "method": "blacklist",
+        "engine_name": "VIPRE",
+        "engine_version": "6.0.0.35",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "TrendMicro": {
+        "method": "blacklist",
+        "engine_name": "TrendMicro",
+        "engine_version": "24.550.0.1002",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "McAfeeD": {
+        "method": "blacklist",
+        "engine_name": "McAfeeD",
+        "engine_version": "1.2.0.10275",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "CMC": {
+        "method": "blacklist",
+        "engine_name": "CMC",
+        "engine_version": "2.4.2022.1",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Emsisoft": {
+        "method": "blacklist",
+        "engine_name": "Emsisoft",
+        "engine_version": "2024.8.0.61147",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "huorong": {
+        "method": "blacklist",
+        "engine_name": "huorong",
+        "engine_version": "d5d34de:d5d34de:8a3fb5a:8a3fb5a",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Avast-Mobile": {
+        "method": "blacklist",
+        "engine_name": "Avast-Mobile",
+        "engine_version": "251129-00",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Android:Evo-gen [Trj]"
+      },
+      "Jiangmin": {
+        "method": "blacklist",
+        "engine_name": "Jiangmin",
+        "engine_version": "16.0.100",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "Webroot": {
+        "method": "blacklist",
+        "engine_name": "Webroot",
+        "engine_version": "1.9.0.8",
+        "engine_update": "20250227",
+        "category": "undetected",
+        "result": null
+      },
+      "Avira": {
+        "method": "blacklist",
+        "engine_name": "Avira",
+        "engine_version": "8.3.3.24",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "SPR/ANDR.WAMod.BAB.Gen"
+      },
+      "Antiy-AVL": {
+        "method": "blacklist",
+        "engine_name": "Antiy-AVL",
+        "engine_version": "3.0",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Kingsoft": {
+        "method": "blacklist",
+        "engine_name": "Kingsoft",
+        "engine_version": "None",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Microsoft": {
+        "method": "blacklist",
+        "engine_name": "Microsoft",
+        "engine_version": "1.1.25100.9002",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "TrojanSpy:AndroidOS/CanesSpy!MTB"
+      },
+      "Gridinsoft": {
+        "method": "blacklist",
+        "engine_name": "Gridinsoft",
+        "engine_version": "1.0.229.174",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Xcitium": {
+        "method": "blacklist",
+        "engine_name": "Xcitium",
+        "engine_version": "38226",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "Arcabit": {
+        "method": "blacklist",
+        "engine_name": "Arcabit",
+        "engine_version": "2025.0.0.23",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "SUPERAntiSpyware": {
+        "method": "blacklist",
+        "engine_name": "SUPERAntiSpyware",
+        "engine_version": "5.6.0.1032",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "ZoneAlarm": {
+        "method": "blacklist",
+        "engine_name": "ZoneAlarm",
+        "engine_version": "6.21-110946845",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Andr/Spy-BIX"
+      },
+      "GData": {
+        "method": "blacklist",
+        "engine_name": "GData",
+        "engine_version": "GD:27.42688AVA:64.30232",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Varist": {
+        "method": "blacklist",
+        "engine_name": "Varist",
+        "engine_version": "6.6.1.3",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "AndroidOS/Agent.BNE"
+      },
+      "BitDefenderFalx": {
+        "method": "blacklist",
+        "engine_name": "BitDefenderFalx",
+        "engine_version": "2.0.936",
+        "engine_update": "20250416",
+        "category": "malicious",
+        "result": "Android.Riskware.Agent.aBHVF"
+      },
+      "AhnLab-V3": {
+        "method": "blacklist",
+        "engine_name": "AhnLab-V3",
+        "engine_version": "3.29.0.10596",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Trojan/Android.SpyAgent.1210152"
+      },
+      "Acronis": {
+        "method": "blacklist",
+        "engine_name": "Acronis",
+        "engine_version": "1.2.0.121",
+        "engine_update": "20240328",
+        "category": "undetected",
+        "result": null
+      },
+      "VBA32": {
+        "method": "blacklist",
+        "engine_name": "VBA32",
+        "engine_version": "5.4.1",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "TACHYON": {
+        "method": "blacklist",
+        "engine_name": "TACHYON",
+        "engine_version": "2025-11-29.02",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Zoner": {
+        "method": "blacklist",
+        "engine_name": "Zoner",
+        "engine_version": "2.2.2.0",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Tencent": {
+        "method": "blacklist",
+        "engine_name": "Tencent",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Android.Trojan-Spy.Canesspy.Usmw"
+      },
+      "Yandex": {
+        "method": "blacklist",
+        "engine_name": "Yandex",
+        "engine_version": "5.5.2.24",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Ikarus": {
+        "method": "blacklist",
+        "engine_name": "Ikarus",
+        "engine_version": "6.4.16.0",
+        "engine_update": "20251129",
+        "category": "malicious",
+        "result": "Trojan-Spy.AndroidOS.Agent"
+      },
+      "MaxSecure": {
+        "method": "blacklist",
+        "engine_name": "MaxSecure",
+        "engine_version": "1.0.0.1",
+        "engine_update": "20251128",
+        "category": "undetected",
+        "result": null
+      },
+      "Fortinet": {
+        "method": "blacklist",
+        "engine_name": "Fortinet",
+        "engine_version": "7.0.30.0",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "Panda": {
+        "method": "blacklist",
+        "engine_name": "Panda",
+        "engine_version": "4.6.4.2",
+        "engine_update": "20251129",
+        "category": "undetected",
+        "result": null
+      },
+      "CrowdStrike": {
+        "method": "blacklist",
+        "engine_name": "CrowdStrike",
+        "engine_version": "1.0",
+        "engine_update": "20231026",
+        "category": "undetected",
+        "result": null
+      },
+      "Skyhigh": {
+        "method": "blacklist",
+        "engine_name": "Skyhigh",
+        "engine_version": null,
+        "engine_update": "20251128",
+        "category": "timeout",
+        "result": null
+      },
+      "Avast": {
+        "method": "blacklist",
+        "engine_name": "Avast",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20251129",
+        "category": "timeout",
+        "result": null
+      },
+      "AVG": {
+        "method": "blacklist",
+        "engine_name": "AVG",
+        "engine_version": "23.9.8494.0",
+        "engine_update": "20251129",
+        "category": "timeout",
+        "result": null
+      },
+      "TrellixENS": {
+        "method": "blacklist",
+        "engine_name": "TrellixENS",
+        "engine_version": "6.0.6.653",
+        "engine_update": "20251128",
+        "category": "timeout",
+        "result": null
+      },
+      "Google": {
+        "method": "blacklist",
+        "engine_name": "Google",
+        "engine_version": "1764417641",
+        "engine_update": "20251129",
+        "category": "failure",
+        "result": null
+      },
+      "tehtris": {
+        "method": "blacklist",
+        "engine_name": "tehtris",
+        "engine_version": "v0.1.4",
+        "engine_update": "20251129",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "DeepInstinct": {
+        "method": "blacklist",
+        "engine_name": "DeepInstinct",
+        "engine_version": "5.0.0.8",
+        "engine_update": "20251127",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "APEX": {
+        "method": "blacklist",
+        "engine_name": "APEX",
+        "engine_version": "6.720",
+        "engine_update": "20251128",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Paloalto": {
+        "method": "blacklist",
+        "engine_name": "Paloalto",
+        "engine_version": "0.9.0.1003",
+        "engine_update": "20251129",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Cynet": {
+        "method": "blacklist",
+        "engine_name": "Cynet",
+        "engine_version": "4.0.3.4",
+        "engine_update": "20251129",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Trapmine": {
+        "method": "blacklist",
+        "engine_name": "Trapmine",
+        "engine_version": "4.0.7.0",
+        "engine_update": "20251125",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "Cylance": {
+        "method": "blacklist",
+        "engine_name": "Cylance",
+        "engine_version": "3.0.0.0",
+        "engine_update": "20251128",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "SentinelOne": {
+        "method": "blacklist",
+        "engine_name": "SentinelOne",
+        "engine_version": "7.4.1.3",
+        "engine_update": "20251013",
+        "category": "type-unsupported",
+        "result": null
+      },
+      "alibabacloud": {
+        "method": "blacklist",
+        "engine_name": "alibabacloud",
+        "engine_version": "2.2.0",
+        "engine_update": "20250321",
+        "category": "type-unsupported",
+        "result": null
+      }
+    },
+    "ssdeep": "1572864:heT9QExvvOc3RnMfrEwYdD9cOUehYqg+XsSA+vmr8SO:wbdnMfrEwG9q3q5jtv9X",
+    "first_submission_date_epoch": 1698062699,
+    "last_submission_date_epoch": 1699264625,
+    "last_modification_date_epoch": 1764431989,
+    "last_analysis_date_epoch": 1764424077
+  },
+  "id": "e8f20d9a32e2189d061a165b9f59a0d63b7b407c91317fad551f8f0fb5eb89d1"
+}
