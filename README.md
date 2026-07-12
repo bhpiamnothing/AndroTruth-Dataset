@@ -30,20 +30,15 @@ Most public Android malware datasets rely wholly or partly on VirusTotal engine 
 During dataset construction, we extracted **8,421 unique hashes** after cross-report deduplication. Among them, **245 hashes could not be retrieved from Koodous** and were therefore excluded. An additional **4 samples** were removed because their family assignments remained unresolved after manual reconciliation. The final release contains **8,172 samples from 187 families**.
 
 ## Access to APK files
+The APK files are available to qualified researchers upon request. To ensure responsible and research-oriented use, access requests are manually reviewed.
 
-
-
-After the paper is accepted, we plan to make the APK files available to qualified researchers upon request. To ensure responsible and research-oriented use, access requests will be manually reviewed.
-
-If you would like to request APK access after acceptance, please provide:
+To request APK access, please email **bai931214@tju.edu.cn** and provide:
 
 - your intended research purpose,
 - your background in Android security / malware research,
 - a link to your homepage, Google Scholar, or recent publications,
 - if you are a student, a link to your advisor's academic profile,
 - your Gmail address for permissioned APK access.
-
-The official long-term contact email will be provided after peer review.
 
 ## Repository contents
 
