@@ -2,7 +2,9 @@
 
 ## Overview
 
-This repository accompanies the paper *"AndroTruth: A Reliable Benchmark Android Malware Dataset Derived from Technical Expert Reports"*.
+This repository accompanies the RAID 2026 paper *"AndroTruth: A Reliable Benchmark Android Malware Dataset Derived from Technical Expert Reports"*.
+
+**Paper status:** accepted by **RAID 2026**.
 
 **AndroTruth** is an Android malware family benchmark built from **traceable expert technical reports** rather than AV-consensus voting. The current release contains:
 
@@ -11,6 +13,8 @@ This repository accompanies the paper *"AndroTruth: A Reliable Benchmark Android
 - **276 security reports / blog posts**
 - **42 vendors and individual analyst sources**
 - a temporal span from **2016 to 2025**
+
+The dataset is designed for research on **family-label reliability**, **temporal robustness**, and **multimodal Android malware analysis**.
 
 The dataset is designed for research on **family-label reliability**, **temporal robustness**, and **multimodal Android malware analysis**.
 
@@ -452,8 +456,20 @@ and per-year / per-setting CSV breakdowns where applicable.
 
 ## Citation
 
-If you use AndroTruth in your research, please cite the corresponding paper once the bibliographic information is finalized.
+If you use AndroTruth in your research, please cite our RAID 2026 paper:
+
+> Hongpeng Bai, Yao Zhang, Minhong Dong, Shunzhe Zhao, Haobo Zhang, Lingyue Li, Yude Bai, Shuai Hu, and Guangquan Xu. *AndroTruth: A Reliable Benchmark Android Malware Dataset Derived from Technical Expert Reports*. RAID 2026, to appear.
+
+```bibtex
+@inproceedings{bai2026androtruth,
+  title     = {AndroTruth: A Reliable Benchmark Android Malware Dataset Derived from Technical Expert Reports},
+  author    = {Bai, Hongpeng and Zhang, Yao and Dong, Minhong and Zhao, Shunzhe and Zhang, Haobo and Li, Lingyue and Bai, Yude and Hu, Shuai and Xu, Guangquan},
+  booktitle = {Proceedings of RAID 2026},
+  year      = {2026},
+  note      = {To appear}
+}
+```
 
 ## Contact
 
-For dataset access, collaboration, or questions about the release, please use the repository contact information described above.
+For dataset access, collaboration, or questions about the release, please contact **bai931214@tju.edu.cn**.
