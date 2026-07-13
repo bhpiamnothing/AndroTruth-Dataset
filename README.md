@@ -16,8 +16,6 @@ This repository accompanies the RAID 2026 paper *"AndroTruth: A Reliable Benchma
 
 The dataset is designed for research on **family-label reliability**, **temporal robustness**, and **multimodal Android malware analysis**.
 
-The dataset is designed for research on **family-label reliability**, **temporal robustness**, and **multimodal Android malware analysis**.
-
 ## Why AndroTruth?
 
 Most public Android malware datasets rely wholly or partly on VirusTotal engine aggregation for family labels. In contrast, AndroTruth prioritizes **label reliability over sheer scale**:
