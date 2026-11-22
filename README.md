@@ -16,6 +16,8 @@ This repository accompanies the RAID 2026 paper *"AndroTruth: A Reliable Benchma
 
 The dataset is designed for research on **family-label reliability**, **temporal robustness**, and **multimodal Android malware analysis**.
 
+If you find AndroTruth useful, please consider giving this repository a ⭐ on GitHub. Your support means a lot to us and helps other researchers discover the dataset.
+
 ## Why AndroTruth?
 
 Most public Android malware datasets rely wholly or partly on VirusTotal engine aggregation for family labels. In contrast, AndroTruth prioritizes **label reliability over sheer scale**:
@@ -37,6 +39,21 @@ To request APK access, please email **bai931214@tju.edu.cn** and provide:
 - a link to your homepage, Google Scholar, or recent publications,
 - if you are a student, a link to your advisor's academic profile,
 - your Gmail address for permissioned APK access.
+
+## Institutions with Dataset Access
+
+Researchers affiliated with the following institutions have obtained access to and downloaded the AndroTruth dataset.
+
+- AGH University of Krakow (Poland)
+- Anhui University (China)
+- Fraunhofer Institute for Applied and Integrated Security (AISEC), Germany
+- GD Goenka University (India)
+- Huazhong University of Science and Technology, School of Electronic Information and Communications (China)
+- Northeastern University (China)
+- People’s Public Security University of China (China)
+- Sabancı University (Türkiye)
+- Tomas Bata University in Zlín, Faculty of Applied Informatics (Czech Republic)
+- VSB – Technical University of Ostrava, Faculty of Electrical Engineering and Computer Science (Czech Republic)
 
 ## Repository contents
 
